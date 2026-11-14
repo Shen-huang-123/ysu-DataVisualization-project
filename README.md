@@ -21,3 +21,7 @@
 - [项目工作区](项目工作区/README.md)：生成代码、中间数据和复现说明。各任务交付目录提供一键运行入口。
 
 视频成片、正式截止时间和提交渠道由参赛队按主办方通知确认。提交前请检查[最终材料说明](交付文件/最终提交材料/00_先看这里.html)。
+
+## 克隆与复现
+
+仓库中的原始成绩册 PDF 使用 Git LFS。首次克隆请先安装 Git LFS，再运行 `git lfs install` 和 `git clone https://github.com/Shen-huang-123/ysu-DataVisualization-project.git`；若已克隆但 PDF 只有几行指针文本，在仓库目录运行 `git lfs pull`。网页入口可直接打开根目录 `index.html`。本地 Python/浏览器运行环境、临时验收截图及重复打包的旧站点版本不纳入版本管理，正式作品与复算资料均在上述目录。
