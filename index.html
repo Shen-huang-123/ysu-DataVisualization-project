@@ -61,6 +61,11 @@ body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity
 @media(max-width:640px){.ox-panel a{min-height:84px}.ox-link-copy b{font-size:16px}}
 </style><style id="index-vortex-story-style">
 html.voyage-live{scroll-behavior:auto}
+html.voyage-preparing{scroll-behavior:auto}
+html.voyage-preparing body{background:#071b21;color:#f6f3ec;overflow-x:hidden}
+html.voyage-preparing body :is(.hero,.intro,.chapters,.material,.footer,.progress,.ox-stage-line){display:none!important}
+html.voyage-preparing #voyage-stage{display:block;position:fixed;inset:0;z-index:10;overflow:hidden;background:#071b21;isolation:isolate}
+html.voyage-preparing #voyage-scrollspace{display:block;height:700svh;pointer-events:none}
 body.voyage-live{background:#071b21;color:#f6f3ec;overflow-x:hidden}
 body.voyage-live :is(.hero,.intro,.chapters,.material,.footer){display:none!important}
 body.voyage-live :is(.progress,.ox-stage-line){display:none!important}
@@ -115,7 +120,7 @@ body.voyage-live #voyage-scrollspace{display:block;height:700svh;pointer-events:
 .voyage-scene:is([data-scene="2"],[data-scene="4"]) .voyage-content a.voyage-cta[style*="background:transparent"]{color:#14343d;border-color:#14343da8;background:#f8f5efbd!important}
 @media(max-width:650px){.voyage-scene .voyage-content a.voyage-cta[style*="background:transparent"]{margin-left:0!important;margin-top:10px}.voyage-task .voyage-content{max-width:100%}}
 @media(prefers-reduced-motion:reduce){.voyage-scene,.voyage-ring,.voyage-cta,.voyage-materials a,.voyage-direct a{transition:none!important;animation:none!important}.voyage-tunnel,.voyage-warp{display:none}}
-</style></head>
+</style><script>document.documentElement.classList.add('voyage-preparing')</script></head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="topbar"><a class="brand" href="#top" aria-label="返回页首"><span class="brandmark">晓</span>晓组织 · 数说奥运</a><nav><a href="#stories">四项任务</a><a href="#materials">正式材料</a><a class="outline" href="交付文件/作品总入口/index.html">进入交互总览 ↗</a></nav></div>
@@ -200,7 +205,7 @@ if(images.length){
 <script src="交付文件/共享组件/gsap/gsap.min.js"></script><script src="交付文件/共享组件/gsap/ScrollTrigger.min.js"></script>
 <script id="index-vortex-story-script">(()=>{
 const stage=document.querySelector('#voyage-stage'),spacer=document.querySelector('#voyage-scrollspace');
-if(!stage||!spacer||!window.gsap||!window.ScrollTrigger)return;
+if(!stage||!spacer||!window.gsap||!window.ScrollTrigger){document.documentElement.classList.remove('voyage-preparing');return}
 document.body.classList.add('voyage-live');document.documentElement.classList.add('voyage-live');gsap.registerPlugin(ScrollTrigger);
 const scenes=[...stage.querySelectorAll('.voyage-scene')],tunnel=stage.querySelector('.voyage-tunnel'),rings=[...stage.querySelectorAll('.voyage-ring')],warp=stage.querySelector('.voyage-warp'),streaks=[...stage.querySelectorAll('.voyage-streak')],steps=[...stage.querySelectorAll('[data-voyage-go]')],counter=stage.querySelector('#voyage-counter'),state={p:0},reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let last=-1;
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -210,13 +215,13 @@ function render(){
   const visible=reduce?i===nearest:i===from||i===to;
   const entering=!reduce&&i===to&&to!==from;
   const portal=phase*phase*260;
-  gsap.set(scene,{opacity:visible?(small&&entering?clamp((phase-.55)/.25,0,1):1):0,visibility:visible?'visible':'hidden',zIndex:entering?2:1,scale:reduce?1:entering?.975+.025*phase:i===from?1+.035*phase:1,clipPath:entering&&!small?`circle(${portal.toFixed(1)}vmin at 94% 49%)`:'none',pointerEvents:i===nearest?'auto':'none'});
+  gsap.set(scene,{opacity:visible?(small&&entering?clamp((phase-.55)/.25,0,1):1):0,visibility:visible?'visible':'hidden',zIndex:entering?2:1,scale:reduce?1:entering?.975+.025*phase:i===from?1+.035*phase:1,clipPath:!reduce&&!small&&visible?`circle(${(entering?portal:260).toFixed(1)}vmin at 94% 49%)`:'none',pointerEvents:i===nearest?'auto':'none'});
   if(visible&&!reduce){gsap.set(scene.querySelector('.voyage-photo'),{scale:entering?1.08-.04*phase:1.04+.025*phase});const out=clamp((phase-(small?.6:.47))/(small?.12:.18),0,1),inside=clamp((phase-(small?.7:.64))/(small?.12:.16),0,1);gsap.set(scene.querySelector('.voyage-content'),{opacity:entering?inside:i===from?1-out:1,y:entering?22*(1-inside):-12*out})}
  });
  if(!reduce){const visibleTransit=clamp((transit-.12)/.88,0,1);gsap.set(tunnel,{opacity:Math.pow(visibleTransit,1.4)*.29});gsap.set(warp,{opacity:Math.pow(visibleTransit,1.5)*.2});rings.forEach((ring,j)=>{const depth=(j/10+state.p*7.4)%1;gsap.set(ring,{scale:.12+3.3*depth*depth,rotation:state.p*720+j*22,opacity:Math.pow(Math.sin(Math.PI*depth),1.35)*.35})});streaks.forEach((ray,j)=>{const depth=(j/24+state.p*4.8)%1;gsap.set(ray,{rotation:j*137.5+state.p*155,scaleX:.1+depth*1.5,opacity:Math.sin(Math.PI*depth)*.25})})}
  if(nearest!==last){const previous=last;last=nearest;stage.classList.toggle('voyage-stage-light',nearest===2||nearest===4);counter.textContent=String(nearest+1).padStart(2,'0')+' / 07';scenes.forEach((scene,i)=>{scene.inert=i!==nearest;scene.setAttribute('aria-hidden',String(i!==nearest))});if(previous>=0&&scenes[previous].contains(document.activeElement)){const heading=scenes[nearest].querySelector('h1');heading.tabIndex=-1;heading.focus({preventScroll:true})}steps.forEach((button,i)=>{if(i===nearest)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current')});stage.querySelectorAll('.voyage-direct a').forEach((a,i)=>{if(nearest===i+2)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current')})}
 }
-const journeyTween=gsap.to(state,{p:1,ease:'none',onUpdate:render,scrollTrigger:{id:'index-vortex-story',trigger:spacer,start:'top top',end:'bottom bottom',scrub:reduce?true:.55,invalidateOnRefresh:true}});render();
+const journeyTween=gsap.to(state,{p:1,ease:'none',onUpdate:render,scrollTrigger:{id:'index-vortex-story',trigger:spacer,start:'top top',end:'bottom bottom',scrub:true,invalidateOnRefresh:true}});render();document.documentElement.classList.remove('voyage-preparing');
 function syncRestoredScroll(){const trigger=journeyTween.scrollTrigger;if(!trigger)return;trigger.refresh();const span=Math.max(1,trigger.end-trigger.start);journeyTween.progress(clamp((trigger.scroll()-trigger.start)/span,0,1));render()}
 addEventListener('pageshow',()=>{requestAnimationFrame(()=>requestAnimationFrame(syncRestoredScroll));setTimeout(syncRestoredScroll,120)});
 function go(index){const trigger=journeyTween.scrollTrigger;const start=trigger?.start||0,end=trigger?.end||Math.max(0,spacer.getBoundingClientRect().height-innerHeight);scrollTo({top:start+clamp(index,0,scenes.length-1)/(scenes.length-1)*(end-start),behavior:reduce?'instant':'smooth'})}
