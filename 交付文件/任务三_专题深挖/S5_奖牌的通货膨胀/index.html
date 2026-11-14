@@ -361,4 +361,4 @@ if(images.length){
  for(const img of images){img.classList.add('ox-zoomable');img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','放大查看：'+(img.alt||'图表'));const show=()=>{opener=img;full.src=img.currentSrc||img.src;full.alt=img.alt||'图表大图';caption.textContent=img.closest('figure')?.querySelector('figcaption')?.textContent?.trim()||img.alt||'图表详情';viewer.hidden=false;vclose.focus()};img.addEventListener('click',show);img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}})}
  vclose.addEventListener('click',hideViewer);viewer.addEventListener('click',e=>{if(e.target===viewer)hideViewer()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!viewer.hidden)hideViewer()});
 }
-})();</script><!-- OLYMPIC_INTERACTION_END --></body></html>
+})();</script><!-- OLYMPIC_INTERACTION_END --><script defer src="../../共享组件/immersive-float.js"></script></body></html>
