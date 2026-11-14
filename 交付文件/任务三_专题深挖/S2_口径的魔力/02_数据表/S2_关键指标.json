@@ -1,0 +1,18 @@
+{
+  "official_events": 329,
+  "official_gold_units": 329,
+  "official_silver_units": 330,
+  "official_bronze_units": 385,
+  "athlete_medal_rows": 2281,
+  "spearman_rho": 0.972618737229693,
+  "spearman_p": 2.292488036854137e-40,
+  "eligible_nocs": 63,
+  "usa_gold_units": 40,
+  "usa_gold_rows": 131,
+  "chn_gold_units": 40,
+  "chn_gold_rows": 71,
+  "ned_gold_units": 15,
+  "ned_gold_rows": 67,
+  "esp_gold_units": 5,
+  "esp_gold_rows": 40
+}

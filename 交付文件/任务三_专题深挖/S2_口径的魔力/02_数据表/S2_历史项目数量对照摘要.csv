@@ -1,0 +1,5 @@
+Year,event_rows,expected_program_events,event_count_match,ioc_results_url,source_grade
+2008,302,302,True,https://www.olympics.com/en/olympic-games/beijing-2008/results,赛程小项总数对照 + 运动员行代理生成；未核现行IOC逐项奖牌
+2012,302,302,True,https://www.olympics.com/en/olympic-games/london-2012/results,赛程小项总数对照 + 运动员行代理生成；未核现行IOC逐项奖牌
+2016,306,306,True,https://www.olympics.com/en/olympic-games/rio-2016/results,赛程小项总数对照 + 运动员行代理生成；未核现行IOC逐项奖牌
+

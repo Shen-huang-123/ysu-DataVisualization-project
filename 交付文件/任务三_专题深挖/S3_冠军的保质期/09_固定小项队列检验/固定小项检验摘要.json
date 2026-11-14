@@ -1,0 +1,19 @@
+{
+  "fixed_events": 113,
+  "transitions": 1582,
+  "early_editions": "1964–1976",
+  "late_editions": "1996–2016",
+  "early_rate": 0.34513274336283184,
+  "late_rate": 0.2713864306784661,
+  "late_minus_early_pp": -7.374631268436577,
+  "event_cluster_bootstrap_ci95_pp": [
+    -13.200589970501476,
+    -1.6224188790560492
+  ],
+  "broad_1964_1988_rate": 0.28697850821744625,
+  "broad_1992_2016_rate": 0.2553729456384324,
+  "leave_one_sport_out_pp_range": [
+    -8.650793650793656,
+    -3.535353535353537
+  ]
+}

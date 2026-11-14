@@ -1,0 +1,3 @@
+GSAP 3.15.1 and ScrollTrigger are distributed as local runtime files for the offline exhibition page.
+Copyright GreenSock. Standard no-charge license: https://gsap.com/standard-license/
+Source package: https://www.npmjs.com/package/gsap

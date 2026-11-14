@@ -1,0 +1,70 @@
+﻿Year,Sport,Event_proxy,Event_olympics,Gold_proxy,Gold_archive,Silver_proxy,Silver_archive,Bronze_proxy,Bronze_archive,复核队列,olympics_event_url
+2008,Athletics,Athletics Men's 100 metres,100m-men,JAM,,TTO,TTO,USA,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/100m-men
+2008,Athletics,Athletics Men's 200 metres,200m-men,JAM,,USA,USA,USA,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/200m-men
+2008,Athletics,Athletics Men's Javelin Throw,javelin-throw-men,NOR,NOR,LAT,LAT,FIN,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/javelin-throw-men
+2008,Athletics,Athletics Men's Pole Vault,pole-vault-men,AUS,AUS,RUS,RUS,UKR,USA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/pole-vault-men
+2008,Athletics,Athletics Women's 4 x 100 metres Relay,4x100m-relay-women,RUS,BEL,BEL,NGR,NGR,BRA,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/4x100m-relay-women
+2008,Athletics,Athletics Women's 4 x 400 metres Relay,4x400m-relay-women,USA,USA,RUS,JAM,JAM,GBR,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/4x400m-relay-women
+2008,Athletics,"Athletics Women's 5,000 metres",5000m-women,ETH,ETH,TUR,ETH,ETH,KEN,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/5000m-women
+2008,Athletics,Athletics Women's Discus Throw,discus-throw-women,USA,USA,CUB,UKR,UKR,CHN,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/discus-throw-women
+2008,Athletics,Athletics Women's Hammer Throw,hammer-throw-women,BLR,CUB,CUB,CHN,CHN,FRA,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/hammer-throw-women
+2008,Athletics,Athletics Women's Heptathlon,heptathlon-women,UKR,UKR,USA,USA,RUS,GBR,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/heptathlon-women
+2008,Athletics,Athletics Women's High Jump,high-jump-women,BEL,BEL,CRO,CRO,RUS,USA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/high-jump-women
+2008,Athletics,Athletics Women's Javelin Throw,javelin-throw-women,CZE,CZE,RUS,,GER,GBR,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/javelin-throw-women
+2008,Athletics,Athletics Women's Long Jump,long-jump-women,BRA,BRA,RUS,,NGR,NGR,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/long-jump-women
+2008,Athletics,Athletics Women's Shot Put,shot-put-women,NZL,NZL,BLR,CUB,BLR,CHN,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/shot-put-women
+2008,Athletics,Athletics Women's Triple Jump,triple-jump-women,CMR,,RUS,KAZ,GRE,CUB,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/athletics/triple-jump-women
+2008,Canoeing,"Canoeing Men's Kayak Singles, 1,000 metres",k1-1000m-kayak-single-men,GBR,GBR,NOR,,AUS,AUS,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/canoe-sprint/k1-1000m-kayak-single-men
+2008,Fencing,"Fencing Men's Sabre, Individual",sabre-individual-men,CHN,,FRA,FRA,ROU,ROU,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/fencing/sabre-individual-men
+2008,Judo,Judo Women's Heavyweight,78kg-heavyweight-women,CHN,CHN,JPN,JPN,CUB|SLO,SLO,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/judo/78kg-heavyweight-women
+2008,Modern Pentathlon,Modern Pentathlon Women's Individual,individual-competition-women,GER,GER,GBR,,UKR,BLR,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/modern-pentathlon/individual-competition-women
+2008,Shooting,Shooting Women's Trap,trap-75-targets-women,FIN,,SVK,SVK,USA,USA,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/shooting/trap-75-targets-women
+2008,Swimming,Swimming Women's 200 metres Freestyle,200m-freestyle-women,ITA,ITA,SLO,,CHN,CHN,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/swimming/200m-freestyle-women
+2008,Triathlon,Triathlon Men's Olympic Distance,individual-men,GER,GER,CAN,CAN,NZL,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/beijing-2008/results/triathlon/individual-men
+2008,Weightlifting,Weightlifting Men's Heavyweight,105kg-heavyweight-men,BLR,BLR,RUS,RUS,RUS,POL,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/105kg-heavyweight-men
+2008,Weightlifting,Weightlifting Men's Light-Heavyweight,85kg-men,CHN,CHN,BLR,ARM,ARM,CUB,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/85kg-men
+2008,Weightlifting,Weightlifting Men's Lightweight,69kg-men,CHN,CHN,FRA,FRA,ARM,CUB,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/69kg-men
+2008,Weightlifting,Weightlifting Men's Middle-Heavyweight,94kg-men,KAZ,POL,POL,GEO,RUS,CUB,优先复核配对,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/94kg-men
+2008,Weightlifting,Weightlifting Women's Featherweight,53kg-women,THA,THA,KOR,KOR,BLR,INA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/53kg-women
+2008,Weightlifting,Weightlifting Women's Flyweight,48kg-women,CHN,TPE,TUR,KOR,TPE,THA,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/48kg-women
+2008,Weightlifting,Weightlifting Women's Heavyweight,75kg-women,CHN,KAZ,KAZ,ESP,RUS,MEX,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/75kg-women
+2008,Weightlifting,Weightlifting Women's Light-Heavyweight,69kg-women,CHN,RUS,RUS,COL,UKR,EGY,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/69kg-women
+2008,Weightlifting,Weightlifting Women's Lightweight,58kg-women,CHN,CHN,RUS,PRK,PRK,THA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/58kg-women
+2008,Weightlifting,Weightlifting Women's Middleweight,63kg-women,PRK,PRK,KAZ,TPE,TPE,CAN,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/63kg-women
+2008,Weightlifting,Weightlifting Women's Super-Heavyweight,-75kg-women,KOR,KOR,UKR,SAM,KAZ,NGR,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/-75kg-women
+2008,Wrestling,"Wrestling Men's Heavyweight, Freestyle",heavyweight-freestyle-96-kilograms-men,RUS,RUS,KAZ,GEO,AZE|GEO,AZE|CUB,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/wrestling/heavyweight-freestyle-96-kilograms-men
+2008,Wrestling,"Wrestling Men's Heavyweight, Greco-Roman",heavyweight-greco-roman-96-kilograms-men,RUS,RUS,GER,GER,KAZ|USA,CZE|USA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/wrestling/heavyweight-greco-roman-96-kilograms-men
+2008,Wrestling,"Wrestling Men's Lightweight, Freestyle",lightweight-freestyle-60-kilograms-men,RUS,RUS,UKR,JPN,IRI|JPN,IRI|KGZ,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/wrestling/lightweight-freestyle-60-kilograms-men
+2008,Wrestling,"Wrestling Men's Lightweight, Greco-Roman",lightweight-greco-roman-60-kilograms-men,RUS,RUS,AZE,KAZ,KAZ|KGZ,CHN|KGZ,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/wrestling/lightweight-greco-roman-60-kilograms-men
+2008,Wrestling,"Wrestling Men's Middleweight, Freestyle",middleweight-freestyle-74-kilograms-men,RUS,RUS,UZB,BLR,BLR|BUL,BUL|ROU,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/wrestling/middleweight-freestyle-74-kilograms-men
+2008,Wrestling,"Wrestling Men's Super-Heavyweight, Freestyle",super-heavyweight-freestyle-120-kilograms-men,UZB,RUS,RUS,SVK,KAZ|SVK,CUB|KAZ,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/wrestling/super-heavyweight-freestyle-120-kilograms-men
+2008,Wrestling,"Wrestling Men's Super-Heavyweight, Greco-Roman",super-heavyweight-greco-roman-120-kilograms-men,CUB,CUB,RUS,LTU,ARM|LTU,ARM|FRA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/wrestling/super-heavyweight-greco-roman-120-kilograms-men
+2012,Athletics,Athletics Men's 50 kilometres Walk,50km-walk-men,RUS,AUS,AUS,CHN,CHN,IRL,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/50km-walk-men
+2012,Athletics,Athletics Men's High Jump,high-jump-men,RUS,,USA,USA,CAN|GBR|QAT,CAN|GBR|QAT,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/high-jump-men
+2012,Athletics,Athletics Men's Javelin Throw,javelin-throw-men,TTO,TTO,UKR,FIN,FIN,CZE,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/javelin-throw-men
+2012,Athletics,"Athletics Women's 1,500 metres",1500m-women,TUR,BRN,TUR,RUS,BRN,ETH,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/1500m-women
+2012,Athletics,Athletics Women's 20 kilometres Walk,20km-race-walk-women,RUS,,RUS,CHN,CHN,CHN,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/20km-race-walk-women
+2012,Athletics,"Athletics Women's 3,000 metres Steeplechase",3000m-steeplechase-women,RUS,TUN,TUN,ETH,ETH,KEN,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/3000m-steeplechase-women
+2012,Athletics,Athletics Women's 4 x 400 metres Relay,4x400m-relay-women,USA,USA,RUS,JAM,JAM,UKR,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/4x400m-relay-women
+2012,Athletics,Athletics Women's 800 metres,800m-women,RUS,RSA,RSA,RUS,RUS,KEN,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/800m-women
+2012,Athletics,Athletics Women's Discus Throw,discus-throw-women,CRO,CRO,RUS,CHN,CHN,CUB,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/discus-throw-women
+2012,Athletics,Athletics Women's Hammer Throw,hammer-throw-women,RUS,POL,POL,GER,GER,CHN,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/hammer-throw-women
+2012,Athletics,Athletics Women's Heptathlon,heptathlon-women,GBR,GBR,GER,GER,RUS,LTU,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/heptathlon-women
+2012,Athletics,Athletics Women's High Jump,high-jump-women,RUS,RUS,USA,USA,RUS,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/high-jump-women
+2012,Athletics,Athletics Women's Shot Put,shot-put-women,NZL,NZL,RUS,CHN,CHN,CHN,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/athletics/shot-put-women
+2012,Canoeing,"Canoeing Men's Canadian Singles, 200 metres",c-1-200m-canoe-single-men,UKR,UKR,LTU,,RUS,RUS,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/canoe-sprint/c-1-200m-canoe-single-men
+2012,Weightlifting,Weightlifting Men's Bantamweight,56kg-bantamweight-men,PRK,PRK,CHN,CHN,AZE,VIE,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/56kg-bantamweight-men
+2012,Weightlifting,Weightlifting Men's Heavyweight,105kg-heavyweight-men,UKR,IRI,IRI,POL,POL,UZB,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/105kg-heavyweight-men
+2012,Weightlifting,Weightlifting Men's Light-Heavyweight,85kg-men,POL,POL,RUS,IRI,IRI,EGY,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/85kg-men
+2012,Weightlifting,Weightlifting Men's Lightweight,69kg-men,CHN,CHN,INA,INA,ROU,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/69kg-men
+2012,Weightlifting,Weightlifting Men's Middle-Heavyweight,94kg-men,KAZ,IRI,RUS,KOR,MDA,POL,优先复核配对,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/94kg-men
+2012,Weightlifting,Weightlifting Men's Super-Heavyweight,105kg-superheavyweight-men,IRI,IRI,IRI,IRI,RUS,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/105kg-superheavyweight-men
+2012,Weightlifting,Weightlifting Women's Featherweight,53kg-women,KAZ,TPE,TPE,INA,MDA,UKR,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/53kg-women
+2012,Weightlifting,Weightlifting Women's Heavyweight,63kg-women,KAZ,CAN,RUS,BUL,BLR,MEX,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/63kg-women
+2012,Weightlifting,Weightlifting Women's Light-Heavyweight,69kg-women,PRK,PRK,ROU,,BLR,COL|KAZ,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/69kg-women
+2012,Weightlifting,Weightlifting Women's Lightweight,58kg-women,CHN,CHN,THA,THA,UKR,THA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/58kg-women
+2012,Weightlifting,Weightlifting Women's Middleweight,75kg-women,KAZ,ESP,RUS,EGY,CAN,CMR,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/75kg-women
+2012,Weightlifting,Weightlifting Women's Super-Heavyweight,-75kg-women,CHN,CHN,RUS,RUS,ARM,KOR,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/-75kg-women
+2012,Wrestling,"Wrestling Men's Super-Heavyweight, Freestyle",freestyle-120kg-men,UZB,IRI|RUS,GEO,,IRI|RUS,KAZ|USA,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/wrestling/freestyle-120kg-men
+2016,Boxing,Boxing Men's Flyweight,52kg-men,UZB,UZB,,VEN,CHN|VEN,CHN,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/rio-2016/results/boxing/52kg-men
+2016,Weightlifting,Weightlifting Men's Middleweight,77kg-men,KAZ,,CHN,CHN,EGY,EGY,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/rio-2016/results/weightlifting/77kg-men

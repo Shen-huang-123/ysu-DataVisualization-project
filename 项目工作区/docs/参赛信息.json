@@ -1,0 +1,10 @@
+{
+  "team": "晓组织",
+  "school": "燕山大学",
+  "members": [
+    {"name": "张子涵", "contribution_percent": 60},
+    {"name": "陈旭", "contribution_percent": 40}
+  ],
+  "deadline": null,
+  "submission_channel": null
+}

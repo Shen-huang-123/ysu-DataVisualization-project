@@ -1,0 +1,136 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01_数据质量与口径说明书 · 奥运数据观察</title><style>
+  :root{--ink:#17333a;--muted:#5b7073;--line:#dce4df;--paper:#f3f1eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 'Microsoft YaHei',system-ui,sans-serif}a{color:#116c78;text-underline-offset:3px}.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px clamp(18px,5vw,70px);background:#102e37;color:#f4f8f5;box-shadow:0 5px 20px #102e3720}.top a{color:inherit;text-decoration:none}.brand{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:800}.mark{display:grid;place-items:center;width:32px;height:32px;background:#a2d5c9;color:#153f45;border-radius:50%;font-size:16px}.top .download{border:1px solid #ffffff55;border-radius:8px;padding:7px 11px;font-size:12px;white-space:nowrap}.head{padding:48px clamp(20px,6vw,90px) 42px;background:linear-gradient(120deg,#183b43,#285762);color:#f7f7f0}.head small{color:#e4b47b;font-weight:900;letter-spacing:.17em}.head h1{font:600 clamp(35px,5vw,66px)/1.15 Georgia,'Songti SC',serif;letter-spacing:-.05em;margin:12px 0 0}.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:34px;max-width:1330px;margin:auto;padding:48px clamp(18px,5vw,70px) 110px}.article{min-width:0;background:#fffefa;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4.5vw,64px);box-shadow:0 16px 35px #173d4110}.article>*:first-child{margin-top:0}.article h1,.article h2,.article h3{font-family:Georgia,'Songti SC','SimSun',serif;line-height:1.25;letter-spacing:-.035em;color:#163943;scroll-margin-top:90px}.article h1{font-size:clamp(30px,3vw,43px);border-bottom:2px solid #a6c8c0;padding-bottom:16px}.article h2{font-size:clamp(25px,2.4vw,34px);margin-top:2.1em;padding-top:.2em;border-top:1px solid #d9e3de}.article h3{font-size:22px;margin-top:1.6em}.article p,.article li{overflow-wrap:anywhere}.article blockquote{margin:22px 0;padding:12px 20px;border-left:4px solid #c49355;background:#f4efe5;color:#4b6266}.article code{font:85%/1.5 Consolas,monospace;background:#eaf0ec;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}.article pre{overflow:auto;background:#18343d;color:#edf6f1;padding:18px;border-radius:10px}.article pre code{background:none;color:inherit;padding:0}.article table{display:block;width:100%;overflow-x:auto;border-collapse:collapse;margin:26px 0;font-size:14px}.article th,.article td{border:1px solid #d7e1dc;padding:10px 12px;vertical-align:top;min-width:80px}.article th{background:#dfebe5;color:#214950}.article tr:nth-child(even) td{background:#f6f9f6}.article img{max-width:100%;height:auto;border-radius:10px}.article hr{border:0;border-top:1px solid var(--line);margin:30px 0}.side{align-self:start;position:sticky;top:90px;color:#607579;font-size:13px}.side strong{display:block;color:#183d45;font-size:14px}.side a{display:block;margin-top:12px;overflow-wrap:anywhere}.side .note{margin-top:22px;padding:14px;background:#e4eeea;border-left:3px solid #4c9b94}.side .back{display:inline-block;margin-top:20px;font-weight:800}@media(max-width:900px){.layout{grid-template-columns:1fr}.side{display:none}.article{padding:24px}.top{padding:10px 16px}.top .brand span:last-child{display:none}}@media print{.top,.side{display:none}.head{background:none;color:#000;padding:10px}.layout{display:block;padding:0}.article{border:0;box-shadow:none;padding:0}}
+  </style><style id="ox-motion-bridge-style">
+body.ox-flow{--ox-ease:cubic-bezier(.2,1,.25,1)}
+body.ox-flow h1{animation:ox-title-in .95s var(--ox-ease) both}
+body.ox-flow :is(header,.hero,main) h1 + p,body.ox-flow :is(header,.hero,main) h1 + .lead,body.ox-flow :is(header,.hero,main) h1 + .导语{animation:ox-copy-in 1s var(--ox-ease) .12s both}
+body.ox-flow .ox-reveal{opacity:0;transform:translate3d(0,22px,0);transition:opacity .75s ease,transform .8s var(--ox-ease)}
+body.ox-flow .ox-reveal.ox-visible{opacity:1;transform:translate3d(0,0,0)}
+body.ox-flow a[href]{text-underline-offset:.22em;transition:color .25s ease,opacity .25s ease,transform .25s var(--ox-ease)}
+body.ox-flow a[href]:hover{opacity:.84}
+body.ox-flow :is(button,select,input[type=range]){transition:filter .2s ease,box-shadow .2s ease,transform .2s var(--ox-ease)}
+body.ox-flow button:not(.ox-trigger):not(.ox-close):active{transform:scale(.98)}
+body.ox-flow :is(button,a,select,input):focus-visible{outline:3px solid #e2ae5d;outline-offset:3px}
+body.ox-flow .ox-stage-line{position:fixed;top:0;left:0;right:0;height:4px;z-index:2147482999;pointer-events:none;background:linear-gradient(90deg,#4b9bc1 0 20%,#d8dad5 20% 40%,#cb6470 40% 60%,#dcaf58 60% 80%,#6eac84 80%);transform-origin:left;transform:scaleX(var(--ox-scroll-progress,0));transition:transform .16s linear}
+body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity .22s ease,transform .22s ease}
+@keyframes ox-title-in{from{opacity:0;transform:translate3d(0,26px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes ox-copy-in{from{opacity:0;transform:translate3d(0,15px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(prefers-reduced-motion:reduce){body.ox-flow h1,body.ox-flow :is(header,.hero,main) h1 + p,body.ox-flow :is(header,.hero,main) h1 + .lead,body.ox-flow :is(header,.hero,main) h1 + .导语,body.ox-flow .ox-stage-line{animation:none!important}body.ox-flow .ox-reveal,body.ox-flow.ox-depart,body.ox-flow a[href],body.ox-flow :is(button,select,input[type=range]){opacity:1!important;transform:none!important;transition:none!important}}
+</style></head><body><nav class="top"><a class="brand" href="../../作品总入口/index.html"><span class="mark">晓</span><span>奥运数据观察 · 文档阅读版</span></a><a class="download" href="01_%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E4%B8%8E%E5%8F%A3%E5%BE%84%E8%AF%B4%E6%98%8E%E4%B9%A6.md" download="01_数据质量与口径说明书.md">下载 Markdown 原件 ↓</a></nav><header class="head"><small>RESEARCH NOTE / 浏览器阅读版</small><h1>01_数据质量与口径说明书</h1></header><div class="layout"><main class="article"><h1>数据质量与口径说明书</h1>
+<p>参赛队：燕山大学 晓组织；张子涵60%，陈旭40%。</p>
+<p>本文件基于本地原始 CSV 实测，结果可用 <code>03_复现代码/audit.py</code> 重现。候选异常不直接视为错误。完整原始记录保留，另增加归一字段与质量标记。</p>
+<h2>已验证结果</h2>
+<table>
+<thead>
+<tr>
+<th>检查</th>
+<th align="right">结果</th>
+<th>处理决定</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>规模及字段</td>
+<td align="right">252565 行、11 列</td>
+<td>与赛题一致，原始文件只读保留</td>
+</tr>
+<tr>
+<td>缺失值</td>
+<td align="right">各字段均为 0</td>
+<td>继续检查语义缺失，非空不代表有效</td>
+</tr>
+<tr>
+<td>完全重复</td>
+<td align="right">0 行</td>
+<td>不删除</td>
+</tr>
+<tr>
+<td>去掉 player_id 后重复</td>
+<td align="right">1466 行</td>
+<td>输出候选明细，可能涉及泛化小项或身份冲突，不自动删除</td>
+</tr>
+<tr>
+<td>一个 ID 多姓名</td>
+<td align="right">12883 个 ID</td>
+<td>禁止以 ID 直接统计独立人数</td>
+</tr>
+<tr>
+<td>同名记录跨度超过 40 年</td>
+<td align="right">670 个姓名</td>
+<td>视为身份风险提示，不直接认定全部错误</td>
+</tr>
+<tr>
+<td>逗号拼接 Sport</td>
+<td align="right">89 行</td>
+<td>单独标记，多运动归属避免重复计入总量</td>
+</tr>
+<tr>
+<td>严格五种泛化 Event</td>
+<td align="right">6072 行</td>
+<td>这是有限词表结果，不是全部泛化记录；需扩展审核</td>
+</tr>
+<tr>
+<td>1906 年奖牌记录</td>
+<td align="right">458 行</td>
+<td>主分析排除，附录给出纳入敏感性</td>
+</tr>
+<tr>
+<td>1956 年主办城市</td>
+<td align="right">Melbourne 4829 行，Stockholm 298 行</td>
+<td>同一届汇总，城市信息保留</td>
+</tr>
+<tr>
+<td>奖牌记录</td>
+<td align="right">金13002、银12746、铜13070</td>
+<td>属于运动员参赛行口径</td>
+</tr>
+<tr>
+<td>2024 女性记录占比</td>
+<td align="right">49.1002%</td>
+<td>标题必须称参赛记录占比，不直接称女性运动员占比</td>
+</tr>
+</tbody></table>
+<h2>统计规则</h2>
+<ol>
+<li>主分析使用原始参赛记录，排除1906；对疑似重复保留标记，另做排除候选的敏感性版本。记录数不称独立人数。</li>
+<li>奖牌行口径统计 Medal 非 No medal 的行数。官方小项奖牌数必须来自经核验的小项获奖单元或外部官方榜；简单对 Year/NOC/Event/Medal 去重只能称估计值，不能称官方数。</li>
+<li>国家归属使用 NOC。历史代表团主图分别展示，不默认合并政体。谱系合并仅作可切换补充，ROC、AIN、EOR独立保留。</li>
+<li>体育项目保留原字段，建立 Sport 原值→统一运动家族映射。体操家族可含竞技、艺术、蹦床，子类另存；自行车、皮划艇等同理。篮球与三人篮球、排球与沙排须统一选择家族层级，不能只修正2020年改名的运动。</li>
+<li>跨家族逗号值不任意归给第一项；先按 Event 判断，不能判断则归为跨项待定。多标签展示必须声明不可加总。</li>
+<li>Event 保留原始信息，增加明确/泛化/待审状态。2020年后不以 Event 去重数声称实际小项数；降到统一大类×性别展示，完整小项增长另用核验资料并注明来源。</li>
+<li>女性主曲线为女性参赛行占全部参赛行的比例；Name或ID近似人数仅可作为敏感性对照，不能作为真实人数。</li>
+<li>主办国分析采用奖牌份额、前后届变化及比较组；参加与缺席分开编码，缺席不等于表现为零。描述关联，不作未经识别的因果断言。</li>
+</ol>
+<h2>归一与事件处理的执行结果</h2>
+<p>76个Sport原值均已映射。Cycling Road, Triathlon两条跨家族记录根据Event分别归入自行车和铁人三项；其余逗号组合归入共同运动家族。映射表的event-level resolution required提示须结合逐行sport_family与sport_resolution读取，不表示归一数据仍未解决。</p>
+<p>event_status将8515条上下文依赖记录标为generic_or_context_required，包括Singles、Individual等；这比完全泛化词表更宽，不应与赛题约6700条直接比较。其余为specific_label_unverified，表示标签具体但未外部核验。不生成声称官方的小项去重榜。</p>
+<h2>特殊记录规则</h2>
+<p>1906原始行保留，include_main=False；1956双城合并至同一Year，City不覆盖；历史政体不自动合并，URS/EUN/RUS/ROC/AIN和FRG/GDR/GER分别统计；EOR独立保留，不归入运动员来源国家；不尝试凭残缺姓名修正难民运动员身份。东京使用2020届次年份。缺席届次不等同于参赛但零奖牌。</p>
+<h2>新增字段与数据使用</h2>
+<p>source_row为原CSV含表头的行号；sport_family为归一运动家族；sport_resolution记录映射方式；event_status记录事件标签风险；include_main为主分析纳入标记；duplicate_candidate标记同组全部重复候选；duplicate_excess仅标记保留首条后的余量；is_medal表示非No medal。</p>
+<p>归一文件252565行全部保留。主分析筛选include_main后为250832行，奖牌记录38360行。重复候选2156行、重复余量1466行；不自动删除，敏感性版本只排除duplicate_excess。清洗不是把不可靠信息猜成正确值，而是统一可统一字段、标记无法恢复的信息并限制推断。</p>
+<h2>检查代码与结果对应</h2>
+<p>说明书上表中规模、空值、重复、姓名与ID、逗号Sport、1906和双城检查均由03_复现代码/audit.py执行，结果键名见04_质量检查结果/audit.json。03_复现代码/prepare.py执行76项映射、上下文标记、重复分层、主分析行数与奖牌数断言，输出preparation_summary.json及逐届敏感性统计。至少五项检查均有代码、实测值及处理决定，无需依赖答卷模板运行。</p>
+<h2>奖牌口径与来源声明</h2>
+<p>本任务以运动员行口径作为正式主口径，满足至少一种明确口径要求。不把Year/NOC/Event/Medal去重结果称作官方奖牌数。2024对照已用IOC一手资料完成结构核验：巴黎2024共有329个奖牌小项，91个国家/地区奥委会及IOC难民队获得奖牌；逐小项获奖者以IOC Olympic Results为最终依据。由于原CSV的Event字段已泛化，不能逆向恢复全部329个项目，这属于源数据的信息边界，不再表述为“待核验”。详细证据见05_2024官方口径核验说明.md。</p>
+<p>数据来源：Stefany De Oliveira，Kaggle Summer Olympics Medals (1896-2024)；上游Nitish Sharma Olympics 124 years Dataset (till 2020)及Petro Ivaniuk Paris 2024 Olympic Summer Games。来源链接见原赛题2.1。衍生数据许可CC BY-NC-SA 4.0，原始CSV不随包提交。原始文件SHA256见audit.json。</p>
+</main><aside class="side"><strong>关于这份文档</strong><p>这是 Markdown 原件的网页阅读版，方便在浏览器中查看标题、表格和链接。</p><a href="01_%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E4%B8%8E%E5%8F%A3%E5%BE%84%E8%AF%B4%E6%98%8E%E4%B9%A6.md" download="01_数据质量与口径说明书.md">下载原始 .md 文件 ↓</a><div class="note">网页阅读版与同目录 Markdown 原件一起保存在交付包中，可离线打开。</div><a class="back" href="../../作品总入口/index.html">返回作品总入口 ↗</a></aside></div><script id="ox-motion-bridge-script">(()=>{
+const body=document.body,reduce=matchMedia('(prefers-reduced-motion: reduce)');
+body.classList.add('ox-flow');
+const line=document.createElement('div');line.className='ox-stage-line';line.setAttribute('aria-hidden','true');body.appendChild(line);
+if(reduce.matches)return;
+let progressFrame=0;const updateProgress=()=>{progressFrame=0;const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);line.style.setProperty('--ox-scroll-progress',Math.min(1,Math.max(.035,scrollY/max)).toFixed(3))};
+const scheduleProgress=()=>{if(!progressFrame)progressFrame=requestAnimationFrame(updateProgress)};
+addEventListener('scroll',scheduleProgress,{passive:true});addEventListener('resize',scheduleProgress,{passive:true});scheduleProgress();
+const targets=[...new Set([...document.querySelectorAll('main > section,main > article,.wrap > section,.章,.section-block')])];
+if('IntersectionObserver'in window){
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('ox-visible');observer.unobserve(entry.target)}},{rootMargin:'0px 0px -32px 0px',threshold:.04});
+ for(const el of targets){if(el.closest('.ox-control')||el.hasAttribute('data-no-reveal'))continue;el.classList.add('ox-reveal');if(el.getBoundingClientRect().top<innerHeight-5)el.classList.add('ox-visible');else observer.observe(el)}
+}
+addEventListener('pageshow',()=>body.classList.remove('ox-depart'));
+document.addEventListener('click',e=>{
+ const a=e.target.closest('a[href]');if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.hasAttribute('download')||a.target&&a.target!=='_self')return;
+ let url;try{url=new URL(a.href,location.href)}catch{return}
+ if(url.protocol!==location.protocol||url.pathname===location.pathname||!url.pathname.toLowerCase().endsWith('.html'))return;
+ e.preventDefault();if(body.classList.contains('ox-depart'))return;body.classList.add('ox-depart');setTimeout(()=>location.assign(url.href),210);
+});
+})();</script></body></html>

@@ -1,0 +1,87 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>预测方法与验证方案 · 奥运数据观察</title><style>
+  :root{--ink:#17333a;--muted:#5b7073;--line:#dce4df;--paper:#f3f1eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 'Microsoft YaHei',system-ui,sans-serif}a{color:#116c78;text-underline-offset:3px}.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px clamp(18px,5vw,70px);background:#102e37;color:#f4f8f5;box-shadow:0 5px 20px #102e3720}.top a{color:inherit;text-decoration:none}.brand{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:800}.mark{display:grid;place-items:center;width:32px;height:32px;background:#a2d5c9;color:#153f45;border-radius:50%;font-size:16px}.top .download{border:1px solid #ffffff55;border-radius:8px;padding:7px 11px;font-size:12px;white-space:nowrap}.head{padding:48px clamp(20px,6vw,90px) 42px;background:linear-gradient(120deg,#183b43,#285762);color:#f7f7f0}.head small{color:#e4b47b;font-weight:900;letter-spacing:.17em}.head h1{font:600 clamp(35px,5vw,66px)/1.15 Georgia,'Songti SC',serif;letter-spacing:-.05em;margin:12px 0 0}.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:34px;max-width:1330px;margin:auto;padding:48px clamp(18px,5vw,70px) 110px}.article{min-width:0;background:#fffefa;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4.5vw,64px);box-shadow:0 16px 35px #173d4110}.article>*:first-child{margin-top:0}.article h1,.article h2,.article h3{font-family:Georgia,'Songti SC','SimSun',serif;line-height:1.25;letter-spacing:-.035em;color:#163943;scroll-margin-top:90px}.article h1{font-size:clamp(30px,3vw,43px);border-bottom:2px solid #a6c8c0;padding-bottom:16px}.article h2{font-size:clamp(25px,2.4vw,34px);margin-top:2.1em;padding-top:.2em;border-top:1px solid #d9e3de}.article h3{font-size:22px;margin-top:1.6em}.article p,.article li{overflow-wrap:anywhere}.article blockquote{margin:22px 0;padding:12px 20px;border-left:4px solid #c49355;background:#f4efe5;color:#4b6266}.article code{font:85%/1.5 Consolas,monospace;background:#eaf0ec;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}.article pre{overflow:auto;background:#18343d;color:#edf6f1;padding:18px;border-radius:10px}.article pre code{background:none;color:inherit;padding:0}.article table{display:block;width:100%;overflow-x:auto;border-collapse:collapse;margin:26px 0;font-size:14px}.article th,.article td{border:1px solid #d7e1dc;padding:10px 12px;vertical-align:top;min-width:80px}.article th{background:#dfebe5;color:#214950}.article tr:nth-child(even) td{background:#f6f9f6}.article img{max-width:100%;height:auto;border-radius:10px}.article hr{border:0;border-top:1px solid var(--line);margin:30px 0}.side{align-self:start;position:sticky;top:90px;color:#607579;font-size:13px}.side strong{display:block;color:#183d45;font-size:14px}.side a{display:block;margin-top:12px;overflow-wrap:anywhere}.side .note{margin-top:22px;padding:14px;background:#e4eeea;border-left:3px solid #4c9b94}.side .back{display:inline-block;margin-top:20px;font-weight:800}@media(max-width:900px){.layout{grid-template-columns:1fr}.side{display:none}.article{padding:24px}.top{padding:10px 16px}.top .brand span:last-child{display:none}}@media print{.top,.side{display:none}.head{background:none;color:#000;padding:10px}.layout{display:block;padding:0}.article{border:0;box-shadow:none;padding:0}}
+  </style><style id="ox-motion-bridge-style">
+body.ox-flow{--ox-ease:cubic-bezier(.2,1,.25,1)}
+body.ox-flow h1{animation:ox-title-in .95s var(--ox-ease) both}
+body.ox-flow :is(header,.hero,main) h1 + p,body.ox-flow :is(header,.hero,main) h1 + .lead,body.ox-flow :is(header,.hero,main) h1 + .导语{animation:ox-copy-in 1s var(--ox-ease) .12s both}
+body.ox-flow .ox-reveal{opacity:0;transform:translate3d(0,22px,0);transition:opacity .75s ease,transform .8s var(--ox-ease)}
+body.ox-flow .ox-reveal.ox-visible{opacity:1;transform:translate3d(0,0,0)}
+body.ox-flow a[href]{text-underline-offset:.22em;transition:color .25s ease,opacity .25s ease,transform .25s var(--ox-ease)}
+body.ox-flow a[href]:hover{opacity:.84}
+body.ox-flow :is(button,select,input[type=range]){transition:filter .2s ease,box-shadow .2s ease,transform .2s var(--ox-ease)}
+body.ox-flow button:not(.ox-trigger):not(.ox-close):active{transform:scale(.98)}
+body.ox-flow :is(button,a,select,input):focus-visible{outline:3px solid #e2ae5d;outline-offset:3px}
+body.ox-flow .ox-stage-line{position:fixed;top:0;left:0;right:0;height:4px;z-index:2147482999;pointer-events:none;background:linear-gradient(90deg,#4b9bc1 0 20%,#d8dad5 20% 40%,#cb6470 40% 60%,#dcaf58 60% 80%,#6eac84 80%);transform-origin:left;transform:scaleX(var(--ox-scroll-progress,0));transition:transform .16s linear}
+body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity .22s ease,transform .22s ease}
+@keyframes ox-title-in{from{opacity:0;transform:translate3d(0,26px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes ox-copy-in{from{opacity:0;transform:translate3d(0,15px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(prefers-reduced-motion:reduce){body.ox-flow h1,body.ox-flow :is(header,.hero,main) h1 + p,body.ox-flow :is(header,.hero,main) h1 + .lead,body.ox-flow :is(header,.hero,main) h1 + .导语,body.ox-flow .ox-stage-line{animation:none!important}body.ox-flow .ox-reveal,body.ox-flow.ox-depart,body.ox-flow a[href],body.ox-flow :is(button,select,input[type=range]){opacity:1!important;transform:none!important;transition:none!important}}
+</style></head><body><nav class="top"><a class="brand" href="../../作品总入口/index.html"><span class="mark">晓</span><span>奥运数据观察 · 文档阅读版</span></a><a class="download" href="%E9%A2%84%E6%B5%8B%E6%96%B9%E6%B3%95%E4%B8%8E%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88.md" download="预测方法与验证方案.md">下载 Markdown 原件 ↓</a></nav><header class="head"><small>RESEARCH NOTE / 浏览器阅读版</small><h1>预测方法与验证方案</h1></header><div class="layout"><main class="article"><h1>洛杉矶 2028 奖牌预测：方法与验证方案</h1>
+<p>这份文件记录预测是怎样得到的、哪些数字不能混用，以及 2028 年赛后如何检验。这是便于下载和复核的 Markdown 底稿。交互预测结果见 <a href="index.html">预测主页面</a>。</p>
+<h2>先分清两套结果</h2>
+<table>
+<thead>
+<tr>
+<th>结果</th>
+<th>观察单位</th>
+<th>用途</th>
+<th>主要限制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>透明历史基线</td>
+<td>代表团的金、银、铜及总奖牌数</td>
+<td>提供可直接复算的参照，并展示历史残差区间</td>
+<td>不细分项目竞争，主场和新增项目以情景假设进入</td>
+</tr>
+<tr>
+<td>项目级集成点估计</td>
+<td>代表团 × 运动大类的成绩代理，再汇总到代表团</td>
+<td>纳入项目结构、主场与新增运动信号</td>
+<td>项目级代理和最终奖牌小项不是同一个统计单位</td>
+</tr>
+</tbody></table>
+<p>网页预测榜应按其标注的模型阅读。尤其不要把历史基线的 80% 区间解释为项目级集成模型已经独立校准的区间。</p>
+<h2>一、透明历史基线</h2>
+<p>对每个代表团分别估计金、银、铜牌，最近三届可比数据的权重依次为 <strong>0.2、0.3、0.5</strong>；再将最近两届差值的 <strong>15%</strong> 作为趋势项。最后按洛杉矶 2028 的 <strong>353 个奖牌小项</strong>调整总规模。具体参数见 <a href="%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0%E4%B8%8E%E6%9D%A5%E6%BA%90.json">模型参数与来源.json</a>，逐队结果见 <a href="LA2028%E5%A5%96%E7%89%8C%E9%A2%84%E6%B5%8B%E5%AE%8C%E6%95%B4%E6%A6%9C.csv">LA2028奖牌预测完整榜.csv</a>。</p>
+<p>基线中的“美国总奖牌增加 12 枚”是一个<strong>可关闭的早期主场情景假设</strong>，并非实测结果，也不是最终集成模型采用的主场效应。新增运动同样先作为情景增量处理。把这些假设单独列出，是为了让读者知道预测会因哪些决定而改变。</p>
+<p>以 2012、2016、2024 为历史回测届次，代表团总奖牌数的平均绝对误差（MAE）为 <strong>2.74 枚</strong>；实际获得至少 5 枚奖牌的代表团，MAE 为 <strong>4.57 枚</strong>。基线的 80% 区间采用历史回测残差的第 10 与第 90 百分位构造，详见 <a href="%E6%A8%A1%E5%9E%8B%E5%9B%9E%E6%B5%8B%E6%91%98%E8%A6%81.csv">模型回测摘要.csv</a>。三次回测的样本有限，区间覆盖率仍需在 2028 年赛后检验。</p>
+<h2>二、项目级集成点估计</h2>
+<p>项目级观察单位是“代表团 × 运动大类 × 届次”。模型输入包括前两届成绩、变化趋势、代表团整体实力和项目竞争规模；随机森林与梯度提升按 <strong>60% / 40%</strong> 组合。<strong>2024 年整届留出检验</strong>，不参与该轮训练。</p>
+<p>最终点估计由 <strong>45% 透明基线、45% 项目级模型、10% 新增运动排名信号</strong>组合。五项新增运动的竞技排名或代理信号保留来源与快照，见 <a href="../05_%E6%BB%A1%E5%88%86%E5%8D%87%E7%BA%A7/%E6%96%B0%E5%A2%9E%E9%A1%B9%E7%9B%AE%E6%9D%83%E5%A8%81%E6%8E%92%E5%90%8D%E7%89%B9%E5%BE%81.csv">新增项目权威排名特征.csv</a>。主场项参考近邻加权合成对照，只采用历史估计中位数的 <strong>55%</strong> 作为收缩后的情景调整，见 <a href="../05_%E6%BB%A1%E5%88%86%E5%8D%87%E7%BA%A7/%E4%B8%BB%E5%9C%BA%E6%95%88%E5%BA%94%E5%90%88%E6%88%90%E5%AF%B9%E7%85%A7.csv">主场效应合成对照.csv</a>。主办权并非随机分配，因此这里不声称严格的因果效应。</p>
+<p>项目级 2024 留出回测 MAE 为 <strong>0.52</strong>，它衡量的是“代表团 × 运动大类”的<strong>运动员行代理误差</strong>；基线 2.74 衡量的是代表团<strong>总奖牌枚数</strong>误差。两者统计单位不同，不能用数值大小直接判断哪套模型更准。验证摘要见 <a href="../05_%E6%BB%A1%E5%88%86%E5%8D%87%E7%BA%A7/%E5%8D%87%E7%BA%A7%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%E6%91%98%E8%A6%81.csv">升级模型验证摘要.csv</a>，最终榜单见 <a href="LA2028%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%9B%86%E6%88%90%E9%A2%84%E6%B5%8B%E6%A6%9C.csv">LA2028机器学习集成预测榜.csv</a>。</p>
+<h2>三、赛后怎样验收</h2>
+<p>在 2028 年赛果确定后，用赛前冻结的预测表逐项核对：</p>
+<ol>
+<li><strong>数量误差</strong>：分别计算总奖牌与项目级代理的 MAE、RMSE，保持观察单位一致。</li>
+<li><strong>排序表现</strong>：计算斯皮尔曼等级相关和前十代表团命中情况。</li>
+<li><strong>区间表现</strong>：检查历史基线 80% 区间的实际覆盖率，不把它转称为集成模型区间。</li>
+<li><strong>机制偏差</strong>：单独比较主场与新增运动假设的预测增量和实际差异。</li>
+</ol>
+<p>预测不等于赛果。参赛资格、最终名单、伤病和竞赛项目变化都可能改变结果；赛后检验要保留赛前版本，不用赛后信息倒填模型。</p>
+<h2>官方项目依据</h2>
+<ul>
+<li><a href="https://www.olympics.com/ioc/news/la28-event-programme-marks-strong-commitment-towards-innovation-and-gender-equality">国际奥委会：LA28 项目安排与 353 个奖牌小项</a>。巴黎 2024 为 329 项，两届数量相差 24 项。</li>
+<li><a href="https://www.olympics.com/ioc/news/ioc-session-approves-la28-s-proposal-for-five-additional-sports">国际奥委会：批准五项新增运动</a>：棒垒球、T20 板球、腰旗橄榄球、六人制长曲棍球和壁球。</li>
+</ul>
+</main><aside class="side"><strong>关于这份文档</strong><p>这是 Markdown 原件的网页阅读版，方便在浏览器中查看标题、表格和链接。</p><a href="%E9%A2%84%E6%B5%8B%E6%96%B9%E6%B3%95%E4%B8%8E%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88.md" download="预测方法与验证方案.md">下载原始 .md 文件 ↓</a><div class="note">网页阅读版与同目录 Markdown 原件一起保存在交付包中，可离线打开。</div><a class="back" href="../../作品总入口/index.html">返回作品总入口 ↗</a></aside></div><script id="ox-motion-bridge-script">(()=>{
+const body=document.body,reduce=matchMedia('(prefers-reduced-motion: reduce)');
+body.classList.add('ox-flow');
+const line=document.createElement('div');line.className='ox-stage-line';line.setAttribute('aria-hidden','true');body.appendChild(line);
+if(reduce.matches)return;
+let progressFrame=0;const updateProgress=()=>{progressFrame=0;const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);line.style.setProperty('--ox-scroll-progress',Math.min(1,Math.max(.035,scrollY/max)).toFixed(3))};
+const scheduleProgress=()=>{if(!progressFrame)progressFrame=requestAnimationFrame(updateProgress)};
+addEventListener('scroll',scheduleProgress,{passive:true});addEventListener('resize',scheduleProgress,{passive:true});scheduleProgress();
+const targets=[...new Set([...document.querySelectorAll('main > section,main > article,.wrap > section,.章,.section-block')])];
+if('IntersectionObserver'in window){
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('ox-visible');observer.unobserve(entry.target)}},{rootMargin:'0px 0px -32px 0px',threshold:.04});
+ for(const el of targets){if(el.closest('.ox-control')||el.hasAttribute('data-no-reveal'))continue;el.classList.add('ox-reveal');if(el.getBoundingClientRect().top<innerHeight-5)el.classList.add('ox-visible');else observer.observe(el)}
+}
+addEventListener('pageshow',()=>body.classList.remove('ox-depart'));
+document.addEventListener('click',e=>{
+ const a=e.target.closest('a[href]');if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.hasAttribute('download')||a.target&&a.target!=='_self')return;
+ let url;try{url=new URL(a.href,location.href)}catch{return}
+ if(url.protocol!==location.protocol||url.pathname===location.pathname||!url.pathname.toLowerCase().endsWith('.html'))return;
+ e.preventDefault();if(body.classList.contains('ox-depart'))return;body.classList.add('ox-depart');setTimeout(()=>location.assign(url.href),210);
+});
+})();</script></body></html>

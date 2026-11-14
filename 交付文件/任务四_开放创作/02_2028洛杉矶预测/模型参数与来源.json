@@ -1,0 +1,18 @@
+{
+  "model": "三届时间衰减加趋势项",
+  "weights": [
+    0.2,
+    0.3,
+    0.5
+  ],
+  "momentum": 0.15,
+  "forecast_events": 353,
+  "host_adjustment_USA_total": 12,
+  "backtest_mae": 2.744518076351899,
+  "backtest_top_mae": 4.566683189718515,
+  "interval": "历史回测残差10%—90%分位",
+  "official_sources": [
+    "https://www.olympics.com/ioc/news/la28-event-programme-marks-strong-commitment-towards-innovation-and-gender-equality",
+    "https://www.olympics.com/ioc/news/ioc-session-approves-la28-s-proposal-for-five-additional-sports"
+  ]
+}

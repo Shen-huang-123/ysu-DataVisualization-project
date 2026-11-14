@@ -1,0 +1,2 @@
+const {chromium}=require('../qa_tools/node_modules/playwright-core');const {pathToFileURL}=require('url');const path=require('path');
+(async()=>{const b=await chromium.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});const p=await b.newPage({viewport:{width:390,height:844}});await p.goto(pathToFileURL(path.resolve('交付文件/任务二_百年全景/05_交互总览/index.html')).href);await p.locator('.ox-trigger').click();await p.waitForTimeout(650);await p.screenshot({path:'项目工作区/视觉验收/新设计_移动导览.png'});await b.close()})()

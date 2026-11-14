@@ -1,0 +1,44 @@
+[
+  {
+    "label": "中国台北",
+    "code": "TPE",
+    "value": 73,
+    "detail": "原始代码 TPE · 1195 条参赛行"
+  },
+  {
+    "label": "斐济",
+    "code": "FIJ",
+    "value": 53,
+    "detail": "原始代码 FIJ · 296 条参赛行"
+  },
+  {
+    "label": "中国香港",
+    "code": "HKG",
+    "value": 16,
+    "detail": "原始代码 HKG · 789 条参赛行"
+  },
+  {
+    "label": "新加坡",
+    "code": "SGP",
+    "value": 10,
+    "detail": "原始代码 SGP · 411 条参赛行"
+  },
+  {
+    "label": "科索沃",
+    "code": "KOS",
+    "value": 5,
+    "detail": "原始代码 KOS · 28 条参赛行"
+  },
+  {
+    "label": "约旦",
+    "code": "JOR",
+    "value": 4,
+    "detail": "原始代码 JOR · 108 条参赛行"
+  },
+  {
+    "label": "百慕大",
+    "code": "BER",
+    "value": 2,
+    "detail": "原始代码 BER · 215 条参赛行"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "candidate_host_editions": 20,
+  "usable_cases": 17,
+  "high_fit_cases": 14,
+  "period": "1948-2024",
+  "synthetic_control_mean_pp": 3.369399499926419,
+  "bootstrap_ci95": [
+    1.9334315775968887,
+    5.055317904668745
+  ],
+  "high_fit_mean_pp": 2.2378276375007737,
+  "high_fit_ci95": [
+    1.2963012013960853,
+    3.284421000204025
+  ],
+  "exclude_1956_and_boycotts_mean_pp": 2.5196114708072828,
+  "exclude_1956_and_boycotts_ci95": [
+    1.4813360175276153,
+    3.7064645259369238
+  ],
+  "mean_pre_rmspe": 1.6804059766198456,
+  "leave_one_out_range": [
+    2.7761574888952953,
+    3.598393328598074
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "formal_report_pages": 19,
+  "template_answer_pages": 20,
+  "formal_abstract_characters": 247,
+  "formal_has_references": true,
+  "formal_has_external_data_logic": true,
+  "poster_size_pt": [
+    1190.6,
+    1683.8
+  ],
+  "all_task_launchers": true,
+  "root_readme": true,
+  "requirements": true,
+  "poster_exists": true,
+  "video_file_or_url_present": false,
+  "total_person_days_filled": false,
+  "s7_registration_confirmed": "unknown",
+  "submission_channel_confirmed": "unknown",
+  "online_latest_synced": true,
+  "formal_s1_to_s10_covered": true,
+  "s2_rank_direction_correct": true,
+  "online_version": 43,
+  "online_task3_portal_http": 200,
+  "online_custom_topics_pdf_http": 200,
+  "clean_environment_reproduction": true,
+  "separate_physical_computer_reproduction": false,
+  "custom_topic_evidence_hashes_matched": 7
+}

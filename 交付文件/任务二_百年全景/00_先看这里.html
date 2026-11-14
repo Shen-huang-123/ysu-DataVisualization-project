@@ -1,0 +1,69 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>00_先看这里 · 奥运数据观察</title><style>
+  :root{--ink:#17333a;--muted:#5b7073;--line:#dce4df;--paper:#f3f1eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 'Microsoft YaHei',system-ui,sans-serif}a{color:#116c78;text-underline-offset:3px}.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px clamp(18px,5vw,70px);background:#102e37;color:#f4f8f5;box-shadow:0 5px 20px #102e3720}.top a{color:inherit;text-decoration:none}.brand{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:800}.mark{display:grid;place-items:center;width:32px;height:32px;background:#a2d5c9;color:#153f45;border-radius:50%;font-size:16px}.top .download{border:1px solid #ffffff55;border-radius:8px;padding:7px 11px;font-size:12px;white-space:nowrap}.head{padding:48px clamp(20px,6vw,90px) 42px;background:linear-gradient(120deg,#183b43,#285762);color:#f7f7f0}.head small{color:#e4b47b;font-weight:900;letter-spacing:.17em}.head h1{font:600 clamp(35px,5vw,66px)/1.15 Georgia,'Songti SC',serif;letter-spacing:-.05em;margin:12px 0 0}.layout{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:34px;max-width:1330px;margin:auto;padding:48px clamp(18px,5vw,70px) 110px}.article{min-width:0;background:#fffefa;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4.5vw,64px);box-shadow:0 16px 35px #173d4110}.article>*:first-child{margin-top:0}.article h1,.article h2,.article h3{font-family:Georgia,'Songti SC','SimSun',serif;line-height:1.25;letter-spacing:-.035em;color:#163943;scroll-margin-top:90px}.article h1{font-size:clamp(30px,3vw,43px);border-bottom:2px solid #a6c8c0;padding-bottom:16px}.article h2{font-size:clamp(25px,2.4vw,34px);margin-top:2.1em;padding-top:.2em;border-top:1px solid #d9e3de}.article h3{font-size:22px;margin-top:1.6em}.article p,.article li{overflow-wrap:anywhere}.article blockquote{margin:22px 0;padding:12px 20px;border-left:4px solid #c49355;background:#f4efe5;color:#4b6266}.article code{font:85%/1.5 Consolas,monospace;background:#eaf0ec;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}.article pre{overflow:auto;background:#18343d;color:#edf6f1;padding:18px;border-radius:10px}.article pre code{background:none;color:inherit;padding:0}.article table{display:block;width:100%;overflow-x:auto;border-collapse:collapse;margin:26px 0;font-size:14px}.article th,.article td{border:1px solid #d7e1dc;padding:10px 12px;vertical-align:top;min-width:80px}.article th{background:#dfebe5;color:#214950}.article tr:nth-child(even) td{background:#f6f9f6}.article img{max-width:100%;height:auto;border-radius:10px}.article hr{border:0;border-top:1px solid var(--line);margin:30px 0}.side{align-self:start;position:sticky;top:90px;color:#607579;font-size:13px}.side strong{display:block;color:#183d45;font-size:14px}.side a{display:block;margin-top:12px;overflow-wrap:anywhere}.side .note{margin-top:22px;padding:14px;background:#e4eeea;border-left:3px solid #4c9b94}.side .back{display:inline-block;margin-top:20px;font-weight:800}@media(max-width:900px){.layout{grid-template-columns:1fr}.side{display:none}.article{padding:24px}.top{padding:10px 16px}.top .brand span:last-child{display:none}}@media print{.top,.side{display:none}.head{background:none;color:#000;padding:10px}.layout{display:block;padding:0}.article{border:0;box-shadow:none;padding:0}}
+  </style><style id="ox-motion-bridge-style">
+body.ox-flow{--ox-ease:cubic-bezier(.2,1,.25,1)}
+body.ox-flow h1{animation:ox-title-in .95s var(--ox-ease) both}
+body.ox-flow :is(header,.hero,main) h1 + p,body.ox-flow :is(header,.hero,main) h1 + .lead,body.ox-flow :is(header,.hero,main) h1 + .导语{animation:ox-copy-in 1s var(--ox-ease) .12s both}
+body.ox-flow .ox-reveal{opacity:0;transform:translate3d(0,22px,0);transition:opacity .75s ease,transform .8s var(--ox-ease)}
+body.ox-flow .ox-reveal.ox-visible{opacity:1;transform:translate3d(0,0,0)}
+body.ox-flow a[href]{text-underline-offset:.22em;transition:color .25s ease,opacity .25s ease,transform .25s var(--ox-ease)}
+body.ox-flow a[href]:hover{opacity:.84}
+body.ox-flow :is(button,select,input[type=range]){transition:filter .2s ease,box-shadow .2s ease,transform .2s var(--ox-ease)}
+body.ox-flow button:not(.ox-trigger):not(.ox-close):active{transform:scale(.98)}
+body.ox-flow :is(button,a,select,input):focus-visible{outline:3px solid #e2ae5d;outline-offset:3px}
+body.ox-flow .ox-stage-line{position:fixed;top:0;left:0;right:0;height:4px;z-index:2147482999;pointer-events:none;background:linear-gradient(90deg,#4b9bc1 0 20%,#d8dad5 20% 40%,#cb6470 40% 60%,#dcaf58 60% 80%,#6eac84 80%);transform-origin:left;transform:scaleX(var(--ox-scroll-progress,0));transition:transform .16s linear}
+body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity .22s ease,transform .22s ease}
+@keyframes ox-title-in{from{opacity:0;transform:translate3d(0,26px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes ox-copy-in{from{opacity:0;transform:translate3d(0,15px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(prefers-reduced-motion:reduce){body.ox-flow h1,body.ox-flow :is(header,.hero,main) h1 + p,body.ox-flow :is(header,.hero,main) h1 + .lead,body.ox-flow :is(header,.hero,main) h1 + .导语,body.ox-flow .ox-stage-line{animation:none!important}body.ox-flow .ox-reveal,body.ox-flow.ox-depart,body.ox-flow a[href],body.ox-flow :is(button,select,input[type=range]){opacity:1!important;transform:none!important;transition:none!important}}
+</style></head><body><nav class="top"><a class="brand" href="../作品总入口/index.html"><span class="mark">晓</span><span>奥运数据观察 · 文档阅读版</span></a><a class="download" href="00_%E5%85%88%E7%9C%8B%E8%BF%99%E9%87%8C.md" download="00_先看这里.md">下载 Markdown 原件 ↓</a></nav><header class="head"><small>RESEARCH NOTE / 浏览器阅读版</small><h1>00_先看这里</h1></header><div class="layout"><main class="article"><h1>任务二｜百年奥运全景</h1>
+<p>这是任务二正式交付目录，已按“报告—数据—代码—图表”整理。</p>
+<h2>评委建议阅读顺序</h2><p><a href="08_女性结构分解/女性结构分解.html">新增：女性结构分解——50.3% 背后的项目抵消 ↗</a></p><p><a href="07_结论压力测试/结论压力测试.html">新增：主结论压力测试——长期分散与近期反向波动 ↗</a></p><p><a href="07_四视角独立交付/00_四项必选视角.html"><strong>先看 A—D 四项必选视角 →</strong></a> 每项独立附图表、解读、口径和数据。</p>
+<ol>
+<li><code>01_报告与说明/01_百年奥运全景分析_高分版.md</code>：完整叙事、方法和结论。</li>
+<li><code>01_报告与说明/任务二_百年奥运全景_正式报告.pdf</code>：9页正式PDF。</li>
+<li><code>01_报告与说明/任务二_百年奥运全景_A2海报.pdf</code>：可直接展示的A2竖版海报。</li>
+<li><code>04_核心图表/</code>：11张高分辨率图，覆盖A—D、主场归因与封面总览。</li>
+<li><code>05_交互总览/index.html</code>：无需联网的五维联动看板，可按届次、代表团、性别、运动大类和指标筛选并导出CSV。</li>
+<li><code>02_数据表/</code>：所有绘图中间表与关键指标，便于核查。</li>
+<li><code>03_复现代码/生成任务二.py</code>：分析、图表与交互页复现入口；包含PDF和海报的完整重建请双击 <code>一键运行任务二.cmd</code>。</li>
+<li><code>06_质量验收/任务二自动验收报告.json</code>：CSV、JSON、图片、链接、关键文件与数字一致性检查结果。</li>
+</ol>
+<h2>已覆盖的最低要求</h2>
+<ul>
+<li>A：奖牌结构、规模扩张、集中度与历史累计榜。</li>
+<li>B：12 个代表团的兴衰曲线与时代热力图。</li>
+<li>C：女性参赛、获奖、小项三层平权及国家差异。</li>
+<li>D：小项数量增长与代表项目更替。</li>
+<li>加强项：九个现代主办案例的定量比较与优势项目贡献分解。</li>
+<li>加强项：匹配差分中的差分、事件窗口、前趋势诊断、案例自助法区间和5万次随机化安慰剂检验。</li>
+<li>加强项：1948—2024年20个候选主办届、17个可用合成对照案例、14个高拟合质量案例，以及特殊届剔除和留一法检验。</li>
+<li>加强项：新增—退出—重返的项目生命周期图。</li>
+<li>加分项：离线交互总览、封面英雄图、正式PDF和A2海报。</li>
+<li>每个视角均含核心图、超过 100 字中文分析和明确的方法说明。</li>
+</ul>
+<h2>核心口径提醒</h2>
+<p>历史主表使用运动员记录口径；2024 小项数使用官方 329 小项表；1906 排除；2020 因 Event 泛化不计算小项数；历史政体分开统计。详细规则见任务一。</p>
+<p><code>99_旧版归档/</code> 仅保留早期探索材料，不属于正式提交内容。</p>
+</main><aside class="side"><strong>关于这份文档</strong><p>这是 Markdown 原件的网页阅读版，方便在浏览器中查看标题、表格和链接。</p><a href="00_%E5%85%88%E7%9C%8B%E8%BF%99%E9%87%8C.md" download="00_先看这里.md">下载原始 .md 文件 ↓</a><div class="note">网页阅读版与同目录 Markdown 原件一起保存在交付包中，可离线打开。</div><a class="back" href="../作品总入口/index.html">返回作品总入口 ↗</a></aside></div><script id="ox-motion-bridge-script">(()=>{
+const body=document.body,reduce=matchMedia('(prefers-reduced-motion: reduce)');
+body.classList.add('ox-flow');
+const line=document.createElement('div');line.className='ox-stage-line';line.setAttribute('aria-hidden','true');body.appendChild(line);
+if(reduce.matches)return;
+let progressFrame=0;const updateProgress=()=>{progressFrame=0;const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);line.style.setProperty('--ox-scroll-progress',Math.min(1,Math.max(.035,scrollY/max)).toFixed(3))};
+const scheduleProgress=()=>{if(!progressFrame)progressFrame=requestAnimationFrame(updateProgress)};
+addEventListener('scroll',scheduleProgress,{passive:true});addEventListener('resize',scheduleProgress,{passive:true});scheduleProgress();
+const targets=[...new Set([...document.querySelectorAll('main > section,main > article,.wrap > section,.章,.section-block')])];
+if('IntersectionObserver'in window){
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('ox-visible');observer.unobserve(entry.target)}},{rootMargin:'0px 0px -32px 0px',threshold:.04});
+ for(const el of targets){if(el.closest('.ox-control')||el.hasAttribute('data-no-reveal'))continue;el.classList.add('ox-reveal');if(el.getBoundingClientRect().top<innerHeight-5)el.classList.add('ox-visible');else observer.observe(el)}
+}
+addEventListener('pageshow',()=>body.classList.remove('ox-depart'));
+document.addEventListener('click',e=>{
+ const a=e.target.closest('a[href]');if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.hasAttribute('download')||a.target&&a.target!=='_self')return;
+ let url;try{url=new URL(a.href,location.href)}catch{return}
+ if(url.protocol!==location.protocol||url.pathname===location.pathname||!url.pathname.toLowerCase().endsWith('.html'))return;
+ e.preventDefault();if(body.classList.contains('ox-depart'))return;body.classList.add('ox-depart');setTimeout(()=>location.assign(url.href),210);
+});
+})();</script></body></html>
+

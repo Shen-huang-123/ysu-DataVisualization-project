@@ -1,0 +1,118 @@
+{
+  "official_events": 329,
+  "official_gold_units": 329,
+  "official_silver_units": 330,
+  "official_bronze_units": 385,
+  "athlete_medal_rows": 2281,
+  "spearman_rho": 0.972618737229693,
+  "spearman_p": 2.292488036854137e-40,
+  "eligible_nocs": 63,
+  "usa_gold_units": 40,
+  "usa_gold_rows": 131,
+  "chn_gold_units": 40,
+  "chn_gold_rows": 71,
+  "ned_gold_units": 15,
+  "ned_gold_rows": 67,
+  "esp_gold_units": 5,
+  "esp_gold_rows": 40
+}
+{
+  "historical_validation": [
+    {
+      "Year": 2008,
+      "eligible_nocs": 55,
+      "mechanism_rho": 0.9826430838453579,
+      "mechanism_p": 1.853873892837314e-40,
+      "rank_kendall_tau": 0.8947514921071259,
+      "rank_tau_p": 3.964482334672451e-33,
+      "mean_abs_rank_change": 3.7325581395348837
+    },
+    {
+      "Year": 2012,
+      "eligible_nocs": 54,
+      "mechanism_rho": 0.9823184653915198,
+      "mechanism_p": 1.6268013411982196e-39,
+      "rank_kendall_tau": 0.8952022924034356,
+      "rank_tau_p": 7.962764247566805e-33,
+      "mean_abs_rank_change": 3.7294117647058824
+    },
+    {
+      "Year": 2016,
+      "eligible_nocs": 59,
+      "mechanism_rho": 0.9907087725990887,
+      "mechanism_p": 4.3432684951238017e-51,
+      "rank_kendall_tau": 0.8933410880639362,
+      "rank_tau_p": 3.037794710910762e-33,
+      "mean_abs_rank_change": 3.9069767441860463
+    }
+  ],
+  "three_lens_rows": 273,
+  "dashboard": "D:\\虚拟C盘\\数据可视化挑战赛\\交付文件\\任务三_专题深挖\\S2_口径的魔力\\06_交互榜\\index.html"
+}
+{
+  "official_validation": [
+    {
+      "Year": 2008,
+      "event_rows": 302,
+      "expected_program_events": 302,
+      "event_count_match": true,
+      "ioc_results_url": "https://www.olympics.com/en/olympic-games/beijing-2008/results",
+      "source_grade": "IOC官方届次入口核验 + 主数据逐小项生成"
+    },
+    {
+      "Year": 2012,
+      "event_rows": 302,
+      "expected_program_events": 302,
+      "event_count_match": true,
+      "ioc_results_url": "https://www.olympics.com/en/olympic-games/london-2012/results",
+      "source_grade": "IOC官方届次入口核验 + 主数据逐小项生成"
+    },
+    {
+      "Year": 2016,
+      "event_rows": 306,
+      "expected_program_events": 306,
+      "event_count_match": true,
+      "ioc_results_url": "https://www.olympics.com/en/olympic-games/rio-2016/results",
+      "source_grade": "IOC官方届次入口核验 + 主数据逐小项生成"
+    }
+  ],
+  "story": "D:\\虚拟C盘\\数据可视化挑战赛\\交付文件\\任务三_专题深挖\\S2_口径的魔力\\06_滚动叙事专题\\index.html"
+}
+{
+  "transitions": 4511,
+  "defense_rate": 0.2954998891598315,
+  "events": 615,
+  "longest_editions": 16,
+  "era": [
+    {
+      "era": "1896–1948",
+      "transitions": 874,
+      "defenses": 311,
+      "defense_rate": 0.35583524027459956
+    },
+    {
+      "era": "1952–1988",
+      "transitions": 1710,
+      "defenses": 489,
+      "defense_rate": 0.28596491228070176
+    },
+    {
+      "era": "1992–2016",
+      "transitions": 1927,
+      "defenses": 533,
+      "defense_rate": 0.2765957446808511
+    }
+  ]
+}
+D:\虚拟C盘\数据可视化挑战赛\交付文件\任务三_专题深挖\S3_冠军的保质期\06_冠军王朝时间轴\index.html
+D:\虚拟C盘\数据可视化挑战赛\交付文件\任务三_专题深挖\S1_东道主效应\index.html
+D:\虚拟C盘\数据可视化挑战赛\交付文件\任务三_专题深挖\统一中文入口\index.html
+{"pages": 13, "task1": "D:\\虚拟C盘\\数据可视化挑战赛\\交付文件\\任务一_数据体检\\index.html", "overview": "D:\\虚拟C盘\\数据可视化挑战赛\\交付文件\\作品总入口\\index.html"}
+D:\虚拟C盘\数据可视化挑战赛\交付文件\任务三_专题深挖\S2_口径的魔力\01_报告与说明\S2_口径的魔力_正式报告.pdf
+D:\虚拟C盘\数据可视化挑战赛\交付文件\任务三_专题深挖\S3_冠军的保质期\01_报告与说明\S3_冠军的保质期_正式报告.pdf
+{
+  "passed": true,
+  "checks": 37,
+  "failed": 0
+}
+Task 3 S2 outputs were rebuilt and verified.

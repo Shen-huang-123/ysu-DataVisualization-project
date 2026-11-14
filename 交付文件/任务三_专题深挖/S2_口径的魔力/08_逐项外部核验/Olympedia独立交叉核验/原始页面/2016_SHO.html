@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Olympedia – Shooting at the 2016 Summer Olympics</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="EHmomJIS5rnTe14lZF0UlpZitvn1k2xBYisB7ZbbIqXEaiDsRRdHh5BiCdlxHiDt7n8ZFrI0-yKKvQNMiFTtMg" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="EN" http-equiv="content-language">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="/icon.png" rel="icon" type="image/png">
+<link rel="stylesheet" href="/assets/bootstrap.min-03423cd68c2bff228a73520e849f02d78d1236de443661f3f5dcd658dd9cbc46.css" media="all" />
+<link rel="stylesheet" href="/assets/bootstrap-sortable-515ee97c8b372ddae7796a36ec518e0785e0e3d3d266162ba2c44a3623540f7b.css" media="all" />
+<link rel="stylesheet" href="/assets/jquery-ui-1.11.4.min-35aebb4aa1818460c44d32da4f18101d34f332741a347654907911af0d145e88.css" media="all" />
+<link rel="stylesheet" href="/assets/lightbox-3afc0e08d652072ea73df78af7d454f122da80b9124d782fb609a7b4b05e0197.css" media="screen" />
+<link rel="stylesheet" href="/assets/application-a970a77a6d1f4f82ba987b68296f2119601e3438cbdec42f82618fb568bf3dba.css" media="all" data-turbolinks-track="true" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.0.0/ol.css" media="screen" />
+<script src="https://cdn.jsdelivr.net/npm/ol@v10.0.0/dist/ol.js"></script>
+<script src="/assets/omm-34ac1a3b4884461c87bafa8ec1c1c21bcc434c53c51d3b1f82d1dff57ad3856b.js"></script>
+<script src="/assets/jquery-1.11.2.min-224c81cc15edb399b9465fc371dffb02e6fe4c043716571b49b1a7b2bcc09ef1.js"></script>
+<script src="/assets/jquery-ui-1.11.4.min-96b45d6922993b35cca7b07ede8f0bf64353715e3729b9019eb2e46a8737dac8.js"></script>
+<script src="/assets/jquery-ujs-f09ebd8e2bbe3d80718935c572e83dbb10f72e7a2aec58b193ee1e2e2e8e373a.js"></script>
+<script src="/assets/bootstrap.min-2b9640a7175349197c70d8b752f484837518c6cbdce416dead60cdeebd875294.js"></script>
+<script src="/assets/moment-93e00e6729db142363a35d17328084c3bd3d62304ecd27f91e9c954550daa1ce.js"></script>
+<script src="/assets/bootstrap-sortable-e790a4de58d52fde6861014956b371ac860d665b62c23af929a33a9f39e84d04.js"></script>
+
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar-header">
+<div class="button navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar">
+<span class="icon-bar">
+<span class="icon-bar"></span>
+</span>
+</span>
+</div>
+<a class="navbar-brand" href="/" style="padding-top: 10px">
+<img height="30px" src="/images/logo.png" width="30px">
+</a>
+<a class="navbar-brand" href="/">Olympedia</a>
+</div>
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Athletes
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/athletes/advanced_search">Advanced search</a></li>
+<li><a href="/horses">Horse search</a></li>
+<li><a href="/family_relations">Related Olympians</a></li>
+<li><a href="/counts">Counts</a></li>
+<li><a href="/athletes/doubles">Doubles</a></li>
+<li><a href="/athletes/lists">Lists</a></li>
+<li><a href="/athletes/country_representation">Country representation</a></li>
+<li class="divider"></li>
+<li><a href="/athletes">Athletes</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Countries
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/countries/head_to_head">Head-to-head</a></li>
+<li><a href="/countries/best_results">Best results</a></li>
+<li><a href="/countries/comparison">Results comparison</a></li>
+<li class="divider"></li>
+<li><a href="/countries">Countries</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Games
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/editions">Games</a></li>
+<li><a href="/editions/medals">Medals</a></li>
+<li><a href="/editions/results">Results</a></li>
+<li><a href="/ceremonies">Opening ceremony</a></li>
+<li><a href="/venues/menu">Venues</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Sports
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/sports">Disciplines &amp; Sports</a></li>
+<li><a href="/event_names">Events</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+IOC
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/organizations">Organizations</a></li>
+<li><a href="/definitions">Definitions</a></li>
+<li><a href="/awards">Awards</a></li>
+<li><a href="/meetings">Meetings</a></li>
+<li><a href="/ioc/host_cities">Host city selection</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Statistics
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li></li>
+<li><a href="/statistics/medal/country">Medals by country</a></li>
+<li><a href="/statistics/medal/athlete">Medals by athlete</a></li>
+<li><a href="/statistics/medal_table">Medal tables</a></li>
+<li><a href="/statistics/participation">Participations</a></li>
+<li><a href="/records">Olympic Records</a></li>
+<li><a href="/statistics/age">Age records</a></li>
+<li><a href="/statistics/age_at_death">Age at death</a></li>
+<li><a href="/lists">Lists</a></li>
+<li><a href="/today">Today</a></li>
+<li></li>
+<li class="divider"></li>
+<li><a href="/statistics">Statistics</a></li>
+</ul>
+</li>
+
+
+
+
+<li><a href="/feedbacks/new">Feedback</a></li>
+<form class="navbar-form navbar-left" role="search" action="/athletes/quick_search" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="pHaUtURvLMhfKASqKVm4pFlHg4Bsh4vAwa4A9d5IfL_pKPsi0LM2VuT7dKJ2ErqdsJ31j9KbnbPFOx0RoW999w" autocomplete="off" /><div class="form-group">
+<input type="text" name="query" id="query" class="form-control" placeholder="Athlete search" />
+</div>
+<input type="submit" name="commit" value="Go" class="btn btn-default" data-disable-with="Go" />
+</form>
+</ul>
+</div>
+</div>
+<div class="container">
+<ol class="breadcrumb">
+<li>
+<a href="/">Home</a>
+</li>
+<li><a href="/editions">Games</a></li><li><a href="/editions/59">2016 Summer Olympics</a></li><li class="active">Shooting</li>
+</ol>
+
+
+<form id="same_games_form" class="form-inline" style="display: inline" method="get"><select name="id" id="sports_in_same_games_select" class="form-control"><option value="">Other 2016 sports</option>
+<option value="ARC">Archery</option>
+<option value="GAR">Artistic Gymnastics</option>
+<option value="SWA">Artistic Swimming</option>
+<option value="ATH">Athletics</option>
+<option value="BDM">Badminton</option>
+<option value="BKB">Basketball</option>
+<option value="VBV">Beach Volleyball</option>
+<option value="BOX">Boxing</option>
+<option value="CSL">Canoe Slalom</option>
+<option value="CSP">Canoe Sprint</option>
+<option value="BMX">Cycling BMX Racing</option>
+<option value="MTB">Cycling Mountain Bike</option>
+<option value="CRD">Cycling Road</option>
+<option value="CTR">Cycling Track</option>
+<option value="DIV">Diving</option>
+<option value="EDR">Equestrian Dressage</option>
+<option value="EVE">Equestrian Eventing</option>
+<option value="EJP">Equestrian Jumping</option>
+<option value="FEN">Fencing</option>
+<option value="FBL">Football</option>
+<option value="GLF">Golf</option>
+<option value="HBL">Handball</option>
+<option value="HOC">Hockey</option>
+<option value="JUD">Judo</option>
+<option value="OWS">Marathon Swimming</option>
+<option value="MPN">Modern Pentathlon</option>
+<option value="GRY">Rhythmic Gymnastics</option>
+<option value="ROW">Rowing</option>
+<option value="RU7">Rugby Sevens</option>
+<option value="SAL">Sailing</option>
+<option value="SWM">Swimming</option>
+<option value="TTE">Table Tennis</option>
+<option value="TKW">Taekwondo</option>
+<option value="TEN">Tennis</option>
+<option value="GTR">Trampolining</option>
+<option value="TRI">Triathlon</option>
+<option value="VVO">Volleyball</option>
+<option value="WPO">Water Polo</option>
+<option value="WLF">Weightlifting</option>
+<option value="WRE">Wrestling</option></select></form><script>$('#sports_in_same_games_select').change(function(){location.href='/editions/59/sports/'+$('#sports_in_same_games_select').val()})</script><form id="other_games_form" class="form-inline" style="display: inline" method="get"><select name="year" id="sport_in_other_games_select" class="form-control"><option value="">Shooting in other Games</option>
+<option value="76">1875 Zappas Olympic Games</option>
+<option value="77">1888-89 Zappas Olympic Games</option>
+<option value="1">1896 Summer Olympics</option>
+<option value="2">1900 Summer Olympics</option>
+<option value="4">1906  Intercalated Games</option>
+<option value="5">1908 Summer Olympics</option>
+<option value="6">1912 Summer Olympics</option>
+<option value="7">1920 Summer Olympics</option>
+<option value="8">1924 Summer Olympics</option>
+<option value="10">1932 Summer Olympics</option>
+<option value="11">1936 Summer Olympics</option>
+<option value="12">1948 Summer Olympics</option>
+<option value="13">1952 Summer Olympics</option>
+<option value="14">1956 Summer Olympics</option>
+<option value="15">1960 Summer Olympics</option>
+<option value="16">1964 Summer Olympics</option>
+<option value="17">1968 Summer Olympics</option>
+<option value="18">1972 Summer Olympics</option>
+<option value="19">1976 Summer Olympics</option>
+<option value="20">1980 Summer Olympics</option>
+<option value="21">1984 Summer Olympics</option>
+<option value="22">1988 Summer Olympics</option>
+<option value="23">1992 Summer Olympics</option>
+<option value="24">1996 Summer Olympics</option>
+<option value="25">2000 Summer Olympics</option>
+<option value="26">2004 Summer Olympics</option>
+<option value="53">2008 Summer Olympics</option>
+<option value="65">2010 Summer Youth Olympics</option>
+<option value="54">2012 Summer Olympics</option>
+<option value="67">2014 Summer Youth Olympics</option>
+<option value="69">2018 Summer Youth Olympics</option>
+<option value="61">2020 Summer Olympics</option>
+<option value="63">2024 Summer Olympics</option></select></form><script>$('#sport_in_other_games_select').change(function(){location.href='/editions/' + $('#sport_in_other_games_select').val() + '/sports/SHO'})</script>
+<h1>Shooting at the 2016 Summer Olympics</h1>
+<table class="biodata">
+<tr>
+<th>Dates</th>
+<td>6 – 14 August 2016</td>
+</tr>
+<tr>
+<th>Medal Events</th>
+<td>15</td>
+</tr>
+<tr>
+<th>Venues</th>
+<td><a href="/venues/920">Centro Olímpico de Tiro, Parque Olímpico de Deodoro, Deodoro, Rio de Janeiro</a></td>
+</tr>
+</table>
+<div class="description">
+<p>Shooting at the 2016 Summer Olympics was contested at the National Shooting Center in Deodoro in the West Zone of Rio. The shooting range was used for the 2007 Pan American Games, and upgraded/modernized before the 2016 Games.</p>
+
+<p>The program for the shooting events was the same as In London 2012 with 9 events for men and 6 for women, but the International Shooting Sport Federation (ISSF) had decided some format changes. Most important was that the shooters in the finals had to start from scratch, the points achieved in the qualification was not counting in the final rounds.  Another important change was the elimination stages in the final round, ending up with two shooters fighting for the gold medal. Also, decimal scoring was introduced for the rifle events.</p>
+
+<p>In total, 390 shooters (151 women, 239 men) from 97 IOC member nations qualified for the Games. Italy was the most successful nation, winning 4 gold and 3 silver medals, ahead of Germany with 3 gold and 1 silver and China with 1 gold, 2 silver and 4 bronze medals.</p>
+
+</div>
+
+<h2>Events</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Event</th>
+<th>Status</th>
+<th>Date</th>
+<th>Participants</th>
+<th>NOCs</th>
+</tr>
+</thead>
+<tr>
+<td><a href="/results/395700">Air Pistol (10 metres), Men</a></td>
+<td>Olympic</td>
+<td> 6 August 2016</td>
+<td>46</td>
+<td>31</td>
+</tr>
+<tr>
+<td><a href="/results/395703">Rapid-Fire Pistol (25 metres), Men</a></td>
+<td>Olympic</td>
+<td>12 – 13 August 2016</td>
+<td>26</td>
+<td>20</td>
+</tr>
+<tr>
+<td><a href="/results/395708">Free Pistol (50 metres), Men</a></td>
+<td>Olympic</td>
+<td>10 August 2016</td>
+<td>41</td>
+<td>29</td>
+</tr>
+<tr>
+<td><a href="/results/395711">Air Rifle (10 metres), Men</a></td>
+<td>Olympic</td>
+<td> 8 August 2016</td>
+<td>50</td>
+<td>33</td>
+</tr>
+<tr>
+<td><a href="/results/395714">Small-Bore Rifle, Three Positions (50 metres), Men</a></td>
+<td>Olympic</td>
+<td>14 August 2016</td>
+<td>44</td>
+<td>28</td>
+</tr>
+<tr>
+<td><a href="/results/395723">Trap, Men</a></td>
+<td>Olympic</td>
+<td>7 –  8 August 2016</td>
+<td>33</td>
+<td>25</td>
+</tr>
+<tr>
+<td><a href="/results/395735">Skeet, Men</a></td>
+<td>Olympic</td>
+<td>7 –  8 August 2016</td>
+<td>32</td>
+<td>23</td>
+</tr>
+<tr>
+<td><a href="/results/395720">Small-Bore Rifle, Prone (50 metres), Men</a></td>
+<td>Olympic</td>
+<td>12 August 2016</td>
+<td>47</td>
+<td>31</td>
+</tr>
+<tr>
+<td><a href="/results/395729">Double Trap, Men</a></td>
+<td>Olympic</td>
+<td>10 August 2016</td>
+<td>22</td>
+<td>15</td>
+</tr>
+<tr>
+<td><a href="/results/395743">Air Pistol (10 metres), Women</a></td>
+<td>Olympic</td>
+<td> 7 August 2016</td>
+<td>44</td>
+<td>33</td>
+</tr>
+<tr>
+<td><a href="/results/395746">Sporting Pistol (25 metres), Women</a></td>
+<td>Olympic</td>
+<td> 9 August 2016</td>
+<td>40</td>
+<td>30</td>
+</tr>
+<tr>
+<td><a href="/results/395754">Air Rifle (10 metres), Women</a></td>
+<td>Olympic</td>
+<td> 6 August 2016</td>
+<td>51</td>
+<td>37</td>
+</tr>
+<tr>
+<td><a href="/results/395757">Small-Bore Rifle, Three Positions (50 metres), Women</a></td>
+<td>Olympic</td>
+<td>11 August 2016</td>
+<td>37</td>
+<td>27</td>
+</tr>
+<tr>
+<td><a href="/results/395763">Trap, Women</a></td>
+<td>Olympic</td>
+<td> 7 August 2016</td>
+<td>21</td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="/results/395769">Skeet, Women</a></td>
+<td>Olympic</td>
+<td>12 August 2016</td>
+<td>21</td>
+<td>17</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td class="border-top">
+390 (239/151)
+</td>
+<td class="border-top">
+97 (81/61)
+</td>
+</tr>
+</table>
+
+
+<h2>Medals</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Event</th>
+<th colspan="2"><span class="Gold">Gold</span></th>
+<th colspan="2"><span class="Silver">Silver</span></th>
+<th colspan="2"><span class="Bronze">Bronze</span></th>
+</tr>
+</thead>
+<tr>
+<td class="top"><a href="/results/395700">Air Pistol, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/125166">Hoàng Xuân Vinh</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/VIE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VIE.svg" />VIE</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/132904">Felipe Wu</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/BRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRA.svg" />BRA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/111749">Pang Wei</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395703">Rapid-Fire Pistol, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/117349">Christian Reitz</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GER"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GER.svg" />GER</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/133905">Jean Quiquampoix</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/FRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FRA.svg" />FRA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/133197">Li Yuehong</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395708">Free Pistol, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/104743">Jin Jong-Oh</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" />KOR</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/125166">Hoàng Xuân Vinh</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/VIE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VIE.svg" />VIE</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/135596">Kim Song-Guk</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" />PRK</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395711">Air Rifle, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/117285">Niccolò Campriani</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" />ITA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121496">Serhiy Kulish</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/UKR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UKR.svg" />UKR</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/135793">Vladimir Maslennikov</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" />RUS</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395714">Small-Bore Rifle, Three Positions, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/117285">Niccolò Campriani</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" />ITA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/135792">Sergey Kamensky</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" />RUS</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/133903">Alexis Raynaud</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/FRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FRA.svg" />FRA</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395723">Trap, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/111767">Josip Glasnović</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CRO"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CRO.svg" />CRO</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/42999">Giovanni Pellielo</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" />ITA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/104811">Ed Ling</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395735">Skeet, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/134643">Gabriele Rossetti</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" />ITA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121141">Marcus Svensson</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/SWE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SWE.svg" />SWE</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/43218">Abdullah Al-Rashidi</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/IOA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IOA.svg" />IOA</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395720">Small-Bore Rifle, Prone, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/134236">Henri Junghänel</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GER"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GER.svg" />GER</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/124385">Kim Jong-Hyeon</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" />KOR</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/135791">Kirill Grigoryan</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" />RUS</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395729">Double Trap, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/43217">Fehaid Al-Deehani</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/IOA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IOA.svg" />IOA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/93088">Marco Innocenti</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" />ITA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/117316">Steve Scott</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395743">Air Pistol, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/129660">Zhang Mengxue</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/131606">Vitalina Batsarashkina</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" />RUS</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/130463">Anna Korakaki</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GRE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" />GRE</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395746">Sporting Pistol, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/130463">Anna Korakaki</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GRE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" />GRE</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/130411">Monika Karsch</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GER"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GER.svg" />GER</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/126270">Heidi Diethelm Gerber</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/SUI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SUI.svg" />SUI</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395754">Air Rifle, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/132151">Ginny Thrasher</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" />USA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/104663">Du Li</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/122169">Yi Siling</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395757">Small-Bore Rifle, Three Positions, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/104734">Barbara Engleder</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/GER"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GER.svg" />GER</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/129656">Zhang Binbin</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/104663">Du Li</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395763">Trap, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/129055">Catherine Skinner</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/AUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AUS.svg" />AUS</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/131328">Natalie Rooney</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/NZL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NZL.svg" />NZL</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/117255">Corey Unrein</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" />USA</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/395769">Skeet, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/130677">Diana Bacosi</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" />ITA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/104730">Chiara Càinero</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" />ITA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/44586">Kim Rhode</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" />USA</a></span></td>
+</tr>
+</table>
+
+<h2>Medal table</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th colspan="2">NOC</th>
+<th>Gold</th>
+<th>Silver</th>
+<th>Bronze</th>
+<th>Total</th>
+</tr>
+</thead>
+<tr>
+<td><a href="/countries/ITA">Italy</a></td>
+<td><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" /> ITA</a></td>
+<td>4</td>
+<td>3</td>
+<td>0</td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="/countries/GER">Germany</a></td>
+<td><a href="/countries/GER"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GER.svg" /> GER</a></td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="/countries/CHN">People&#39;s Republic of China</a></td>
+<td><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" /> CHN</a></td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="/countries/KOR">Republic of Korea</a></td>
+<td><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" /> KOR</a></td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/VIE">Vietnam</a></td>
+<td><a href="/countries/VIE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VIE.svg" /> VIE</a></td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/USA">United States</a></td>
+<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="/countries/GRE">Greece</a></td>
+<td><a href="/countries/GRE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" /> GRE</a></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/IOA">Independent Olympic Athletes</a></td>
+<td><a href="/countries/IOA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IOA.svg" /> IOA</a></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/AUS">Australia</a></td>
+<td><a href="/countries/AUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AUS.svg" /> AUS</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/CRO">Croatia</a></td>
+<td><a href="/countries/CRO"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CRO.svg" /> CRO</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/RUS">Russian Federation</a></td>
+<td><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" /> RUS</a></td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="/countries/FRA">France</a></td>
+<td><a href="/countries/FRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FRA.svg" /> FRA</a></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/BRA">Brazil</a></td>
+<td><a href="/countries/BRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRA.svg" /> BRA</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/NZL">New Zealand</a></td>
+<td><a href="/countries/NZL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NZL.svg" /> NZL</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/SWE">Sweden</a></td>
+<td><a href="/countries/SWE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SWE.svg" /> SWE</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/UKR">Ukraine</a></td>
+<td><a href="/countries/UKR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UKR.svg" /> UKR</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/GBR">Great Britain</a></td>
+<td><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" /> GBR</a></td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/PRK">Democratic People&#39;s Republic of Korea</a></td>
+<td><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" /> PRK</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/SUI">Switzerland</a></td>
+<td><a href="/countries/SUI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SUI.svg" /> SUI</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+
+
+</div>
+</body>
+<footer class="footer">
+<br>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title">
+<span class="glyphicon glyphicon-info-sign"></span>
+Did you know?
+</h3>
+</div>
+<div class="panel-body">
+<p><a href="/athletes/99870">Simon Ammann</a> won ski jumping gold medals on the Normal Hill and Large Hill at the 2002 Salt Lake City Olympics. His victories were a huge upset, as he placed only 17th overall in the World Cup that season.</p>
+
+
+</div>
+</div>
+<div class="container">
+<p>
+<a href="/users/sign_in">Login</a>
+|
+<a href="/statistics/site">Statistics</a>
+|
+<a href="/static/about">About</a>
+|
+<a href="/static/image_credits">Image Credits</a>
+|
+<a href="/static/faq">FAQ</a>
+|
+<a href="/feedbacks/new">Feedback</a>
+</p>
+<p>
+&copy; <a href="/static/about">OlyMADMen</a> 2006 — 2026
+</p>
+</div>
+</footer>
+
+<script src="/assets/lightbox.min-a06f7b5a37bdc88a78a48f95b9149ca917761a07bffb855a6d73c1a435e16552.js"></script>
+<script>
+  $('.footnote').tooltip();
+</script>
+</html>

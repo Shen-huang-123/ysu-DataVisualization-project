@@ -1,0 +1,138 @@
+﻿Year,Event,SourceURL,Gold_current,Gold_archive,Gold_same,Silver_current,Silver_archive,Silver_same,Bronze_current,Bronze_archive,Bronze_same,三色一致
+2008,Synchronized Swimming Women's Duet,https://api.worldaquatics.com/fina/events/03852936-7b73-44c3-b366-17f9644e2b77,RUS,RUS,True,ESP,ESP,True,JPN,JPN,True,True
+2008,Synchronized Swimming Women's Team,https://api.worldaquatics.com/fina/events/902282e6-ae9f-4f0c-8579-0a24a12fec5b,RUS,RUS,True,ESP,ESP,True,CHN,CHN,True,True
+2008,Diving Men's Platform,https://api.worldaquatics.com/fina/events/60890607-54f5-4d8d-aaee-da4fcf08ffeb,AUS,AUS,True,CHN,CHN,True,RUS,RUS,True,True
+2008,Diving Men's Synchronized Platform,https://api.worldaquatics.com/fina/events/33085718-0730-44e5-8605-7b7fc95707ce,CHN,CHN,True,GER,GER,True,RUS,RUS,True,True
+2008,Diving Men's Springboard,https://api.worldaquatics.com/fina/events/2f514165-7c81-43df-8220-387252f1c7dd,CHN,CHN,True,CAN,CAN,True,CHN,CHN,True,True
+2008,Diving Men's Synchronized Springboard,https://api.worldaquatics.com/fina/events/eba4fb0c-1cc2-4910-85cf-5dfdd623383e,CHN,CHN,True,RUS,RUS,True,UKR,UKR,True,True
+2008,Diving Women's Platform,https://api.worldaquatics.com/fina/events/5508a327-5e54-49a7-a62c-838e5878a619,CHN,CHN,True,CAN,CAN,True,CHN,CHN,True,True
+2008,Diving Women's Synchronized Platform,https://api.worldaquatics.com/fina/events/55c4e444-98ff-406c-99e8-c0d2378158cb,CHN,CHN,True,AUS,AUS,True,MEX,MEX,True,True
+2008,Diving Women's Springboard,https://api.worldaquatics.com/fina/events/dddded07-7396-4df9-8c63-39d8902b0969,CHN,CHN,True,RUS,RUS,True,CHN,CHN,True,True
+2008,Diving Women's Synchronized Springboard,https://api.worldaquatics.com/fina/events/4379c530-97dd-4a13-a5ff-42cfe686d8f5,CHN,CHN,True,RUS,RUS,True,GER,GER,True,True
+2008,Swimming Women's 10 kilometres Open Water,https://api.worldaquatics.com/fina/events/22688646-48a8-4a1f-affa-257537388fa6,RUS,RUS,True,GBR,GBR,True,GBR,GBR,True,True
+2008,Swimming Men's 100 metres Backstroke,https://api.worldaquatics.com/fina/events/86dc3f45-bfde-469f-8ac2-a474030e27c9,USA,USA,True,USA,USA,True,AUS|RUS,AUS|RUS,True,True
+2008,Swimming Men's 100 metres Breaststroke,https://api.worldaquatics.com/fina/events/b2c041a8-6e86-490b-814d-ddc27b0e4b5a,JPN,JPN,True,NOR,NOR,True,FRA,FRA,True,True
+2008,Swimming Men's 100 metres Butterfly,https://api.worldaquatics.com/fina/events/36e96449-c978-4622-a9c4-67cf8c86feab,USA,USA,True,SRB,SRB,True,AUS,AUS,True,True
+2008,Swimming Men's 100 metres Freestyle,https://api.worldaquatics.com/fina/events/adab28e8-b754-4a67-b9ea-9ceb365b9fb9,FRA,FRA,True,AUS,AUS,True,BRA|USA,BRA|USA,True,True
+2008,"Swimming Men's 1,500 metres Freestyle",https://api.worldaquatics.com/fina/events/cad58834-e48e-4a22-a79d-2d7fb798f985,TUN,TUN,True,AUS,AUS,True,CAN,CAN,True,True
+2008,Swimming Men's 200 metres Backstroke,https://api.worldaquatics.com/fina/events/c958feae-132e-4ce9-8af9-8a4f48cdb86a,USA,USA,True,USA,USA,True,RUS,RUS,True,True
+2008,Swimming Men's 200 metres Breaststroke,https://api.worldaquatics.com/fina/events/7bfd49d6-98ce-496d-8e13-a5a7c34c7d97,JPN,JPN,True,AUS,AUS,True,FRA,FRA,True,True
+2008,Swimming Men's 200 metres Butterfly,https://api.worldaquatics.com/fina/events/6c1811e5-afb9-4825-ad24-be6a67dfcbc1,USA,USA,True,HUN,HUN,True,JPN,JPN,True,True
+2008,Swimming Men's 200 metres Freestyle,https://api.worldaquatics.com/fina/events/9893c0d8-158d-4a69-8dc5-a1905c9000b4,USA,USA,True,KOR,KOR,True,USA,USA,True,True
+2008,Swimming Men's 200 metres Individual Medley,https://api.worldaquatics.com/fina/events/9a0def85-a0ab-47c9-bbb8-215e42cdfa5f,USA,USA,True,HUN,HUN,True,USA,USA,True,True
+2008,Swimming Men's 400 metres Freestyle,https://api.worldaquatics.com/fina/events/d27dfd04-d4b5-4872-986e-585a0f695aee,KOR,KOR,True,CHN,CHN,True,USA,USA,True,True
+2008,Swimming Men's 400 metres Individual Medley,https://api.worldaquatics.com/fina/events/15261555-7416-4d8c-8597-1274c066a39c,USA,USA,True,HUN,HUN,True,USA,USA,True,True
+2008,Swimming Men's 4 x 100 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/83d156e2-249e-4112-83c2-8680d4eb5d6d,USA,USA,True,FRA,FRA,True,AUS,AUS,True,True
+2008,Swimming Men's 4 x 100 metres Medley Relay,https://api.worldaquatics.com/fina/events/d5f498cf-f860-47d2-9504-385a8ddd975e,USA,USA,True,AUS,AUS,True,JPN,JPN,True,True
+2008,Swimming Men's 4 x 200 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/0be267dd-8fef-4627-92ab-42e3ddf961b0,USA,USA,True,RUS,RUS,True,AUS,AUS,True,True
+2008,Swimming Men's 50 metres Freestyle,https://api.worldaquatics.com/fina/events/46f142ad-d93b-43a1-b887-25d786dba9d7,BRA,BRA,True,FRA,FRA,True,FRA,FRA,True,True
+2008,Swimming Women's 100 metres Backstroke,https://api.worldaquatics.com/fina/events/07c7436d-df0e-4342-ac80-6159783bd0cd,USA,USA,True,ZIM,ZIM,True,USA,USA,True,True
+2008,Swimming Women's 100 metres Breaststroke,https://api.worldaquatics.com/fina/events/48414dc9-e12b-4658-941d-6335f37053a4,AUS,AUS,True,USA,USA,True,AUT,AUT,True,True
+2008,Swimming Women's 100 metres Butterfly,https://api.worldaquatics.com/fina/events/8b753560-4384-4e89-9fbc-e4821b1ca337,AUS,AUS,True,USA,USA,True,AUS,AUS,True,True
+2008,Swimming Women's 100 metres Freestyle,https://api.worldaquatics.com/fina/events/f640b682-83a3-4125-89a1-63307d70b961,GER,GER,True,AUS,AUS,True,USA,USA,True,True
+2008,Swimming Women's 200 metres Backstroke,https://api.worldaquatics.com/fina/events/f2ffb3ba-b246-4125-b0bd-892f55237cee,ZIM,ZIM,True,USA,USA,True,JPN,JPN,True,True
+2008,Swimming Women's 200 metres Breaststroke,https://api.worldaquatics.com/fina/events/f1194963-00e0-4815-9442-e68e1e316346,USA,USA,True,AUS,AUS,True,NOR,NOR,True,True
+2008,Swimming Women's 200 metres Butterfly,https://api.worldaquatics.com/fina/events/5057015d-a2b8-4e50-9aa6-bc89d0890da7,CHN,CHN,True,CHN,CHN,True,AUS,AUS,True,True
+2008,Swimming Women's 200 metres Freestyle,https://api.worldaquatics.com/fina/events/91fc2f92-3df3-43ad-9d28-5c3c626a8c96,ITA,ITA,True,SLO,,False,CHN,CHN,True,False
+2008,Swimming Women's 200 metres Individual Medley,https://api.worldaquatics.com/fina/events/57b614db-ab01-4133-aadc-522156cf8c55,AUS,AUS,True,ZIM,ZIM,True,USA,USA,True,True
+2008,Swimming Women's 400 metres Freestyle,https://api.worldaquatics.com/fina/events/6e30e1b9-4158-4cd3-9563-76ab46479705,GBR,GBR,True,USA,USA,True,GBR,GBR,True,True
+2008,Swimming Women's 400 metres Individual Medley,https://api.worldaquatics.com/fina/events/7431c4d4-cdbe-42c6-9b89-b935aff44b10,AUS,AUS,True,ZIM,ZIM,True,USA,USA,True,True
+2008,Swimming Women's 4 x 100 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/241f2342-e9d1-471b-9984-5e4a74fd7f38,NED,NED,True,USA,USA,True,AUS,AUS,True,True
+2008,Swimming Women's 4 x 100 metres Medley Relay,https://api.worldaquatics.com/fina/events/bbd6b06f-bf14-44ca-946c-3931d4fd734d,AUS,AUS,True,USA,USA,True,CHN,CHN,True,True
+2008,Swimming Women's 4 x 200 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/cf7f097a-3be0-41c5-85dd-dca19d2663ec,AUS,AUS,True,CHN,CHN,True,USA,USA,True,True
+2008,Swimming Women's 50 metres Freestyle,https://api.worldaquatics.com/fina/events/6d3be09f-36da-479f-b581-9e09893a6f54,GER,GER,True,USA,USA,True,AUS,AUS,True,True
+2008,Swimming Women's 800 metres Freestyle,https://api.worldaquatics.com/fina/events/f658aad6-36bb-49ee-8ad2-868dbb9e6bad,GBR,GBR,True,ITA,ITA,True,DEN,DEN,True,True
+2008,Water Polo Men's Water Polo,https://api.worldaquatics.com/fina/events/0b630132-5f58-4d29-872e-3cc3e4b7f998,HUN,HUN,True,USA,USA,True,SRB,SRB,True,True
+2008,Water Polo Women's Water Polo,https://api.worldaquatics.com/fina/events/5c350903-d7c8-42ac-aa37-17cfc36b2e77,NED,NED,True,USA,USA,True,AUS,AUS,True,True
+2012,Synchronized Swimming Women's Duet,https://api.worldaquatics.com/fina/events/3c768b43-0d45-4414-95a0-e5fbb8c370b8,RUS,RUS,True,ESP,ESP,True,CHN,CHN,True,True
+2012,Synchronized Swimming Women's Team,https://api.worldaquatics.com/fina/events/d5f9951c-49fa-4b6c-bfdf-c8bd632af7f9,RUS,RUS,True,CHN,CHN,True,ESP,ESP,True,True
+2012,Diving Men's Platform,https://api.worldaquatics.com/fina/events/c6028e35-a8af-4438-8797-b1b97caf5ada,USA,USA,True,CHN,CHN,True,GBR,GBR,True,True
+2012,Diving Men's Synchronized Platform,https://api.worldaquatics.com/fina/events/a793e35f-245d-4ff6-b290-5ce7197ef5e6,CHN,CHN,True,MEX,MEX,True,USA,USA,True,True
+2012,Diving Men's Springboard,https://api.worldaquatics.com/fina/events/1066716b-d205-4509-aeb9-fd9855f81a34,RUS,RUS,True,CHN,CHN,True,CHN,CHN,True,True
+2012,Diving Men's Synchronized Springboard,https://api.worldaquatics.com/fina/events/13eabe57-d17f-443d-9d61-a6942ea5d3b1,CHN,CHN,True,RUS,RUS,True,USA,USA,True,True
+2012,Diving Women's Platform,https://api.worldaquatics.com/fina/events/9ef1911d-d074-4c7b-b92c-a1a1dfdbfb92,CHN,CHN,True,AUS,AUS,True,MAS,MAS,True,True
+2012,Diving Women's Synchronized Platform,https://api.worldaquatics.com/fina/events/47978c0d-938c-427e-ad4b-620b873d32cd,CHN,CHN,True,MEX,MEX,True,CAN,CAN,True,True
+2012,Diving Women's Springboard,https://api.worldaquatics.com/fina/events/1831ae55-a7da-4954-b041-57e748d06623,CHN,CHN,True,CHN,CHN,True,MEX,MEX,True,True
+2012,Diving Women's Synchronized Springboard,https://api.worldaquatics.com/fina/events/624f363e-5121-48f7-a44f-4710304c38c9,CHN,CHN,True,USA,USA,True,CAN,CAN,True,True
+2012,Swimming Men's 10 kilometres Open Water,https://api.worldaquatics.com/fina/events/7e94e0fe-d863-4c5f-b362-37334c60c385,TUN,TUN,True,GER,GER,True,CAN,CAN,True,True
+2012,Swimming Women's 10 kilometres Open Water,https://api.worldaquatics.com/fina/events/ac584b7b-1132-4af7-8e00-7413f87c43a9,HUN,HUN,True,USA,USA,True,ITA,ITA,True,True
+2012,Swimming Men's 100 metres Backstroke,https://api.worldaquatics.com/fina/events/3a85b3f5-da29-43ce-abc7-842b12df2cd3,USA,USA,True,USA,USA,True,JPN,JPN,True,True
+2012,Swimming Men's 100 metres Breaststroke,https://api.worldaquatics.com/fina/events/202aebd2-0475-4822-b5e7-0f15a5bd006f,RSA,RSA,True,AUS,AUS,True,USA,USA,True,True
+2012,Swimming Men's 100 metres Butterfly,https://api.worldaquatics.com/fina/events/7b891d8c-e6bd-4823-9bee-a7307cfaf441,USA,USA,True,RSA|RUS,RSA|RUS,True,,,True,True
+2012,Swimming Men's 100 metres Freestyle,https://api.worldaquatics.com/fina/events/ef25ec47-7ba0-40ab-aa1e-b079501f524a,USA,USA,True,AUS,AUS,True,CAN,CAN,True,True
+2012,"Swimming Men's 1,500 metres Freestyle",https://api.worldaquatics.com/fina/events/82ad7fe7-0487-46e2-ae43-4f131c032524,CHN,CHN,True,CAN,CAN,True,TUN,TUN,True,True
+2012,Swimming Men's 200 metres Backstroke,https://api.worldaquatics.com/fina/events/884a4cf4-0403-4b2e-b2e6-e5718ad3830b,USA,USA,True,JPN,JPN,True,USA,USA,True,True
+2012,Swimming Men's 200 metres Breaststroke,https://api.worldaquatics.com/fina/events/1e581a23-2bd6-4ed8-8eb0-f8abc4a69a3b,HUN,HUN,True,GBR,GBR,True,JPN,JPN,True,True
+2012,Swimming Men's 200 metres Butterfly,https://api.worldaquatics.com/fina/events/24b1604e-8c54-4142-9feb-dbafe3d14642,RSA,RSA,True,USA,USA,True,JPN,JPN,True,True
+2012,Swimming Men's 200 metres Freestyle,https://api.worldaquatics.com/fina/events/6e7478a6-d26f-46d8-ba09-17c7c2194026,FRA,FRA,True,CHN|KOR,CHN|KOR,True,,,True,True
+2012,Swimming Men's 200 metres Individual Medley,https://api.worldaquatics.com/fina/events/cb780b8c-f5b1-4f2b-a6e6-d5bfde6bf1ca,USA,USA,True,USA,USA,True,HUN,HUN,True,True
+2012,Swimming Men's 400 metres Freestyle,https://api.worldaquatics.com/fina/events/7abb97d4-d9cc-4e9d-851a-c28e152cb7bd,CHN,CHN,True,KOR,KOR,True,USA,USA,True,True
+2012,Swimming Men's 400 metres Individual Medley,https://api.worldaquatics.com/fina/events/97aec2ac-58ec-48a6-acf4-fa6278c5b889,USA,USA,True,BRA,BRA,True,JPN,JPN,True,True
+2012,Swimming Men's 4 x 100 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/bae4d8ae-0c88-4438-9538-4892f998445d,FRA,FRA,True,USA,USA,True,RUS,RUS,True,True
+2012,Swimming Men's 4 x 100 metres Medley Relay,https://api.worldaquatics.com/fina/events/3c137038-8531-419e-839b-ea7debf02cfe,USA,USA,True,JPN,JPN,True,AUS,AUS,True,True
+2012,Swimming Men's 4 x 200 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/198c513c-7cf1-42c3-88ba-91720103fcb1,USA,USA,True,FRA,FRA,True,CHN,CHN,True,True
+2012,Swimming Men's 50 metres Freestyle,https://api.worldaquatics.com/fina/events/ba718aa4-7428-4bc6-99e3-f4b138b5f1e6,FRA,FRA,True,USA,USA,True,BRA,BRA,True,True
+2012,Swimming Women's 100 metres Backstroke,https://api.worldaquatics.com/fina/events/0ad3d5c6-6b45-4935-b216-a93b38d75708,USA,USA,True,AUS,AUS,True,JPN,JPN,True,True
+2012,Swimming Women's 100 metres Breaststroke,https://api.worldaquatics.com/fina/events/35046ef2-af16-4d4c-9548-b615e10b57e0,LTU,LTU,True,USA,USA,True,JPN,JPN,True,True
+2012,Swimming Women's 100 metres Butterfly,https://api.worldaquatics.com/fina/events/c45f1ec1-132d-4b16-9dd9-2baa075e6228,USA,USA,True,CHN,CHN,True,AUS,AUS,True,True
+2012,Swimming Women's 100 metres Freestyle,https://api.worldaquatics.com/fina/events/1edf92f0-3581-4d36-b44a-ea20bcff3a9b,NED,NED,True,BLR|CHN,BLR,False,,CHN,False,False
+2012,Swimming Women's 200 metres Backstroke,https://api.worldaquatics.com/fina/events/c94c650b-7246-49f8-ab1e-ee3217eba630,USA,USA,True,RUS,RUS,True,USA,USA,True,True
+2012,Swimming Women's 200 metres Breaststroke,https://api.worldaquatics.com/fina/events/eec8a693-4978-4a82-831d-b3b59af1bbc8,USA,USA,True,JPN,JPN,True,RUS,RUS,True,True
+2012,Swimming Women's 200 metres Butterfly,https://api.worldaquatics.com/fina/events/2e8d4015-e610-4df9-9557-fbc082060bfc,CHN,CHN,True,ESP,ESP,True,JPN,JPN,True,True
+2012,Swimming Women's 200 metres Freestyle,https://api.worldaquatics.com/fina/events/1b37369e-03a7-4bf5-a7f4-35d0cacb8acb,USA,USA,True,FRA,FRA,True,AUS,AUS,True,True
+2012,Swimming Women's 200 metres Individual Medley,https://api.worldaquatics.com/fina/events/5bc51fe6-028b-4694-911f-76a6b09dfe69,CHN,CHN,True,AUS,AUS,True,USA,USA,True,True
+2012,Swimming Women's 400 metres Freestyle,https://api.worldaquatics.com/fina/events/80303a4c-2629-49b7-9663-710348ceb2bf,FRA,FRA,True,USA,USA,True,GBR,GBR,True,True
+2012,Swimming Women's 400 metres Individual Medley,https://api.worldaquatics.com/fina/events/7917e95b-598c-45cb-a17d-47ef717f448c,CHN,CHN,True,USA,USA,True,CHN,CHN,True,True
+2012,Swimming Women's 4 x 100 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/6c5a1cc0-bee7-4326-befd-e890ff8469df,AUS,AUS,True,NED,NED,True,USA,USA,True,True
+2012,Swimming Women's 4 x 100 metres Medley Relay,https://api.worldaquatics.com/fina/events/5adf9210-d854-415a-b987-febc333cfbe4,USA,USA,True,AUS,AUS,True,JPN,JPN,True,True
+2012,Swimming Women's 4 x 200 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/043176d2-6f2c-457d-9357-422e375d1834,USA,USA,True,AUS,AUS,True,FRA,FRA,True,True
+2012,Swimming Women's 50 metres Freestyle,https://api.worldaquatics.com/fina/events/b76e7b07-1094-471b-af5f-170cd175fbea,NED,NED,True,BLR,BLR,True,NED,NED,True,True
+2012,Swimming Women's 800 metres Freestyle,https://api.worldaquatics.com/fina/events/306b8ad4-b65c-4d62-b462-0e38581828cf,USA,USA,True,ESP,ESP,True,GBR,GBR,True,True
+2012,Water Polo Men's Water Polo,https://api.worldaquatics.com/fina/events/baba2e45-5b97-40b7-baf0-812fb907333b,CRO,CRO,True,ITA,ITA,True,SRB,SRB,True,True
+2012,Water Polo Women's Water Polo,https://api.worldaquatics.com/fina/events/5b7fd56b-e41c-487c-b0bb-9c638278ea12,USA,USA,True,ESP,ESP,True,AUS,AUS,True,True
+2016,Synchronized Swimming Women's Duet,https://api.worldaquatics.com/fina/events/d20717a8-f339-459b-a61f-db300239acc6,RUS,RUS,True,CHN,CHN,True,JPN,JPN,True,True
+2016,Synchronized Swimming Women's Team,https://api.worldaquatics.com/fina/events/ff7bb3cb-548c-4ee1-822f-dea1a4dccce5,RUS,RUS,True,CHN,CHN,True,JPN,JPN,True,True
+2016,Diving Men's Platform,https://api.worldaquatics.com/fina/events/94b19e72-48ba-411f-ba7d-faa75838bea8,CHN,CHN,True,MEX,MEX,True,USA,USA,True,True
+2016,Diving Men's Synchronized Platform,https://api.worldaquatics.com/fina/events/191ccca0-eb9a-42d5-86b7-390b3f8d298a,CHN,CHN,True,USA,USA,True,GBR,GBR,True,True
+2016,Diving Men's Springboard,https://api.worldaquatics.com/fina/events/05fc0d67-3a83-48b2-93ae-a87e2adc70e7,CHN,CHN,True,GBR,GBR,True,GER,GER,True,True
+2016,Diving Men's Synchronized Springboard,https://api.worldaquatics.com/fina/events/4540528b-9ef4-4bb1-91f6-2cc678f10179,GBR,GBR,True,USA,USA,True,CHN,CHN,True,True
+2016,Diving Women's Platform,https://api.worldaquatics.com/fina/events/e9fd3933-3471-4d26-9703-3e4af0f555f6,CHN,CHN,True,CHN,CHN,True,CAN,CAN,True,True
+2016,Diving Women's Synchronized Platform,https://api.worldaquatics.com/fina/events/b5451116-4b7a-456c-9412-5dbcb6f40560,CHN,CHN,True,MAS,MAS,True,CAN,CAN,True,True
+2016,Diving Women's Springboard,https://api.worldaquatics.com/fina/events/a441ef66-ccec-4266-9fd0-eb744ef4b090,CHN,CHN,True,CHN,CHN,True,ITA,ITA,True,True
+2016,Diving Women's Synchronized Springboard,https://api.worldaquatics.com/fina/events/b1429666-f7bc-4c10-88dd-8834d8d30331,CHN,CHN,True,ITA,ITA,True,AUS,AUS,True,True
+2016,Swimming Men's 10 kilometres Open Water,https://api.worldaquatics.com/fina/events/8cc36c20-0d7a-416c-857c-dc9f3a939d58,NED,NED,True,GRE,GRE,True,FRA,FRA,True,True
+2016,Swimming Women's 10 kilometres Open Water,https://api.worldaquatics.com/fina/events/0feaef0e-aedc-442d-b827-477deb59b155,NED,NED,True,ITA,ITA,True,BRA,BRA,True,True
+2016,Swimming Men's 100 metres Backstroke,https://api.worldaquatics.com/fina/events/6f7aaaf2-d46f-4163-8beb-90749f4938b3,USA,USA,True,CHN,CHN,True,USA,USA,True,True
+2016,Swimming Men's 100 metres Breaststroke,https://api.worldaquatics.com/fina/events/1b817147-a7ca-4e39-9c24-a2b93c8c427b,GBR,GBR,True,RSA,RSA,True,USA,USA,True,True
+2016,Swimming Men's 100 metres Butterfly,https://api.worldaquatics.com/fina/events/c34a8199-f109-4730-898d-27ab0b4bad93,SGP,SGP,True,HUN|RSA|USA,HUN|RSA|USA,True,,,True,True
+2016,Swimming Men's 100 metres Freestyle,https://api.worldaquatics.com/fina/events/8da7743a-4aa1-4fd0-bbbf-3ac82e937dea,AUS,AUS,True,BEL,BEL,True,USA,USA,True,True
+2016,"Swimming Men's 1,500 metres Freestyle",https://api.worldaquatics.com/fina/events/6e413752-772d-4491-993d-52cc2f573838,ITA,ITA,True,USA,USA,True,ITA,ITA,True,True
+2016,Swimming Men's 200 metres Backstroke,https://api.worldaquatics.com/fina/events/c41778e3-a1d3-48be-b0c2-f02486fc7372,USA,USA,True,AUS,AUS,True,RUS,RUS,True,True
+2016,Swimming Men's 200 metres Breaststroke,https://api.worldaquatics.com/fina/events/1a12d3b4-a835-4f4b-8ee1-664a047d09b7,KAZ,KAZ,True,USA,USA,True,RUS,RUS,True,True
+2016,Swimming Men's 200 metres Butterfly,https://api.worldaquatics.com/fina/events/04627913-cd8d-413e-b5b9-9b513f658c25,USA,USA,True,JPN,JPN,True,HUN,HUN,True,True
+2016,Swimming Men's 200 metres Freestyle,https://api.worldaquatics.com/fina/events/3b7ec071-118c-465f-a68b-65a69caf97cb,CHN,CHN,True,RSA,RSA,True,USA,USA,True,True
+2016,Swimming Men's 200 metres Individual Medley,https://api.worldaquatics.com/fina/events/0b1a390b-0574-4829-99d8-11c00837ecaa,USA,USA,True,JPN,JPN,True,CHN,CHN,True,True
+2016,Swimming Men's 400 metres Freestyle,https://api.worldaquatics.com/fina/events/825374fe-d4b8-432c-85ca-d150ea6b7135,AUS,AUS,True,CHN,CHN,True,ITA,ITA,True,True
+2016,Swimming Men's 400 metres Individual Medley,https://api.worldaquatics.com/fina/events/5e6ff7d4-38b6-4629-8133-f8a82d796b74,JPN,JPN,True,USA,USA,True,JPN,JPN,True,True
+2016,Swimming Men's 4 x 100 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/66f2ce6a-60bc-4f98-b819-f28a73e79134,USA,USA,True,FRA,FRA,True,AUS,AUS,True,True
+2016,Swimming Men's 4 x 100 metres Medley Relay,https://api.worldaquatics.com/fina/events/6e7694f4-542f-4bbc-a1a4-cc304bd16d88,USA,USA,True,GBR,GBR,True,AUS,AUS,True,True
+2016,Swimming Men's 4 x 200 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/3c5b9b3b-f5c1-4c8e-a5c1-2254bdec04c5,USA,USA,True,GBR,GBR,True,JPN,JPN,True,True
+2016,Swimming Men's 50 metres Freestyle,https://api.worldaquatics.com/fina/events/6e909dd5-36ad-469b-9a7f-2c53ab58582c,USA,USA,True,FRA,FRA,True,USA,USA,True,True
+2016,Swimming Women's 100 metres Backstroke,https://api.worldaquatics.com/fina/events/9aa0e426-23ca-4201-a58e-690547785572,HUN,HUN,True,USA,USA,True,CAN|CHN,CAN|CHN,True,True
+2016,Swimming Women's 100 metres Breaststroke,https://api.worldaquatics.com/fina/events/8740e4a3-7031-4766-9b55-e12b77f8cbf1,USA,USA,True,RUS,RUS,True,USA,USA,True,True
+2016,Swimming Women's 100 metres Butterfly,https://api.worldaquatics.com/fina/events/1978292d-4b75-45e3-a71e-9015ae722924,SWE,SWE,True,CAN,CAN,True,USA,USA,True,True
+2016,Swimming Women's 100 metres Freestyle,https://api.worldaquatics.com/fina/events/c1ef33bc-85c8-4f9e-bc04-ca09843f8851,CAN|USA,CAN|USA,True,,,True,SWE,SWE,True,True
+2016,Swimming Women's 200 metres Backstroke,https://api.worldaquatics.com/fina/events/eac86a9e-17aa-47c3-b472-990f5959f135,USA,USA,True,HUN,HUN,True,CAN,CAN,True,True
+2016,Swimming Women's 200 metres Breaststroke,https://api.worldaquatics.com/fina/events/4b75811c-7f8e-4a57-bd2a-ee63cdbd1c82,JPN,JPN,True,RUS,RUS,True,CHN,CHN,True,True
+2016,Swimming Women's 200 metres Butterfly,https://api.worldaquatics.com/fina/events/7bc0bc82-9459-429b-a07d-08df4d2583d9,ESP,ESP,True,AUS,AUS,True,JPN,JPN,True,True
+2016,Swimming Women's 200 metres Freestyle,https://api.worldaquatics.com/fina/events/613e9ef4-04cf-4486-ae59-ea51901340de,USA,USA,True,SWE,SWE,True,AUS,AUS,True,True
+2016,Swimming Women's 200 metres Individual Medley,https://api.worldaquatics.com/fina/events/17b50810-9e9d-464c-b4d1-5b8e3fdf7046,HUN,HUN,True,GBR,GBR,True,USA,USA,True,True
+2016,Swimming Women's 400 metres Freestyle,https://api.worldaquatics.com/fina/events/acdca4db-d227-41e7-9317-d3c458ac15b0,USA,USA,True,GBR,GBR,True,USA,USA,True,True
+2016,Swimming Women's 400 metres Individual Medley,https://api.worldaquatics.com/fina/events/316a1c55-9912-4261-9ef3-f71384bad744,HUN,HUN,True,USA,USA,True,ESP,ESP,True,True
+2016,Swimming Women's 4 x 100 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/1f8f3607-a631-4c66-aa25-4c289de25460,AUS,AUS,True,USA,USA,True,CAN,CAN,True,True
+2016,Swimming Women's 4 x 100 metres Medley Relay,https://api.worldaquatics.com/fina/events/0f9517c5-093d-4c39-892c-4ca22cc80c40,USA,USA,True,AUS,AUS,True,DEN,DEN,True,True
+2016,Swimming Women's 4 x 200 metres Freestyle Relay,https://api.worldaquatics.com/fina/events/3990fd71-da11-4d12-b689-86704cf17249,USA,USA,True,AUS,AUS,True,CAN,CAN,True,True
+2016,Swimming Women's 50 metres Freestyle,https://api.worldaquatics.com/fina/events/4d0b20af-20fa-403b-addd-fd15967881c6,DEN,DEN,True,USA,USA,True,BLR,BLR,True,True
+2016,Swimming Women's 800 metres Freestyle,https://api.worldaquatics.com/fina/events/4a4d5f54-44be-4fa7-bb52-f0245cee97ad,USA,USA,True,GBR,GBR,True,HUN,HUN,True,True
+2016,Water Polo Men's Water Polo,https://api.worldaquatics.com/fina/events/ec566793-d876-4fab-978d-4ddbcb85d94d,SRB,SRB,True,CRO,CRO,True,ITA,ITA,True,True
+2016,Water Polo Women's Water Polo,https://api.worldaquatics.com/fina/events/4b225ffc-eeed-4eff-a7c9-0bd7d7e45a35,USA,USA,True,ITA,ITA,True,RUS,RUS,True,True

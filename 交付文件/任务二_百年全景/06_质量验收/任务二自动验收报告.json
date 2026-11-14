@@ -1,0 +1,352 @@
+{
+  "passed": true,
+  "checks": 69,
+  "failed": 0,
+  "items": [
+    {
+      "check": "CSV可读:A_逐届规模与集中度.csv",
+      "passed": true,
+      "detail": "30行×7列"
+    },
+    {
+      "check": "CSV无无穷值:A_逐届规模与集中度.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:A_逐届规模与集中度.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_20届主办事件研究.csv",
+      "passed": true,
+      "detail": "48行×9列"
+    },
+    {
+      "check": "CSV无无穷值:B_20届主办事件研究.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_20届主办事件研究.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_主办届项目贡献分解.csv",
+      "passed": true,
+      "detail": "27行×4列"
+    },
+    {
+      "check": "CSV无无穷值:B_主办届项目贡献分解.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_主办届项目贡献分解.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_主场事件窗口.csv",
+      "passed": true,
+      "detail": "42行×6列"
+    },
+    {
+      "check": "CSV无无穷值:B_主场事件窗口.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_主场事件窗口.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_九个主办案例定量结果.csv",
+      "passed": true,
+      "detail": "9行×11列"
+    },
+    {
+      "check": "CSV无无穷值:B_九个主办案例定量结果.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_九个主办案例定量结果.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_匹配DID逐案例.csv",
+      "passed": true,
+      "detail": "9行×12列"
+    },
+    {
+      "check": "CSV无无穷值:B_匹配DID逐案例.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_匹配DID逐案例.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_十二代表团逐届份额.csv",
+      "passed": true,
+      "detail": "360行×6列"
+    },
+    {
+      "check": "CSV无无穷值:B_十二代表团逐届份额.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_十二代表团逐届份额.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_合成对照权重.csv",
+      "passed": true,
+      "detail": "66行×4列"
+    },
+    {
+      "check": "CSV无无穷值:B_合成对照权重.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_合成对照权重.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:B_留一法稳健性.csv",
+      "passed": true,
+      "detail": "17行×2列"
+    },
+    {
+      "check": "CSV无无穷值:B_留一法稳健性.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:B_留一法稳健性.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:C_2024代表团女性结构.csv",
+      "passed": true,
+      "detail": "206行×8列"
+    },
+    {
+      "check": "CSV无无穷值:C_2024代表团女性结构.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:C_2024代表团女性结构.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:C_女性参与获奖与小项.csv",
+      "passed": true,
+      "detail": "30行×7列"
+    },
+    {
+      "check": "CSV无无穷值:C_女性参与获奖与小项.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:C_女性参与获奖与小项.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:D_代表项目出现矩阵.csv",
+      "passed": true,
+      "detail": "13行×31列"
+    },
+    {
+      "check": "CSV无无穷值:D_代表项目出现矩阵.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:D_代表项目出现矩阵.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:D_逐届小项数量.csv",
+      "passed": true,
+      "detail": "29行×3列"
+    },
+    {
+      "check": "CSV无无穷值:D_逐届小项数量.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:D_逐届小项数量.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:D_项目新增退出重返.csv",
+      "passed": true,
+      "detail": "30行×5列"
+    },
+    {
+      "check": "CSV无无穷值:D_项目新增退出重返.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV字段名唯一:D_项目新增退出重返.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON可读:B_主场准实验摘要.json",
+      "passed": true,
+      "detail": "8个顶层条目"
+    },
+    {
+      "check": "JSON可读:B_扩展合成对照摘要.json",
+      "passed": true,
+      "detail": "12个顶层条目"
+    },
+    {
+      "check": "JSON可读:任务二关键指标.json",
+      "passed": true,
+      "detail": "14个顶层条目"
+    },
+    {
+      "check": "图像完整:00_封面总览英雄图.png",
+      "passed": true,
+      "detail": "3171×1744"
+    },
+    {
+      "check": "图像完整:A_历史累计奖牌记录榜.png",
+      "passed": true,
+      "detail": "2088×1430"
+    },
+    {
+      "check": "图像完整:A_规模扩张与奖牌集中度.png",
+      "passed": true,
+      "detail": "2646×1800"
+    },
+    {
+      "check": "图像完整:B_20届合成对照与稳健性.png",
+      "passed": true,
+      "detail": "3120×1325"
+    },
+    {
+      "check": "图像完整:B_主场效应与项目贡献.png",
+      "passed": true,
+      "detail": "2868×1537"
+    },
+    {
+      "check": "图像完整:B_主场效应准实验检验.png",
+      "passed": true,
+      "detail": "3071×1260"
+    },
+    {
+      "check": "图像完整:B_十二代表团兴衰曲线.png",
+      "passed": true,
+      "detail": "2847×1948"
+    },
+    {
+      "check": "图像完整:B_强国时代热力图.png",
+      "passed": true,
+      "detail": "2605×1301"
+    },
+    {
+      "check": "图像完整:C_2024代表团女性结构差.png",
+      "passed": true,
+      "detail": "2115×1430"
+    },
+    {
+      "check": "图像完整:C_女性三层平权曲线.png",
+      "passed": true,
+      "detail": "2460×1433"
+    },
+    {
+      "check": "图像完整:D_小项增长与项目更替.png",
+      "passed": true,
+      "detail": "2879×1948"
+    },
+    {
+      "check": "图像完整:D_项目新增退出重返流向.png",
+      "passed": true,
+      "detail": "2882×1641"
+    },
+    {
+      "check": "Markdown链接:00_先看这里.md",
+      "passed": true,
+      "detail": "0个本地链接全部存在"
+    },
+    {
+      "check": "Markdown链接:01_百年奥运全景分析_高分版.md",
+      "passed": true,
+      "detail": "11个本地链接全部存在"
+    },
+    {
+      "check": "关键文件:任务二_百年奥运全景_正式报告.pdf",
+      "passed": true,
+      "detail": "2366707 bytes"
+    },
+    {
+      "check": "关键文件:任务二_百年奥运全景_A2海报.pdf",
+      "passed": true,
+      "detail": "1030453 bytes"
+    },
+    {
+      "check": "关键文件:index.html",
+      "passed": true,
+      "detail": "3076065 bytes"
+    },
+    {
+      "check": "关键文件:一键运行任务二.cmd",
+      "passed": true,
+      "detail": "265 bytes"
+    },
+    {
+      "check": "关键文件:run_task2.ps1",
+      "passed": true,
+      "detail": "3838 bytes"
+    },
+    {
+      "check": "报告数字一致:+3.37 个百分点",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "报告数字一致:+2.24 个百分点",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "报告数字一致:[1.30, 3.28]",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "报告数字一致:+2.52 个百分点",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "报告数字一致:2.78至3.60",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "s7": {
+    "transitions": 4511,
+    "defense_rate": 0.2955,
+    "streaks": 3833,
+    "two_or_more_share": 0.2079
+  },
+  "s8": {
+    "2024_participation_share": 0.491,
+    "2024_award_share": 0.5028,
+    "2024_gap_pp": 1.185,
+    "noc_min_award_rows": 20,
+    "nocs_eligible": 24
+  },
+  "s9": {
+    "families": 52,
+    "families_returned": 15,
+    "families_absent_2024": 17
+  },
+  "s10": {
+    "top3_rows": 10947,
+    "top3_share": 0.2854,
+    "2024_families_with_25_rows": 26
+  }
+}

@@ -1,0 +1,77 @@
+﻿Sport,sport_family,rule
+3x3 Basketball,Basketball,family harmonization
+"3x3 Basketball, Basketball",Basketball,multi-label same family
+Aeronautics,Aeronautics,identity
+Alpinism,Alpinism,identity
+Archery,Archery,identity
+Art Competitions,Art Competitions,identity
+Artistic Gymnastics,Gymnastics,family harmonization
+Artistic Swimming,Artistic Swimming,family harmonization
+Athletics,Athletics,identity
+Badminton,Badminton,identity
+Baseball,Baseball/Softball,family harmonization
+Baseball/Softball,Baseball/Softball,family harmonization
+Basketball,Basketball,family harmonization
+Basque Pelota,Basque Pelota,identity
+Beach Volleyball,Volleyball,family harmonization
+Boxing,Boxing,identity
+Breaking,Breaking,identity
+Canoe Slalom,Canoeing,family harmonization
+Canoe Sprint,Canoeing,family harmonization
+Canoeing,Canoeing,family harmonization
+Cricket,Cricket,identity
+Croquet,Croquet,identity
+Cycling,Cycling,family harmonization
+Cycling BMX Freestyle,Cycling,family harmonization
+Cycling BMX Racing,Cycling,family harmonization
+Cycling Mountain Bike,Cycling,family harmonization
+Cycling Road,Cycling,family harmonization
+"Cycling Road, Cycling Mountain Bike",Cycling,multi-label same family
+"Cycling Road, Cycling Track",Cycling,multi-label same family
+"Cycling Road, Triathlon",Cross-sport unresolved,event-level resolution required
+Cycling Track,Cycling,family harmonization
+Diving,Diving,identity
+Equestrian,Equestrian,family harmonization
+Equestrianism,Equestrian,family harmonization
+Fencing,Fencing,identity
+Figure Skating,Figure Skating,identity
+Football,Football,identity
+Golf,Golf,identity
+Gymnastics,Gymnastics,family harmonization
+Handball,Handball,identity
+Hockey,Hockey,identity
+Ice Hockey,Ice Hockey,identity
+Jeu De Paume,Jeu De Paume,identity
+Judo,Judo,identity
+Karate,Karate,identity
+Lacrosse,Lacrosse,identity
+Marathon Swimming,Swimming,family harmonization
+"Marathon Swimming, Swimming",Swimming,multi-label same family
+Modern Pentathlon,Modern Pentathlon,identity
+Motorboating,Motorboating,identity
+Polo,Polo,identity
+Racquets,Racquets,identity
+Rhythmic Gymnastics,Gymnastics,family harmonization
+Roque,Roque,identity
+Rowing,Rowing,identity
+Rugby,Rugby,family harmonization
+Rugby Sevens,Rugby,family harmonization
+Sailing,Sailing,identity
+Shooting,Shooting,identity
+Skateboarding,Skateboarding,identity
+Softball,Baseball/Softball,family harmonization
+Sport Climbing,Sport Climbing,identity
+Surfing,Surfing,identity
+Swimming,Swimming,family harmonization
+Synchronized Swimming,Artistic Swimming,family harmonization
+Table Tennis,Table Tennis,identity
+Taekwondo,Taekwondo,identity
+Tennis,Tennis,identity
+Trampoline Gymnastics,Gymnastics,family harmonization
+Trampolining,Gymnastics,family harmonization
+Triathlon,Triathlon,identity
+Tug-Of-War,Tug-Of-War,identity
+Volleyball,Volleyball,family harmonization
+Water Polo,Water Polo,identity
+Weightlifting,Weightlifting,identity
+Wrestling,Wrestling,identity

@@ -1,0 +1,92 @@
+[
+  {
+    "label": "田径",
+    "value": 4364,
+    "raw_sport": "Athletics",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "游泳",
+    "value": 3457,
+    "raw_sport": "Swimming",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "赛艇",
+    "value": 3126,
+    "raw_sport": "Rowing",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "体操",
+    "value": 2538,
+    "raw_sport": "Gymnastics",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "击剑",
+    "value": 1882,
+    "raw_sport": "Fencing",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "足球",
+    "value": 1793,
+    "raw_sport": "Football",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "曲棍球",
+    "value": 1738,
+    "raw_sport": "Hockey",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "自行车",
+    "value": 1465,
+    "raw_sport": "Cycling",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "摔跤",
+    "value": 1428,
+    "raw_sport": "Wrestling",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "皮划艇",
+    "value": 1323,
+    "raw_sport": "Canoeing",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "帆船",
+    "value": 1319,
+    "raw_sport": "Sailing",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "射击",
+    "value": 1288,
+    "raw_sport": "Shooting",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "篮球",
+    "value": 1271,
+    "raw_sport": "Basketball",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "手球",
+    "value": 1247,
+    "raw_sport": "Handball",
+    "detail": "获奖运动员记录"
+  },
+  {
+    "label": "排球",
+    "value": 1215,
+    "raw_sport": "Volleyball",
+    "detail": "获奖运动员记录"
+  }
+]

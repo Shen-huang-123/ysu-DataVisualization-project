@@ -1,0 +1,721 @@
+﻿removed_family,NOC,rank_shift_rows_minus_official
+none,USA,0
+none,CHN,0
+none,JPN,6
+none,AUS,3
+none,FRA,-1
+none,NED,-3
+none,GBR,-1
+none,KOR,4
+none,ITA,-1
+none,GER,1
+none,NZL,-1
+none,CAN,4
+none,UZB,6
+none,HUN,4
+none,ESP,-10
+none,SWE,5
+none,KEN,6
+none,NOR,-5
+none,IRL,6
+none,BRA,2
+Archery,USA,0
+Archery,CHN,0
+Archery,JPN,6
+Archery,AUS,3
+Archery,FRA,-1
+Archery,NED,-3
+Archery,GBR,-1
+Archery,KOR,5
+Archery,ITA,0
+Archery,GER,2
+Archery,NZL,0
+Archery,CAN,4
+Archery,UZB,6
+Archery,HUN,4
+Archery,ESP,-10
+Archery,SWE,5
+Archery,KEN,6
+Archery,NOR,-6
+Archery,IRL,6
+Archery,BRA,2
+Artistic Swimming,USA,0
+Artistic Swimming,CHN,1
+Artistic Swimming,JPN,6
+Artistic Swimming,AUS,3
+Artistic Swimming,FRA,-1
+Artistic Swimming,NED,-4
+Artistic Swimming,GBR,-1
+Artistic Swimming,KOR,4
+Artistic Swimming,ITA,-1
+Artistic Swimming,GER,1
+Artistic Swimming,NZL,-1
+Artistic Swimming,CAN,4
+Artistic Swimming,UZB,6
+Artistic Swimming,HUN,4
+Artistic Swimming,ESP,-10
+Artistic Swimming,SWE,5
+Artistic Swimming,KEN,6
+Artistic Swimming,NOR,-5
+Artistic Swimming,IRL,6
+Artistic Swimming,BRA,2
+Athletics,USA,-1
+Athletics,CHN,1
+Athletics,JPN,6
+Athletics,AUS,3
+Athletics,FRA,-1
+Athletics,NED,-5
+Athletics,GBR,-1
+Athletics,KOR,4
+Athletics,ITA,-1
+Athletics,GER,2
+Athletics,NZL,-1
+Athletics,CAN,6
+Athletics,UZB,6
+Athletics,HUN,3
+Athletics,ESP,-14
+Athletics,SWE,4
+Athletics,KEN,0
+Athletics,NOR,-18
+Athletics,IRL,9
+Athletics,BRA,5
+Badminton,USA,0
+Badminton,CHN,0
+Badminton,JPN,6
+Badminton,AUS,3
+Badminton,FRA,-1
+Badminton,NED,-3
+Badminton,GBR,-1
+Badminton,KOR,2
+Badminton,ITA,0
+Badminton,GER,2
+Badminton,NZL,-1
+Badminton,CAN,4
+Badminton,UZB,6
+Badminton,HUN,4
+Badminton,ESP,-10
+Badminton,SWE,5
+Badminton,KEN,6
+Badminton,NOR,-5
+Badminton,IRL,6
+Badminton,BRA,2
+Basketball,USA,-1
+Basketball,CHN,1
+Basketball,JPN,6
+Basketball,AUS,3
+Basketball,FRA,-1
+Basketball,NED,-4
+Basketball,GBR,0
+Basketball,KOR,3
+Basketball,ITA,-1
+Basketball,GER,3
+Basketball,NZL,-1
+Basketball,CAN,4
+Basketball,UZB,6
+Basketball,HUN,4
+Basketball,ESP,-10
+Basketball,SWE,5
+Basketball,KEN,6
+Basketball,NOR,-6
+Basketball,IRL,6
+Basketball,BRA,2
+Boxing,USA,0
+Boxing,CHN,0
+Boxing,JPN,6
+Boxing,AUS,3
+Boxing,FRA,-1
+Boxing,NED,-3
+Boxing,GBR,-1
+Boxing,KOR,4
+Boxing,ITA,-1
+Boxing,GER,1
+Boxing,NZL,-1
+Boxing,CAN,4
+Boxing,UZB,5
+Boxing,HUN,5
+Boxing,ESP,-9
+Boxing,SWE,4
+Boxing,KEN,6
+Boxing,NOR,-4
+Boxing,IRL,4
+Boxing,BRA,3
+Breaking,USA,0
+Breaking,CHN,0
+Breaking,JPN,6
+Breaking,AUS,3
+Breaking,FRA,-1
+Breaking,NED,-3
+Breaking,GBR,-1
+Breaking,KOR,4
+Breaking,ITA,-1
+Breaking,GER,1
+Breaking,NZL,-1
+Breaking,CAN,4
+Breaking,UZB,6
+Breaking,HUN,4
+Breaking,ESP,-10
+Breaking,SWE,5
+Breaking,KEN,6
+Breaking,NOR,-5
+Breaking,IRL,6
+Breaking,BRA,2
+Canoeing,USA,0
+Canoeing,CHN,0
+Canoeing,JPN,6
+Canoeing,AUS,2
+Canoeing,FRA,0
+Canoeing,NED,-3
+Canoeing,GBR,-1
+Canoeing,KOR,2
+Canoeing,ITA,-1
+Canoeing,GER,5
+Canoeing,NZL,-2
+Canoeing,CAN,5
+Canoeing,UZB,7
+Canoeing,HUN,4
+Canoeing,ESP,-10
+Canoeing,SWE,5
+Canoeing,KEN,6
+Canoeing,NOR,-6
+Canoeing,IRL,5
+Canoeing,BRA,2
+Cycling,USA,-1
+Cycling,CHN,1
+Cycling,JPN,5
+Cycling,AUS,5
+Cycling,FRA,-1
+Cycling,NED,-6
+Cycling,GBR,-1
+Cycling,KOR,6
+Cycling,ITA,-3
+Cycling,GER,3
+Cycling,NZL,-2
+Cycling,CAN,5
+Cycling,UZB,6
+Cycling,HUN,4
+Cycling,ESP,-10
+Cycling,SWE,5
+Cycling,KEN,6
+Cycling,NOR,-5
+Cycling,IRL,6
+Cycling,BRA,2
+Diving,USA,0
+Diving,CHN,1
+Diving,JPN,6
+Diving,AUS,3
+Diving,FRA,-1
+Diving,NED,-4
+Diving,GBR,-1
+Diving,KOR,4
+Diving,ITA,-1
+Diving,GER,1
+Diving,NZL,-1
+Diving,CAN,4
+Diving,UZB,6
+Diving,HUN,4
+Diving,ESP,-10
+Diving,SWE,5
+Diving,KEN,6
+Diving,NOR,-5
+Diving,IRL,6
+Diving,BRA,2
+Equestrian,USA,0
+Equestrian,CHN,0
+Equestrian,JPN,6
+Equestrian,AUS,2
+Equestrian,FRA,-1
+Equestrian,NED,-3
+Equestrian,GBR,-1
+Equestrian,KOR,4
+Equestrian,ITA,-1
+Equestrian,GER,3
+Equestrian,NZL,0
+Equestrian,CAN,5
+Equestrian,UZB,6
+Equestrian,HUN,4
+Equestrian,ESP,-10
+Equestrian,SWE,5
+Equestrian,KEN,6
+Equestrian,NOR,-6
+Equestrian,IRL,6
+Equestrian,BRA,2
+Fencing,USA,-1
+Fencing,CHN,1
+Fencing,JPN,6
+Fencing,AUS,4
+Fencing,FRA,-1
+Fencing,NED,-3
+Fencing,GBR,-1
+Fencing,KOR,4
+Fencing,ITA,-1
+Fencing,GER,3
+Fencing,NZL,-2
+Fencing,CAN,4
+Fencing,UZB,5
+Fencing,HUN,5
+Fencing,ESP,-10
+Fencing,SWE,4
+Fencing,KEN,5
+Fencing,NOR,-6
+Fencing,IRL,4
+Fencing,BRA,1
+Football,USA,-1
+Football,CHN,1
+Football,JPN,5
+Football,AUS,2
+Football,FRA,-1
+Football,NED,-3
+Football,GBR,-2
+Football,KOR,3
+Football,ITA,-2
+Football,GER,0
+Football,NZL,-2
+Football,CAN,4
+Football,UZB,6
+Football,HUN,4
+Football,ESP,-3
+Football,SWE,5
+Football,KEN,6
+Football,NOR,-5
+Football,IRL,6
+Football,BRA,2
+Golf,USA,-1
+Golf,CHN,1
+Golf,JPN,6
+Golf,AUS,3
+Golf,FRA,-1
+Golf,NED,-3
+Golf,GBR,-1
+Golf,KOR,4
+Golf,ITA,-1
+Golf,GER,1
+Golf,NZL,-2
+Golf,CAN,5
+Golf,UZB,6
+Golf,HUN,4
+Golf,ESP,-10
+Golf,SWE,5
+Golf,KEN,6
+Golf,NOR,-5
+Golf,IRL,6
+Golf,BRA,2
+Gymnastics,USA,0
+Gymnastics,CHN,1
+Gymnastics,JPN,8
+Gymnastics,AUS,4
+Gymnastics,FRA,-1
+Gymnastics,NED,-4
+Gymnastics,GBR,-1
+Gymnastics,KOR,2
+Gymnastics,ITA,-2
+Gymnastics,GER,2
+Gymnastics,NZL,-2
+Gymnastics,CAN,4
+Gymnastics,UZB,6
+Gymnastics,HUN,4
+Gymnastics,ESP,-10
+Gymnastics,SWE,5
+Gymnastics,KEN,5
+Gymnastics,NOR,-5
+Gymnastics,IRL,5
+Gymnastics,BRA,-4
+Handball,USA,0
+Handball,CHN,0
+Handball,JPN,6
+Handball,AUS,3
+Handball,FRA,-1
+Handball,NED,-3
+Handball,GBR,-1
+Handball,KOR,4
+Handball,ITA,-1
+Handball,GER,1
+Handball,NZL,-1
+Handball,CAN,2
+Handball,UZB,4
+Handball,HUN,2
+Handball,ESP,-10
+Handball,SWE,3
+Handball,KEN,4
+Handball,NOR,3
+Handball,IRL,5
+Handball,BRA,1
+Hockey,USA,0
+Hockey,CHN,0
+Hockey,JPN,6
+Hockey,AUS,2
+Hockey,FRA,-2
+Hockey,NED,-1
+Hockey,GBR,-1
+Hockey,KOR,5
+Hockey,ITA,-1
+Hockey,GER,1
+Hockey,NZL,-1
+Hockey,CAN,4
+Hockey,UZB,6
+Hockey,HUN,4
+Hockey,ESP,-11
+Hockey,SWE,5
+Hockey,KEN,6
+Hockey,NOR,-5
+Hockey,IRL,6
+Hockey,BRA,2
+Judo,USA,0
+Judo,CHN,0
+Judo,JPN,6
+Judo,AUS,4
+Judo,FRA,0
+Judo,NED,-2
+Judo,GBR,-2
+Judo,KOR,4
+Judo,ITA,-2
+Judo,GER,2
+Judo,NZL,-2
+Judo,CAN,4
+Judo,UZB,6
+Judo,HUN,4
+Judo,ESP,-11
+Judo,SWE,5
+Judo,KEN,5
+Judo,NOR,-5
+Judo,IRL,5
+Judo,BRA,-2
+Modern Pentathlon,USA,0
+Modern Pentathlon,CHN,0
+Modern Pentathlon,JPN,6
+Modern Pentathlon,AUS,3
+Modern Pentathlon,FRA,-1
+Modern Pentathlon,NED,-3
+Modern Pentathlon,GBR,-1
+Modern Pentathlon,KOR,4
+Modern Pentathlon,ITA,-1
+Modern Pentathlon,GER,1
+Modern Pentathlon,NZL,-1
+Modern Pentathlon,CAN,4
+Modern Pentathlon,UZB,6
+Modern Pentathlon,HUN,4
+Modern Pentathlon,ESP,-10
+Modern Pentathlon,SWE,5
+Modern Pentathlon,KEN,6
+Modern Pentathlon,NOR,-5
+Modern Pentathlon,IRL,6
+Modern Pentathlon,BRA,2
+Rowing,USA,-1
+Rowing,CHN,1
+Rowing,JPN,5
+Rowing,AUS,2
+Rowing,FRA,-1
+Rowing,NED,-7
+Rowing,GBR,1
+Rowing,KOR,5
+Rowing,ITA,0
+Rowing,GER,3
+Rowing,NZL,-2
+Rowing,CAN,5
+Rowing,UZB,5
+Rowing,HUN,3
+Rowing,ESP,-10
+Rowing,SWE,4
+Rowing,KEN,5
+Rowing,NOR,-5
+Rowing,IRL,11
+Rowing,BRA,2
+Rugby,USA,0
+Rugby,CHN,0
+Rugby,JPN,6
+Rugby,AUS,3
+Rugby,FRA,-1
+Rugby,NED,-3
+Rugby,GBR,-1
+Rugby,KOR,3
+Rugby,ITA,-1
+Rugby,GER,0
+Rugby,NZL,4
+Rugby,CAN,4
+Rugby,UZB,6
+Rugby,HUN,4
+Rugby,ESP,-10
+Rugby,SWE,5
+Rugby,KEN,6
+Rugby,NOR,-6
+Rugby,IRL,6
+Rugby,BRA,2
+Sailing,USA,0
+Sailing,CHN,0
+Sailing,JPN,6
+Sailing,AUS,3
+Sailing,FRA,-1
+Sailing,NED,-5
+Sailing,GBR,-1
+Sailing,KOR,5
+Sailing,ITA,-2
+Sailing,GER,2
+Sailing,NZL,-1
+Sailing,CAN,4
+Sailing,UZB,6
+Sailing,HUN,4
+Sailing,ESP,-9
+Sailing,SWE,5
+Sailing,KEN,6
+Sailing,NOR,-5
+Sailing,IRL,6
+Sailing,BRA,2
+Shooting,USA,0
+Shooting,CHN,1
+Shooting,JPN,6
+Shooting,AUS,3
+Shooting,FRA,-1
+Shooting,NED,-4
+Shooting,GBR,-1
+Shooting,KOR,1
+Shooting,ITA,-1
+Shooting,GER,3
+Shooting,NZL,0
+Shooting,CAN,3
+Shooting,UZB,6
+Shooting,HUN,4
+Shooting,ESP,-10
+Shooting,SWE,5
+Shooting,KEN,6
+Shooting,NOR,-5
+Shooting,IRL,6
+Shooting,BRA,2
+Skateboarding,USA,0
+Skateboarding,CHN,0
+Skateboarding,JPN,7
+Skateboarding,AUS,2
+Skateboarding,FRA,0
+Skateboarding,NED,-3
+Skateboarding,GBR,-1
+Skateboarding,KOR,4
+Skateboarding,ITA,-1
+Skateboarding,GER,1
+Skateboarding,NZL,-2
+Skateboarding,CAN,4
+Skateboarding,UZB,6
+Skateboarding,HUN,4
+Skateboarding,ESP,-10
+Skateboarding,SWE,5
+Skateboarding,KEN,6
+Skateboarding,NOR,-5
+Skateboarding,IRL,6
+Skateboarding,BRA,2
+Sport Climbing,USA,0
+Sport Climbing,CHN,0
+Sport Climbing,JPN,6
+Sport Climbing,AUS,3
+Sport Climbing,FRA,-1
+Sport Climbing,NED,-3
+Sport Climbing,GBR,-1
+Sport Climbing,KOR,4
+Sport Climbing,ITA,-1
+Sport Climbing,GER,1
+Sport Climbing,NZL,-1
+Sport Climbing,CAN,4
+Sport Climbing,UZB,6
+Sport Climbing,HUN,4
+Sport Climbing,ESP,-10
+Sport Climbing,SWE,5
+Sport Climbing,KEN,6
+Sport Climbing,NOR,-5
+Sport Climbing,IRL,6
+Sport Climbing,BRA,2
+Surfing,USA,-1
+Surfing,CHN,1
+Surfing,JPN,6
+Surfing,AUS,3
+Surfing,FRA,-1
+Surfing,NED,-3
+Surfing,GBR,-1
+Surfing,KOR,4
+Surfing,ITA,-1
+Surfing,GER,1
+Surfing,NZL,-1
+Surfing,CAN,4
+Surfing,UZB,6
+Surfing,HUN,4
+Surfing,ESP,-10
+Surfing,SWE,5
+Surfing,KEN,6
+Surfing,NOR,-5
+Surfing,IRL,6
+Surfing,BRA,2
+Swimming,USA,-1
+Swimming,CHN,2
+Swimming,JPN,5
+Swimming,AUS,5
+Swimming,FRA,-3
+Swimming,NED,-2
+Swimming,GBR,1
+Swimming,KOR,4
+Swimming,ITA,-3
+Swimming,GER,3
+Swimming,NZL,-2
+Swimming,CAN,3
+Swimming,UZB,6
+Swimming,HUN,1
+Swimming,ESP,-9
+Swimming,SWE,-1
+Swimming,KEN,7
+Swimming,NOR,-4
+Swimming,IRL,-2
+Swimming,BRA,4
+Table Tennis,USA,0
+Table Tennis,CHN,1
+Table Tennis,JPN,6
+Table Tennis,AUS,3
+Table Tennis,FRA,-1
+Table Tennis,NED,-4
+Table Tennis,GBR,-1
+Table Tennis,KOR,4
+Table Tennis,ITA,-1
+Table Tennis,GER,1
+Table Tennis,NZL,-1
+Table Tennis,CAN,4
+Table Tennis,UZB,6
+Table Tennis,HUN,4
+Table Tennis,ESP,-10
+Table Tennis,SWE,4
+Table Tennis,KEN,7
+Table Tennis,NOR,-5
+Table Tennis,IRL,6
+Table Tennis,BRA,2
+Taekwondo,USA,0
+Taekwondo,CHN,0
+Taekwondo,JPN,6
+Taekwondo,AUS,3
+Taekwondo,FRA,-1
+Taekwondo,NED,-3
+Taekwondo,GBR,-1
+Taekwondo,KOR,2
+Taekwondo,ITA,0
+Taekwondo,GER,2
+Taekwondo,NZL,-1
+Taekwondo,CAN,4
+Taekwondo,UZB,6
+Taekwondo,HUN,4
+Taekwondo,ESP,-10
+Taekwondo,SWE,5
+Taekwondo,KEN,6
+Taekwondo,NOR,-5
+Taekwondo,IRL,6
+Taekwondo,BRA,2
+Tennis,USA,0
+Tennis,CHN,0
+Tennis,JPN,6
+Tennis,AUS,3
+Tennis,FRA,-1
+Tennis,NED,-3
+Tennis,GBR,-1
+Tennis,KOR,4
+Tennis,ITA,-2
+Tennis,GER,2
+Tennis,NZL,-1
+Tennis,CAN,4
+Tennis,UZB,6
+Tennis,HUN,4
+Tennis,ESP,-10
+Tennis,SWE,5
+Tennis,KEN,6
+Tennis,NOR,-5
+Tennis,IRL,5
+Tennis,BRA,2
+Triathlon,USA,0
+Triathlon,CHN,0
+Triathlon,JPN,6
+Triathlon,AUS,3
+Triathlon,FRA,-1
+Triathlon,NED,-3
+Triathlon,GBR,-1
+Triathlon,KOR,4
+Triathlon,ITA,-1
+Triathlon,GER,1
+Triathlon,NZL,-1
+Triathlon,CAN,4
+Triathlon,UZB,6
+Triathlon,HUN,4
+Triathlon,ESP,-10
+Triathlon,SWE,5
+Triathlon,KEN,6
+Triathlon,NOR,-5
+Triathlon,IRL,6
+Triathlon,BRA,2
+Volleyball,USA,0
+Volleyball,CHN,0
+Volleyball,JPN,5
+Volleyball,AUS,3
+Volleyball,FRA,-1
+Volleyball,NED,-3
+Volleyball,GBR,-1
+Volleyball,KOR,3
+Volleyball,ITA,2
+Volleyball,GER,1
+Volleyball,NZL,-2
+Volleyball,CAN,4
+Volleyball,UZB,6
+Volleyball,HUN,4
+Volleyball,ESP,-10
+Volleyball,SWE,4
+Volleyball,KEN,5
+Volleyball,NOR,-4
+Volleyball,IRL,5
+Volleyball,BRA,4
+Water Polo,USA,0
+Water Polo,CHN,0
+Water Polo,JPN,5
+Water Polo,AUS,2
+Water Polo,FRA,-1
+Water Polo,NED,-3
+Water Polo,GBR,-2
+Water Polo,KOR,4
+Water Polo,ITA,-2
+Water Polo,GER,1
+Water Polo,NZL,-1
+Water Polo,CAN,3
+Water Polo,UZB,5
+Water Polo,HUN,3
+Water Polo,ESP,-6
+Water Polo,SWE,4
+Water Polo,KEN,5
+Water Polo,NOR,-5
+Water Polo,IRL,5
+Water Polo,BRA,1
+Weightlifting,USA,0
+Weightlifting,CHN,1
+Weightlifting,JPN,6
+Weightlifting,AUS,3
+Weightlifting,FRA,-1
+Weightlifting,NED,-4
+Weightlifting,GBR,-1
+Weightlifting,KOR,4
+Weightlifting,ITA,-1
+Weightlifting,GER,1
+Weightlifting,NZL,-1
+Weightlifting,CAN,4
+Weightlifting,UZB,6
+Weightlifting,HUN,4
+Weightlifting,ESP,-10
+Weightlifting,SWE,5
+Weightlifting,KEN,6
+Weightlifting,NOR,-10
+Weightlifting,IRL,7
+Weightlifting,BRA,3
+Wrestling,USA,-1
+Wrestling,CHN,1
+Wrestling,JPN,2
+Wrestling,AUS,4
+Wrestling,FRA,0
+Wrestling,NED,-2
+Wrestling,GBR,0
+Wrestling,KOR,4
+Wrestling,ITA,0
+Wrestling,GER,1
+Wrestling,NZL,-2
+Wrestling,CAN,4
+Wrestling,UZB,6
+Wrestling,HUN,4
+Wrestling,ESP,-10
+Wrestling,SWE,5
+Wrestling,KEN,6
+Wrestling,NOR,-5
+Wrestling,IRL,6
+Wrestling,BRA,2

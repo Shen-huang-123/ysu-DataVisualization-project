@@ -1,0 +1,53 @@
+﻿sport_family,first_year,last_year,editions_present,return_after_gap,absent_in_2024
+Rugby,1900,2024,7,3,False
+Polo,1900,1936,5,3,True
+Hockey,1908,2024,25,2,False
+Archery,1900,2024,18,2,False
+Football,1900,2024,28,1,False
+Sailing,1900,2024,28,1,False
+Shooting,1896,2024,28,1,False
+Boxing,1904,2024,27,1,False
+Equestrian,1900,2024,27,1,False
+Weightlifting,1896,2024,27,1,False
+Handball,1936,2024,15,1,False
+Judo,1964,2024,15,1,False
+Baseball/Softball,1992,2020,6,1,True
+Golf,1900,2024,5,1,False
+Figure Skating,1908,1920,2,1,True
+Athletics,1896,2024,30,0,False
+Cycling,1896,2024,30,0,False
+Fencing,1896,2024,30,0,False
+Gymnastics,1896,2024,30,0,False
+Swimming,1896,2024,30,0,False
+Rowing,1900,2024,29,0,False
+Water Polo,1900,2024,29,0,False
+Wrestling,1896,2024,29,0,False
+Diving,1904,2024,28,0,False
+Modern Pentathlon,1912,2024,26,0,False
+Basketball,1936,2024,21,0,False
+Canoeing,1936,2024,21,0,False
+Tennis,1896,2024,17,0,False
+Volleyball,1964,2024,16,0,False
+Artistic Swimming,1984,2024,11,0,False
+Table Tennis,1988,2024,10,0,False
+Badminton,1992,2024,9,0,False
+Art Competitions,1912,1948,7,0,True
+Taekwondo,2000,2024,7,0,False
+Triathlon,2000,2024,7,0,False
+Tug-Of-War,1900,1920,5,0,True
+Alpinism,1932,1936,2,0,True
+Lacrosse,1904,1908,2,0,True
+Skateboarding,2020,2024,2,0,False
+Sport Climbing,2020,2024,2,0,False
+Surfing,2020,2024,2,0,False
+Aeronautics,1936,1936,1,0,True
+Basque Pelota,1900,1900,1,0,True
+Breaking,2024,2024,1,0,False
+Cricket,1900,1900,1,0,True
+Croquet,1900,1900,1,0,True
+Ice Hockey,1920,1920,1,0,True
+Jeu De Paume,1908,1908,1,0,True
+Karate,2020,2020,1,0,True
+Motorboating,1908,1908,1,0,True
+Racquets,1908,1908,1,0,True
+Roque,1904,1904,1,0,True

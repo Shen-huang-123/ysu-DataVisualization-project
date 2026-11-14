@@ -1,0 +1,4 @@
+const {chromium}=require('playwright'),path=require('path');
+const root=path.resolve(__dirname,'../交付文件/任务三_专题深挖');
+const pages=['S1_东道主效应/index.html','S2_口径的魔力/06_滚动叙事专题/index.html','S3_冠军的保质期/06_冠军王朝时间轴/index.html','S3_地缘政治的投影/index.html','S4_小代表团的大突破/index.html','S5_奖牌的通货膨胀/index.html','S6_王者与传奇/index.html','S8_她们登上领奖台/index.html','S9_消失的赛场/index.html','S10_奖牌藏在哪些项目/index.html'];
+(async()=>{const b=await chromium.launch();for(const x of pages){const p=await b.newPage();await p.goto('file:///'+path.join(root,x).replace(/\\/g,'/'));const t=await p.locator('body').innerText();const latin=[...new Set(t.match(/\b[A-Za-z][A-Za-z ./'-]{2,}\b/g)||[])].filter(y=>y.trim().length>3);console.log(x,JSON.stringify(latin.slice(0,35)));await p.close()}await b.close()})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,16 @@
+{
+  "1896_top5_rows": 0.8391608391608392,
+  "2024_top5_rows": 0.41779921087242433,
+  "1904_top5_rows": 0.9609053497942386,
+  "2016_top5_rows": 0.393475037073653,
+  "2016_top5_proxy": 0.36587872559095586,
+  "2016_effective_nocs_rows": 21.14248149238773,
+  "2024_effective_nocs_rows": 18.923367606356084,
+  "2024_top5_no_duplicate_excess": 0.41798245614035084,
+  "modern_rows_spearman": -0.5,
+  "modern_proxy_spearman": -0.28571428571428575,
+  "proxy_early_median": 0.6703113469943804,
+  "proxy_modern_median": 0.38079827400215754,
+  "rows_early_median": 0.6480377436977383,
+  "rows_modern_median": 0.40369261477045904
+}

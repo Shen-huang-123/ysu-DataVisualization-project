@@ -1,0 +1,1045 @@
+﻿event_id,NOC,Medal
+ARC::Men's Individual,KOR,Gold
+ARC::Men's Team,KOR,Gold
+ARC::Mixed Team,KOR,Gold
+ARC::Women's Individual,KOR,Gold
+ARC::Women's Team,KOR,Gold
+ATH::4 x 400m Relay Mixed,NED,Gold
+ATH::Marathon Race Walk Relay Mixed,ESP,Gold
+"ATH::Men's 10,000m",UGA,Gold
+ATH::Men's 100m,USA,Gold
+ATH::Men's 110m Hurdles,USA,Gold
+ATH::Men's 1500m,USA,Gold
+ATH::Men's 200m,BOT,Gold
+ATH::Men's 20km Race Walk,ECU,Gold
+ATH::Men's 3000m Steeplechase,MAR,Gold
+ATH::Men's 4 x 100m Relay,CAN,Gold
+ATH::Men's 4 x 400m Relay,USA,Gold
+ATH::Men's 400m,USA,Gold
+ATH::Men's 400m Hurdles,USA,Gold
+ATH::Men's 5000m,NOR,Gold
+ATH::Men's 800m,KEN,Gold
+ATH::Men's Decathlon,NOR,Gold
+ATH::Men's Discus Throw,JAM,Gold
+ATH::Men's Hammer Throw,CAN,Gold
+ATH::Men's High Jump,NZL,Gold
+ATH::Men's Javelin Throw,PAK,Gold
+ATH::Men's Long Jump,GRE,Gold
+ATH::Men's Marathon,ETH,Gold
+ATH::Men's Pole Vault,SWE,Gold
+ATH::Men's Shot Put,USA,Gold
+ATH::Men's Triple Jump,ESP,Gold
+"ATH::Women's 10,000m",KEN,Gold
+ATH::Women's 100m,LCA,Gold
+ATH::Women's 100m Hurdles,USA,Gold
+ATH::Women's 1500m,KEN,Gold
+ATH::Women's 200m,USA,Gold
+ATH::Women's 20km Race Walk,CHN,Gold
+ATH::Women's 3000m Steeplechase,BRN,Gold
+ATH::Women's 4 x 100m Relay,USA,Gold
+ATH::Women's 4 x 400m Relay,USA,Gold
+ATH::Women's 400m,DOM,Gold
+ATH::Women's 400m Hurdles,USA,Gold
+ATH::Women's 5000m,KEN,Gold
+ATH::Women's 800m,GBR,Gold
+ATH::Women's Discus Throw,USA,Gold
+ATH::Women's Hammer Throw,CAN,Gold
+ATH::Women's Heptathlon,BEL,Gold
+ATH::Women's High Jump,UKR,Gold
+ATH::Women's Javelin Throw,JPN,Gold
+ATH::Women's Long Jump,USA,Gold
+ATH::Women's Marathon,NED,Gold
+ATH::Women's Pole Vault,AUS,Gold
+ATH::Women's Shot Put,GER,Gold
+ATH::Women's Triple Jump,DMA,Gold
+BDM::Men's Doubles,TPE,Gold
+BDM::Men's Singles,DEN,Gold
+BDM::Mixed Doubles,CHN,Gold
+BDM::Women's Doubles,CHN,Gold
+BDM::Women's Singles,KOR,Gold
+BK3::Men,NED,Gold
+BK3::Women,GER,Gold
+BKB::Men,USA,Gold
+BKB::Women,USA,Gold
+BKG::B-Boys,CAN,Gold
+BKG::B-Girls,JPN,Gold
+BMF::Men's Park,ARG,Gold
+BMF::Women's Park,CHN,Gold
+BMX::Men,FRA,Gold
+BMX::Women,AUS,Gold
+BOX::Men's +92kg,UZB,Gold
+BOX::Men's 51kg,UZB,Gold
+BOX::Men's 57kg,UZB,Gold
+BOX::Men's 63.5kg,CUB,Gold
+BOX::Men's 71kg,UZB,Gold
+BOX::Men's 80kg,UKR,Gold
+BOX::Men's 92kg,UZB,Gold
+BOX::Women's 50kg,CHN,Gold
+BOX::Women's 54kg,CHN,Gold
+BOX::Women's 57kg,TPE,Gold
+BOX::Women's 60kg,IRL,Gold
+BOX::Women's 66kg,ALG,Gold
+BOX::Women's 75kg,CHN,Gold
+CLB::Men's Boulder & Lead,GBR,Gold
+CLB::Men's Speed,INA,Gold
+CLB::Women's Boulder & Lead,SLO,Gold
+CLB::Women's Speed,POL,Gold
+CRD::Men's Individual Time Trial,BEL,Gold
+CRD::Men's Road Race,BEL,Gold
+CRD::Women's Individual Time Trial,AUS,Gold
+CRD::Women's Road Race,USA,Gold
+CSL::Men's Canoe Single,FRA,Gold
+CSL::Men's Kayak Cross,NZL,Gold
+CSL::Men's Kayak Single,ITA,Gold
+CSL::Women's Canoe Single,AUS,Gold
+CSL::Women's Kayak Cross,AUS,Gold
+CSL::Women's Kayak Single,AUS,Gold
+CSP::Men's Canoe Double 500m,CHN,Gold
+CSP::Men's Canoe Single 1000m,CZE,Gold
+CSP::Men's Kayak Double 500m,GER,Gold
+CSP::Men's Kayak Four 500m,GER,Gold
+CSP::Men's Kayak Single 1000m,CZE,Gold
+CSP::Women's Canoe Double 500m,CHN,Gold
+CSP::Women's Canoe Single 200m,CAN,Gold
+CSP::Women's Kayak Double 500m,NZL,Gold
+CSP::Women's Kayak Four 500m,NZL,Gold
+CSP::Women's Kayak Single 500m,NZL,Gold
+CTR::Men's Keirin,NED,Gold
+CTR::Men's Madison,POR,Gold
+CTR::Men's Omnium,FRA,Gold
+CTR::Men's Sprint,NED,Gold
+CTR::Men's Team Pursuit,AUS,Gold
+CTR::Men's Team Sprint,NED,Gold
+CTR::Women's Keirin,NZL,Gold
+CTR::Women's Madison,ITA,Gold
+CTR::Women's Omnium,USA,Gold
+CTR::Women's Sprint,NZL,Gold
+CTR::Women's Team Pursuit,USA,Gold
+CTR::Women's Team Sprint,GBR,Gold
+DIV::Men's 10m Platform,CHN,Gold
+DIV::Men's 3m Springboard,CHN,Gold
+DIV::Men's Synchronised 10m Platform,CHN,Gold
+DIV::Men's Synchronised 3m Springboard,CHN,Gold
+DIV::Women's 10m Platform,CHN,Gold
+DIV::Women's 3m Springboard,CHN,Gold
+DIV::Women's Synchronised 10m Platform,CHN,Gold
+DIV::Women's Synchronised 3m Springboard,CHN,Gold
+EQD::Dressage Individual,GER,Gold
+EQD::Dressage Team,GER,Gold
+EQD::Eventing Individual,GER,Gold
+EQD::Eventing Team,GBR,Gold
+EQD::Jumping Individual,GER,Gold
+EQD::Jumping Team,GBR,Gold
+FBL::Men,ESP,Gold
+FBL::Women,USA,Gold
+FEN::Men's Foil Individual,HKG,Gold
+FEN::Men's Foil Team,JPN,Gold
+FEN::Men's Sabre Individual,KOR,Gold
+FEN::Men's Sabre Team,KOR,Gold
+FEN::Men's Épée Individual,JPN,Gold
+FEN::Men's Épée Team,HUN,Gold
+FEN::Women's Foil Individual,USA,Gold
+FEN::Women's Foil Team,USA,Gold
+FEN::Women's Sabre Individual,FRA,Gold
+FEN::Women's Sabre Team,UKR,Gold
+FEN::Women's Épée Individual,HKG,Gold
+FEN::Women's Épée Team,ITA,Gold
+GAR::Men's All-Around,JPN,Gold
+GAR::Men's Floor Exercise,PHI,Gold
+GAR::Men's Horizontal Bar,JPN,Gold
+GAR::Men's Parallel Bars,CHN,Gold
+GAR::Men's Pommel Horse,IRL,Gold
+GAR::Men's Rings,CHN,Gold
+GAR::Men's Team,JPN,Gold
+GAR::Men's Vault,PHI,Gold
+GAR::Women's All-Around,USA,Gold
+GAR::Women's Balance Beam,ITA,Gold
+GAR::Women's Floor Exercise,BRA,Gold
+GAR::Women's Team,USA,Gold
+GAR::Women's Uneven Bars,ALG,Gold
+GAR::Women's Vault,USA,Gold
+GLF::Men's Individual Stroke Play,USA,Gold
+GLF::Women's Individual Stroke Play,NZL,Gold
+GRY::Group All-Around,CHN,Gold
+GRY::Individual All-Around,GER,Gold
+GTR::Men,AIN,Gold
+GTR::Women,GBR,Gold
+HBL::Men,DEN,Gold
+HBL::Women,NOR,Gold
+HOC::Men,NED,Gold
+HOC::Women,NED,Gold
+JUD::Men +100 kg,FRA,Gold
+JUD::Men -100 kg,AZE,Gold
+JUD::Men -60 kg,KAZ,Gold
+JUD::Men -66 kg,JPN,Gold
+JUD::Men -73 kg,AZE,Gold
+JUD::Men -81 kg,JPN,Gold
+JUD::Men -90 kg,GEO,Gold
+JUD::Mixed Team,FRA,Gold
+JUD::Women +78 kg,BRA,Gold
+JUD::Women -48 kg,JPN,Gold
+JUD::Women -52 kg,UZB,Gold
+JUD::Women -57 kg,CAN,Gold
+JUD::Women -63 kg,SLO,Gold
+JUD::Women -70 kg,CRO,Gold
+JUD::Women -78 kg,ITA,Gold
+MPN::Men's Individual,EGY,Gold
+MPN::Women's Individual,HUN,Gold
+MTB::Men's Cross-country,GBR,Gold
+MTB::Women's Cross-country,FRA,Gold
+OWS::Men's 10km,HUN,Gold
+OWS::Women's 10km,NED,Gold
+ROW::Lightweight Men's Double Sculls,IRL,Gold
+ROW::Lightweight Women's Double Sculls,GBR,Gold
+ROW::Men's Double Sculls,ROU,Gold
+ROW::Men's Eight,GBR,Gold
+ROW::Men's Four,USA,Gold
+ROW::Men's Pair,CRO,Gold
+ROW::Men's Quadruple Sculls,NED,Gold
+ROW::Men's Single Sculls,GER,Gold
+ROW::Women's Double Sculls,NZL,Gold
+ROW::Women's Eight,ROU,Gold
+ROW::Women's Four,NED,Gold
+ROW::Women's Pair,NED,Gold
+ROW::Women's Quadruple Sculls,GBR,Gold
+ROW::Women's Single Sculls,NED,Gold
+RU7::Men,FRA,Gold
+RU7::Women,NZL,Gold
+SAL::Men's Dinghy,AUS,Gold
+SAL::Men's Kite,AUT,Gold
+SAL::Men's Skiff,ESP,Gold
+SAL::Men's Windsurfing,ISR,Gold
+SAL::Mixed Dinghy,AUT,Gold
+SAL::Mixed Multihull,ITA,Gold
+SAL::Women's Dinghy,NED,Gold
+SAL::Women's Kite,GBR,Gold
+SAL::Women's Skiff,NED,Gold
+SAL::Women's Windsurfing,ITA,Gold
+SHO::10m Air Pistol Men,CHN,Gold
+SHO::10m Air Pistol Mixed Team,SRB,Gold
+SHO::10m Air Pistol Women,KOR,Gold
+SHO::10m Air Rifle Men,CHN,Gold
+SHO::10m Air Rifle Mixed Team,CHN,Gold
+SHO::10m Air Rifle Women,KOR,Gold
+SHO::25m Pistol Women,KOR,Gold
+SHO::25m Rapid Fire Pistol Men,CHN,Gold
+SHO::50m Rifle 3 Positions Men,CHN,Gold
+SHO::50m Rifle 3 Positions Women,SUI,Gold
+SHO::Skeet Men,USA,Gold
+SHO::Skeet Mixed Team,ITA,Gold
+SHO::Skeet Women,CHI,Gold
+SHO::Trap Men,GBR,Gold
+SHO::Trap Women,GUA,Gold
+SKB::Men's Park,AUS,Gold
+SKB::Men's Street,JPN,Gold
+SKB::Women's Park,AUS,Gold
+SKB::Women's Street,JPN,Gold
+SRF::Men,FRA,Gold
+SRF::Women,USA,Gold
+SWA::Duet,CHN,Gold
+SWA::Team,CHN,Gold
+SWM::Men's 100m Backstroke,ITA,Gold
+SWM::Men's 100m Breaststroke,ITA,Gold
+SWM::Men's 100m Butterfly,HUN,Gold
+SWM::Men's 100m Freestyle,CHN,Gold
+SWM::Men's 1500m Freestyle,USA,Gold
+SWM::Men's 200m Backstroke,HUN,Gold
+SWM::Men's 200m Breaststroke,FRA,Gold
+SWM::Men's 200m Butterfly,FRA,Gold
+SWM::Men's 200m Freestyle,ROU,Gold
+SWM::Men's 200m Individual Medley,FRA,Gold
+SWM::Men's 4 x 100m Freestyle Relay,USA,Gold
+SWM::Men's 4 x 100m Medley Relay,CHN,Gold
+SWM::Men's 4 x 200m Freestyle Relay,GBR,Gold
+SWM::Men's 400m Freestyle,GER,Gold
+SWM::Men's 400m Individual Medley,FRA,Gold
+SWM::Men's 50m Freestyle,AUS,Gold
+SWM::Men's 800m Freestyle,IRL,Gold
+SWM::Mixed 4 x 100m Medley Relay,USA,Gold
+SWM::Women's 100m Backstroke,AUS,Gold
+SWM::Women's 100m Breaststroke,RSA,Gold
+SWM::Women's 100m Butterfly,USA,Gold
+SWM::Women's 100m Freestyle,SWE,Gold
+SWM::Women's 1500m Freestyle,USA,Gold
+SWM::Women's 200m Backstroke,AUS,Gold
+SWM::Women's 200m Breaststroke,USA,Gold
+SWM::Women's 200m Butterfly,CAN,Gold
+SWM::Women's 200m Freestyle,AUS,Gold
+SWM::Women's 200m Individual Medley,CAN,Gold
+SWM::Women's 4 x 100m Freestyle Relay,AUS,Gold
+SWM::Women's 4 x 100m Medley Relay,USA,Gold
+SWM::Women's 4 x 200m Freestyle Relay,AUS,Gold
+SWM::Women's 400m Freestyle,AUS,Gold
+SWM::Women's 400m Individual Medley,CAN,Gold
+SWM::Women's 50m Freestyle,SWE,Gold
+SWM::Women's 800m Freestyle,USA,Gold
+TEN::Men's Doubles,AUS,Gold
+TEN::Men's Singles,SRB,Gold
+TEN::Mixed Doubles,CZE,Gold
+TEN::Women's Doubles,ITA,Gold
+TEN::Women's Singles,CHN,Gold
+TKW::Men +80kg,IRI,Gold
+TKW::Men -58kg,KOR,Gold
+TKW::Men -68kg,UZB,Gold
+TKW::Men -80kg,TUN,Gold
+TKW::Women +67kg,FRA,Gold
+TKW::Women -49kg,THA,Gold
+TKW::Women -57kg,KOR,Gold
+TKW::Women -67kg,HUN,Gold
+TRI::Men's Individual,GBR,Gold
+TRI::Mixed Relay,GER,Gold
+TRI::Women's Individual,FRA,Gold
+TTE::Men's Singles,CHN,Gold
+TTE::Men's Team,CHN,Gold
+TTE::Mixed Doubles,CHN,Gold
+TTE::Women's Singles,CHN,Gold
+TTE::Women's Team,CHN,Gold
+VBV::Men,SWE,Gold
+VBV::Women,BRA,Gold
+VVO::Men,FRA,Gold
+VVO::Women,ITA,Gold
+WLF::Men's +102kg,GEO,Gold
+WLF::Men's 102kg,CHN,Gold
+WLF::Men's 61kg,CHN,Gold
+WLF::Men's 73kg,INA,Gold
+WLF::Men's 89kg,BUL,Gold
+WLF::Women's +81kg,CHN,Gold
+WLF::Women's 49kg,CHN,Gold
+WLF::Women's 59kg,CHN,Gold
+WLF::Women's 71kg,USA,Gold
+WLF::Women's 81kg,NOR,Gold
+WPO::Men,SRB,Gold
+WPO::Women,ESP,Gold
+WRE::Men's Freestyle 125kg,GEO,Gold
+WRE::Men's Freestyle 57kg,JPN,Gold
+WRE::Men's Freestyle 65kg,JPN,Gold
+WRE::Men's Freestyle 74kg,UZB,Gold
+WRE::Men's Freestyle 86kg,BUL,Gold
+WRE::Men's Freestyle 97kg,BRN,Gold
+WRE::Men's Greco-Roman 130kg,CUB,Gold
+WRE::Men's Greco-Roman 60kg,JPN,Gold
+WRE::Men's Greco-Roman 67kg,IRI,Gold
+WRE::Men's Greco-Roman 77kg,JPN,Gold
+WRE::Men's Greco-Roman 87kg,BUL,Gold
+WRE::Men's Greco-Roman 97kg,IRI,Gold
+WRE::Women's Freestyle 50kg,USA,Gold
+WRE::Women's Freestyle 53kg,JPN,Gold
+WRE::Women's Freestyle 57kg,JPN,Gold
+WRE::Women's Freestyle 62kg,JPN,Gold
+WRE::Women's Freestyle 68kg,USA,Gold
+WRE::Women's Freestyle 76kg,JPN,Gold
+ARC::Men's Individual,USA,Silver
+ARC::Men's Team,FRA,Silver
+ARC::Mixed Team,GER,Silver
+ARC::Women's Individual,KOR,Silver
+ARC::Women's Team,CHN,Silver
+ATH::4 x 400m Relay Mixed,USA,Silver
+ATH::Marathon Race Walk Relay Mixed,ECU,Silver
+"ATH::Men's 10,000m",ETH,Silver
+ATH::Men's 100m,JAM,Silver
+ATH::Men's 110m Hurdles,USA,Silver
+ATH::Men's 1500m,GBR,Silver
+ATH::Men's 200m,USA,Silver
+ATH::Men's 20km Race Walk,BRA,Silver
+ATH::Men's 3000m Steeplechase,USA,Silver
+ATH::Men's 4 x 100m Relay,RSA,Silver
+ATH::Men's 4 x 400m Relay,BOT,Silver
+ATH::Men's 400m,GBR,Silver
+ATH::Men's 400m Hurdles,NOR,Silver
+ATH::Men's 5000m,KEN,Silver
+ATH::Men's 800m,CAN,Silver
+ATH::Men's Decathlon,GER,Silver
+ATH::Men's Discus Throw,LTU,Silver
+ATH::Men's Hammer Throw,HUN,Silver
+ATH::Men's High Jump,USA,Silver
+ATH::Men's Javelin Throw,IND,Silver
+ATH::Men's Long Jump,JAM,Silver
+ATH::Men's Marathon,BEL,Silver
+ATH::Men's Pole Vault,USA,Silver
+ATH::Men's Shot Put,USA,Silver
+ATH::Men's Triple Jump,POR,Silver
+"ATH::Women's 10,000m",ITA,Silver
+ATH::Women's 100m,USA,Silver
+ATH::Women's 100m Hurdles,FRA,Silver
+ATH::Women's 1500m,AUS,Silver
+ATH::Women's 200m,LCA,Silver
+ATH::Women's 20km Race Walk,ESP,Silver
+ATH::Women's 3000m Steeplechase,UGA,Silver
+ATH::Women's 4 x 100m Relay,GBR,Silver
+ATH::Women's 4 x 400m Relay,NED,Silver
+ATH::Women's 400m,BRN,Silver
+ATH::Women's 400m Hurdles,USA,Silver
+ATH::Women's 5000m,KEN,Silver
+ATH::Women's 800m,ETH,Silver
+ATH::Women's Discus Throw,CHN,Silver
+ATH::Women's Hammer Throw,USA,Silver
+ATH::Women's Heptathlon,GBR,Silver
+ATH::Women's High Jump,AUS,Silver
+ATH::Women's Javelin Throw,RSA,Silver
+ATH::Women's Long Jump,GER,Silver
+ATH::Women's Marathon,ETH,Silver
+ATH::Women's Pole Vault,USA,Silver
+ATH::Women's Shot Put,NZL,Silver
+ATH::Women's Triple Jump,JAM,Silver
+BDM::Men's Doubles,CHN,Silver
+BDM::Men's Singles,THA,Silver
+BDM::Mixed Doubles,KOR,Silver
+BDM::Women's Doubles,CHN,Silver
+BDM::Women's Singles,CHN,Silver
+BK3::Men,FRA,Silver
+BK3::Women,ESP,Silver
+BKB::Men,FRA,Silver
+BKB::Women,FRA,Silver
+BKG::B-Boys,FRA,Silver
+BKG::B-Girls,LTU,Silver
+BMF::Men's Park,GBR,Silver
+BMF::Women's Park,USA,Silver
+BMX::Men,FRA,Silver
+BMX::Women,NED,Silver
+BOX::Men's +92kg,ESP,Silver
+BOX::Men's 51kg,FRA,Silver
+BOX::Men's 57kg,KGZ,Silver
+BOX::Men's 63.5kg,FRA,Silver
+BOX::Men's 71kg,MEX,Silver
+BOX::Men's 80kg,KAZ,Silver
+BOX::Men's 92kg,AZE,Silver
+BOX::Women's 50kg,TUR,Silver
+BOX::Women's 54kg,TUR,Silver
+BOX::Women's 57kg,POL,Silver
+BOX::Women's 60kg,CHN,Silver
+BOX::Women's 66kg,CHN,Silver
+BOX::Women's 75kg,PAN,Silver
+CLB::Men's Boulder & Lead,JPN,Silver
+CLB::Men's Speed,CHN,Silver
+CLB::Women's Boulder & Lead,USA,Silver
+CLB::Women's Speed,CHN,Silver
+CRD::Men's Individual Time Trial,ITA,Silver
+CRD::Men's Road Race,FRA,Silver
+CRD::Women's Individual Time Trial,GBR,Silver
+CRD::Women's Road Race,NED,Silver
+CSL::Men's Canoe Single,GBR,Silver
+CSL::Men's Kayak Cross,GBR,Silver
+CSL::Men's Kayak Single,FRA,Silver
+CSL::Women's Canoe Single,GER,Silver
+CSL::Women's Kayak Cross,FRA,Silver
+CSL::Women's Kayak Single,POL,Silver
+CSP::Men's Canoe Double 500m,ITA,Silver
+CSP::Men's Canoe Single 1000m,BRA,Silver
+CSP::Men's Kayak Double 500m,HUN,Silver
+CSP::Men's Kayak Four 500m,AUS,Silver
+CSP::Men's Kayak Single 1000m,HUN,Silver
+CSP::Women's Canoe Double 500m,UKR,Silver
+CSP::Women's Canoe Single 200m,USA,Silver
+CSP::Women's Kayak Double 500m,HUN,Silver
+CSP::Women's Kayak Four 500m,GER,Silver
+CSP::Women's Kayak Single 500m,HUN,Silver
+CTR::Men's Keirin,AUS,Silver
+CTR::Men's Madison,ITA,Silver
+CTR::Men's Omnium,POR,Silver
+CTR::Men's Sprint,AUS,Silver
+CTR::Men's Team Pursuit,GBR,Silver
+CTR::Men's Team Sprint,GBR,Silver
+CTR::Women's Keirin,NED,Silver
+CTR::Women's Madison,GBR,Silver
+CTR::Women's Omnium,POL,Silver
+CTR::Women's Sprint,GER,Silver
+CTR::Women's Team Pursuit,NZL,Silver
+CTR::Women's Team Sprint,NZL,Silver
+DIV::Men's 10m Platform,JPN,Silver
+DIV::Men's 3m Springboard,CHN,Silver
+DIV::Men's Synchronised 10m Platform,GBR,Silver
+DIV::Men's Synchronised 3m Springboard,MEX,Silver
+DIV::Women's 10m Platform,CHN,Silver
+DIV::Women's 3m Springboard,AUS,Silver
+DIV::Women's Synchronised 10m Platform,PRK,Silver
+DIV::Women's Synchronised 3m Springboard,USA,Silver
+EQD::Dressage Individual,GER,Silver
+EQD::Dressage Team,DEN,Silver
+EQD::Eventing Individual,AUS,Silver
+EQD::Eventing Team,FRA,Silver
+EQD::Jumping Individual,SUI,Silver
+EQD::Jumping Team,USA,Silver
+FBL::Men,FRA,Silver
+FBL::Women,BRA,Silver
+FEN::Men's Foil Individual,ITA,Silver
+FEN::Men's Foil Team,ITA,Silver
+FEN::Men's Sabre Individual,TUN,Silver
+FEN::Men's Sabre Team,HUN,Silver
+FEN::Men's Épée Individual,FRA,Silver
+FEN::Men's Épée Team,JPN,Silver
+FEN::Women's Foil Individual,USA,Silver
+FEN::Women's Foil Team,ITA,Silver
+FEN::Women's Sabre Individual,FRA,Silver
+FEN::Women's Sabre Team,KOR,Silver
+FEN::Women's Épée Individual,FRA,Silver
+FEN::Women's Épée Team,FRA,Silver
+GAR::Men's All-Around,CHN,Silver
+GAR::Men's Floor Exercise,ISR,Silver
+GAR::Men's Horizontal Bar,COL,Silver
+GAR::Men's Parallel Bars,UKR,Silver
+GAR::Men's Pommel Horse,KAZ,Silver
+GAR::Men's Rings,CHN,Silver
+GAR::Men's Team,CHN,Silver
+GAR::Men's Vault,ARM,Silver
+GAR::Women's All-Around,BRA,Silver
+GAR::Women's Balance Beam,CHN,Silver
+GAR::Women's Floor Exercise,USA,Silver
+GAR::Women's Team,ITA,Silver
+GAR::Women's Uneven Bars,CHN,Silver
+GAR::Women's Vault,BRA,Silver
+GLF::Men's Individual Stroke Play,GBR,Silver
+GLF::Women's Individual Stroke Play,GER,Silver
+GRY::Group All-Around,ISR,Silver
+GRY::Individual All-Around,BUL,Silver
+GTR::Men,CHN,Silver
+GTR::Women,AIN,Silver
+HBL::Men,GER,Silver
+HBL::Women,FRA,Silver
+HOC::Men,GER,Silver
+HOC::Women,CHN,Silver
+JUD::Men +100 kg,KOR,Silver
+JUD::Men -100 kg,GEO,Silver
+JUD::Men -60 kg,FRA,Silver
+JUD::Men -66 kg,BRA,Silver
+JUD::Men -73 kg,FRA,Silver
+JUD::Men -81 kg,GEO,Silver
+JUD::Men -90 kg,JPN,Silver
+JUD::Mixed Team,JPN,Silver
+JUD::Women +78 kg,ISR,Silver
+JUD::Women -48 kg,MGL,Silver
+JUD::Women -52 kg,KOS,Silver
+JUD::Women -57 kg,KOR,Silver
+JUD::Women -63 kg,MEX,Silver
+JUD::Women -70 kg,GER,Silver
+JUD::Women -78 kg,ISR,Silver
+MPN::Men's Individual,JPN,Silver
+MPN::Women's Individual,FRA,Silver
+MTB::Men's Cross-country,FRA,Silver
+MTB::Women's Cross-country,USA,Silver
+OWS::Men's 10km,GER,Silver
+OWS::Women's 10km,AUS,Silver
+ROW::Lightweight Men's Double Sculls,ITA,Silver
+ROW::Lightweight Women's Double Sculls,ROU,Silver
+ROW::Men's Double Sculls,NED,Silver
+ROW::Men's Eight,NED,Silver
+ROW::Men's Four,NZL,Silver
+ROW::Men's Pair,GBR,Silver
+ROW::Men's Quadruple Sculls,ITA,Silver
+ROW::Men's Single Sculls,AIN,Silver
+ROW::Women's Double Sculls,ROU,Silver
+ROW::Women's Eight,CAN,Silver
+ROW::Women's Four,GBR,Silver
+ROW::Women's Pair,ROU,Silver
+ROW::Women's Quadruple Sculls,NED,Silver
+ROW::Women's Single Sculls,NZL,Silver
+RU7::Men,FIJ,Silver
+RU7::Women,CAN,Silver
+SAL::Men's Dinghy,CYP,Silver
+SAL::Men's Kite,SLO,Silver
+SAL::Men's Skiff,NZL,Silver
+SAL::Men's Windsurfing,AUS,Silver
+SAL::Mixed Dinghy,JPN,Silver
+SAL::Mixed Multihull,ARG,Silver
+SAL::Women's Dinghy,DEN,Silver
+SAL::Women's Kite,FRA,Silver
+SAL::Women's Skiff,SWE,Silver
+SAL::Women's Windsurfing,ISR,Silver
+SHO::10m Air Pistol Men,ITA,Silver
+SHO::10m Air Pistol Mixed Team,TUR,Silver
+SHO::10m Air Pistol Women,KOR,Silver
+SHO::10m Air Rifle Men,SWE,Silver
+SHO::10m Air Rifle Mixed Team,KOR,Silver
+SHO::10m Air Rifle Women,CHN,Silver
+SHO::25m Pistol Women,FRA,Silver
+SHO::25m Rapid Fire Pistol Men,KOR,Silver
+SHO::50m Rifle 3 Positions Men,UKR,Silver
+SHO::50m Rifle 3 Positions Women,USA,Silver
+SHO::Skeet Men,USA,Silver
+SHO::Skeet Mixed Team,USA,Silver
+SHO::Skeet Women,GBR,Silver
+SHO::Trap Men,CHN,Silver
+SHO::Trap Women,ITA,Silver
+SKB::Men's Park,USA,Silver
+SKB::Men's Street,USA,Silver
+SKB::Women's Park,JPN,Silver
+SKB::Women's Street,JPN,Silver
+SRF::Men,AUS,Silver
+SRF::Women,BRA,Silver
+SWA::Duet,GBR,Silver
+SWA::Team,USA,Silver
+SWM::Men's 100m Backstroke,CHN,Silver
+SWM::Men's 100m Breaststroke,USA,Silver
+SWM::Men's 100m Breaststroke,GBR,Silver
+SWM::Men's 100m Butterfly,CAN,Silver
+SWM::Men's 100m Freestyle,AUS,Silver
+SWM::Men's 1500m Freestyle,ITA,Silver
+SWM::Men's 200m Backstroke,GRE,Silver
+SWM::Men's 200m Breaststroke,AUS,Silver
+SWM::Men's 200m Butterfly,HUN,Silver
+SWM::Men's 200m Freestyle,GBR,Silver
+SWM::Men's 200m Individual Medley,GBR,Silver
+SWM::Men's 4 x 100m Freestyle Relay,AUS,Silver
+SWM::Men's 4 x 100m Medley Relay,USA,Silver
+SWM::Men's 4 x 200m Freestyle Relay,USA,Silver
+SWM::Men's 400m Freestyle,AUS,Silver
+SWM::Men's 400m Individual Medley,JPN,Silver
+SWM::Men's 50m Freestyle,GBR,Silver
+SWM::Men's 800m Freestyle,USA,Silver
+SWM::Mixed 4 x 100m Medley Relay,CHN,Silver
+SWM::Women's 100m Backstroke,USA,Silver
+SWM::Women's 100m Breaststroke,CHN,Silver
+SWM::Women's 100m Butterfly,USA,Silver
+SWM::Women's 100m Freestyle,USA,Silver
+SWM::Women's 1500m Freestyle,FRA,Silver
+SWM::Women's 200m Backstroke,USA,Silver
+SWM::Women's 200m Breaststroke,RSA,Silver
+SWM::Women's 200m Butterfly,USA,Silver
+SWM::Women's 200m Freestyle,AUS,Silver
+SWM::Women's 200m Individual Medley,USA,Silver
+SWM::Women's 4 x 100m Freestyle Relay,USA,Silver
+SWM::Women's 4 x 100m Medley Relay,AUS,Silver
+SWM::Women's 4 x 200m Freestyle Relay,USA,Silver
+SWM::Women's 400m Freestyle,CAN,Silver
+SWM::Women's 400m Individual Medley,USA,Silver
+SWM::Women's 50m Freestyle,AUS,Silver
+SWM::Women's 800m Freestyle,AUS,Silver
+TEN::Men's Doubles,USA,Silver
+TEN::Men's Singles,ESP,Silver
+TEN::Mixed Doubles,CHN,Silver
+TEN::Women's Doubles,AIN,Silver
+TEN::Women's Singles,CRO,Silver
+TKW::Men +80kg,GBR,Silver
+TKW::Men -58kg,AZE,Silver
+TKW::Men -68kg,JOR,Silver
+TKW::Men -80kg,IRI,Silver
+TKW::Women +67kg,UZB,Silver
+TKW::Women -49kg,CHN,Silver
+TKW::Women -57kg,IRI,Silver
+TKW::Women -67kg,SRB,Silver
+TRI::Men's Individual,NZL,Silver
+TRI::Mixed Relay,USA,Silver
+TRI::Women's Individual,SUI,Silver
+TTE::Men's Singles,SWE,Silver
+TTE::Men's Team,SWE,Silver
+TTE::Mixed Doubles,PRK,Silver
+TTE::Women's Singles,CHN,Silver
+TTE::Women's Team,JPN,Silver
+VBV::Men,GER,Silver
+VBV::Women,CAN,Silver
+VVO::Men,POL,Silver
+VVO::Women,USA,Silver
+WLF::Men's +102kg,ARM,Silver
+WLF::Men's 102kg,UZB,Silver
+WLF::Men's 61kg,THA,Silver
+WLF::Men's 73kg,THA,Silver
+WLF::Men's 89kg,COL,Silver
+WLF::Women's +81kg,KOR,Silver
+WLF::Women's 49kg,ROU,Silver
+WLF::Women's 59kg,CAN,Silver
+WLF::Women's 71kg,COL,Silver
+WLF::Women's 81kg,EGY,Silver
+WPO::Men,CRO,Silver
+WPO::Women,AUS,Silver
+WRE::Men's Freestyle 125kg,IRI,Silver
+WRE::Men's Freestyle 57kg,USA,Silver
+WRE::Men's Freestyle 65kg,IRI,Silver
+WRE::Men's Freestyle 74kg,JPN,Silver
+WRE::Men's Freestyle 86kg,IRI,Silver
+WRE::Men's Freestyle 97kg,GEO,Silver
+WRE::Men's Greco-Roman 130kg,CHI,Silver
+WRE::Men's Greco-Roman 60kg,CHN,Silver
+WRE::Men's Greco-Roman 67kg,UKR,Silver
+WRE::Men's Greco-Roman 77kg,KAZ,Silver
+WRE::Men's Greco-Roman 87kg,IRI,Silver
+WRE::Men's Greco-Roman 97kg,ARM,Silver
+WRE::Women's Freestyle 50kg,CUB,Silver
+WRE::Women's Freestyle 53kg,ECU,Silver
+WRE::Women's Freestyle 57kg,MDA,Silver
+WRE::Women's Freestyle 62kg,UKR,Silver
+WRE::Women's Freestyle 68kg,KGZ,Silver
+WRE::Women's Freestyle 76kg,USA,Silver
+ARC::Men's Individual,KOR,Bronze
+ARC::Men's Team,TUR,Bronze
+ARC::Mixed Team,USA,Bronze
+ARC::Women's Individual,FRA,Bronze
+ARC::Women's Team,MEX,Bronze
+ATH::4 x 400m Relay Mixed,GBR,Bronze
+ATH::Marathon Race Walk Relay Mixed,AUS,Bronze
+"ATH::Men's 10,000m",USA,Bronze
+ATH::Men's 100m,USA,Bronze
+ATH::Men's 110m Hurdles,JAM,Bronze
+ATH::Men's 1500m,USA,Bronze
+ATH::Men's 200m,USA,Bronze
+ATH::Men's 20km Race Walk,ESP,Bronze
+ATH::Men's 3000m Steeplechase,KEN,Bronze
+ATH::Men's 4 x 100m Relay,GBR,Bronze
+ATH::Men's 4 x 400m Relay,GBR,Bronze
+ATH::Men's 400m,ZAM,Bronze
+ATH::Men's 400m Hurdles,BRA,Bronze
+ATH::Men's 5000m,USA,Bronze
+ATH::Men's 800m,ALG,Bronze
+ATH::Men's Decathlon,GRN,Bronze
+ATH::Men's Discus Throw,AUS,Bronze
+ATH::Men's Hammer Throw,UKR,Bronze
+ATH::Men's High Jump,QAT,Bronze
+ATH::Men's Javelin Throw,GRN,Bronze
+ATH::Men's Long Jump,ITA,Bronze
+ATH::Men's Marathon,KEN,Bronze
+ATH::Men's Pole Vault,GRE,Bronze
+ATH::Men's Shot Put,JAM,Bronze
+ATH::Men's Triple Jump,ITA,Bronze
+"ATH::Women's 10,000m",NED,Bronze
+ATH::Women's 100m,USA,Bronze
+ATH::Women's 100m Hurdles,PUR,Bronze
+ATH::Women's 1500m,GBR,Bronze
+ATH::Women's 200m,USA,Bronze
+ATH::Women's 20km Race Walk,AUS,Bronze
+ATH::Women's 3000m Steeplechase,KEN,Bronze
+ATH::Women's 4 x 100m Relay,GER,Bronze
+ATH::Women's 4 x 400m Relay,GBR,Bronze
+ATH::Women's 400m,POL,Bronze
+ATH::Women's 400m Hurdles,NED,Bronze
+ATH::Women's 5000m,NED,Bronze
+ATH::Women's 800m,KEN,Bronze
+ATH::Women's Discus Throw,CRO,Bronze
+ATH::Women's Hammer Throw,CHN,Bronze
+ATH::Women's Heptathlon,BEL,Bronze
+ATH::Women's High Jump,AUS,Bronze
+ATH::Women's High Jump,UKR,Bronze
+ATH::Women's Javelin Throw,CZE,Bronze
+ATH::Women's Long Jump,USA,Bronze
+ATH::Women's Marathon,KEN,Bronze
+ATH::Women's Pole Vault,CAN,Bronze
+ATH::Women's Shot Put,CHN,Bronze
+ATH::Women's Triple Jump,USA,Bronze
+BDM::Men's Doubles,MAS,Bronze
+BDM::Men's Singles,MAS,Bronze
+BDM::Mixed Doubles,JPN,Bronze
+BDM::Women's Doubles,JPN,Bronze
+BDM::Women's Singles,INA,Bronze
+BK3::Men,LTU,Bronze
+BK3::Women,USA,Bronze
+BKB::Men,SRB,Bronze
+BKB::Women,AUS,Bronze
+BKG::B-Boys,USA,Bronze
+BKG::B-Girls,CHN,Bronze
+BMF::Men's Park,FRA,Bronze
+BMF::Women's Park,AUS,Bronze
+BMX::Men,FRA,Bronze
+BMX::Women,SUI,Bronze
+BOX::Men's +92kg,GER,Bronze
+BOX::Men's +92kg,FRA,Bronze
+BOX::Men's 51kg,DOM,Bronze
+BOX::Men's 51kg,CPV,Bronze
+BOX::Men's 57kg,AUS,Bronze
+BOX::Men's 57kg,BUL,Bronze
+BOX::Men's 63.5kg,CAN,Bronze
+BOX::Men's 63.5kg,GEO,Bronze
+BOX::Men's 71kg,USA,Bronze
+BOX::Men's 71kg,GBR,Bronze
+BOX::Men's 80kg,DOM,Bronze
+BOX::Men's 80kg,CUB,Bronze
+BOX::Men's 92kg,ESP,Bronze
+BOX::Men's 92kg,TJK,Bronze
+BOX::Women's 50kg,KAZ,Bronze
+BOX::Women's 50kg,PHI,Bronze
+BOX::Women's 54kg,KOR,Bronze
+BOX::Women's 54kg,PRK,Bronze
+BOX::Women's 57kg,PHI,Bronze
+BOX::Women's 57kg,TUR,Bronze
+BOX::Women's 60kg,TPE,Bronze
+BOX::Women's 60kg,BRA,Bronze
+BOX::Women's 66kg,THA,Bronze
+BOX::Women's 66kg,TPE,Bronze
+BOX::Women's 75kg,EOR,Bronze
+BOX::Women's 75kg,AUS,Bronze
+CLB::Men's Boulder & Lead,AUT,Bronze
+CLB::Men's Speed,USA,Bronze
+CLB::Women's Boulder & Lead,AUT,Bronze
+CLB::Women's Speed,POL,Bronze
+CRD::Men's Individual Time Trial,BEL,Bronze
+CRD::Men's Road Race,FRA,Bronze
+CRD::Women's Individual Time Trial,USA,Bronze
+CRD::Women's Road Race,BEL,Bronze
+CSL::Men's Canoe Single,SVK,Bronze
+CSL::Men's Kayak Cross,GER,Bronze
+CSL::Men's Kayak Single,ESP,Bronze
+CSL::Women's Canoe Single,USA,Bronze
+CSL::Women's Kayak Cross,GBR,Bronze
+CSL::Women's Kayak Single,GBR,Bronze
+CSP::Men's Canoe Double 500m,ESP,Bronze
+CSP::Men's Canoe Single 1000m,MDA,Bronze
+CSP::Men's Kayak Double 500m,AUS,Bronze
+CSP::Men's Kayak Four 500m,ESP,Bronze
+CSP::Men's Kayak Single 1000m,HUN,Bronze
+CSP::Women's Canoe Double 500m,CAN,Bronze
+CSP::Women's Canoe Single 200m,CUB,Bronze
+CSP::Women's Kayak Double 500m,HUN,Bronze
+CSP::Women's Kayak Double 500m,GER,Bronze
+CSP::Women's Kayak Four 500m,HUN,Bronze
+CSP::Women's Kayak Single 500m,DEN,Bronze
+CTR::Men's Keirin,AUS,Bronze
+CTR::Men's Madison,DEN,Bronze
+CTR::Men's Omnium,BEL,Bronze
+CTR::Men's Sprint,GBR,Bronze
+CTR::Men's Team Pursuit,ITA,Bronze
+CTR::Men's Team Sprint,AUS,Bronze
+CTR::Women's Keirin,GBR,Bronze
+CTR::Women's Madison,NED,Bronze
+CTR::Women's Omnium,NZL,Bronze
+CTR::Women's Sprint,GBR,Bronze
+CTR::Women's Team Pursuit,GBR,Bronze
+CTR::Women's Team Sprint,GER,Bronze
+DIV::Men's 10m Platform,GBR,Bronze
+DIV::Men's 3m Springboard,MEX,Bronze
+DIV::Men's Synchronised 10m Platform,CAN,Bronze
+DIV::Men's Synchronised 3m Springboard,GBR,Bronze
+DIV::Women's 10m Platform,PRK,Bronze
+DIV::Women's 3m Springboard,CHN,Bronze
+DIV::Women's Synchronised 10m Platform,GBR,Bronze
+DIV::Women's Synchronised 3m Springboard,GBR,Bronze
+EQD::Dressage Individual,GBR,Bronze
+EQD::Dressage Team,GBR,Bronze
+EQD::Eventing Individual,GBR,Bronze
+EQD::Eventing Team,JPN,Bronze
+EQD::Jumping Individual,NED,Bronze
+EQD::Jumping Team,FRA,Bronze
+FBL::Men,MAR,Bronze
+FBL::Women,GER,Bronze
+FEN::Men's Foil Individual,USA,Bronze
+FEN::Men's Foil Team,FRA,Bronze
+FEN::Men's Sabre Individual,ITA,Bronze
+FEN::Men's Sabre Team,FRA,Bronze
+FEN::Men's Épée Individual,EGY,Bronze
+FEN::Men's Épée Team,CZE,Bronze
+FEN::Women's Foil Individual,CAN,Bronze
+FEN::Women's Foil Team,JPN,Bronze
+FEN::Women's Sabre Individual,UKR,Bronze
+FEN::Women's Sabre Team,JPN,Bronze
+FEN::Women's Épée Individual,HUN,Bronze
+FEN::Women's Épée Team,POL,Bronze
+GAR::Men's All-Around,CHN,Bronze
+GAR::Men's Floor Exercise,GBR,Bronze
+GAR::Men's Horizontal Bar,TPE,Bronze
+GAR::Men's Horizontal Bar,CHN,Bronze
+GAR::Men's Parallel Bars,JPN,Bronze
+GAR::Men's Pommel Horse,USA,Bronze
+GAR::Men's Rings,GRE,Bronze
+GAR::Men's Team,USA,Bronze
+GAR::Men's Vault,GBR,Bronze
+GAR::Women's All-Around,USA,Bronze
+GAR::Women's Balance Beam,ITA,Bronze
+GAR::Women's Floor Exercise,ROU,Bronze
+GAR::Women's Team,BRA,Bronze
+GAR::Women's Uneven Bars,USA,Bronze
+GAR::Women's Vault,USA,Bronze
+GLF::Men's Individual Stroke Play,JPN,Bronze
+GLF::Women's Individual Stroke Play,CHN,Bronze
+GRY::Group All-Around,ITA,Bronze
+GRY::Individual All-Around,ITA,Bronze
+GTR::Men,CHN,Bronze
+GTR::Women,CAN,Bronze
+HBL::Men,ESP,Bronze
+HBL::Women,DEN,Bronze
+HOC::Men,IND,Bronze
+HOC::Women,ARG,Bronze
+JUD::Men +100 kg,UZB,Bronze
+JUD::Men +100 kg,TJK,Bronze
+JUD::Men -100 kg,UZB,Bronze
+JUD::Men -100 kg,ISR,Bronze
+JUD::Men -60 kg,JPN,Bronze
+JUD::Men -60 kg,ESP,Bronze
+JUD::Men -66 kg,MDA,Bronze
+JUD::Men -66 kg,KAZ,Bronze
+JUD::Men -73 kg,JPN,Bronze
+JUD::Men -73 kg,MDA,Bronze
+JUD::Men -81 kg,KOR,Bronze
+JUD::Men -81 kg,TJK,Bronze
+JUD::Men -90 kg,FRA,Bronze
+JUD::Men -90 kg,GRE,Bronze
+JUD::Mixed Team,KOR,Bronze
+JUD::Mixed Team,BRA,Bronze
+JUD::Women +78 kg,KOR,Bronze
+JUD::Women +78 kg,FRA,Bronze
+JUD::Women -48 kg,FRA,Bronze
+JUD::Women -48 kg,SWE,Bronze
+JUD::Women -52 kg,BRA,Bronze
+JUD::Women -52 kg,FRA,Bronze
+JUD::Women -57 kg,FRA,Bronze
+JUD::Women -57 kg,JPN,Bronze
+JUD::Women -63 kg,FRA,Bronze
+JUD::Women -63 kg,KOS,Bronze
+JUD::Women -70 kg,AUT,Bronze
+JUD::Women -70 kg,BEL,Bronze
+JUD::Women -78 kg,POR,Bronze
+JUD::Women -78 kg,CHN,Bronze
+MPN::Men's Individual,ITA,Bronze
+MPN::Women's Individual,KOR,Bronze
+MTB::Men's Cross-country,RSA,Bronze
+MTB::Women's Cross-country,SWE,Bronze
+OWS::Men's 10km,HUN,Bronze
+OWS::Women's 10km,ITA,Bronze
+ROW::Lightweight Men's Double Sculls,GRE,Bronze
+ROW::Lightweight Women's Double Sculls,GRE,Bronze
+ROW::Men's Double Sculls,IRL,Bronze
+ROW::Men's Eight,USA,Bronze
+ROW::Men's Four,GBR,Bronze
+ROW::Men's Pair,SUI,Bronze
+ROW::Men's Quadruple Sculls,POL,Bronze
+ROW::Men's Single Sculls,NED,Bronze
+ROW::Women's Double Sculls,GBR,Bronze
+ROW::Women's Eight,GBR,Bronze
+ROW::Women's Four,NZL,Bronze
+ROW::Women's Pair,AUS,Bronze
+ROW::Women's Quadruple Sculls,GER,Bronze
+ROW::Women's Single Sculls,LTU,Bronze
+RU7::Men,RSA,Bronze
+RU7::Women,USA,Bronze
+SAL::Men's Dinghy,PER,Bronze
+SAL::Men's Kite,SGP,Bronze
+SAL::Men's Skiff,USA,Bronze
+SAL::Men's Windsurfing,NED,Bronze
+SAL::Mixed Dinghy,SWE,Bronze
+SAL::Mixed Multihull,NZL,Bronze
+SAL::Women's Dinghy,NOR,Bronze
+SAL::Women's Kite,NED,Bronze
+SAL::Women's Skiff,FRA,Bronze
+SAL::Women's Windsurfing,GBR,Bronze
+SHO::10m Air Pistol Men,ITA,Bronze
+SHO::10m Air Pistol Mixed Team,IND,Bronze
+SHO::10m Air Pistol Women,IND,Bronze
+SHO::10m Air Rifle Men,CRO,Bronze
+SHO::10m Air Rifle Mixed Team,KAZ,Bronze
+SHO::10m Air Rifle Women,SUI,Bronze
+SHO::25m Pistol Women,HUN,Bronze
+SHO::25m Rapid Fire Pistol Men,CHN,Bronze
+SHO::50m Rifle 3 Positions Men,IND,Bronze
+SHO::50m Rifle 3 Positions Women,CHN,Bronze
+SHO::Skeet Men,TPE,Bronze
+SHO::Skeet Mixed Team,CHN,Bronze
+SHO::Skeet Women,USA,Bronze
+SHO::Trap Men,GUA,Bronze
+SHO::Trap Women,AUS,Bronze
+SKB::Men's Park,BRA,Bronze
+SKB::Men's Street,USA,Bronze
+SKB::Women's Park,GBR,Bronze
+SKB::Women's Street,BRA,Bronze
+SRF::Men,BRA,Bronze
+SRF::Women,FRA,Bronze
+SWA::Duet,NED,Bronze
+SWA::Team,ESP,Bronze
+SWM::Men's 100m Backstroke,USA,Bronze
+SWM::Men's 100m Butterfly,CAN,Bronze
+SWM::Men's 100m Freestyle,ROU,Bronze
+SWM::Men's 1500m Freestyle,IRL,Bronze
+SWM::Men's 200m Backstroke,SUI,Bronze
+SWM::Men's 200m Breaststroke,NED,Bronze
+SWM::Men's 200m Butterfly,CAN,Bronze
+SWM::Men's 200m Freestyle,USA,Bronze
+SWM::Men's 200m Individual Medley,CHN,Bronze
+SWM::Men's 4 x 100m Freestyle Relay,ITA,Bronze
+SWM::Men's 4 x 100m Medley Relay,FRA,Bronze
+SWM::Men's 4 x 200m Freestyle Relay,AUS,Bronze
+SWM::Men's 400m Freestyle,KOR,Bronze
+SWM::Men's 400m Individual Medley,USA,Bronze
+SWM::Men's 50m Freestyle,FRA,Bronze
+SWM::Men's 800m Freestyle,ITA,Bronze
+SWM::Mixed 4 x 100m Medley Relay,AUS,Bronze
+SWM::Women's 100m Backstroke,USA,Bronze
+SWM::Women's 100m Breaststroke,IRL,Bronze
+SWM::Women's 100m Butterfly,CHN,Bronze
+SWM::Women's 100m Freestyle,HKG,Bronze
+SWM::Women's 1500m Freestyle,GER,Bronze
+SWM::Women's 200m Backstroke,CAN,Bronze
+SWM::Women's 200m Breaststroke,NED,Bronze
+SWM::Women's 200m Butterfly,CHN,Bronze
+SWM::Women's 200m Freestyle,HKG,Bronze
+SWM::Women's 200m Individual Medley,AUS,Bronze
+SWM::Women's 4 x 100m Freestyle Relay,CHN,Bronze
+SWM::Women's 4 x 100m Medley Relay,CHN,Bronze
+SWM::Women's 4 x 200m Freestyle Relay,CHN,Bronze
+SWM::Women's 400m Freestyle,USA,Bronze
+SWM::Women's 400m Individual Medley,USA,Bronze
+SWM::Women's 50m Freestyle,CHN,Bronze
+SWM::Women's 800m Freestyle,USA,Bronze
+TEN::Men's Doubles,USA,Bronze
+TEN::Men's Singles,ITA,Bronze
+TEN::Mixed Doubles,CAN,Bronze
+TEN::Women's Doubles,ESP,Bronze
+TEN::Women's Singles,POL,Bronze
+TKW::Men +80kg,CUB,Bronze
+TKW::Men +80kg,CIV,Bronze
+TKW::Men -58kg,FRA,Bronze
+TKW::Men -58kg,TUN,Bronze
+TKW::Men -68kg,BRA,Bronze
+TKW::Men -68kg,CHN,Bronze
+TKW::Men -80kg,ITA,Bronze
+TKW::Men -80kg,DEN,Bronze
+TKW::Women +67kg,TUR,Bronze
+TKW::Women +67kg,KOR,Bronze
+TKW::Women -49kg,CRO,Bronze
+TKW::Women -49kg,IRI,Bronze
+TKW::Women -57kg,BUL,Bronze
+TKW::Women -57kg,CAN,Bronze
+TKW::Women -67kg,USA,Bronze
+TKW::Women -67kg,BEL,Bronze
+TRI::Men's Individual,FRA,Bronze
+TRI::Mixed Relay,GBR,Bronze
+TRI::Women's Individual,GBR,Bronze
+TTE::Men's Singles,FRA,Bronze
+TTE::Men's Team,FRA,Bronze
+TTE::Mixed Doubles,KOR,Bronze
+TTE::Women's Singles,JPN,Bronze
+TTE::Women's Team,KOR,Bronze
+VBV::Men,NOR,Bronze
+VBV::Women,SUI,Bronze
+VVO::Men,USA,Bronze
+VVO::Women,BRA,Bronze
+WLF::Men's +102kg,BRN,Bronze
+WLF::Men's 102kg,AIN,Bronze
+WLF::Men's 61kg,USA,Bronze
+WLF::Men's 73kg,BUL,Bronze
+WLF::Men's 89kg,ITA,Bronze
+WLF::Women's +81kg,GBR,Bronze
+WLF::Women's 49kg,THA,Bronze
+WLF::Women's 59kg,TPE,Bronze
+WLF::Women's 71kg,ECU,Bronze
+WLF::Women's 81kg,ECU,Bronze
+WPO::Men,USA,Bronze
+WPO::Women,NED,Bronze
+WRE::Men's Freestyle 125kg,AZE,Bronze
+WRE::Men's Freestyle 125kg,TUR,Bronze
+WRE::Men's Freestyle 57kg,UZB,Bronze
+WRE::Men's Freestyle 57kg,IND,Bronze
+WRE::Men's Freestyle 65kg,ALB,Bronze
+WRE::Men's Freestyle 65kg,PUR,Bronze
+WRE::Men's Freestyle 74kg,USA,Bronze
+WRE::Men's Freestyle 74kg,ALB,Bronze
+WRE::Men's Freestyle 86kg,GRE,Bronze
+WRE::Men's Freestyle 86kg,USA,Bronze
+WRE::Men's Freestyle 97kg,IRI,Bronze
+WRE::Men's Freestyle 97kg,AZE,Bronze
+WRE::Men's Greco-Roman 130kg,CHN,Bronze
+WRE::Men's Greco-Roman 130kg,IRI,Bronze
+WRE::Men's Greco-Roman 60kg,PRK,Bronze
+WRE::Men's Greco-Roman 60kg,KGZ,Bronze
+WRE::Men's Greco-Roman 67kg,AZE,Bronze
+WRE::Men's Greco-Roman 67kg,CUB,Bronze
+WRE::Men's Greco-Roman 77kg,ARM,Bronze
+WRE::Men's Greco-Roman 77kg,KGZ,Bronze
+WRE::Men's Greco-Roman 87kg,UKR,Bronze
+WRE::Men's Greco-Roman 87kg,DEN,Bronze
+WRE::Men's Greco-Roman 97kg,KGZ,Bronze
+WRE::Men's Greco-Roman 97kg,CUB,Bronze
+WRE::Women's Freestyle 50kg,CHN,Bronze
+WRE::Women's Freestyle 50kg,JPN,Bronze
+WRE::Women's Freestyle 53kg,PRK,Bronze
+WRE::Women's Freestyle 53kg,CHN,Bronze
+WRE::Women's Freestyle 57kg,USA,Bronze
+WRE::Women's Freestyle 57kg,CHN,Bronze
+WRE::Women's Freestyle 62kg,KGZ,Bronze
+WRE::Women's Freestyle 62kg,NOR,Bronze
+WRE::Women's Freestyle 68kg,JPN,Bronze
+WRE::Women's Freestyle 68kg,TUR,Bronze
+WRE::Women's Freestyle 76kg,CUB,Bronze
+WRE::Women's Freestyle 76kg,COL,Bronze

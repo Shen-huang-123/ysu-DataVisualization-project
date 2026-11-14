@@ -1,0 +1,74 @@
+[
+  {
+    "label": "姓名截断记录一",
+    "raw_name": "Michael Ii",
+    "value": 23,
+    "detail": "2004—2016 · 4 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "疑似同名混合记录一",
+    "raw_name": "Charles Jr.",
+    "value": 10,
+    "detail": "1908—1992 · 7 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "帕沃·努尔米",
+    "raw_name": "Paavo Nurmi",
+    "value": 9,
+    "detail": "1920—1928 · 3 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "姓名残缺记录二",
+    "raw_name": "Larysa (diriy-)",
+    "value": 9,
+    "detail": "1956—1964 · 3 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "马克·施皮茨",
+    "raw_name": "Mark Spitz",
+    "value": 9,
+    "detail": "1968—1972 · 2 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "疑似同名混合记录二",
+    "raw_name": "John Jr.",
+    "value": 9,
+    "detail": "1900—1952 · 7 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "凯莱布·德雷塞尔",
+    "raw_name": "Caeleb Dressel",
+    "value": 9,
+    "detail": "2016—2024 · 3 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "弗雷德里克·刘易斯",
+    "raw_name": "Frederick Lewis",
+    "value": 9,
+    "detail": "1984—1996 · 4 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "马特·比昂迪",
+    "raw_name": "Matthew Biondi",
+    "value": 8,
+    "detail": "1984—1992 · 3 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "雷·尤里",
+    "raw_name": "Raymond Ewry",
+    "value": 8,
+    "detail": "1900—1908 · 3 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "尤塞恩·博尔特",
+    "raw_name": "Usain Bolt",
+    "value": 8,
+    "detail": "2008—2016 · 3 届；原始姓名见分析数据，身份待核验"
+  },
+  {
+    "label": "加藤泽男",
+    "raw_name": "Sawao Kato",
+    "value": 8,
+    "detail": "1968—1976 · 3 届；原始姓名见分析数据，身份待核验"
+  }
+]

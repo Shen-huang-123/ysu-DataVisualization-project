@@ -1,0 +1,86 @@
+[
+  {
+    "label": "板球",
+    "raw_sport": "Cricket",
+    "value": 1,
+    "detail": "1900—1900 年"
+  },
+  {
+    "label": "槌球",
+    "raw_sport": "Croquet",
+    "value": 1,
+    "detail": "1900—1900 年"
+  },
+  {
+    "label": "美式槌球",
+    "raw_sport": "Roque",
+    "value": 1,
+    "detail": "1904—1904 年"
+  },
+  {
+    "label": "长曲棍球",
+    "raw_sport": "Lacrosse",
+    "value": 2,
+    "detail": "1904—1908 年"
+  },
+  {
+    "label": "室内网球",
+    "raw_sport": "Jeu De Paume",
+    "value": 1,
+    "detail": "1908—1908 年"
+  },
+  {
+    "label": "摩托艇",
+    "raw_sport": "Motorboating",
+    "value": 1,
+    "detail": "1908—1908 年"
+  },
+  {
+    "label": "墙网球",
+    "raw_sport": "Racquets",
+    "value": 1,
+    "detail": "1908—1908 年"
+  },
+  {
+    "label": "拔河",
+    "raw_sport": "Tug-Of-War",
+    "value": 5,
+    "detail": "1900—1920 年"
+  },
+  {
+    "label": "花样滑冰",
+    "raw_sport": "Figure Skating",
+    "value": 2,
+    "detail": "1908—1920 年"
+  },
+  {
+    "label": "冰球",
+    "raw_sport": "Ice Hockey",
+    "value": 1,
+    "detail": "1920—1920 年"
+  },
+  {
+    "label": "马球",
+    "raw_sport": "Polo",
+    "value": 5,
+    "detail": "1900—1936 年"
+  },
+  {
+    "label": "登山",
+    "raw_sport": "Alpinism",
+    "value": 2,
+    "detail": "1932—1936 年"
+  },
+  {
+    "label": "航空竞赛",
+    "raw_sport": "Aeronautics",
+    "value": 1,
+    "detail": "1936—1936 年"
+  },
+  {
+    "label": "艺术竞赛",
+    "raw_sport": "Art Competitions",
+    "value": 7,
+    "detail": "1912—1948 年"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "source_url": "https://raw.githubusercontent.com/numbats/olympics/ab2d03770c8b435fa7e452a5a1ddfc933433299c/data/summer_games.rda",
+  "source_project": "https://github.com/numbats/olympics",
+  "source_method": "https://numbats.github.io/olympics/reference/scrape.html",
+  "commit": "ab2d03770c8b435fa7e452a5a1ddfc933433299c",
+  "archive_last_commit_utc": "2023-02-25T02:06:34Z",
+  "sha256": "d31351e057198744b40754e63e9189a86487424c55766751f2a09f0ee3f8b3eb",
+  "scope": "Olympics.com 2023 third-party scrape, not 2026 live official results",
+  "matching": "sport-specific one-to-one assignment by medal-country sets, name similarity and gender; nonmatches not forced to verified"
+}

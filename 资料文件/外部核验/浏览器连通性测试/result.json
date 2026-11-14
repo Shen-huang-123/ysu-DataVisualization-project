@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://www.olympics.com/en/olympic-games/london-2012/results",
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.olympics.com/en/olympic-games/london-2012/results\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "url": "https://olympics.com/en/olympic-games/london-2012/results",
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://olympics.com/en/olympic-games/london-2012/results\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "url": "https://www.olympics.com/ioc/news/ioc-executive-board-approves-olympic-medal-diploma-and-medallist-pin-reallocation-for-london-2012-olympic-games",
+    "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.olympics.com/ioc/news/ioc-executive-board-approves-olympic-medal-diploma-and-medallist-pin-reallocation-for-london-2012-olympic-games\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "url": "https://worldathletics.org/competitions/olympic-games/the-xxx-olympic-games-6999193/results/women/800-metres/final/result",
+    "error": "Locator.inner_text: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator(\"body\")\n"
+  }
+]

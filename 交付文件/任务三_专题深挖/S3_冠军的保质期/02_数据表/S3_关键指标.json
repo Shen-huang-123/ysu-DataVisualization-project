@@ -1,0 +1,26 @@
+{
+  "transitions": 4511,
+  "defense_rate": 0.2954998891598315,
+  "events": 615,
+  "longest_editions": 16,
+  "era": [
+    {
+      "era": "1896–1948",
+      "transitions": 874,
+      "defenses": 311,
+      "defense_rate": 0.35583524027459956
+    },
+    {
+      "era": "1952–1988",
+      "transitions": 1710,
+      "defenses": 489,
+      "defense_rate": 0.28596491228070176
+    },
+    {
+      "era": "1992–2016",
+      "transitions": 1927,
+      "defenses": 533,
+      "defense_rate": 0.2765957446808511
+    }
+  ]
+}

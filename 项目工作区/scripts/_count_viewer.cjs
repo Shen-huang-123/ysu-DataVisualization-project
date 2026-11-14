@@ -1,0 +1,2 @@
+const {chromium}=require('../qa_tools/node_modules/playwright-core');const {pathToFileURL}=require('url');const path=require('path');
+(async()=>{const b=await chromium.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});for(const file of ['交付文件/任务二_百年全景/05_交互总览/index.html','交付文件/任务三_专题深挖/S2_口径的魔力/06_滚动叙事专题/index.html','交付文件/任务四_开放创作/03_数据新闻/index.html']){const p=await b.newPage();await p.goto(pathToFileURL(path.resolve(file)).href);console.log(file,await p.locator('.ox-zoomable').count());await p.close()}await b.close()})()

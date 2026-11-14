@@ -1,0 +1,20 @@
+字段,来源,含义,使用规则
+player_id,原始,运动员编号,不作为可靠独立运动员ID
+Name,原始,运动员姓名,不直接用于跨届实体识别
+Sex,原始,性别M或F,用于记录层面的性别分析
+Team,原始,队伍名称,不作为国家归属主字段
+NOC,原始,奥委会三字码,国家与地区分析首选字段
+Year,原始,奥运届次年份,东京保留2020
+Season,原始,赛季,恒为Summer
+City,原始,主办城市,1956保留Melbourne与Stockholm
+Sport,原始,体育大类原值,保留以便追溯
+Event,原始,小项名称,2020年后不可直接据此还原真实小项
+Medal,原始,奖牌类型,No medal表示未获奖
+source_row,新增,原CSV行号含表头,定位原始记录
+sport_family,新增,统一运动家族,用于跨届项目比较
+sport_resolution,新增,项目归一方式,标记直接映射或按Event消解
+event_status,新增,Event质量状态,区分上下文依赖与具体但未核验
+include_main,新增,主分析纳入标记,1906为False其余为True
+duplicate_candidate,新增,重复候选组全部记录,只用于诊断
+duplicate_excess,新增,保留首条后的重复余量,仅用于敏感性分析
+is_medal,新增,是否奖牌记录,Medal不等于No medal

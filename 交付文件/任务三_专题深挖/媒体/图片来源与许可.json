@@ -1,0 +1,112 @@
+[
+  {
+    "key": "host",
+    "file": "host.jpg",
+    "title": "Birdsclosing.jpg",
+    "author": "Jmex60",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Birdsclosing.jpg",
+    "width": 1500,
+    "height": 1004
+  },
+  {
+    "key": "lens",
+    "file": "lens.jpg",
+    "title": "Olympic Games Paris.jpg",
+    "author": "Enveryildrm",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Olympic_Games_Paris.jpg",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "key": "archive",
+    "file": "archive.jpg",
+    "title": "People on opening ceremony on 1980 Summer Olympics.jpg",
+    "author": "Главархив Москвы",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:People_on_opening_ceremony_on_1980_Summer_Olympics.jpg",
+    "width": 1600,
+    "height": 1049
+  },
+  {
+    "key": "islands",
+    "file": "islands.jpg",
+    "title": "Torcida fijiana em partida de rugby sevens nos Jogos Rio 2016.jpg",
+    "author": "Gabriel Fialho/ Brasil2016.gov.br",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Torcida_fijiana_em_partida_de_rugby_sevens_nos_Jogos_Rio_2016.jpg",
+    "width": 1130,
+    "height": 753
+  },
+  {
+    "key": "growth",
+    "file": "growth.jpg",
+    "title": "Athens 1896-Pan-Athenian stadium.jpg",
+    "author": "未知",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Athens_1896-Pan-Athenian_stadium.jpg",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "key": "portrait",
+    "file": "portrait.jpg",
+    "title": "Paavo Nurmi (Paris 1924).jpg",
+    "author": "未知",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paavo_Nurmi_(Paris_1924).jpg",
+    "width": 400,
+    "height": 600
+  },
+  {
+    "key": "dynasty",
+    "file": "dynasty.jpg",
+    "title": "1924 Summer Olympics Cross Country Nurmi.jpg",
+    "author": "Agence Rol",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1924_Summer_Olympics_Cross_Country_Nurmi.jpg",
+    "width": 1600,
+    "height": 1109
+  },
+  {
+    "key": "women",
+    "file": "women.jpg",
+    "title": "Tennis women 1900.jpg",
+    "author": "未知",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tennis_women_1900.jpg",
+    "width": 1478,
+    "height": 1654
+  },
+  {
+    "key": "museum",
+    "file": "museum.jpg",
+    "title": "Polo 1900.jpg",
+    "author": "",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Polo_1900.jpg",
+    "width": 290,
+    "height": 430
+  },
+  {
+    "key": "sports",
+    "file": "sports.jpg",
+    "title": "2024 Swimming at the 2024 Summer Olympics - 2024-07-27 - 1.jpg",
+    "author": "DarDarCH",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Swimming_at_the_2024_Summer_Olympics_-_2024-07-27_-_1.jpg",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "key": "la",
+    "file": "la.jpg",
+    "title": "Olympic Torch Tower of the Los Angeles Coliseum.jpg",
+    "author": "unknown, U.S. Air Force",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Olympic_Torch_Tower_of_the_Los_Angeles_Coliseum.jpg",
+    "width": 1600,
+    "height": 1093
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "控制权转换非空",
+      "passed": true,
+      "detail": 4511
+    },
+    {
+      "name": "卫冕率在合理区间",
+      "passed": true,
+      "detail": 0.2954998891598315
+    },
+    {
+      "name": "严格NOC王朝字段完整",
+      "passed": true,
+      "detail": 3833
+    },
+    {
+      "name": "核心图表齐全",
+      "passed": true,
+      "detail": 3
+    }
+  ]
+}

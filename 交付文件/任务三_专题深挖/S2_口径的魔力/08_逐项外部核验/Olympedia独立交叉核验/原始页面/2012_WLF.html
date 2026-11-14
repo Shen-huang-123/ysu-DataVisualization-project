@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Olympedia – Weightlifting at the 2012 Summer Olympics</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="tqZIn3OJOfKxKfqRWz8dBqDJ-Wi8D-6UU9-W3Ak2aPLw0noVrcUSpA6RIMDchvO9DVl1LFzfc9Xx0JVufc0nog" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="EN" http-equiv="content-language">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="/icon.png" rel="icon" type="image/png">
+<link rel="stylesheet" href="/assets/bootstrap.min-03423cd68c2bff228a73520e849f02d78d1236de443661f3f5dcd658dd9cbc46.css" media="all" />
+<link rel="stylesheet" href="/assets/bootstrap-sortable-515ee97c8b372ddae7796a36ec518e0785e0e3d3d266162ba2c44a3623540f7b.css" media="all" />
+<link rel="stylesheet" href="/assets/jquery-ui-1.11.4.min-35aebb4aa1818460c44d32da4f18101d34f332741a347654907911af0d145e88.css" media="all" />
+<link rel="stylesheet" href="/assets/lightbox-3afc0e08d652072ea73df78af7d454f122da80b9124d782fb609a7b4b05e0197.css" media="screen" />
+<link rel="stylesheet" href="/assets/application-a970a77a6d1f4f82ba987b68296f2119601e3438cbdec42f82618fb568bf3dba.css" media="all" data-turbolinks-track="true" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.0.0/ol.css" media="screen" />
+<script src="https://cdn.jsdelivr.net/npm/ol@v10.0.0/dist/ol.js"></script>
+<script src="/assets/omm-34ac1a3b4884461c87bafa8ec1c1c21bcc434c53c51d3b1f82d1dff57ad3856b.js"></script>
+<script src="/assets/jquery-1.11.2.min-224c81cc15edb399b9465fc371dffb02e6fe4c043716571b49b1a7b2bcc09ef1.js"></script>
+<script src="/assets/jquery-ui-1.11.4.min-96b45d6922993b35cca7b07ede8f0bf64353715e3729b9019eb2e46a8737dac8.js"></script>
+<script src="/assets/jquery-ujs-f09ebd8e2bbe3d80718935c572e83dbb10f72e7a2aec58b193ee1e2e2e8e373a.js"></script>
+<script src="/assets/bootstrap.min-2b9640a7175349197c70d8b752f484837518c6cbdce416dead60cdeebd875294.js"></script>
+<script src="/assets/moment-93e00e6729db142363a35d17328084c3bd3d62304ecd27f91e9c954550daa1ce.js"></script>
+<script src="/assets/bootstrap-sortable-e790a4de58d52fde6861014956b371ac860d665b62c23af929a33a9f39e84d04.js"></script>
+
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar-header">
+<div class="button navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar">
+<span class="icon-bar">
+<span class="icon-bar"></span>
+</span>
+</span>
+</div>
+<a class="navbar-brand" href="/" style="padding-top: 10px">
+<img height="30px" src="/images/logo.png" width="30px">
+</a>
+<a class="navbar-brand" href="/">Olympedia</a>
+</div>
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Athletes
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/athletes/advanced_search">Advanced search</a></li>
+<li><a href="/horses">Horse search</a></li>
+<li><a href="/family_relations">Related Olympians</a></li>
+<li><a href="/counts">Counts</a></li>
+<li><a href="/athletes/doubles">Doubles</a></li>
+<li><a href="/athletes/lists">Lists</a></li>
+<li><a href="/athletes/country_representation">Country representation</a></li>
+<li class="divider"></li>
+<li><a href="/athletes">Athletes</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Countries
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/countries/head_to_head">Head-to-head</a></li>
+<li><a href="/countries/best_results">Best results</a></li>
+<li><a href="/countries/comparison">Results comparison</a></li>
+<li class="divider"></li>
+<li><a href="/countries">Countries</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Games
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/editions">Games</a></li>
+<li><a href="/editions/medals">Medals</a></li>
+<li><a href="/editions/results">Results</a></li>
+<li><a href="/ceremonies">Opening ceremony</a></li>
+<li><a href="/venues/menu">Venues</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Sports
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/sports">Disciplines &amp; Sports</a></li>
+<li><a href="/event_names">Events</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+IOC
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="/organizations">Organizations</a></li>
+<li><a href="/definitions">Definitions</a></li>
+<li><a href="/awards">Awards</a></li>
+<li><a href="/meetings">Meetings</a></li>
+<li><a href="/ioc/host_cities">Host city selection</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+Statistics
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li></li>
+<li><a href="/statistics/medal/country">Medals by country</a></li>
+<li><a href="/statistics/medal/athlete">Medals by athlete</a></li>
+<li><a href="/statistics/medal_table">Medal tables</a></li>
+<li><a href="/statistics/participation">Participations</a></li>
+<li><a href="/records">Olympic Records</a></li>
+<li><a href="/statistics/age">Age records</a></li>
+<li><a href="/statistics/age_at_death">Age at death</a></li>
+<li><a href="/lists">Lists</a></li>
+<li><a href="/today">Today</a></li>
+<li></li>
+<li class="divider"></li>
+<li><a href="/statistics">Statistics</a></li>
+</ul>
+</li>
+
+
+
+
+<li><a href="/feedbacks/new">Feedback</a></li>
+<form class="navbar-form navbar-left" role="search" action="/athletes/quick_search" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="rFVMhTsfkytF05W11YenwYso899PcnZR6DBUbAd04iazuJNryN6QgPy5N_hyjGnYADS05hdOJ6xdtKCvwW9s3Q" autocomplete="off" /><div class="form-group">
+<input type="text" name="query" id="query" class="form-control" placeholder="Athlete search" />
+</div>
+<input type="submit" name="commit" value="Go" class="btn btn-default" data-disable-with="Go" />
+</form>
+</ul>
+</div>
+</div>
+<div class="container">
+<ol class="breadcrumb">
+<li>
+<a href="/">Home</a>
+</li>
+<li><a href="/editions">Games</a></li><li><a href="/editions/54">2012 Summer Olympics</a></li><li class="active">Weightlifting</li>
+</ol>
+
+
+<form id="same_games_form" class="form-inline" style="display: inline" method="get"><select name="id" id="sports_in_same_games_select" class="form-control"><option value="">Other 2012 sports</option>
+<option value="ARC">Archery</option>
+<option value="GAR">Artistic Gymnastics</option>
+<option value="SWA">Artistic Swimming</option>
+<option value="ATH">Athletics</option>
+<option value="BDM">Badminton</option>
+<option value="BKB">Basketball</option>
+<option value="VBV">Beach Volleyball</option>
+<option value="BOX">Boxing</option>
+<option value="CSL">Canoe Slalom</option>
+<option value="CSP">Canoe Sprint</option>
+<option value="BMX">Cycling BMX Racing</option>
+<option value="MTB">Cycling Mountain Bike</option>
+<option value="CRD">Cycling Road</option>
+<option value="CTR">Cycling Track</option>
+<option value="DIV">Diving</option>
+<option value="EDR">Equestrian Dressage</option>
+<option value="EVE">Equestrian Eventing</option>
+<option value="EJP">Equestrian Jumping</option>
+<option value="FEN">Fencing</option>
+<option value="FBL">Football</option>
+<option value="HBL">Handball</option>
+<option value="HOC">Hockey</option>
+<option value="JUD">Judo</option>
+<option value="OWS">Marathon Swimming</option>
+<option value="MPN">Modern Pentathlon</option>
+<option value="GRY">Rhythmic Gymnastics</option>
+<option value="ROW">Rowing</option>
+<option value="SAL">Sailing</option>
+<option value="SHO">Shooting</option>
+<option value="SWM">Swimming</option>
+<option value="TTE">Table Tennis</option>
+<option value="TKW">Taekwondo</option>
+<option value="TEN">Tennis</option>
+<option value="GTR">Trampolining</option>
+<option value="TRI">Triathlon</option>
+<option value="VVO">Volleyball</option>
+<option value="WPO">Water Polo</option>
+<option value="WRE">Wrestling</option></select></form><script>$('#sports_in_same_games_select').change(function(){location.href='/editions/54/sports/'+$('#sports_in_same_games_select').val()})</script><form id="other_games_form" class="form-inline" style="display: inline" method="get"><select name="year" id="sport_in_other_games_select" class="form-control"><option value="">Weightlifting in other Games</option>
+<option value="77">1888-89 Zappas Olympic Games</option>
+<option value="1">1896 Summer Olympics</option>
+<option value="3">1904 Summer Olympics</option>
+<option value="4">1906  Intercalated Games</option>
+<option value="7">1920 Summer Olympics</option>
+<option value="8">1924 Summer Olympics</option>
+<option value="9">1928 Summer Olympics</option>
+<option value="10">1932 Summer Olympics</option>
+<option value="11">1936 Summer Olympics</option>
+<option value="12">1948 Summer Olympics</option>
+<option value="13">1952 Summer Olympics</option>
+<option value="14">1956 Summer Olympics</option>
+<option value="15">1960 Summer Olympics</option>
+<option value="16">1964 Summer Olympics</option>
+<option value="17">1968 Summer Olympics</option>
+<option value="18">1972 Summer Olympics</option>
+<option value="19">1976 Summer Olympics</option>
+<option value="20">1980 Summer Olympics</option>
+<option value="21">1984 Summer Olympics</option>
+<option value="22">1988 Summer Olympics</option>
+<option value="23">1992 Summer Olympics</option>
+<option value="24">1996 Summer Olympics</option>
+<option value="25">2000 Summer Olympics</option>
+<option value="26">2004 Summer Olympics</option>
+<option value="53">2008 Summer Olympics</option>
+<option value="65">2010 Summer Youth Olympics</option>
+<option value="67">2014 Summer Youth Olympics</option>
+<option value="59">2016 Summer Olympics</option>
+<option value="69">2018 Summer Youth Olympics</option>
+<option value="61">2020 Summer Olympics</option>
+<option value="63">2024 Summer Olympics</option></select></form><script>$('#sport_in_other_games_select').change(function(){location.href='/editions/' + $('#sport_in_other_games_select').val() + '/sports/WLF'})</script>
+<h1>Weightlifting at the 2012 Summer Olympics</h1>
+<table class="biodata">
+<tr>
+<th>Dates</th>
+<td>28 July –  7 August 2012</td>
+</tr>
+<tr>
+<th>Medal Events</th>
+<td>15</td>
+</tr>
+<tr>
+<th>Venues</th>
+<td><a href="/venues/861">ExCeL, Newham, London</a></td>
+</tr>
+</table>
+<div class="description">
+<p>The weightlifting events at the 2012 Summer Olympics were held at the <a href="/venues/861">ExCeL</a> on the Royal Victoria Dock in London. The site also hosted boxing, fencing, judo, taekwondo, wrestling, and table tennis, making it one of the busiest venues of the Games. The competition format remained the same from 2000, when women’s events were first introduced, and consisted of eight weight divisions for men and seven for women. One noticeable change was the way in which weight increments were dealt with. In previous editions, a competitor had to increase his weight by at least 2.5 kg, but London eliminated the ½ kg divisions entirely, allowing participants to raise their total 1 kg at a time.</p>
+
+<p>China topped the medal table, as it had every year since 2000, with seven, five of them gold, but was less successful than the previous two editions, where they had taken home nine and eight medals respectively. Kazakhstan, who had previously won only one gold medal in weightlifting, came in second in the rankings with four first-place finishes, including <a href="/athletes/116393">Ilya Ilyin</a>, who repeated his golden feat from 2008 in the middle-heavyweight category. Although when the retesting of samples was complete, this left Kazakhstan with just a solitary bronze medal.</p>
+
+<p>Asia initially dominated the women’s events, winning all of the gold medals (although later drug disqualifications would later change that), and also did quite well initially in the men’s tournament, with six of the eight gold medals there. The Americas were more successful than they had been in the previous edition, taking home three medals, two more than in 2008, with Canada’s <a href="/athletes/116267">Christine Girard</a> earning her nation’s first weightlifting medal since 1984 (and its first ever for women).</p>
+
+<p>Eleven Olympic and eight world records fell over the course of the tournament, many of which were broken repeatedly over the course of the event. Perhaps the most disappointing event in this regard was the men’s heavyweight, where three of the favorites did not start and a fourth was unable to produce a total in the snatch. <a href="/athletes/116411">Oleksiy Torokhtiy</a> of Ukraine won this event with a total lift of 412 kg, a score that would not have earned him bronze in any of the last three editions, nor gold at any of the World Championships since the 105 kg division had been introduced in 1998.</p>
+
+<p>In 2015 the IOC began re-testing samples from the 2008 Beijing and 2012 London Olympics, using newer, more advanced testing techniques, in an effort to find those who had used performance enhancing drugs (PEDs), but in whom it could not be detected at the time of those Olympics. The 2012 weightlifting competition was markedly affected, causing many of the results to be changed. In all, there were 37 PED disqualifications from the 2012 weightlifting events, with 5 gold medalists and 18 medalists losing their medals, through November 2020.</p>
+
+</div>
+
+<h2>Events</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Event</th>
+<th>Status</th>
+<th>Date</th>
+<th>Participants</th>
+<th>NOCs</th>
+</tr>
+</thead>
+<tr>
+<td><a href="/results/331018">Bantamweight (≤56 kg), Men</a></td>
+<td>Olympic</td>
+<td>29 July 2012</td>
+<td>18</td>
+<td>15</td>
+</tr>
+<tr>
+<td><a href="/results/331036">Featherweight (≤62 kg), Men</a></td>
+<td>Olympic</td>
+<td>30 July 2012</td>
+<td>15</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="/results/331054">Lightweight (≤69 kg), Men</a></td>
+<td>Olympic</td>
+<td>31 July 2012</td>
+<td>24</td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="/results/331072">Middleweight (≤77 kg), Men</a></td>
+<td>Olympic</td>
+<td> 1 August 2012</td>
+<td>12</td>
+<td>11</td>
+</tr>
+<tr>
+<td><a href="/results/331081">Light-Heavyweight (≤85 kg), Men</a></td>
+<td>Olympic</td>
+<td> 3 August 2012</td>
+<td>23</td>
+<td>20</td>
+</tr>
+<tr>
+<td><a href="/results/331099">Middle-Heavyweight (≤94 kg), Men</a></td>
+<td>Olympic</td>
+<td> 4 August 2012</td>
+<td>21</td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="/results/331117">Heavyweight (≤105 kg), Men</a></td>
+<td>Olympic</td>
+<td> 6 August 2012</td>
+<td>17</td>
+<td>14</td>
+</tr>
+<tr>
+<td><a href="/results/331126">Super-Heavyweight (&gt;105 kg), Men</a></td>
+<td>Olympic</td>
+<td> 7 August 2012</td>
+<td>19</td>
+<td>17</td>
+</tr>
+<tr>
+<td><a href="/results/331000">Flyweight (≤48 kg), Women</a></td>
+<td>Olympic</td>
+<td>28 July 2012</td>
+<td>14</td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="/results/331009">Featherweight (≤53 kg), Women</a></td>
+<td>Olympic</td>
+<td>29 July 2012</td>
+<td>18</td>
+<td>17</td>
+</tr>
+<tr>
+<td><a href="/results/331027">Lightweight (≤58 kg), Women</a></td>
+<td>Olympic</td>
+<td>30 July 2012</td>
+<td>19</td>
+<td>17</td>
+</tr>
+<tr>
+<td><a href="/results/331045">Middleweight (≤63 kg), Women</a></td>
+<td>Olympic</td>
+<td>31 July 2012</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="/results/331063">Light-Heavyweight (≤69 kg), Women</a></td>
+<td>Olympic</td>
+<td> 1 August 2012</td>
+<td>15</td>
+<td>14</td>
+</tr>
+<tr>
+<td><a href="/results/331090">Heavyweight (≤75 kg), Women</a></td>
+<td>Olympic</td>
+<td> 3 August 2012</td>
+<td>13</td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="/results/331108">Super-Heavyweight (&gt;75 kg), Women</a></td>
+<td>Olympic</td>
+<td> 5 August 2012</td>
+<td>14</td>
+<td>13</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td class="border-top">
+252 (149/103)
+</td>
+<td class="border-top">
+84 (70/57)
+</td>
+</tr>
+</table>
+
+
+<h2>Medals</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Event</th>
+<th colspan="2"><span class="Gold">Gold</span></th>
+<th colspan="2"><span class="Silver">Silver</span></th>
+<th colspan="2"><span class="Bronze">Bronze</span></th>
+</tr>
+</thead>
+<tr>
+<td class="top"><a href="/results/331018">Bantamweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/126906">Om Yun-Chol</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" />PRK</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121981">Wu Jingbiao</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/124166">Trần Lê Quốc Toàn</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/VIE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VIE.svg" />VIE</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331036">Featherweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/126907">Kim Un-Guk</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" />PRK</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/103547">Óscar Figueroa</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/COL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/COL.svg" />COL</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116304">Eko Yuli Irawan</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/INA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/INA.svg" />INA</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331054">Lightweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/121983">Lin Qingfeng</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116316"> Triyatno</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/INA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/INA.svg" />INA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/126908">Kim Myong-Hyok</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" />PRK</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331072">Middleweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/121984">Lü Xiaojun</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121985">Lu Haojie</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116355">Iván Cambar</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CUB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CUB.svg" />CUB</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331081">Light-Heavyweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/121168">Adrian Zieliński</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/POL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POL.svg" />POL</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121702">Kianoush Rostami</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/IRI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" />IRI</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116336">Tarek Yahia</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/EGY"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/EGY.svg" />EGY</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331099">Middle-Heavyweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/121698">Saeid Mohammadpour</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/IRI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" />IRI</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121749">Kim Min-Jae</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" />KOR</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121171">Tomasz Zieliński</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/POL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POL.svg" />POL</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331117">Heavyweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/121699">Navab Nassirshalal</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/IRI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" />IRI</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116402">Bartłomiej Bonk</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/POL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POL.svg" />POL</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121234">Ivan Yefremov</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/UZB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UZB.svg" />UZB</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331126">Super-Heavyweight, Men</a></td>
+<td style="vertical-align: top"><a href="/athletes/121700">Behdad Salimi</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/IRI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" />IRI</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121701">Sajjad Anoushiravani</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/IRI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" />IRI</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116423">Jeon Sang-Gyun</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" />KOR</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331000">Flyweight, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/121986">Wang Mingjuan</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/103524">Hiromi Miyake</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/JPN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JPN.svg" />JPN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/126911">Ryang Chun-Hwa</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" />PRK</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331009">Featherweight, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/122307">Hsu Shu-Ching</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/TPE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TPE.svg" />TPE</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/124664">Citra Febrianti</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/INA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/INA.svg" />INA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121331">Yuliya Paratova</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/UKR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UKR.svg" />UKR</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331027">Lightweight, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/121987">Li Xueying</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121445">Pimsiri Sirikaew</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/THA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/THA.svg" />THA</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121446">Rattikan Kulnoi</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/THA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/THA.svg" />THA</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331045">Middleweight, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/116267">Christine Girard</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CAN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CAN.svg" />CAN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/120779">Milka Maneva</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/BUL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BUL.svg" />BUL</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116269">Luz Acosta</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/MEX"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MEX.svg" />MEX</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331063">Light-Heavyweight, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/126913">Rim Jong-Sim</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" />PRK</a></span></td>
+<td style="vertical-align: top">—</td><td style="vertical-align: top">—</td>
+<td style="vertical-align: top"><a href="/athletes/126715">Anna Nurmukhambetova</a><br><a href="/athletes/104619">Ubaldina Valoyes</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/KAZ"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KAZ.svg" />KAZ</a></span><br><span class="nowrap"><a href="/countries/COL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/COL.svg" />COL</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331090">Heavyweight, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/116290">Lydia Valentín</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/ESP"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ESP.svg" />ESP</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/116282">Abir Abdulrahman</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/EGY"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/EGY.svg" />EGY</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/121967">Madias Nzesso</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CMR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CMR.svg" />CMR</a></span></td>
+</tr>
+<tr>
+<td class="top"><a href="/results/331108">Super-Heavyweight, Women</a></td>
+<td style="vertical-align: top"><a href="/athletes/121988">Zhou Lulu</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" />CHN</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/120434">Tatyana Kashirina</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" />RUS</a></span></td>
+<td style="vertical-align: top"><a href="/athletes/104597">Jang Mi-Ran</a></td><td style="vertical-align: top"><span class="nowrap"><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" />KOR</a></span></td>
+</tr>
+</table>
+
+<h2>Medal table</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th colspan="2">NOC</th>
+<th>Gold</th>
+<th>Silver</th>
+<th>Bronze</th>
+<th>Total</th>
+</tr>
+</thead>
+<tr>
+<td><a href="/countries/CHN">People&#39;s Republic of China</a></td>
+<td><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" /> CHN</a></td>
+<td>5</td>
+<td>2</td>
+<td>0</td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="/countries/IRI">Islamic Republic of Iran</a></td>
+<td><a href="/countries/IRI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" /> IRI</a></td>
+<td>3</td>
+<td>2</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="/countries/PRK">Democratic People&#39;s Republic of Korea</a></td>
+<td><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" /> PRK</a></td>
+<td>3</td>
+<td>0</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="/countries/POL">Poland</a></td>
+<td><a href="/countries/POL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POL.svg" /> POL</a></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="/countries/CAN">Canada</a></td>
+<td><a href="/countries/CAN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CAN.svg" /> CAN</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/TPE">Chinese Taipei</a></td>
+<td><a href="/countries/TPE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TPE.svg" /> TPE</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/ESP">Spain</a></td>
+<td><a href="/countries/ESP"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ESP.svg" /> ESP</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/INA">Indonesia</a></td>
+<td><a href="/countries/INA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/INA.svg" /> INA</a></td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="/countries/KOR">Republic of Korea</a></td>
+<td><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" /> KOR</a></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="/countries/COL">Colombia</a></td>
+<td><a href="/countries/COL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/COL.svg" /> COL</a></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/EGY">Egypt</a></td>
+<td><a href="/countries/EGY"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/EGY.svg" /> EGY</a></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/THA">Thailand</a></td>
+<td><a href="/countries/THA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/THA.svg" /> THA</a></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="/countries/BUL">Bulgaria</a></td>
+<td><a href="/countries/BUL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BUL.svg" /> BUL</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/JPN">Japan</a></td>
+<td><a href="/countries/JPN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JPN.svg" /> JPN</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/RUS">Russian Federation</a></td>
+<td><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" /> RUS</a></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/CMR">Cameroon</a></td>
+<td><a href="/countries/CMR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CMR.svg" /> CMR</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/CUB">Cuba</a></td>
+<td><a href="/countries/CUB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CUB.svg" /> CUB</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/KAZ">Kazakhstan</a></td>
+<td><a href="/countries/KAZ"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KAZ.svg" /> KAZ</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/MEX">Mexico</a></td>
+<td><a href="/countries/MEX"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MEX.svg" /> MEX</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/UKR">Ukraine</a></td>
+<td><a href="/countries/UKR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UKR.svg" /> UKR</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/UZB">Uzbekistan</a></td>
+<td><a href="/countries/UZB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UZB.svg" /> UZB</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="/countries/VIE">Vietnam</a></td>
+<td><a href="/countries/VIE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VIE.svg" /> VIE</a></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+
+
+</div>
+</body>
+<footer class="footer">
+<br>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title">
+<span class="glyphicon glyphicon-info-sign"></span>
+Did you know?
+</h3>
+</div>
+<div class="panel-body">
+<p>The 1924 Winter Olympics weren’t officially declared Olympic until 1926. They were known as “International Winter Sports Week” in 1924, although generally referred to as Olympics.</p>
+
+
+</div>
+</div>
+<div class="container">
+<p>
+<a href="/users/sign_in">Login</a>
+|
+<a href="/statistics/site">Statistics</a>
+|
+<a href="/static/about">About</a>
+|
+<a href="/static/image_credits">Image Credits</a>
+|
+<a href="/static/faq">FAQ</a>
+|
+<a href="/feedbacks/new">Feedback</a>
+</p>
+<p>
+&copy; <a href="/static/about">OlyMADMen</a> 2006 — 2026
+</p>
+</div>
+</footer>
+
+<script src="/assets/lightbox.min-a06f7b5a37bdc88a78a48f95b9149ca917761a07bffb855a6d73c1a435e16552.js"></script>
+<script>
+  $('.footnote').tooltip();
+</script>
+</html>

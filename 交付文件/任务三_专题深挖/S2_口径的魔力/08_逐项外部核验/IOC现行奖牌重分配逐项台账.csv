@@ -1,0 +1,5 @@
+﻿Year,Event,现行金牌,现行银牌,现行铜牌,主数据金牌,主数据银牌,主数据铜牌,三色与主数据一致,官方决议或决赛页,官方决议日期,核验日期,映射说明
+2012,Athletics Women's 800 metres,RSA,KEN,USA,RUS,RSA,RUS,False,https://www.olympics.com/ioc/news/ioc-executive-board-approves-olympic-medal-diploma-and-medallist-pin-reallocation-for-london-2012-olympic-games | https://worldathletics.org/competitions/olympic-games/the-xxx-olympic-games-6999193/results/women/800-metres/final/result,2026-06-22,2026-11-12,IOC确认银铜；World Athletics现行决赛表确认金牌
+2012,Athletics Women's 20 kilometres Walk,CHN,CHN,CHN,RUS,RUS,CHN,False,https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012-1,2023,2026-11-12,IOC明确三色重分配
+2012,Athletics Women's 400 metres Hurdles,USA,CZE,JAM,RUS,USA,CZE,False,https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012-1,2023,2026-11-12,IOC明确三色重分配
+2012,Weightlifting Men's Heavyweight,IRI,POL,UZB,UKR,IRI,POL,False,https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012,2020,2026-11-12,IOC明确105公斤级三色重分配；主数据以Heavyweight命名

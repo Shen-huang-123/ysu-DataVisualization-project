@@ -1,0 +1,10 @@
+项目工作区/.runtime/
+__pycache__/
+**/node_modules/
+项目工作区/qa_clean_env/
+项目工作区/qa_isolated/
+项目工作区/qa_visual/
+项目工作区/.runtime313/
+项目工作区/edge-story-profile/
+项目工作区/chrome-story-profile/
+项目工作区/sites/*.tar.gz

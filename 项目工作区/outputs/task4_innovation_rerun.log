@@ -1,0 +1,22 @@
+{
+  "forecast_rows": 127,
+  "backtest_rows": 339,
+  "mae": 2.744518076351899,
+  "top_mae": 4.566683189718515,
+  "dashboard": "D:\\虚拟C盘\\数据可视化挑战赛\\交付文件\\任务四_开放创作\\01_交互式Dashboard\\index.html"
+}
+{
+  "project_mae": 0.5167387023742873,
+  "host_rate": 0.18,
+  "rows": 127,
+  "site": "D:\\虚拟C盘\\数据可视化挑战赛\\项目工作区\\sites\\la28-fullscore"
+}
+D:\虚拟C盘\数据可视化挑战赛\交付文件\任务四_开放创作\02_2028洛杉矶预测\index.html
+{"lens_nocs": 91, "dynasty_streaks": 3833, "forecast_nocs": 127, "demo_rows": 117}
+{"pages": 16, "task1": "D:\\虚拟C盘\\数据可视化挑战赛\\交付文件\\任务一_数据体检\\index.html", "overview": "D:\\虚拟C盘\\数据可视化挑战赛\\交付文件\\作品总入口\\index.html"}
+{
+  "passed": true,
+  "checks": 31,
+  "failed": 0
+}
+任务四已重建并通过验收。

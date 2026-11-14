@@ -1,0 +1,13 @@
+{
+  "matched_did_mean_pp": 2.7019985866926834,
+  "bootstrap_ci95": [
+    1.8373698437306296,
+    3.594356629514534
+  ],
+  "randomization_extreme_count": 0,
+  "randomization_draws": 50000,
+  "randomization_p_upper_bound": 2e-05,
+  "randomization_p_label": "p < 0.00002",
+  "cases": 9,
+  "mean_pretrend_gap_pp": 0.2417982300402676
+}

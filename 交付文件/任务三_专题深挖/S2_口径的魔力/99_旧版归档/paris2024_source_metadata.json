@@ -1,0 +1,9 @@
+{
+  "url": "https://en.wikipedia.org/wiki/2024_Summer_Olympics_medal_table",
+  "source_type": "secondary; primary-source verification pending",
+  "snapshot_sha256": "3e1f87585067136092c0fd423230cddefeb955dd256d7b049292c45d370c3a8f",
+  "parsed_at_utc": "2026-11-05T16:04:09.543564+00:00",
+  "scope": "92 entries including unranked AIN; AIN excluded from ranked comparison",
+  "join": "15 explicitly mapped NOC codes; unmapped delegations not silently matched",
+  "primary_access": "IOC medals page Access Denied during retrieval"
+}

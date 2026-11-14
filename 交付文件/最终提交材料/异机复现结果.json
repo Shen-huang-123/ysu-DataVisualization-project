@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "source_csv": "D:\\虚拟C盘\\数据可视化挑战赛\\资料文件\\原始资料\\olympics_dataset.csv",
+  "checks": {
+    "任务一审计": {
+      "common_keys": 17,
+      "equal": true,
+      "different_keys": [],
+      "only_original": [],
+      "only_rebuilt": []
+    },
+    "任务一归一": {
+      "common_keys": 7,
+      "equal": true,
+      "different_keys": [],
+      "only_original": [],
+      "only_rebuilt": []
+    },
+    "任务二核心": {
+      "common_keys": 14,
+      "equal": true,
+      "different_keys": [],
+      "only_original": [],
+      "only_rebuilt": []
+    },
+    "任务三S2": {
+      "common_keys": 16,
+      "equal": true,
+      "different_keys": [],
+      "only_original": [],
+      "only_rebuilt": []
+    },
+    "任务三S7": {
+      "common_keys": 5,
+      "equal": true,
+      "different_keys": [],
+      "only_original": [],
+      "only_rebuilt": []
+    },
+    "自拟专题": {
+      "common_keys": 4,
+      "equal": true,
+      "different_keys": [],
+      "only_original": [],
+      "only_rebuilt": []
+    }
+  },
+  "prediction_file_checks": {
+    "模型回测摘要.csv": {
+      "sha256_equal": true
+    },
+    "升级模型验证摘要.csv": {
+      "sha256_equal": true
+    }
+  },
+  "note": "关键统计流水线复现；未逐页重新生成全部前端和PDF。"
+}

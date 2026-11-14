@@ -1,0 +1,24 @@
+{
+  "retrieved_at_utc": "2026-11-07T00:20:51.912016+00:00",
+  "source_url": "https://data.smartidf.services/api/explore/v2.1/catalog/datasets/paris-2024-resultats-des-medailles-pour-chaque-discipline-olympique/exports/csv?lang=fr&timezone=Europe%2FParis&use_labels=true&delimiter=%3B",
+  "publisher": "Île-de-France Smart Services（法兰西岛大区开放数据平台）",
+  "ioc_structure_source": "https://www.olympics.com/ioc/news/paris-2024-record-breaking-olympic-games-on-and-off-the-field",
+  "raw_sha256": "a2ab2bd4b52a2dbb1caf9189b3eeef2a59b04001052148269ec2027083a4b388",
+  "raw_rows": 1044,
+  "distinct_events": 329,
+  "gold_units": 329,
+  "silver_units": 330,
+  "bronze_units": 385,
+  "distinct_medal_countries": 92,
+  "missing_official_result_url_rows": 9,
+  "event_rows_with_official_url": 329,
+  "constructed_canonical_event_urls": 3,
+  "published_top15_crosscheck_rows": 15,
+  "published_top15_crosscheck_mismatches": 0,
+  "checks": {
+    "329_event_keys": true,
+    "329_gold_units": true,
+    "no_exact_duplicates": true,
+    "top15_medal_totals_match": true
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "checks": 31,
+  "failed": 0,
+  "items": [
+    {
+      "check": "文件存在:index.html",
+      "passed": true,
+      "detail": "74435"
+    },
+    {
+      "check": "文件存在:index.html",
+      "passed": true,
+      "detail": "138654"
+    },
+    {
+      "check": "文件存在:index.html",
+      "passed": true,
+      "detail": "94972"
+    },
+    {
+      "check": "文件存在:index.html",
+      "passed": true,
+      "detail": "103521"
+    },
+    {
+      "check": "文件存在:index.html",
+      "passed": true,
+      "detail": "82084"
+    },
+    {
+      "check": "文件存在:LA2028奖牌预测完整榜.csv",
+      "passed": true,
+      "detail": "26958"
+    },
+    {
+      "check": "文件存在:LA2028机器学习集成预测榜.csv",
+      "passed": true,
+      "detail": "32964"
+    },
+    {
+      "check": "文件存在:代表团_项目级预测.csv",
+      "passed": true,
+      "detail": "130064"
+    },
+    {
+      "check": "文件存在:历史回测逐队结果.csv",
+      "passed": true,
+      "detail": "36315"
+    },
+    {
+      "check": "文件存在:预测方法与验证方案.md",
+      "passed": true,
+      "detail": "4643"
+    },
+    {
+      "check": "文件存在:新增项目权威排名特征.csv",
+      "passed": true,
+      "detail": "2515"
+    },
+    {
+      "check": "文件存在:主场效应合成对照.csv",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "check": "文件存在:升级模型验证摘要.csv",
+      "passed": true,
+      "detail": "355"
+    },
+    {
+      "check": "预测榜非空",
+      "passed": true,
+      "detail": "127"
+    },
+    {
+      "check": "区间顺序正确",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "资格未决有标注",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "官方排名字段存在",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "奖牌池守恒",
+      "passed": true,
+      "detail": "1120.0"
+    },
+    {
+      "check": "回测误差披露",
+      "passed": true,
+      "detail": "2.744518076351899"
+    },
+    {
+      "check": "机器学习集成字段完整",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "集成奖牌池守恒",
+      "passed": true,
+      "detail": "1119.9999999999998"
+    },
+    {
+      "check": "五项新增运动均有权威特征",
+      "passed": true,
+      "detail": "5"
+    },
+    {
+      "check": "新增项目有快照和来源",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "主场合成对照案例充足",
+      "passed": true,
+      "detail": "5"
+    },
+    {
+      "check": "图表完整:LA2028预测总览.png",
+      "passed": true,
+      "detail": "2367×1642"
+    },
+    {
+      "check": "图表完整:历史回测散点.png",
+      "passed": true,
+      "detail": "1699×1224"
+    },
+    {
+      "check": "中文界面:任务四_开放创作",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "中文界面:01_交互式Dashboard",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "中文界面:02_2028洛杉矶预测",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "中文界面:03_数据新闻",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "中文界面:06_赛后验收单",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

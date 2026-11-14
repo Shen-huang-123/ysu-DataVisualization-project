@@ -1,0 +1,75 @@
+{
+  "environment": "Python 3.13 clean venv; requirements.txt installed from scratch; minimal isolated project tree containing only declared source inputs",
+  "machine_scope": "same Windows computer, separate virtual environment and project tree; not a second physical computer",
+  "command": "项目工作区/qa_clean_env/Scripts/python.exe 项目工作区/qa_isolated/项目工作区/scripts/custom_topics_deep_audit.py",
+  "output_files_checked": 7,
+  "hash_matches": 7,
+  "passed": true,
+  "checks": [
+    {
+      "file": "自拟专题深度核验摘要.json",
+      "exists": true,
+      "sha256_equal": true
+    },
+    {
+      "file": "S10_奖牌藏在哪些项目\\08_深度复核\\S10_2024大类最大代表团份额.csv",
+      "exists": true,
+      "sha256_equal": true
+    },
+    {
+      "file": "S10_奖牌藏在哪些项目\\08_深度复核\\S10_历史获奖记录大类份额.csv",
+      "exists": true,
+      "sha256_equal": true
+    },
+    {
+      "file": "S3_冠军的保质期\\08_深度复核\\S7_王朝长度分布.csv",
+      "exists": true,
+      "sha256_equal": true
+    },
+    {
+      "file": "S8_她们登上领奖台\\08_深度复核\\S8_2024代表团结构差_至少20获奖行.csv",
+      "exists": true,
+      "sha256_equal": true
+    },
+    {
+      "file": "S8_她们登上领奖台\\08_深度复核\\S8_逐届参赛与获奖占比差.csv",
+      "exists": true,
+      "sha256_equal": true
+    },
+    {
+      "file": "S9_消失的赛场\\08_深度复核\\S9_运动家族出现与重返.csv",
+      "exists": true,
+      "sha256_equal": true
+    }
+  ],
+  "task1_raw_csv_rebuild": {
+    "passed": true,
+    "command": "clean-venv python qa_isolated/交付文件/任务一_数据体检/03_复现代码/run_task1.py",
+    "source": "copied original olympics_dataset.csv; no prepared output inputs",
+    "audit_common_keys_equal": 17,
+    "preparation_summary_common_keys_equal": 7,
+    "main_records": 250832,
+    "main_medal_rows": 38360
+  },
+  "reproduced_pipelines": [
+    "任务一原始CSV审计与归一",
+    "任务二基础百年全景指标",
+    "任务三S2官方小项与运动员行排名",
+    "任务三S7王朝核心指标",
+    "任务四透明历史基线回测",
+    "任务四项目级集成模型",
+    "任务三S7—S10深度复核"
+  ],
+  "numeric_crosschecks": {
+    "task1_audit_keys_equal": 17,
+    "task1_preparation_keys_equal": 7,
+    "task2_metric_keys_equal": 14,
+    "s2_metric_keys_equal": 16,
+    "s7_transitions": 4511,
+    "s7_defense_rate": 0.2954998891598315,
+    "task4_baseline_summary_equal": true,
+    "task4_project_model_summary_equal": true,
+    "custom_topic_evidence_files_hash_equal": 7
+  },
+  "scope_note": "同一台Windows电脑上的全新虚拟环境和最小隔离目录；复现覆盖关键数据流水线，不等同于第二台物理电脑的最终兼容性测试。"
+}

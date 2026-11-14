@@ -1,0 +1,217 @@
+{
+  "passed": true,
+  "checks": 42,
+  "failed": 0,
+  "items": [
+    {
+      "check": "CSV可读:S2_2008历史小项代理表.csv",
+      "passed": true,
+      "detail": "302行×9列"
+    },
+    {
+      "check": "CSV无无穷值:S2_2008历史小项代理表.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_2012历史小项代理表.csv",
+      "passed": true,
+      "detail": "302行×9列"
+    },
+    {
+      "check": "CSV无无穷值:S2_2012历史小项代理表.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_2016历史小项代理表.csv",
+      "passed": true,
+      "detail": "306行×9列"
+    },
+    {
+      "check": "CSV无无穷值:S2_2016历史小项代理表.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_2024三口径完整排名.csv",
+      "passed": true,
+      "detail": "273行×7列"
+    },
+    {
+      "check": "CSV无无穷值:S2_2024三口径完整排名.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_2024代表团剔除敏感性.csv",
+      "passed": true,
+      "detail": "720行×3列"
+    },
+    {
+      "check": "CSV无无穷值:S2_2024代表团剔除敏感性.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_2024双口径完整排名.csv",
+      "passed": true,
+      "detail": "91行×16列"
+    },
+    {
+      "check": "CSV无无穷值:S2_2024双口径完整排名.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_2024逐大类剔除敏感性.csv",
+      "passed": true,
+      "detail": "36行×6列"
+    },
+    {
+      "check": "CSV无无穷值:S2_2024逐大类剔除敏感性.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_历史项目数量对照摘要.csv",
+      "passed": true,
+      "detail": "3行×6列"
+    },
+    {
+      "check": "CSV无无穷值:S2_历史项目数量对照摘要.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_官方小项奖牌长表.csv",
+      "passed": true,
+      "detail": "1044行×3列"
+    },
+    {
+      "check": "CSV无无穷值:S2_官方小项奖牌长表.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_跨届双口径排名.csv",
+      "passed": true,
+      "detail": "257行×11列"
+    },
+    {
+      "check": "CSV无无穷值:S2_跨届双口径排名.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV可读:S2_跨届稳定性摘要.csv",
+      "passed": true,
+      "detail": "3行×7列"
+    },
+    {
+      "check": "CSV无无穷值:S2_跨届稳定性摘要.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON可读:S2_关键指标.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON可读:S2_升级关键指标.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "图像完整:00_S2专题英雄图.png",
+      "passed": true,
+      "detail": "3117×1884"
+    },
+    {
+      "check": "图像完整:S2_2024逐大类剔除稳健性.png",
+      "passed": true,
+      "detail": "2927×1135"
+    },
+    {
+      "check": "图像完整:S2_三口径排名路径.png",
+      "passed": true,
+      "detail": "2301×1694"
+    },
+    {
+      "check": "图像完整:S2_代表团金牌记录项目结构.png",
+      "passed": true,
+      "detail": "2498×1287"
+    },
+    {
+      "check": "图像完整:S2_双口径排名重排.png",
+      "passed": true,
+      "detail": "2113×1893"
+    },
+    {
+      "check": "图像完整:S2_多人项目与金牌行膨胀.png",
+      "passed": true,
+      "detail": "2113×1451"
+    },
+    {
+      "check": "图像完整:S2_跨届机制稳定性.png",
+      "passed": true,
+      "detail": "2613×1304"
+    },
+    {
+      "check": "图像完整:S2_金牌数量与获奖者规模.png",
+      "passed": true,
+      "detail": "2692×1754"
+    },
+    {
+      "check": "报告本地链接",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "美中官方金牌均40",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "荷兰排名6到3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "西班牙排名15到5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "正式PDF存在",
+      "passed": true,
+      "detail": "1758017"
+    },
+    {
+      "check": "三口径交互榜存在",
+      "passed": true,
+      "detail": "112728"
+    },
+    {
+      "check": "滚动叙事专题存在",
+      "passed": true,
+      "detail": "117519"
+    },
+    {
+      "check": "三届代理数量对照",
+      "passed": true,
+      "detail": "[{'Year': 2008, 'event_rows': 302}, {'Year': 2012, 'event_rows': 302}, {'Year': 2016, 'event_rows': 306}]"
+    },
+    {
+      "check": "跨届机制稳定",
+      "passed": true,
+      "detail": "[{'Year': 2008, 'mechanism_rho': 0.982643083845358}, {'Year': 2012, 'mechanism_rho': 0.9823184653915198}, {'Year': 2016, 'mechanism_rho': 0.9907087725990888}]"
+    },
+    {
+      "check": "三口径数据完整",
+      "passed": true,
+      "detail": "273"
+    }
+  ]
+}
