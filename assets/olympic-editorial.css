@@ -1,0 +1,20 @@
+/* 百年圣火：以问题为入口的奥运赛道式目录。独立于七幕渲染逻辑。 */
+.voyage-cover .voyage-content{max-width:none}
+.voyage-question-map{position:absolute;z-index:4;top:50%;right:clamp(195px,14vw,230px);width:clamp(340px,26vw,390px);transform:translateY(-44%);color:#f6f2eb;background:linear-gradient(145deg,rgba(8,32,39,.88),rgba(8,32,39,.72));border:1px solid rgba(235,226,207,.28);border-radius:22px;box-shadow:0 30px 75px rgba(0,0,0,.25);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);overflow:hidden;font-family:inherit}
+.voyage-question-map:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#5aa9cb 0 25%,#e2b353 25% 50%,#393d3c 50% 75%,#a76361 75%);opacity:.95}
+.voyage-question-head{padding:26px 28px 18px}
+.voyage-question-eyebrow{display:block;color:#e4c78f;font-size:11px;letter-spacing:.2em;margin-bottom:9px}
+.voyage-question-head strong{display:block;font-size:clamp(22px,2vw,30px);font-weight:650;line-height:1.22;letter-spacing:-.03em}
+.voyage-question-head p{margin:9px 0 0;color:#d2d5d0;font-size:13px;line-height:1.5}
+.voyage-question-map>a{display:flex;align-items:center;gap:17px;min-height:73px;padding:11px 27px;color:inherit;text-decoration:none;border-top:1px solid rgba(235,226,207,.16);transition:background .25s ease,padding-left .25s ease}
+.voyage-question-map>a:hover,.voyage-question-map>a:focus-visible{background:rgba(239,230,209,.11);padding-left:34px}
+.voyage-question-map>a:focus-visible{outline:2px solid #e4c78f;outline-offset:-3px}
+.voyage-question-num{display:grid;place-items:center;flex:none;width:37px;height:37px;border:1px solid rgba(242,232,213,.48);border-radius:50%;font-size:12px;font-variant-numeric:tabular-nums;color:#e8d0a1}
+.voyage-question-text{display:grid;gap:3px;min-width:0}
+.voyage-question-text strong{font-size:15px;line-height:1.3;font-weight:580}
+.voyage-question-text small{font-size:11px;color:#c6d0cb;letter-spacing:.04em}
+.voyage-question-arrow{margin-left:auto;color:#e6c48e;font-size:20px;transition:transform .25s ease}
+.voyage-question-map>a:hover .voyage-question-arrow,.voyage-question-map>a:focus-visible .voyage-question-arrow{transform:translate(3px,-3px)}
+@media(min-width:1281px){.voyage-cover .voyage-content{width:48%;margin-left:clamp(40px,6.5vw,96px);margin-right:0;padding:110px 0 125px}.voyage-cover .voyage-content h1{font-size:clamp(62px,6vw,88px);line-height:1.1}}
+@media(max-width:1280px){.voyage-question-map{display:none}.voyage-cover .voyage-content{padding-right:clamp(24px,6vw,96px)}}
+@media(prefers-reduced-motion:reduce){.voyage-question-map>a,.voyage-question-arrow{transition:none!important}}
