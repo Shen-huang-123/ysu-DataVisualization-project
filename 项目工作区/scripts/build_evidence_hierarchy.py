@@ -145,5 +145,7 @@ text(65, 59, '统计单位：小项 / 运动员行；历史555项为代理交叉
 
 fig.savefig(OUT / '证据等级图.png', dpi=200, facecolor=paper, bbox_inches='tight', pad_inches=0)
 fig.savefig(OUT / '证据等级图.svg', facecolor=paper, bbox_inches='tight', pad_inches=0)
+svg = OUT / '证据等级图.svg'
+svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines()) + '\n', encoding='utf-8')
 plt.close(fig)
 print(OUT)
