@@ -51,15 +51,8 @@
   }
   choose(0);
  }
- // Olympic lane signatures are decorative, never chart encodings.
- const laneColors=['#4c9dca','#c6aa73','#df6d6b','#e1bb58','#69ab90'];
+ // Keep Olympic identity in existing imagery and rings, not repeated heading ornaments.
  main.classList.add('olympic-interaction-surface');
- [...main.querySelectorAll('h2')].filter(h=>!h.closest('nav,dialog,aside,.xz-explore,.ex-route')).slice(0,6).forEach(h=>{
-  const mark=element('span',null,'olympic-lane-signature');mark.setAttribute('aria-hidden','true');
-  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 112 36');
-  laneColors.forEach((color,i)=>{const line=document.createElementNS(ns,'path');line.setAttribute('d',`M2 ${8+i*5} H48 Q${68+i*3} ${8+i*5} ${82+i*3} 2 H110`);line.setAttribute('stroke',color);line.style.setProperty('--lane-delay',i*45+'ms');svg.append(line)});
-  mark.append(svg);h.append(mark);
- });
  main.addEventListener('change',e=>{if(reduce||!e.target.matches('select,input'))return;const region=e.target.closest('.ex-design,.controls,.filters,.toolbar');if(!region)return;region.classList.remove('olympic-selection-set');requestAnimationFrame(()=>region.classList.add('olympic-selection-set'))});
  // A route derived from this page's actual sections, not a second site-wide menu.
  const headings=[...main.querySelectorAll('h2')].filter(h=>!h.closest('nav,dialog,[hidden],.xz-explore')&&!h.textContent.includes('探索全部作品'));

@@ -277,7 +277,7 @@ body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity
 @media(max-width:640px){.ox-viewer{padding:64px 16px 24px}.ox-viewer img{max-height:calc(100dvh - 130px)}.ox-viewer-close{right:16px;top:16px}}
 @media(prefers-reduced-motion:reduce){.ox-viewer,.ox-viewer img,.ox-viewer-close{animation:none!important;transition:none!important}}
 @media(max-width:640px){.ox-panel a{min-height:84px}.ox-link-copy b{font-size:16px}}
-</style><link rel="stylesheet" href="../../共享组件/exploration-design.css?v=20261115-olympic">
+</style><link rel="stylesheet" href="../../共享组件/exploration-design.css?v=20261115-controls">
 <link rel="stylesheet" href="../../共享组件/olympic-image-stage.css?v=8">
 <link rel="stylesheet" href="../../共享组件/olympic-guide.css">
 <link rel="stylesheet" href="../../共享组件/integrated-nav.css?v=9">
@@ -365,7 +365,7 @@ if(images.length){
  for(const img of images){img.classList.add('ox-zoomable');img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','放大查看：'+(img.alt||'图表'));const show=()=>{opener=img;full.src=img.currentSrc||img.src;full.alt=img.alt||'图表大图';caption.textContent=img.closest('figure')?.querySelector('figcaption')?.textContent?.trim()||img.alt||'图表详情';viewer.hidden=false;vclose.focus()};img.addEventListener('click',show);img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}})}
  vclose.addEventListener('click',hideViewer);viewer.addEventListener('click',e=>{if(e.target===viewer)hideViewer()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!viewer.hidden)hideViewer()});
 }
-})();</script><!-- OLYMPIC_INTERACTION_END --><script defer src="../../共享组件/immersive-float.js"></script><script src="../../共享组件/exploration-design.js?v=20261115-olympic" defer></script>
+})();</script><!-- OLYMPIC_INTERACTION_END --><script defer src="../../共享组件/immersive-float.js"></script><script src="../../共享组件/exploration-design.js?v=20261115-controls" defer></script>
 <script src="../../共享组件/olympic-guide.js" defer></script>
 <script src="../../共享组件/integrated-nav.js?v=5" defer></script>
 </body></html>
