@@ -11,3 +11,16 @@ html.dark .ex-design,html.dark .ex-route{--ex-ink:#e5eeea;--ex-paper:#102b35;--e
 .viz>div:has(>.ex-design){min-width:0}.ex-design{min-width:0;max-width:100%;box-sizing:border-box}.ex-stage{min-width:0;max-width:100%}.ex-tools>*{max-width:100%;box-sizing:border-box}.ex-route button:disabled{opacity:.45;cursor:default}
 
 .ex-motion{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}.ex-motion.ex-entered{opacity:1;transform:none}.ex-record{transition:transform .2s ease,border-color .2s ease}.ex-record:hover{transform:translateY(-3px);border-color:var(--ex-accent)}@media(prefers-reduced-motion:reduce){.ex-motion{opacity:1;transform:none;transition:none}.ex-record{transition:none}.ex-record:hover{transform:none}}
+
+/* Five lanes: a restrained Olympic chapter signature, outside plot areas. */
+.olympic-interaction-surface .olympic-lane-signature{display:inline-block;width:82px;height:28px;margin-left:20px;vertical-align:middle;pointer-events:none;line-height:0;opacity:.72}
+.olympic-lane-signature svg{display:block;width:100%;height:100%;overflow:visible}
+.olympic-lane-signature path{fill:none;stroke-width:1.8;stroke-linecap:round;stroke-dasharray:130;stroke-dashoffset:0;transition:stroke-dashoffset .65s cubic-bezier(.2,.7,.2,1),opacity .3s;transition-delay:var(--lane-delay)}
+h2:hover .olympic-lane-signature path{stroke-dashoffset:16}
+.olympic-interaction-surface .ex-tools button{transition:border-color .2s ease,color .2s ease,transform .2s ease}
+.olympic-interaction-surface .ex-tools button:hover{border-color:var(--ex-accent);transform:translateY(-1px)}
+.olympic-interaction-surface .ex-tools button:active{transform:translateY(1px)}
+.olympic-selection-set{animation:olympic-selection-settle .65s ease-out}
+@keyframes olympic-selection-settle{0%{outline:2px solid #69ab9080;outline-offset:5px}100%{outline:2px solid transparent;outline-offset:0}}
+@media(max-width:650px){.olympic-interaction-surface .olympic-lane-signature{width:56px;height:22px;margin-left:12px}}
+@media(prefers-reduced-motion:reduce){.olympic-lane-signature path,.olympic-interaction-surface .ex-tools button{transition:none}.olympic-selection-set{animation:none}.olympic-interaction-surface .ex-tools button:hover,.olympic-interaction-surface .ex-tools button:active{transform:none}}
