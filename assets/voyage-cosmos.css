@@ -75,3 +75,25 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
  .voyage-cosmos .voyage-materials strong{font-size:15px;line-height:22px}
  .voyage-cosmos .voyage-materials small{font-size:11px}
 }
+
+/* Task copy and photographs occupy separate columns with a stable central gutter. */
+@media(min-width:651px){
+ .voyage-cosmos .voyage-task .voyage-content{width:40%;max-width:580px;margin-left:6.5%;margin-right:0;padding:100px 0 150px}
+ .voyage-cosmos .voyage-task:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-content{margin-left:auto;margin-right:6.5%;align-items:flex-start;text-align:left}
+ .voyage-cosmos .voyage-task:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-tag{flex-direction:row}
+ .voyage-cosmos .voyage-task .voyage-content h1{font-size:clamp(38px,4.3vw,64px);max-width:100%;line-height:1.14}
+ .voyage-cosmos .voyage-task .voyage-copy{max-width:100%;font-size:clamp(14px,1.2vw,18px);line-height:1.7}
+ .voyage-cosmos .voyage-task .voyage-photo{width:40%;right:5%;left:auto;transform-origin:center}
+ .voyage-cosmos .voyage-task:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-photo{left:5%;right:auto}
+ .voyage-cosmos .voyage-task .voyage-cta{margin-top:20px;min-height:44px;font-size:13px;gap:20px}
+ .voyage-cosmos .voyage-task .voyage-cta[style*="margin-left"]{margin-left:0!important}
+}
+
+@media(max-width:650px){
+ .voyage-cosmos .voyage-task .voyage-photo,.voyage-cosmos .voyage-task:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-photo{inset:86px 24px auto auto;width:148px;height:150px;opacity:.9;border-radius:50%;-webkit-mask-image:none;mask-image:none}
+ .voyage-cosmos .voyage-task .voyage-content{align-self:start;padding:260px 24px 135px;display:block;text-align:left}
+ .voyage-cosmos .voyage-task .voyage-content h1{font-size:36px;margin:14px 0;line-height:1.15}
+ .voyage-cosmos .voyage-task .voyage-copy{font-size:14px;line-height:1.6}
+ .voyage-cosmos .voyage-task .voyage-proof{margin-top:14px;font-size:11px;gap:7px}
+ .voyage-cosmos .voyage-task .voyage-cta{min-height:40px;margin-top:14px;padding:8px 14px;font-size:12px}
+}
