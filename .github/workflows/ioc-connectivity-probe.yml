@@ -28,9 +28,9 @@ jobs:
           import urllib.request
 
           urls = {
-              'beijing_2008_archery': 'https://www.olympics.com/en/olympic-games/beijing-2008/results/archery',
-              'london_2012_archery': 'https://www.olympics.com/en/olympic-games/london-2012/results/archery',
-              'rio_2016_archery': 'https://www.olympics.com/en/olympic-games/rio-2016/results/archery',
+              'beijing_2008_archery': 'https://olympics.com/en/olympic-games/beijing-2008/results/archery',
+              'london_2012_archery': 'https://olympics.com/en/olympic-games/london-2012/results/archery',
+              'rio_2016_archery': 'https://olympics.com/en/olympic-games/rio-2016/results/archery',
           }
           results = []
           for key, url in urls.items():
