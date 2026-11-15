@@ -1,0 +1,11 @@
+
+#xz-nav{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;color:var(--integrated-nav-ink,#fff)!important}
+#xz-nav a,#xz-nav button{color:inherit!important;background:transparent!important;box-shadow:none!important;border-radius:0!important}
+#xz-nav .xz-links>a{position:relative;padding:9px 10px!important;font-weight:500!important}
+#xz-nav .xz-links>a:after{content:'';position:absolute;bottom:3px;left:10px;right:10px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+#xz-nav .xz-links>a:hover:after,#xz-nav .xz-links>a[aria-current=page]:after{transform:scaleX(1)}
+#xz-nav button{border:0!important;padding:8px 10px!important;min-height:44px!important}
+#xz-nav .xz-mark{background:transparent!important;box-shadow:none!important;border:1px solid currentColor!important;color:inherit!important}
+#xz-nav{ text-shadow:var(--integrated-nav-shadow,none) }
+#xz-nav :focus-visible{outline:2px solid currentColor!important;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){#xz-nav a:after{transition:none}}
