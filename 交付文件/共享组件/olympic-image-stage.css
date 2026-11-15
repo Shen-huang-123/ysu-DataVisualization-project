@@ -27,3 +27,8 @@ body.photo-editorial header.photo-editorial-hero.image-stage.image-stage-immerse
 body.photo-editorial header.photo-editorial-hero.image-stage::before{transition:opacity .65s ease!important}
 @media(prefers-reduced-motion:reduce){body.photo-editorial header.photo-editorial-hero.image-stage>.image-stage-photo{transform:none!important}.image-stage *,.image-stage::before{transition:none!important}}
 @media(max-width:640px){.image-stage-cinema{bottom:16px!important;right:20px!important}body.photo-editorial header.photo-editorial-hero.image-stage{padding-bottom:84px!important}}
+
+/* Image control uses the same open text treatment as the scene entrances. */
+body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;color:#f4f2e9!important;padding:10px 0!important;font-family:inherit!important;font-size:12px!important;font-weight:400!important;letter-spacing:.04em;text-shadow:0 1px 6px #06151b}
+.image-stage-cinema:after{content:'';position:absolute;left:0;right:0;bottom:4px;height:1px;background:currentColor;opacity:.5;transform:scaleX(.3);transform-origin:left;transition:transform .25s ease}
+.image-stage-cinema:hover:after,.image-stage-cinema:focus-visible:after{transform:scaleX(1)}

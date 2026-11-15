@@ -54,3 +54,17 @@ html body #xz-nav#xz-nav .xz-links>a{font-weight:400!important;font-size:14px!im
 html body #xz-nav#xz-nav .xz-links>a[aria-current=page]{font-weight:600!important}
 html body #xz-nav#xz-nav button{font-family:inherit!important;font-weight:400!important;letter-spacing:0!important}
 @media(max-width:900px){html body #xz-nav#xz-nav .xz-links>a{font-size:12px!important}html body #xz-nav#xz-nav .xz-brand{font-size:14px!important}}
+
+/* Navigation follows the body face; hierarchy comes from weight rather than a new font. */
+html body #xz-nav#xz-nav .xz-brand,html body #xz-nav#xz-nav .xz-links>a{font-family:'Noto Sans SC','Microsoft YaHei',system-ui,sans-serif!important;letter-spacing:0!important}
+html body #xz-nav#xz-nav .xz-brand{font-size:14px!important;font-weight:600!important}
+html body #xz-nav#xz-nav .xz-links>a{font-size:13px!important;font-weight:400!important;opacity:.85}
+html body #xz-nav#xz-nav .xz-links>a[aria-current=page]{font-weight:600!important;opacity:1}
+html body #xz-menu#xz-menu a{transition:color .2s ease!important}
+html body #xz-menu#xz-menu a:after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+html body #xz-menu#xz-menu .menu-task-title{transition:transform .25s cubic-bezier(.2,.7,.2,1),opacity .2s ease}
+html body #xz-menu#xz-menu a:hover:after,html body #xz-menu#xz-menu a:focus-visible:after{transform:scaleX(1)}
+html body #xz-menu#xz-menu a:hover .menu-task-title,html body #xz-menu#xz-menu a:focus-visible .menu-task-title{transform:translateX(4px)}
+html body #xz-menu#xz-menu a:active .menu-task-title{transform:translateX(6px);opacity:.7}
+html body #xz-menu#xz-menu a:hover,html body #xz-menu#xz-menu a:focus-visible{color:#d9b982!important}
+@media(prefers-reduced-motion:reduce){html body #xz-menu#xz-menu a:after,html body #xz-menu#xz-menu .menu-task-title,.image-stage-cinema:after{transition:none!important}html body #xz-menu#xz-menu a .menu-task-title{transform:none!important}}

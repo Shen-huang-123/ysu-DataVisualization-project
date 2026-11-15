@@ -149,3 +149,5 @@ body.voyage-live .topbar nav a{opacity:.8;font-weight:400!important;transition:o
 
 body.voyage-live .topbar .brand,body.voyage-live .topbar nav a{font-family:'Noto Serif SC','Songti SC','SimSun',Georgia,serif!important;letter-spacing:.025em!important}
 body.voyage-live .topbar .brand{font-weight:600!important}body.voyage-live .topbar nav a{font-weight:400!important;font-size:14px!important}
+
+body.voyage-live .topbar .brand,body.voyage-live .topbar nav a{font-family:inherit!important;letter-spacing:0!important}
