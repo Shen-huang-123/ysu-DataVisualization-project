@@ -31,4 +31,4 @@
 
 ## 克隆与复现
 
-仓库中的原始成绩册 PDF 使用 Git LFS。首次克隆请先安装 Git LFS，再运行 `git lfs install` 和 `git clone https://github.com/Shen-huang-123/ysu-DataVisualization-project.git`；若已克隆但 PDF 只有几行指针文本，在仓库目录运行 `git lfs pull`。网页入口可直接打开根目录 `index.html`。本地 Python/浏览器运行环境、临时验收截图及重复打包的旧站点版本不纳入版本管理，正式作品与复算资料均在上述目录。
+仓库中的原始成绩册 PDF 使用 Git LFS。首次克隆请先安装 Git LFS，再运行 `git lfs install` 和 `git clone https://github.com/Shen-huang-123/ysu-DataVisualization-project.git`；若已克隆但 PDF 只有几行指针文本，在仓库目录运行 `git lfs pull`。网页入口可直接打开根目录 `index.html`。 首页三维隧道使用随仓库附带的本地 Three.js；浏览器支持 WebGL 时显示三维空间，否则自动使用二维星空。本地 Python/浏览器运行环境、临时验收截图及重复打包的旧站点版本不纳入版本管理，正式作品与复算资料均在上述目录。
