@@ -65,3 +65,13 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
  .voyage-cosmos .voyage-rank-layout .voyage-rank p{font-size:12px;line-height:1.5;min-height:0;margin:5px 0;grid-column:2}
  .voyage-cosmos .voyage-rank-layout .voyage-rank-buttons{grid-column:2}
 }
+
+@media(min-width:651px){
+ .voyage-cosmos .voyage-final .voyage-content{width:43%;margin-left:6.5%;margin-right:0;padding:100px 0 145px}
+ .voyage-cosmos .voyage-final .voyage-content h1{font-size:clamp(38px,4.3vw,62px);margin:14px 0}
+ .voyage-cosmos .voyage-final .voyage-copy{font-size:15px;max-width:440px}
+ .voyage-cosmos .voyage-materials{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;margin-top:20px}
+ .voyage-cosmos .voyage-materials a{min-width:0;min-height:76px;padding:12px 0;background:transparent;border:0;border-top:1px solid #b6d8dc55;border-radius:0;box-shadow:none}
+ .voyage-cosmos .voyage-materials strong{font-size:15px;line-height:22px}
+ .voyage-cosmos .voyage-materials small{font-size:11px}
+}

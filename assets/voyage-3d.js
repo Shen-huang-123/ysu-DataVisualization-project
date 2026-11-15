@@ -21,7 +21,7 @@
   for(let j=0;j<=80;j++){
    const a=j/80*Math.PI*2;
    const warp=1+.055*Math.sin(a*5+phase)+.035*Math.sin(a*9-phase*1.3);
-   pts.push(new THREE.Vector3(Math.cos(a)*4.2*warp+Math.sin(z*.035)*.22,Math.sin(a)*3.25*warp,z));
+   pts.push(new THREE.Vector3(Math.cos(a)*4.2*warp+Math.sin(z*.035)*1.1,Math.sin(a)*3.25*warp+Math.cos(z*.03)*.5,z));
   }
   line(pts,i%5===0?gold:i%2?cyan:pale);
   if(i%4===0){const curve=new THREE.CatmullRomCurve3(pts.slice(0,-1),true);const tube=new THREE.TubeGeometry(curve,80,i%8===0?.022:.013,4,true);group.add(new THREE.Mesh(tube,new THREE.MeshBasicMaterial({color:i%8===0?0xd4ad73:0x6ab8c4,transparent:true,opacity:i%8===0?.54:.35,fog:true})));}
@@ -35,9 +35,14 @@
  }
  const stars=new THREE.BufferGeometry();stars.setAttribute('position',new THREE.BufferAttribute(positions,3));stars.setAttribute('color',new THREE.BufferAttribute(colors,3));
  scene.add(new THREE.Points(stars,new THREE.PointsMaterial({size:.085,vertexColors:true,transparent:true,opacity:.86,sizeAttenuation:true,depthWrite:false,fog:true})));
+ const trailPositions=new Float32Array(210*6);
+ for(let i=0;i<210;i++){const a=i*2.399963,r=3.4+(i%17)*.22,z=-(i/210)*178;trailPositions.set([Math.cos(a)*r,Math.sin(a)*r*.85,z,Math.cos(a)*r,Math.sin(a)*r*.85,z-.65-(i%7)*.2],i*6)}
+ const trailGeometry=new THREE.BufferGeometry();trailGeometry.setAttribute('position',new THREE.BufferAttribute(trailPositions,3));
+ const trailMaterial=new THREE.LineBasicMaterial({color:0x7ccbe6,transparent:true,opacity:.25,blending:THREE.AdditiveBlending,depthWrite:false});scene.add(new THREE.LineSegments(trailGeometry,trailMaterial));
  let width=0,height=0,lastProgress=0;
+
  function resize(){const w=host.clientWidth,h=host.clientHeight;if(w===width&&h===height)return;width=w;height=h;if(!w||!h)return;renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
- function render(p){lastProgress=p;resize();if(!width||!height)return;camera.position.set(Math.sin(p*5)*.22,Math.cos(p*4)*.11,-p*105);camera.lookAt(Math.sin(p*5)*.12,0,camera.position.z-12);renderer.render(scene,camera)}
+ function render(p){lastProgress=p;resize();if(!width||!height)return;const z=-p*105,phase=(p*6)%1,boost=Math.pow(Math.sin(phase*Math.PI),2);camera.position.set(Math.sin(z*.035)*1.1,Math.cos(z*.03)*.5,z);camera.lookAt(Math.sin((z-12)*.035)*1.1,Math.cos((z-12)*.03)*.5,z-12);camera.fov=72+boost*7;camera.updateProjectionMatrix();trailMaterial.opacity=.15+boost*.45;renderer.render(scene,camera)}
  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();host.style.display='none';if(fallback)fallback.style.display='block';window.renderVoyage3D=null;if(window.drawVoyageStars)window.drawVoyageStars(lastProgress)});
  addEventListener('resize',()=>render(lastProgress),{passive:true});
  window.renderVoyage3D=render;render(0);
