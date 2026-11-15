@@ -34,3 +34,18 @@
 .ox-control .ox-arrow{font-size:20px!important;transition:transform .25s ease!important}.ox-control .ox-panel a:hover .ox-arrow{transform:translate(3px,-3px)}
 @media(max-width:640px){.ox-control .ox-panel{padding:24px!important}.ox-control .ox-panel .ox-links a{min-height:72px!important}.ox-control .ox-panel .ox-links b{font-size:19px!important}}
 @media(prefers-reduced-motion:reduce){.ox-control .ox-rings i{animation:none!important}.ox-control .ox-panel a:after,.ox-control .ox-arrow{transition:none!important}}
+
+/* Compact, translucent contents sheet; all four entries stay visible. */
+.ox-control .ox-rings{width:33px!important;height:23px!important}
+.ox-control .ox-trigger:before,.ox-control .ox-trigger:after{left:50%!important;right:auto!important;width:38px!important;bottom:2px!important}
+.ox-control .ox-trigger:before{transform:translateX(-50%)}
+.ox-control .ox-trigger:after{transform:translateX(-50%) scaleX(var(--guide-progress,0))!important;transform-origin:left}
+.ox-control .ox-panel{width:min(316px,calc(100vw - 32px))!important;padding:20px 22px!important;background:rgba(28,49,58,.64)!important;border:0!important;border-radius:8px!important;box-shadow:none!important;backdrop-filter:blur(24px)!important;-webkit-backdrop-filter:blur(24px)!important;max-height:none!important;overflow:visible!important}
+.ox-control .ox-panel-head strong{font-size:22px!important;line-height:30px!important}
+.ox-control .ox-panel>p{font-size:11px!important;line-height:1.7!important;margin:8px 0 12px!important}
+.ox-control .ox-panel .ox-links a{min-height:58px!important;padding:10px 0!important;box-sizing:border-box!important}
+.ox-control .ox-panel .ox-links b{font-size:18px!important;gap:12px!important;line-height:1.4!important}
+.ox-control .ox-links small{margin:4px 0 0 32px!important;line-height:1.5!important;font-size:10px!important}
+.ox-control .ox-arrow{font-size:16px!important}
+@media(max-width:640px){.ox-control .ox-panel{left:16px!important;right:auto!important;bottom:78px!important;width:min(316px,calc(100vw - 32px))!important;padding:18px 20px!important;max-height:none!important;overflow:visible!important}.ox-control .ox-panel .ox-links a{min-height:58px!important}}
+@media(max-height:530px){.ox-control .ox-panel{position:fixed!important;left:16px!important;bottom:70px!important;width:min(500px,calc(100vw - 32px))!important;padding:14px 18px!important}.ox-control .ox-panel>p{display:none!important}.ox-control .ox-links{grid-template-columns:1fr 1fr!important;column-gap:24px!important;margin-top:8px!important}.ox-control .ox-panel .ox-links a{min-height:54px!important}.ox-control .ox-panel .ox-links b{font-size:16px!important}.ox-control .ox-links small{font-size:9px!important}.ox-control .ox-arrow{display:none!important}}
