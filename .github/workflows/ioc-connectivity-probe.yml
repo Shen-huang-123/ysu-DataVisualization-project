@@ -58,6 +58,37 @@ jobs:
               json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           print('IOC_PROBE_JSON=' + json.dumps(results, ensure_ascii=False))
           PY
+      - name: Check one page with Chrome
+        shell: bash
+        run: |
+          npm install --no-save playwright-core
+          node <<'JS'
+          const fs = require('fs');
+          const { chromium } = require('playwright-core');
+          (async () => {
+            const file = '项目工作区/ioc_github_connectivity_probe.json';
+            const output = JSON.parse(fs.readFileSync(file, 'utf8'));
+            const url = 'https://olympics.com/en/olympic-games/rio-2016/results/archery';
+            let browser;
+            const result = { url };
+            try {
+              browser = await chromium.launch({ channel: 'chrome', headless: true });
+              const page = await browser.newPage();
+              const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 25000 });
+              result.status = response?.status();
+              result.final_url = page.url();
+              result.title = await page.title();
+              result.visible_text_sample = (await page.locator('body').innerText()).slice(0, 240);
+            } catch (error) {
+              result.error = String(error).slice(0, 240);
+            } finally {
+              if (browser) await browser.close();
+            }
+            output.chrome_probe = result;
+            fs.writeFileSync(file, JSON.stringify(output, null, 2) + '\n');
+            console.log('IOC_CHROME_PROBE=' + JSON.stringify(result));
+          })();
+          JS
       - name: Save probe result
         shell: bash
         run: |
