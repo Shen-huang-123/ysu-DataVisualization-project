@@ -141,3 +141,8 @@ body.voyage-live .topbar .outline{border:0!important;border-radius:0!important;p
 
 @media(max-width:650px) and (prefers-reduced-motion:no-preference){.voyage-cosmos .voyage-photo{animation:voyage-photo-breathe 9s ease-in-out infinite}}
 @keyframes voyage-photo-breathe{0%,100%{translate:0 0}50%{translate:0 -4px}}
+
+body.voyage-live .topbar .brandmark{border:0!important;background:none!important;border-radius:0!important;width:auto!important;height:auto!important;color:inherit!important;font-size:14px!important}
+body.voyage-live .topbar nav a:after{display:none!important;content:none!important}
+body.voyage-live .topbar .outline{border:0!important;background:transparent!important;padding:10px 0!important}
+body.voyage-live .topbar nav a{opacity:.8;font-weight:400!important;transition:opacity .2s ease!important}body.voyage-live .topbar nav a:hover{opacity:1}
