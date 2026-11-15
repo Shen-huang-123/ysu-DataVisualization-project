@@ -80,3 +80,8 @@ html body #xz-nav#xz-nav button{font:400 12px/1.5 'Microsoft YaHei',system-ui,sa
 @media(max-width:650px){html body #xz-nav#xz-nav{inset:8px 20px auto!important}html body #xz-nav#xz-nav .xz-links{gap:16px!important}}
 
 html body #xz-nav#xz-nav{width:auto!important;min-width:0!important;max-width:calc(100% - 40px)!important;box-sizing:border-box!important}
+
+/* Directory label shares the task navigation type scale. */
+html body #xz-nav#xz-nav #xz-menu-button{font-size:14px!important;line-height:1.5!important}
+@media(max-width:1100px){html body #xz-nav#xz-nav #xz-menu-button{font-size:12px!important}}
+@media(max-width:650px){html body #xz-nav#xz-nav #xz-menu-button{font-size:14px!important}}
