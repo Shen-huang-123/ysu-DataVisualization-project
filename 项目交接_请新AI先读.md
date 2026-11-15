@@ -13,6 +13,8 @@
 
 2026-11-15 首页奥运设计参考更新：参考 GitHub 的 Olympic Feathers、The Gamma Olympics Web 与 Paris Olympics Creative Website 的视觉隐喻、问题驱动探索和赛事影像层级，在 `index.html` 增加四问式任务目录，样式位于 `assets/olympic-editorial.css`；具体来源与原创转化见 `交付文件/前端设计参考与改动说明.md`。桌面 1440、手机 390 宽度离线检查无横向溢出，四问入口跳转任务一后回退仍可见。未改七幕滚动逻辑。
 
+2026-11-15 首页穿隧再次调整：参考 GitHub 的 3D Scroll Tunnel、Infinite 3D Tunnel 与 WARP 的空间推进思路，将桌面入口移至中央，强化切幕时影像纵深与赛道弧线；手机和减少动画模式继续采用轻量方案。实现仅改根目录 `index.html` 和 `assets/olympic-editorial.css`，研究链接及技术取舍见 `交付文件/前端设计参考与改动说明.md`。Edge 离线抽查 1440/390 宽七幕各25个进度点，均至少一幕可见、无横向溢出；任务四跳转并回退可用。
+
 ## 2. 先打开哪里
 
 | 用途 | 路径 |
