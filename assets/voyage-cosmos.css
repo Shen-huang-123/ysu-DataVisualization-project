@@ -135,3 +135,6 @@ body.voyage-live .topbar .outline{border:0!important;border-radius:0!important;p
 @media(prefers-reduced-motion:reduce){.voyage-cosmos .voyage-cta:after,.voyage-cosmos .voyage-cta b{transition:none!important}}
 
 #voyage-stage.voyage-cosmos .voyage-scene a.voyage-cta[style],#voyage-stage.voyage-cosmos .voyage-scene a.voyage-cta{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+
+/* Remove obsolete orbit decoration over the actual Olympic photographs. */
+.voyage-cosmos .voyage-float{display:none!important}
