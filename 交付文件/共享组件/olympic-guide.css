@@ -54,3 +54,11 @@
 .ox-control .ox-panel{isolation:isolate;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 .ox-control .ox-panel:before{content:''!important;display:block!important;position:absolute!important;inset:-26px -30px!important;width:auto!important;height:auto!important;border:0!important;border-radius:0!important;background:radial-gradient(ellipse at 42% 50%,#06131bf7 36%,#06131be8 64%,#06131b00 76%)!important;z-index:-1!important;pointer-events:none!important}
 .ox-control .ox-panel .ox-links a{border-bottom-color:#a4b6b821!important}
+
+/* Match surrounding interface type; remove the experimental dark scrim. */
+.ox-control .ox-panel:before{display:none!important;content:none!important}
+.ox-control .ox-panel,.ox-control .ox-panel-head strong,.ox-control .og-title,.ox-control .og-number{font-family:'Microsoft YaHei',system-ui,sans-serif!important}
+.ox-control .ox-panel-head strong{font-size:17px!important;font-weight:600!important;letter-spacing:0!important}
+.ox-control .og-title{font-size:15px!important;font-weight:500!important;letter-spacing:0!important}
+.ox-control .og-number{font-size:11px!important;letter-spacing:0!important}
+.ox-control .ox-panel{background:transparent!important;text-shadow:0 1px 5px #030d15}

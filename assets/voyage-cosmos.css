@@ -138,3 +138,6 @@ body.voyage-live .topbar .outline{border:0!important;border-radius:0!important;p
 
 /* Remove obsolete orbit decoration over the actual Olympic photographs. */
 .voyage-cosmos .voyage-float{display:none!important}
+
+@media(max-width:650px) and (prefers-reduced-motion:no-preference){.voyage-cosmos .voyage-photo{animation:voyage-photo-breathe 9s ease-in-out infinite}}
+@keyframes voyage-photo-breathe{0%,100%{translate:0 0}50%{translate:0 -4px}}
