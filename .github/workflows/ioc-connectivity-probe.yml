@@ -2,9 +2,6 @@ name: IOC historical results connectivity probe
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - .github/workflows/ioc-connectivity-probe.yml
 
 permissions:
   contents: write

@@ -17,4 +17,10 @@
 3. 若单运动通过，再按三届入口清单批量采集。每一小项保留 IOC 页面 URL、抓取日期、原始页面哈希及三色 NOC；逐项映射到项目现有 910 项台账。对 555 项逐一比对，不用总榜或运动员列表代替。
 4. 对后续取消资格或重分配仍需核查 IOC 决议及页面更新时间；网页在某日显示的名次不自动证明 IOC 最终授牌。出现冲突时保留两版本与裁决链接。
 
-如果只是要解决本机 IOC 访问故障，GitHub 仓库代码**提供了抓取方法，不提供绕过访问限制的保证**。GitHub Actions 的不同网络出口可作为小规模连通性试验，但目前尚未部署或证明可用；它也不应被当作 IOC 数据授权。可将通过审计的输出填入现有[现行 IOC 逐项导入模板](现行IOC逐项导入模板.csv)并运行 `项目工作区/scripts/current_ioc_import_audit.py`，未填记录仍保持原证据等级。
+如果只是要解决本机 IOC 访问故障，GitHub 仓库代码**提供了抓取方法，不提供绕过访问限制的保证**。可将通过审计的输出填入现有[现行 IOC 逐项导入模板](现行IOC逐项导入模板.csv)并运行 `项目工作区/scripts/current_ioc_import_audit.py`，未填记录仍保持原证据等级。
+
+## GitHub Actions 实测结果
+
+已在本仓库实际运行[最小连通性工作流](https://github.com/Shen-huang-123/ysu-DataVisualization-project/blob/main/.github/workflows/ioc-connectivity-probe.yml)。[第 3 次运行](https://github.com/Shen-huang-123/ysu-DataVisualization-project/actions/runs/43675733848)从 GitHub 托管的 Ubuntu 网络出口请求三届射箭结果页：2008、2012、2016 均为 **HTTP 403**；同一运行用 Chrome 打开里约 2016 射箭页，得到 `net::ERR_HTTP2_PROTOCOL_ERROR`。机器记录在 `项目工作区/ioc_github_connectivity_probe.json`。早一轮带 `www` 的地址也全部返回 403。工作流显示“success”只代表试探代码执行完毕，**不代表 IOC 页面访问成功**。现已改为手动触发，避免每次提交重复请求。
+
+因此，GitHub Actions 在当前测试条件下也没有解决 IOC 页面访问，不能用该工作流批量抓取或升级 555 项。下一条证据路线仍是已保存的官方赛时成绩册逐项读取，与 IOC 明确公布的后续制裁、重分配裁决分层合并；对于未找到后续裁决的项目，只能写“未检出”，不能推定“现行授牌不变”。

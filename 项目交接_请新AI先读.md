@@ -62,6 +62,8 @@
 
 同日继续查“获取方法”：`Raymond1030/Olympics-Crawler` 有三届 Olympics.com 运动结果页 URL 清单和逐小项抓取脚本，但仓库未提交结果表；`DavidNCamelo/Olympic-Games-DataScraping` 的已提交 CSV 只有总榜和运动员奖牌，缺小项键。本机 Edge 打开里约田径结果页返回 HTTP/2 协议错误。下一步须在能打开 IOC 页面的环境先做一个运动的抓取和原页保存，再映射到 555 项；详见 `交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/GitHub获取IOC结果的方法核查_2026-11-15.md`。这尚未提升证据等级。
 
+已实际运行本仓库 GitHub Actions 连通性试验：GitHub 托管 runner 请求三届射箭 IOC 结果页均为 HTTP 403，Chrome 打开里约页为 HTTP/2 协议错误；机器记录 `项目工作区/ioc_github_connectivity_probe.json`，运行 `43675733848`。此路线当前失败，工作流改为手动触发。后续优先用官方赛时成绩册加 IOC 明确的后续奖牌裁决分层补证，不把未检出的裁决写成不存在。
+
 - `交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/双来源核验报告.md`
 - 同目录 `历史910项双层证据总表.csv`、`历史555项独立交叉对照.csv`、`原始页面清单.csv` 和原始 HTML。
 - 复算脚本 `项目工作区/scripts/olympedia_secondary_audit.py`。
