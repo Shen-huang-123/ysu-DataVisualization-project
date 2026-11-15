@@ -9,6 +9,13 @@
   const photo=document.createElement('img');photo.className='image-stage-photo';photo.src=match[1];photo.alt='';photo.setAttribute('aria-hidden','true');photo.setAttribute('data-no-zoom','');photo.decoding='async';
   hero.style.setProperty('--image-stage-position',getComputedStyle(hero).backgroundPosition.split(',').pop().trim());
   hero.prepend(photo);hero.classList.add('image-stage');
+  const cinema=element('button','沉浸影像','image-stage-cinema');cinema.type='button';cinema.setAttribute('aria-pressed','false');
+  const setCinema=on=>{hero.classList.toggle('image-stage-immersed',on);cinema.setAttribute('aria-pressed',String(on));cinema.textContent=on?'返回专题':'沉浸影像'};
+  cinema.onclick=()=>setCinema(cinema.getAttribute('aria-pressed')!=='true');hero.append(cinema);
+  hero.addEventListener('keydown',e=>{if(e.key==='Escape'){setCinema(false);cinema.focus()}});
+  const rail=element('div',null,'image-stage-lanes');rail.setAttribute('aria-hidden','true');for(let i=0;i<5;i++)rail.append(element('i'));hero.append(rail);
+  if(!reduce){let scheduled=false;const update=()=>{scheduled=false;const rect=hero.getBoundingClientRect();if(rect.bottom<0||rect.top>innerHeight)return;const progress=Math.max(0,Math.min(1,-rect.top/Math.max(1,rect.height)));hero.style.setProperty('--cinema-travel',progress.toFixed(4))};const request=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}};addEventListener('scroll',request,{passive:true});addEventListener('resize',request,{passive:true});update()}
+
  });
 
  const bars=[...document.querySelectorAll('main .chart button.bar[data-i]')];

@@ -14,3 +14,16 @@ body.photo-editorial header.photo-editorial-hero.image-stage .xz-hero-actions a:
 @media(max-height:550px){body.photo-editorial header.photo-editorial-hero.image-stage{min-height:440px!important}}
 
 body.photo-editorial header.photo-editorial-hero.image-stage :is(h1,.xz-lead,.xz-eyebrow,.xz-hero-actions){opacity:1!important;transform:none!important;translate:none!important;animation:none!important}body.photo-editorial header.photo-editorial-hero.image-stage .xz-hero-actions a{background-image:none!important;backdrop-filter:none!important}
+
+/* A continuous camera move tied to the cover, never a full-body transition. */
+body.photo-editorial header.photo-editorial-hero.image-stage>.image-stage-photo{transform:translate3d(0,calc(var(--cinema-travel,0)*7%),0) scale(calc(1.065 - var(--cinema-travel,0)*.035))!important;transform-origin:50% 45%;transition:filter .65s ease}
+.image-stage-cinema{position:absolute!important;bottom:28px!important;right:clamp(24px,6vw,100px)!important;z-index:5!important;min-height:44px;padding:10px 18px!important;border:1px solid #ffffff94!important;border-radius:999px!important;background:#07191f99!important;color:#fff!important;font:600 13px/1.5 'Microsoft YaHei',sans-serif!important;cursor:pointer}
+.image-stage-cinema:focus-visible{outline:3px solid #e7c58a!important;outline-offset:5px}
+.image-stage-lanes{position:absolute!important;bottom:0!important;left:0!important;right:0!important;height:3px!important;display:flex!important;gap:0!important;pointer-events:none!important;z-index:4!important}
+.image-stage-lanes i{flex:1;background:#429ac5}.image-stage-lanes i:nth-child(2){background:#d9b45c}.image-stage-lanes i:nth-child(3){background:#adbec5}.image-stage-lanes i:nth-child(4){background:#65ac88}.image-stage-lanes i:nth-child(5){background:#c27878}
+body.photo-editorial header.image-stage>*:not(.image-stage-photo):not(.image-stage-cinema):not(.image-stage-lanes){transition:opacity .55s ease!important}
+body.photo-editorial header.image-stage.image-stage-immersed>*:not(.image-stage-photo):not(.image-stage-cinema):not(.image-stage-lanes):not(.ed-rings-scene){opacity:0!important;pointer-events:none!important;visibility:hidden}
+body.photo-editorial header.photo-editorial-hero.image-stage.image-stage-immersed::before{opacity:0!important;transition:opacity .65s ease!important}
+body.photo-editorial header.photo-editorial-hero.image-stage::before{transition:opacity .65s ease!important}
+@media(prefers-reduced-motion:reduce){body.photo-editorial header.photo-editorial-hero.image-stage>.image-stage-photo{transform:none!important}.image-stage *,.image-stage::before{transition:none!important}}
+@media(max-width:640px){.image-stage-cinema{bottom:16px!important;right:20px!important}body.photo-editorial header.photo-editorial-hero.image-stage{padding-bottom:84px!important}}
