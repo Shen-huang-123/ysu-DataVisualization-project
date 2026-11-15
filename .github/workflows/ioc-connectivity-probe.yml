@@ -7,18 +7,23 @@ on:
       - .github/workflows/ioc-connectivity-probe.yml
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
       - name: Check historical result pages
         shell: bash
         run: |
           python3 - <<'PY'
+          from datetime import datetime, timezone
           import json
+          from pathlib import Path
           import urllib.error
           import urllib.request
 
@@ -44,5 +49,20 @@ jobs:
                       })
               except (urllib.error.URLError, TimeoutError, OSError) as error:
                   results.append({'key': key, 'url': url, 'error': str(error)[:180]})
+          output = {
+              'checked_at_utc': datetime.now(timezone.utc).isoformat(),
+              'workflow_run': 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}',
+              'results': results,
+          }
+          Path('项目工作区/ioc_github_connectivity_probe.json').write_text(
+              json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           print('IOC_PROBE_JSON=' + json.dumps(results, ensure_ascii=False))
           PY
+      - name: Save probe result
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '项目工作区/ioc_github_connectivity_probe.json'
+          git commit -m 'Record IOC connectivity probe result'
+          git push
