@@ -25,8 +25,9 @@ function ratio(a,b){let x=luminance(a),y=luminance(b);return(Math.max(x,y)+.05)/
    page.on('pageerror',e=>errors.push(e.message));
    await page.goto('file:///'+path.join(root,rel).replace(/\\/g,'/'));
    await page.waitForTimeout(250);
+   await page.evaluate(async()=>{const imgs=[...document.images];imgs.forEach(img=>{img.loading='eager'});await Promise.all(imgs.map(img=>Promise.race([img.decode().catch(()=>{}),new Promise(resolve=>setTimeout(resolve,1500))])))});
    const audit=await page.evaluate(()=>{
-    const imgs=[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src);
+    const imgs=[...document.images].filter(i=>i.getAttribute('src')&&i.naturalWidth===0).map(i=>i.src);
     const links=[...document.querySelectorAll('a[href]')].filter(a=>a.getAttribute('href')&&!/^(https?:|#|mailto:|javascript:)/.test(a.getAttribute('href'))).map(a=>a.href);
     const samples=[...document.querySelectorAll('p,li,td,small')].filter(e=>e.getBoundingClientRect().width>0&&getComputedStyle(e).fontSize&&parseFloat(getComputedStyle(e).fontSize)<24).slice(0,250).map(e=>({text:e.textContent.trim().slice(0,28),color:getComputedStyle(e).color,bg:getComputedStyle(e).backgroundColor,ancestor:getComputedStyle(e.parentElement).backgroundColor}));
     return{overflow:document.documentElement.scrollWidth>innerWidth+2,imgs,links,samples};
