@@ -56,7 +56,7 @@
  main.addEventListener('change',e=>{if(reduce||!e.target.matches('select,input'))return;const region=e.target.closest('.ex-design,.controls,.filters,.toolbar');if(!region)return;region.classList.remove('olympic-selection-set');requestAnimationFrame(()=>region.classList.add('olympic-selection-set'))});
  // A route derived from this page's actual sections, not a second site-wide menu.
  const headings=[...main.querySelectorAll('h2')].filter(h=>!h.closest('nav,dialog,[hidden],.xz-explore')&&!h.textContent.includes('探索全部作品'));
- if(headings.length>1){
+ if(headings.length>1&&!document.body.classList.contains('narrative-module')){
   const route=element('details',null,'ex-route'),summary=element('summary','本页探索路线 · '+headings.length+' 站'),list=element('nav');list.setAttribute('aria-label','本页章节');route.append(summary,list);
   const controls=element('div',null,'ex-tools'),save=element('button','记录当前筛选'),restore=element('button','恢复已记视图'),status=element('output');save.type=restore.type='button';controls.append(save,restore,status);route.append(controls);
   const fields=()=>[...main.querySelectorAll('select,input[type="range"],input[type="checkbox"],input[type="radio"]')].filter(e=>!route.contains(e));
