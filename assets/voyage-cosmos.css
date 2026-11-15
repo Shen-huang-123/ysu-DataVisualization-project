@@ -1,10 +1,6 @@
 /* 连续星空隧道与藤蔓路径；七幕影像仍来自项目本地素材。 */
 body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage.voyage-cosmos{background:radial-gradient(ellipse 75% 75% at 53% 50%,#153a45 0%,#071a22 45%,#030d15 100%)}
 .voyage-cosmos .voyage-stars{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.voyage-cosmos .voyage-vine{position:absolute;z-index:5;left:44%;top:0;width:15%;height:100%;pointer-events:none;opacity:.75;filter:drop-shadow(0 0 10px #dcb77a55)}
-.voyage-vine .vine-spine{fill:none;stroke:url(#vine-gradient);stroke-width:2.3}
-.voyage-vine .vine-branch{fill:none;stroke:#b7a985;stroke-opacity:.3;stroke-width:1.1}
-.voyage-vine .vine-node{fill:#f4d5a2;opacity:.8;filter:drop-shadow(0 0 7px #efc285)}
 .voyage-cosmos .voyage-scene{background:transparent}
 .voyage-cosmos .voyage-scene:after,.voyage-cosmos .voyage-scene[data-scene="2"]:after,.voyage-cosmos .voyage-scene[data-scene="3"]:after,.voyage-cosmos .voyage-scene[data-scene="4"]:after,.voyage-cosmos .voyage-scene[data-scene="5"]:after{background:transparent}
 .voyage-cosmos .voyage-photo{inset:14% 6% 14% auto;width:43%;height:72%;border-radius:42% 15% 40% 16% / 35% 20% 46% 24%;-webkit-mask-image:radial-gradient(ellipse 76% 72% at 50% 50%,#000 49%,#000b 70%,transparent 100%);mask-image:radial-gradient(ellipse 76% 72% at 50% 50%,#000 49%,#000b 70%,transparent 100%);filter:saturate(.88) contrast(1.05)}
@@ -26,7 +22,6 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
 /* The WebGL layer is the actual perspective tunnel; the Canvas layer remains as fallback. */
 .voyage-cosmos .voyage-webgl{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .voyage-cosmos .voyage-webgl canvas{display:block;width:100%;height:100%}
-.voyage-cosmos .voyage-vine{opacity:.32;filter:none}
 .voyage-cosmos .voyage-photo{filter:saturate(.86) contrast(1.02)}
 .voyage-cosmos .voyage-scene{background:transparent}
 .voyage-cosmos .voyage-autoplay{display:inline-flex;align-items:center;gap:6px;flex:none;border:1px solid #d3e3df66;border-radius:999px;padding:7px 12px;background:#08232dbb;color:#f5e7ce;font:600 11px/1.2 "Microsoft YaHei",system-ui,sans-serif;cursor:pointer;white-space:nowrap}
@@ -106,3 +101,7 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
 .voyage-cosmos .voyage-cta{transition:background .2s ease,transform .2s ease}
 .voyage-cosmos .voyage-cta:hover{transform:translateY(-2px)}
 @media(min-width:651px){.voyage-cosmos .voyage-task .voyage-proof{flex-wrap:wrap;width:100%;color:#bfcdd0;font-weight:400}.voyage-cosmos .voyage-task .voyage-copy{color:#c3d0d2}.voyage-cosmos .voyage-task .voyage-content h1{letter-spacing:-.045em}}
+/* Desktop memory images are drawn in WebGL; DOM photography is retained for fallback and mobile. */
+@media(min-width:651px){.voyage-cosmos .memory-in-3d .voyage-photo{visibility:hidden}}
+
+@media(min-width:1200px){.voyage-cosmos .voyage-cover .voyage-content{width:43%;max-width:none;margin-left:6.5%;margin-right:0;padding:110px 0 145px}.voyage-cosmos .voyage-cover .voyage-content h1{font-size:clamp(58px,6vw,86px)}}
