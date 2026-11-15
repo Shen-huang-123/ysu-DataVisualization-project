@@ -119,3 +119,8 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
 @media(min-width:1200px){.voyage-cosmos .voyage-scene .voyage-content{max-width:43%!important}.voyage-cosmos .voyage-scene .voyage-content h1{font-size:clamp(48px,5.2vw,78px)!important}}
 
 @media(min-width:1200px){.voyage-cosmos .voyage-scene .voyage-content :is(.voyage-copy,.voyage-proof,.voyage-rank-explain){max-width:100%!important;width:auto!important;box-sizing:border-box}.voyage-cosmos .voyage-scene .voyage-content{width:40%!important}}
+
+/* Let the architecture remain visible behind the reading column. */
+.voyage-cosmos .voyage-scene:after,.voyage-cosmos .voyage-scene:is([data-scene]):after{background:linear-gradient(90deg,#1026329c 0%,#10263250 35%,transparent 62%)!important}
+body.voyage-live #voyage-stage.voyage-cosmos{background:#28495b}
+@media(max-width:650px){.voyage-cosmos .voyage-scene:after{background:linear-gradient(0deg,#102632d9,#10263255)!important}}
