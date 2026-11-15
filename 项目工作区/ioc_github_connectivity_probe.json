@@ -1,20 +1,20 @@
 {
-  "checked_at_utc": "2026-11-15T04:08:49.335667+00:00",
-  "workflow_run": "https://github.com/Shen-huang-123/ysu-DataVisualization-project/actions/runs/43675452566",
+  "checked_at_utc": "2026-11-15T04:11:22.598361+00:00",
+  "workflow_run": "https://github.com/Shen-huang-123/ysu-DataVisualization-project/actions/runs/43675624255",
   "results": [
     {
       "key": "beijing_2008_archery",
-      "url": "https://www.olympics.com/en/olympic-games/beijing-2008/results/archery",
+      "url": "https://olympics.com/en/olympic-games/beijing-2008/results/archery",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "key": "london_2012_archery",
-      "url": "https://www.olympics.com/en/olympic-games/london-2012/results/archery",
+      "url": "https://olympics.com/en/olympic-games/london-2012/results/archery",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "key": "rio_2016_archery",
-      "url": "https://www.olympics.com/en/olympic-games/rio-2016/results/archery",
+      "url": "https://olympics.com/en/olympic-games/rio-2016/results/archery",
       "error": "HTTP Error 403: Forbidden"
     }
   ]
