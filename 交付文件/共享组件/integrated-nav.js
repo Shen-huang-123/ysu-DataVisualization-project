@@ -1,6 +1,8 @@
 /* Theme state is authoritative: never sample a color mid-transition. */
 (()=>{
  const nav=document.getElementById('xz-nav');if(!nav)return;
+ const menuRoot=document.getElementById('xz-menu');
+ if(menuRoot){menuRoot.classList.remove('formal-entry');menuRoot.querySelectorAll('a').forEach((a,i)=>{if(a.querySelector('.menu-task-title'))return;const text=[...a.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim();[...a.childNodes].filter(n=>n.nodeType===3).forEach(n=>n.remove());const number=document.createElement('span'),title=document.createElement('span');number.className='menu-task-number';number.textContent=String(i).padStart(2,'0');title.className='menu-task-title';title.textContent=text;a.prepend(number,title)})}
  const hero=document.querySelector('header.photo-editorial-hero,header.hero,.image-stage');let pending=false;
  function update(){
   pending=false;const rect=hero?.getBoundingClientRect(),navRect=nav.getBoundingClientRect();
