@@ -9,3 +9,18 @@
 #xz-nav{ text-shadow:var(--integrated-nav-shadow,none) }
 #xz-nav :focus-visible{outline:2px solid currentColor!important;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){#xz-nav a:after{transition:none}}
+
+/* Override the older page-local dark-theme navigation rules as well. */
+html body #xz-nav#xz-nav,html body #xz-nav#xz-nav.scrolled{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+html body #xz-nav#xz-nav :is(a,button),html body #xz-nav#xz-nav .xz-links a[aria-current=page],html body #xz-nav#xz-nav .xz-links a:hover{background:transparent!important;color:var(--integrated-nav-ink,#f3f4ee)!important;box-shadow:none!important;border-radius:0!important}
+html body #xz-menu#xz-menu{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;color:#f2f4ee!important;padding:18px 22px!important;width:min(300px,calc(100vw - 32px))!important;box-sizing:border-box;text-shadow:0 1px 5px #06151b}
+html body #xz-menu#xz-menu h2{font:600 16px/1.5 'Microsoft YaHei',sans-serif!important;margin:0 0 14px!important}
+html body #xz-menu#xz-menu a{position:relative;background:transparent!important;border:0!important;border-bottom:1px solid #a9c0c233!important;border-radius:0!important;box-shadow:none!important;color:#f2f4ee!important;padding:10px 0!important;font:500 14px/1.6 'Microsoft YaHei',sans-serif!important;min-height:44px!important}
+html body #xz-menu#xz-menu a:hover{color:#e8c494!important;background:transparent!important}
+html body #xz-menu#xz-menu small{color:#c0cece!important;font-size:11px!important;line-height:1.6!important}
+html body aside.formal-entry{background:transparent!important;border:0!important;border-top:1px solid var(--line,#789095)!important;border-radius:0!important;box-shadow:none!important;padding:24px clamp(20px,4vw,50px)!important;color:var(--ink,#e9f0ec)!important}
+html body aside.formal-entry h2{font-size:clamp(22px,2.6vw,32px)!important;font-weight:500!important}
+html body aside.formal-entry p{font-size:14px!important;color:var(--muted,#b6cacb)!important}
+html body aside.formal-entry a{font-size:14px!important;font-weight:500!important;background:transparent!important;border:0!important;border-bottom:1px solid currentColor!important;border-radius:0!important;padding:8px 0!important}
+
+html body #xz-menu#xz-menu,html body #xz-menu#xz-menu a,html body #xz-menu#xz-menu small{color:var(--menu-ink,#f3f4ee)!important}
