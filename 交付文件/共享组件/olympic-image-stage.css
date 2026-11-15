@@ -32,3 +32,11 @@ body.photo-editorial header.photo-editorial-hero.image-stage::before{transition:
 body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;color:#f4f2e9!important;padding:10px 0!important;font-family:inherit!important;font-size:12px!important;font-weight:400!important;letter-spacing:.04em;text-shadow:0 1px 6px #06151b}
 .image-stage-cinema:after{content:'';position:absolute;left:0;right:0;bottom:4px;height:1px;background:currentColor;opacity:.5;transform:scaleX(.3);transform-origin:left;transition:transform .25s ease}
 .image-stage-cinema:hover:after,.image-stage-cinema:focus-visible:after{transform:scaleX(1)}
+
+/* Match the home-page cruise control, rather than a separate filled action. */
+body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema{display:inline-flex!important;align-items:center!important;gap:6px!important;min-height:32px!important;padding:7px 12px!important;background:#08232dbb!important;border:1px solid #d3e3df66!important;border-radius:999px!important;color:#f5e7ce!important;font:600 11px/1.2 'Microsoft YaHei',system-ui,sans-serif!important;letter-spacing:0!important;box-shadow:none!important;text-shadow:none!important}
+body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema:before{content:'◉';font-size:12px;font-weight:400}
+body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema:after{display:none!important;content:none!important}
+body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema:hover{border-color:#e8c494!important;background:#102c36bb!important}
+body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema[aria-pressed=true]{color:#f0cd91!important;border-color:#dfbf83!important}
+@media(max-width:640px){body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema{min-height:44px!important}}
