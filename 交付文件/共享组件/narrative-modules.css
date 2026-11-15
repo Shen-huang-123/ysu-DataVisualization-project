@@ -62,3 +62,83 @@ body.narrative-module main{max-width:1320px!important;padding-left:clamp(22px,4.
 @media print{.narrative-companion,.narrative-bridge,.narrative-choices{display:none}.narrative-layout{display:block}.narrative-handoff{margin-left:0}}
 
 body.narrative-module .narrative-chapter>.xz-section,body.narrative-module .narrative-chapter>.narrative-topic-group{padding:22px 0!important;margin:0!important}
+
+/* Editorial refinement: shared type, distinct content compositions. */
+body.narrative-module .narrative-opening{padding:48px 0 38px;max-width:800px}
+body.narrative-module .narrative-opening h2{font-size:clamp(28px,3.1vw,42px)!important;font-weight:500!important}
+body.narrative-module .narrative-companion-title{display:none}
+body.narrative-module .narrative-context{border:0;margin-top:20px;padding-top:0}
+body.narrative-module .narrative-context small{display:none}
+body.narrative-module .narrative-context-text{font-size:11px!important;opacity:.85}
+body.narrative-module .narrative-chapter{border:0;padding-top:0;padding-bottom:55px}
+body.narrative-module .narrative-chapter h2{font-size:clamp(24px,2.3vw,32px)!important;font-weight:500!important;letter-spacing:-.02em}
+body.narrative-module .narrative-chapter .xz-section-top{border:0!important;background:none!important;padding:0!important}
+body.narrative-module .narrative-chapter .xz-section-top>span,body.narrative-module .narrative-chapter .t2-section-head>span{display:none!important}
+body.narrative-module .narrative-bridge{border:0;margin:18px 0 0;padding:0;justify-content:flex-start}
+body.narrative-module .narrative-bridge a{font-size:12px!important;opacity:.8}
+body.narrative-module .narrative-handoff{border:0;padding-top:20px!important}
+/* The audit alternates a field specimen, index table and expandable records. */
+body.narrative-audit #explore-audit-1{border-radius:16px;padding:22px clamp(18px,3vw,34px) 28px;background:color-mix(in srgb,var(--nr-ink) 4%,transparent);margin-bottom:40px}
+body.narrative-audit #explore-audit-2{padding-bottom:30px}
+body.narrative-audit #qc-list{gap:0 25px!important;background:none!important}
+body.narrative-audit #qc-list details{border:0!important;border-bottom:1px solid var(--nr-line)!important;border-radius:0!important;background:none!important;box-shadow:none!important;margin:0!important}
+body.narrative-audit #qc-list summary{padding:19px 0!important;background:none!important;gap:12px!important}
+body.narrative-audit #qc-list summary>b{font-size:14px!important;font-weight:500!important}
+body.narrative-audit #qc-list summary>span:last-child{font-size:10px!important;color:var(--nr-muted)!important}
+body.narrative-audit #qc-list .xz-qcid{font-size:10px!important;opacity:.7;background:none!important;padding:0!important}
+body.narrative-audit #qc-list details>div{padding:0 0 17px!important}
+body.narrative-audit #explore-audit-4>.xz-note{border:0!important;border-left:2px solid var(--nr-accent)!important;border-radius:0!important;padding:12px 0 12px 25px!important;background:none!important}
+/* A compact control desk precedes the uninterrupted chart and table. */
+body.narrative-panorama #explore-panorama-1>.filters{border:0!important;border-radius:12px!important;box-shadow:none!important;padding:22px!important;background:color-mix(in srgb,var(--nr-ink) 4%,transparent)!important;gap:18px!important}
+body.narrative-panorama #explore-panorama-1>.cards{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:0!important;border-bottom:1px solid var(--nr-line);padding-bottom:22px!important}
+body.narrative-panorama #explore-panorama-1>.cards>div{border:0!important;border-radius:0!important;box-shadow:none!important;background:none!important;padding:18px 8px!important}
+body.narrative-panorama .t2-chart-panel{border:0!important;border-radius:0!important;box-shadow:none!important;background:none!important;padding:0!important}
+/* Three editorial rhythms: lead story, analytical index, photographic strips. */
+body.narrative-stories #explore-stories-1 .filters{background:none!important;border:0!important;padding:0 0 20px!important;box-shadow:none!important}
+body.narrative-stories #explore-stories-1 .grid{grid-template-columns:1.25fr 1fr!important;gap:16px!important}
+body.narrative-stories #explore-stories-1 .story:first-child{grid-column:1!important;grid-row:span 2;min-height:510px!important}
+body.narrative-stories #explore-stories-1 .story:not(:first-child){min-height:247px!important}
+body.narrative-stories #explore-stories-1 .story{border-radius:12px!important}
+body.narrative-stories #explore-stories-2 .grid{display:block!important}
+body.narrative-stories #explore-stories-2 .story{display:grid!important;grid-template-columns:135px 1fr!important;gap:22px!important;min-height:160px!important;grid-column:auto!important;padding:22px 0!important;border:0!important;border-bottom:1px solid var(--nr-line)!important;border-radius:0!important;background:none!important;color:var(--nr-ink)!important;box-shadow:none!important;overflow:visible!important}
+body.narrative-stories #explore-stories-2 .story:before,body.narrative-stories #explore-stories-2 .story:after{display:none!important}
+body.narrative-stories #explore-stories-2 .story-photo{position:relative!important;inset:auto!important;width:135px!important;height:135px!important;grid-row:1/3;border-radius:8px;opacity:1!important;transform:none!important;filter:none!important}
+body.narrative-stories #explore-stories-2 .story-top{position:static!important;padding:0!important;color:var(--nr-muted)!important;align-self:end;font-size:10px!important}
+body.narrative-stories #explore-stories-2 .story-bottom{position:static!important;padding:0!important;color:var(--nr-ink)!important}
+body.narrative-stories #explore-stories-2 .story-bottom h3{color:var(--nr-ink)!important;font-size:25px!important;margin:0 0 8px!important}
+body.narrative-stories #explore-stories-2 .story-bottom p{color:var(--nr-muted)!important;font-size:13px!important}
+body.narrative-stories #explore-stories-2 .enter{color:var(--nr-accent)!important;font-size:11px!important}
+body.narrative-stories #explore-stories-3 .grid{grid-template-columns:1fr!important;gap:12px!important}
+body.narrative-stories #explore-stories-3 .story{min-height:235px!important;border-radius:10px!important}
+body.narrative-stories #explore-stories-3 .story-photo{object-position:50% 30%;}
+body.narrative-stories .inline-evidence{background:none!important;border:0!important;box-shadow:none!important}
+/* Each future chapter has one lead destination and compact supporting links. */
+body.narrative-future .narrative-chapter .xz-path{grid-template-columns:1fr!important;gap:0!important}
+body.narrative-future .narrative-chapter .xz-path>a{display:grid!important;grid-template-columns:1fr auto;min-height:0!important;padding:22px 0!important;gap:8px 24px!important}
+body.narrative-future .narrative-chapter .xz-path>a small{grid-column:1;}
+body.narrative-future .narrative-chapter .xz-path>a h3{margin:0!important;font-size:22px!important;grid-column:1}
+body.narrative-future .narrative-chapter .xz-path>a p{margin:0!important;grid-column:1}
+body.narrative-future .narrative-chapter .xz-path>a strong{grid-column:2;grid-row:1/4;align-self:center;margin:0!important;padding:0!important;white-space:nowrap}
+body.narrative-future .narrative-chapter .xz-path>a:first-child{border:0!important;padding-top:5px!important;padding-bottom:30px!important}
+body.narrative-future .narrative-chapter .xz-path>a:first-child h3{font-size:clamp(26px,2.8vw,36px)!important}
+@media(max-width:700px){
+ body.narrative-module .narrative-chapter{padding-bottom:35px}
+ body.narrative-audit #explore-audit-1{padding:14px 16px 22px}
+ body.narrative-panorama #explore-panorama-1>.cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body.narrative-stories #explore-stories-1 .grid{grid-template-columns:1fr!important}
+ body.narrative-stories #explore-stories-1 .story:first-child{grid-row:auto;min-height:350px!important}
+ body.narrative-stories #explore-stories-2 .story{grid-template-columns:84px minmax(0,1fr)!important;gap:10px 15px!important;min-height:145px!important}
+ body.narrative-stories #explore-stories-2 .story-photo{width:84px!important;height:120px!important}
+ body.narrative-stories #explore-stories-2 .story-bottom h3{font-size:21px!important}
+ body.narrative-stories #explore-stories-3 .story{min-height:265px!important}
+ body.narrative-future .narrative-chapter .xz-path>a{grid-template-columns:1fr!important}
+ body.narrative-future .narrative-chapter .xz-path>a strong{grid-column:1;grid-row:auto;padding-top:10px!important}
+}
+
+body.narrative-stories #explore-stories-2 .story-top{border:0!important}body.narrative-module .narrative-choices button{font-family:inherit}
+
+body.narrative-stories .narrative-topic-group .grid a.story[style*="display: none"],body.narrative-stories .narrative-topic-group .grid a.story[hidden]{display:none!important}
+
+body.narrative-stories #explore-stories-1 .grid a.story[style*="display: none"],body.narrative-stories #explore-stories-2 .grid a.story[style*="display: none"],body.narrative-stories #explore-stories-3 .grid a.story[style*="display: none"]{display:none!important}
+
+body.narrative-stories #explore-stories-1 .grid a.story[hidden],body.narrative-stories #explore-stories-2 .grid a.story[hidden],body.narrative-stories #explore-stories-3 .grid a.story[hidden]{display:none!important}
