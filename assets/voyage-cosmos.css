@@ -123,3 +123,15 @@ body.voyage-live .topbar .outline{border:0!important;border-radius:0!important;p
 .voyage-cosmos .voyage-direct a:focus-visible{outline:2px solid #e8c494;outline-offset:5px}
 @media(max-width:650px){body.voyage-live .topbar{top:8px!important;left:20px!important;right:20px!important}.voyage-cosmos .voyage-direct{gap:14px!important}.voyage-cosmos .voyage-direct a{font-size:11px!important}.voyage-cosmos .voyage-direct a span{font-size:10px!important}}
 @media(prefers-reduced-motion:reduce){.voyage-cosmos .voyage-direct a:after{transition:none}}
+
+/* Scene entrances use editorial text and a fine rule, without capsule surfaces. */
+.voyage-cosmos .voyage-scene .voyage-cta,.voyage-cosmos .voyage-scene[data-scene] .voyage-cta{position:relative;min-height:48px!important;padding:10px 0!important;margin-right:24px;gap:24px!important;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;color:#eed2a5!important;font-weight:600!important;transform:none!important;text-shadow:0 2px 10px #030d15}
+.voyage-cosmos .voyage-scene .voyage-cta:after{content:'';position:absolute;bottom:3px;left:0;right:0;height:1px;background:#d6b77f66;transform:scaleX(.35);transform-origin:left;transition:transform .3s ease,background .3s ease}
+.voyage-cosmos .voyage-scene .voyage-cta:hover:after,.voyage-cosmos .voyage-scene .voyage-cta:focus-visible:after{transform:scaleX(1);background:#eed2a5}
+.voyage-cosmos .voyage-scene .voyage-cta b{font-weight:400;transition:transform .25s ease}.voyage-cosmos .voyage-scene .voyage-cta:hover b{transform:translate(3px,-3px)}
+.voyage-cosmos .voyage-scene .voyage-cta:focus-visible{outline:2px solid #eed2a5;outline-offset:6px}
+.voyage-cosmos .voyage-materials a{background:transparent!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important}
+@media(max-width:650px){.voyage-cosmos .voyage-scene .voyage-cta{margin-right:16px!important;gap:16px!important}}
+@media(prefers-reduced-motion:reduce){.voyage-cosmos .voyage-cta:after,.voyage-cosmos .voyage-cta b{transition:none!important}}
+
+#voyage-stage.voyage-cosmos .voyage-scene a.voyage-cta[style],#voyage-stage.voyage-cosmos .voyage-scene a.voyage-cta{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
