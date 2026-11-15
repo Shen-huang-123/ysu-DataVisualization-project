@@ -102,7 +102,7 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
 .voyage-cosmos .voyage-cta:hover{transform:translateY(-2px)}
 @media(min-width:651px){.voyage-cosmos .voyage-task .voyage-proof{flex-wrap:wrap;width:100%;color:#bfcdd0;font-weight:400}.voyage-cosmos .voyage-task .voyage-copy{color:#c3d0d2}.voyage-cosmos .voyage-task .voyage-content h1{letter-spacing:-.045em}}
 /* Desktop memory images are drawn in WebGL; DOM photography is retained for fallback and mobile. */
-@media(min-width:651px){.voyage-cosmos .memory-in-3d .voyage-photo{visibility:hidden}}
+@media(min-width:651px) and (prefers-reduced-motion:no-preference){.voyage-cosmos .voyage-photo{translate:var(--photo-drift-x,0px) var(--photo-drift-y,0px);rotate:y var(--photo-yaw,0deg)}}
 
 @media(min-width:1200px){.voyage-cosmos .voyage-cover .voyage-content{width:43%;max-width:none;margin-left:6.5%;margin-right:0;padding:110px 0 145px}.voyage-cosmos .voyage-cover .voyage-content h1{font-size:clamp(58px,6vw,86px)}}
 
