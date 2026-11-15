@@ -1,0 +1,38 @@
+/* Task three entrance only. Quiet canvas; photographs and questions form the hierarchy. */
+body.narrative-stories{background:#f5f4ef!important}
+body.narrative-stories.xz-dark{background:#0d1b23!important}
+body.narrative-stories .oa-world{background:none!important}
+body.narrative-stories .oa-landscape,body.narrative-stories .oa-light{display:none!important}
+body.narrative-stories .oa-grain{opacity:.01}
+body.narrative-stories main{max-width:1340px!important}
+body.narrative-stories .narrative-opening{padding:50px 0 28px;gap:55px}
+body.narrative-stories main>.filters{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 28px!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important;min-height:0!important}
+body.narrative-stories main>.filters button{border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;padding:10px 0!important;background:none!important;color:var(--nr-muted)!important;font-size:12px!important;font-weight:400!important}
+body.narrative-stories main>.filters button[aria-pressed=true]{border-bottom-color:var(--nr-accent)!important;color:var(--nr-ink)!important;font-weight:600!important}
+body.narrative-stories .narrative-companion{background:#f5f4ef!important;margin-bottom:38px}
+body.narrative-stories.xz-dark .narrative-companion{background:#0d1b23!important}
+body.narrative-stories .narrative-topic-group>h2{margin:0 0 12px!important;font-size:clamp(24px,2.5vw,33px)!important}
+body.narrative-stories .narrative-deck{margin:0 0 28px!important;max-width:65ch}
+body.narrative-stories .narrative-chapter{padding-bottom:45px}
+body.narrative-stories #explore-stories-1 .grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:26px!important}
+body.narrative-stories #explore-stories-1 .grid a.story,body.narrative-stories #explore-stories-3 .grid a.story{display:flex!important;flex-direction:column;grid-column:auto!important;grid-row:auto!important;min-height:0!important;height:auto!important;border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;padding:0!important;overflow:visible!important;transform:none!important;color:var(--nr-ink)!important}
+body.narrative-stories #explore-stories-1 .story:before,body.narrative-stories #explore-stories-1 .story:after,body.narrative-stories #explore-stories-3 .story:before,body.narrative-stories #explore-stories-3 .story:after{display:none!important}
+body.narrative-stories #explore-stories-1 .story .story-photo,body.narrative-stories #explore-stories-3 .story .story-photo{position:relative!important;inset:auto!important;display:block;width:100%!important;height:auto!important;aspect-ratio:16/11;object-fit:cover;border-radius:8px;opacity:1!important;filter:none!important;transform:none!important}
+body.narrative-stories #explore-stories-1 .story .story-top,body.narrative-stories #explore-stories-3 .story .story-top{display:none!important}
+body.narrative-stories #explore-stories-1 .story .story-bottom,body.narrative-stories #explore-stories-3 .story .story-bottom{position:static!important;padding:20px 0 0!important;background:none!important;color:var(--nr-ink)!important;display:block!important}
+body.narrative-stories #explore-stories-1 .story h3,body.narrative-stories #explore-stories-3 .story h3{font-size:24px!important;font-weight:500!important;line-height:1.45!important;margin:0 0 10px!important;color:var(--nr-ink)!important}
+body.narrative-stories #explore-stories-1 .story p,body.narrative-stories #explore-stories-3 .story p{font-size:13px!important;line-height:1.8!important;margin:0!important;color:var(--nr-muted)!important}
+body.narrative-stories #explore-stories-1 .story .enter,body.narrative-stories #explore-stories-3 .story .enter{color:var(--nr-accent)!important;margin-top:17px!important;font-size:11px!important;border:0!important;padding:0!important}
+body.narrative-stories #explore-stories-1 .story .enter:before,body.narrative-stories #explore-stories-3 .story .enter:before{display:none!important}
+body.narrative-stories #explore-stories-2 .grid{margin:0!important;max-width:none}
+body.narrative-stories #explore-stories-2 .grid .story{grid-template-columns:110px 1fr!important;min-height:145px!important;padding:18px 0!important}
+body.narrative-stories #explore-stories-2 .story-photo{width:110px!important;height:125px!important}
+body.narrative-stories #explore-stories-3 .grid{gap:36px 28px!important}
+body.narrative-stories #explore-stories-3 .story.portrait .story-photo{object-position:50% 18%}
+body.narrative-stories .story:hover h3{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+body.narrative-stories .story:focus-visible{outline:2px solid var(--nr-accent)!important;outline-offset:7px}
+body.narrative-stories #explore-stories-1 .grid a.story[hidden],body.narrative-stories #explore-stories-3 .grid a.story[hidden]{display:none!important}
+@media(max-width:900px){body.narrative-stories #explore-stories-1 .grid{grid-template-columns:1fr 1fr!important}body.narrative-stories .narrative-opening{gap:28px}}
+@media(max-width:600px){body.narrative-stories .narrative-opening{display:block;padding:32px 0 18px}body.narrative-stories main>.filters{gap:18px;margin-bottom:18px!important}body.narrative-stories main>.filters button{font-size:11px!important}body.narrative-stories #explore-stories-1 .grid,body.narrative-stories #explore-stories-3 .grid{grid-template-columns:1fr!important;gap:30px!important}body.narrative-stories #explore-stories-2 .grid .story{grid-template-columns:84px minmax(0,1fr)!important}body.narrative-stories #explore-stories-2 .story-photo{width:84px!important;height:110px!important}body.narrative-stories .narrative-chapter{padding-bottom:30px}}
+
+body.narrative-stories #explore-stories-1 .grid a.story:nth-child(n){grid-column:auto!important;grid-row:auto!important}body.narrative-stories #explore-stories-1 .grid a.story[hidden]{display:none!important}
