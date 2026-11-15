@@ -1,0 +1,24 @@
+/* 连续星空隧道与藤蔓路径；七幕影像仍来自项目本地素材。 */
+body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage.voyage-cosmos{background:radial-gradient(ellipse 75% 75% at 53% 50%,#153a45 0%,#071a22 45%,#030d15 100%)}
+.voyage-cosmos .voyage-stars{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.voyage-cosmos .voyage-vine{position:absolute;z-index:5;left:44%;top:0;width:15%;height:100%;pointer-events:none;opacity:.75;filter:drop-shadow(0 0 10px #dcb77a55)}
+.voyage-vine .vine-spine{fill:none;stroke:url(#vine-gradient);stroke-width:2.3}
+.voyage-vine .vine-branch{fill:none;stroke:#b7a985;stroke-opacity:.3;stroke-width:1.1}
+.voyage-vine .vine-node{fill:#f4d5a2;opacity:.8;filter:drop-shadow(0 0 7px #efc285)}
+.voyage-cosmos .voyage-scene{background:transparent}
+.voyage-cosmos .voyage-scene:after,.voyage-cosmos .voyage-scene[data-scene="2"]:after,.voyage-cosmos .voyage-scene[data-scene="3"]:after,.voyage-cosmos .voyage-scene[data-scene="4"]:after,.voyage-cosmos .voyage-scene[data-scene="5"]:after{background:transparent}
+.voyage-cosmos .voyage-photo{inset:14% 6% 14% auto;width:43%;height:72%;border-radius:42% 15% 40% 16% / 35% 20% 46% 24%;-webkit-mask-image:radial-gradient(ellipse 76% 72% at 50% 50%,#000 49%,#000b 70%,transparent 100%);mask-image:radial-gradient(ellipse 76% 72% at 50% 50%,#000 49%,#000b 70%,transparent 100%);filter:saturate(.88) contrast(1.05)}
+.voyage-cosmos .voyage-scene:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-photo{left:5%;right:auto}
+.voyage-cosmos .voyage-scene[data-scene="2"] .voyage-content,.voyage-cosmos .voyage-scene[data-scene="4"] .voyage-content{color:#f7f2e9}
+.voyage-cosmos .voyage-scene[data-scene="2"] .voyage-content h1 em,.voyage-cosmos .voyage-scene[data-scene="4"] .voyage-content h1 em{color:#e9c18c}
+.voyage-cosmos .voyage-scene[data-scene="2"] .voyage-copy,.voyage-cosmos .voyage-scene[data-scene="4"] .voyage-copy{color:#dce7e4}
+.voyage-cosmos .voyage-scene[data-scene="2"] .voyage-tag,.voyage-cosmos .voyage-scene[data-scene="4"] .voyage-tag,.voyage-cosmos .voyage-scene[data-scene="2"] .voyage-proof,.voyage-cosmos .voyage-scene[data-scene="4"] .voyage-proof{color:#efd3a7}
+.voyage-cosmos .voyage-scene[data-scene="2"] .voyage-cta,.voyage-cosmos .voyage-scene[data-scene="4"] .voyage-cta{background:#e8c494;color:#102d33}
+.voyage-cosmos.voyage-stage-light .voyage-bottom,.voyage-cosmos.voyage-stage-light .voyage-bottom .voyage-instruction{color:#f7f2e9}
+.voyage-cosmos.voyage-stage-light .voyage-steps button:before{background:#f7f2e966}
+.voyage-cosmos.voyage-stage-light .voyage-steps button[aria-current="step"]:before{background:#e8c494}
+.voyage-cosmos .voyage-tunnel,.voyage-cosmos .voyage-warp{display:none}
+@media(min-width:1201px){.voyage-cosmos .voyage-task .voyage-content h1{font-size:clamp(60px,5.5vw,82px);max-width:540px}.voyage-cosmos .voyage-scene:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-content h1{font-size:clamp(60px,5.5vw,82px);max-width:540px}}
+@media(min-width:651px) and (max-width:1200px){.voyage-cosmos .voyage-photo{right:0;width:42%;opacity:.86}.voyage-cosmos .voyage-scene:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-photo{left:0;right:auto}.voyage-cosmos .voyage-task .voyage-content h1{font-size:clamp(56px,6vw,74px);max-width:530px}.voyage-cosmos .voyage-task .voyage-copy{max-width:510px}}
+@media(max-width:650px){.voyage-cosmos .voyage-vine{left:76%;width:20%;opacity:.38}.voyage-cosmos .voyage-photo,.voyage-cosmos .voyage-scene:is([data-scene="3"],[data-scene="4"],[data-scene="5"]) .voyage-photo{inset:0;width:100%;height:100%;border-radius:0;opacity:.22;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%);mask-image:linear-gradient(90deg,transparent 0%,#000 45%)}.voyage-cosmos .voyage-scene[data-scene="2"] .voyage-content,.voyage-cosmos .voyage-scene[data-scene="4"] .voyage-content{color:#f7f2e9}}
+@media(prefers-reduced-motion:reduce){.voyage-cosmos .voyage-stars{opacity:.35}.voyage-cosmos .voyage-vine{opacity:.45}}
