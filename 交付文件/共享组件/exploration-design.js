@@ -2,6 +2,15 @@
 (()=>{
  const path=decodeURIComponent(location.pathname),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const main=document.querySelector('main')||document.body;
+ // Keep existing Olympic photography; separate it from layered legacy backgrounds.
+ document.querySelectorAll('header.photo-editorial-hero').forEach(hero=>{
+  const bg=getComputedStyle(hero).backgroundImage,match=[...bg.matchAll(/url\(["']?(.*?)["']?\)/g)].pop();
+  if(!match)return;
+  const photo=document.createElement('img');photo.className='image-stage-photo';photo.src=match[1];photo.alt='';photo.setAttribute('aria-hidden','true');photo.setAttribute('data-no-zoom','');photo.decoding='async';
+  hero.style.setProperty('--image-stage-position',getComputedStyle(hero).backgroundPosition.split(',').pop().trim());
+  hero.prepend(photo);hero.classList.add('image-stage');
+ });
+
  const bars=[...document.querySelectorAll('main .chart button.bar[data-i]')];
  const profiles=[['S5_','growth','届次透镜','沿时间轴拖动，核对每一届的奖牌行变化。'],['S8_','balance','平等的距离','50% 是比较参照，不代表不同小项的夺牌机会完全相同。'],['S3_地缘','gaps','历史断点','用真实年份间距阅读变化；总量缺口不能单独证明抵制原因。'],['S4_小','compare','双案例对照','选择两个代表团，比较原图中的获奖行；这不是效率排名。'],['S6_','identity','身份核验台','按原页面的身份标签检索；未核验记录不能当作真实个人排名。'],['S9_','archive','赛场档案柜','按项目名检索，查看数据中出现的届数；出现次数不等于永久退出。'],['S10_','rank','项目机会谱','点选项目联动原有详情。刻度仍沿用原图的获奖行口径。']];
  const profile=profiles.find(x=>path.includes(x[0]));
