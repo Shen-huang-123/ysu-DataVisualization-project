@@ -26,14 +26,6 @@
   line(pts,i%5===0?gold:i%2?cyan:pale);
   if(i%4===0){const curve=new THREE.CatmullRomCurve3(pts.slice(0,-1),true);const tube=new THREE.TubeGeometry(curve,80,i%8===0?.022:.013,4,true);group.add(new THREE.Mesh(tube,new THREE.MeshBasicMaterial({color:i%8===0?0xd4ad73:0x6ab8c4,transparent:true,opacity:i%8===0?.54:.35,fog:true})));}
  }
- for(let strand=0;strand<7;strand++){
-  const pts=[];
-  for(let i=0;i<=360;i++){
-   const z=-i*.48-5,a=strand*Math.PI*2/7+i*.045;
-   pts.push(new THREE.Vector3(Math.cos(a)*4.16+Math.sin(z*.035)*.22,Math.sin(a)*3.22,z));
-  }
-  line(pts,strand%3===0?gold:pale);
- }
  const count=680,positions=new Float32Array(count*3),colors=new Float32Array(count*3);
  for(let i=0;i<count;i++){
   const rand=n=>{const x=Math.sin((i+1)*n*12.9898)*43758.5453;return x-Math.floor(x)};

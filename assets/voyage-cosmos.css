@@ -36,3 +36,14 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
 @media(prefers-reduced-motion:reduce){.voyage-cosmos .voyage-webgl{display:none}.voyage-cosmos .voyage-autoplay{display:none}}
 
 @media(max-width:650px){.voyage-cosmos .voyage-webgl{opacity:.42}.voyage-cosmos .voyage-autoplay{font-size:12px}}
+
+/* Suspended memory windows share the tunnel's elliptical geometry. */
+@media(min-width:651px){
+ .voyage-cosmos .voyage-photo{border-radius:50% / 48%;-webkit-mask-image:none;mask-image:none;box-shadow:0 0 0 1px rgba(151,205,207,.38),0 0 78px rgba(42,129,146,.23),inset 0 0 70px rgba(2,13,22,.48)}
+ .voyage-cosmos .voyage-photo:after{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(235,220,184,.34);box-shadow:inset 0 0 80px rgba(3,13,20,.5);pointer-events:none}
+}
+
+/* Quiet field behind chapter copy; the tunnel opens fully between chapters. */
+.voyage-cosmos .voyage-scene:is([data-scene="0"],[data-scene="1"],[data-scene="2"],[data-scene="6"]):after{background:linear-gradient(90deg,#030d15f7 0%,#030d15e8 28%,#030d15a8 43%,transparent 66%)}
+.voyage-cosmos .voyage-scene:is([data-scene="3"],[data-scene="4"],[data-scene="5"]):after{background:linear-gradient(270deg,#030d15f7 0%,#030d15e8 29%,#030d15a8 43%,transparent 66%)}
+@media(max-width:650px){.voyage-cosmos .voyage-scene:after{background:linear-gradient(90deg,#030d15db,#030d1588 65%,#030d1544)!important}}
