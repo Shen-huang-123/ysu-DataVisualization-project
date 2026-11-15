@@ -277,4 +277,5 @@ scenes.slice(2,6).forEach((scene,i)=>scene.querySelectorAll('a[href]').forEach(l
 const rankData={official:['15','按官方小项计，西班牙赢得 5 枚金牌，金牌榜位列第 15。团队项目每个小项仍只计一枚。'],rows:['05','按运动员获奖行计，西班牙产生 40 条金牌获奖记录，排名升至第 5。多人项目会放大行数。']};
 stage.querySelectorAll('[data-voyage-rank]').forEach(button=>button.addEventListener('click',()=>{const key=button.dataset.voyageRank;stage.querySelectorAll('[data-voyage-rank]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));stage.querySelector('#voyage-rank-number').textContent=rankData[key][0];stage.querySelector('#voyage-rank-explain').textContent=rankData[key][1]}));
 document.addEventListener('keydown',e=>{if(!document.body.classList.contains('voyage-live')||e.altKey||e.ctrlKey||e.metaKey||e.target.closest('input,textarea,select,button,a,[contenteditable]'))return;if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();go(Math.min(6,last+1))}else if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();go(Math.max(0,last-1))}});
-})();</script></body></html>
+})();</script><script src="交付文件/共享组件/olympic-guide.js" defer></script>
+</body></html>

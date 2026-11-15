@@ -15,3 +15,22 @@
 .ox-control .ox-foot{display:none!important}.ox-control .ox-progress-text{display:none!important}
 .ox-control .ox-close{font-weight:300!important;background:transparent!important;transform:none!important}
 @media(max-width:640px){.ox-control .ox-panel{position:fixed!important;left:16px!important;right:16px!important;top:auto!important;bottom:76px!important;width:auto!important;max-height:calc(100dvh - 100px)!important;height:auto!important;overflow:auto!important;padding:22px!important}}
+
+/* The reading line sits beneath the emblem, never around it. */
+.ox-control .ox-trigger:before,.ox-control .ox-trigger:after{content:'';position:absolute;left:8px;right:8px;bottom:0;height:1px;border:0;border-radius:0;pointer-events:none}
+.ox-control .ox-trigger:before{background:#9ab5bd55}.ox-control .ox-trigger:after{background:#e6c58f;transform:scaleX(var(--guide-progress,0));transform-origin:left}
+.ox-control .ox-rings i{animation:og-ring-breathe 5s ease-in-out infinite!important;animation-delay:calc(var(--ox-i)*-.65s)!important}
+@keyframes og-ring-breathe{0%,100%{transform:translateY(0);opacity:.78}50%{transform:translateY(-1.5px);opacity:1}}
+.ox-control .ox-panel{width:min(400px,calc(100vw - 32px))!important;padding:30px!important;background:linear-gradient(135deg,#102832f5,#071820fa)!important;border-color:#9ab5bd2b!important;border-radius:8px!important}
+.ox-control .ox-panel-head strong{font-size:24px!important;font-family:'STSong','SimSun',serif!important;letter-spacing:.08em!important}
+.ox-control .ox-panel>p{max-width:28ch!important;margin:14px 0 28px!important}
+.ox-control .ox-panel .ox-links a{position:relative;min-height:80px!important;border-top:0!important;border-bottom:1px solid #bdcdd12b!important;padding:16px 0!important}
+.ox-control .ox-panel .ox-links a:after{content:'';position:absolute;left:0;bottom:-1px;right:0;height:1px;background:#e6c58f;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.ox-control .ox-panel .ox-links a:hover:after,.ox-control .ox-panel .ox-links a:focus-visible:after{transform:scaleX(1)}
+.ox-control .ox-panel .ox-links b{display:flex;align-items:baseline;gap:18px!important;font-size:20px!important;font-weight:400!important}
+.ox-control .og-number{font:400 12px/1.5 Georgia,serif!important;color:#bca77f!important;letter-spacing:.1em!important;min-width:20px}
+.ox-control .og-title{font-family:'STSong','SimSun',serif!important;font-weight:400!important;letter-spacing:.07em!important}
+.ox-control .ox-links small{margin:6px 0 0 38px!important;color:#a6b9bd!important;font-size:11px!important}
+.ox-control .ox-arrow{font-size:20px!important;transition:transform .25s ease!important}.ox-control .ox-panel a:hover .ox-arrow{transform:translate(3px,-3px)}
+@media(max-width:640px){.ox-control .ox-panel{padding:24px!important}.ox-control .ox-panel .ox-links a{min-height:72px!important}.ox-control .ox-panel .ox-links b{font-size:19px!important}}
+@media(prefers-reduced-motion:reduce){.ox-control .ox-rings i{animation:none!important}.ox-control .ox-panel a:after,.ox-control .ox-arrow{transition:none!important}}
