@@ -1,0 +1,42 @@
+{
+  "historic_compared": 555,
+  "three_color_agreement": 548,
+  "differences": 7,
+  "difference_types": {
+    "archive_missing_one_color": 4,
+    "documented_later_change": 2,
+    "revoked_bronze_successor_unconfirmed": 1
+  },
+  "rank_sensitivity": [
+    {
+      "year": 2008,
+      "scenario": "女子现代五项铜牌转授",
+      "changed_delegations": 0,
+      "changed_rank_rows": [],
+      "mean_absolute_rank_shift_before": 3.7326,
+      "mean_absolute_rank_shift_after": 3.7326,
+      "top_ten_set_unchanged": true
+    },
+    {
+      "year": 2012,
+      "scenario": "男子 C1 200 米银铜重分配",
+      "changed_delegations": 2,
+      "changed_rank_rows": [
+        {
+          "NOC": "LTU",
+          "before": 34,
+          "after": 35
+        },
+        {
+          "NOC": "NOR",
+          "before": 35,
+          "after": 34
+        }
+      ],
+      "mean_absolute_rank_shift_before": 3.7294,
+      "mean_absolute_rank_shift_after": 3.7059,
+      "top_ten_set_unchanged": true
+    }
+  ],
+  "scope_note": "Only two documented later-change events were perturbed; this is not an all-910-item current IOC re-ranking."
+}

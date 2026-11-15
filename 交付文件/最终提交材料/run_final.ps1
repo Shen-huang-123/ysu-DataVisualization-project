@@ -8,7 +8,7 @@ try {
     $prefix = @("-3")
     $ready = $false
     try {
-        & $py @prefix -c "import reportlab,PIL" 2>$null
+        & $py @prefix -c "import reportlab,PIL,pandas,matplotlib,pymupdf" 2>$null
         $ready = ($LASTEXITCODE -eq 0)
     } catch { $ready = $false }
     if (-not $ready) {

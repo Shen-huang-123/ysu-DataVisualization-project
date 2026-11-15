@@ -177,7 +177,7 @@ pages = [
  ], S2/"S2_三口径排名路径.png", "三口径定义及完整榜见任务三S2报告和数据表。"),
  ("03  主专题 S2", "机制不是偶然：跨届检验", [
   "荷兰2024年的67行金牌记录中，曲棍球35行、赛艇11行，两项共占68.7%。团队项目成员规模解释了金牌行相对小项的膨胀，但记录完整性与并列奖牌同样需要留意。",
-  "2008、2012、2016三个届次的同口径检验中，平均绝对名次变化约为3.7、3.7、3.9位。这说明重排机制具有跨届稳定性；历史小项表由主数据生成并以IOC届次总数核验，其证据等级低于2024的外部逐项结果。",
+  "2008、2012、2016三个届次的同口径代理检验中，平均绝对名次变化约为3.7、3.7、3.9位，提示重排机制在这些历史代理中重复出现。其中555项已与Olympedia独立对照，548项三色一致、7项有差异；仍不能称现行IOC逐项授牌，其证据等级低于2024外部逐项结果层。",
  ], S2/"S2_跨届机制稳定性.png", "检验只说明口径效应稳定，不说明哪一种排名更公平。"),
  ("03  创新专题", "冠军王朝的保质期", [
   "把1896—2016年的同一小项金牌归属改写为相邻届次的控制权转移，得到4,511次可比转移；相邻届同代表团卫冕率为29.5%。该指标衡量小项控制权延续，不等同于运动员个人卫冕。",
@@ -298,6 +298,11 @@ for name,url,method in sources:
 txt(c,"完整字段字典、质量检查代码、外部快照与复现命令，分别见任务一至任务四目录。",49,y,9,MUTED)
 c.showPage()
 c.save()
+
+# The base report is 19 pages; this evidence appendix makes the submitted PDF 20.
+from build_evidence_hierarchy import OUT as EVIDENCE_OUT
+from append_evidence_report_page import append_page
+append_page()
 
 # A2 poster: fewer claims, larger labels, and two readable self-drawn comparisons.
 PW, PH = A2

@@ -1,5 +1,5 @@
 {
-  "formal_report_pages": 19,
+  "formal_report_pages": 20,
   "template_answer_pages": 20,
   "formal_abstract_characters": 247,
   "formal_has_references": true,
@@ -16,7 +16,7 @@
   "total_person_days_filled": false,
   "s7_registration_confirmed": "unknown",
   "submission_channel_confirmed": "unknown",
-  "online_latest_synced": true,
+  "online_latest_synced": false,
   "formal_s1_to_s10_covered": true,
   "s2_rank_direction_correct": true,
   "online_version": 43,
