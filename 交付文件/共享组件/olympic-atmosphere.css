@@ -1,33 +1,22 @@
-/* Scenography stays beneath content; existing cards and charts keep their own surfaces. */
-body.oa-host{isolation:isolate;background-image:none!important}
-.oa-world{--oa-x:0px;--oa-y:0px;--oa-scroll:0px;--oa-blue:#80aeb633;--oa-gold:#d8b5812e;position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;contain:strict;background:radial-gradient(ellipse at 0 35%,var(--oa-blue),transparent 38%),radial-gradient(ellipse at 100% 75%,var(--oa-gold),transparent 38%)}
-.oa-world[data-night="true"]{--oa-blue:#438b9b24;--oa-gold:#c49b6020}
-.oa-grain{position:absolute;inset:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.7' d='M0 0h160v160H0z'/%3E%3C/svg%3E")}
-.oa-light{position:absolute;inset:-5%;background:radial-gradient(ellipse at 95% 22%,var(--oa-gold),transparent 36%),radial-gradient(ellipse at 2% 85%,var(--oa-blue),transparent 33%);transform:translate(var(--oa-x),var(--oa-y));animation:oa-daylight 38s ease-in-out infinite alternate}
-.oa-landscape{position:absolute;inset:-25px;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.32;transform:translateY(calc(-1 * var(--oa-scroll)));mask-image:linear-gradient(90deg,#000 0%,#0009 12%,transparent 32%,transparent 72%,#0009 91%,#000);-webkit-mask-image:linear-gradient(90deg,#000 0%,#0009 12%,transparent 32%,transparent 72%,#0009 91%,#000)}
-.oa-world[data-night="true"] .oa-landscape{opacity:.25}
-.oa-archive .oa-landscape{background-image:url('atmosphere-archive.svg');opacity:.25}
+/* Original architectural cutaways. References documented in 背景艺术指导与参考.md. */
+body.oa-host{isolation:isolate;background-image:none!important;transform:none!important;filter:none!important;perspective:none!important;will-change:auto!important;animation:none!important}
+body.oa-host:before{background:none!important;box-shadow:none!important}
+.oa-world{--oa-x:0px;--oa-y:0px;--oa-scroll:0px;--oa-blue:#91b0b62b;--oa-gold:#d5b18b2b;position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;contain:strict;background:radial-gradient(ellipse 30% 80% at -10% 90%,var(--oa-blue),transparent),radial-gradient(ellipse 26% 60% at 108% 15%,var(--oa-gold),transparent)}
+.oa-world[data-night="true"]{--oa-blue:#4781961f;--oa-gold:#b98e5524}
+.oa-grain{position:absolute;inset:0;opacity:.022;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.7' d='M0 0h160v160H0z'/%3E%3C/svg%3E")}
+.oa-light{position:absolute;inset:-5%;background:radial-gradient(ellipse 18% 75% at 100% 14%,var(--oa-gold),transparent 85%),radial-gradient(ellipse 18% 55% at -5% 85%,var(--oa-blue),transparent 85%);transform:translate(var(--oa-x),var(--oa-y));transition:transform 1.1s cubic-bezier(.2,.65,.3,1);animation:oa-daylight 38s ease-in-out infinite alternate}
+.oa-landscape{position:absolute;inset:-25px;background:center/cover no-repeat;opacity:.65;transform:translateY(calc(-1 * var(--oa-scroll)));transition:transform .5s ease-out;mask-image:linear-gradient(90deg,#000 0%,#000b 9%,transparent 28%,transparent 76%,#0008 94%,#000);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000b 9%,transparent 28%,transparent 76%,#0008 94%,#000)}
+.oa-world[data-night="true"] .oa-landscape{opacity:.48}
+.oa-archive .oa-landscape{background-image:url('atmosphere-archive.svg')}
 .oa-stadium .oa-landscape{background-image:url('atmosphere-stadium.svg')}
 .oa-field .oa-landscape{background-image:url('atmosphere-field.svg')}
-.oa-field[data-field="water"] .oa-landscape{background-image:url('atmosphere-water.svg');background-size:120% 140%;transform:rotate(-4deg) translateY(calc(-1 * var(--oa-scroll)))}
-.oa-field[data-field="court"] .oa-landscape{background-image:url('atmosphere-court.svg');background-size:130% 100%}
-.oa-sunset{--oa-gold:#e5a46e38;--oa-blue:#7da4c92e}
-.oa-sunset[data-night="true"]{--oa-gold:#c8824c24;--oa-blue:#47668e2e}
-.oa-sunset .oa-landscape{background-image:url('atmosphere-sunset.svg');opacity:.35}
-@keyframes oa-daylight{from{opacity:.65}to{opacity:1}}
-@media(max-width:700px){.oa-landscape{opacity:.18;background-size:auto 100%;mask-image:linear-gradient(90deg,#000,transparent 22%,transparent 84%,#000);-webkit-mask-image:linear-gradient(90deg,#000,transparent 22%,transparent 84%,#000)}.oa-grain{opacity:.025}.oa-light{animation:none}}
-@media(prefers-reduced-motion:reduce){.oa-light{animation:none;transform:none}.oa-landscape{transform:none!important}}
+.oa-field[data-field="water"] .oa-landscape{background-image:url('atmosphere-water.svg');background-size:110% 110%}
+.oa-field[data-field="court"] .oa-landscape{background-image:url('atmosphere-court.svg')}
+.oa-sunset{--oa-gold:#e4a86b38;--oa-blue:#769ac52b}
+.oa-sunset[data-night="true"]{--oa-gold:#c9884a29;--oa-blue:#47668e2e}
+.oa-sunset .oa-light{background:radial-gradient(ellipse 20% 35% at 105% 40%,var(--oa-gold),transparent 85%),radial-gradient(ellipse 30% 50% at -10% 85%,var(--oa-blue),transparent 85%)}
+.oa-sunset .oa-landscape{background-image:url('atmosphere-sunset.svg')}
+@keyframes oa-daylight{from{opacity:.75}to{opacity:1}}
+@media(max-width:700px){.oa-landscape{opacity:.32;background-size:auto 100%;mask-image:linear-gradient(90deg,#000,transparent 19%,transparent 86%,#000);-webkit-mask-image:linear-gradient(90deg,#000,transparent 19%,transparent 86%,#000)}.oa-world[data-night="true"] .oa-landscape{opacity:.25}.oa-grain{opacity:.018}.oa-light{animation:none}}
+@media(prefers-reduced-motion:reduce){.oa-light{animation:none;transform:none}.oa-landscape{transform:none!important}.oa-landscape,.oa-light{transition:none}}
 @media print{.oa-world{display:none}body.oa-host{isolation:auto}}
-
-/* Replace legacy whole-body washes rather than accumulating background systems. */
-body.oa-host:before{background:none!important;box-shadow:none!important}
-
-/* Quiet architecture, directional light: leave the reading column untouched. */
-.oa-landscape{opacity:.16;mask-image:linear-gradient(90deg,#000 0%,#0007 8%,transparent 23%,transparent 82%,#0007 95%,#000);-webkit-mask-image:linear-gradient(90deg,#000 0%,#0007 8%,transparent 23%,transparent 82%,#0007 95%,#000);transition:transform .5s ease-out}
-.oa-world[data-night="true"] .oa-landscape{opacity:.14}
-.oa-archive .oa-landscape{opacity:.16}
-.oa-sunset .oa-landscape{opacity:.19}
-.oa-light{transition:transform 1.1s cubic-bezier(.2,.65,.3,1);background:radial-gradient(ellipse 28% 65% at 102% 12%,var(--oa-gold),transparent 85%),radial-gradient(ellipse 22% 70% at -4% 76%,var(--oa-blue),transparent 85%)}
-.oa-grain{opacity:.022}
-@media(max-width:700px){.oa-landscape,.oa-world[data-night="true"] .oa-landscape{opacity:.12}.oa-grain{opacity:.018}}
-@media(prefers-reduced-motion:reduce){.oa-landscape,.oa-light{transition:none}}

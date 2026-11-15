@@ -181,3 +181,5 @@ IOC 小项直连在此前环境中返回 502 或 Access Denied。赛时官方成
 2026-11-15 首页导航闪旧样式修复：voyage-cosmos.css中顶部栏最终规则从仅body.voyage-live改为同时匹配html.voyage-preparing body，在GSAP与穿隧启动前已使用同一透明导航、字号、位置；首屏导航不执行背景过渡。根首页CSS缓存更新。桌面1440及手机390各连续采样90帧，涵盖live=false到true，背景/圆角/坐标/高度/字体始终只有一种状态，无溢出。共享背景v2收敛边缘纹理、降低亮度、方向性光感及平滑鼠标反馈；四类任务夜间实际截图及脚本检查通过。
 
 2026-11-15 首页首次图片闪跳修复：原先DOM背景照片加载后会替换为WebGL纹理照片，两套裁切/加载时机产生跳变。现照片始终使用原DOM单层，删除纹理照片加载、空的网格更新及memory-in-3d隐藏规则；3D隧道保持WebGL，照片保留独立translate/rotate鼠标视差与轻微呼吸。根首页不再加载重复base64图片数据，首张host.jpg添加high优先级preload，CSS/JS缓存更新。全新浏览器上下文桌面/手机/低动态各75帧核查：照片可见状态恒定、无切层、无脚本异常及横向溢出；正常模式WebGL仍运行。
+
+2026-11-15 查阅Magnetism Adidas Arena、Immersive Garden Vallourec、Brianna Patel Olympic Museum设计案例，将共享背景v3改为非对称建筑剖切、浅浮雕宽面、细边和单侧光照；重绘6张原创SVG，未复制第三方照片/模型/源码。参考链接与访问边界见交付文件/背景艺术指导与参考.md。发现body的xz-enter动画fill-mode:both会让固定背景/导航使用整篇body作为包含块，背景高度约4810px而非900px；对oa-host取消整页动画/transform/filter/perspective/will-change，保留局部动效，背景恢复视口高度。40页桌面/手机、明暗组合160次检查含视口高度、非拦截图层、脚本异常和溢出，均通过。根首页穿隧未改。
