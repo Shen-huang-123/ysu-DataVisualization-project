@@ -42,7 +42,7 @@
  let width=0,height=0,lastProgress=0;
 
  function resize(){const w=host.clientWidth,h=host.clientHeight;if(w===width&&h===height)return;width=w;height=h;if(!w||!h)return;renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.25));renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
- function render(p){lastProgress=p;if(!width||!height)resize();if(!width||!height)return;const z=-p*105,phase=(p*6)%1,boost=Math.pow(Math.sin(phase*Math.PI),2);camera.position.set(Math.sin(z*.035)*1.1,Math.cos(z*.03)*.5,z);camera.lookAt(Math.sin((z-12)*.035)*1.1,Math.cos((z-12)*.03)*.5,z-12);camera.fov=72+boost*7;camera.updateProjectionMatrix();trailMaterial.opacity=.15+boost*.45;renderer.render(scene,camera)}
+ function render(p){lastProgress=p;if(!width||!height)resize();if(!width||!height)return;const step=p*6,chapter=Math.floor(step),phase=step-chapter,t=Math.max(0,Math.min(1,(phase-.18)/.66)),flow=t*t*(3-2*t),z=-(chapter+flow)*17.5,boost=Math.pow(Math.sin(t*Math.PI),2);camera.position.set(Math.sin(z*.035)*1.1,Math.cos(z*.03)*.5,z);camera.lookAt(Math.sin((z-12)*.035)*1.1,Math.cos((z-12)*.03)*.5,z-12);camera.fov=72+boost*7;camera.updateProjectionMatrix();trailMaterial.opacity=.15+boost*.45;renderer.render(scene,camera)}
  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();host.style.display='none';if(fallback)fallback.style.display='block';window.renderVoyage3D=null;if(window.drawVoyageStars)window.drawVoyageStars(lastProgress)});
  addEventListener('resize',()=>{resize();render(lastProgress)},{passive:true});
  window.renderVoyage3D=render;render(0);

@@ -228,7 +228,7 @@ function render(){
   gsap.set(scene,{opacity,visibility:visible?'visible':'hidden',zIndex:isTo?2:1,scale:1,clipPath:'none',pointerEvents:i===nearest&&opacity>.65?'auto':'none'});
   if(visible&&!reduce){
    const photo=scene.querySelector('.voyage-photo');
-   gsap.set(photo,{scale:isTo?1.13-.13*incoming:1.02+.15*(1-outgoing)});
+   gsap.set(photo,{scale:isTo?.88+.12*incoming:1-.12*(1-outgoing),x:isTo?(i>=3&&i<=5?1:-1)*38*(1-incoming):0,rotationY:isTo?(i>=3&&i<=5?-1:1)*9*(1-incoming):0,transformPerspective:1100});
    gsap.set(scene.querySelector('.voyage-content'),{opacity:1,y:isTo?20*(1-incoming):-18*(1-outgoing)});
    textGroups[i].forEach(node=>gsap.set(node,{y:0}));
    if(!small)gsap.set(floatGroups[i],{x:isTo?(1-incoming)*35:-(1-outgoing)*35,y:isTo?-(1-incoming)*20:(1-outgoing)*20});

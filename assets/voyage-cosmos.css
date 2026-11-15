@@ -97,3 +97,12 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
  .voyage-cosmos .voyage-task .voyage-proof{margin-top:14px;font-size:11px;gap:7px}
  .voyage-cosmos .voyage-task .voyage-cta{min-height:40px;margin-top:14px;padding:8px 14px;font-size:12px}
 }
+
+/* Quiet astronomical framing, with reading time before each camera journey. */
+.voyage-cosmos .voyage-task .voyage-tag{letter-spacing:.16em;font-weight:500;color:#c8ae83}
+.voyage-cosmos .voyage-photo{will-change:transform,opacity}
+.voyage-cosmos .voyage-direct{box-shadow:0 12px 40px #0004;border-color:#b1cbd52e}
+.voyage-cosmos .voyage-direct a{transition:background .2s ease,color .2s ease}
+.voyage-cosmos .voyage-cta{transition:background .2s ease,transform .2s ease}
+.voyage-cosmos .voyage-cta:hover{transform:translateY(-2px)}
+@media(min-width:651px){.voyage-cosmos .voyage-task .voyage-proof{flex-wrap:wrap;width:100%;color:#bfcdd0;font-weight:400}.voyage-cosmos .voyage-task .voyage-copy{color:#c3d0d2}.voyage-cosmos .voyage-task .voyage-content h1{letter-spacing:-.045em}}
