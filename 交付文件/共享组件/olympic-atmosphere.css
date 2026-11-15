@@ -21,3 +21,13 @@ body.oa-host{isolation:isolate;background-image:none!important}
 
 /* Replace legacy whole-body washes rather than accumulating background systems. */
 body.oa-host:before{background:none!important;box-shadow:none!important}
+
+/* Quiet architecture, directional light: leave the reading column untouched. */
+.oa-landscape{opacity:.16;mask-image:linear-gradient(90deg,#000 0%,#0007 8%,transparent 23%,transparent 82%,#0007 95%,#000);-webkit-mask-image:linear-gradient(90deg,#000 0%,#0007 8%,transparent 23%,transparent 82%,#0007 95%,#000);transition:transform .5s ease-out}
+.oa-world[data-night="true"] .oa-landscape{opacity:.14}
+.oa-archive .oa-landscape{opacity:.16}
+.oa-sunset .oa-landscape{opacity:.19}
+.oa-light{transition:transform 1.1s cubic-bezier(.2,.65,.3,1);background:radial-gradient(ellipse 28% 65% at 102% 12%,var(--oa-gold),transparent 85%),radial-gradient(ellipse 22% 70% at -4% 76%,var(--oa-blue),transparent 85%)}
+.oa-grain{opacity:.022}
+@media(max-width:700px){.oa-landscape,.oa-world[data-night="true"] .oa-landscape{opacity:.12}.oa-grain{opacity:.018}}
+@media(prefers-reduced-motion:reduce){.oa-landscape,.oa-light{transition:none}}

@@ -113,15 +113,15 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
 @media(prefers-reduced-motion:reduce){.voyage-cosmos .voyage-tag:before{animation:none}}
 
 /* Navigation belongs to the scene, rather than two floating application panels. */
-body.voyage-live .topbar,body.voyage-live .topbar.scrolled{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0!important;left:clamp(20px,4vw,70px)!important;right:clamp(20px,4vw,70px)!important;top:14px!important;padding:0!important;height:60px!important;text-shadow:0 2px 12px #030d15}
-body.voyage-live .topbar .outline{border:0!important;border-radius:0!important;padding:10px 0!important;border-bottom:1px solid #c5ae7d80!important}
+:is(body.voyage-live,html.voyage-preparing body) .topbar,:is(body.voyage-live,html.voyage-preparing body) .topbar.scrolled{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0!important;left:clamp(20px,4vw,70px)!important;right:clamp(20px,4vw,70px)!important;top:14px!important;padding:0!important;height:60px!important;text-shadow:0 2px 12px #030d15}
+:is(body.voyage-live,html.voyage-preparing body) .topbar .outline{border:0!important;border-radius:0!important;padding:10px 0!important;border-bottom:1px solid #c5ae7d80!important}
 .voyage-cosmos .voyage-direct{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:0!important;gap:clamp(14px,3vw,44px)!important}
 .voyage-cosmos .voyage-direct a,.voyage-cosmos .voyage-direct a:nth-child(n){position:relative;background:transparent!important;color:#d8e2e2!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:10px 0!important;min-height:44px!important;min-width:0!important;width:auto!important;gap:9px!important;text-shadow:0 2px 12px #030d15;transform:none!important}
 .voyage-cosmos .voyage-direct a:after{content:'';position:absolute;left:0;right:100%;bottom:2px;height:1px;background:#e8c494;transition:right .25s ease}
 .voyage-cosmos .voyage-direct a:hover,.voyage-cosmos .voyage-direct a[aria-current=step]{color:#f0d19e!important}
 .voyage-cosmos .voyage-direct a:hover:after,.voyage-cosmos .voyage-direct a[aria-current=step]:after{right:0}
 .voyage-cosmos .voyage-direct a:focus-visible{outline:2px solid #e8c494;outline-offset:5px}
-@media(max-width:650px){body.voyage-live .topbar{top:8px!important;left:20px!important;right:20px!important}.voyage-cosmos .voyage-direct{gap:14px!important}.voyage-cosmos .voyage-direct a{font-size:11px!important}.voyage-cosmos .voyage-direct a span{font-size:10px!important}}
+@media(max-width:650px){:is(body.voyage-live,html.voyage-preparing body) .topbar{top:8px!important;left:20px!important;right:20px!important}.voyage-cosmos .voyage-direct{gap:14px!important}.voyage-cosmos .voyage-direct a{font-size:11px!important}.voyage-cosmos .voyage-direct a span{font-size:10px!important}}
 @media(prefers-reduced-motion:reduce){.voyage-cosmos .voyage-direct a:after{transition:none}}
 
 /* Scene entrances use editorial text and a fine rule, without capsule surfaces. */
@@ -142,12 +142,15 @@ body.voyage-live .topbar .outline{border:0!important;border-radius:0!important;p
 @media(max-width:650px) and (prefers-reduced-motion:no-preference){.voyage-cosmos .voyage-photo{animation:voyage-photo-breathe 9s ease-in-out infinite}}
 @keyframes voyage-photo-breathe{0%,100%{translate:0 0}50%{translate:0 -4px}}
 
-body.voyage-live .topbar .brandmark{border:0!important;background:none!important;border-radius:0!important;width:auto!important;height:auto!important;color:inherit!important;font-size:14px!important}
-body.voyage-live .topbar nav a:after{display:none!important;content:none!important}
-body.voyage-live .topbar .outline{border:0!important;background:transparent!important;padding:10px 0!important}
-body.voyage-live .topbar nav a{opacity:.8;font-weight:400!important;transition:opacity .2s ease!important}body.voyage-live .topbar nav a:hover{opacity:1}
+:is(body.voyage-live,html.voyage-preparing body) .topbar .brandmark{border:0!important;background:none!important;border-radius:0!important;width:auto!important;height:auto!important;color:inherit!important;font-size:14px!important}
+:is(body.voyage-live,html.voyage-preparing body) .topbar nav a:after{display:none!important;content:none!important}
+:is(body.voyage-live,html.voyage-preparing body) .topbar .outline{border:0!important;background:transparent!important;padding:10px 0!important}
+:is(body.voyage-live,html.voyage-preparing body) .topbar nav a{opacity:.8;font-weight:400!important;transition:opacity .2s ease!important}:is(body.voyage-live,html.voyage-preparing body) .topbar nav a:hover{opacity:1}
 
-body.voyage-live .topbar .brand,body.voyage-live .topbar nav a{font-family:'Noto Serif SC','Songti SC','SimSun',Georgia,serif!important;letter-spacing:.025em!important}
-body.voyage-live .topbar .brand{font-weight:600!important}body.voyage-live .topbar nav a{font-weight:400!important;font-size:14px!important}
+:is(body.voyage-live,html.voyage-preparing body) .topbar .brand,:is(body.voyage-live,html.voyage-preparing body) .topbar nav a{font-family:'Noto Serif SC','Songti SC','SimSun',Georgia,serif!important;letter-spacing:.025em!important}
+:is(body.voyage-live,html.voyage-preparing body) .topbar .brand{font-weight:600!important}:is(body.voyage-live,html.voyage-preparing body) .topbar nav a{font-weight:400!important;font-size:14px!important}
 
-body.voyage-live .topbar .brand,body.voyage-live .topbar nav a{font-family:inherit!important;letter-spacing:0!important}
+:is(body.voyage-live,html.voyage-preparing body) .topbar .brand,:is(body.voyage-live,html.voyage-preparing body) .topbar nav a{font-family:inherit!important;letter-spacing:0!important}
+
+/* The final header exists before animation libraries initialize. */
+html.voyage-preparing .topbar{transition:none!important}
