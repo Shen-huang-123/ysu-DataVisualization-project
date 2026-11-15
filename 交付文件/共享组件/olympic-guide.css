@@ -1,0 +1,17 @@
+/* A quiet Olympic contents menu. No progress ring or raised task tiles. */
+.ox-control .ox-trigger,.ox-control .ox-trigger:hover,.ox-control .ox-trigger:focus-visible{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:6px!important;transform:none!important;animation:none!important}
+.ox-control .ox-face{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+.ox-control .ox-rings{width:40px;height:28px;transform:scale(1.15)!important;transform-origin:center}
+.ox-control .ox-panel{box-sizing:border-box!important;width:min(340px,calc(100vw - 32px))!important;background:#0c2029f5!important;color:#f3f4ee!important;border:1px solid #a5b8bb33!important;border-radius:12px!important;padding:24px!important;box-shadow:0 16px 50px #0005!important;backdrop-filter:blur(16px)!important;animation:none!important}
+.ox-control .ox-panel:before{display:none!important;content:none!important}
+.ox-control .ox-panel-head strong{font-size:18px!important;font-weight:500!important;letter-spacing:.04em!important}
+.ox-control .ox-panel>p{font-size:12px!important;line-height:1.8!important;color:#a9bdc2!important;margin:12px 0 22px!important}
+.ox-control .ox-links{display:grid!important;gap:0!important;flex:none!important}
+.ox-control .ox-panel .ox-links a{background:transparent!important;box-shadow:none!important;border:0!important;border-top:1px solid #bdcdd126!important;border-radius:0!important;min-height:66px!important;padding:14px 0!important;transform:none!important;animation:none!important;transition:color .2s ease!important}
+.ox-control .ox-panel .ox-links a:hover,.ox-control .ox-panel .ox-links a[aria-current=page]{color:#edcea1!important;background:transparent!important}
+.ox-control .ox-panel .ox-links b{font-size:14px!important;font-weight:500!important;line-height:1.7!important}
+.ox-control .ox-links small{display:block!important;font-size:11px!important;line-height:1.7!important;color:#a9bdc2!important;margin-top:3px!important}
+.ox-control .ox-arrow{color:#bdced1!important;font-size:16px!important}.ox-control .ox-panel a:hover .ox-arrow{color:#edcea1!important}
+.ox-control .ox-foot{display:none!important}.ox-control .ox-progress-text{display:none!important}
+.ox-control .ox-close{font-weight:300!important;background:transparent!important;transform:none!important}
+@media(max-width:640px){.ox-control .ox-panel{position:fixed!important;left:16px!important;right:16px!important;top:auto!important;bottom:76px!important;width:auto!important;max-height:calc(100dvh - 100px)!important;height:auto!important;overflow:auto!important;padding:22px!important}}
