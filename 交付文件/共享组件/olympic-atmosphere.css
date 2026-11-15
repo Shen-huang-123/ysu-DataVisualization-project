@@ -1,0 +1,23 @@
+/* Scenography stays beneath content; existing cards and charts keep their own surfaces. */
+body.oa-host{isolation:isolate;background-image:none!important}
+.oa-world{--oa-x:0px;--oa-y:0px;--oa-scroll:0px;--oa-blue:#80aeb633;--oa-gold:#d8b5812e;position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;contain:strict;background:radial-gradient(ellipse at 0 35%,var(--oa-blue),transparent 38%),radial-gradient(ellipse at 100% 75%,var(--oa-gold),transparent 38%)}
+.oa-world[data-night="true"]{--oa-blue:#438b9b24;--oa-gold:#c49b6020}
+.oa-grain{position:absolute;inset:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' opacity='.7' d='M0 0h160v160H0z'/%3E%3C/svg%3E")}
+.oa-light{position:absolute;inset:-5%;background:radial-gradient(ellipse at 95% 22%,var(--oa-gold),transparent 36%),radial-gradient(ellipse at 2% 85%,var(--oa-blue),transparent 33%);transform:translate(var(--oa-x),var(--oa-y));animation:oa-daylight 38s ease-in-out infinite alternate}
+.oa-landscape{position:absolute;inset:-25px;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.32;transform:translateY(calc(-1 * var(--oa-scroll)));mask-image:linear-gradient(90deg,#000 0%,#0009 12%,transparent 32%,transparent 72%,#0009 91%,#000);-webkit-mask-image:linear-gradient(90deg,#000 0%,#0009 12%,transparent 32%,transparent 72%,#0009 91%,#000)}
+.oa-world[data-night="true"] .oa-landscape{opacity:.25}
+.oa-archive .oa-landscape{background-image:url('atmosphere-archive.svg');opacity:.25}
+.oa-stadium .oa-landscape{background-image:url('atmosphere-stadium.svg')}
+.oa-field .oa-landscape{background-image:url('atmosphere-field.svg')}
+.oa-field[data-field="water"] .oa-landscape{background-image:url('atmosphere-water.svg');background-size:120% 140%;transform:rotate(-4deg) translateY(calc(-1 * var(--oa-scroll)))}
+.oa-field[data-field="court"] .oa-landscape{background-image:url('atmosphere-court.svg');background-size:130% 100%}
+.oa-sunset{--oa-gold:#e5a46e38;--oa-blue:#7da4c92e}
+.oa-sunset[data-night="true"]{--oa-gold:#c8824c24;--oa-blue:#47668e2e}
+.oa-sunset .oa-landscape{background-image:url('atmosphere-sunset.svg');opacity:.35}
+@keyframes oa-daylight{from{opacity:.65}to{opacity:1}}
+@media(max-width:700px){.oa-landscape{opacity:.18;background-size:auto 100%;mask-image:linear-gradient(90deg,#000,transparent 22%,transparent 84%,#000);-webkit-mask-image:linear-gradient(90deg,#000,transparent 22%,transparent 84%,#000)}.oa-grain{opacity:.025}.oa-light{animation:none}}
+@media(prefers-reduced-motion:reduce){.oa-light{animation:none;transform:none}.oa-landscape{transform:none!important}}
+@media print{.oa-world{display:none}body.oa-host{isolation:auto}}
+
+/* Replace legacy whole-body washes rather than accumulating background systems. */
+body.oa-host:before{background:none!important;box-shadow:none!important}

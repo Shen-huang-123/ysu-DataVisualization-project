@@ -31,8 +31,9 @@ body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity
 @media(max-width:640px){.ox-viewer{padding:64px 16px 24px}.ox-viewer img{max-height:calc(100dvh - 130px)}.ox-viewer-close{right:16px;top:16px}}
 @media(prefers-reduced-motion:reduce){.ox-viewer,.ox-viewer img,.ox-viewer-close{animation:none!important;transition:none!important}}
 @media(max-width:640px){.ox-panel a{min-height:84px}.ox-link-copy b{font-size:16px}}
-</style><link rel="stylesheet" href="../../../共享组件/exploration-design.css?v=20261115-controls">
+</style><link rel="stylesheet" href="../../../共享组件/exploration-design.css?v=20261115-atmosphere">
 <link rel="stylesheet" href="../../../共享组件/olympic-guide.css">
+<link rel="stylesheet" href="../../../共享组件/olympic-atmosphere.css?v=1">
 </head><body><main><small>百年圣火 / 赛前条件回放</small><h1>把时间拨回<br>里约开赛前。</h1><p class="lead">使用此前三届走势估计奖牌池，只用此前主办案例估计主场率，再加入World Rugby赛前排名，执行完整45/45/10计算链。</p><div class="scroll"><table><tr><th>情景</th><th>全体MAE</th><th>至少5枚MAE</th><th>RMSE</th><th>前十重合</th></tr><tr><td>关闭排名</td><td>2.1698</td><td>4.9850</td><td>3.9528</td><td>9/10</td></tr><tr><td>加入赛前排名</td><td>2.1691</td><td>4.9844</td><td>3.9527</td><td>9/10</td></tr></table></div><div class="note">排名使全体MAE变化 -0.0007 枚/队，改善很小。这是一个真实新增运动的历史类比；2028五项运动没有同构的历史赛事。</div><p><a href="2016逐队完整公式回放.csv">逐队结果</a>　<a href="方法与评分.md">完整方法</a>　<a href="../11_官方来源门控预测/index.html">返回审慎预测</a></p></main><script id="ox-motion-bridge-script">(()=>{
 const body=document.body,reduce=matchMedia('(prefers-reduced-motion: reduce)');
 body.classList.add('ox-flow');
@@ -79,4 +80,5 @@ if(images.length){
 }
 })();</script><!-- OLYMPIC_INTERACTION_END --><script defer src="../../../共享组件/immersive-float.js"></script><script src="../../../共享组件/exploration-design.js?v=20261115-controls" defer></script>
 <script src="../../../共享组件/olympic-guide.js" defer></script>
+<script defer src="../../../共享组件/olympic-atmosphere.js?v=1"></script>
 </body></html>

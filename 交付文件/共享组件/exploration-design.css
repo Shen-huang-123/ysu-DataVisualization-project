@@ -19,3 +19,5 @@ html.dark .ex-design,html.dark .ex-route{--ex-ink:#e5eeea;--ex-paper:#102b35;--e
 .olympic-selection-set{animation:olympic-selection-settle .65s ease-out}
 @keyframes olympic-selection-settle{0%{outline:2px solid #69ab9080;outline-offset:5px}100%{outline:2px solid transparent;outline-offset:0}}
 @media(prefers-reduced-motion:reduce){.olympic-interaction-surface .ex-tools button{transition:none}.olympic-selection-set{animation:none}.olympic-interaction-surface .ex-tools button:hover,.olympic-interaction-surface .ex-tools button:active{transform:none}}
+
+body.xz-dark .ex-design,body.xz-dark .ex-route{--ex-ink:#e5eeea;--ex-paper:#102b35;--ex-line:#587179;--ex-accent:#80c4d1}
