@@ -44,3 +44,5 @@ body .olympic-model .model-links a{font-size:12px;padding:14px 0;color:inherit!i
 body .olympic-model:before{opacity:.07}body.xz-dark .olympic-model:before{opacity:.11}
 body .olympic-model .model-views{top:12px}body .model-hint{letter-spacing:.03em}
 @media(max-width:750px){body .model-pin{font-size:10px!important;gap:5px}body .model-pin span{display:none}body .olympic-model .model-copy h1{font-size:37px}body .olympic-model .model-copy p{max-width:34ch}body .olympic-model .model-links{margin-top:22px}}
+
+body .olympic-model{background:radial-gradient(ellipse 55% 70% at 100% 0%,#ecd2ad70,transparent 75%),linear-gradient(120deg,#e5eceb,#c4d3d6)!important}body .olympic-model:before{opacity:.045}body .model-copy small{letter-spacing:.08em;opacity:.7}body .model-pin{font-size:12px!important}body .model-pin span{font-variant-numeric:tabular-nums}
