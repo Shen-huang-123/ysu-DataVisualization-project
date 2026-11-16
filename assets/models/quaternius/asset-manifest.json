@@ -1,0 +1,13 @@
+{
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "official_model": "https://quaternius.com/packs/universalbasecharacters.html",
+  "official_animation": "https://quaternius.com/packs/universalanimationlibrary.html",
+  "download_mirror": "https://github.com/Seyamalam/blood-league-kickoff/tree/main/public/assets/vendor/quaternius",
+  "embedded_sha256": "ea843ab4db6095e0e7438874fe4cdefe77ad1c5c2236b33db7fa2929ec8fb6e6",
+  "animations": [
+    "Jog_Fwd_Loop",
+    "Sprint_Loop"
+  ],
+  "processed": "Merged rotation channels by bone name; proportions retained from character skeleton; local base64 payload for file URL support."
+}
