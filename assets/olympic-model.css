@@ -54,3 +54,5 @@ body .model-life button:hover{color:#a07637!important;transform:translateY(-2px)
 @media(max-width:750px){body .model-life{bottom:77px;gap:12px;font-size:10px}body .model-life span{display:none}}
 
 body .model-stage canvas{border-radius:28px}@media(max-width:750px){body .model-stage canvas{border-radius:24px}}
+
+body .model-pin{left:0;top:0;will-change:transform}
