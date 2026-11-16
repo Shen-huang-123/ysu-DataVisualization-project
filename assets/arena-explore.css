@@ -95,3 +95,33 @@ body .arena-chapters{left:42%;gap:clamp(25px,4vw,65px)}
 @media(min-width:751px){body .arena-story-body p{max-width:none;font-size:14px;line-height:1.85}body .arena-story-body .arena-response{font-size:12px;min-height:3.6em}body .arena-editorial{padding-right:23%}body .arena-switch button{font-size:12px!important}}
 body .arena-close{text-shadow:0 1px 5px #000;opacity:1}
 @media(min-width:751px) and (max-height:740px){body .arena-story-body p{font-size:12px;line-height:1.75}body .arena-story-body .arena-response{font-size:11px;min-height:3.5em}}
+/* v20: paper unrolling, not a semicircular container. The text rests on the flat face. */
+body .arena-story{left:2vw;top:85px;bottom:82px;width:50vw;perspective:1600px;perspective-origin:35% 50%;isolation:auto;--sheet:#edf0e9;--fold:100px}
+body.xz-dark .arena-story{--sheet:#19313b}
+body .arena-sheet{border-radius:3px!important;overflow:visible;clip-path:inset(0 var(--fold) 0 0);border:0!important;background:linear-gradient(90deg,#00000010,transparent 6%,transparent 78%,#00000016),var(--sheet)!important;box-shadow:none;transform-origin:0 50%;transform-style:preserve-3d;}
+body .arena-story-body{overflow:hidden;border-radius:3px;box-shadow:none}
+body .arena-photo{height:28%;}
+body .arena-editorial{padding-right:calc(var(--fold) + 30px);padding-left:7%;}
+body .arena-story-body h2{font-size:clamp(27px,2.6vw,40px)}
+body .arena-photo figcaption{left:7%;font-weight:400}
+body .arena-photo img{filter:saturate(.7);}
+body .arena-photo:hover img{transform:none}
+body .arena-close{left:12px!important;right:auto!important;top:12px!important;width:32px;height:32px;background:transparent!important;}
+body .arena-paper-curl{position:absolute;inset:0;pointer-events:none;transform-style:preserve-3d;transform-origin:0 50%;}
+body .arena-paper-curl>i{display:block;position:absolute;left:0;top:0;height:100%;transform:translate3d(var(--px),0,var(--pz)) rotateY(var(--angle));transform-origin:0 50%;background:var(--sheet);filter:brightness(var(--shade));backface-visibility:hidden;}
+body .arena-paper-curl>i>span{display:block;width:100%;background-repeat:no-repeat;filter:saturate(.7)}
+body .arena-echo{inset:8px calc(var(--fold) - 5px) 8px 0;border:0;border-radius:2px;background:var(--sheet);opacity:0;transform-origin:0 50%;pointer-events:none;}
+body .arena-story:after{content:'';position:absolute;left:5%;top:12%;bottom:0;width:85%;background:#0004;filter:blur(25px);transform:translate(15px,18px) rotateY(-7deg);z-index:-1;pointer-events:none;opacity:.35}
+body .arena-story.is-opening .arena-sheet,body .arena-story.is-opening .arena-paper-curl{animation:book-unfold .72s cubic-bezier(.16,1,.3,1) both}
+body .arena-story.is-opening .arena-echo{animation:book-echo .8s ease-out both}
+body .arena-story.is-opening .arena-story-body{animation:book-ink .45s .16s both}
+body .arena-story.is-closing .arena-sheet,body .arena-story.is-closing .arena-paper-curl{animation:book-close .26s ease-in both}
+body .arena-story.is-closing:after{opacity:0}
+@keyframes book-unfold{0%{opacity:0;transform:rotateY(-58deg) translateX(-25px)}25%{opacity:1}100%{opacity:1;transform:rotateY(0deg) translateX(0)}}
+@keyframes book-echo{0%{opacity:0;transform:rotateY(-65deg)}30%{opacity:.24;transform:rotateY(-20deg) translateZ(-15px)}100%{opacity:0;transform:rotateY(3deg) translateZ(-28px)}}
+@keyframes book-ink{from{opacity:.15}to{opacity:1}}
+@keyframes book-close{from{opacity:1;transform:rotateY(0)}to{opacity:0;transform:rotateY(-35deg) translateX(-15px)}}
+@media(min-width:751px) and (max-height:740px){body .arena-story{top:70px;bottom:70px}body .arena-photo{height:24%}body .arena-editorial{padding-top:12px}body .arena-story-body h2{font-size:27px}}
+@media(max-width:750px){body .arena-story{left:3vw;top:auto;bottom:87px;width:94vw;height:65svh;--fold:42px;perspective:1000px}body .arena-sheet{border-radius:3px!important}body .arena-photo{height:24%}body .arena-editorial{padding-left:20px;padding-right:calc(var(--fold) + 10px)}body .arena-story-body h2{font-size:24px}body .arena-photo figcaption{left:20px}body .arena-photo figcaption small{font-size:8px}body .arena-story:after{filter:blur(12px)} }
+@media(max-width:750px) and (max-height:700px){body .arena-story{height:70svh;bottom:72px}body .arena-photo{height:21%}body .arena-story-body h2{font-size:22px}body .arena-editorial{padding-top:9px}}
+@media(prefers-reduced-motion:reduce){body .arena-story .arena-sheet,body .arena-story .arena-paper-curl,body .arena-story .arena-echo,body .arena-story .arena-story-body{animation:none!important;transition:none!important}}
