@@ -197,3 +197,5 @@ IOC 小项直连在此前环境中返回 502 或 Access Denied。赛时官方成
 2026-11-16 阅读前端Prompt.docx，作品总入口新增程序化Three.js奥运微缩场馆：跑道、看台、圣火及四展亭，拖拽旋转/缩放/复位/日夜/暂停，展亭点击链接四任务，文字链接可键盘访问。assets/olympic-model.css/js，使用既有本地three.min.js。保留原材料入口与根首页。当前为原创简化几何模型，并非精细建筑资产；可继续细化。
 
 2026-11-16 用户否定基础模型外观后，参考Bruno Simon官网与Magnetism Adidas Arena案例重建奥运微缩场馆：椭圆挤出层级、五层看台、480实例化座位、悬挑屋盖/64结构肋、PCF阴影与四任务文字标识。原创几何，未下载第三方模型。重调首屏高度、宋体展示标题及模型占比，本地Three继续支持离线。1440/390无脚本错误或溢出，截图复核后纠正原全局section引起的首屏空白。参考https://www.bruno-simon.com/ 与https://magnetism.fr/work/adidas-arena/。
+
+2026-11-16 3D场馆细化：参考Three.js官方contact shadows示例的接地光影思路（https://threejs.org/examples/webgl_shadow_contact.html），新增全景/看台/鸟瞰平滑镜头、可升起屋盖、悬停射线反馈与任务提示、日夜灯光渐变、草坪条纹与球门，任务牌改深色高对比。离屏暂停GPU渲染；低动态不自动转场景/圣火。修复全局按钮圆角影响。1440/390无异常与横溢出，三视角、屋盖开关、夜场交互实际执行通过。
