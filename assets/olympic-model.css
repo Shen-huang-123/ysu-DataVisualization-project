@@ -19,3 +19,15 @@ body.xz-dark .olympic-model:after{background:linear-gradient(90deg,#112431ee 0%,
 body.xz-dark .model-stage:before{background:radial-gradient(ellipse 50% 22% at 50% 78%,#0009,transparent 75%),radial-gradient(ellipse 65% 60% at 85% 25%,#92b8d51a,transparent 75%)}
 body.xz-dark .model-copy small{color:#a6bbb9}
 @media(max-width:750px){body .olympic-model:before{opacity:.08;background-position:60% top}body .olympic-model:after{background:linear-gradient(180deg,#e4ecebc9,transparent 65%)}body.xz-dark .olympic-model:after{background:linear-gradient(180deg,#112431dc,transparent 70%)}}
+
+/* Cover-like text controls; override inherited night-mode button fills explicitly. */
+html body .olympic-model .model-stage :is(.model-views,.model-controls){background:none!important;border:0!important;box-shadow:none!important;gap:24px;align-items:center}
+html body .olympic-model .model-stage :is(.model-views,.model-controls) button{appearance:none!important;background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:inherit!important;font-family:inherit!important;font-size:12px!important;font-weight:400!important;line-height:1.5!important;letter-spacing:.03em;min-height:44px;padding:12px 0!important;position:relative;opacity:.65;cursor:pointer;transform:none!important;transition:opacity .2s ease,translate .2s ease}
+html body .olympic-model .model-stage :is(.model-views,.model-controls) button:before{content:''!important;display:block!important;position:absolute!important;left:0!important;right:0!important;bottom:5px!important;top:auto!important;height:1px!important;width:auto!important;background:currentColor!important;border:0!important;border-radius:0!important;box-shadow:none!important;opacity:.65;transform:scaleX(0)!important;transform-origin:left;transition:transform .22s ease}
+html body .olympic-model .model-stage :is(.model-views,.model-controls) button:is(:hover,[aria-pressed=true]){opacity:1;font-weight:500!important}
+html body .olympic-model .model-stage :is(.model-views,.model-controls) button:is(:hover,[aria-pressed=true]):before{transform:scaleX(1)!important}
+html body .olympic-model .model-stage :is(.model-views,.model-controls) button:active{translate:0 1px}
+html body .olympic-model .model-stage :is(.model-views,.model-controls) button:focus-visible{outline:1px solid currentColor!important;outline-offset:5px!important;opacity:1}
+html body .olympic-model .model-hint{font-size:10px!important;font-weight:400!important;opacity:.6;letter-spacing:.05em}
+@media(max-width:750px){html body .olympic-model .model-stage :is(.model-views,.model-controls){gap:20px}html body .olympic-model .model-stage :is(.model-views,.model-controls) button{font-size:11px!important}}
+@media(prefers-reduced-motion:reduce){html body .olympic-model .model-stage :is(.model-views,.model-controls) button,html body .olympic-model .model-stage :is(.model-views,.model-controls) button:before{transition:none}}
