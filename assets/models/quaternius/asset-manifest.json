@@ -11,7 +11,7 @@
   ],
   "processed": "Merged rotation channels by bone name; proportions retained from character skeleton; local base64 payload for file URL support.",
   "active_runtime": "runner-lite.js",
-  "lite_sha256": "4de078219812db119fea12a50f685ae0283939157a39083fa97ff19db196787f",
-  "lite_bytes": 1788687,
-  "lite_processing": "16 pre-baked Jog poses; Int16 positions, Int8 normals, Uint8 colors/clothing mask; no runtime GLTF, textures, skeletons or ghosts."
+  "lite_sha256": "822e69db3a1375c95d97e92d2f478daf7c6f0c083bb3efa53da41d32c0e164e9",
+  "lite_bytes": 974316,
+  "lite_processing": "8 pre-baked Jog poses, shared GPU morph targets; no per-frame JS vertex loop or runtime skeleton."
 }
