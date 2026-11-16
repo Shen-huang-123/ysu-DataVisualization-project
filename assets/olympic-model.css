@@ -31,3 +31,16 @@ html body .olympic-model .model-stage :is(.model-views,.model-controls) button:f
 html body .olympic-model .model-hint{font-size:10px!important;font-weight:400!important;opacity:.6;letter-spacing:.05em}
 @media(max-width:750px){html body .olympic-model .model-stage :is(.model-views,.model-controls){gap:20px}html body .olympic-model .model-stage :is(.model-views,.model-controls) button{font-size:11px!important}}
 @media(prefers-reduced-motion:reduce){html body .olympic-model .model-stage :is(.model-views,.model-controls) button,html body .olympic-model .model-stage :is(.model-views,.model-controls) button:before{transition:none}}
+
+/* Architecture gallery pass: thin plinth and unboxed geographic annotations. */
+body .model-pin{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;transform:translate(-50%,-50%);color:inherit!important;text-decoration:none!important;font-size:11px!important;font-weight:500;white-space:nowrap;padding:10px 0;border-bottom:1px solid #6d939759;transition:color .2s,border-color .2s;letter-spacing:.02em;background:none!important}
+body .model-pin span{font-size:9px;opacity:.6;font-weight:400}body .model-pin b{font-weight:400;font-size:12px;opacity:0;transition:opacity .2s}
+body .model-pin:hover b,body .model-pin:focus-visible b{opacity:1}body .model-pin:hover{border-color:currentColor}
+body .model-pin:focus-visible{outline:1px solid currentColor;outline-offset:5px}
+body .olympic-model .model-copy h1{font-size:clamp(38px,4.1vw,61px);line-height:1.38;letter-spacing:-.035em;margin:23px 0 27px;max-width:none}
+body .olympic-model .model-copy p{font-size:13px;max-width:27ch;line-height:2}
+body .olympic-model .model-links{margin-top:42px;column-gap:28px;row-gap:7px}
+body .olympic-model .model-links a{font-size:12px;padding:14px 0;color:inherit!important}
+body .olympic-model:before{opacity:.07}body.xz-dark .olympic-model:before{opacity:.11}
+body .olympic-model .model-views{top:12px}body .model-hint{letter-spacing:.03em}
+@media(max-width:750px){body .model-pin{font-size:10px!important;gap:5px}body .model-pin span{display:none}body .olympic-model .model-copy h1{font-size:37px}body .olympic-model .model-copy p{max-width:34ch}body .olympic-model .model-links{margin-top:22px}}
