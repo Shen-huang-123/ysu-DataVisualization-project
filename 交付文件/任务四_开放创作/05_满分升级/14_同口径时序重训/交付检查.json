@@ -1,0 +1,81 @@
+{
+  "时间切分": "6个外层来源/届次，全部训练与内部验证早于目标；选中alpha与内部评分一致",
+  "复算": "27行评分与逐队误差、预测池逐组一致；未见身份预测为零",
+  "输入": "3份SHA256不变",
+  "页面资源": 7,
+  "浏览器": [
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/14_同口径时序重训/index.html",
+      "width": 1440,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/14_同口径时序重训/index.html",
+      "width": 390,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/index.html",
+      "width": 1440,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/index.html",
+      "width": 390,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/11_官方来源门控预测/index.html",
+      "width": 1440,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/11_官方来源门控预测/index.html",
+      "width": 390,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/09_预测风暴实验室/index.html",
+      "width": 1440,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/09_预测风暴实验室/index.html",
+      "width": 390,
+      "count": 1,
+      "overflow": false,
+      "image": true,
+      "rows": 3,
+      "errors": []
+    }
+  ],
+  "PDF": "两页、文本可提取、无越页"
+}

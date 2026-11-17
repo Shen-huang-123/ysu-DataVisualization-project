@@ -1,0 +1,327 @@
+﻿方案,event_key,早段卫冕率,后段卫冕率,差值百分点
+原代理固定队列,"Athletics｜Athletics Men's 1,500 metres",0.0,0.0,0.0
+原代理固定队列,"Athletics｜Athletics Men's 10,000 metres",0.25,0.6666666666666666,41.666666666666664
+原代理固定队列,Athletics｜Athletics Men's 100 metres,0.25,0.5,25.0
+原代理固定队列,Athletics｜Athletics Men's 110 metres Hurdles,0.75,0.0,-75.0
+原代理固定队列,Athletics｜Athletics Men's 20 kilometres Walk,0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,Athletics｜Athletics Men's 200 metres,0.25,0.5,25.0
+原代理固定队列,"Athletics｜Athletics Men's 3,000 metres Steeplechase",0.25,1.0,75.0
+原代理固定队列,Athletics｜Athletics Men's 4 x 100 metres Relay,0.75,0.16666666666666666,-58.333333333333336
+原代理固定队列,Athletics｜Athletics Men's 4 x 400 metres Relay,0.5,0.3333333333333333,-16.666666666666668
+原代理固定队列,Athletics｜Athletics Men's 400 metres,0.75,0.6666666666666666,-8.333333333333337
+原代理固定队列,Athletics｜Athletics Men's 400 metres Hurdles,0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,"Athletics｜Athletics Men's 5,000 metres",0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Athletics｜Athletics Men's 800 metres,0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,Athletics｜Athletics Men's Decathlon,0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,Athletics｜Athletics Men's Discus Throw,0.5,0.3333333333333333,-16.666666666666668
+原代理固定队列,Athletics｜Athletics Men's Hammer Throw,0.5,0.0,-50.0
+原代理固定队列,Athletics｜Athletics Men's High Jump,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Athletics｜Athletics Men's Javelin Throw,0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,Athletics｜Athletics Men's Long Jump,0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,Athletics｜Athletics Men's Marathon,0.5,0.0,-50.0
+原代理固定队列,Athletics｜Athletics Men's Pole Vault,0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,Athletics｜Athletics Men's Shot Put,0.5,0.3333333333333333,-16.666666666666668
+原代理固定队列,Athletics｜Athletics Men's Triple Jump,0.75,0.3333333333333333,-41.66666666666667
+原代理固定队列,Athletics｜Athletics Women's 200 metres,0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,Athletics｜Athletics Women's 4 x 100 metres Relay,0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,Athletics｜Athletics Women's 800 metres,0.0,0.0,0.0
+原代理固定队列,Athletics｜Athletics Women's Discus Throw,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Athletics｜Athletics Women's High Jump,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Athletics｜Athletics Women's Javelin Throw,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Athletics｜Athletics Women's Long Jump,0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,Athletics｜Athletics Women's Shot Put,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Basketball｜Basketball Men's Basketball,0.5,0.6666666666666666,16.666666666666664
+原代理固定队列,Boxing｜Boxing Men's Bantamweight,0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,Boxing｜Boxing Men's Flyweight,0.0,0.0,0.0
+原代理固定队列,Boxing｜Boxing Men's Heavyweight,0.5,0.5,0.0
+原代理固定队列,Boxing｜Boxing Men's Light-Heavyweight,0.0,0.0,0.0
+原代理固定队列,Boxing｜Boxing Men's Light-Welterweight,0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,Boxing｜Boxing Men's Lightweight,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Boxing｜Boxing Men's Middleweight,0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,Boxing｜Boxing Men's Welterweight,0.0,0.6666666666666666,66.66666666666666
+原代理固定队列,"Canoeing｜Canoeing Men's Canadian Doubles, 1,000 metres",0.5,0.3333333333333333,-16.666666666666668
+原代理固定队列,"Canoeing｜Canoeing Men's Canadian Singles, 1,000 metres",0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,"Canoeing｜Canoeing Men's Kayak Doubles, 1,000 metres",0.75,0.16666666666666666,-58.333333333333336
+原代理固定队列,"Canoeing｜Canoeing Men's Kayak Singles, 1,000 metres",0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,"Canoeing｜Canoeing Women's Kayak Doubles, 500 metres",0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,"Canoeing｜Canoeing Women's Kayak Singles, 500 metres",0.75,0.16666666666666666,-58.333333333333336
+原代理固定队列,"Cycling｜Cycling Men's Road Race, Individual",0.25,0.0,-25.0
+原代理固定队列,Cycling｜Cycling Men's Sprint,0.5,0.5,0.0
+原代理固定队列,"Cycling｜Cycling Men's Team Pursuit, 4,000 metres",0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,Diving｜Diving Men's Platform,0.75,0.16666666666666666,-58.333333333333336
+原代理固定队列,Diving｜Diving Men's Springboard,0.5,0.5,0.0
+原代理固定队列,Diving｜Diving Women's Platform,0.0,0.5,50.0
+原代理固定队列,Diving｜Diving Women's Springboard,0.75,1.0,25.0
+原代理固定队列,"Equestrianism｜Equestrianism Mixed Dressage, Individual",0.0,0.6666666666666666,66.66666666666666
+原代理固定队列,"Equestrianism｜Equestrianism Mixed Jumping, Individual",0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,"Equestrianism｜Equestrianism Mixed Jumping, Team",0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,"Fencing｜Fencing Men's Foil, Individual",0.0,0.0,0.0
+原代理固定队列,"Fencing｜Fencing Men's Sabre, Individual",0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,"Fencing｜Fencing Men's epee, Individual",0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,"Fencing｜Fencing Women's Foil, Individual",0.0,0.5,50.0
+原代理固定队列,Football｜Football Men's Football,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Gymnastics｜Gymnastics Men's Floor Exercise,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Gymnastics｜Gymnastics Men's Horizontal Bar,0.75,0.0,-75.0
+原代理固定队列,Gymnastics｜Gymnastics Men's Horse Vault,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Gymnastics｜Gymnastics Men's Individual All-Around,0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,Gymnastics｜Gymnastics Men's Parallel Bars,0.75,0.16666666666666666,-58.333333333333336
+原代理固定队列,Gymnastics｜Gymnastics Men's Pommelled Horse,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Gymnastics｜Gymnastics Men's Rings,0.5,0.0,-50.0
+原代理固定队列,Gymnastics｜Gymnastics Men's Team All-Around,1.0,0.16666666666666666,-83.33333333333334
+原代理固定队列,Gymnastics｜Gymnastics Women's Balance Beam,0.5,0.0,-50.0
+原代理固定队列,Gymnastics｜Gymnastics Women's Floor Exercise,1.0,0.3333333333333333,-66.66666666666667
+原代理固定队列,Gymnastics｜Gymnastics Women's Horse Vault,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Gymnastics｜Gymnastics Women's Individual All-Around,0.25,0.5,25.0
+原代理固定队列,Gymnastics｜Gymnastics Women's Team All-Around,1.0,0.3333333333333333,-66.66666666666667
+原代理固定队列,Gymnastics｜Gymnastics Women's Uneven Bars,0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,Hockey｜Hockey Men's Hockey,0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,Modern Pentathlon｜Modern Pentathlon Men's Individual,0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,Rowing｜Rowing Men's Coxed Eights,0.0,0.0,0.0
+原代理固定队列,Rowing｜Rowing Men's Coxless Fours,0.5,0.8333333333333334,33.333333333333336
+原代理固定队列,Rowing｜Rowing Men's Coxless Pairs,0.5,0.5,0.0
+原代理固定队列,Rowing｜Rowing Men's Double Sculls,0.5,0.0,-50.0
+原代理固定队列,Rowing｜Rowing Men's Single Sculls,0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,"Swimming｜Swimming Men's 1,500 metres Freestyle",0.75,0.5,-25.0
+原代理固定队列,Swimming｜Swimming Men's 100 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Swimming｜Swimming Men's 200 metres Breaststroke,0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,Swimming｜Swimming Men's 200 metres Butterfly,0.5,0.3333333333333333,-16.666666666666668
+原代理固定队列,Swimming｜Swimming Men's 4 x 100 metres Medley Relay,1.0,1.0,0.0
+原代理固定队列,Swimming｜Swimming Men's 4 x 200 metres Freestyle Relay,1.0,0.5,-50.0
+原代理固定队列,Swimming｜Swimming Men's 400 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Swimming｜Swimming Women's 100 metres Backstroke,0.75,0.3333333333333333,-41.66666666666667
+原代理固定队列,Swimming｜Swimming Women's 100 metres Butterfly,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Swimming｜Swimming Women's 100 metres Freestyle,0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,Swimming｜Swimming Women's 200 metres Breaststroke,0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,Swimming｜Swimming Women's 4 x 100 metres Freestyle Relay,1.0,0.5,-50.0
+原代理固定队列,Swimming｜Swimming Women's 4 x 100 metres Medley Relay,0.75,0.6666666666666666,-8.333333333333337
+原代理固定队列,Swimming｜Swimming Women's 400 metres Freestyle,0.5,0.0,-50.0
+原代理固定队列,Water Polo｜Water Polo Men's Water Polo,0.0,0.3333333333333333,33.33333333333333
+原代理固定队列,Weightlifting｜Weightlifting Men's Bantamweight,0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,Weightlifting｜Weightlifting Men's Featherweight,0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,Weightlifting｜Weightlifting Men's Light-Heavyweight,0.25,0.3333333333333333,8.333333333333332
+原代理固定队列,Weightlifting｜Weightlifting Men's Lightweight,0.5,0.5,0.0
+原代理固定队列,Weightlifting｜Weightlifting Men's Middle-Heavyweight,0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,Weightlifting｜Weightlifting Men's Middleweight,0.25,0.0,-25.0
+原代理固定队列,"Wrestling｜Wrestling Men's Featherweight, Freestyle",0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,"Wrestling｜Wrestling Men's Featherweight, Greco-Roman",0.0,0.0,0.0
+原代理固定队列,"Wrestling｜Wrestling Men's Heavyweight, Freestyle",0.75,0.5,-25.0
+原代理固定队列,"Wrestling｜Wrestling Men's Heavyweight, Greco-Roman",0.25,0.0,-25.0
+原代理固定队列,"Wrestling｜Wrestling Men's Light-Heavyweight, Freestyle",0.0,0.0,0.0
+原代理固定队列,"Wrestling｜Wrestling Men's Light-Heavyweight, Greco-Roman",0.5,0.16666666666666666,-33.333333333333336
+原代理固定队列,"Wrestling｜Wrestling Men's Middleweight, Freestyle",0.25,0.16666666666666666,-8.333333333333334
+原代理固定队列,"Wrestling｜Wrestling Men's Middleweight, Greco-Roman",0.0,0.16666666666666666,16.666666666666664
+原代理固定队列,"Wrestling｜Wrestling Men's Welterweight, Freestyle",0.25,0.0,-25.0
+原代理固定队列,"Wrestling｜Wrestling Men's Welterweight, Greco-Roman",0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,"Athletics｜Athletics Men's 1,500 metres",0.0,0.0,0.0
+二次来源替换_同113项,"Athletics｜Athletics Men's 10,000 metres",0.25,0.6666666666666666,41.666666666666664
+二次来源替换_同113项,Athletics｜Athletics Men's 100 metres,0.25,0.5,25.0
+二次来源替换_同113项,Athletics｜Athletics Men's 110 metres Hurdles,0.75,0.0,-75.0
+二次来源替换_同113项,Athletics｜Athletics Men's 20 kilometres Walk,0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,Athletics｜Athletics Men's 200 metres,0.25,0.5,25.0
+二次来源替换_同113项,"Athletics｜Athletics Men's 3,000 metres Steeplechase",0.25,1.0,75.0
+二次来源替换_同113项,Athletics｜Athletics Men's 4 x 100 metres Relay,0.75,0.16666666666666666,-58.333333333333336
+二次来源替换_同113项,Athletics｜Athletics Men's 4 x 400 metres Relay,0.5,0.3333333333333333,-16.666666666666668
+二次来源替换_同113项,Athletics｜Athletics Men's 400 metres,0.75,0.6666666666666666,-8.333333333333337
+二次来源替换_同113项,Athletics｜Athletics Men's 400 metres Hurdles,0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,"Athletics｜Athletics Men's 5,000 metres",0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Athletics｜Athletics Men's 800 metres,0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,Athletics｜Athletics Men's Decathlon,0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,Athletics｜Athletics Men's Discus Throw,0.5,0.3333333333333333,-16.666666666666668
+二次来源替换_同113项,Athletics｜Athletics Men's Hammer Throw,0.5,0.0,-50.0
+二次来源替换_同113项,Athletics｜Athletics Men's High Jump,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Athletics｜Athletics Men's Javelin Throw,0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,Athletics｜Athletics Men's Long Jump,0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,Athletics｜Athletics Men's Marathon,0.5,0.0,-50.0
+二次来源替换_同113项,Athletics｜Athletics Men's Pole Vault,0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,Athletics｜Athletics Men's Shot Put,0.5,0.3333333333333333,-16.666666666666668
+二次来源替换_同113项,Athletics｜Athletics Men's Triple Jump,0.75,0.3333333333333333,-41.66666666666667
+二次来源替换_同113项,Athletics｜Athletics Women's 200 metres,0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,Athletics｜Athletics Women's 4 x 100 metres Relay,0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,Athletics｜Athletics Women's 800 metres,0.0,0.0,0.0
+二次来源替换_同113项,Athletics｜Athletics Women's Discus Throw,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Athletics｜Athletics Women's High Jump,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Athletics｜Athletics Women's Javelin Throw,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Athletics｜Athletics Women's Long Jump,0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,Athletics｜Athletics Women's Shot Put,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Basketball｜Basketball Men's Basketball,0.5,0.6666666666666666,16.666666666666664
+二次来源替换_同113项,Boxing｜Boxing Men's Bantamweight,0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,Boxing｜Boxing Men's Flyweight,0.0,0.0,0.0
+二次来源替换_同113项,Boxing｜Boxing Men's Heavyweight,0.5,0.5,0.0
+二次来源替换_同113项,Boxing｜Boxing Men's Light-Heavyweight,0.0,0.0,0.0
+二次来源替换_同113项,Boxing｜Boxing Men's Light-Welterweight,0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,Boxing｜Boxing Men's Lightweight,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Boxing｜Boxing Men's Middleweight,0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,Boxing｜Boxing Men's Welterweight,0.0,0.6666666666666666,66.66666666666666
+二次来源替换_同113项,"Canoeing｜Canoeing Men's Canadian Doubles, 1,000 metres",0.5,0.3333333333333333,-16.666666666666668
+二次来源替换_同113项,"Canoeing｜Canoeing Men's Canadian Singles, 1,000 metres",0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,"Canoeing｜Canoeing Men's Kayak Doubles, 1,000 metres",0.75,0.16666666666666666,-58.333333333333336
+二次来源替换_同113项,"Canoeing｜Canoeing Men's Kayak Singles, 1,000 metres",0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,"Canoeing｜Canoeing Women's Kayak Doubles, 500 metres",0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,"Canoeing｜Canoeing Women's Kayak Singles, 500 metres",0.75,0.16666666666666666,-58.333333333333336
+二次来源替换_同113项,"Cycling｜Cycling Men's Road Race, Individual",0.25,0.0,-25.0
+二次来源替换_同113项,Cycling｜Cycling Men's Sprint,0.5,0.5,0.0
+二次来源替换_同113项,"Cycling｜Cycling Men's Team Pursuit, 4,000 metres",0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,Diving｜Diving Men's Platform,0.75,0.16666666666666666,-58.333333333333336
+二次来源替换_同113项,Diving｜Diving Men's Springboard,0.5,0.5,0.0
+二次来源替换_同113项,Diving｜Diving Women's Platform,0.0,0.5,50.0
+二次来源替换_同113项,Diving｜Diving Women's Springboard,0.75,1.0,25.0
+二次来源替换_同113项,"Equestrianism｜Equestrianism Mixed Dressage, Individual",0.0,0.6666666666666666,66.66666666666666
+二次来源替换_同113项,"Equestrianism｜Equestrianism Mixed Jumping, Individual",0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,"Equestrianism｜Equestrianism Mixed Jumping, Team",0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,"Fencing｜Fencing Men's Foil, Individual",0.0,0.0,0.0
+二次来源替换_同113项,"Fencing｜Fencing Men's Sabre, Individual",0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,"Fencing｜Fencing Men's epee, Individual",0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,"Fencing｜Fencing Women's Foil, Individual",0.0,0.5,50.0
+二次来源替换_同113项,Football｜Football Men's Football,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Floor Exercise,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Horizontal Bar,0.75,0.0,-75.0
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Horse Vault,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Individual All-Around,0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Parallel Bars,0.75,0.16666666666666666,-58.333333333333336
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Pommelled Horse,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Rings,0.5,0.0,-50.0
+二次来源替换_同113项,Gymnastics｜Gymnastics Men's Team All-Around,1.0,0.16666666666666666,-83.33333333333334
+二次来源替换_同113项,Gymnastics｜Gymnastics Women's Balance Beam,0.5,0.0,-50.0
+二次来源替换_同113项,Gymnastics｜Gymnastics Women's Floor Exercise,1.0,0.3333333333333333,-66.66666666666667
+二次来源替换_同113项,Gymnastics｜Gymnastics Women's Horse Vault,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Gymnastics｜Gymnastics Women's Individual All-Around,0.25,0.5,25.0
+二次来源替换_同113项,Gymnastics｜Gymnastics Women's Team All-Around,1.0,0.3333333333333333,-66.66666666666667
+二次来源替换_同113项,Gymnastics｜Gymnastics Women's Uneven Bars,0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,Hockey｜Hockey Men's Hockey,0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,Modern Pentathlon｜Modern Pentathlon Men's Individual,0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,Rowing｜Rowing Men's Coxed Eights,0.0,0.0,0.0
+二次来源替换_同113项,Rowing｜Rowing Men's Coxless Fours,0.5,0.8333333333333334,33.333333333333336
+二次来源替换_同113项,Rowing｜Rowing Men's Coxless Pairs,0.5,0.5,0.0
+二次来源替换_同113项,Rowing｜Rowing Men's Double Sculls,0.5,0.0,-50.0
+二次来源替换_同113项,Rowing｜Rowing Men's Single Sculls,0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,"Swimming｜Swimming Men's 1,500 metres Freestyle",0.75,0.5,-25.0
+二次来源替换_同113项,Swimming｜Swimming Men's 100 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Swimming｜Swimming Men's 200 metres Breaststroke,0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,Swimming｜Swimming Men's 200 metres Butterfly,0.5,0.3333333333333333,-16.666666666666668
+二次来源替换_同113项,Swimming｜Swimming Men's 4 x 100 metres Medley Relay,1.0,1.0,0.0
+二次来源替换_同113项,Swimming｜Swimming Men's 4 x 200 metres Freestyle Relay,1.0,0.5,-50.0
+二次来源替换_同113项,Swimming｜Swimming Men's 400 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Swimming｜Swimming Women's 100 metres Backstroke,0.75,0.3333333333333333,-41.66666666666667
+二次来源替换_同113项,Swimming｜Swimming Women's 100 metres Butterfly,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Swimming｜Swimming Women's 100 metres Freestyle,0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,Swimming｜Swimming Women's 200 metres Breaststroke,0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,Swimming｜Swimming Women's 4 x 100 metres Freestyle Relay,1.0,0.5,-50.0
+二次来源替换_同113项,Swimming｜Swimming Women's 4 x 100 metres Medley Relay,0.75,0.6666666666666666,-8.333333333333337
+二次来源替换_同113项,Swimming｜Swimming Women's 400 metres Freestyle,0.5,0.0,-50.0
+二次来源替换_同113项,Water Polo｜Water Polo Men's Water Polo,0.0,0.3333333333333333,33.33333333333333
+二次来源替换_同113项,Weightlifting｜Weightlifting Men's Bantamweight,0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,Weightlifting｜Weightlifting Men's Featherweight,0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,Weightlifting｜Weightlifting Men's Light-Heavyweight,0.25,0.3333333333333333,8.333333333333332
+二次来源替换_同113项,Weightlifting｜Weightlifting Men's Lightweight,0.5,0.5,0.0
+二次来源替换_同113项,Weightlifting｜Weightlifting Men's Middle-Heavyweight,0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,Weightlifting｜Weightlifting Men's Middleweight,0.25,0.0,-25.0
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Featherweight, Freestyle",0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Featherweight, Greco-Roman",0.0,0.0,0.0
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Heavyweight, Freestyle",0.75,0.5,-25.0
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Heavyweight, Greco-Roman",0.25,0.0,-25.0
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Light-Heavyweight, Freestyle",0.0,0.0,0.0
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Light-Heavyweight, Greco-Roman",0.5,0.16666666666666666,-33.333333333333336
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Middleweight, Freestyle",0.25,0.16666666666666666,-8.333333333333334
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Middleweight, Greco-Roman",0.0,0.16666666666666666,16.666666666666664
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Welterweight, Freestyle",0.25,0.0,-25.0
+二次来源替换_同113项,"Wrestling｜Wrestling Men's Welterweight, Greco-Roman",0.0,0.16666666666666666,16.666666666666664
+剔除涉及未决项的完整小项队列,"Athletics｜Athletics Men's 1,500 metres",0.0,0.0,0.0
+剔除涉及未决项的完整小项队列,"Athletics｜Athletics Men's 10,000 metres",0.25,0.6666666666666666,41.666666666666664
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 100 metres,0.25,0.5,25.0
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 110 metres Hurdles,0.75,0.0,-75.0
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 20 kilometres Walk,0.0,0.16666666666666666,16.666666666666664
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 200 metres,0.25,0.5,25.0
+剔除涉及未决项的完整小项队列,"Athletics｜Athletics Men's 3,000 metres Steeplechase",0.25,1.0,75.0
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 4 x 100 metres Relay,0.75,0.16666666666666666,-58.333333333333336
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 4 x 400 metres Relay,0.5,0.3333333333333333,-16.666666666666668
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 400 metres,0.75,0.6666666666666666,-8.333333333333337
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 400 metres Hurdles,0.25,0.3333333333333333,8.333333333333332
+剔除涉及未决项的完整小项队列,"Athletics｜Athletics Men's 5,000 metres",0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's 800 metres,0.25,0.3333333333333333,8.333333333333332
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Decathlon,0.0,0.3333333333333333,33.33333333333333
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Discus Throw,0.5,0.3333333333333333,-16.666666666666668
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Hammer Throw,0.5,0.0,-50.0
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's High Jump,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Javelin Throw,0.0,0.3333333333333333,33.33333333333333
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Long Jump,0.5,0.16666666666666666,-33.333333333333336
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Marathon,0.5,0.0,-50.0
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Pole Vault,0.5,0.16666666666666666,-33.333333333333336
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Shot Put,0.5,0.3333333333333333,-16.666666666666668
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Men's Triple Jump,0.75,0.3333333333333333,-41.66666666666667
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's 200 metres,0.5,0.16666666666666666,-33.333333333333336
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's 4 x 100 metres Relay,0.0,0.3333333333333333,33.33333333333333
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's 800 metres,0.0,0.0,0.0
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's Discus Throw,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's High Jump,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's Javelin Throw,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's Long Jump,0.0,0.16666666666666666,16.666666666666664
+剔除涉及未决项的完整小项队列,Athletics｜Athletics Women's Shot Put,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Diving｜Diving Men's Platform,0.75,0.16666666666666666,-58.333333333333336
+剔除涉及未决项的完整小项队列,Diving｜Diving Men's Springboard,0.5,0.5,0.0
+剔除涉及未决项的完整小项队列,Diving｜Diving Women's Platform,0.0,0.5,50.0
+剔除涉及未决项的完整小项队列,Diving｜Diving Women's Springboard,0.75,1.0,25.0
+剔除涉及未决项的完整小项队列,"Swimming｜Swimming Men's 1,500 metres Freestyle",0.75,0.5,-25.0
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Men's 100 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Men's 200 metres Breaststroke,0.0,0.16666666666666666,16.666666666666664
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Men's 200 metres Butterfly,0.5,0.3333333333333333,-16.666666666666668
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Men's 4 x 100 metres Medley Relay,1.0,1.0,0.0
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Men's 4 x 200 metres Freestyle Relay,1.0,0.5,-50.0
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Men's 400 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Women's 100 metres Backstroke,0.75,0.3333333333333333,-41.66666666666667
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Women's 100 metres Butterfly,0.25,0.16666666666666666,-8.333333333333334
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Women's 100 metres Freestyle,0.5,0.16666666666666666,-33.333333333333336
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Women's 200 metres Breaststroke,0.0,0.3333333333333333,33.33333333333333
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Women's 4 x 100 metres Freestyle Relay,1.0,0.5,-50.0
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Women's 4 x 100 metres Medley Relay,0.75,0.6666666666666666,-8.333333333333337
+剔除涉及未决项的完整小项队列,Swimming｜Swimming Women's 400 metres Freestyle,0.5,0.0,-50.0
+剔除涉及未决项的完整小项队列,Water Polo｜Water Polo Men's Water Polo,0.0,0.3333333333333333,33.33333333333333
+原代理_与排除方案同子队列,"Athletics｜Athletics Men's 1,500 metres",0.0,0.0,0.0
+原代理_与排除方案同子队列,"Athletics｜Athletics Men's 10,000 metres",0.25,0.6666666666666666,41.666666666666664
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 100 metres,0.25,0.5,25.0
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 110 metres Hurdles,0.75,0.0,-75.0
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 20 kilometres Walk,0.0,0.16666666666666666,16.666666666666664
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 200 metres,0.25,0.5,25.0
+原代理_与排除方案同子队列,"Athletics｜Athletics Men's 3,000 metres Steeplechase",0.25,1.0,75.0
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 4 x 100 metres Relay,0.75,0.16666666666666666,-58.333333333333336
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 4 x 400 metres Relay,0.5,0.3333333333333333,-16.666666666666668
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 400 metres,0.75,0.6666666666666666,-8.333333333333337
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 400 metres Hurdles,0.25,0.3333333333333333,8.333333333333332
+原代理_与排除方案同子队列,"Athletics｜Athletics Men's 5,000 metres",0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Athletics｜Athletics Men's 800 metres,0.25,0.3333333333333333,8.333333333333332
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Decathlon,0.0,0.3333333333333333,33.33333333333333
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Discus Throw,0.5,0.3333333333333333,-16.666666666666668
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Hammer Throw,0.5,0.0,-50.0
+原代理_与排除方案同子队列,Athletics｜Athletics Men's High Jump,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Javelin Throw,0.0,0.3333333333333333,33.33333333333333
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Long Jump,0.5,0.16666666666666666,-33.333333333333336
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Marathon,0.5,0.0,-50.0
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Pole Vault,0.5,0.16666666666666666,-33.333333333333336
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Shot Put,0.5,0.3333333333333333,-16.666666666666668
+原代理_与排除方案同子队列,Athletics｜Athletics Men's Triple Jump,0.75,0.3333333333333333,-41.66666666666667
+原代理_与排除方案同子队列,Athletics｜Athletics Women's 200 metres,0.5,0.16666666666666666,-33.333333333333336
+原代理_与排除方案同子队列,Athletics｜Athletics Women's 4 x 100 metres Relay,0.0,0.3333333333333333,33.33333333333333
+原代理_与排除方案同子队列,Athletics｜Athletics Women's 800 metres,0.0,0.0,0.0
+原代理_与排除方案同子队列,Athletics｜Athletics Women's Discus Throw,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Athletics｜Athletics Women's High Jump,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Athletics｜Athletics Women's Javelin Throw,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Athletics｜Athletics Women's Long Jump,0.0,0.16666666666666666,16.666666666666664
+原代理_与排除方案同子队列,Athletics｜Athletics Women's Shot Put,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Diving｜Diving Men's Platform,0.75,0.16666666666666666,-58.333333333333336
+原代理_与排除方案同子队列,Diving｜Diving Men's Springboard,0.5,0.5,0.0
+原代理_与排除方案同子队列,Diving｜Diving Women's Platform,0.0,0.5,50.0
+原代理_与排除方案同子队列,Diving｜Diving Women's Springboard,0.75,1.0,25.0
+原代理_与排除方案同子队列,"Swimming｜Swimming Men's 1,500 metres Freestyle",0.75,0.5,-25.0
+原代理_与排除方案同子队列,Swimming｜Swimming Men's 100 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Swimming｜Swimming Men's 200 metres Breaststroke,0.0,0.16666666666666666,16.666666666666664
+原代理_与排除方案同子队列,Swimming｜Swimming Men's 200 metres Butterfly,0.5,0.3333333333333333,-16.666666666666668
+原代理_与排除方案同子队列,Swimming｜Swimming Men's 4 x 100 metres Medley Relay,1.0,1.0,0.0
+原代理_与排除方案同子队列,Swimming｜Swimming Men's 4 x 200 metres Freestyle Relay,1.0,0.5,-50.0
+原代理_与排除方案同子队列,Swimming｜Swimming Men's 400 metres Freestyle,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Swimming｜Swimming Women's 100 metres Backstroke,0.75,0.3333333333333333,-41.66666666666667
+原代理_与排除方案同子队列,Swimming｜Swimming Women's 100 metres Butterfly,0.25,0.16666666666666666,-8.333333333333334
+原代理_与排除方案同子队列,Swimming｜Swimming Women's 100 metres Freestyle,0.5,0.16666666666666666,-33.333333333333336
+原代理_与排除方案同子队列,Swimming｜Swimming Women's 200 metres Breaststroke,0.0,0.3333333333333333,33.33333333333333
+原代理_与排除方案同子队列,Swimming｜Swimming Women's 4 x 100 metres Freestyle Relay,1.0,0.5,-50.0
+原代理_与排除方案同子队列,Swimming｜Swimming Women's 4 x 100 metres Medley Relay,0.75,0.6666666666666666,-8.333333333333337
+原代理_与排除方案同子队列,Swimming｜Swimming Women's 400 metres Freestyle,0.5,0.0,-50.0
+原代理_与排除方案同子队列,Water Polo｜Water Polo Men's Water Polo,0.0,0.3333333333333333,33.33333333333333

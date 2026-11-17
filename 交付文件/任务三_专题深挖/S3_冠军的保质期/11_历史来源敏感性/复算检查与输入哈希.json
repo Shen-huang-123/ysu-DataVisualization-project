@@ -1,0 +1,19 @@
+{
+  "input_sha256": {
+    "交付文件\\任务三_专题深挖\\S3_冠军的保质期\\02_数据表\\S3_逐小项冠军控制权转移.csv": "327e9b1771ccbcdb4334c1be02a082148dfb70a07ed46885aa2ad6e566208d53",
+    "交付文件\\任务三_专题深挖\\S3_冠军的保质期\\09_固定小项队列检验\\固定小项逐届控制权转移.csv": "c5656a8b5501aec8db454a53b926d48e6566c121c854678c79bde0125220daa9",
+    "交付文件\\任务三_专题深挖\\S2_口径的魔力\\08_逐项外部核验\\Olympedia独立交叉核验\\历史555项独立交叉对照.csv": "23a1af14321522ca99861a24bac1115c538d8ce3bd1f113d962a939d5356e535"
+  },
+  "original_transitions": 4511,
+  "fixed_events": 113,
+  "secondary_observations_matched": 550,
+  "secondary_observations_unmatched": 5,
+  "gold_observations_changed": 10,
+  "transition_champion_sets_changed": 17,
+  "transition_defense_flags_changed": 6,
+  "excluded_fixed_events": 63,
+  "retained_fixed_events": 50,
+  "bootstrap_seed": 42,
+  "bootstrap_draws": 10000,
+  "scope": "二次来源情景；非现行IOC认证、非因果检验；保留原始数据，既有主页面图未静默改写"
+}

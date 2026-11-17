@@ -1,0 +1,10 @@
+{
+  "local_references_checked": 319,
+  "missing": [],
+  "formal_pdf_pages": [
+    20,
+    20
+  ],
+  "appendix": "独立两页，不计入主报告",
+  "edge_checks": "四任务1440/390宽、明暗16组通过；筛选与专题控件通过，无pageerror"
+}

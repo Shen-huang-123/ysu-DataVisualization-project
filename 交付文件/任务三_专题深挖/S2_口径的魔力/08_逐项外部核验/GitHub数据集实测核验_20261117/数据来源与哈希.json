@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/KeithGalli/Olympics-Dataset",
+  "commit": "3ead732224293bd4ab9a8280fe01867243a54970",
+  "url": "https://raw.githubusercontent.com/KeithGalli/Olympics-Dataset/3ead732224293bd4ab9a8280fe01867243a54970/results/results.csv",
+  "retrieved_utc": "2026-11-17T12:11:27.596760+00:00",
+  "upstream_full_csv_sha256": "13fdd66b6e4b3b92628b96a629785180f7bdd0caae4dd9e42979ab6aa4539f7a",
+  "full_rows": 308408,
+  "subset_rows": 40425,
+  "subset_sha256": "1a28235fe5d251c0c16157d327a68b7246efa9d68b92c45b4ea56f0e9c31bc79",
+  "evidence": "GitHub转载的Olympedia历史抓取；与既有Olympedia对照同源，不是独立第三方或现行IOC结果。"
+}

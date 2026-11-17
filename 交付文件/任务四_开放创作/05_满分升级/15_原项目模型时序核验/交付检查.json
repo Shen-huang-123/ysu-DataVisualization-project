@@ -1,0 +1,128 @@
+{
+  "时间边界": "9组严格折+1组显式前视诊断；训练与筛选检查通过",
+  "评分": "50行评分逐组复算；全模型评分池和预测池一致",
+  "2028": "5模型各1120、非负，55/45关系成立，无虚构actual或80%区间",
+  "映射": "45个2024discipline结构映射完整",
+  "PDF页数": {
+    "交付文件\\任务四_开放创作\\05_满分升级\\15_原项目模型时序核验\\原项目模型复核_最新交付附页.pdf": 2,
+    "交付文件\\最终提交材料\\报告\\百年圣火_正式报告.pdf": 22,
+    "交付文件\\最终提交材料\\数说奥运_晓组织_正式答卷.pdf": 22
+  },
+  "DOCX": "最新核验段仅一次",
+  "网页资源区块": 14,
+  "浏览器": [
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/15_原项目模型时序核验/index.html",
+      "width": 1440,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/15_原项目模型时序核验/index.html",
+      "width": 390,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/index.html",
+      "width": 1440,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/index.html",
+      "width": 390,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/02_2028洛杉矶预测/index.html",
+      "width": 1440,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/02_2028洛杉矶预测/index.html",
+      "width": 390,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/11_官方来源门控预测/index.html",
+      "width": 1440,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/05_满分升级/11_官方来源门控预测/index.html",
+      "width": 390,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/09_预测风暴实验室/index.html",
+      "width": 1440,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    },
+    {
+      "file": "交付文件/任务四_开放创作/09_预测风暴实验室/index.html",
+      "width": 390,
+      "auditCount": 1,
+      "overflow": false,
+      "image": true,
+      "tables": 3,
+      "rankingRows": 10,
+      "errors": []
+    }
+  ],
+  "输入哈希": "3份不变",
+  "重复发布": "再次发布两份PDF仍各22页，DOCX更新仅一份",
+  "旧滑杆实际响应": {
+    "USA旧情景点值_默认": 157.8,
+    "主场150%": 164.0,
+    "备注": "旧情景响应正常，与新主基准明确分开"
+  },
+  "主阅读": "新基准前十默认展开",
+  "最终文件SHA256": {
+    "交付文件\\最终提交材料\\报告\\百年圣火_正式报告.pdf": "39d15bfc459b88c8cea4bf25688e1aef1150fb15e4fe76e1d432c02f7003267c",
+    "交付文件\\最终提交材料\\数说奥运_晓组织_正式答卷.pdf": "8e1cc7aa60fdc30636f842da4a396f7df33bb7cd9dbf2f880b11f9d97d3f718c",
+    "交付文件\\最终提交材料\\数说奥运_晓组织_正式答卷.docx": "f5763ad88d60a5bbe38e0a089f2de5909fd9d3040db541c0574934349f898506"
+  }
+}

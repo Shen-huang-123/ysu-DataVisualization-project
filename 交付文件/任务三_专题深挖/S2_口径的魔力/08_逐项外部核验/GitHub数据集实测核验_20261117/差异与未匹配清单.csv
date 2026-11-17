@@ -1,0 +1,11 @@
+﻿Year,Sport,Event,Event_olympedia,event_url,配对方法,GitHub小项原名,Gold_github,Gold_olympedia,Silver_github,Silver_olympedia,Bronze_github,Bronze_olympedia,状态
+2008,Sailing,Sailing Men's Two Person Dinghy,"Two-Person Dinghy, Open",https://www.olympedia.org/results/261191,预定义名称归一，届次+运动+小项严格匹配,,,,,,,,未匹配，保留人工检查
+2008,Sailing,Sailing Mixed One Person Dinghy,"One-Person Heavyweight Dinghy, Men",https://www.olympedia.org/results/261153,预定义名称归一，届次+运动+小项严格匹配,,,,,,,,未匹配，保留人工检查
+2008,Sailing,Sailing Mixed Skiff,"Skiff, Men",https://www.olympedia.org/results/261351,预定义名称归一，届次+运动+小项严格匹配,,,,,,,,未匹配，保留人工检查
+2012,Gymnastics,Gymnastics Men's Rings,"Rings, Men",https://www.olympedia.org/results/313021,预定义名称归一，届次+运动+小项严格匹配,"Rings, Men (Olympic)",,BRA,CHN,CHN,ITA,ITA,存在差异，不能自动裁定
+2012,Sailing,Sailing Men's Two Person Dinghy,"Two-Person Dinghy, Open",https://www.olympedia.org/results/320126,预定义名称归一，届次+运动+小项严格匹配,,,,,,,,未匹配，保留人工检查
+2012,Weightlifting,Weightlifting Women's Featherweight,"Featherweight, Women",https://www.olympedia.org/results/331009,预定义名称归一，届次+运动+小项严格匹配,"Featherweight, Women (Olympic)",,TPE,INA,INA,UKR,UKR,存在差异，不能自动裁定
+2016,Gymnastics,Gymnastics Men's Rings,"Rings, Men",https://www.olympedia.org/results/353652,预定义名称归一，届次+运动+小项严格匹配,"Rings, Men (Olympic)",GRE,GRE,,BRA,RUS,RUS,存在差异，不能自动裁定
+2016,Sailing,Sailing Men's Two Person Dinghy,"Two-Person Dinghy, Open",https://www.olympedia.org/results/356106,预定义名称归一，届次+运动+小项严格匹配,,,,,,,,未匹配，保留人工检查
+2016,Weightlifting,Weightlifting Women's Featherweight,"Featherweight, Women",https://www.olympedia.org/results/354371,预定义名称归一，届次+运动+小项严格匹配,"Featherweight, Women (Olympic)",,TPE,PHI,PHI,KOR,KOR,存在差异，不能自动裁定
+2016,Weightlifting,Weightlifting Women's Lightweight,"Lightweight, Women",https://www.olympedia.org/results/354380,预定义名称归一，届次+运动+小项严格匹配,"Lightweight, Women (Olympic)",THA,THA,THA,THA,,TPE,存在差异，不能自动裁定

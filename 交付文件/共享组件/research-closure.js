@@ -1,0 +1,5 @@
+(()=>{'use strict';const root=document.querySelector('.research-closure');if(!root)return;
+const impact=root.querySelector('[data-rc-impact]');if(impact){const update=()=>root.querySelectorAll('.rc-table tbody tr').forEach(row=>{if(row.cells.length===5)row.hidden=row.cells[0].textContent.trim()!==impact.value});impact.addEventListener('change',update);update()}
+root.querySelectorAll('[data-rc-case]').forEach(button=>button.addEventListener('click',()=>{root.querySelectorAll('[data-rc-case]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));root.querySelectorAll('[data-rc-panel]').forEach(panel=>panel.hidden=panel.dataset.rcPanel!==button.dataset.rcCase)}));
+const year=root.querySelector('[data-rc-year-select]');if(year){const verdict={'2012':'2012：加入项目模型后误差增大；主场调整略有改善，仍未胜过透明基线。','2016':'2016：项目模型几乎持平；加入主场后误差反而增加。','2024':'2024：项目模型与主场调整均降低误差，但不能据此宣称逐届稳定胜出。'};const update=()=>{root.querySelectorAll('[data-rc-year]').forEach(row=>row.hidden=row.dataset.rcYear!==year.value);root.querySelector('[data-rc-verdict]').textContent=verdict[year.value]};year.addEventListener('change',update);update()}
+})();

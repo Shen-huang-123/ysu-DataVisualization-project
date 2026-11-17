@@ -1,0 +1,20 @@
+[
+  {
+    "path": "交付文件\\最终提交材料\\报告\\百年圣火_正式报告.pdf",
+    "before": "7d833cfad8f1d0d10bad41754ad96a293bd980d3f8ac7a2f8ea201f8f260c551",
+    "after": "39d15bfc459b88c8cea4bf25688e1aef1150fb15e4fe76e1d432c02f7003267c",
+    "method": "前置两页最新核验；原有正文保留；重跑替换不叠加"
+  },
+  {
+    "path": "交付文件\\最终提交材料\\数说奥运_晓组织_正式答卷.pdf",
+    "before": "64e0f312987103ec5b66ee7c419c1c6deb2dd53be315dd9206532589778a3bc2",
+    "after": "8e1cc7aa60fdc30636f842da4a396f7df33bb7cd9dbf2f880b11f9d97d3f718c",
+    "method": "前置两页最新核验；原有正文保留；重跑替换不叠加"
+  },
+  {
+    "path": "交付文件\\最终提交材料\\数说奥运_晓组织_正式答卷.docx",
+    "before": "3d60305bdbce0b7d4dc6f9cc7dfc1d1efe1e4dad4acd91afb39338de358aa706",
+    "after": "f5763ad88d60a5bbe38e0a089f2de5909fd9d3040db541c0574934349f898506",
+    "method": "前置最新核验正文，旧内容按版本保留"
+  }
+]

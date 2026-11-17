@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-17",
+  "checks": [
+    {
+      "file": "报告/百年圣火_正式报告.pdf",
+      "pages": 22,
+      "modified_pages": [
+        3,
+        11,
+        13,
+        14,
+        20
+      ],
+      "all_untouched_pages_pixel_identical": true,
+      "text_bounds": "pass"
+    },
+    {
+      "file": "数说奥运_晓组织_正式答卷.pdf",
+      "pages": 22,
+      "modified_pages": [
+        11,
+        17,
+        18,
+        21,
+        22
+      ],
+      "all_untouched_pages_pixel_identical": true,
+      "text_bounds": "pass"
+    },
+    {
+      "docx": "7处正文修订，唯一段落与最新边界检查通过"
+    }
+  ],
+  "visual_review": "报告第11/13页、答卷第21页实际渲染已查看，无重叠或截断",
+  "repeat_run": "重复执行页数22/22、正文段落不叠加",
+  "scope": "正文定点修正，保留明确标注的旧图",
+  "superseded_page_count": "本记录原22页已改为20页，最新见评委路径验收.json；正文改动仍保留"
+}

@@ -1,0 +1,32 @@
+{
+  "source": "小项二次来源",
+  "train_years": [
+    2008,
+    2012,
+    2016,
+    2024
+  ],
+  "selection_max_year": 2024,
+  "latest_medal_year": 2024,
+  "prior_medal_year": 2016,
+  "conditional_pool": 1120.0,
+  "source_of_pool": "沿用既有榜单1120单位总池以比较模型，不代表最终官方规模",
+  "model_parameters": {
+    "RF": {
+      "n_estimators": 280,
+      "min_samples_leaf": 3,
+      "max_features": 0.65,
+      "random_state": 28,
+      "n_jobs": 2
+    },
+    "GB": {
+      "n_estimators": 220,
+      "max_depth": 2,
+      "learning_rate": 0.035,
+      "loss": "huber",
+      "random_state": 28
+    }
+  },
+  "reading_policy": "历史加权基准为主阅读，RF/GB与55/45混合作条件比较；不宣称45%最优或区间已校准",
+  "unit_limit": "历史小项槽代理+2024逐项表，缺2020可比小项；2028资格及新增运动不由本核心决定"
+}

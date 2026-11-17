@@ -1,0 +1,556 @@
+﻿Year,Event,Sport,event_key,S3有同名观测,原金牌,替代金牌,金牌集合改变,来源
+2008,Archery Men's Individual,Archery,Archery｜Archery Men's Individual,True,UKR,UKR,False,https://www.olympedia.org/results/256950
+2008,Archery Men's Team,Archery,Archery｜Archery Men's Team,True,KOR,KOR,False,https://www.olympedia.org/results/257024
+2008,Archery Women's Individual,Archery,Archery｜Archery Women's Individual,True,CHN,CHN,False,https://www.olympedia.org/results/257046
+2008,Archery Women's Team,Archery,Archery｜Archery Women's Team,True,KOR,KOR,False,https://www.olympedia.org/results/257120
+2008,Badminton Men's Doubles,Badminton,Badminton｜Badminton Men's Doubles,True,INA,INA,False,https://www.olympedia.org/results/258136
+2008,Badminton Men's Singles,Badminton,Badminton｜Badminton Men's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/257994
+2008,Badminton Mixed Doubles,Badminton,Badminton｜Badminton Mixed Doubles,True,KOR,KOR,False,https://www.olympedia.org/results/258178
+2008,Badminton Women's Doubles,Badminton,Badminton｜Badminton Women's Doubles,True,CHN,CHN,False,https://www.olympedia.org/results/258157
+2008,Badminton Women's Singles,Badminton,Badminton｜Badminton Women's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/258065
+2008,Baseball Men's Baseball,Baseball,Baseball｜Baseball Men's Baseball,True,KOR,KOR,False,https://www.olympedia.org/results/258572
+2008,Basketball Men's Basketball,Basketball,Basketball｜Basketball Men's Basketball,True,USA,USA,False,https://www.olympedia.org/results/257904
+2008,Basketball Women's Basketball,Basketball,Basketball｜Basketball Women's Basketball,True,USA,USA,False,https://www.olympedia.org/results/257949
+2008,Beach Volleyball Men's Beach Volleyball,Beach Volleyball,Beach Volleyball｜Beach Volleyball Men's Beach Volleyball,True,USA,USA,False,https://www.olympedia.org/results/258609
+2008,Beach Volleyball Women's Beach Volleyball,Beach Volleyball,Beach Volleyball｜Beach Volleyball Women's Beach Volleyball,True,USA,USA,False,https://www.olympedia.org/results/258676
+2008,Boxing Men's Bantamweight,Boxing,Boxing｜Boxing Men's Bantamweight,True,MGL,MGL,False,https://www.olympedia.org/results/258273
+2008,Boxing Men's Featherweight,Boxing,Boxing｜Boxing Men's Featherweight,True,UKR,UKR,False,https://www.olympedia.org/results/258310
+2008,Boxing Men's Flyweight,Boxing,Boxing｜Boxing Men's Flyweight,True,THA,THA,False,https://www.olympedia.org/results/258236
+2008,Boxing Men's Heavyweight,Boxing,Boxing｜Boxing Men's Heavyweight,True,RUS,RUS,False,https://www.olympedia.org/results/258532
+2008,Boxing Men's Light-Flyweight,Boxing,Boxing｜Boxing Men's Light-Flyweight,True,CHN,CHN,False,https://www.olympedia.org/results/258199
+2008,Boxing Men's Light-Heavyweight,Boxing,Boxing｜Boxing Men's Light-Heavyweight,True,CHN,CHN,False,https://www.olympedia.org/results/258495
+2008,Boxing Men's Light-Welterweight,Boxing,Boxing｜Boxing Men's Light-Welterweight,True,DOM,DOM,False,https://www.olympedia.org/results/258384
+2008,Boxing Men's Lightweight,Boxing,Boxing｜Boxing Men's Lightweight,True,RUS,RUS,False,https://www.olympedia.org/results/258347
+2008,Boxing Men's Middleweight,Boxing,Boxing｜Boxing Men's Middleweight,True,GBR,GBR,False,https://www.olympedia.org/results/258458
+2008,Boxing Men's Super-Heavyweight,Boxing,Boxing｜Boxing Men's Super-Heavyweight,True,ITA,ITA,False,https://www.olympedia.org/results/258552
+2008,Boxing Men's Welterweight,Boxing,Boxing｜Boxing Men's Welterweight,True,KAZ,KAZ,False,https://www.olympedia.org/results/258421
+2008,"Canoeing Men's Canadian Doubles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Doubles, 1,000 metres",True,BLR,BLR,False,https://www.olympedia.org/results/258809
+2008,"Canoeing Men's Canadian Doubles, 500 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Doubles, 500 metres",True,CHN,CHN,False,https://www.olympedia.org/results/258802
+2008,"Canoeing Men's Canadian Doubles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Canadian Doubles, Slalom",True,SVK,SVK,False,https://www.olympedia.org/results/258832
+2008,"Canoeing Men's Canadian Singles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, 1,000 metres",True,HUN,HUN,False,https://www.olympedia.org/results/258793
+2008,"Canoeing Men's Canadian Singles, 500 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, 500 metres",True,RUS,RUS,False,https://www.olympedia.org/results/258784
+2008,"Canoeing Men's Canadian Singles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, Slalom",True,SVK,SVK,False,https://www.olympedia.org/results/258824
+2008,"Canoeing Men's Kayak Doubles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Doubles, 1,000 metres",True,GER,GER,False,https://www.olympedia.org/results/258770
+2008,"Canoeing Men's Kayak Doubles, 500 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Doubles, 500 metres",True,ESP,ESP,False,https://www.olympedia.org/results/258763
+2008,"Canoeing Men's Kayak Fours, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Fours, 1,000 metres",True,BLR,BLR,False,https://www.olympedia.org/results/258777
+2008,"Canoeing Men's Kayak Singles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, 1,000 metres",True,GBR,GBR,False,https://www.olympedia.org/results/258754
+2008,"Canoeing Men's Kayak Singles, 500 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, 500 metres",True,AUS,AUS,False,https://www.olympedia.org/results/258743
+2008,"Canoeing Men's Kayak Singles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, Slalom",True,GER,GER,False,https://www.olympedia.org/results/258816
+2008,"Canoeing Women's Kayak Doubles, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Doubles, 500 metres",True,HUN,HUN,False,https://www.olympedia.org/results/258849
+2008,"Canoeing Women's Kayak Fours, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Fours, 500 metres",True,GER,GER,False,https://www.olympedia.org/results/258856
+2008,"Canoeing Women's Kayak Singles, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, 500 metres",True,UKR,UKR,False,https://www.olympedia.org/results/258840
+2008,"Canoeing Women's Kayak Singles, Slalom",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, Slalom",True,SVK,SVK,False,https://www.olympedia.org/results/258863
+2008,Cycling Men's BMX,Cycling,Cycling｜Cycling Men's BMX,True,LAT,LAT,False,https://www.olympedia.org/results/258962
+2008,"Cycling Men's Individual Pursuit, 4,000 metres",Cycling,"Cycling｜Cycling Men's Individual Pursuit, 4,000 metres",True,GBR,GBR,False,https://www.olympedia.org/results/258910
+2008,Cycling Men's Keirin,Cycling,Cycling｜Cycling Men's Keirin,True,GBR,GBR,False,https://www.olympedia.org/results/258931
+2008,Cycling Men's Sprint,Cycling,Cycling｜Cycling Men's Sprint,True,GBR,GBR,False,https://www.olympedia.org/results/258871
+2008,"Cycling Men's Team Pursuit, 4,000 metres",Cycling,"Cycling｜Cycling Men's Team Pursuit, 4,000 metres",True,GBR,GBR,False,https://www.olympedia.org/results/258949
+2008,Cycling Men's Team Sprint,Cycling,Cycling｜Cycling Men's Team Sprint,True,GBR,GBR,False,https://www.olympedia.org/results/258921
+2008,Cycling Women's BMX,Cycling,Cycling｜Cycling Women's BMX,True,FRA,FRA,False,https://www.olympedia.org/results/259032
+2008,"Cycling Women's Individual Pursuit, 3,000 metres",Cycling,"Cycling｜Cycling Women's Individual Pursuit, 3,000 metres",True,GBR,GBR,False,https://www.olympedia.org/results/259019
+2008,Cycling Women's Individual Time Trial,Cycling,Cycling｜Cycling Women's Individual Time Trial,True,USA,USA,False,https://www.olympedia.org/results/259029
+2008,Cycling Women's Points Race,Cycling,Cycling｜Cycling Women's Points Race,True,NED,NED,False,https://www.olympedia.org/results/259018
+2008,"Cycling Women's Road Race, Individual",Cycling,"Cycling｜Cycling Women's Road Race, Individual",True,GBR,GBR,False,https://www.olympedia.org/results/259030
+2008,Cycling Women's Sprint,Cycling,Cycling｜Cycling Women's Sprint,True,GBR,GBR,False,https://www.olympedia.org/results/258993
+2008,"Equestrianism Mixed Dressage, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Dressage, Individual",True,NED,NED,False,https://www.olympedia.org/results/259079
+2008,"Equestrianism Mixed Dressage, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Dressage, Team",True,GER,GER,False,https://www.olympedia.org/results/259098
+2008,"Equestrianism Mixed Jumping, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Jumping, Individual",True,CAN,CAN,False,https://www.olympedia.org/results/259104
+2008,"Equestrianism Mixed Jumping, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Jumping, Team",True,USA,USA,False,https://www.olympedia.org/results/259115
+2008,"Equestrianism Mixed Three-Day Event, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Three-Day Event, Individual",True,GER,GER,False,https://www.olympedia.org/results/259066
+2008,"Equestrianism Mixed Three-Day Event, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Three-Day Event, Team",True,GER,GER,False,https://www.olympedia.org/results/259074
+2008,"Fencing Men's Foil, Individual",Fencing,"Fencing｜Fencing Men's Foil, Individual",True,GER,GER,False,https://www.olympedia.org/results/259119
+2008,"Fencing Men's Sabre, Individual",Fencing,"Fencing｜Fencing Men's Sabre, Individual",True,CHN,CHN,False,https://www.olympedia.org/results/259335
+2008,"Fencing Men's Sabre, Team",Fencing,"Fencing｜Fencing Men's Sabre, Team",True,FRA,FRA,False,https://www.olympedia.org/results/259382
+2008,"Fencing Men's epee, Individual",Fencing,"Fencing｜Fencing Men's epee, Individual",True,ITA,ITA,False,https://www.olympedia.org/results/259151
+2008,"Fencing Men's epee, Team",Fencing,"Fencing｜Fencing Men's epee, Team",True,FRA,FRA,False,https://www.olympedia.org/results/259199
+2008,"Fencing Women's Foil, Individual",Fencing,"Fencing｜Fencing Women's Foil, Individual",True,ITA,ITA,False,https://www.olympedia.org/results/259507
+2008,"Fencing Women's Foil, Team",Fencing,"Fencing｜Fencing Women's Foil, Team",True,RUS,RUS,False,https://www.olympedia.org/results/259555
+2008,"Fencing Women's Sabre, Individual",Fencing,"Fencing｜Fencing Women's Sabre, Individual",True,USA,USA,False,https://www.olympedia.org/results/259712
+2008,"Fencing Women's Sabre, Team",Fencing,"Fencing｜Fencing Women's Sabre, Team",True,UKR,UKR,False,https://www.olympedia.org/results/259758
+2008,"Fencing Women's epee, Individual",Fencing,"Fencing｜Fencing Women's epee, Individual",True,GER,GER,False,https://www.olympedia.org/results/259681
+2008,Football Men's Football,Football,Football｜Football Men's Football,True,ARG,ARG,False,https://www.olympedia.org/results/259883
+2008,Football Women's Football,Football,Football｜Football Women's Football,True,USA,USA,False,https://www.olympedia.org/results/259924
+2008,Gymnastics Men's Floor Exercise,Gymnastics,Gymnastics｜Gymnastics Men's Floor Exercise,True,CHN,CHN,False,https://www.olympedia.org/results/259964
+2008,Gymnastics Men's Horizontal Bar,Gymnastics,Gymnastics｜Gymnastics Men's Horizontal Bar,True,CHN,CHN,False,https://www.olympedia.org/results/259973
+2008,Gymnastics Men's Horse Vault,Gymnastics,Gymnastics｜Gymnastics Men's Horse Vault,True,POL,POL,False,https://www.olympedia.org/results/259967
+2008,Gymnastics Men's Individual All-Around,Gymnastics,Gymnastics｜Gymnastics Men's Individual All-Around,True,CHN,CHN,False,https://www.olympedia.org/results/259958
+2008,Gymnastics Men's Parallel Bars,Gymnastics,Gymnastics｜Gymnastics Men's Parallel Bars,True,CHN,CHN,False,https://www.olympedia.org/results/259970
+2008,Gymnastics Men's Pommelled Horse,Gymnastics,Gymnastics｜Gymnastics Men's Pommelled Horse,True,CHN,CHN,False,https://www.olympedia.org/results/259979
+2008,Gymnastics Men's Rings,Gymnastics,Gymnastics｜Gymnastics Men's Rings,True,CHN,CHN,False,https://www.olympedia.org/results/259976
+2008,Gymnastics Men's Team All-Around,Gymnastics,Gymnastics｜Gymnastics Men's Team All-Around,True,CHN,CHN,False,https://www.olympedia.org/results/259961
+2008,Gymnastics Women's Balance Beam,Gymnastics,Gymnastics｜Gymnastics Women's Balance Beam,True,USA,USA,False,https://www.olympedia.org/results/259997
+2008,Gymnastics Women's Floor Exercise,Gymnastics,Gymnastics｜Gymnastics Women's Floor Exercise,True,ROU,ROU,False,https://www.olympedia.org/results/259988
+2008,Gymnastics Women's Horse Vault,Gymnastics,Gymnastics｜Gymnastics Women's Horse Vault,True,PRK,PRK,False,https://www.olympedia.org/results/259991
+2008,Gymnastics Women's Individual All-Around,Gymnastics,Gymnastics｜Gymnastics Women's Individual All-Around,True,USA,USA,False,https://www.olympedia.org/results/259982
+2008,Gymnastics Women's Team All-Around,Gymnastics,Gymnastics｜Gymnastics Women's Team All-Around,True,CHN,CHN,False,https://www.olympedia.org/results/259985
+2008,Gymnastics Women's Uneven Bars,Gymnastics,Gymnastics｜Gymnastics Women's Uneven Bars,True,CHN,CHN,False,https://www.olympedia.org/results/259994
+2008,Handball Men's Handball,Handball,Handball｜Handball Men's Handball,True,FRA,FRA,False,https://www.olympedia.org/results/260000
+2008,Handball Women's Handball,Handball,Handball｜Handball Women's Handball,True,NOR,NOR,False,https://www.olympedia.org/results/260050
+2008,Hockey Men's Hockey,Hockey,Hockey｜Hockey Men's Hockey,True,GER,GER,False,https://www.olympedia.org/results/260100
+2008,Hockey Women's Hockey,Hockey,Hockey｜Hockey Women's Hockey,True,NED,NED,False,https://www.olympedia.org/results/260144
+2008,Modern Pentathlon Men's Individual,Modern Pentathlon,Modern Pentathlon｜Modern Pentathlon Men's Individual,True,RUS,RUS,False,https://www.olympedia.org/results/260915
+2008,Modern Pentathlon Women's Individual,Modern Pentathlon,Modern Pentathlon｜Modern Pentathlon Women's Individual,True,GER,GER,False,https://www.olympedia.org/results/260924
+2008,Rhythmic Gymnastics Women's Group,Rhythmic Gymnastics,Rhythmic Gymnastics｜Rhythmic Gymnastics Women's Group,True,RUS,RUS,False,https://www.olympedia.org/results/260944
+2008,Rhythmic Gymnastics Women's Individual,Rhythmic Gymnastics,Rhythmic Gymnastics｜Rhythmic Gymnastics Women's Individual,True,RUS,RUS,False,https://www.olympedia.org/results/260933
+2008,Rowing Men's Coxed Eights,Rowing,Rowing｜Rowing Men's Coxed Eights,True,CAN,CAN,False,https://www.olympedia.org/results/261034
+2008,Rowing Men's Coxless Fours,Rowing,Rowing｜Rowing Men's Coxless Fours,True,GBR,GBR,False,https://www.olympedia.org/results/261021
+2008,Rowing Men's Coxless Pairs,Rowing,Rowing｜Rowing Men's Coxless Pairs,True,AUS,AUS,False,https://www.olympedia.org/results/261007
+2008,Rowing Men's Double Sculls,Rowing,Rowing｜Rowing Men's Double Sculls,True,AUS,AUS,False,https://www.olympedia.org/results/260980
+2008,Rowing Men's Lightweight Coxless Fours,Rowing,Rowing｜Rowing Men's Lightweight Coxless Fours,True,DEN,DEN,False,https://www.olympedia.org/results/261063
+2008,Rowing Men's Lightweight Double Sculls,Rowing,Rowing｜Rowing Men's Lightweight Double Sculls,True,GBR,GBR,False,https://www.olympedia.org/results/261043
+2008,Rowing Men's Quadruple Sculls,Rowing,Rowing｜Rowing Men's Quadruple Sculls,True,POL,POL,False,https://www.olympedia.org/results/260994
+2008,Rowing Men's Single Sculls,Rowing,Rowing｜Rowing Men's Single Sculls,True,NOR,NOR,False,https://www.olympedia.org/results/260951
+2008,Rowing Women's Coxed Eights,Rowing,Rowing｜Rowing Women's Coxed Eights,True,USA,USA,False,https://www.olympedia.org/results/261130
+2008,Rowing Women's Coxless Pairs,Rowing,Rowing｜Rowing Women's Coxless Pairs,True,ROU,ROU,False,https://www.olympedia.org/results/261120
+2008,Rowing Women's Double Sculls,Rowing,Rowing｜Rowing Women's Double Sculls,True,NZL,NZL,False,https://www.olympedia.org/results/261101
+2008,Rowing Women's Lightweight Double Sculls,Rowing,Rowing｜Rowing Women's Lightweight Double Sculls,True,NED,NED,False,https://www.olympedia.org/results/261138
+2008,Rowing Women's Quadruple Sculls,Rowing,Rowing｜Rowing Women's Quadruple Sculls,True,CHN,CHN,False,https://www.olympedia.org/results/261111
+2008,Rowing Women's Single Sculls,Rowing,Rowing｜Rowing Women's Single Sculls,True,BUL,BUL,False,https://www.olympedia.org/results/261076
+2008,Sailing Men's One Person Dinghy,Sailing,Sailing｜Sailing Men's One Person Dinghy,True,GBR,GBR,False,https://www.olympedia.org/results/261311
+2008,Sailing Men's Two Person Dinghy,Sailing,Sailing｜Sailing Men's Two Person Dinghy,True,AUS,AUS,False,https://www.olympedia.org/results/261191
+2008,Sailing Men's Two Person Keelboat,Sailing,Sailing｜Sailing Men's Two Person Keelboat,True,GBR,GBR,False,https://www.olympedia.org/results/261212
+2008,Sailing Men's Windsurfer,Sailing,Sailing｜Sailing Men's Windsurfer,True,NZL,NZL,False,https://www.olympedia.org/results/261170
+2008,Sailing Mixed Multihull,Sailing,Sailing｜Sailing Mixed Multihull,True,ESP,ESP,False,https://www.olympedia.org/results/261330
+2008,Sailing Mixed One Person Dinghy,Sailing,Sailing｜Sailing Mixed One Person Dinghy,True,GBR,GBR,False,https://www.olympedia.org/results/261153
+2008,Sailing Mixed Skiff,Sailing,Sailing｜Sailing Mixed Skiff,True,DEN,DEN,False,https://www.olympedia.org/results/261351
+2008,Sailing Women's One Person Dinghy,Sailing,Sailing｜Sailing Women's One Person Dinghy,True,USA,USA,False,https://www.olympedia.org/results/261292
+2008,Sailing Women's Three Person Keelboat,Sailing,Sailing｜Sailing Women's Three Person Keelboat,True,GBR,GBR,False,https://www.olympedia.org/results/261275
+2008,Sailing Women's Two Person Dinghy,Sailing,Sailing｜Sailing Women's Two Person Dinghy,True,AUS,AUS,False,https://www.olympedia.org/results/261254
+2008,Sailing Women's Windsurfer,Sailing,Sailing｜Sailing Women's Windsurfer,True,CHN,CHN,False,https://www.olympedia.org/results/261233
+2008,"Shooting Men's Air Pistol, 10 metres",Shooting,"Shooting｜Shooting Men's Air Pistol, 10 metres",True,CHN,CHN,False,https://www.olympedia.org/results/261376
+2008,"Shooting Men's Air Rifle, 10 metres",Shooting,"Shooting｜Shooting Men's Air Rifle, 10 metres",True,IND,IND,False,https://www.olympedia.org/results/261387
+2008,Shooting Men's Double Trap,Shooting,Shooting｜Shooting Men's Double Trap,True,USA,USA,False,https://www.olympedia.org/results/261402
+2008,"Shooting Men's Free Pistol, 50 metres",Shooting,"Shooting｜Shooting Men's Free Pistol, 50 metres",True,KOR,KOR,False,https://www.olympedia.org/results/261384
+2008,"Shooting Men's Rapid-Fire Pistol, 25 metres",Shooting,"Shooting｜Shooting Men's Rapid-Fire Pistol, 25 metres",True,UKR,UKR,False,https://www.olympedia.org/results/261379
+2008,Shooting Men's Skeet,Shooting,Shooting｜Shooting Men's Skeet,True,USA,USA,False,https://www.olympedia.org/results/261405
+2008,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",Shooting,"Shooting｜Shooting Men's Small-Bore Rifle, Prone, 50 metres",True,UKR,UKR,False,https://www.olympedia.org/results/261390
+2008,"Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",Shooting,"Shooting｜Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",True,CHN,CHN,False,https://www.olympedia.org/results/261393
+2008,Shooting Men's Trap,Shooting,Shooting｜Shooting Men's Trap,True,CZE,CZE,False,https://www.olympedia.org/results/261399
+2008,"Shooting Women's Air Pistol, 10 metres",Shooting,"Shooting｜Shooting Women's Air Pistol, 10 metres",True,CHN,CHN,False,https://www.olympedia.org/results/261408
+2008,"Shooting Women's Air Rifle, 10 metres",Shooting,"Shooting｜Shooting Women's Air Rifle, 10 metres",True,CZE,CZE,False,https://www.olympedia.org/results/261416
+2008,Shooting Women's Skeet,Shooting,Shooting｜Shooting Women's Skeet,True,ITA,ITA,False,https://www.olympedia.org/results/261428
+2008,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",Shooting,"Shooting｜Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",True,CHN,CHN,False,https://www.olympedia.org/results/261419
+2008,"Shooting Women's Sporting Pistol, 25 metres",Shooting,"Shooting｜Shooting Women's Sporting Pistol, 25 metres",True,CHN,CHN,False,https://www.olympedia.org/results/261411
+2008,Shooting Women's Trap,Shooting,Shooting｜Shooting Women's Trap,True,FIN,FIN,False,https://www.olympedia.org/results/261425
+2008,Softball Women's Softball,Softball,Softball｜Softball Women's Softball,True,JPN,JPN,False,https://www.olympedia.org/results/261431
+2008,Table Tennis Men's Singles,Table Tennis,Table Tennis｜Table Tennis Men's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/262349
+2008,Table Tennis Men's Team,Table Tennis,Table Tennis｜Table Tennis Men's Team,True,CHN,CHN,False,https://www.olympedia.org/results/262435
+2008,Table Tennis Women's Singles,Table Tennis,Table Tennis｜Table Tennis Women's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/262591
+2008,Table Tennis Women's Team,Table Tennis,Table Tennis｜Table Tennis Women's Team,True,CHN,CHN,False,https://www.olympedia.org/results/262678
+2008,Tennis Men's Doubles,Tennis,Tennis｜Tennis Men's Doubles,True,SUI,SUI,False,https://www.olympedia.org/results/261950
+2008,Tennis Men's Singles,Tennis,Tennis｜Tennis Men's Singles,True,ESP,ESP,False,https://www.olympedia.org/results/261879
+2008,Tennis Women's Doubles,Tennis,Tennis｜Tennis Women's Doubles,True,USA,USA,False,https://www.olympedia.org/results/262059
+2008,Tennis Women's Singles,Tennis,Tennis｜Tennis Women's Singles,True,RUS,RUS,False,https://www.olympedia.org/results/261988
+2008,Trampolining Men's Individual,Trampolining,Trampolining｜Trampolining Men's Individual,True,CHN,CHN,False,https://www.olympedia.org/results/262321
+2008,Trampolining Women's Individual,Trampolining,Trampolining｜Trampolining Women's Individual,True,CHN,CHN,False,https://www.olympedia.org/results/262326
+2008,Triathlon Men's Olympic Distance,Triathlon,Triathlon｜Triathlon Men's Olympic Distance,True,GER,GER,False,https://www.olympedia.org/results/262331
+2008,Triathlon Women's Olympic Distance,Triathlon,Triathlon｜Triathlon Women's Olympic Distance,True,AUS,AUS,False,https://www.olympedia.org/results/262340
+2008,Volleyball Men's Volleyball,Volleyball,Volleyball｜Volleyball Men's Volleyball,True,USA,USA,False,https://www.olympedia.org/results/262828
+2008,Volleyball Women's Volleyball,Volleyball,Volleyball｜Volleyball Women's Volleyball,True,BRA,BRA,False,https://www.olympedia.org/results/262873
+2008,Weightlifting Men's Bantamweight,Weightlifting,Weightlifting｜Weightlifting Men's Bantamweight,True,CHN,CHN,False,https://www.olympedia.org/results/262997
+2008,Weightlifting Men's Featherweight,Weightlifting,Weightlifting｜Weightlifting Men's Featherweight,True,CHN,CHN,False,https://www.olympedia.org/results/263006
+2008,Weightlifting Men's Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Heavyweight,True,BLR,BLR,False,https://www.olympedia.org/results/263051
+2008,Weightlifting Men's Light-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Light-Heavyweight,True,CHN,CHN,False,https://www.olympedia.org/results/263033
+2008,Weightlifting Men's Lightweight,Weightlifting,Weightlifting｜Weightlifting Men's Lightweight,True,CHN,CHN,False,https://www.olympedia.org/results/263015
+2008,Weightlifting Men's Middle-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Middle-Heavyweight,True,KAZ,POL,True,https://www.olympedia.org/results/263042
+2008,Weightlifting Men's Middleweight,Weightlifting,Weightlifting｜Weightlifting Men's Middleweight,True,KOR,KOR,False,https://www.olympedia.org/results/263024
+2008,Weightlifting Men's Super-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Super-Heavyweight,True,GER,GER,False,https://www.olympedia.org/results/263060
+2008,Weightlifting Women's Featherweight,Weightlifting,Weightlifting｜Weightlifting Women's Featherweight,True,THA,THA,False,https://www.olympedia.org/results/263078
+2008,Weightlifting Women's Flyweight,Weightlifting,Weightlifting｜Weightlifting Women's Flyweight,True,CHN,TPE,True,https://www.olympedia.org/results/263069
+2008,Weightlifting Women's Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Heavyweight,True,CHN,KAZ,True,https://www.olympedia.org/results/263114
+2008,Weightlifting Women's Light-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Light-Heavyweight,True,CHN,RUS,True,https://www.olympedia.org/results/263105
+2008,Weightlifting Women's Lightweight,Weightlifting,Weightlifting｜Weightlifting Women's Lightweight,True,CHN,CHN,False,https://www.olympedia.org/results/263087
+2008,Weightlifting Women's Middleweight,Weightlifting,Weightlifting｜Weightlifting Women's Middleweight,True,PRK,PRK,False,https://www.olympedia.org/results/263096
+2008,Weightlifting Women's Super-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Super-Heavyweight,True,KOR,KOR,False,https://www.olympedia.org/results/263123
+2008,"Wrestling Men's Featherweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Featherweight, Freestyle",True,USA,USA,False,https://www.olympedia.org/results/263132
+2008,"Wrestling Men's Featherweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Featherweight, Greco-Roman",True,RUS,RUS,False,https://www.olympedia.org/results/263597
+2008,"Wrestling Men's Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Heavyweight, Freestyle",True,RUS,RUS,False,https://www.olympedia.org/results/263362
+2008,"Wrestling Men's Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Heavyweight, Greco-Roman",True,RUS,RUS,False,https://www.olympedia.org/results/263827
+2008,"Wrestling Men's Light-Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Light-Heavyweight, Freestyle",True,GEO,GEO,False,https://www.olympedia.org/results/263316
+2008,"Wrestling Men's Light-Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Light-Heavyweight, Greco-Roman",True,ITA,ITA,False,https://www.olympedia.org/results/263781
+2008,"Wrestling Men's Lightweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Lightweight, Freestyle",True,RUS,RUS,False,https://www.olympedia.org/results/263178
+2008,"Wrestling Men's Lightweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Lightweight, Greco-Roman",True,RUS,RUS,False,https://www.olympedia.org/results/263643
+2008,"Wrestling Men's Middleweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Middleweight, Freestyle",True,RUS,RUS,False,https://www.olympedia.org/results/263270
+2008,"Wrestling Men's Middleweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Middleweight, Greco-Roman",True,GEO,GEO,False,https://www.olympedia.org/results/263735
+2008,"Wrestling Men's Super-Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Super-Heavyweight, Freestyle",True,UZB,RUS,True,https://www.olympedia.org/results/263407
+2008,"Wrestling Men's Super-Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Super-Heavyweight, Greco-Roman",True,CUB,CUB,False,https://www.olympedia.org/results/263873
+2008,"Wrestling Men's Welterweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Welterweight, Freestyle",True,TUR,TUR,False,https://www.olympedia.org/results/263224
+2008,"Wrestling Men's Welterweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Welterweight, Greco-Roman",True,FRA,FRA,False,https://www.olympedia.org/results/263689
+2008,"Wrestling Women's Flyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Flyweight, Freestyle",True,CAN,CAN,False,https://www.olympedia.org/results/263453
+2008,"Wrestling Women's Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Heavyweight, Freestyle",True,CHN,CHN,False,https://www.olympedia.org/results/263571
+2008,"Wrestling Women's Lightweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Lightweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/263499
+2008,"Wrestling Women's Middleweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Middleweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/263525
+2012,Archery Men's Individual,Archery,Archery｜Archery Men's Individual,True,KOR,KOR,False,https://www.olympedia.org/results/301044
+2012,Archery Men's Team,Archery,Archery｜Archery Men's Team,True,ITA,ITA,False,https://www.olympedia.org/results/301000
+2012,Archery Women's Individual,Archery,Archery｜Archery Women's Individual,True,KOR,KOR,False,https://www.olympedia.org/results/301118
+2012,Archery Women's Team,Archery,Archery｜Archery Women's Team,True,KOR,KOR,False,https://www.olympedia.org/results/301022
+2012,Badminton Men's Doubles,Badminton,Badminton｜Badminton Men's Doubles,True,CHN,CHN,False,https://www.olympedia.org/results/304070
+2012,Badminton Men's Singles,Badminton,Badminton｜Badminton Men's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/304000
+2012,Badminton Mixed Doubles,Badminton,Badminton｜Badminton Mixed Doubles,True,CHN,CHN,False,https://www.olympedia.org/results/304234
+2012,Badminton Women's Doubles,Badminton,Badminton｜Badminton Women's Doubles,True,CHN,CHN,False,https://www.olympedia.org/results/304193
+2012,Badminton Women's Singles,Badminton,Badminton｜Badminton Women's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/304111
+2012,Basketball Men's Basketball,Basketball,Basketball｜Basketball Men's Basketball,True,USA,USA,False,https://www.olympedia.org/results/2014270
+2012,Basketball Women's Basketball,Basketball,Basketball｜Basketball Women's Basketball,True,USA,USA,False,https://www.olympedia.org/results/303046
+2012,Beach Volleyball Men's Beach Volleyball,Beach Volleyball,Beach Volleyball｜Beach Volleyball Men's Beach Volleyball,True,GER,GER,False,https://www.olympedia.org/results/306066
+2012,Beach Volleyball Women's Beach Volleyball,Beach Volleyball,Beach Volleyball｜Beach Volleyball Women's Beach Volleyball,True,USA,USA,False,https://www.olympedia.org/results/306000
+2012,Boxing Men's Bantamweight,Boxing,Boxing｜Boxing Men's Bantamweight,True,GBR,GBR,False,https://www.olympedia.org/results/305074
+2012,Boxing Men's Flyweight,Boxing,Boxing｜Boxing Men's Flyweight,True,CUB,CUB,False,https://www.olympedia.org/results/305037
+2012,Boxing Men's Heavyweight,Boxing,Boxing｜Boxing Men's Heavyweight,True,UKR,UKR,False,https://www.olympedia.org/results/305333
+2012,Boxing Men's Light-Flyweight,Boxing,Boxing｜Boxing Men's Light-Flyweight,True,CHN,CHN,False,https://www.olympedia.org/results/305000
+2012,Boxing Men's Light-Heavyweight,Boxing,Boxing｜Boxing Men's Light-Heavyweight,True,RUS,RUS,False,https://www.olympedia.org/results/305296
+2012,Boxing Men's Light-Welterweight,Boxing,Boxing｜Boxing Men's Light-Welterweight,True,CUB,CUB,False,https://www.olympedia.org/results/305185
+2012,Boxing Men's Lightweight,Boxing,Boxing｜Boxing Men's Lightweight,True,UKR,UKR,False,https://www.olympedia.org/results/305148
+2012,Boxing Men's Middleweight,Boxing,Boxing｜Boxing Men's Middleweight,True,JPN,JPN,False,https://www.olympedia.org/results/305259
+2012,Boxing Men's Super-Heavyweight,Boxing,Boxing｜Boxing Men's Super-Heavyweight,True,GBR,GBR,False,https://www.olympedia.org/results/305353
+2012,Boxing Men's Welterweight,Boxing,Boxing｜Boxing Men's Welterweight,True,KAZ,KAZ,False,https://www.olympedia.org/results/305222
+2012,Boxing Women's Flyweight,Boxing,Boxing｜Boxing Women's Flyweight,True,GBR,GBR,False,https://www.olympedia.org/results/305373
+2012,Boxing Women's Lightweight,Boxing,Boxing｜Boxing Women's Lightweight,True,IRL,IRL,False,https://www.olympedia.org/results/305393
+2012,Boxing Women's Middleweight,Boxing,Boxing｜Boxing Women's Middleweight,True,USA,USA,False,https://www.olympedia.org/results/305413
+2012,"Canoeing Men's Canadian Doubles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Doubles, 1,000 metres",True,GER,GER,False,https://www.olympedia.org/results/307107
+2012,"Canoeing Men's Canadian Doubles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Canadian Doubles, Slalom",True,GBR,GBR,False,https://www.olympedia.org/results/307012
+2012,"Canoeing Men's Canadian Singles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, 1,000 metres",True,GER,GER,False,https://www.olympedia.org/results/307026
+2012,"Canoeing Men's Canadian Singles, 200 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, 200 metres",True,UKR,UKR,False,https://www.olympedia.org/results/307094
+2012,"Canoeing Men's Canadian Singles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, Slalom",True,FRA,FRA,False,https://www.olympedia.org/results/307000
+2012,"Canoeing Men's Kayak Doubles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Doubles, 1,000 metres",True,HUN,HUN,False,https://www.olympedia.org/results/307048
+2012,"Canoeing Men's Kayak Doubles, 200 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Doubles, 200 metres",True,RUS,RUS,False,https://www.olympedia.org/results/307077
+2012,"Canoeing Men's Kayak Fours, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Fours, 1,000 metres",True,AUS,AUS,False,https://www.olympedia.org/results/307087
+2012,"Canoeing Men's Kayak Singles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, 1,000 metres",True,NOR,NOR,False,https://www.olympedia.org/results/307037
+2012,"Canoeing Men's Kayak Singles, 200 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, 200 metres",True,GBR,GBR,False,https://www.olympedia.org/results/307065
+2012,"Canoeing Men's Kayak Singles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, Slalom",True,ITA,ITA,False,https://www.olympedia.org/results/307006
+2012,"Canoeing Women's Kayak Doubles, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Doubles, 500 metres",True,GER,GER,False,https://www.olympedia.org/results/307143
+2012,"Canoeing Women's Kayak Fours, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Fours, 500 metres",True,HUN,HUN,False,https://www.olympedia.org/results/307058
+2012,"Canoeing Women's Kayak Singles, 200 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, 200 metres",True,NZL,NZL,False,https://www.olympedia.org/results/307117
+2012,"Canoeing Women's Kayak Singles, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, 500 metres",True,HUN,HUN,False,https://www.olympedia.org/results/307130
+2012,"Canoeing Women's Kayak Singles, Slalom",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, Slalom",True,FRA,FRA,False,https://www.olympedia.org/results/307020
+2012,Cycling Men's BMX,Cycling,Cycling｜Cycling Men's BMX,True,LAT,LAT,False,https://www.olympedia.org/results/308124
+2012,Cycling Men's Individual Time Trial,Cycling,Cycling｜Cycling Men's Individual Time Trial,True,GBR,GBR,False,https://www.olympedia.org/results/308003
+2012,Cycling Men's Keirin,Cycling,Cycling｜Cycling Men's Keirin,True,GBR,GBR,False,https://www.olympedia.org/results/308096
+2012,"Cycling Men's Mountainbike, Cross-Country",Cycling,"Cycling｜Cycling Men's Mountainbike, Cross-Country",True,CZE,CZE,False,https://www.olympedia.org/results/308110
+2012,Cycling Men's Omnium,Cycling,Cycling｜Cycling Men's Omnium,True,DEN,DEN,False,https://www.olympedia.org/results/308065
+2012,"Cycling Men's Road Race, Individual",Cycling,"Cycling｜Cycling Men's Road Race, Individual",True,KAZ,KAZ,False,https://www.olympedia.org/results/308000
+2012,Cycling Men's Sprint,Cycling,Cycling｜Cycling Men's Sprint,True,GBR,GBR,False,https://www.olympedia.org/results/308161
+2012,"Cycling Men's Team Pursuit, 4,000 metres",Cycling,"Cycling｜Cycling Men's Team Pursuit, 4,000 metres",True,GBR,GBR,False,https://www.olympedia.org/results/308048
+2012,Cycling Men's Team Sprint,Cycling,Cycling｜Cycling Men's Team Sprint,True,GBR,GBR,False,https://www.olympedia.org/results/308004
+2012,Cycling Women's BMX,Cycling,Cycling｜Cycling Women's BMX,True,COL,COL,False,https://www.olympedia.org/results/308112
+2012,Cycling Women's Individual Time Trial,Cycling,Cycling｜Cycling Women's Individual Time Trial,True,USA,USA,False,https://www.olympedia.org/results/308002
+2012,Cycling Women's Keirin,Cycling,Cycling｜Cycling Women's Keirin,True,GBR,GBR,False,https://www.olympedia.org/results/308034
+2012,"Cycling Women's Mountainbike, Cross-Country",Cycling,"Cycling｜Cycling Women's Mountainbike, Cross-Country",True,FRA,FRA,False,https://www.olympedia.org/results/308111
+2012,Cycling Women's Omnium,Cycling,Cycling｜Cycling Women's Omnium,True,GBR,GBR,False,https://www.olympedia.org/results/308089
+2012,"Cycling Women's Road Race, Individual",Cycling,"Cycling｜Cycling Women's Road Race, Individual",True,NED,NED,False,https://www.olympedia.org/results/308001
+2012,Cycling Women's Sprint,Cycling,Cycling｜Cycling Women's Sprint,True,AUS,AUS,False,https://www.olympedia.org/results/308200
+2012,Cycling Women's Team Pursuit,Cycling,Cycling｜Cycling Women's Team Pursuit,True,GBR,GBR,False,https://www.olympedia.org/results/308072
+2012,Cycling Women's Team Sprint,Cycling,Cycling｜Cycling Women's Team Sprint,True,GER,GER,False,https://www.olympedia.org/results/308019
+2012,"Equestrianism Mixed Dressage, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Dressage, Individual",True,GBR,GBR,False,https://www.olympedia.org/results/310025
+2012,"Equestrianism Mixed Dressage, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Dressage, Team",True,GBR,GBR,False,https://www.olympedia.org/results/310050
+2012,"Equestrianism Mixed Jumping, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Jumping, Individual",True,SUI,SUI,False,https://www.olympedia.org/results/310013
+2012,"Equestrianism Mixed Jumping, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Jumping, Team",True,GBR,GBR,False,https://www.olympedia.org/results/310021
+2012,"Equestrianism Mixed Three-Day Event, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Three-Day Event, Individual",True,GER,GER,False,https://www.olympedia.org/results/310000
+2012,"Equestrianism Mixed Three-Day Event, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Three-Day Event, Team",True,GER,GER,False,https://www.olympedia.org/results/310008
+2012,"Fencing Men's Foil, Individual",Fencing,"Fencing｜Fencing Men's Foil, Individual",True,CHN,CHN,False,https://www.olympedia.org/results/311213
+2012,"Fencing Men's Foil, Team",Fencing,"Fencing｜Fencing Men's Foil, Team",True,ITA,ITA,False,https://www.olympedia.org/results/311360
+2012,"Fencing Men's Sabre, Individual",Fencing,"Fencing｜Fencing Men's Sabre, Individual",True,HUN,HUN,False,https://www.olympedia.org/results/311071
+2012,"Fencing Men's Sabre, Team",Fencing,"Fencing｜Fencing Men's Sabre, Team",True,KOR,KOR,False,https://www.olympedia.org/results/311386
+2012,"Fencing Men's epee, Individual",Fencing,"Fencing｜Fencing Men's epee, Individual",True,VEN,VEN,False,https://www.olympedia.org/results/311284
+2012,"Fencing Women's Foil, Individual",Fencing,"Fencing｜Fencing Women's Foil, Individual",True,ITA,ITA,False,https://www.olympedia.org/results/311000
+2012,"Fencing Women's Foil, Team",Fencing,"Fencing｜Fencing Women's Foil, Team",True,ITA,ITA,False,https://www.olympedia.org/results/311412
+2012,"Fencing Women's Sabre, Individual",Fencing,"Fencing｜Fencing Women's Sabre, Individual",True,KOR,KOR,False,https://www.olympedia.org/results/311322
+2012,"Fencing Women's epee, Individual",Fencing,"Fencing｜Fencing Women's epee, Individual",True,UKR,UKR,False,https://www.olympedia.org/results/311142
+2012,"Fencing Women's epee, Team",Fencing,"Fencing｜Fencing Women's epee, Team",True,CHN,CHN,False,https://www.olympedia.org/results/311438
+2012,Football Men's Football,Football,Football｜Football Men's Football,True,MEX,MEX,False,https://www.olympedia.org/results/312000
+2012,Football Women's Football,Football,Football｜Football Women's Football,True,USA,USA,False,https://www.olympedia.org/results/312042
+2012,Gymnastics Men's Floor Exercise,Gymnastics,Gymnastics｜Gymnastics Men's Floor Exercise,True,CHN,CHN,False,https://www.olympedia.org/results/313012
+2012,Gymnastics Men's Horizontal Bar,Gymnastics,Gymnastics｜Gymnastics Men's Horizontal Bar,True,NED,NED,False,https://www.olympedia.org/results/313030
+2012,Gymnastics Men's Horse Vault,Gymnastics,Gymnastics｜Gymnastics Men's Horse Vault,True,KOR,KOR,False,https://www.olympedia.org/results/313024
+2012,Gymnastics Men's Individual All-Around,Gymnastics,Gymnastics｜Gymnastics Men's Individual All-Around,True,JPN,JPN,False,https://www.olympedia.org/results/313006
+2012,Gymnastics Men's Parallel Bars,Gymnastics,Gymnastics｜Gymnastics Men's Parallel Bars,True,CHN,CHN,False,https://www.olympedia.org/results/313027
+2012,Gymnastics Men's Pommelled Horse,Gymnastics,Gymnastics｜Gymnastics Men's Pommelled Horse,True,HUN,HUN,False,https://www.olympedia.org/results/313018
+2012,Gymnastics Men's Rings,Gymnastics,Gymnastics｜Gymnastics Men's Rings,True,BRA,BRA,False,https://www.olympedia.org/results/313021
+2012,Gymnastics Men's Team All-Around,Gymnastics,Gymnastics｜Gymnastics Men's Team All-Around,True,CHN,CHN,False,https://www.olympedia.org/results/313000
+2012,Gymnastics Women's Balance Beam,Gymnastics,Gymnastics｜Gymnastics Women's Balance Beam,True,CHN,CHN,False,https://www.olympedia.org/results/313036
+2012,Gymnastics Women's Floor Exercise,Gymnastics,Gymnastics｜Gymnastics Women's Floor Exercise,True,USA,USA,False,https://www.olympedia.org/results/313033
+2012,Gymnastics Women's Horse Vault,Gymnastics,Gymnastics｜Gymnastics Women's Horse Vault,True,ROU,ROU,False,https://www.olympedia.org/results/313015
+2012,Gymnastics Women's Individual All-Around,Gymnastics,Gymnastics｜Gymnastics Women's Individual All-Around,True,USA,USA,False,https://www.olympedia.org/results/313009
+2012,Gymnastics Women's Team All-Around,Gymnastics,Gymnastics｜Gymnastics Women's Team All-Around,True,USA,USA,False,https://www.olympedia.org/results/313003
+2012,Gymnastics Women's Uneven Bars,Gymnastics,Gymnastics｜Gymnastics Women's Uneven Bars,True,RUS,RUS,False,https://www.olympedia.org/results/313039
+2012,Handball Men's Handball,Handball,Handball｜Handball Men's Handball,True,FRA,FRA,False,https://www.olympedia.org/results/314000
+2012,Handball Women's Handball,Handball,Handball｜Handball Women's Handball,True,NOR,NOR,False,https://www.olympedia.org/results/314051
+2012,Hockey Men's Hockey,Hockey,Hockey｜Hockey Men's Hockey,True,GER,GER,False,https://www.olympedia.org/results/315000
+2012,Hockey Women's Hockey,Hockey,Hockey｜Hockey Women's Hockey,True,NED,NED,False,https://www.olympedia.org/results/315045
+2012,Modern Pentathlon Men's Individual,Modern Pentathlon,Modern Pentathlon｜Modern Pentathlon Men's Individual,True,CZE,CZE,False,https://www.olympedia.org/results/317000
+2012,Modern Pentathlon Women's Individual,Modern Pentathlon,Modern Pentathlon｜Modern Pentathlon Women's Individual,True,LTU,LTU,False,https://www.olympedia.org/results/317007
+2012,Rhythmic Gymnastics Women's Group,Rhythmic Gymnastics,Rhythmic Gymnastics｜Rhythmic Gymnastics Women's Group,True,RUS,RUS,False,https://www.olympedia.org/results/318011
+2012,Rhythmic Gymnastics Women's Individual,Rhythmic Gymnastics,Rhythmic Gymnastics｜Rhythmic Gymnastics Women's Individual,True,RUS,RUS,False,https://www.olympedia.org/results/318000
+2012,Rowing Men's Coxed Eights,Rowing,Rowing｜Rowing Men's Coxed Eights,True,GER,GER,False,https://www.olympedia.org/results/319000
+2012,Rowing Men's Coxless Fours,Rowing,Rowing｜Rowing Men's Coxless Fours,True,GBR,GBR,False,https://www.olympedia.org/results/319191
+2012,Rowing Men's Coxless Pairs,Rowing,Rowing｜Rowing Men's Coxless Pairs,True,NZL,NZL,False,https://www.olympedia.org/results/319094
+2012,Rowing Men's Double Sculls,Rowing,Rowing｜Rowing Men's Double Sculls,True,NZL,NZL,False,https://www.olympedia.org/results/319027
+2012,Rowing Men's Lightweight Coxless Fours,Rowing,Rowing｜Rowing Men's Lightweight Coxless Fours,True,RSA,RSA,False,https://www.olympedia.org/results/319040
+2012,Rowing Men's Lightweight Double Sculls,Rowing,Rowing｜Rowing Men's Lightweight Double Sculls,True,DEN,DEN,False,https://www.olympedia.org/results/319171
+2012,Rowing Men's Quadruple Sculls,Rowing,Rowing｜Rowing Men's Quadruple Sculls,True,GER,GER,False,https://www.olympedia.org/results/319107
+2012,Rowing Men's Single Sculls,Rowing,Rowing｜Rowing Men's Single Sculls,True,NZL,NZL,False,https://www.olympedia.org/results/319061
+2012,Rowing Women's Coxed Eights,Rowing,Rowing｜Rowing Women's Coxed Eights,True,USA,USA,False,https://www.olympedia.org/results/319053
+2012,Rowing Women's Coxless Pairs,Rowing,Rowing｜Rowing Women's Coxless Pairs,True,GBR,GBR,False,https://www.olympedia.org/results/319018
+2012,Rowing Women's Double Sculls,Rowing,Rowing｜Rowing Women's Double Sculls,True,GBR,GBR,False,https://www.olympedia.org/results/319120
+2012,Rowing Women's Lightweight Double Sculls,Rowing,Rowing｜Rowing Women's Lightweight Double Sculls,True,GBR,GBR,False,https://www.olympedia.org/results/319156
+2012,Rowing Women's Quadruple Sculls,Rowing,Rowing｜Rowing Women's Quadruple Sculls,True,UKR,UKR,False,https://www.olympedia.org/results/319009
+2012,Rowing Women's Single Sculls,Rowing,Rowing｜Rowing Women's Single Sculls,True,CZE,CZE,False,https://www.olympedia.org/results/319129
+2012,Sailing Men's One Person Dinghy,Sailing,Sailing｜Sailing Men's One Person Dinghy,True,AUS,AUS,False,https://www.olympedia.org/results/320042
+2012,Sailing Men's One Person Heavyweight Dinghy,Sailing,Sailing｜Sailing Men's One Person Heavyweight Dinghy,True,GBR,GBR,False,https://www.olympedia.org/results/320021
+2012,Sailing Men's Skiff,Sailing,Sailing｜Sailing Men's Skiff,True,AUS,AUS,False,https://www.olympedia.org/results/320147
+2012,Sailing Men's Two Person Dinghy,Sailing,Sailing｜Sailing Men's Two Person Dinghy,True,AUS,AUS,False,https://www.olympedia.org/results/320126
+2012,Sailing Men's Two Person Keelboat,Sailing,Sailing｜Sailing Men's Two Person Keelboat,True,SWE,SWE,False,https://www.olympedia.org/results/320000
+2012,Sailing Men's Windsurfer,Sailing,Sailing｜Sailing Men's Windsurfer,True,NED,NED,False,https://www.olympedia.org/results/320084
+2012,Sailing Women's One Person Dinghy,Sailing,Sailing｜Sailing Women's One Person Dinghy,True,CHN,CHN,False,https://www.olympedia.org/results/320063
+2012,Sailing Women's Three Person Keelboat,Sailing,Sailing｜Sailing Women's Three Person Keelboat,True,ESP,ESP,False,https://www.olympedia.org/results/320199
+2012,Sailing Women's Two Person Dinghy,Sailing,Sailing｜Sailing Women's Two Person Dinghy,True,NZL,NZL,False,https://www.olympedia.org/results/320178
+2012,Sailing Women's Windsurfer,Sailing,Sailing｜Sailing Women's Windsurfer,True,ESP,ESP,False,https://www.olympedia.org/results/320105
+2012,"Shooting Men's Air Pistol, 10 metres",Shooting,"Shooting｜Shooting Men's Air Pistol, 10 metres",True,KOR,KOR,False,https://www.olympedia.org/results/321003
+2012,"Shooting Men's Air Rifle, 10 metres",Shooting,"Shooting｜Shooting Men's Air Rifle, 10 metres",True,ROU,ROU,False,https://www.olympedia.org/results/321012
+2012,Shooting Men's Double Trap,Shooting,Shooting｜Shooting Men's Double Trap,True,GBR,GBR,False,https://www.olympedia.org/results/321023
+2012,"Shooting Men's Free Pistol, 50 metres",Shooting,"Shooting｜Shooting Men's Free Pistol, 50 metres",True,KOR,KOR,False,https://www.olympedia.org/results/321043
+2012,"Shooting Men's Rapid-Fire Pistol, 25 metres",Shooting,"Shooting｜Shooting Men's Rapid-Fire Pistol, 25 metres",True,CUB,CUB,False,https://www.olympedia.org/results/321026
+2012,Shooting Men's Skeet,Shooting,Shooting｜Shooting Men's Skeet,True,USA,USA,False,https://www.olympedia.org/results/321015
+2012,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",Shooting,"Shooting｜Shooting Men's Small-Bore Rifle, Prone, 50 metres",True,BLR,BLR,False,https://www.olympedia.org/results/321031
+2012,"Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",Shooting,"Shooting｜Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",True,ITA,ITA,False,https://www.olympedia.org/results/321046
+2012,Shooting Men's Trap,Shooting,Shooting｜Shooting Men's Trap,True,CRO,CRO,False,https://www.olympedia.org/results/321052
+2012,"Shooting Women's Air Pistol, 10 metres",Shooting,"Shooting｜Shooting Women's Air Pistol, 10 metres",True,CHN,CHN,False,https://www.olympedia.org/results/321006
+2012,"Shooting Women's Air Rifle, 10 metres",Shooting,"Shooting｜Shooting Women's Air Rifle, 10 metres",True,CHN,CHN,False,https://www.olympedia.org/results/321000
+2012,Shooting Women's Skeet,Shooting,Shooting｜Shooting Women's Skeet,True,USA,USA,False,https://www.olympedia.org/results/321009
+2012,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",Shooting,"Shooting｜Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",True,USA,USA,False,https://www.olympedia.org/results/321037
+2012,"Shooting Women's Sporting Pistol, 25 metres",Shooting,"Shooting｜Shooting Women's Sporting Pistol, 25 metres",True,KOR,KOR,False,https://www.olympedia.org/results/321018
+2012,Shooting Women's Trap,Shooting,Shooting｜Shooting Women's Trap,True,ITA,ITA,False,https://www.olympedia.org/results/321034
+2012,Table Tennis Men's Singles,Table Tennis,Table Tennis｜Table Tennis Men's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/328079
+2012,Table Tennis Men's Team,Table Tennis,Table Tennis｜Table Tennis Men's Team,True,CHN,CHN,False,https://www.olympedia.org/results/328157
+2012,Table Tennis Women's Singles,Table Tennis,Table Tennis｜Table Tennis Women's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/328000
+2012,Table Tennis Women's Team,Table Tennis,Table Tennis｜Table Tennis Women's Team,True,CHN,CHN,False,https://www.olympedia.org/results/328178
+2012,Tennis Men's Doubles,Tennis,Tennis｜Tennis Men's Doubles,True,USA,USA,False,https://www.olympedia.org/results/324142
+2012,Tennis Men's Singles,Tennis,Tennis｜Tennis Men's Singles,True,GBR,GBR,False,https://www.olympedia.org/results/324071
+2012,Tennis Mixed Doubles,Tennis,Tennis｜Tennis Mixed Doubles,True,BLR,BLR,False,https://www.olympedia.org/results/324218
+2012,Tennis Women's Doubles,Tennis,Tennis｜Tennis Women's Doubles,True,USA,USA,False,https://www.olympedia.org/results/324180
+2012,Tennis Women's Singles,Tennis,Tennis｜Tennis Women's Singles,True,USA,USA,False,https://www.olympedia.org/results/324000
+2012,Trampolining Men's Individual,Trampolining,Trampolining｜Trampolining Men's Individual,True,CHN,CHN,False,https://www.olympedia.org/results/326000
+2012,Trampolining Women's Individual,Trampolining,Trampolining｜Trampolining Women's Individual,True,CAN,CAN,False,https://www.olympedia.org/results/326005
+2012,Triathlon Men's Olympic Distance,Triathlon,Triathlon｜Triathlon Men's Olympic Distance,True,GBR,GBR,False,https://www.olympedia.org/results/327009
+2012,Triathlon Women's Olympic Distance,Triathlon,Triathlon｜Triathlon Women's Olympic Distance,True,SUI,SUI,False,https://www.olympedia.org/results/327000
+2012,Volleyball Men's Volleyball,Volleyball,Volleyball｜Volleyball Men's Volleyball,True,RUS,RUS,False,https://www.olympedia.org/results/329000
+2012,Volleyball Women's Volleyball,Volleyball,Volleyball｜Volleyball Women's Volleyball,True,BRA,BRA,False,https://www.olympedia.org/results/329046
+2012,Weightlifting Men's Featherweight,Weightlifting,Weightlifting｜Weightlifting Men's Featherweight,True,PRK,PRK,False,https://www.olympedia.org/results/331036
+2012,Weightlifting Men's Light-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Light-Heavyweight,True,POL,POL,False,https://www.olympedia.org/results/331081
+2012,Weightlifting Men's Lightweight,Weightlifting,Weightlifting｜Weightlifting Men's Lightweight,True,CHN,CHN,False,https://www.olympedia.org/results/331054
+2012,Weightlifting Men's Middle-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Middle-Heavyweight,True,KAZ,IRI,True,https://www.olympedia.org/results/331099
+2012,Weightlifting Men's Middleweight,Weightlifting,Weightlifting｜Weightlifting Men's Middleweight,True,CHN,CHN,False,https://www.olympedia.org/results/331072
+2012,Weightlifting Women's Featherweight,Weightlifting,Weightlifting｜Weightlifting Women's Featherweight,True,KAZ,TPE,True,https://www.olympedia.org/results/331009
+2012,Weightlifting Women's Flyweight,Weightlifting,Weightlifting｜Weightlifting Women's Flyweight,True,CHN,CHN,False,https://www.olympedia.org/results/331000
+2012,Weightlifting Women's Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Heavyweight,True,KAZ,CAN,True,https://www.olympedia.org/results/331045
+2012,Weightlifting Women's Light-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Light-Heavyweight,True,PRK,PRK,False,https://www.olympedia.org/results/331063
+2012,Weightlifting Women's Lightweight,Weightlifting,Weightlifting｜Weightlifting Women's Lightweight,True,CHN,CHN,False,https://www.olympedia.org/results/331027
+2012,Weightlifting Women's Middleweight,Weightlifting,Weightlifting｜Weightlifting Women's Middleweight,True,KAZ,ESP,True,https://www.olympedia.org/results/331090
+2012,Weightlifting Women's Super-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Super-Heavyweight,True,CHN,CHN,False,https://www.olympedia.org/results/331108
+2012,"Wrestling Men's Featherweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Featherweight, Freestyle",True,RUS,RUS,False,https://www.olympedia.org/results/332322
+2012,"Wrestling Men's Featherweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Featherweight, Greco-Roman",True,IRI,IRI,False,https://www.olympedia.org/results/332000
+2012,"Wrestling Men's Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Heavyweight, Freestyle",True,USA,USA,False,https://www.olympedia.org/results/332552
+2012,"Wrestling Men's Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Heavyweight, Greco-Roman",True,IRI,IRI,False,https://www.olympedia.org/results/332230
+2012,"Wrestling Men's Light-Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Light-Heavyweight, Freestyle",True,AZE,AZE,False,https://www.olympedia.org/results/332506
+2012,"Wrestling Men's Light-Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Light-Heavyweight, Greco-Roman",True,RUS,RUS,False,https://www.olympedia.org/results/332184
+2012,"Wrestling Men's Lightweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Lightweight, Freestyle",True,AZE,AZE,False,https://www.olympedia.org/results/332368
+2012,"Wrestling Men's Lightweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Lightweight, Greco-Roman",True,IRI,IRI,False,https://www.olympedia.org/results/332046
+2012,"Wrestling Men's Middleweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Middleweight, Freestyle",True,USA,USA,False,https://www.olympedia.org/results/332460
+2012,"Wrestling Men's Middleweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Middleweight, Greco-Roman",True,RUS,RUS,False,https://www.olympedia.org/results/332138
+2012,"Wrestling Men's Super-Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Super-Heavyweight, Freestyle",True,UZB,IRI|RUS,True,https://www.olympedia.org/results/332597
+2012,"Wrestling Men's Super-Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Super-Heavyweight, Greco-Roman",True,CUB,CUB,False,https://www.olympedia.org/results/332276
+2012,"Wrestling Men's Welterweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Welterweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/332414
+2012,"Wrestling Men's Welterweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Welterweight, Greco-Roman",True,KOR,KOR,False,https://www.olympedia.org/results/332092
+2012,"Wrestling Women's Flyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Flyweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/332644
+2012,"Wrestling Women's Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Heavyweight, Freestyle",True,RUS,RUS,False,https://www.olympedia.org/results/332782
+2012,"Wrestling Women's Lightweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Lightweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/332690
+2012,"Wrestling Women's Middleweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Middleweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/332736
+2016,Archery Men's Individual,Archery,Archery｜Archery Men's Individual,True,KOR,KOR,False,https://www.olympedia.org/results/351070
+2016,Archery Men's Team,Archery,Archery｜Archery Men's Team,True,KOR,KOR,False,https://www.olympedia.org/results/351144
+2016,Archery Women's Individual,Archery,Archery｜Archery Women's Individual,True,KOR,KOR,False,https://www.olympedia.org/results/351166
+2016,Archery Women's Team,Archery,Archery｜Archery Women's Team,True,KOR,KOR,False,https://www.olympedia.org/results/351240
+2016,Badminton Men's Doubles,Badminton,Badminton｜Badminton Men's Doubles,True,CHN,CHN,False,https://www.olympedia.org/results/351630
+2016,Badminton Men's Singles,Badminton,Badminton｜Badminton Men's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/351550
+2016,Badminton Mixed Doubles,Badminton,Badminton｜Badminton Mixed Doubles,True,INA,INA,False,https://www.olympedia.org/results/351789
+2016,Badminton Women's Doubles,Badminton,Badminton｜Badminton Women's Doubles,True,JPN,JPN,False,https://www.olympedia.org/results/351748
+2016,Badminton Women's Singles,Badminton,Badminton｜Badminton Women's Singles,True,ESP,ESP,False,https://www.olympedia.org/results/351671
+2016,Basketball Men's Basketball,Basketball,Basketball｜Basketball Men's Basketball,True,USA,USA,False,https://www.olympedia.org/results/359400
+2016,Basketball Women's Basketball,Basketball,Basketball｜Basketball Women's Basketball,True,USA,USA,False,https://www.olympedia.org/results/359446
+2016,Beach Volleyball Men's Beach Volleyball,Beach Volleyball,Beach Volleyball｜Beach Volleyball Men's Beach Volleyball,True,BRA,BRA,False,https://www.olympedia.org/results/354150
+2016,Beach Volleyball Women's Beach Volleyball,Beach Volleyball,Beach Volleyball｜Beach Volleyball Women's Beach Volleyball,True,GER,GER,False,https://www.olympedia.org/results/354218
+2016,Boxing Men's Bantamweight,Boxing,Boxing｜Boxing Men's Bantamweight,True,CUB,CUB,False,https://www.olympedia.org/results/356374
+2016,Boxing Men's Flyweight,Boxing,Boxing｜Boxing Men's Flyweight,True,UZB,UZB,False,https://www.olympedia.org/results/356337
+2016,Boxing Men's Heavyweight,Boxing,Boxing｜Boxing Men's Heavyweight,True,RUS,RUS,False,https://www.olympedia.org/results/356596
+2016,Boxing Men's Light-Flyweight,Boxing,Boxing｜Boxing Men's Light-Flyweight,True,UZB,UZB,False,https://www.olympedia.org/results/356300
+2016,Boxing Men's Light-Heavyweight,Boxing,Boxing｜Boxing Men's Light-Heavyweight,True,CUB,CUB,False,https://www.olympedia.org/results/356559
+2016,Boxing Men's Light-Welterweight,Boxing,Boxing｜Boxing Men's Light-Welterweight,True,UZB,UZB,False,https://www.olympedia.org/results/356448
+2016,Boxing Men's Lightweight,Boxing,Boxing｜Boxing Men's Lightweight,True,BRA,BRA,False,https://www.olympedia.org/results/356411
+2016,Boxing Men's Middleweight,Boxing,Boxing｜Boxing Men's Middleweight,True,CUB,CUB,False,https://www.olympedia.org/results/356522
+2016,Boxing Men's Super-Heavyweight,Boxing,Boxing｜Boxing Men's Super-Heavyweight,True,FRA,FRA,False,https://www.olympedia.org/results/356633
+2016,Boxing Men's Welterweight,Boxing,Boxing｜Boxing Men's Welterweight,True,KAZ,KAZ,False,https://www.olympedia.org/results/356485
+2016,Boxing Women's Flyweight,Boxing,Boxing｜Boxing Women's Flyweight,True,GBR,GBR,False,https://www.olympedia.org/results/356670
+2016,Boxing Women's Lightweight,Boxing,Boxing｜Boxing Women's Lightweight,True,FRA,FRA,False,https://www.olympedia.org/results/356690
+2016,Boxing Women's Middleweight,Boxing,Boxing｜Boxing Women's Middleweight,True,USA,USA,False,https://www.olympedia.org/results/356710
+2016,"Canoeing Men's Canadian Doubles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Doubles, 1,000 metres",True,GER,GER,False,https://www.olympedia.org/results/353532
+2016,"Canoeing Men's Canadian Doubles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Canadian Doubles, Slalom",True,SVK,SVK,False,https://www.olympedia.org/results/353548
+2016,"Canoeing Men's Canadian Singles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, 1,000 metres",True,GER,GER,False,https://www.olympedia.org/results/353521
+2016,"Canoeing Men's Canadian Singles, 200 metres",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, 200 metres",True,UKR,UKR,False,https://www.olympedia.org/results/353508
+2016,"Canoeing Men's Canadian Singles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Canadian Singles, Slalom",True,FRA,FRA,False,https://www.olympedia.org/results/353542
+2016,"Canoeing Men's Kayak Doubles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Doubles, 1,000 metres",True,GER,GER,False,https://www.olympedia.org/results/353482
+2016,"Canoeing Men's Kayak Doubles, 200 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Doubles, 200 metres",True,ESP,ESP,False,https://www.olympedia.org/results/353472
+2016,"Canoeing Men's Kayak Fours, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Fours, 1,000 metres",True,GER,GER,False,https://www.olympedia.org/results/353492
+2016,"Canoeing Men's Kayak Singles, 1,000 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, 1,000 metres",True,ESP,ESP,False,https://www.olympedia.org/results/353461
+2016,"Canoeing Men's Kayak Singles, 200 metres",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, 200 metres",True,GBR,GBR,False,https://www.olympedia.org/results/353450
+2016,"Canoeing Men's Kayak Singles, Slalom",Canoeing,"Canoeing｜Canoeing Men's Kayak Singles, Slalom",True,GBR,GBR,False,https://www.olympedia.org/results/353502
+2016,"Canoeing Women's Kayak Doubles, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Doubles, 500 metres",True,HUN,HUN,False,https://www.olympedia.org/results/353580
+2016,"Canoeing Women's Kayak Fours, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Fours, 500 metres",True,HUN,HUN,False,https://www.olympedia.org/results/353590
+2016,"Canoeing Women's Kayak Singles, 200 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, 200 metres",True,NZL,NZL,False,https://www.olympedia.org/results/353554
+2016,"Canoeing Women's Kayak Singles, 500 metres",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, 500 metres",True,HUN,HUN,False,https://www.olympedia.org/results/353567
+2016,"Canoeing Women's Kayak Singles, Slalom",Canoeing,"Canoeing｜Canoeing Women's Kayak Singles, Slalom",True,ESP,ESP,False,https://www.olympedia.org/results/353600
+2016,Cycling Men's BMX,Cycling,Cycling｜Cycling Men's BMX,True,USA,USA,False,https://www.olympedia.org/results/356837
+2016,Cycling Men's Individual Time Trial,Cycling,Cycling｜Cycling Men's Individual Time Trial,True,SUI,SUI,False,https://www.olympedia.org/results/356741
+2016,Cycling Men's Keirin,Cycling,Cycling｜Cycling Men's Keirin,True,GBR,GBR,False,https://www.olympedia.org/results/356781
+2016,"Cycling Men's Mountainbike, Cross-Country",Cycling,"Cycling｜Cycling Men's Mountainbike, Cross-Country",True,SUI,SUI,False,https://www.olympedia.org/results/356836
+2016,Cycling Men's Omnium,Cycling,Cycling｜Cycling Men's Omnium,True,ITA,ITA,False,https://www.olympedia.org/results/356825
+2016,"Cycling Men's Road Race, Individual",Cycling,"Cycling｜Cycling Men's Road Race, Individual",True,BEL,BEL,False,https://www.olympedia.org/results/356740
+2016,Cycling Men's Sprint,Cycling,Cycling｜Cycling Men's Sprint,True,GBR,GBR,False,https://www.olympedia.org/results/356742
+2016,"Cycling Men's Team Pursuit, 4,000 metres",Cycling,"Cycling｜Cycling Men's Team Pursuit, 4,000 metres",True,GBR,GBR,False,https://www.olympedia.org/results/356813
+2016,Cycling Men's Team Sprint,Cycling,Cycling｜Cycling Men's Team Sprint,True,GBR,GBR,False,https://www.olympedia.org/results/356798
+2016,Cycling Women's BMX,Cycling,Cycling｜Cycling Women's BMX,True,COL,COL,False,https://www.olympedia.org/results/356963
+2016,Cycling Women's Individual Time Trial,Cycling,Cycling｜Cycling Women's Individual Time Trial,True,USA,USA,False,https://www.olympedia.org/results/356867
+2016,Cycling Women's Keirin,Cycling,Cycling｜Cycling Women's Keirin,True,NED,NED,False,https://www.olympedia.org/results/356907
+2016,"Cycling Women's Mountainbike, Cross-Country",Cycling,"Cycling｜Cycling Women's Mountainbike, Cross-Country",True,SWE,SWE,False,https://www.olympedia.org/results/356962
+2016,Cycling Women's Omnium,Cycling,Cycling｜Cycling Women's Omnium,True,GBR,GBR,False,https://www.olympedia.org/results/356951
+2016,"Cycling Women's Road Race, Individual",Cycling,"Cycling｜Cycling Women's Road Race, Individual",True,NED,NED,False,https://www.olympedia.org/results/356866
+2016,Cycling Women's Sprint,Cycling,Cycling｜Cycling Women's Sprint,True,GER,GER,False,https://www.olympedia.org/results/356868
+2016,Cycling Women's Team Pursuit,Cycling,Cycling｜Cycling Women's Team Pursuit,True,GBR,GBR,False,https://www.olympedia.org/results/356939
+2016,Cycling Women's Team Sprint,Cycling,Cycling｜Cycling Women's Team Sprint,True,CHN,CHN,False,https://www.olympedia.org/results/356924
+2016,"Equestrianism Mixed Dressage, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Dressage, Individual",True,GBR,GBR,False,https://www.olympedia.org/results/358406
+2016,"Equestrianism Mixed Dressage, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Dressage, Team",True,GER,GER,False,https://www.olympedia.org/results/358431
+2016,"Equestrianism Mixed Jumping, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Jumping, Individual",True,GBR,GBR,False,https://www.olympedia.org/results/358434
+2016,"Equestrianism Mixed Jumping, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Jumping, Team",True,FRA,FRA,False,https://www.olympedia.org/results/358444
+2016,"Equestrianism Mixed Three-Day Event, Individual",Equestrianism,"Equestrianism｜Equestrianism Mixed Three-Day Event, Individual",True,GER,GER,False,https://www.olympedia.org/results/358390
+2016,"Equestrianism Mixed Three-Day Event, Team",Equestrianism,"Equestrianism｜Equestrianism Mixed Three-Day Event, Team",True,FRA,FRA,False,https://www.olympedia.org/results/358401
+2016,"Fencing Men's Foil, Individual",Fencing,"Fencing｜Fencing Men's Foil, Individual",True,ITA,ITA,False,https://www.olympedia.org/results/357450
+2016,"Fencing Men's Foil, Team",Fencing,"Fencing｜Fencing Men's Foil, Team",True,RUS,RUS,False,https://www.olympedia.org/results/357521
+2016,"Fencing Men's Sabre, Individual",Fencing,"Fencing｜Fencing Men's Sabre, Individual",True,HUN,HUN,False,https://www.olympedia.org/results/357860
+2016,"Fencing Men's epee, Individual",Fencing,"Fencing｜Fencing Men's epee, Individual",True,KOR,KOR,False,https://www.olympedia.org/results/357646
+2016,"Fencing Men's epee, Team",Fencing,"Fencing｜Fencing Men's epee, Team",True,FRA,FRA,False,https://www.olympedia.org/results/357717
+2016,"Fencing Women's Foil, Individual",Fencing,"Fencing｜Fencing Women's Foil, Individual",True,RUS,RUS,False,https://www.olympedia.org/results/357898
+2016,"Fencing Women's Sabre, Individual",Fencing,"Fencing｜Fencing Women's Sabre, Individual",True,RUS,RUS,False,https://www.olympedia.org/results/358183
+2016,"Fencing Women's Sabre, Team",Fencing,"Fencing｜Fencing Women's Sabre, Team",True,RUS,RUS,False,https://www.olympedia.org/results/358254
+2016,"Fencing Women's epee, Individual",Fencing,"Fencing｜Fencing Women's epee, Individual",True,HUN,HUN,False,https://www.olympedia.org/results/357969
+2016,"Fencing Women's epee, Team",Fencing,"Fencing｜Fencing Women's epee, Team",True,ROU,ROU,False,https://www.olympedia.org/results/358040
+2016,Football Men's Football,Football,Football｜Football Men's Football,True,BRA,BRA,False,https://www.olympedia.org/results/359500
+2016,Football Women's Football,Football,Football｜Football Women's Football,True,GER,GER,False,https://www.olympedia.org/results/359542
+2016,Golf Men's Individual,Golf,Golf｜Golf Men's Individual,True,GBR,GBR,False,https://www.olympedia.org/results/351030
+2016,Golf Women's Individual,Golf,Golf｜Golf Women's Individual,True,KOR,KOR,False,https://www.olympedia.org/results/351037
+2016,Gymnastics Men's Floor Exercise,Gymnastics,Gymnastics｜Gymnastics Men's Floor Exercise,True,GBR,GBR,False,https://www.olympedia.org/results/353636
+2016,Gymnastics Men's Horizontal Bar,Gymnastics,Gymnastics｜Gymnastics Men's Horizontal Bar,True,GER,GER,False,https://www.olympedia.org/results/353649
+2016,Gymnastics Men's Horse Vault,Gymnastics,Gymnastics｜Gymnastics Men's Horse Vault,True,PRK,PRK,False,https://www.olympedia.org/results/353639
+2016,Gymnastics Men's Individual All-Around,Gymnastics,Gymnastics｜Gymnastics Men's Individual All-Around,True,JPN,JPN,False,https://www.olympedia.org/results/353606
+2016,Gymnastics Men's Parallel Bars,Gymnastics,Gymnastics｜Gymnastics Men's Parallel Bars,True,UKR,UKR,False,https://www.olympedia.org/results/353646
+2016,Gymnastics Men's Pommelled Horse,Gymnastics,Gymnastics｜Gymnastics Men's Pommelled Horse,True,GBR,GBR,False,https://www.olympedia.org/results/353655
+2016,Gymnastics Men's Rings,Gymnastics,Gymnastics｜Gymnastics Men's Rings,True,GRE,GRE,False,https://www.olympedia.org/results/353652
+2016,Gymnastics Men's Team All-Around,Gymnastics,Gymnastics｜Gymnastics Men's Team All-Around,True,JPN,JPN,False,https://www.olympedia.org/results/353621
+2016,Gymnastics Women's Balance Beam,Gymnastics,Gymnastics｜Gymnastics Women's Balance Beam,True,NED,NED,False,https://www.olympedia.org/results/353693
+2016,Gymnastics Women's Floor Exercise,Gymnastics,Gymnastics｜Gymnastics Women's Floor Exercise,True,USA,USA,False,https://www.olympedia.org/results/353680
+2016,Gymnastics Women's Horse Vault,Gymnastics,Gymnastics｜Gymnastics Women's Horse Vault,True,USA,USA,False,https://www.olympedia.org/results/353683
+2016,Gymnastics Women's Individual All-Around,Gymnastics,Gymnastics｜Gymnastics Women's Individual All-Around,True,USA,USA,False,https://www.olympedia.org/results/353658
+2016,Gymnastics Women's Team All-Around,Gymnastics,Gymnastics｜Gymnastics Women's Team All-Around,True,USA,USA,False,https://www.olympedia.org/results/353669
+2016,Gymnastics Women's Uneven Bars,Gymnastics,Gymnastics｜Gymnastics Women's Uneven Bars,True,RUS,RUS,False,https://www.olympedia.org/results/353690
+2016,Handball Men's Handball,Handball,Handball｜Handball Men's Handball,True,DEN,DEN,False,https://www.olympedia.org/results/395600
+2016,Handball Women's Handball,Handball,Handball｜Handball Women's Handball,True,RUS,RUS,False,https://www.olympedia.org/results/395646
+2016,Hockey Men's Hockey,Hockey,Hockey｜Hockey Men's Hockey,True,ARG,ARG,False,https://www.olympedia.org/results/358460
+2016,Hockey Women's Hockey,Hockey,Hockey｜Hockey Women's Hockey,True,GBR,GBR,False,https://www.olympedia.org/results/358506
+2016,Modern Pentathlon Men's Individual,Modern Pentathlon,Modern Pentathlon｜Modern Pentathlon Men's Individual,True,RUS,RUS,False,https://www.olympedia.org/results/351850
+2016,Modern Pentathlon Women's Individual,Modern Pentathlon,Modern Pentathlon｜Modern Pentathlon Women's Individual,True,AUS,AUS,False,https://www.olympedia.org/results/352522
+2016,Rhythmic Gymnastics Women's Group,Rhythmic Gymnastics,Rhythmic Gymnastics｜Rhythmic Gymnastics Women's Group,True,RUS,RUS,False,https://www.olympedia.org/results/351061
+2016,Rhythmic Gymnastics Women's Individual,Rhythmic Gymnastics,Rhythmic Gymnastics｜Rhythmic Gymnastics Women's Individual,True,RUS,RUS,False,https://www.olympedia.org/results/351050
+2016,Rowing Men's Coxed Eights,Rowing,Rowing｜Rowing Men's Coxed Eights,True,GBR,GBR,False,https://www.olympedia.org/results/354004
+2016,Rowing Men's Coxless Fours,Rowing,Rowing｜Rowing Men's Coxless Fours,True,GBR,GBR,False,https://www.olympedia.org/results/353991
+2016,Rowing Men's Coxless Pairs,Rowing,Rowing｜Rowing Men's Coxless Pairs,True,NZL,NZL,False,https://www.olympedia.org/results/353966
+2016,Rowing Men's Double Sculls,Rowing,Rowing｜Rowing Men's Double Sculls,True,CRO,CRO,False,https://www.olympedia.org/results/353953
+2016,Rowing Men's Lightweight Coxless Fours,Rowing,Rowing｜Rowing Men's Lightweight Coxless Fours,True,SUI,SUI,False,https://www.olympedia.org/results/354033
+2016,Rowing Men's Lightweight Double Sculls,Rowing,Rowing｜Rowing Men's Lightweight Double Sculls,True,FRA,FRA,False,https://www.olympedia.org/results/354013
+2016,Rowing Men's Quadruple Sculls,Rowing,Rowing｜Rowing Men's Quadruple Sculls,True,GER,GER,False,https://www.olympedia.org/results/353979
+2016,Rowing Men's Single Sculls,Rowing,Rowing｜Rowing Men's Single Sculls,True,NZL,NZL,False,https://www.olympedia.org/results/353920
+2016,Rowing Women's Coxed Eights,Rowing,Rowing｜Rowing Women's Coxed Eights,True,USA,USA,False,https://www.olympedia.org/results/354114
+2016,Rowing Women's Coxless Pairs,Rowing,Rowing｜Rowing Women's Coxless Pairs,True,GBR,GBR,False,https://www.olympedia.org/results/354091
+2016,Rowing Women's Double Sculls,Rowing,Rowing｜Rowing Women's Double Sculls,True,POL,POL,False,https://www.olympedia.org/results/354078
+2016,Rowing Women's Lightweight Double Sculls,Rowing,Rowing｜Rowing Women's Lightweight Double Sculls,True,NED,NED,False,https://www.olympedia.org/results/354122
+2016,Rowing Women's Quadruple Sculls,Rowing,Rowing｜Rowing Women's Quadruple Sculls,True,GER,GER,False,https://www.olympedia.org/results/354105
+2016,Rowing Women's Single Sculls,Rowing,Rowing｜Rowing Women's Single Sculls,True,AUS,AUS,False,https://www.olympedia.org/results/354046
+2016,Rugby Sevens Men's Rugby Sevens,Rugby Sevens,Rugby Sevens｜Rugby Sevens Men's Rugby Sevens,False,,FIJ,False,https://www.olympedia.org/results/357350
+2016,Rugby Sevens Women's Rugby Sevens,Rugby Sevens,Rugby Sevens｜Rugby Sevens Women's Rugby Sevens,False,,AUS,False,https://www.olympedia.org/results/357395
+2016,Sailing Men's One Person Dinghy,Sailing,Sailing｜Sailing Men's One Person Dinghy,True,AUS,AUS,False,https://www.olympedia.org/results/356085
+2016,Sailing Men's One Person Heavyweight Dinghy,Sailing,Sailing｜Sailing Men's One Person Heavyweight Dinghy,True,GBR,GBR,False,https://www.olympedia.org/results/356152
+2016,Sailing Men's Skiff,Sailing,Sailing｜Sailing Men's Skiff,True,NZL,NZL,False,https://www.olympedia.org/results/356127
+2016,Sailing Men's Two Person Dinghy,Sailing,Sailing｜Sailing Men's Two Person Dinghy,True,CRO,CRO,False,https://www.olympedia.org/results/356106
+2016,Sailing Men's Windsurfer,Sailing,Sailing｜Sailing Men's Windsurfer,True,NED,NED,False,https://www.olympedia.org/results/356060
+2016,Sailing Mixed Multihull,Sailing,Sailing｜Sailing Mixed Multihull,True,ARG,ARG,False,https://www.olympedia.org/results/356265
+2016,Sailing Women's One Person Dinghy,Sailing,Sailing｜Sailing Women's One Person Dinghy,True,NED,NED,False,https://www.olympedia.org/results/356198
+2016,Sailing Women's Skiff,Sailing,Sailing｜Sailing Women's Skiff,False,,BRA,False,https://www.olympedia.org/results/356240
+2016,Sailing Women's Two Person Dinghy,Sailing,Sailing｜Sailing Women's Two Person Dinghy,True,GBR,GBR,False,https://www.olympedia.org/results/356219
+2016,Sailing Women's Windsurfer,Sailing,Sailing｜Sailing Women's Windsurfer,True,FRA,FRA,False,https://www.olympedia.org/results/356173
+2016,"Shooting Men's Air Pistol, 10 metres",Shooting,"Shooting｜Shooting Men's Air Pistol, 10 metres",True,VIE,VIE,False,https://www.olympedia.org/results/395700
+2016,"Shooting Men's Air Rifle, 10 metres",Shooting,"Shooting｜Shooting Men's Air Rifle, 10 metres",True,ITA,ITA,False,https://www.olympedia.org/results/395711
+2016,Shooting Men's Double Trap,Shooting,Shooting｜Shooting Men's Double Trap,True,IOA,IOA,False,https://www.olympedia.org/results/395729
+2016,"Shooting Men's Free Pistol, 50 metres",Shooting,"Shooting｜Shooting Men's Free Pistol, 50 metres",True,KOR,KOR,False,https://www.olympedia.org/results/395708
+2016,"Shooting Men's Rapid-Fire Pistol, 25 metres",Shooting,"Shooting｜Shooting Men's Rapid-Fire Pistol, 25 metres",True,GER,GER,False,https://www.olympedia.org/results/395703
+2016,Shooting Men's Skeet,Shooting,Shooting｜Shooting Men's Skeet,True,ITA,ITA,False,https://www.olympedia.org/results/395735
+2016,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",Shooting,"Shooting｜Shooting Men's Small-Bore Rifle, Prone, 50 metres",True,GER,GER,False,https://www.olympedia.org/results/395720
+2016,"Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",Shooting,"Shooting｜Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",True,ITA,ITA,False,https://www.olympedia.org/results/395714
+2016,Shooting Men's Trap,Shooting,Shooting｜Shooting Men's Trap,True,CRO,CRO,False,https://www.olympedia.org/results/395723
+2016,"Shooting Women's Air Pistol, 10 metres",Shooting,"Shooting｜Shooting Women's Air Pistol, 10 metres",True,CHN,CHN,False,https://www.olympedia.org/results/395743
+2016,"Shooting Women's Air Rifle, 10 metres",Shooting,"Shooting｜Shooting Women's Air Rifle, 10 metres",True,USA,USA,False,https://www.olympedia.org/results/395754
+2016,Shooting Women's Skeet,Shooting,Shooting｜Shooting Women's Skeet,True,ITA,ITA,False,https://www.olympedia.org/results/395769
+2016,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",Shooting,"Shooting｜Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",True,GER,GER,False,https://www.olympedia.org/results/395757
+2016,"Shooting Women's Sporting Pistol, 25 metres",Shooting,"Shooting｜Shooting Women's Sporting Pistol, 25 metres",True,GRE,GRE,False,https://www.olympedia.org/results/395746
+2016,Shooting Women's Trap,Shooting,Shooting｜Shooting Women's Trap,True,AUS,AUS,False,https://www.olympedia.org/results/395763
+2016,Table Tennis Men's Singles,Table Tennis,Table Tennis｜Table Tennis Men's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/395800
+2016,Table Tennis Men's Team,Table Tennis,Table Tennis｜Table Tennis Men's Team,True,CHN,CHN,False,https://www.olympedia.org/results/395879
+2016,Table Tennis Women's Singles,Table Tennis,Table Tennis｜Table Tennis Women's Singles,True,CHN,CHN,False,https://www.olympedia.org/results/395960
+2016,Table Tennis Women's Team,Table Tennis,Table Tennis｜Table Tennis Women's Team,True,CHN,CHN,False,https://www.olympedia.org/results/396039
+2016,Tennis Men's Doubles,Tennis,Tennis｜Tennis Men's Doubles,True,ESP,ESP,False,https://www.olympedia.org/results/353276
+2016,Tennis Men's Singles,Tennis,Tennis｜Tennis Men's Singles,True,GBR,GBR,False,https://www.olympedia.org/results/353205
+2016,Tennis Mixed Doubles,Tennis,Tennis｜Tennis Mixed Doubles,True,USA,USA,False,https://www.olympedia.org/results/353423
+2016,Tennis Women's Doubles,Tennis,Tennis｜Tennis Women's Doubles,True,RUS,RUS,False,https://www.olympedia.org/results/353385
+2016,Tennis Women's Singles,Tennis,Tennis｜Tennis Women's Singles,True,PUR,PUR,False,https://www.olympedia.org/results/353314
+2016,Trampolining Men's Individual,Trampolining,Trampolining｜Trampolining Men's Individual,True,BLR,BLR,False,https://www.olympedia.org/results/351020
+2016,Trampolining Women's Individual,Trampolining,Trampolining｜Trampolining Women's Individual,True,CAN,CAN,False,https://www.olympedia.org/results/351025
+2016,Triathlon Men's Olympic Distance,Triathlon,Triathlon｜Triathlon Men's Olympic Distance,True,GBR,GBR,False,https://www.olympedia.org/results/351000
+2016,Triathlon Women's Olympic Distance,Triathlon,Triathlon｜Triathlon Women's Olympic Distance,True,USA,USA,False,https://www.olympedia.org/results/351009
+2016,Volleyball Men's Volleyball,Volleyball,Volleyball｜Volleyball Men's Volleyball,True,BRA,BRA,False,https://www.olympedia.org/results/396200
+2016,Volleyball Women's Volleyball,Volleyball,Volleyball｜Volleyball Women's Volleyball,True,CHN,CHN,False,https://www.olympedia.org/results/396246
+2016,Weightlifting Men's Bantamweight,Weightlifting,Weightlifting｜Weightlifting Men's Bantamweight,True,CHN,CHN,False,https://www.olympedia.org/results/354290
+2016,Weightlifting Men's Featherweight,Weightlifting,Weightlifting｜Weightlifting Men's Featherweight,True,COL,COL,False,https://www.olympedia.org/results/354299
+2016,Weightlifting Men's Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Heavyweight,True,UZB,UZB,False,https://www.olympedia.org/results/354344
+2016,Weightlifting Men's Light-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Light-Heavyweight,True,IRI,IRI,False,https://www.olympedia.org/results/354326
+2016,Weightlifting Men's Lightweight,Weightlifting,Weightlifting｜Weightlifting Men's Lightweight,True,CHN,CHN,False,https://www.olympedia.org/results/354308
+2016,Weightlifting Men's Middle-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Middle-Heavyweight,True,IRI,IRI,False,https://www.olympedia.org/results/354335
+2016,Weightlifting Men's Super-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Men's Super-Heavyweight,True,GEO,GEO,False,https://www.olympedia.org/results/354353
+2016,Weightlifting Women's Featherweight,Weightlifting,Weightlifting｜Weightlifting Women's Featherweight,True,TPE,TPE,False,https://www.olympedia.org/results/354371
+2016,Weightlifting Women's Flyweight,Weightlifting,Weightlifting｜Weightlifting Women's Flyweight,True,THA,THA,False,https://www.olympedia.org/results/354362
+2016,Weightlifting Women's Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Heavyweight,True,PRK,PRK,False,https://www.olympedia.org/results/354407
+2016,Weightlifting Women's Light-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Light-Heavyweight,True,CHN,CHN,False,https://www.olympedia.org/results/354398
+2016,Weightlifting Women's Lightweight,Weightlifting,Weightlifting｜Weightlifting Women's Lightweight,True,THA,THA,False,https://www.olympedia.org/results/354380
+2016,Weightlifting Women's Middleweight,Weightlifting,Weightlifting｜Weightlifting Women's Middleweight,True,CHN,CHN,False,https://www.olympedia.org/results/354389
+2016,Weightlifting Women's Super-Heavyweight,Weightlifting,Weightlifting｜Weightlifting Women's Super-Heavyweight,True,CHN,CHN,False,https://www.olympedia.org/results/354416
+2016,"Wrestling Men's Featherweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Featherweight, Freestyle",True,GEO,GEO,False,https://www.olympedia.org/results/355220
+2016,"Wrestling Men's Featherweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Featherweight, Greco-Roman",True,CUB,CUB,False,https://www.olympedia.org/results/355496
+2016,"Wrestling Men's Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Heavyweight, Freestyle",True,USA,USA,False,https://www.olympedia.org/results/355404
+2016,"Wrestling Men's Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Heavyweight, Greco-Roman",True,ARM,ARM,False,https://www.olympedia.org/results/355680
+2016,"Wrestling Men's Light-Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Light-Heavyweight, Freestyle",True,RUS,RUS,False,https://www.olympedia.org/results/355358
+2016,"Wrestling Men's Light-Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Light-Heavyweight, Greco-Roman",True,RUS,RUS,False,https://www.olympedia.org/results/355634
+2016,"Wrestling Men's Middleweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Middleweight, Freestyle",True,IRI,IRI,False,https://www.olympedia.org/results/355312
+2016,"Wrestling Men's Middleweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Middleweight, Greco-Roman",True,RUS,RUS,False,https://www.olympedia.org/results/355588
+2016,"Wrestling Men's Super-Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Super-Heavyweight, Freestyle",True,TUR,TUR,False,https://www.olympedia.org/results/355450
+2016,"Wrestling Men's Super-Heavyweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Super-Heavyweight, Greco-Roman",True,CUB,CUB,False,https://www.olympedia.org/results/355726
+2016,"Wrestling Men's Welterweight, Freestyle",Wrestling,"Wrestling｜Wrestling Men's Welterweight, Freestyle",True,RUS,RUS,False,https://www.olympedia.org/results/355266
+2016,"Wrestling Men's Welterweight, Greco-Roman",Wrestling,"Wrestling｜Wrestling Men's Welterweight, Greco-Roman",True,SRB,SRB,False,https://www.olympedia.org/results/355542
+2016,"Wrestling Women's Featherweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Featherweight, Freestyle",False,,USA,False,https://www.olympedia.org/results/355818
+2016,"Wrestling Women's Flyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Flyweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/355772
+2016,"Wrestling Women's Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Heavyweight, Freestyle",True,CAN,CAN,False,https://www.olympedia.org/results/356002
+2016,"Wrestling Women's Light-Heavyweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Light-Heavyweight, Freestyle",False,,JPN,False,https://www.olympedia.org/results/355956
+2016,"Wrestling Women's Lightweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Lightweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/355864
+2016,"Wrestling Women's Middleweight, Freestyle",Wrestling,"Wrestling｜Wrestling Women's Middleweight, Freestyle",True,JPN,JPN,False,https://www.olympedia.org/results/355910

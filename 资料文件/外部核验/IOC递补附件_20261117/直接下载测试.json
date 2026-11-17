@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://stillmed.olympics.com/media/Document%20Library/OlympicOrg/News/2020/06/Medal%20reallocations_%20IOC%20EB_2.pdf",
+    "mode": "direct_without_environment_proxy",
+    "error": "HTTPSConnectionPool(host='stillmed.olympics.com', port=443): Read timed out. (read timeout=15)"
+  },
+  {
+    "url": "https://stillmed.olympics.com/media/Document%20Library/OlympicOrg/News/2020/11/Medals-Diplomas-and-Medallist-Pins-Reallocation.pdf",
+    "mode": "direct_without_environment_proxy",
+    "error": "HTTPSConnectionPool(host='stillmed.olympics.com', port=443): Read timed out. (read timeout=15)"
+  },
+  {
+    "url": "https://stillmed.olympics.com/media/Documents/News/2021/06/Medal-Reallocations-EB-June-2021.pdf",
+    "mode": "direct_without_environment_proxy",
+    "error": "HTTPSConnectionPool(host='stillmed.olympics.com', port=443): Read timed out. (read timeout=15)"
+  }
+]
