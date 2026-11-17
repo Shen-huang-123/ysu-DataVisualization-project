@@ -88,3 +88,5 @@ for pageid,i in [(1,0),(8,1),(11,2)]:
 tmp=p.with_suffix('.figures.tmp.pdf');doc.save(tmp,garbage=4,deflate=True);doc.close();tmp.replace(p)
 (OUT/'来源与发布记录.json').write_text(json.dumps({'input_sha256':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},'report_pages':[2,9,12],'report_page_count':20,'data_refitted':False,'regenerate':'polish_evidence_figures.py应最后运行，其他生成器会覆盖图形发布'},ensure_ascii=False,indent=2),encoding='utf-8')
 print('Published three evidence figures and refreshed three formal-report images.')
+import runpy
+runpy.run_path(str(ROOT/'项目工作区/scripts/build_evidence_feedback.py'),run_name='__main__')

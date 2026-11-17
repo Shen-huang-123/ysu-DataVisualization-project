@@ -1,0 +1,16 @@
+.evidence-feedback{color:inherit;font:inherit;line-height:1.8;border-block:1px solid #87979577;padding:24px 0;margin:26px 0;min-width:0}
+.evidence-feedback h2{font:inherit;font-weight:700;font-size:clamp(20px,2.4vw,28px);line-height:1.5;margin:0 0 12px}
+.evidence-feedback p{margin:12px 0}.evidence-feedback label{display:inline-flex;flex-direction:column;gap:5px;max-width:100%}
+.evidence-feedback .ef-controls{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0}
+.evidence-feedback select,.evidence-feedback button{font:inherit;color:inherit;background:transparent;border:1px solid #87979599;padding:9px 12px;min-height:44px;max-width:100%;cursor:pointer}
+.evidence-feedback option{color:#172a30;background:#f7f3eb}.evidence-feedback button[aria-pressed=true]{font-weight:700;border-bottom:3px solid currentColor}
+.evidence-feedback :is(button,select):focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.evidence-feedback .ef-main{font-size:clamp(23px,3vw,38px);font-weight:700;line-height:1.5;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.evidence-feedback .ef-note{font-size:.9em}.evidence-feedback svg{display:block;width:100%;height:auto;overflow:visible}
+.evidence-feedback svg text{font-family:inherit;fill:currentColor;font-size:15px}.evidence-feedback .ef-labels{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.9em}
+.evidence-feedback .ef-dot{display:inline-block;width:9px;height:9px;border:1px solid currentColor;border-radius:50%;margin-right:6px}
+.evidence-feedback .ef-key{font-weight:700;text-decoration:underline;text-underline-offset:5px}.evidence-feedback .ef-years{display:flex;gap:9px;flex-wrap:wrap}
+.evidence-feedback .ef-reading{border-left:3px solid currentColor;padding-left:16px}
+#rank-discovery{margin-bottom:0}#rank-discovery .ef-note{color:var(--muted,#b2c4c9)}
+@media(max-width:600px){.evidence-feedback .ef-controls{display:grid;grid-template-columns:1fr}.evidence-feedback select{width:100%}.evidence-feedback svg text{font-size:24px}}
+@media print{.evidence-feedback .ef-controls,.evidence-feedback .ef-years{display:none}}
