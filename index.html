@@ -241,8 +241,11 @@ function render(){
 }
 const journeyTween=gsap.to(state,{p:1,ease:'none',onUpdate:render,scrollTrigger:{id:'index-vortex-story',trigger:spacer,start:'top top',end:'bottom bottom',scrub:.32,invalidateOnRefresh:true}});render();document.documentElement.classList.remove('voyage-preparing');
 function syncRestoredScroll(){const trigger=journeyTween.scrollTrigger;if(!trigger)return;trigger.refresh();const span=Math.max(1,trigger.end-trigger.start);journeyTween.progress(clamp((trigger.scroll()-trigger.start)/span,0,1));render()}
-addEventListener('pageshow',()=>{requestAnimationFrame(()=>requestAnimationFrame(syncRestoredScroll));setTimeout(syncRestoredScroll,120);scheduleAuto()});addEventListener('pagehide',stopAuto);
-function go(index){const trigger=journeyTween.scrollTrigger;const start=trigger?.start||0,end=trigger?.end||Math.max(0,spacer.getBoundingClientRect().height-innerHeight);scrollTo({top:start+clamp(index,0,scenes.length-1)/(scenes.length-1)*(end-start),behavior:reduce?'instant':'smooth'})}
+addEventListener('pageshow',()=>{requestAnimationFrame(()=>requestAnimationFrame(syncRestoredScroll));setTimeout(syncRestoredScroll,120);scheduleAuto()});addEventListener('pagehide',()=>{stopAuto();stopNavigation()});
+let navigationTween=null;
+function stopNavigation(){if(navigationTween){navigationTween.kill();navigationTween=null}}
+function travelTo(index,onComplete){const trigger=journeyTween.scrollTrigger;if(!trigger)return null;const y=trigger.start+clamp(index,0,scenes.length-1)/(scenes.length-1)*(trigger.end-trigger.start),travel={y:trigger.scroll()},distance=Math.abs(y-travel.y),stationSpan=(trigger.end-trigger.start)/(scenes.length-1);if(reduce||distance<1){scrollTo(0,y);ScrollTrigger.update();return null}return gsap.to(travel,{y,duration:4.8*Math.min(2,Math.max(.65,distance/Math.max(1,stationSpan))),ease:'power1.inOut',onUpdate:()=>scrollTo(0,travel.y),onComplete})}
+function go(index){stopAuto();stopNavigation();navigationTween=travelTo(index,()=>{navigationTween=null;scheduleAuto()})}
 steps.forEach(button=>button.addEventListener('click',()=>go(Number(button.dataset.voyageGo))));
 document.querySelectorAll('.topbar a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{const hash=link.getAttribute('href');if(!['#top','#stories','#materials'].includes(hash))return;e.preventDefault();go(hash==='#top'?0:hash==='#stories'?2:6)}));
 stage.querySelector('a[href="#voyage-1"]')?.addEventListener('click',e=>{e.preventDefault();go(1)});
@@ -256,15 +259,13 @@ function autoStep(){
  if(current>=scenes.length-1)autoDirection=-1;
  if(current<=0)autoDirection=1;
  const next=clamp(current+autoDirection,0,scenes.length-1);
- const target=trigger.start+next/(scenes.length-1)*(trigger.end-trigger.start);
  if(autoTween)autoTween.kill();
- const travel={y:trigger.scroll()};
- autoTween=gsap.to(travel,{y:target,duration:4.8,ease:'power1.inOut',onUpdate:()=>scrollTo(0,travel.y),onComplete:()=>{autoTween=null}});
+ autoTween=travelTo(next,()=>{autoTween=null});
 }
 function scheduleAuto(){stopAuto();if(!autoEnabled||reduce||readingHover)return;idleTimer=setTimeout(()=>{autoStep();autoTimer=setInterval(autoStep,10500)},9000)}
-function userActivity(){scheduleAuto()}
+function userActivity(){stopNavigation();scheduleAuto()}
 ['wheel','touchstart','pointerdown','keydown'].forEach(type=>document.addEventListener(type,userActivity,{passive:true}));
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAuto();else scheduleAuto()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAuto();stopNavigation()}else scheduleAuto()});
 autoButton?.addEventListener('click',()=>{autoEnabled=!autoEnabled;autoButton.setAttribute('aria-pressed',String(autoEnabled));autoButton.title=autoEnabled?'关闭闲置自动巡游':'开启闲置自动巡游';autoButton.innerHTML='<span aria-hidden="true">'+(autoEnabled?'◉':'○')+'</span> '+(autoEnabled?'自动巡游':'巡游已暂停');scheduleAuto()});
 stage.querySelectorAll('.voyage-content').forEach(content=>{
  content.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){readingHover=true;stopAuto()}});
