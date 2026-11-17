@@ -1,0 +1,182 @@
+[
+  {
+    "page": "任务一_数据体检/index.html",
+    "width": 390,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 375,
+    "client": 390,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务二_百年全景/05_交互总览/index.html",
+    "width": 390,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 375,
+    "client": 390,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务三_专题深挖/统一中文入口/index.html",
+    "width": 390,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 375,
+    "client": 390,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务四_开放创作/index.html",
+    "width": 390,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 375,
+    "client": 390,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务一_数据体检/index.html",
+    "width": 1440,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 1425,
+    "client": 1440,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务二_百年全景/05_交互总览/index.html",
+    "width": 1440,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 1425,
+    "client": 1440,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务三_专题深挖/统一中文入口/index.html",
+    "width": 1440,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 1425,
+    "client": 1440,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务四_开放创作/index.html",
+    "width": 1440,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 1425,
+    "client": 1440,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务一_数据体检/index.html",
+    "width": 2560,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 2545,
+    "client": 2560,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务二_百年全景/05_交互总览/index.html",
+    "width": 2560,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 2545,
+    "client": 2560,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务三_专题深挖/统一中文入口/index.html",
+    "width": 2560,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 2545,
+    "client": 2560,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  },
+  {
+    "page": "任务四_开放创作/index.html",
+    "width": 2560,
+    "states": [
+      "0",
+      "1",
+      "2"
+    ],
+    "overflow": false,
+    "main": 2545,
+    "client": 2560,
+    "photo": true,
+    "inline": 3,
+    "errors": []
+  }
+]
