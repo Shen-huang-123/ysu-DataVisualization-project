@@ -540,3 +540,10 @@ B仅替换555项的奖牌代表团；C在所有历史年份剔除相关209条同
 - organizer使用现有字体主题，仅增加边线/文字层级，保留原控件ID与脚本；锚点自动展开，展开派发resize。数据CSV与模型参数未修改，正式PDF不因导航变化重生成。
 - organize_forecast_reading.py可重复执行；publish_project_model_audit.py末尾自动调用。生成后需继续应用正文对齐脚本，正式PDF保持20页。
 - 桌面/手机12组关闭与展开无脚本错误、横向溢出，旧风暴滑杆功能通过；完整记录在第15项核验/默认阅读验收.json。
+
+
+## 2026-11-17｜三张核心证据图精修
+- polish_evidence_figures.py读取既有S2排名、S3队列敏感性、原模型评分三CSV生成PNG与矢量PDF；无重训或数据变更。图中含单位、来源与边界。
+- 新图进入S2实验室、S3来源敏感性与原模型核验三页，提供PDF放大；正式20页报告第2/9/12页仅替换图片，其他页像素及所有正文不变。答卷和海报原图未在本轮全部重画，结论保持一致；三图册独立提供。
+- 复现时该脚本应在publish_project_model_audit.py、organize_forecast_reading.py和align_final_research_body.py之后最后运行，避免重生成覆盖。
+- 来源哈希、三页证据册、20页报告及未改页面对照检查见核心证据图/交付检查.json。

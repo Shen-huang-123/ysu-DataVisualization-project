@@ -1,0 +1,15 @@
+{
+  "input_sha256": {
+    "交付文件\\任务三_专题深挖\\S2_口径的魔力\\02_数据表\\S2_2024双口径完整排名.csv": "1061abffa764c9f1124a2f08eef5241cdfd63976ce033ae4241fd682657ed90b",
+    "交付文件\\任务三_专题深挖\\S3_冠军的保质期\\11_历史来源敏感性\\固定队列三方案复算.csv": "a32eb50dca580ee8a9fe06b41d73c17861c8c17d3e775b5cb13d803b276bbcad",
+    "交付文件\\任务四_开放创作\\05_满分升级\\15_原项目模型时序核验\\原模型五方案评分.csv": "1c167986a9b2458c966cd66ea094a67308a22271c065354a698696bc2398bea0"
+  },
+  "report_pages": [
+    2,
+    9,
+    12
+  ],
+  "report_page_count": 20,
+  "data_refitted": false,
+  "regenerate": "polish_evidence_figures.py应最后运行，其他生成器会覆盖图形发布"
+}
