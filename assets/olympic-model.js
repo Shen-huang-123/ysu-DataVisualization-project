@@ -21,7 +21,6 @@ const labStone=new T.MeshStandardMaterial({color:0xd8e2dc,metalness:.28,roughnes
 const podium=labMesh(new T.CylinderGeometry(2.05,2.12,.12,64),labStone,0,.29,0);podium.scale.z=.78;podium.receiveShadow=true;
 const hub=labMesh(new T.CylinderGeometry(.68,.77,.18,48),mat(0x294c58),0,.43,0);
 const chamber=labMesh(new T.CylinderGeometry(.72,.82,.68,40),new T.MeshPhysicalMaterial({color:0x9ed9df,transparent:true,opacity:.2,metalness:.1,roughness:.2,depthWrite:false}),0,.86,0);
-const chamberRim=labMesh(new T.TorusGeometry(.75,.016,6,48),new T.MeshBasicMaterial({color:0x8dd7dd}),0,1.2,0);chamberRim.rotation.x=-Math.PI/2;
 const rings=new T.InstancedMesh(new T.TorusGeometry(.22,.026,8,36),new T.MeshStandardMaterial({color:0xffffff,roughness:.35,metalness:.35}),5),ringColors=[0x2587ba,0x253942,0xc85d55,0xdbb24a,0x469e81];const ringPos=[[-.45,.9],[0,.9],[.45,.9],[-.225,.65],[.225,.65]];ringPos.forEach(([x,y],i)=>{dummy.position.set(x*1.3,y+.48,.05);dummy.rotation.set(-.22,0,0);dummy.scale.setScalar(1);dummy.updateMatrix();rings.setMatrixAt(i,dummy.matrix);rings.setColorAt(i,new T.Color(ringColors[i]))});lab.add(rings);
 const consoles=new T.InstancedMesh(new T.CylinderGeometry(.22,.29,.23,6),labStone,5),labScreens=[],labPaths=[],labLines=[];
 for(let i=0;i<5;i++){const a=i/5*Math.PI*2-.3,x=Math.cos(a)*1.53,z=Math.sin(a)*1.13;dummy.position.set(x,.48,z);dummy.rotation.set(0,-a,0);dummy.scale.setScalar(1);dummy.updateMatrix();consoles.setMatrixAt(i,dummy.matrix);
@@ -38,12 +37,9 @@ lab.add(consoles);lab.add(new T.LineSegments(new T.BufferGeometry().setFromPoint
 const pulses=new T.InstancedMesh(new T.SphereGeometry(.035,6,4),new T.MeshBasicMaterial({color:0xdbbc76}),5);lab.add(pulses);let labTick=-1,activeLab=-1,electricFocus=-1;
 // Instrument details belong to the model, not to an overlay dashboard.
 const instruments=new T.Group();lab.add(instruments);
-const instrumentTicks=new T.InstancedMesh(new T.BoxGeometry(.016,.012,.085),new T.MeshBasicMaterial({color:0x91c2cb}),72);
-for(let i=0;i<72;i++){const a=i/72*Math.PI*2;dummy.position.set(Math.cos(a)*2.0,.365,Math.sin(a)*1.55);dummy.rotation.set(0,-a,0);dummy.scale.set(1,1,i%6===0?1.7:1);dummy.updateMatrix();instrumentTicks.setMatrixAt(i,dummy.matrix)}instruments.add(instrumentTicks);
-const scanArc=new T.Mesh(new T.RingGeometry(.91,1.025,48,1,0,Math.PI*.64),new T.MeshBasicMaterial({color:0xa6dce3,transparent:true,opacity:.45,side:T.DoubleSide,depthWrite:false}));scanArc.rotation.x=-Math.PI/2;scanArc.position.y=.395;instruments.add(scanArc);
 const verticalMarks=[];for(let i=0;i<4;i++){const y=.62+i*.16;verticalMarks.push(new T.Vector3(-.85,y,0),new T.Vector3(-.76,y,0))}instruments.add(new T.LineSegments(new T.BufferGeometry().setFromPoints(verticalMarks),new T.LineBasicMaterial({color:0x98cbd1,transparent:true,opacity:.6})));
 const orbitDots=new T.InstancedMesh(new T.SphereGeometry(.025,6,4),new T.MeshBasicMaterial({color:0xc7f0f3}),12);instruments.add(orbitDots);
-function updateInstruments(t){scanArc.rotation.z=t*.16;for(let i=0;i<12;i++){const a=i/12*Math.PI*2+t*.13;dummy.position.set(Math.cos(a)*.76,.55+(i%4)*.16,Math.sin(a)*.76);dummy.rotation.set(0,0,0);dummy.scale.setScalar(i%3===0?1:.6);dummy.updateMatrix();orbitDots.setMatrixAt(i,dummy.matrix)}orbitDots.instanceMatrix.needsUpdate=true}
+function updateInstruments(t){for(let i=0;i<12;i++){const a=i/12*Math.PI*2+t*.13;dummy.position.set(Math.cos(a)*.76,.55+(i%4)*.16,Math.sin(a)*.76);dummy.rotation.set(0,0,0);dummy.scale.setScalar(i%3===0?1:.6);dummy.updateMatrix();orbitDots.setMatrixAt(i,dummy.matrix)}orbitDots.instanceMatrix.needsUpdate=true}
 // Five Olympic colour accents are built into the base, with a restrained instrument scale.
 const researchBase=new T.Group();world.add(researchBase);
 for(let i=0;i<5;i++){const points=[];for(let j=0;j<=24;j++){const a=i*Math.PI*2/5+j/24*.94;points.push(new T.Vector3(Math.cos(a)*6.77,-.04,Math.sin(a)*5.21))}researchBase.add(new T.Line(new T.BufferGeometry().setFromPoints(points),new T.LineBasicMaterial({color:ringColors[i],transparent:true,opacity:.9})))}
@@ -60,7 +56,6 @@ document.addEventListener('arena:select',e=>{activeLab=e.detail===null?-1:e.deta
 const photoOrbit=new T.Group();world.add(photoOrbit);const photoPanels=[],photoBeacons=[];
 const observationLight=new T.PointLight(0x81d7dc,1.2,8,2);observationLight.position.set(0,2.5,0);lab.add(observationLight);
 function ellipseTrace(rx,rz,y,color,opacity,parent){const points=[];for(let i=0;i<=96;i++){const a=i/96*Math.PI*2;points.push(new T.Vector3(Math.cos(a)*rx,y,Math.sin(a)*rz))}const line=new T.Line(new T.BufferGeometry().setFromPoints(points),new T.LineBasicMaterial({color,transparent:true,opacity}));parent.add(line);return line}
-ellipseTrace(2.18,1.72,.39,0x85cdd0,.65,lab);ellipseTrace(1.04,.82,.37,0xe1c68c,.55,lab);
 (window.arenaPhotoTextures||[]).forEach((src,i)=>{const a=i*Math.PI*2/5+.15,span=.86;
  const material=new T.MeshBasicMaterial({transparent:true,side:T.DoubleSide,toneMapped:false});
  const geometry=new T.CylinderGeometry(4.97,4.97,1.56,24,1,true,a,span);geometry.scale(1.3,1,1);
@@ -73,7 +68,7 @@ function orientPhotos(){}
 document.addEventListener('arena:select',e=>{photoOrbit.visible=e.detail===null});
 let previewLab=-1;
 const previewCopy=['切换统计单位，重排巴黎2024奖牌榜。','沿逐届记录，探索运动的进入与重返。','筛选年代和运动，比较冠军优势的延续。','调整情景假设，观察预测点和区间。','调整计分权重，观察代表团榜单换位。'];
-function previewResearch(i){const next=i===null?-1:i;if(next===previewLab)return;previewLab=next;electricFocus=next;host.dataset.preview=String(next);const caption=document.querySelector('.model-copy p');if(caption){if(!caption.dataset.original)caption.dataset.original=caption.textContent;caption.textContent=next<0?caption.dataset.original:previewCopy[next]}labScreens.forEach((screen,j)=>{screen.material.emissiveIntensity=next<0?.4:j===next?1.25:.18});photoPanels.forEach((photo,j)=>photo.material.color.setHex(next<0||j===next?0xffffff:0x81949b));photoBeacons.forEach((beacon,j)=>beacon.material.color.setHex(j===next?0xffd58d:0x83d2d3));instruments.children.forEach(o=>{if(o===scanArc)o.material.color.setHex(next<0?0xa6dce3:ringColors[next])})}
+function previewResearch(i){const next=i===null?-1:i;if(next===previewLab)return;previewLab=next;electricFocus=next;host.dataset.preview=String(next);const caption=document.querySelector('.model-copy p');if(caption){if(!caption.dataset.original)caption.dataset.original=caption.textContent;caption.textContent=next<0?caption.dataset.original:previewCopy[next]}labScreens.forEach((screen,j)=>{screen.material.emissiveIntensity=next<0?.4:j===next?1.25:.18});photoPanels.forEach((photo,j)=>photo.material.color.setHex(next<0||j===next?0xffffff:0x81949b));photoBeacons.forEach((beacon,j)=>beacon.material.color.setHex(j===next?0xffd58d:0x83d2d3))}
 document.addEventListener('arena:preview',e=>previewResearch(e.detail));document.addEventListener('arena:select',()=>previewResearch(null));canvas.addEventListener('pointerleave',()=>previewResearch(null));
 const labRay=new T.Raycaster();canvas.addEventListener('pointerup',e=>{if(moved>5)return;const r=canvas.getBoundingClientRect();labRay.setFromCamera(new T.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1),camera);const hit=labRay.intersectObjects(world.children,true).find(h=>h.object.isMesh&&h.object.visible&&h.object.parent.visible);if(hit&&[...labScreens,...photoPanels].includes(hit.object)&&hit.object.userData.topic!==undefined)pins[hit.object.userData.topic].label.click()});
 // Local seeded rubber grain stays subtle at full-stadium scale.

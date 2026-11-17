@@ -126,3 +126,9 @@ html body .olympic-model .arena-chapters button.is-preview{color:var(--arena-acc
 .arena-chapters button span{transition:transform .22s ease-out,color .22s ease-out}
 body:has(.arena-story) .model-copy p{min-height:4em}
 @media(prefers-reduced-motion:reduce){.arena-chapters button.is-preview span{transform:none}.arena-chapters button span{transition:none}}
+/* Quiet moving research network, behind the content and WebGL stadium. */
+.olympic-model #arena-network{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.7;mask-image:linear-gradient(90deg,transparent 0%,#000 35%,#000 100%)}
+.olympic-model #arena-network canvas{display:block;width:100%;height:100%;pointer-events:none}
+body:has(#arena-network) .olympic-model:before{opacity:0!important}
+body:not(.xz-dark) #arena-network{opacity:.45}
+@media(max-width:750px){.olympic-model #arena-network{opacity:.4}}
