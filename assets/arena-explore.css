@@ -144,3 +144,21 @@ body:not(.xz-dark) #arena-network{opacity:.45}
  .arena-chapters{left:39%;right:4%;gap:clamp(16px,2.7vw,42px)}
 }
 @media(min-width:751px) and (max-height:740px){body:has(.arena-story) .model-copy{top:24%}body:has(.arena-story) .model-copy h1{font-size:clamp(34px,3.5vw,48px)}}
+/* An original exhibition atmosphere: grazing light, fine surface, a soft ground plane. */
+body:has(.arena-story) .olympic-model{background:radial-gradient(ellipse 45% 75% at 83% 16%,#f3f2e7 0%,transparent 78%),linear-gradient(115deg,#e9eeeb 8%,#dce5e3 55%,#becfd0 100%)!important}
+body.xz-dark:has(.arena-story) .olympic-model{background:radial-gradient(ellipse 38% 70% at 80% 21%,#244953 0%,transparent 86%),linear-gradient(115deg,#0d1c25 10%,#112831 55%,#101e29 100%)!important}
+body:has(.arena-story) .olympic-model:after{background:linear-gradient(90deg,#e9eeebd9 0%,#e9eeeb66 32%,transparent 58%)!important}
+body.xz-dark:has(.arena-story) .olympic-model:after{background:linear-gradient(90deg,#0d1c25c9 0%,#0d1c2555 34%,transparent 60%)!important}
+.arena-environment{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.arena-environment-light{position:absolute;inset:-25% -12% 6% 42%;background:linear-gradient(112deg,transparent 21%,#f7ffff14 30%,#efffff70 38%,transparent 50%,#d5eff433 66%,transparent 75%);mask-image:radial-gradient(ellipse 60% 53% at 55% 35%,#000,transparent);filter:blur(18px);transform:translateZ(0);animation:arena-light-breathe 22s ease-in-out infinite alternate;animation-play-state:paused}
+body.xz-dark .arena-environment-light{background:linear-gradient(112deg,transparent 21%,#8de4ee08 30%,#b9ecf42b 38%,transparent 50%,#d3e6ef12 66%,transparent 75%)}
+.arena-environment-floor{position:absolute;inset:62% -12% -24% 24%;background:radial-gradient(ellipse 33% 30% at 58% 25%,#fffdf6a6 0%,#a3bfc43d 45%,transparent 82%);transform:perspective(750px) rotateX(51deg);transform-origin:center top;mask-image:linear-gradient(transparent,#000 25%,#000 70%,transparent)}
+body.xz-dark .arena-environment-floor{background:radial-gradient(ellipse 33% 32% at 58% 25%,#83bfc33d 0%,#498d9724 40%,transparent 82%)}
+.arena-environment-grain{position:absolute;inset:0;background:url('./arena-grain.svg') repeat;opacity:.055;mix-blend-mode:soft-light}
+.arena-environment[data-running=true] .arena-environment-light{animation-play-state:running}
+body:has(.arena-story) .model-stage{z-index:1}
+body .olympic-model #arena-network{opacity:.38;mask-image:radial-gradient(ellipse 40% 62% at 82% 38%,#000 20%,transparent 95%)}
+body:not(.xz-dark) .olympic-model #arena-network{opacity:.24}
+@keyframes arena-light-breathe{from{transform:translate3d(-1%,0,0);opacity:.72}to{transform:translate3d(1.5%,1%,0);opacity:1}}
+@media(max-width:750px){.arena-environment-light{inset:-15% -40% 10% 5%;filter:blur(12px)}.arena-environment-floor{left:-35%;right:-35%;top:65%}.arena-environment-grain{opacity:.035}}
+@media(prefers-reduced-motion:reduce){.arena-environment-light{animation:none;transform:none}}
