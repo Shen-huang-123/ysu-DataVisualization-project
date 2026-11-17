@@ -1,0 +1,71 @@
+{
+  "local_references": 231,
+  "browser_checks": [
+    {
+      "rel": "index.html",
+      "width": 1440,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "02_2028洛杉矶预测/index.html",
+      "width": 1440,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "03_数据新闻/index.html",
+      "width": 1440,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "05_满分升级/09_赛前条件回放/index.html",
+      "width": 1440,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "05_满分升级/11_官方来源门控预测/index.html",
+      "width": 1440,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "09_预测风暴实验室/index.html",
+      "width": 1440,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "index.html",
+      "width": 390,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "02_2028洛杉矶预测/index.html",
+      "width": 390,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "03_数据新闻/index.html",
+      "width": 390,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "05_满分升级/09_赛前条件回放/index.html",
+      "width": 390,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "05_满分升级/11_官方来源门控预测/index.html",
+      "width": 390,
+      "closedAndExpanded": true
+    },
+    {
+      "rel": "09_预测风暴实验室/index.html",
+      "width": 390,
+      "closedAndExpanded": true
+    }
+  ],
+  "data_changes": false,
+  "extra_checks": [
+    "旧模型锚点自动展开通过",
+    "任务四实际主题按钮切换通过",
+    "已查看桌面主阅读截图"
+  ]
+}

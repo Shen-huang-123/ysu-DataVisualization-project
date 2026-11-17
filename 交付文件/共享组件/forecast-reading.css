@@ -1,0 +1,10 @@
+/* Reading hierarchy inherits the established Olympic editorial theme. */
+.forecast-archive{max-width:1100px;margin:2rem auto;padding:1.25rem clamp(16px,3vw,32px);border-block:1px solid currentColor;box-sizing:border-box;min-width:0;font-family:inherit}
+.forecast-archive>summary{cursor:pointer;font:inherit;font-weight:600;line-height:1.6;padding:.5rem 0;list-style-position:inside}
+.forecast-archive>summary:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+.forecast-archive-note{max-width:70ch;font:inherit;line-height:1.8;margin:1rem 0 2rem}
+.forecast-archive:not([open])>*:not(summary){display:none!important}
+.forecast-archive main{width:100%;box-sizing:border-box}
+.forecast-archive .narrative-layout{min-width:0}
+.wrap>#project-reading-policy{width:100%;max-width:1100px}
+@media(max-width:600px){.forecast-archive{margin:1.25rem 0;padding:1rem 12px}.forecast-archive>summary{font-size:16px}}

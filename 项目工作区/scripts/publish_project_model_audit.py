@@ -121,3 +121,7 @@ text=text.replace('</body>',notice+'</body>');p.write_text(text,encoding='utf-8'
 p=ROOT/'README.md';text=p.read_text(encoding='utf-8');line='\n- [原RF/GB项目模型时序核验](交付文件/任务四_开放创作/05_满分升级/15_原项目模型时序核验/index.html)：原参数三口径复算、2028同口径重训核心及正式材料最新附页。中性基准为主阅读，45%项目权重保留为情景。\n'
 if '原RF/GB项目模型时序核验](' not in text:p.write_text(text+line,encoding='utf-8')
 print('Published original model audit, latest 2028 core and final PDF/DOCX notices.')
+
+# Restore the current-first reading hierarchy after rebuilding policy blocks.
+import runpy
+runpy.run_path(str(ROOT/'项目工作区/scripts/organize_forecast_reading.py'),run_name='__main__')
