@@ -120,3 +120,9 @@ body:has(.olympic-model[data-topic]) #xz-nav .xz-brand{visibility:hidden;pointer
 /* Cool environmental light gives the research model one coherent space. */
 body:has(.arena-story) .model-stage:before{background:radial-gradient(ellipse 60% 27% at 53% 73%,#487f941f,transparent 80%),radial-gradient(ellipse 56% 58% at 70% 25%,#b5e8ef29,transparent 78%);filter:blur(15px)}
 body.xz-dark:has(.arena-story) .model-stage:before{background:radial-gradient(ellipse 63% 25% at 53% 73%,#0b101f99,transparent 80%),radial-gradient(ellipse 55% 55% at 60% 45%,#3d8da72b,transparent 80%)}
+/* Navigation previews one research instrument in the same scene. */
+html body .olympic-model .arena-chapters button.is-preview{color:var(--arena-accent)!important}
+.arena-chapters button.is-preview span{transform:translateY(-2px)}
+.arena-chapters button span{transition:transform .22s ease-out,color .22s ease-out}
+body:has(.arena-story) .model-copy p{min-height:4em}
+@media(prefers-reduced-motion:reduce){.arena-chapters button.is-preview span{transform:none}.arena-chapters button span{transition:none}}
