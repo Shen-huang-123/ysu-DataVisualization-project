@@ -112,3 +112,8 @@ body .arena-sheet{pointer-events:none}body .arena-editorial,html body .olympic-m
 
 /* Equal pixel radii preserve a circular contour at every viewport aspect ratio. */
 body .arena-photo{-webkit-mask-image:radial-gradient(circle var(--arena-radius,50vh) at var(--arena-center,0px) 50%,#000 0%,#000 63%,#000e 72%,#0008 84%,#0003 93%,transparent 100%);mask-image:radial-gradient(circle var(--arena-radius,50vh) at var(--arena-center,0px) 50%,#000 0%,#000 63%,#000e 72%,#0008 84%,#0003 93%,transparent 100%)}
+/* The opened image takes the foreground over the left-hand masthead. */
+html body .olympic-model .arena-close{display:none!important}
+body .olympic-model[data-topic]{isolation:auto}
+body .olympic-model[data-topic] .arena-story{z-index:1001}
+body:has(.olympic-model[data-topic]) #xz-nav .xz-brand{visibility:hidden;pointer-events:none}
