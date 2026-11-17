@@ -117,3 +117,6 @@ html body .olympic-model .arena-close{display:none!important}
 body .olympic-model[data-topic]{isolation:auto}
 body .olympic-model[data-topic] .arena-story{z-index:1001}
 body:has(.olympic-model[data-topic]) #xz-nav .xz-brand{visibility:hidden;pointer-events:none}
+/* Cool environmental light gives the research model one coherent space. */
+body:has(.arena-story) .model-stage:before{background:radial-gradient(ellipse 60% 27% at 53% 73%,#487f941f,transparent 80%),radial-gradient(ellipse 56% 58% at 70% 25%,#b5e8ef29,transparent 78%);filter:blur(15px)}
+body.xz-dark:has(.arena-story) .model-stage:before{background:radial-gradient(ellipse 63% 25% at 53% 73%,#0b101f99,transparent 80%),radial-gradient(ellipse 55% 55% at 60% 45%,#3d8da72b,transparent 80%)}
