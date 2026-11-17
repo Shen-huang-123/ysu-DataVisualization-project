@@ -171,3 +171,8 @@ body.xz-dark:has(.arena-story) .olympic-model{background:radial-gradient(ellipse
 body .arena-environment-light{background:linear-gradient(112deg,transparent 21%,#f7ffff1a 30%,#efffffaa 38%,transparent 50%,#d5eff44d 66%,transparent 75%)}
 body.xz-dark .arena-environment-light{background:linear-gradient(112deg,transparent 21%,#8de4ee0d 30%,#b9ecf44a 38%,transparent 50%,#d3e6ef22 66%,transparent 75%)}
 @media(max-width:750px){.arena-environment:before{background-position:70% 50%;opacity:.45}.arena-environment:after{opacity:.7}}
+
+/* Licensed architectural photograph: distant roof, with clear foreground reading space. */
+.arena-environment:before{background-image:url('./arena-exhibition-roof.webp');background-position:65% 25%;background-size:cover;opacity:.24;filter:grayscale(.7) saturate(.45);mask-image:linear-gradient(90deg,transparent 18%,#000 64%),linear-gradient(#000 0%,#000 24%,transparent 80%);mask-composite:intersect}
+body.xz-dark .arena-environment:before{opacity:.29;filter:grayscale(.6) saturate(.55);mix-blend-mode:luminosity}
+@media(max-width:750px){.arena-environment:before{background-position:58% top;opacity:.18;mask-image:linear-gradient(#000,transparent 65%)}body.xz-dark .arena-environment:before{opacity:.23}}
