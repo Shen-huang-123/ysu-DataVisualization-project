@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" fill="none">
+ <defs>
+  <linearGradient id="edge" x1="520" y1="250" x2="1750" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#acd0da" stop-opacity="0"/><stop offset=".5" stop-color="#acd0da" stop-opacity=".34"/><stop offset="1" stop-color="#acd0da" stop-opacity=".06"/></linearGradient>
+  <linearGradient id="glass" x1="1130" y1="0" x2="1650" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#cce5e9" stop-opacity=".14"/><stop offset="1" stop-color="#cce5e9" stop-opacity="0"/></linearGradient>
+  <linearGradient id="ground" x1="900" y1="640" x2="900" y2="1100" gradientUnits="userSpaceOnUse"><stop stop-color="#adcdd4" stop-opacity="0"/><stop offset=".4" stop-color="#adcdd4" stop-opacity=".22"/><stop offset="1" stop-color="#adcdd4" stop-opacity="0"/></linearGradient>
+ </defs>
+ <!-- Original distant exhibition architecture; no logos or data marks. -->
+
+ <g stroke="url(#edge)" stroke-width="1.1">
+  <path d="M500 54C970 30 1360 102 1800 290"/><path d="M600 0C1040 0 1460 72 1800 226"/>
+  <path d="M950 0L1100 625M1190 0L1265 632M1430 0L1430 640M1680 0L1595 646"/>
+  <path d="M610 470C1070 548 1490 576 1800 570M490 635C1030 610 1470 662 1800 651"/>
+ </g>
+ <g stroke="url(#ground)" stroke-width="1">
+  <path d="M1100 620L470 1100M1265 632L980 1100M1430 640L1490 1100M1595 646L1800 900"/>
+  <path d="M690 832C1050 778 1460 809 1800 850"/>
+ </g>
+</svg>

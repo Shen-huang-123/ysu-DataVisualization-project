@@ -162,3 +162,12 @@ body:not(.xz-dark) .olympic-model #arena-network{opacity:.24}
 @keyframes arena-light-breathe{from{transform:translate3d(-1%,0,0);opacity:.72}to{transform:translate3d(1.5%,1%,0);opacity:1}}
 @media(max-width:750px){.arena-environment-light{inset:-15% -40% 10% 5%;filter:blur(12px)}.arena-environment-floor{left:-35%;right:-35%;top:65%}.arena-environment-grain{opacity:.035}}
 @media(prefers-reduced-motion:reduce){.arena-environment-light{animation:none;transform:none}}
+/* More legible room depth, with distant glass and a warm/cool light balance. */
+.arena-environment:before{content:'';position:absolute;inset:0;background:url('./arena-architecture.svg') 62% 50%/cover no-repeat;opacity:.65;mask-image:linear-gradient(90deg,transparent 24%,#000 61%);pointer-events:none}
+.arena-environment:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 22% 49% at 94% 12%,#fff1cf70,transparent 76%),radial-gradient(ellipse 40% 11% at 76% 76%,#8ec9d248,transparent 80%);pointer-events:none}
+body.xz-dark .arena-environment:after{background:radial-gradient(ellipse 19% 48% at 97% 8%,#ddbd841e,transparent 76%),radial-gradient(ellipse 36% 17% at 78% 72%,#6bced438,transparent 80%)}
+body:has(.arena-story) .olympic-model{background:radial-gradient(ellipse 55% 80% at 80% 23%,#f4f6f0 0%,transparent 70%),linear-gradient(115deg,#e8edeb 5%,#d5e1e1 65%,#b7cdd2 100%)!important}
+body.xz-dark:has(.arena-story) .olympic-model{background:radial-gradient(ellipse 40% 64% at 78% 30%,#285562 0%,transparent 80%),radial-gradient(ellipse 70% 50% at 85% 95%,#1a3b45 0%,transparent 80%),linear-gradient(115deg,#0b1721 8%,#112934 68%,#182b38 100%)!important}
+body .arena-environment-light{background:linear-gradient(112deg,transparent 21%,#f7ffff1a 30%,#efffffaa 38%,transparent 50%,#d5eff44d 66%,transparent 75%)}
+body.xz-dark .arena-environment-light{background:linear-gradient(112deg,transparent 21%,#8de4ee0d 30%,#b9ecf44a 38%,transparent 50%,#d3e6ef22 66%,transparent 75%)}
+@media(max-width:750px){.arena-environment:before{background-position:70% 50%;opacity:.45}.arena-environment:after{opacity:.7}}
