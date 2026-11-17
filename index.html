@@ -223,7 +223,7 @@ function render(){
  else if(window.drawVoyageStars)window.drawVoyageStars(state.p);
  const pos=state.p*(scenes.length-1),from=Math.floor(pos),to=Math.min(scenes.length-1,from+1),phase=pos-from,small=innerWidth<650,nearest=reduce?Math.round(pos):phase>=.53?to:from;
  const smooth=t=>{const v=clamp(t,0,1);return v*v*(3-2*v)};
- const outgoing=1-smooth((phase-.28)/.18),incoming=smooth((phase-.54)/.22);
+ const outgoing=1-smooth(phase/.46),incoming=smooth((phase-.54)/.22);
  scenes.forEach((scene,i)=>{
   const isFrom=i===from,isTo=i===to&&to!==from;
   const opacity=reduce?(i===nearest?1:0):isFrom?outgoing:isTo?incoming:0;
@@ -242,10 +242,12 @@ function render(){
 const journeyTween=gsap.to(state,{p:1,ease:'none',onUpdate:render,scrollTrigger:{id:'index-vortex-story',trigger:spacer,start:'top top',end:'bottom bottom',scrub:.32,invalidateOnRefresh:true}});render();document.documentElement.classList.remove('voyage-preparing');
 function syncRestoredScroll(){const trigger=journeyTween.scrollTrigger;if(!trigger)return;trigger.refresh();const span=Math.max(1,trigger.end-trigger.start);journeyTween.progress(clamp((trigger.scroll()-trigger.start)/span,0,1));render()}
 addEventListener('pageshow',()=>{requestAnimationFrame(()=>requestAnimationFrame(syncRestoredScroll));setTimeout(syncRestoredScroll,120);scheduleAuto()});addEventListener('pagehide',()=>{stopAuto();stopNavigation()});
-let navigationTween=null;
-function stopNavigation(){if(navigationTween){navigationTween.kill();navigationTween=null}}
-function travelTo(index,onComplete){const trigger=journeyTween.scrollTrigger;if(!trigger)return null;const y=trigger.start+clamp(index,0,scenes.length-1)/(scenes.length-1)*(trigger.end-trigger.start),travel={y:trigger.scroll()},distance=Math.abs(y-travel.y),stationSpan=(trigger.end-trigger.start)/(scenes.length-1);if(reduce||distance<1){scrollTo(0,y);ScrollTrigger.update();return null}return gsap.to(travel,{y,duration:4.8*Math.min(2,Math.max(.65,distance/Math.max(1,stationSpan))),ease:'power1.inOut',onUpdate:()=>scrollTo(0,travel.y),onComplete})}
-function go(index){stopAuto();stopNavigation();navigationTween=travelTo(index,()=>{navigationTween=null;scheduleAuto()})}
+let navigationTween=null,navigationTarget=null;
+const beginLink=stage.querySelector('a[href="#voyage-1"]'),beginLabel=beginLink?.firstChild,beginText=beginLabel?.textContent;
+function navigationFeedback(active){stage.classList.toggle('voyage-navigating',active);stage.setAttribute('aria-busy',String(active));if(beginLabel)beginLabel.textContent=active&&navigationTarget===1?'正在深入 ':beginText}
+function stopNavigation(){if(navigationTween){navigationTween.kill();navigationTween=null}navigationTarget=null;navigationFeedback(false)}
+function travelTo(index,onComplete){const trigger=journeyTween.scrollTrigger;if(!trigger)return null;const y=trigger.start+clamp(index,0,scenes.length-1)/(scenes.length-1)*(trigger.end-trigger.start),travel={y:trigger.scroll()},distance=Math.abs(y-travel.y),stationSpan=(trigger.end-trigger.start)/(scenes.length-1);if(reduce||distance<1){scrollTo({top:y,behavior:'instant'});ScrollTrigger.update();return null}return gsap.to(travel,{y,duration:4.8*Math.min(2,Math.max(.65,distance/Math.max(1,stationSpan))),ease:'power1.inOut',onUpdate:()=>scrollTo({top:travel.y,behavior:'instant'}),onComplete})}
+function go(index){if(navigationTween&&navigationTarget===index)return;stopAuto();stopNavigation();navigationTarget=index;navigationFeedback(true);navigationTween=travelTo(index,()=>{navigationTween=null;navigationTarget=null;navigationFeedback(false);scheduleAuto()});if(!navigationTween){navigationTarget=null;navigationFeedback(false)}}
 steps.forEach(button=>button.addEventListener('click',()=>go(Number(button.dataset.voyageGo))));
 document.querySelectorAll('.topbar a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{const hash=link.getAttribute('href');if(!['#top','#stories','#materials'].includes(hash))return;e.preventDefault();go(hash==='#top'?0:hash==='#stories'?2:6)}));
 stage.querySelector('a[href="#voyage-1"]')?.addEventListener('click',e=>{e.preventDefault();go(1)});
@@ -263,8 +265,8 @@ function autoStep(){
  autoTween=travelTo(next,()=>{autoTween=null});
 }
 function scheduleAuto(){stopAuto();if(!autoEnabled||reduce||readingHover)return;idleTimer=setTimeout(()=>{autoStep();autoTimer=setInterval(autoStep,10500)},9000)}
-function userActivity(){stopNavigation();scheduleAuto()}
-['wheel','touchstart','pointerdown','keydown'].forEach(type=>document.addEventListener(type,userActivity,{passive:true}));
+function userActivity(e){if(e.type==='wheel'||e.type==='touchmove'||(e.type==='keydown'&&['Escape','ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(e.key)))stopNavigation();scheduleAuto()}
+['wheel','touchstart','touchmove','pointerdown','keydown'].forEach(type=>document.addEventListener(type,userActivity,{passive:true}));
 document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAuto();stopNavigation()}else scheduleAuto()});
 autoButton?.addEventListener('click',()=>{autoEnabled=!autoEnabled;autoButton.setAttribute('aria-pressed',String(autoEnabled));autoButton.title=autoEnabled?'关闭闲置自动巡游':'开启闲置自动巡游';autoButton.innerHTML='<span aria-hidden="true">'+(autoEnabled?'◉':'○')+'</span> '+(autoEnabled?'自动巡游':'巡游已暂停');scheduleAuto()});
 stage.querySelectorAll('.voyage-content').forEach(content=>{
