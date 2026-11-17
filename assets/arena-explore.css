@@ -132,3 +132,30 @@ body:has(.arena-story) .model-copy p{min-height:4em}
 body:has(#arena-network) .olympic-model:before{opacity:0!important}
 body:not(.xz-dark) #arena-network{opacity:.45}
 @media(max-width:750px){.olympic-model #arena-network{opacity:.4}}
+/* One exhibition composition: editorial introduction, live gallery, quiet controls. */
+@media(min-width:751px){
+ body:has(.arena-story) .model-copy{top:27%;width:34%}
+ body:has(.arena-story) .model-copy h1{font-size:clamp(38px,3.7vw,64px);line-height:1.25;letter-spacing:-.035em;margin:23px 0}
+ body:has(.arena-story) .model-copy>small{color:var(--arena-accent);font-size:11px;letter-spacing:.14em}
+ body:has(.arena-story) .model-copy>p{font-size:14px;font-weight:400;line-height:1.95;max-width:28ch;min-height:4em;opacity:.75}
+ body:has(.arena-story) .model-controls{bottom:35px;gap:21px}
+ body:has(.arena-story) .model-life{bottom:73px;opacity:.8}
+ body:has(.arena-story) .model-hint{font-size:10px!important;opacity:.5;bottom:6px}
+ .arena-chapters{left:39%;right:4%;gap:clamp(16px,2.7vw,42px)}
+}
+.arena-gallery-browse{margin-top:30px;max-width:315px;color:inherit}
+.arena-gallery-eyebrow,.arena-gallery-note{font-size:10px;line-height:1.6;opacity:.52;letter-spacing:.04em}
+.arena-gallery-row{display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #6f8b9138}
+html body .olympic-model .arena-gallery-browse button{border:0!important;color:inherit!important;padding:8px 0!important;font:inherit;cursor:pointer;transition:color .2s,transform .2s}
+html body .olympic-model .arena-gallery-browse button:after{display:none!important}
+html body .olympic-model .arena-gallery-browse button:hover{color:var(--arena-accent)!important}
+.arena-gallery-current{display:flex;align-items:center;gap:11px;flex:1;white-space:nowrap;font-size:12px!important;text-align:left}
+.arena-gallery-count{font-size:9px;opacity:.48;font-variant-numeric:tabular-nums}
+.arena-gallery-name{flex:1;font-size:12px}
+.arena-gallery-prev,.arena-gallery-next{font-size:18px!important;min-width:24px}
+.arena-gallery-next:hover{transform:translateX(3px)}.arena-gallery-prev:hover{transform:translateX(-3px)}
+.arena-gallery-note{margin-top:10px}
+.arena-gallery-browse button:focus-visible{outline:1px solid var(--arena-accent)!important;outline-offset:5px}
+@media(max-width:750px){.arena-gallery-browse{display:none}}
+@media(min-width:751px) and (max-height:740px){body:has(.arena-story) .model-copy{top:24%}body:has(.arena-story) .model-copy h1{font-size:clamp(34px,3.5vw,48px)}.arena-gallery-browse{margin-top:15px}.arena-gallery-row{padding:8px 0}}
+@media(prefers-reduced-motion:reduce){html body .olympic-model .arena-gallery-browse button{transition:none;transform:none}}
