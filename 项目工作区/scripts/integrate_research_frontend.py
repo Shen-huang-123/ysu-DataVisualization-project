@@ -20,9 +20,9 @@ cases=[('口径的魔力','同一场胜利，为何重排榜单？','西班牙�
 body='<div class="rc-tabs" role="group" aria-label="选择研究专题">'+''.join(f'<button type="button" data-rc-case="{i}" aria-pressed="{str(i==0).lower()}">{c[0]}</button>' for i,c in enumerate(cases))+'</div>'
 for i,c in enumerate(cases):
     body+=f'<article data-rc-panel="{i}" {"hidden" if i else ""}><h3>{c[1]}</h3><p class="rc-finding">{c[2]}</p><dl><dt>怎样检验</dt><dd>{c[3]}</dd><dt>什么会推翻它</dt><dd>{c[4]}</dd><dt>修正后的结论</dt><dd>{c[5]}</dd></dl><a href="{c[6]}">进入专题核对证据 ↗</a></article>'
-body+='<p class="rc-note">三篇承担主论证，其余专题作为扩展探索。历史555项已完成独立二次来源对照，仍不等于现行IOC逐项确认。</p><a href="../三篇旗舰专题_研究闭环.md">阅读完整研究闭环 ↗</a>'
+body+='<p class="rc-note">三篇承担主论证，其余专题作为扩展探索。历史555项已完成独立二次来源对照，仍不等于现行IOC逐项确认。</p><a href="../三篇旗舰专题_研究闭环.html">阅读完整研究闭环 ↗</a>'
 t3=section('结论要经过反例，才值得留下','沿着三个问题，检查原判断如何被证据修正。',body)
-t2=section('主场优势，取决于你与谁比较','前后变化和相对比较并不总是给出同一个答案。','''<div class="rc-contrast"><div><h3>巴西2016：比自己</h3><p class="rc-finding">−0.57 个百分点</p><p>主办届获奖行份额较前届下降。</p></div><div><h3>巴西2016：比匹配组</h3><p class="rc-finding">+0.13 个百分点</p><p>相对于前届份额相近的比较组，差值为正。</p></div></div><details><summary>更多比较设计，能把结论推进多远？</summary><p>扩展合成对照含17个可用案例，其中14个高拟合案例平均差值+2.24个百分点，案例自助法95%区间约[1.30,3.28]。不同筛选总体的估计不能混用。主办权选择、赛前投入与资格扩张仍限制因果解释。</p></details><p class="rc-note">统计单位为获奖运动员行份额；不能转称官方奖牌净增量。自身下降与相对优势可以同时成立。</p><a href="../02_数据表/B_匹配DID逐案例.csv" download>下载逐案例比较 ↗</a> · <a href="../../任务三_专题深挖/三篇旗舰专题_研究闭环.md">查看反证条件 ↗</a>''')
+t2=section('主场优势，取决于你与谁比较','前后变化和相对比较并不总是给出同一个答案。','''<div class="rc-contrast"><div><h3>巴西2016：比自己</h3><p class="rc-finding">−0.57 个百分点</p><p>主办届获奖行份额较前届下降。</p></div><div><h3>巴西2016：比匹配组</h3><p class="rc-finding">+0.13 个百分点</p><p>相对于前届份额相近的比较组，差值为正。</p></div></div><details><summary>更多比较设计，能把结论推进多远？</summary><p>扩展合成对照含17个可用案例，其中14个高拟合案例平均差值+2.24个百分点，案例自助法95%区间约[1.30,3.28]。不同筛选总体的估计不能混用。主办权选择、赛前投入与资格扩张仍限制因果解释。</p></details><p class="rc-note">统计单位为获奖运动员行份额；不能转称官方奖牌净增量。自身下降与相对优势可以同时成立。</p><a href="../02_数据表/B_匹配DID逐案例.csv" download>下载逐案例比较 ↗</a> · <a href="../../任务三_专题深挖/三篇旗舰专题_研究闭环.html">查看反证条件 ↗</a>''')
 scores=pd.read_csv(D/'任务四_开放创作/05_满分升级/13_统一条件消融总表/统一条件消融评分.csv')
 short={'透明基线_赛前奖牌池':'透明基线','混合核心_赛前奖牌池':'加入项目模型','混合核心_加主场':'再加入主场','混合核心_资格受限':'资格压力情景'}
 rows=''
@@ -45,3 +45,7 @@ for name,markup in pages.items():
         s=s.replace('</body>',f'<script defer src="{prefix}/research-closure.js?v=1"></script></body>',1)
     path.write_text(s,encoding='utf-8')
 print('Integrated research into four task pages.')
+
+# Refresh the complete web reading edition after material updates.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_flagship_reading.py")))

@@ -1,0 +1,9 @@
+html body.supplement-reading.flagship-reading:not(.supp-existing-nav)>main{padding-top:12px!important}
+html body.flagship-reading .method-actions{margin:0 0 30px;padding-bottom:14px;border-bottom:1px solid var(--sr-line)}
+html body.flagship-reading .flagship-kicker{color:var(--sr-accent);font-size:12px;letter-spacing:.08em}
+html body.flagship-reading .method-reading{font-family:'Microsoft YaHei','Noto Sans SC',system-ui,sans-serif!important}
+html body.flagship-reading .method-reading h1{font-family:inherit!important;font-weight:700!important;font-size:clamp(32px,4vw,58px)!important;max-width:26ch;margin:18px 0 28px;line-height:1.3!important}
+html body.flagship-reading .method-reading h2{font-family:inherit!important;font-weight:600!important;font-size:clamp(22px,2.3vw,32px)!important;border-top:1px solid var(--sr-line);padding-top:28px;margin-top:44px}
+html body.flagship-reading .method-reading p{font-family:inherit!important;font-size:15px;line-height:2;max-width:105ch}
+html body.flagship-reading .method-reading strong{font-weight:600;color:var(--sr-ink)}
+html body.flagship-reading code{font-family:inherit;overflow-wrap:anywhere}

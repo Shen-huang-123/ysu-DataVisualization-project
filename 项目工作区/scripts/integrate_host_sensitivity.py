@@ -83,3 +83,7 @@ for p in [*list((ROOT/'交付文件').rglob('index.html')),ROOT/'项目工作区
 p=ROOT/'README.md';text=p.read_text(encoding='utf-8');line='\n- [主场来源与口径敏感性](交付文件/任务三_专题深挖/S1_东道主效应/01_来源与口径敏感性/index.html)：原17案复现与小项15案三情景；巴西反例限定比较方法。\n'
 if '主场来源与口径敏感性](交付文件' not in text:p.write_text(text+line,encoding='utf-8')
 print('Integrated host evidence:',len(paths),'existing pages; standalone and two-page PDF supplement.')
+
+# Refresh the complete web reading edition after material updates.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_flagship_reading.py")))
