@@ -20,3 +20,22 @@ html body.supplement-reading .article pre{background:color-mix(in srgb,var(--sr-
 html body.supplement-reading .side{color:var(--sr-muted)!important}
 html body.supplement-reading .side strong{color:var(--sr-ink)!important}
 html body.supplement-reading .side .note{color:var(--sr-ink)!important;background:color-mix(in srgb,var(--sr-ink) 6%,var(--sr-paper))!important;border-color:var(--sr-line)!important}
+
+/* Task header is shared verbatim; keep its layout independent of report typography. */
+body.supplement-reading{padding-top:88px}
+body.supplement-reading #xz-nav{position:fixed;z-index:1000;display:flex;align-items:center;justify-content:space-between;font-family:'Microsoft YaHei',system-ui,sans-serif}
+body.supplement-reading #xz-nav a{text-decoration:none;white-space:nowrap}
+body.supplement-reading #xz-nav .xz-brand,body.supplement-reading #xz-nav .xz-links{display:flex;align-items:center}
+body.supplement-reading #xz-nav .xz-mark{border:0!important;font-size:16px}
+body.supplement-reading #xz-menu{position:fixed;z-index:1002;top:86px;right:clamp(20px,4vw,70px);font-family:'Microsoft YaHei',system-ui,sans-serif}
+body.supplement-reading #xz-menu[hidden]{display:none!important}
+body.supplement-reading #xz-menu a{display:flex;gap:16px;text-decoration:none}
+html body.supplement-reading #xz-menu#xz-menu{color:var(--sr-ink)!important;text-shadow:none!important;background:var(--sr-paper)!important}
+html body.supplement-reading #xz-menu#xz-menu :is(h2,a){color:var(--sr-ink)!important;text-shadow:none!important}
+@media(max-width:650px){body.supplement-reading #xz-nav .xz-links>a{display:none}body.supplement-reading{padding-top:76px}}
+
+
+/* Legacy document download actions remain, without a second brand header. */
+body.supplement-reading .top{position:static;background:transparent;box-shadow:none;border:0;justify-content:flex-end;padding:12px clamp(24px,6vw,100px);color:var(--sr-muted)}
+body.supplement-reading .top .brand{display:none}
+body.supplement-reading .top .download{color:var(--sr-accent);border:0;border-radius:0;padding:8px 0}

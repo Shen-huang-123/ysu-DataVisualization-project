@@ -1,0 +1,828 @@
+[
+  {
+    "file": "00_交付总览.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/00_先看这里.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/00_先看这里.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/十专题总览.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/十专题深度核验.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/视觉设计参考.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/00_先看这里.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/00_先看这里.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/00_先看这里.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/五分钟评审路线.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/提交前检查.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/评委视角最终验收_2026-11-15.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/评审探索路线.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/视频/答辩追问与证据定位.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/视频/视频讲解脚本.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/证据等级与历史反例/index.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/02_2028洛杉矶预测/index.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/02_2028洛杉矶预测/预测方法与验证方案.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/2024同单位验证.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/滚动留出验证.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/预测误差图谱.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/交互看板/使用说明.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/09_赛前条件回放/index.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/11_官方来源门控预测/index.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/12_新增运动端到端类比回放/index.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/14_同口径时序重训/index.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/14_同口径时序重训/同口径时序重训说明.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/15_原项目模型时序核验/index.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/01_报告与说明/01_百年奥运全景分析_高分版.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/00_四项必选视角.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/A_奖牌格局.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/B_国家兴衰.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/C_她的奥运.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/D_项目演化.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_结论压力测试/结论压力测试.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_结论压力测试/结论压力测试_完整方法.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/08_女性结构分解/女性结构分解.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/09_课程方法可视分析/index.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/11_结论稳定性地图/index.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/12_反例与证据链/index.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S10_奖牌藏在哪些项目/研究说明.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S1_东道主效应/S1东道主分析.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S2_口径的魔力/00_先看这里.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_冠军的保质期/00_先看这里.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_地缘政治的投影/IOC一手来源核验.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_地缘政治的投影/研究说明.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S4_小代表团的大突破/研究说明.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S5_奖牌的通货膨胀/研究说明.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S6_王者与传奇/研究说明.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S8_她们登上领奖台/研究说明.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S9_消失的赛场/研究说明.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_冠军的保质期/01_报告与说明/S3_冠军的保质期_分析报告.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_冠军的保质期/11_历史来源敏感性/index.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S2_口径的魔力/01_报告与说明/S2_口径的魔力_高分版.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S1_东道主效应/01_来源与口径敏感性/index.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/01_数据质量与口径说明书.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/04_双口径补充说明.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/05_2024官方口径核验说明.html",
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/06_一键复现说明.html",
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "00_交付总览.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/00_先看这里.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/00_先看这里.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/十专题总览.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/十专题深度核验.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/视觉设计参考.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/00_先看这里.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/00_先看这里.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/00_先看这里.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/五分钟评审路线.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/提交前检查.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/评委视角最终验收_2026-11-15.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/评审探索路线.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/视频/答辩追问与证据定位.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/视频/视频讲解脚本.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "最终提交材料/证据等级与历史反例/index.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/02_2028洛杉矶预测/index.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/02_2028洛杉矶预测/预测方法与验证方案.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/2024同单位验证.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/滚动留出验证.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/预测误差图谱.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/交互看板/使用说明.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/09_赛前条件回放/index.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/11_官方来源门控预测/index.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/12_新增运动端到端类比回放/index.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/14_同口径时序重训/index.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/14_同口径时序重训/同口径时序重训说明.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务四_开放创作/05_满分升级/15_原项目模型时序核验/index.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/01_报告与说明/01_百年奥运全景分析_高分版.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/00_四项必选视角.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/A_奖牌格局.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/B_国家兴衰.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/C_她的奥运.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_四视角独立交付/D_项目演化.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_结论压力测试/结论压力测试.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/07_结论压力测试/结论压力测试_完整方法.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/08_女性结构分解/女性结构分解.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务二_百年全景/09_课程方法可视分析/index.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/11_结论稳定性地图/index.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/12_反例与证据链/index.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S10_奖牌藏在哪些项目/研究说明.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S1_东道主效应/S1东道主分析.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S2_口径的魔力/00_先看这里.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_冠军的保质期/00_先看这里.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_地缘政治的投影/IOC一手来源核验.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_地缘政治的投影/研究说明.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S4_小代表团的大突破/研究说明.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S5_奖牌的通货膨胀/研究说明.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S6_王者与传奇/研究说明.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S8_她们登上领奖台/研究说明.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S9_消失的赛场/研究说明.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_冠军的保质期/01_报告与说明/S3_冠军的保质期_分析报告.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S3_冠军的保质期/11_历史来源敏感性/index.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S2_口径的魔力/01_报告与说明/S2_口径的魔力_高分版.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务三_专题深挖/S1_东道主效应/01_来源与口径敏感性/index.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/01_数据质量与口径说明书.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/04_双口径补充说明.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/05_2024官方口径核验说明.html",
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "menuPassed": true
+  },
+  {
+    "file": "任务一_数据体检/01_报告与说明/06_一键复现说明.html",
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "menuPassed": true
+  }
+]
