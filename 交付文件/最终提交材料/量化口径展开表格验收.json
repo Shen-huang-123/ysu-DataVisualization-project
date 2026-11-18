@@ -1,0 +1,130 @@
+[
+  {
+    "width": 390,
+    "dark": true,
+    "tables": [
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 3,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 4,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "dark": false,
+    "tables": [
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 3,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 4,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "tables": [
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 3,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 4,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(229, 239, 237)"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "tables": [
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 3,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 4,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      },
+      {
+        "rows": 5,
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 59, 71)"
+      }
+    ],
+    "overflow": false
+  }
+]
