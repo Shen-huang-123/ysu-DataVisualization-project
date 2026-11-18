@@ -116,3 +116,9 @@ html body main.spec-fullwidth>details summary span{color:#795b25!important}
 html body.xz-dark main.spec-fullwidth>details table{color:#e5efed!important}
 html body.xz-dark main.spec-fullwidth>details summary span{color:#ddc393!important}
 @media(max-width:650px){html body main.spec-fullwidth>details :is(th,td){font-size:12px;padding:12px 6px}html body main.spec-fullwidth>details :is(th,td):nth-child(1){width:30%}html body main.spec-fullwidth>details :is(th,td):nth-child(2){width:22%}html body main.spec-fullwidth>details :is(th,td):nth-child(4){width:12%}}
+
+/* Specification experiment: quiet background, without scenic overlays. */
+html body:has(>main.spec-fullwidth){background:radial-gradient(ellipse 65% 460px at 100% 0,#b9a16e14,transparent 85%),radial-gradient(ellipse 75% 580px at 0 20%,#6699ad0c,transparent 85%),#f3f4ef!important}
+html body.xz-dark:has(>main.spec-fullwidth),html.xz-dark-preload body:has(>main.spec-fullwidth){background:radial-gradient(ellipse 65% 460px at 100% 0,#b9a16e0b,transparent 85%),radial-gradient(ellipse 75% 580px at 0 20%,#6699ad12,transparent 85%),#142129!important}
+html body:has(>main.spec-fullwidth) :is(.oa-world,.oa-landscape,.oa-light,.immersive-float-layer){display:none!important}
+html body:has(>main.spec-fullwidth):before,html body:has(>main.spec-fullwidth):after{display:none!important}
