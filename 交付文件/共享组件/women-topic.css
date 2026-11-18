@@ -67,3 +67,11 @@ html body.women-topic>header h1{font-size:clamp(38px,5vw,80px)!important;margin:
 html body.women-topic>header .lead{max-width:1050px!important;font-size:clamp(14px,1.2vw,18px)!important;color:#e4eeeb!important}
 html body.women-topic>header .women-credit{margin-top:8px!important;align-self:auto!important}
 @media(max-width:800px){html body.women-topic>header{aspect-ratio:auto;display:flex!important;padding-top:calc(50.79vw + 28px)!important;min-height:0!important;gap:14px!important}html body.women-topic>header>.women-hero-photo{height:auto!important;aspect-ratio:5184/2633;object-fit:contain!important;width:100%!important}html body.women-topic>header::before{display:none!important}html body.women-topic>header h1{font-size:clamp(32px,8vw,48px)!important}}
+/* Close the page with a quiet evidence entry; no oversized particle canvas below it. */
+html body.women-topic>.ed-particles{display:none!important}
+html body.women-topic>.women-proof-link{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;width:auto!important;max-width:none!important;margin:0 clamp(24px,6vw,100px) 28px!important;padding:24px 0!important;border:0!important;border-block:1px solid var(--women-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;text-decoration:none!important;color:var(--women-ink)!important;transform:none!important;font-family:inherit!important}
+html body.women-topic>.women-proof-link small{grid-column:1;font-size:12px;color:var(--women-gold)!important}
+html body.women-topic>.women-proof-link strong{grid-column:1;font-size:clamp(20px,2vw,28px)!important;font-weight:600;line-height:1.5;margin:0!important}
+html body.women-topic>.women-proof-link span{grid-column:1;font-size:14px;color:var(--women-muted)!important;line-height:1.8}
+html body.women-topic>.women-proof-link::after{content:'↗';grid-column:2;grid-row:1/4;align-self:center;font-size:32px;font-weight:400;color:var(--women-gold)}
+html body.women-topic>footer{margin:0!important;padding:24px clamp(24px,6vw,100px)!important}

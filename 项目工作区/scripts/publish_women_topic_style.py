@@ -40,4 +40,10 @@ photo['alt']='2016年里约奥运会女子体操团体获奖队伍合影'
 credit=hero.select_one('.women-credit')
 credit.clear()
 credit.append(BeautifulSoup('<figcaption><strong>里约2016 · 女子体操颁奖仪式 <small>· 场景配图，不作为统计证据</small></strong><a href="https://commons.wikimedia.org/wiki/File:EUA_levam_ouro_na_gin%C3%A1stica_art%C3%ADstica_feminina;_Brasil_fica_em_8%C2%BA_lugar_(28264937223).jpg" target="_blank" rel="noopener">Agência Brasil Fotografias · CC BY 2.0</a></figcaption>','html.parser'))
+proof=s.body.find('a',href='../11_结论稳定性地图/index.html#S8',recursive=False)
+if proof:
+ proof['class']=['women-proof-link']
+ proof.attrs.pop('style',None)
+ for child in proof.select('[style]'):child.attrs.pop('style',None)
+ s.body.find('footer',recursive=False).insert_before(proof.extract())
 p.write_text(str(s),'utf8')
