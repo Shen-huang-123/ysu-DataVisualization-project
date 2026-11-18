@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "dark": true,
+      "overflow": false,
+      "chartBackground": "rgba(0, 0, 0, 0)",
+      "detailBackground": "rgba(0, 0, 0, 0)",
+      "before": 16,
+      "filtered": 14,
+      "selectionMatches": true
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "overflow": false,
+      "chartBackground": "rgba(0, 0, 0, 0)",
+      "detailBackground": "rgba(0, 0, 0, 0)",
+      "before": 16,
+      "filtered": 14,
+      "selectionMatches": true
+    },
+    {
+      "width": 1440,
+      "dark": true,
+      "overflow": false,
+      "chartBackground": "rgba(0, 0, 0, 0)",
+      "detailBackground": "rgba(0, 0, 0, 0)",
+      "before": 16,
+      "filtered": 14,
+      "selectionMatches": true
+    },
+    {
+      "width": 1440,
+      "dark": false,
+      "overflow": false,
+      "chartBackground": "rgba(0, 0, 0, 0)",
+      "detailBackground": "rgba(0, 0, 0, 0)",
+      "before": 16,
+      "filtered": 14,
+      "selectionMatches": true
+    },
+    {
+      "width": 2480,
+      "dark": true,
+      "overflow": false,
+      "chartBackground": "rgba(0, 0, 0, 0)",
+      "detailBackground": "rgba(0, 0, 0, 0)",
+      "before": 16,
+      "filtered": 14,
+      "selectionMatches": true
+    },
+    {
+      "width": 2480,
+      "dark": false,
+      "overflow": false,
+      "chartBackground": "rgba(0, 0, 0, 0)",
+      "detailBackground": "rgba(0, 0, 0, 0)",
+      "before": 16,
+      "filtered": 14,
+      "selectionMatches": true
+    }
+  ],
+  "errors": []
+}

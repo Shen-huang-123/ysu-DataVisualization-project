@@ -45,3 +45,7 @@ if needle in page and '09_课程方法可视分析/index.html' not in page:
     page = page.replace(needle,needle+'<a class="course-lens-link" href="交付文件/任务二_百年全景/09_课程方法可视分析/index.html">参与之后 · 可视分析 ↗</a>')
     landing.write_text(page,encoding='utf-8')
 print(f'Built {len(rows)} delegation rows: {target / "index.html"}')
+
+# Reapply page-specific presentation after rebuilding analytical data.
+import runpy
+runpy.run_path(str(Path(__file__).with_name('publish_course_lens_style.py')))
