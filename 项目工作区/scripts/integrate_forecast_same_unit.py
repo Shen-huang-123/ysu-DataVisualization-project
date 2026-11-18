@@ -72,3 +72,7 @@ para('模型复杂度不能替代样本外表现。三折及一处八年间隔�
 p=ROOT/'README.md';text=p.read_text(encoding='utf-8');line='\n- [独立同口径时序重训](交付文件/任务四_开放创作/05_满分升级/14_同口径时序重训/index.html)：三折早于目标届的调参训练；简单份额基线优于本轮复杂模型，保留历史数据版本与八年间隔限制。\n'
 if '独立同口径时序重训](' not in text:p.write_text(text+line,encoding='utf-8')
 print('Updated six forecast interfaces, report, audit and two-page PDF supplement.')
+
+# Reapply theme-aware web presentation after publishing the analytical blocks.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_forecast_chart_style.py")))
