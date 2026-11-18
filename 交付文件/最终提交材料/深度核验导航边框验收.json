@@ -1,0 +1,95 @@
+[
+  {
+    "width": 390,
+    "links": [
+      {
+        "label": "晓奥运数据观察",
+        "border": "0px",
+        "padding": "0px"
+      },
+      {
+        "label": "01 数据体检",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "02 百年全景",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "03 专题深挖",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "04 洛杉矶2028",
+        "border": "0px",
+        "padding": "10px 0px"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "links": [
+      {
+        "label": "晓奥运数据观察",
+        "border": "0px",
+        "padding": "0px"
+      },
+      {
+        "label": "01 数据体检",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "02 百年全景",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "03 专题深挖",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "04 洛杉矶2028",
+        "border": "0px",
+        "padding": "10px 0px"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 2480,
+    "links": [
+      {
+        "label": "晓奥运数据观察",
+        "border": "0px",
+        "padding": "0px"
+      },
+      {
+        "label": "01 数据体检",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "02 百年全景",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "03 专题深挖",
+        "border": "0px",
+        "padding": "10px 0px"
+      },
+      {
+        "label": "04 洛杉矶2028",
+        "border": "0px",
+        "padding": "10px 0px"
+      }
+    ],
+    "overflow": false
+  }
+]
