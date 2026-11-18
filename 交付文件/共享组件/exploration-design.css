@@ -122,3 +122,9 @@ html body:has(>main.spec-fullwidth){background:radial-gradient(ellipse 65% 460px
 html body.xz-dark:has(>main.spec-fullwidth),html.xz-dark-preload body:has(>main.spec-fullwidth){background:radial-gradient(ellipse 65% 460px at 100% 0,#b9a16e0b,transparent 85%),radial-gradient(ellipse 75% 580px at 0 20%,#6699ad12,transparent 85%),#142129!important}
 html body:has(>main.spec-fullwidth) :is(.oa-world,.oa-landscape,.oa-light,.immersive-float-layer){display:none!important}
 html body:has(>main.spec-fullwidth):before,html body:has(>main.spec-fullwidth):after{display:none!important}
+
+/* Match the specification title hierarchy to the main task narratives. */
+html body main.spec-fullwidth>h1{font-family:'Microsoft YaHei','Noto Sans SC',system-ui,sans-serif!important;font-size:clamp(36px,4.8vw,72px)!important;font-weight:700!important;line-height:1.22!important;letter-spacing:-.045em!important;margin:18px 0 24px!important;text-wrap:initial}
+html body main.spec-fullwidth>small{font-size:12px!important;font-weight:500;letter-spacing:.08em;color:var(--sr-accent,#927444);opacity:1}
+html body.xz-dark main.spec-fullwidth>small{color:#ddc393!important}
+html body main.spec-fullwidth>.spec-overview h2{font-family:'Microsoft YaHei','Noto Sans SC',system-ui,sans-serif!important;font-size:clamp(24px,2.5vw,36px)!important;font-weight:650!important;line-height:1.4;letter-spacing:-.025em}
