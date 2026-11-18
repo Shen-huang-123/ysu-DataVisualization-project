@@ -14,3 +14,24 @@
 #rank-discovery{margin-bottom:0}#rank-discovery .ef-note{color:var(--muted,#b2c4c9)}
 @media(max-width:600px){.evidence-feedback .ef-controls{display:grid;grid-template-columns:1fr}.evidence-feedback select{width:100%}.evidence-feedback svg text{font-size:24px}}
 @media print{.evidence-feedback .ef-controls,.evidence-feedback .ef-years{display:none}}
+
+/* Standalone model audit: remove nested page spacing, keep the result in view. */
+html body.supplement-reading:has(>main.supp-content>#project-model-audit)>main.supp-content{padding-top:28px!important}
+html body.supplement-reading main.supp-content>#project-model-audit{margin:0!important;padding:0!important;border-top:0!important}
+html body.supplement-reading main.supp-content>#project-model-audit>h2{margin:0 0 18px!important;font-size:clamp(27px,2.7vw,42px)!important;line-height:1.4!important}
+html body.supplement-reading main.supp-content>#project-model-audit>p{margin:0 0 28px!important;max-width:100ch}
+html body #model-discovery{padding:24px 0!important;margin:24px 0!important}
+html body #model-discovery>h2{font-size:clamp(23px,2.1vw,32px)!important;margin:0!important}
+html body #model-discovery #model-chart{min-width:0;align-self:center}
+html body #model-discovery #model-chart svg{width:100%;max-height:290px}
+html body #model-discovery .ef-main{font-size:clamp(22px,2vw,30px)!important;margin:8px 0!important}
+@media(min-width:1000px){
+html body #model-discovery{display:grid;grid-template-columns:minmax(300px,.8fr) minmax(0,1.4fr);column-gap:48px;row-gap:12px;align-items:start}
+html body #model-discovery>h2,html body #model-discovery>h2+p{grid-column:1/-1}
+html body #model-discovery>.ef-controls{grid-column:1;grid-row:3;margin:4px 0!important}
+html body #model-discovery>#model-fails{grid-column:1;grid-row:4;margin:0!important}
+html body #model-discovery>.ef-years{grid-column:1;grid-row:5}
+html body #model-discovery>[role=status]{grid-column:1;grid-row:6}
+html body #model-discovery>#model-chart{grid-column:2;grid-row:3/7}
+html body #model-discovery>.ef-note{grid-column:1/-1;margin:4px 0!important}
+}
