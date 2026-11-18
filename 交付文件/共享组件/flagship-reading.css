@@ -7,3 +7,5 @@ html body.flagship-reading .method-reading h2{font-family:inherit!important;font
 html body.flagship-reading .method-reading p{font-family:inherit!important;font-size:15px;line-height:2;max-width:105ch}
 html body.flagship-reading .method-reading strong{font-weight:600;color:var(--sr-ink)}
 html body.flagship-reading code{font-family:inherit;overflow-wrap:anywhere}
+/* Match the full available reading width of task pages. */
+html body.flagship-reading .method-reading,html body.flagship-reading .method-reading :is(h1,h2,p,ul){width:100%;max-width:none!important;box-sizing:border-box}
