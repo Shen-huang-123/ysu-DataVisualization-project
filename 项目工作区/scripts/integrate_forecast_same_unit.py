@@ -76,3 +76,6 @@ print('Updated six forecast interfaces, report, audit and two-page PDF supplemen
 # Reapply theme-aware web presentation after publishing the analytical blocks.
 import runpy
 runpy.run_path(str(Path(__file__).with_name("publish_forecast_chart_style.py")))
+
+# Publish the browser-readable method after analysis and presentation passes.
+runpy.run_path(str(Path(__file__).with_name("publish_same_unit_method.py")))
