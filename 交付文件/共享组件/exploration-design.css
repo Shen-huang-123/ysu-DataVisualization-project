@@ -128,3 +128,13 @@ html body main.spec-fullwidth>h1{font-family:'Microsoft YaHei','Noto Sans SC',sy
 html body main.spec-fullwidth>small{font-size:12px!important;font-weight:500;letter-spacing:.08em;color:var(--sr-accent,#927444);opacity:1}
 html body.xz-dark main.spec-fullwidth>small{color:#ddc393!important}
 html body main.spec-fullwidth>.spec-overview h2{font-family:'Microsoft YaHei','Noto Sans SC',system-ui,sans-serif!important;font-size:clamp(24px,2.5vw,36px)!important;font-weight:650!important;line-height:1.4;letter-spacing:-.025em}
+
+/* Evidence boundary follows the open task-page reading style. */
+html body main.spec-fullwidth>.note{background:transparent!important;color:inherit!important;border:0!important;border-left:2px solid #b79b6a!important;border-radius:0!important;box-shadow:none!important;padding:6px 0 8px 24px!important;margin:36px 0 28px!important;font-size:15px!important;line-height:1.95!important;max-width:none}
+html body main.spec-fullwidth>.note:before{content:'证据边界';display:block;margin-bottom:10px;font-size:12px;font-weight:600;letter-spacing:.08em;color:#795b25}
+html body.xz-dark main.spec-fullwidth>.note:before{color:#ddc393}
+html body main.spec-fullwidth>.note+p{display:flex;gap:24px;flex-wrap:wrap;padding-top:22px;border-top:1px solid #80969d55;font-size:14px}
+html body main.spec-fullwidth>.note+p a{color:#795b25!important;text-decoration:none!important;display:inline-flex;align-items:center;min-height:44px;border-bottom:1px solid transparent}
+html body.xz-dark main.spec-fullwidth>.note+p a{color:#ddc393!important}
+html body main.spec-fullwidth>.note+p a:hover{border-bottom-color:currentColor}
+@media(max-width:650px){html body main.spec-fullwidth>.note{padding-left:16px!important;font-size:14px!important}html body main.spec-fullwidth>.note+p{gap:12px}}
