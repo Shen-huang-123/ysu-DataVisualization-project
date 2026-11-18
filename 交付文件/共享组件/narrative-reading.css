@@ -120,3 +120,40 @@ body.narrative-module .sequence-proof{border-radius:50%!important}
 @media(prefers-reduced-motion:reduce){.sequence-plane{transform:none!important}}
 
 body.narrative-module .sequence-source a{color:inherit;text-underline-offset:3px}
+
+/* Olympic editorial controls: text carries the hierarchy, not filled pills. */
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions){background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;gap:clamp(16px,3vw,48px);align-items:center;flex-wrap:wrap}
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button{position:relative;background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:var(--nr-muted)!important;font-family:inherit!important;font-weight:400!important;font-size:16px!important;line-height:1.5!important;padding:14px 0!important;min-height:48px;opacity:1!important;cursor:pointer;transition:color 180ms ease,transform 180ms ease}
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--nr-accent);transform:scaleX(0);transform-origin:left;transition:transform 220ms ease}
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:is([aria-pressed=true],.active,[aria-selected=true]){color:var(--nr-ink)!important;font-weight:600!important}
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:is([aria-pressed=true],.active,[aria-selected=true]):after{transform:scaleX(1)}
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:hover{color:var(--nr-accent)!important;transform:translateY(-2px)}
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:active{transform:translateY(0)}
+html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:focus-visible{outline:2px solid var(--nr-accent)!important;outline-offset:5px}
+body.narrative-module .rc-tabs{counter-reset:research;display:flex;border-bottom:1px solid var(--nr-line)!important;padding-bottom:0;margin:36px 0 48px}
+body.narrative-module .rc-tabs button:before{counter-increment:research;content:'0' counter(research);display:inline-block;font-size:11px;font-weight:400;margin-right:12px;color:var(--nr-accent);font-variant-numeric:tabular-nums}
+/* Open, monumental chapter composition; analytical tables remain compact. */
+body.ed-entry.narrative-module .research-closure{padding-block:clamp(40px,6vw,88px);border-color:var(--nr-line);background:none!important;border-radius:0!important;box-shadow:none!important}
+body.ed-entry.narrative-module .research-closure h2{font-size:clamp(30px,3.8vw,60px)!important;line-height:1.25!important;font-weight:600!important;letter-spacing:-.035em;max-width:24em!important;text-wrap:balance}
+body.ed-entry.narrative-module .research-closure .rc-lead{font-size:16px!important;color:var(--nr-muted);line-height:1.8;opacity:1;max-width:54ch}
+body.ed-entry.narrative-module .research-closure [data-rc-panel]{position:relative;padding:16px 0 36px;min-width:0}
+body.ed-entry.narrative-module .research-closure [data-rc-panel] h3{font-size:clamp(24px,2.5vw,38px)!important;line-height:1.4!important;max-width:24ch;margin:0 0 24px;text-wrap:balance;color:var(--nr-ink)}
+body.ed-entry.narrative-module .research-closure [data-rc-panel] .rc-finding{font-size:clamp(24px,2.6vw,42px)!important;font-weight:400;line-height:1.6!important;max-width:24ch!important;color:var(--nr-ink);margin:0}
+body.ed-entry.narrative-module .research-closure dl{margin:0;counter-reset:evidence}
+body.ed-entry.narrative-module .research-closure dt{font-size:14px;font-weight:600;letter-spacing:.02em;color:var(--nr-accent);border-top:1px solid var(--nr-line);padding-top:20px;margin-top:20px}
+body.ed-entry.narrative-module .research-closure dt:first-child{margin-top:0}
+body.ed-entry.narrative-module .research-closure dd{font-size:16px;line-height:1.9;color:var(--nr-muted);opacity:1;margin:12px 0 28px}
+body.ed-entry.narrative-module .research-closure [data-rc-panel]>a{display:inline-flex;align-items:center;min-height:48px;font-size:14px;color:var(--nr-accent);text-decoration:none;border-bottom:1px solid var(--nr-line);justify-self:start;margin-top:28px}
+body.ed-entry.narrative-module .research-closure .rc-note{font-size:13px;line-height:1.9;max-width:76ch;padding-top:24px;border-top:1px solid var(--nr-line);color:var(--nr-muted);opacity:1}
+body.narrative-module .narrative-chapter .xz-kpis article{background:transparent!important;border:0!important;border-top:1px solid var(--nr-line)!important;border-radius:0!important;box-shadow:none!important;padding:24px 12px 24px 0!important}
+@media(min-width:1001px){
+ body.ed-entry.narrative-module .research-closure [data-rc-panel]{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);column-gap:clamp(48px,7vw,120px)}
+ body.ed-entry.narrative-module .research-closure [data-rc-panel]>h3{grid-column:1}
+ body.ed-entry.narrative-module .research-closure [data-rc-panel]>.rc-finding{grid-column:1;grid-row:2}
+ body.ed-entry.narrative-module .research-closure [data-rc-panel]>dl{grid-column:2;grid-row:1/4}
+ body.ed-entry.narrative-module .research-closure [data-rc-panel]>a{grid-column:1;grid-row:3;align-self:end}
+}
+@media(max-width:1000px){body.ed-entry.narrative-module .research-closure [data-rc-panel]>dl{margin-top:32px}}
+@media(max-width:600px){body.ed-entry.narrative-module .rc-tabs{gap:20px;margin-block:24px 32px}body.ed-entry.narrative-module .rc-tabs button{font-size:14px!important}.rc-tabs button:before{margin-right:6px!important}body.ed-entry.narrative-module .research-closure [data-rc-panel] .rc-finding{font-size:26px!important}}
+@media(prefers-reduced-motion:reduce){html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button,html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:after{transition:none!important}}
+
