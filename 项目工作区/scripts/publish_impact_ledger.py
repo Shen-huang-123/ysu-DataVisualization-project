@@ -31,7 +31,11 @@ while i<len(lines):
  m=re.match(r'^(#{1,6}) (.*)',line)
  blocks.append(f'<h{len(m[1])}>{inline(m[2])}</h{len(m[1])}>' if m else '<p>'+inline(line)+'</p>');i+=1
 content='<article class="method-reading"><nav class="method-actions"><a href="../index.html#research-closure">← 返回数据体检</a><a href="数据问题影响账本.md" download>下载 Markdown 原文</a><a href="问题影响实测.csv" download>下载影响实测 CSV</a></nav>'+''.join(blocks)+'</article>'
-s.main.append(BeautifulSoup(content,'html.parser'));out.write_text(str(s),'utf8')
+s.main.append(BeautifulSoup(content,'html.parser'))
+for a in s.select('#xz-nav .xz-links a'):
+ a.attrs.pop('aria-current',None)
+ if '任务一_数据体检/index.html' in a.get('href',''):a['aria-current']='page'
+out.write_text(str(s),'utf8')
 for p in delivery.rglob('*.html'):
  if p==out:continue
  text=p.read_text('utf8')
