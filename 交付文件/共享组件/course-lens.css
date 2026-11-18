@@ -42,3 +42,9 @@ html body.course-lens>.hero:before,html body.course-lens .oa-world{display:none!
 html body.course-lens .controls{outline:none!important;border:0!important;border-top:1px solid var(--sr-line)!important;border-bottom:1px solid var(--sr-line)!important;box-shadow:none!important;background:transparent!important}
 html body.course-lens .controls:before,html body.course-lens .controls:after{display:none!important}
 html body.course-lens>.top{justify-content:space-between!important}
+
+/* Replace the generic orbit with a quiet five-lane Olympic track. */
+html body.course-lens header.hero>.immersive-float-layer{display:none!important}
+html body.course-lens header.hero>.course-track-art{position:absolute!important;right:-36px;top:12px;width:min(46vw,640px);height:auto;opacity:.32;z-index:0;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 25%);animation:none!important}
+html body.course-lens header.hero>.question{z-index:1}
+@media(max-width:650px){html body.course-lens header.hero>.course-track-art{width:85vw;right:-26vw;top:0;opacity:.18}}
