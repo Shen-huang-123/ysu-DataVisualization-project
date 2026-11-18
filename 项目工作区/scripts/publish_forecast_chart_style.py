@@ -28,3 +28,7 @@ for p in paths:
   img.replace_with(BeautifulSoup(markup,'html.parser'))
  p.write_text(str(s),encoding='utf-8')
 print('Styled seven forecast benchmark blocks from unchanged CSV')
+
+# The supplementary-page theme is the final presentation pass.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_supplement_reading.py")))

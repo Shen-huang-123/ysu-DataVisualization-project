@@ -25,3 +25,7 @@ if not s.select_one('.pressure-route'):
   a=s.new_tag('a',href=file);a.string=label;downloads.append(a)
  main.append(downloads)
 p.write_text(str(s),encoding='utf-8')
+
+# The supplementary-page theme is the final presentation pass.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_supplement_reading.py")))
