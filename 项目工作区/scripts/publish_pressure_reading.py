@@ -1,0 +1,27 @@
+from pathlib import Path
+from bs4 import BeautifulSoup
+root=Path(__file__).resolve().parents[2]
+p=root/'交付文件/任务二_百年全景/07_结论压力测试/结论压力测试.html'
+s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
+if not s.select_one('#pressure-reading-style'):
+ link=s.new_tag('link',id='pressure-reading-style',rel='stylesheet',href='pressure-reading.css?v=1');s.head.append(link)
+if not s.select_one('.pressure-photo-credit'):
+ credit=s.new_tag('a',attrs={'class':'pressure-photo-credit','href':'../../任务三_专题深挖/媒体/图片来源与许可.html'})
+ credit.string='1896 雅典 · 历史影像 / Public domain'
+ s.header.append(credit)
+main=s.main
+sections=main.find_all('section',recursive=False)
+for i,n in enumerate(sections):n['id']='pressure-'+str(i+1)
+if not s.select_one('.pressure-route'):
+ nav=s.new_tag('nav',attrs={'class':'pressure-route','aria-label':'压力测试阅读路径'})
+ for i,label in enumerate(['长期与近期','替换单位','清洗决定','证据边界']):
+  a=s.new_tag('a',href='#pressure-'+str(i+1));a.string=label;nav.append(a)
+ main.insert(0,nav)
+ facts=s.select_one('.facts');facts.extract();nav.insert_after(facts)
+ figure=main.figure
+ caption=s.new_tag('figcaption');caption.string='阅读提示：先比较长期水平，再检查最近两届的反向波动。运动员行与历史奖牌组代理分别阅读；代理线停于2016年，不与2020后的泛化Event硬接。完整数值见逐届CSV。';figure.append(caption)
+ downloads=s.new_tag('nav',attrs={'class':'pressure-downloads','aria-label':'复算材料'})
+ for file,label in [('逐届集中度三口径.csv','下载逐届数据'),('结论压力测试摘要.json','查看复算摘要'),('结论压力测试.md','阅读完整方法')]:
+  a=s.new_tag('a',href=file);a.string=label;downloads.append(a)
+ main.append(downloads)
+p.write_text(str(s),encoding='utf-8')

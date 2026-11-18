@@ -165,3 +165,7 @@ if task2_report_html.exists():
     task2_report_html.write_text(text, encoding='utf-8')
 print(json.dumps(summary, ensure_ascii=False, indent=2))
 
+
+# Preserve the reviewed reading layout after analytical regeneration.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_pressure_reading.py")))
