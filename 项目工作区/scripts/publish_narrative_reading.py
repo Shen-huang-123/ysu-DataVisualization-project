@@ -14,6 +14,7 @@ for y in ['2012','2016','2024']:
  row={r['模型']:float(r['MAE']) for r in scores if r['Year']==y};models.append(dict(year=y,base=row['历史加权基线'],model=row['RF60_GB40']))
 us=next(r for r in read(M/'2028同口径重训情景榜.csv') if r['NOC']=='USA')
 payload=dict(intervals=intervals,models=models,us=dict(base=float(us['历史加权基线']),mixed=float(us['55基线45项目'])))
+payload['photos']={r['file']:dict(author=r['author'],license=r['license']) for r in json.loads((BASE/'任务三_专题深挖/媒体/图片来源与许可.json').read_text(encoding='utf-8-sig'))}
 paths=['任务一_数据体检/index.html','任务二_百年全景/05_交互总览/index.html','任务三_专题深挖/统一中文入口/index.html','任务四_开放创作/index.html']
 for name in paths:
  p=BASE/name;s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
@@ -23,8 +24,8 @@ for name in paths:
  rel=Path(os.path.relpath(SHARED,p.parent)).as_posix()
  link=s.select_one('link[href*="narrative-reading.css"]')
  if not link:link=s.new_tag('link',attrs={'rel':'stylesheet'});s.head.append(link)
- link['href']=rel+'/narrative-reading.css?v=1'
- script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=2';script['defer']=''
+ link['href']=rel+'/narrative-reading.css?v=2'
+ script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=3';script['defer']=''
  # This count belongs to the old descriptive cohort, not the latest 15-case audit.
  if s.body.get('data-narrative')=='stories':
   for t in s.find_all(string=lambda t:t and '9例中8例份额上升' in t and t.parent.name not in ['script','style']):t.replace_with(str(t).replace('9例中8例份额上升','原9案描述样本中8例份额上升'))
@@ -33,6 +34,8 @@ sources=[I,M/'原模型五方案评分.csv',M/'2028同口径重训情景榜.csv'
 (BASE/'最终提交材料/叙事交互设计与来源.md').write_text('''# 四任务叙事交互
 
 参考用户提供的23秒视频：场景入口、镜头推进、前后景层次和主动揭幕；不复制酒类、人物插画或商业品牌素材。使用现有奥运摄影及原来源署名。
+
+重点参考 Noomo 的镜头章节编排（https://noomoagency.com/insights/the-power-of-digital-storytelling-website）及 Rhumb 的 Rose Island 空间叙事（https://www.rhumb.co/work/rose-island）。每段配置独立奥运照片，以透视投影的前后景推进切换；这里是摄影平面空间合成，不冒称实景三维模型。
 
 参考 The Pudding 的问题驱动视觉叙事（https://pudding.cool/process/how-to-make-dope-shit-part-3/）和响应式叙事（https://pudding.cool/process/responsive-scrollytelling/），以及 Shorthand 的连续场景组织（https://shorthand.com/the-craft/an-introduction-to-scrollytelling/index.html）。借鉴叙事方法，不复制页面构图。
 

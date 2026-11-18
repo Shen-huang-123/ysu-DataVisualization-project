@@ -1,0 +1,21 @@
+{
+  "layers": [
+    {
+      "opacity": 0.648,
+      "transform": "translate3d(-3.2%, -0.8%, 144px) rotateY(2.8deg)",
+      "image": true
+    },
+    {
+      "opacity": 0.352,
+      "transform": "translate3d(4.8%, 1.2%, -216px) rotateY(-4.2deg)",
+      "image": true
+    },
+    {
+      "opacity": 0,
+      "transform": "translate3d(12.8%, 3.2%, -576px) rotateY(-11.2deg)",
+      "image": true
+    }
+  ],
+  "photographicPlanes": true,
+  "full3DModel": false
+}

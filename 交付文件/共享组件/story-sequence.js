@@ -40,8 +40,11 @@
  const body=el('div','sequence-body'),visual=el('figure','sequence-visual'),canvas=el('div','sequence-canvas');
  const caption=el('figcaption','sequence-source',data.source);visual.append(el('small','sequence-unit',data.unit),canvas,caption);
  const sourcePhoto=document.querySelector('.image-stage-photo,.story-photo');
- if(sourcePhoto){const photo=el('img','sequence-scene-photo');photo.src=sourcePhoto.currentSrc||sourcePhoto.src;photo.alt='';photo.loading='lazy';photo.decoding='async';visual.prepend(photo)}
- const proof=el('button','sequence-proof','展开证据');proof.type='button';proof.setAttribute('aria-expanded','false');proof.setAttribute('aria-controls','sequence-proof-'+kind);canvas.id='sequence-proof-'+kind;
+ const sceneFiles={audit:['growth.jpg','lens.jpg','sports.jpg'],panorama:['archive.jpg','growth.jpg','women.jpg'],stories:['dynasty.jpg','portrait.jpg','host.jpg'],future:['archive.jpg','la.jpg','museum.jpg']}[kind];
+ const sceneLayers=[];
+ if(sourcePhoto){const world=el('div','sequence-world');world.setAttribute('aria-hidden','true');sceneFiles.forEach((name,i)=>{const plane=el('div','sequence-plane'),photo=el('img','sequence-scene-photo');photo.src=new URL(name,sourcePhoto.src).href;photo.alt='';photo.decoding='async';photo.loading='lazy';plane.append(photo);world.append(plane);sceneLayers.push(plane)});visual.prepend(world)}
+
+ const proof=el('button','sequence-proof','展开证据');proof.type='button';proof.title='点击或短暂按住展开图表证据';proof.setAttribute('aria-expanded','false');proof.setAttribute('aria-controls','sequence-proof-'+kind);canvas.id='sequence-proof-'+kind;
  let holdTimer,held=false;const reveal=open=>{root.dataset.proof=String(open);proof.setAttribute('aria-expanded',String(open));proof.textContent=open?'收起证据':'展开证据'};
  proof.addEventListener('pointerdown',()=>{held=false;holdTimer=setTimeout(()=>{held=true;reveal(true)},240)});
  proof.addEventListener('pointerup',()=>clearTimeout(holdTimer));proof.addEventListener('pointercancel',()=>clearTimeout(holdTimer));proof.addEventListener('pointerleave',()=>clearTimeout(holdTimer));
@@ -94,13 +97,19 @@
   if(kind==='stories')return svg(`<path class="sequence-grid" d="M90 190H550"/>`+['原判断','反例','修正'].map((t,j)=>`<circle class="${j===i?'sequence-dot':'sequence-node'}" cx="${90+j*230}" cy="190" r="${j===i?11:6}"/><text x="${90+j*230}" y="240" text-anchor="middle">${t}</text>`).join('')+`<text class="sequence-diagram-note" x="320" y="105" text-anchor="middle">${i===1?'反例让解释停下来，再向前走':'阅读路径示意 · 不编码数据大小'}</text>`, '原判断、反例和修正的阅读路径示意，不是数据曲线');
   return svg(['历史','假设','区间','验证'].map((t,j)=>`<circle class="${j<=i||i===2?'sequence-dot':'sequence-node'}" cx="${80+j*160}" cy="185" r="${j===i?10:6}"/><text x="${80+j*160}" y="230" text-anchor="middle">${t}</text>`).join('')+`<path class="sequence-grid" d="M90 185H550"/><text class="sequence-diagram-note" x="320" y="105" text-anchor="middle">预测流程示意 · 不编码预测数值</text>`, '预测从历史、假设、区间走向现实验证的流程示意');
  }
- function show(i){if(i===active)return;active=i;const s=data.steps[i];current.textContent=`${String(i+1).padStart(2,'0')} / ${String(steps.length).padStart(2,'0')} · ${sceneNames[i]}`;canvas.replaceChildren(el('span','sequence-metric-label',s[2]),el('strong','sequence-metric',s[3]),el('p','sequence-metric-note',s[4]));const art=el('div','sequence-diagram');art.innerHTML=diagram(i);canvas.append(art);root.dataset.frame=i;buttons.forEach((a,j)=>j===i?a.setAttribute('aria-current','step'):a.removeAttribute('aria-current'));steps.forEach((a,j)=>a.classList.toggle('is-active',j===i));if(!matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.getAnimations().forEach(a=>a.cancel());canvas.animate([{opacity:.92,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:220,easing:'cubic-bezier(.2,.7,.2,1)'})}}
+ function show(i){if(i===active)return;active=i;const s=data.steps[i];
+ const credit=evidence.photos?.[sceneFiles[i]];caption.replaceChildren(document.createTextNode(data.source+(credit?` 配图：${credit.author} · ${credit.license}。 `:'')));
+ if(credit&&sourcePhoto){const license=el('a','','图片来源与许可 ↗');license.href=new URL('图片来源与许可.html',sourcePhoto.src).href;caption.append(license)}
+current.textContent=`${String(i+1).padStart(2,'0')} / ${String(steps.length).padStart(2,'0')} · ${sceneNames[i]}`;canvas.replaceChildren(el('span','sequence-metric-label',s[2]),el('strong','sequence-metric',s[3]),el('p','sequence-metric-note',s[4]));const art=el('div','sequence-diagram');art.innerHTML=diagram(i);canvas.append(art);root.dataset.frame=i;buttons.forEach((a,j)=>j===i?a.setAttribute('aria-current','step'):a.removeAttribute('aria-current'));steps.forEach((a,j)=>a.classList.toggle('is-active',j===i));if(!matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.getAnimations().forEach(a=>a.cancel());canvas.animate([{opacity:.92,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:220,easing:'cubic-bezier(.2,.7,.2,1)'})}}
  // On narrow screens each passage owns its chart: no sticky panel obscures text.
  steps.forEach((article,i)=>{const chart=el('div','sequence-inline-chart');chart.innerHTML=diagram(i);article.querySelector('.sequence-inline').append(chart)});
  const onward=el('div','sequence-onward');onward.append(el('p','',({audit:'现在，检查这些处理决定能否逐条复现。',panorama:'把刚才的观察，放进自己的筛选条件。',stories:'带着这条反例，进入十个专题的不同问题。',future:'先读最新核验，再决定探索哪一种情景。'})[kind]));
  const go=el('a','sequence-evidence-link','继续探索完整证据 →');go.href=data.steps[0][5];onward.append(go);root.append(onward);
  let scheduled=false;
- function measure(){scheduled=false;const focus=innerHeight*.52;let i=0;steps.forEach((s,j)=>{if(s.getBoundingClientRect().top<focus)i=j});const box=root.getBoundingClientRect(),span=Math.max(1,box.height-innerHeight),progress=Math.max(0,Math.min(1,-box.top/span));root.style.setProperty('--scene-depth',String(progress));show(i)}
+ function measure(){scheduled=false;const focus=innerHeight*.52;let i=0;steps.forEach((s,j)=>{if(s.getBoundingClientRect().top<focus)i=j});const box=root.getBoundingClientRect(),span=Math.max(1,box.height-innerHeight),progress=Math.max(0,Math.min(1,-box.top/span));root.style.setProperty('--scene-depth',String(progress));
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const position=Math.max(0,Math.min(2,(focus-steps[0].getBoundingClientRect().top)/Math.max(1,steps[0].getBoundingClientRect().height)-.5));
+ sceneLayers.forEach((plane,j)=>{const distance=j-position,fade=Math.max(0,1-Math.abs(distance));plane.style.opacity=String(reduced?(i===j?1:0):fade*fade*(3-2*fade));plane.style.transform=reduced?'none':`translate3d(${distance*8}%,${distance*2}%,${-distance*360}px) rotateY(${distance*-7}deg)`});show(i)}
  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(measure)}}
  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);addEventListener('pageshow',schedule);show(0);
  // Mobile and reduced-motion readers can explicitly choose a frame without a long pinned sequence.

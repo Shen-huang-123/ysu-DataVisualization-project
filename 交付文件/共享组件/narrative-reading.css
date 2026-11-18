@@ -102,3 +102,21 @@ body.narrative-module .sequence-proof{border-radius:50%!important}
 @media(max-width:700px),(max-height:550px){.sequence-scene-photo,.sequence-proof{display:none}.sequence-record-cell{fill:var(--nr-panel)}body.narrative-module .sequence-step:last-child{min-height:0}}
 @media(prefers-reduced-motion:reduce){.sequence-scene-photo{transform:none!important}.sequence-diagram,.sequence-step:before,.sequence-proof{transition:none!important}}
 @media print{body.narrative-module .sequence-visual{display:none}body.narrative-module .sequence-body{display:block}body.narrative-module .sequence-text{margin:0}body.narrative-module .sequence-step{min-height:0;width:100%;padding:24px 0;margin:0}.sequence-inline{display:grid!important}.sequence-inline-chart svg{max-height:220px}.sequence-onward{display:none}}
+
+/* Camera passage: each chapter owns a photographic plane in one shared space. */
+@media(min-width:701px) and (min-height:551px){
+ .sequence-world{position:absolute;inset:0;z-index:-3;perspective:1000px;overflow:hidden;pointer-events:none;background:#10222c}
+ .sequence-plane{position:absolute;inset:-8%;transform-origin:50% 50%;backface-visibility:hidden;opacity:0}
+ .sequence-plane:first-child{opacity:1}
+ .sequence-plane .sequence-scene-photo{z-index:auto;transform:none;object-position:center}
+ body.narrative-module .sequence-visual:before{background:linear-gradient(90deg,rgba(5,18,25,.86),rgba(5,18,25,.35) 48%,rgba(5,18,25,.72) 73%,rgba(5,18,25,.84))}
+ body.narrative-module .sequence-canvas{padding:24px 0;border-top:1px solid #a3b9b655}
+ body.narrative-module .sequence-metric{font-size:clamp(36px,3.5vw,60px)}
+ body.narrative-module .sequence-step{padding-top:70px!important;padding-bottom:70px}
+ body.narrative-module .sequence-step h3{max-width:17ch!important;font-size:clamp(28px,2.6vw,46px)!important;line-height:1.4!important}
+ body.narrative-module .sequence-step p{max-width:32ch!important}
+}
+@media(max-width:700px),(max-height:550px){.sequence-world{display:none}}
+@media(prefers-reduced-motion:reduce){.sequence-plane{transform:none!important}}
+
+body.narrative-module .sequence-source a{color:inherit;text-underline-offset:3px}
