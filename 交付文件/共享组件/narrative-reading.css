@@ -157,3 +157,8 @@ body.narrative-module .narrative-chapter .xz-kpis article{background:transparent
 @media(max-width:600px){body.ed-entry.narrative-module .rc-tabs{gap:20px;margin-block:24px 32px}body.ed-entry.narrative-module .rc-tabs button{font-size:14px!important}.rc-tabs button:before{margin-right:6px!important}body.ed-entry.narrative-module .research-closure [data-rc-panel] .rc-finding{font-size:26px!important}}
 @media(prefers-reduced-motion:reduce){html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button,html body.ed-entry.narrative-module[data-narrative] main :is(.rc-tabs,.narrative-choices,.xz-segment,.filters,.ex-tools,.actions)>button:after{transition:none!important}}
 
+
+/* Keep the proof control anchored; generic button hover must not replace centering. */
+html body.narrative-module .sequence-visual>button.sequence-proof,
+html body.narrative-module .sequence-visual>button.sequence-proof:is(:hover,:focus,:focus-visible,:active){transform:translateX(-50%)!important;translate:none!important;rotate:none!important;scale:none!important;transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease!important}
+@media(prefers-reduced-motion:reduce){html body.narrative-module .sequence-visual>button.sequence-proof{transition:none!important}}
