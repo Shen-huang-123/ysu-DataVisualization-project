@@ -1,5 +1,6 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
+import html,re
 root=Path(__file__).resolve().parents[2]
 p=root/'交付文件/任务二_百年全景/07_结论压力测试/结论压力测试.html'
 s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
@@ -25,6 +26,34 @@ if not s.select_one('.pressure-route'):
   a=s.new_tag('a',href=file);a.string=label;downloads.append(a)
  main.append(downloads)
 p.write_text(str(s),encoding='utf-8')
+# Render the controlled Markdown source as a browser-readable UTF-8 document.
+folder=p.parent
+method=folder/'结论压力测试_完整方法.html'
+source=(folder/'结论压力测试.md').read_text(encoding='utf-8-sig')
+def inline(text):
+ text=html.escape(text)
+ text=re.sub(r'`([^`]+)`',r'<code>\1</code>',text)
+ text=re.sub(r'\*\*([^*]+)\*\*',r'<strong>\1</strong>',text)
+ text=re.sub(r'!\[([^]]*)\]\(([^)]+)\)',r'<img alt="\1" src="\2" loading="lazy">',text)
+ return re.sub(r'\[([^]]+)\]\(([^)]+)\)',r'<a href="\2">\1</a>',text)
+blocks=[]
+for paragraph in re.split(r'\n\s*\n',source.strip()):
+ heading=re.match(r'^(#{1,6}) (.*)$',paragraph)
+ if heading:
+  level=len(heading[1]);blocks.append(f'<h{level}>'+inline(heading[2])+f'</h{level}>')
+ else:blocks.append('<p>'+inline(paragraph)+'</p>')
+method.write_text('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>结论压力测试｜完整方法与复现</title><style>.method-reading{max-width:84ch;margin:auto}.method-reading h2{margin-top:48px}.method-reading p{margin-block:20px}.method-reading img{display:block;width:100%;border-radius:10px}.method-reading code{font-size:.9em;overflow-wrap:anywhere}.method-actions{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:36px}.method-actions a{min-height:44px;display:inline-flex;align-items:center}</style></head><body><main><article class="method-reading"><nav class="method-actions" aria-label="方法材料"><a href="结论压力测试.html">← 返回结论压力测试</a><a href="结论压力测试.md" download>下载 Markdown 原文</a></nav>'+''.join(blocks)+'</article></main></body></html>',encoding='utf-8')
+# Route authored HTML method links to the reading page; retain explicit downloads.
+for page in (root/'交付文件').rglob('*.html'):
+ if '原始页面' in str(page) or page==method:continue
+ doc=BeautifulSoup(page.read_text(encoding='utf-8'),'html.parser');changed=False
+ for a in doc.select('a[href]'):
+  href=a['href']
+  if a.has_attr('download') or not href.endswith('结论压力测试.md'):continue
+  if (page.parent/href).resolve()==(folder/'结论压力测试.md').resolve():
+   a['href']=href[:-3]+'_完整方法.html';changed=True
+ if changed:page.write_text(str(doc),encoding='utf-8')
+
 
 # The supplementary-page theme is the final presentation pass.
 import runpy
