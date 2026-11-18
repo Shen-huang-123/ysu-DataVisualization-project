@@ -186,3 +186,14 @@ body.xz-dark .arena-environment:before{opacity:.32;filter:grayscale(.85) saturat
 .arena-environment:before{background-image:url('./arena-olympic-stadium.webp');background-position:70% 65%;background-size:cover;opacity:.3;filter:grayscale(.55) saturate(.45);mask-image:linear-gradient(90deg,transparent 16%,#000 58%),linear-gradient(#000 0%,#000 47%,transparent 94%);mask-composite:intersect}
 body.xz-dark .arena-environment:before{opacity:.32;filter:grayscale(.6) saturate(.4);mix-blend-mode:luminosity}
 @media(max-width:750px){.arena-environment:before{background-position:57% center;opacity:.23;mask-image:linear-gradient(#000,transparent 90%)}body.xz-dark .arena-environment:before{opacity:.27}}
+
+/* Editorial opening: a calm invitation beside the interactive exhibit. */
+html body:has(.arena-story) .olympic-model .model-copy{width:35%;max-width:540px;left:clamp(24px,6vw,100px);top:28%}
+html body:has(.arena-story) .olympic-model .model-copy>small{display:block;font-size:12px;line-height:1.5;letter-spacing:.18em;color:#8d703f;opacity:1;margin-bottom:26px;font-weight:500}
+html body:has(.arena-story) .olympic-model .model-copy h1{font-family:'Noto Serif SC','Songti SC','SimSun',serif!important;font-size:clamp(42px,4.1vw,72px)!important;font-weight:400!important;line-height:1.24!important;letter-spacing:-.045em!important;margin:0 0 30px!important;max-width:none;text-wrap:nowrap}
+.arena-title-line{display:block}.arena-title-invitation{opacity:.84}
+html body:has(.arena-story) .olympic-model .model-copy>p{font-size:15px!important;font-weight:400!important;line-height:1.85!important;letter-spacing:.015em;max-width:29ch;min-height:0;opacity:1;color:#415760!important;margin:0}
+html body.xz-dark:has(.arena-story) .olympic-model .model-copy>small{color:#d2bb8d}
+html body.xz-dark:has(.arena-story) .olympic-model .model-copy>p{color:#c3ced1!important}
+@media(max-width:750px){html body:has(.arena-story) .olympic-model .model-copy{left:7vw;top:94px;width:86%;max-width:none}html body:has(.arena-story) .olympic-model .model-copy h1{font-size:clamp(23px,5.4vw,34px)!important;line-height:1.35!important;letter-spacing:-.03em!important;margin:0!important}.arena-title-line{display:inline}.arena-title-invitation{margin-left:.25em}html body:has(.arena-story) .olympic-model .model-copy>small,html body:has(.arena-story) .olympic-model .model-copy>p{display:none}}
+@media(min-width:751px) and (max-height:740px){html body:has(.arena-story) .olympic-model .model-copy{top:24%}html body:has(.arena-story) .olympic-model .model-copy h1{font-size:clamp(38px,3.5vw,56px)!important;margin-bottom:22px!important}}

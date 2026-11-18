@@ -13,7 +13,7 @@
  function quiet(b){for(const [k,v] of [['background','transparent'],['box-shadow','none'],['border-radius','0']])b.style.setProperty(k,v,'important')}
  function previewTopic(i){document.dispatchEvent(new CustomEvent('arena:preview',{detail:i}));nav.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('is-preview',j===i))}
  nav.addEventListener('pointerover',e=>{const b=e.target.closest('[data-arena-topic]');if(b)previewTopic(Number(b.dataset.arenaTopic))});nav.addEventListener('pointerleave',()=>previewTopic(null));nav.addEventListener('focusin',e=>{const b=e.target.closest('[data-arena-topic]');if(b)previewTopic(Number(b.dataset.arenaTopic))});nav.addEventListener('focusout',e=>{if(!nav.contains(e.relatedTarget))previewTopic(null)});
- const copy=stage.querySelector('.model-copy');copy.querySelector('small').textContent='奥运实验室';copy.querySelector('h1').innerHTML='五个实验室，<br>从这里开始。';copy.querySelector('p').textContent='选择一间实验室，亲手探索奖牌、项目、王朝与预测。';
+ const copy=stage.querySelector('.model-copy');copy.querySelector('small').textContent='奥运实验室';copy.querySelector('h1').innerHTML='<span class="arena-title-line">五个实验室，</span><span class="arena-title-line arena-title-invitation">从这里开始。</span>';copy.querySelector('p').textContent='选择一间实验室，亲手探索奖牌、项目、王朝与预测。';
  let selected=null,opener=null,closeTimer;
  const echo=panel.querySelector('.arena-echo');const echoBack=echo.cloneNode(false);echoBack.classList.add('arena-echo-back');panel.insertBefore(echoBack,echo);
  const fragments=document.createElement('div');fragments.className='arena-fragments';fragments.setAttribute('aria-hidden','true');panel.append(fragments);
