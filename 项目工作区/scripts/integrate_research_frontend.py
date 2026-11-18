@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[2]
 D=ROOT/'交付文件'
 
 def table(df):
-    return df.to_html(index=False,border=0,classes='rc-table',float_format=lambda x:f'{x:.4f}')
+    return df.rename(columns={'Year':'年份'}).to_html(index=False,border=0,classes='rc-table',float_format=lambda x:f'{x:.4f}')
 
 def section(title,lead,body):
     return f'<section id="research-closure" class="research-closure" aria-labelledby="rc-title"><h2 id="rc-title">{title}</h2><p class="rc-lead">{lead}</p>{body}</section>'
