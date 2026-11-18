@@ -87,3 +87,7 @@ report+='## 结论处理\n\n- 历史逐队数值和精确名次：必须保留�
 report+='## 复算与下一批核查\n\n运行 `py 项目工作区/scripts/historical_uncertainty_sensitivity.py`。逐队表用于找到具体受影响代表团，逐奖牌差异清单用于继续查官方原件；输入哈希记录供复现。本轮结果是来源情景敏感性，不是所有可能改判的最坏界限。\n'
 (OUT/'未决证据影响报告.md').write_text(report,encoding='utf-8')
 print(json.dumps({'changed_medal_cells':len(changes),'changed_events':len(set((r['Year'],r['Event']) for r in changes)),'impacts':impacts},ensure_ascii=False,indent=2))
+
+# Refresh themed reading edition after source updates.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_uncertainty_reading.py")))

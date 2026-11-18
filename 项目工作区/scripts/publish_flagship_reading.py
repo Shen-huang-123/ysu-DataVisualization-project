@@ -66,6 +66,9 @@ s.head.append(s.new_tag('link',rel='stylesheet',href='../共享组件/flagship-r
 for a in s.select('#xz-nav .xz-links a'):
  a.attrs.pop('aria-current',None)
  if '任务三_专题深挖/统一中文入口/index.html' in a.get('href',''):a['aria-current']='page'
+for code in s.main.select('code'):
+ if code.get_text().endswith('未决证据影响报告.md'):
+  a=s.new_tag('a',href=code.get_text()[:-3]+'.html');a.string='阅读未决证据影响报告';code.replace_with(a)
 out.write_text(str(s),'utf8')
 for p in delivery.rglob('*.html'):
  if p==out:continue
