@@ -121,3 +121,7 @@ if s8_page.exists():
     text=text.replace('<footer',block+'<footer',1)
     s8_page.write_text(text,encoding='utf-8')
 print(json.dumps(summary,ensure_ascii=False,indent=2))
+
+# Restore S8 task-page presentation after generating content.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_women_topic_style.py")))

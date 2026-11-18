@@ -38,3 +38,7 @@ for rel,key,caption in PAGES:
     s=s.replace('</body>',JS+'</body>',1)
     file.write_text(s,encoding='utf-8')
 print('Added',len(PAGES),'credited photo scenes')
+
+# Restore S8 task-page presentation after generating content.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_women_topic_style.py")))

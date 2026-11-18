@@ -155,3 +155,7 @@ for t in topics:
     evidence_text='\n'.join(f'- **{k}**：{v}' for k,v in t.get('evidence',[]))
     (folder/'研究说明.md').write_text(f"# {t['code']} {t['title']}\n\n{t['intro']}\n\n## 发现\n\n{t['insight']}\n\n{evidence_text}\n\n## 方法\n\n{t['method']}\n\n## 局限\n\n{t['caveat']}\n\n数据由 `项目工作区/outputs/olympics_flagged.csv.gz` 生成。运行 `项目工作区/scripts/task3_ten_topics.py` 可复现本页。\n",encoding='utf-8')
 print('Built',len(topics),'additional topics')
+
+# Restore S8 task-page presentation after generating content.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_women_topic_style.py")))
