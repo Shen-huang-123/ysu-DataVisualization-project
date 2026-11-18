@@ -35,9 +35,9 @@ if True:
  s.body.append(js)
 # S8 uses a licensed medal-ceremony photograph, displayed uncropped.
 photo=hero.select_one('.women-hero-photo')
-photo['src']='../媒体/women-podium-2016.jpg'
-photo['alt']='2016年里约奥运会美国女子体操队在颁奖仪式上展示金牌'
+photo['src']='../媒体/women-wide-2016.jpg'
+photo['alt']='2016年里约奥运会女子体操团体获奖队伍合影'
 credit=hero.select_one('.women-credit')
 credit.clear()
-credit.append(BeautifulSoup('<figcaption><strong>里约2016 · 女子体操颁奖仪式 <small>· 场景配图，不作为统计证据</small></strong><a href="https://commons.wikimedia.org/wiki/File:Final_Five_Gymnastics_Olympics_Team_Final_Medal_Ceremony.jpeg" target="_blank" rel="noopener">Agência Brasil Fotografias · CC BY 2.0</a></figcaption>','html.parser'))
+credit.append(BeautifulSoup('<figcaption><strong>里约2016 · 女子体操颁奖仪式 <small>· 场景配图，不作为统计证据</small></strong><a href="https://commons.wikimedia.org/wiki/File:EUA_levam_ouro_na_gin%C3%A1stica_art%C3%ADstica_feminina;_Brasil_fica_em_8%C2%BA_lugar_(28264937223).jpg" target="_blank" rel="noopener">Agência Brasil Fotografias · CC BY 2.0</a></figcaption>','html.parser'))
 p.write_text(str(s),'utf8')
