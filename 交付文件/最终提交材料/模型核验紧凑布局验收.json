@@ -2,22 +2,22 @@
   {
     "width": 390,
     "titleTop": 104,
-    "chartTop": 1054.5,
-    "chartBottom": 1152.953125,
+    "chartTop": 1103.125,
+    "chartBottom": 1201.578125,
     "overflow": false
   },
   {
     "width": 1440,
     "titleTop": 116,
-    "chartTop": 497.6875,
-    "chartBottom": 721.03125,
+    "chartTop": 543.328125,
+    "chartBottom": 766.671875,
     "overflow": false
   },
   {
     "width": 2240,
     "titleTop": 116,
-    "chartTop": 457.765625,
-    "chartBottom": 747.765625,
+    "chartTop": 507.265625,
+    "chartBottom": 797.265625,
     "overflow": false
   }
 ]

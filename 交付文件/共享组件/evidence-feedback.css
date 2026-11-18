@@ -35,3 +35,21 @@ html body #model-discovery>[role=status]{grid-column:1;grid-row:6}
 html body #model-discovery>#model-chart{grid-column:2;grid-row:3/7}
 html body #model-discovery>.ef-note{grid-column:1/-1;margin:4px 0!important}
 }
+
+/* A distinct editorial title above the analytical controls. */
+html body.supplement-reading main.supp-content>#project-model-audit>h2{
+ font-family:'Noto Serif SC','Songti SC','SimSun',serif!important;
+ font-size:clamp(29px,3.15vw,50px)!important;font-weight:400!important;
+ line-height:1.45!important;letter-spacing:-.035em!important;
+ max-width:28em;text-wrap:balance;margin:0 0 22px!important;
+}
+html body.supplement-reading main.supp-content>#project-model-audit>h2:before{
+ content:'模型核验 / 2012—2024';display:block;
+ font:500 11px/1.6 'Microsoft YaHei',sans-serif;letter-spacing:.14em;
+ color:var(--sr-accent);margin-bottom:14px;
+}
+html body.supplement-reading main.supp-content>#project-model-audit #model-discovery>h2{
+ font-family:inherit!important;font-weight:500!important;
+ font-size:clamp(22px,1.9vw,30px)!important;letter-spacing:-.025em!important;line-height:1.5!important;
+}
+@media(max-width:600px){html body.supplement-reading main.supp-content>#project-model-audit>h2{font-size:29px!important;line-height:1.5!important;letter-spacing:-.025em!important}}
