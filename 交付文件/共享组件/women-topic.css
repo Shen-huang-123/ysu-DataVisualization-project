@@ -43,3 +43,16 @@ html body.women-topic .ex-tools button{background:transparent!important;color:va
 html body.women-topic .ex-route{background:transparent!important;border:0!important;border-block:1px solid var(--women-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--women-muted)!important;margin-bottom:32px}
 html body.women-topic .ex-route nav{background:transparent!important;color:var(--women-ink)!important;gap:16px;flex-wrap:wrap;padding:16px 0}
 html body.women-topic :is(.oa-world,.oa-landscape,.oa-light){display:none!important}
+/* Keep the whole archival photograph visible instead of cover-cropping. */
+html body.women-topic>header{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px 48px;align-content:center!important;align-items:center!important;background:var(--women-ink)!important;min-height:0!important;padding-block:40px!important;overflow:visible!important}
+html body.women-topic>header{background:#142129!important}
+html body.women-topic>header>:not(.women-hero-photo){grid-column:1;min-width:0}
+html body.women-topic>header h1{font-size:clamp(36px,4.4vw,64px)!important;margin:0!important}
+html body.women-topic>header .lead{margin:0!important;font-size:16px!important}
+html body.women-topic>header .women-credit{margin-top:8px}
+html body.women-topic>header>.women-hero-photo{display:block!important;grid-column:2;grid-row:1/5;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;position:static!important;transform:none!important;animation:none!important;filter:none!important;opacity:1!important}
+@media(max-width:800px){html body.women-topic>header{grid-template-columns:1fr!important;gap:20px!important;min-height:0!important}html body.women-topic>header>.women-hero-photo{grid-column:1;grid-row:auto;width:100%!important}html body.women-topic>header .women-credit{grid-row:5}}
+html body.women-topic>header{grid-template-rows:auto auto auto 1fr;align-items:start!important}
+html body.women-topic>header .women-credit{align-self:end}
+html body.women-topic>header .immersive-float-layer{display:none!important}
+@media(max-width:800px){html body.women-topic>header{grid-template-rows:auto!important}}

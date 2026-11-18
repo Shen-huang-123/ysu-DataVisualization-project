@@ -17,6 +17,9 @@ aside=s.select_one('.viz>aside')
 if aside:
  for node in aside.find_all(string=True):
   if '点击任意条形查看' in node:node.replace_with('选择届次，查看精确读数')
+if hero and not hero.select_one('.women-hero-photo'):
+ photo=s.new_tag('img',attrs={'class':'women-hero-photo','src':'../媒体/women.jpg','alt':'1900年巴黎奥运会女子网球比赛完整历史照片','loading':'eager'})
+ hero.append(photo)
 chart=s.select_one('.chart')
 if chart and not s.select_one('.women-axis'):
  axis=BeautifulSoup('<div class="women-axis" aria-hidden="true"><span>女性获奖行占比</span><span>0%</span><span>50%</span><span>100%</span></div>','html.parser')
