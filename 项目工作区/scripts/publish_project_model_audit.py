@@ -125,3 +125,7 @@ print('Published original model audit, latest 2028 core and final PDF/DOCX notic
 # Restore the current-first reading hierarchy after rebuilding policy blocks.
 import runpy
 runpy.run_path(str(ROOT/'项目工作区/scripts/organize_forecast_reading.py'),run_name='__main__')
+
+# Reapply reviewed web presentation after regenerating audit blocks.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_project_chart_style.py")))

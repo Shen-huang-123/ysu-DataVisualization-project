@@ -1,0 +1,42 @@
+[
+  {
+    "width": 390,
+    "dark": false,
+    "bars": 9,
+    "rows": "2012\t1.288\t1.357\t1.280\n2016\t1.366\t1.353\t1.303\n2024\t1.872\t1.950\t1.900",
+    "color": "rgb(26, 52, 59)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "dark": true,
+    "bars": 9,
+    "rows": "2012\t1.288\t1.357\t1.280\n2016\t1.366\t1.353\t1.303\n2024\t1.872\t1.950\t1.900",
+    "color": "rgb(232, 239, 236)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "bars": 9,
+    "rows": "2012\t1.288\t1.357\t1.280\n2016\t1.366\t1.353\t1.303\n2024\t1.872\t1.950\t1.900",
+    "color": "rgb(26, 52, 59)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "bars": 9,
+    "rows": "2012\t1.288\t1.357\t1.280\n2016\t1.366\t1.353\t1.303\n2024\t1.872\t1.950\t1.900",
+    "color": "rgb(232, 239, 236)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "overflow": false,
+    "errors": []
+  }
+]
