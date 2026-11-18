@@ -111,3 +111,6 @@ if depth.exists():
     text=text.replace('本页只挑选七个分析案例，不构成全部小代表团的公平排行榜。','原七个故事案例均不在预设最小四分位样本内；客观筛选的完整候选与排除理由见 S4 专题。')
     depth.write_text(text,encoding='utf-8')
 print(df[['专题','状态']].to_string(index=False))
+
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_stability_list.py")))

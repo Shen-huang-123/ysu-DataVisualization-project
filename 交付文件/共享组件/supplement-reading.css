@@ -53,3 +53,14 @@ html body.supplement-reading>p:has(>a[href="11_结论稳定性地图/index.html"
 html body.supplement-reading>p>a[href="11_结论稳定性地图/index.html"]{display:flex!important;justify-content:space-between;align-items:center;gap:24px;min-height:84px;padding:22px 0!important;background:transparent!important;border:0!important;border-radius:0!important;color:var(--sr-ink)!important;font:500 clamp(18px,2vw,26px)/1.5 'Microsoft YaHei',sans-serif!important;text-decoration:none!important;transform:none!important;transition:color .2s!important}
 html body.supplement-reading>p>a[href="11_结论稳定性地图/index.html"]:hover{color:var(--sr-accent)!important}
 html body.supplement-reading>p>a[href="11_结论稳定性地图/index.html"]:after{content:'↗';color:var(--sr-accent);font-size:26px;font-weight:400}
+
+/* Native stability index replaces the raster overview. */
+body.supplement-reading .stability-list{margin:36px 0 48px;padding:24px 0;border-block:1px solid var(--sr-line);background:transparent;color:var(--sr-ink)}
+body.supplement-reading .stability-list>h2{font-size:clamp(25px,2.6vw,38px)!important;margin:0 0 12px;line-height:1.4}
+body.supplement-reading .stability-list>p{font-size:14px;line-height:1.8;color:var(--sr-muted)}
+body.supplement-reading .stability-row{display:grid;grid-template-columns:56px minmax(0,1fr) 130px;align-items:center;gap:24px;min-height:72px;padding:18px 0;border-bottom:1px solid var(--sr-line);color:var(--sr-ink)!important;text-decoration:none!important;font-size:16px;line-height:1.7;background:transparent;transform:none!important}
+.stability-code{font-size:13px;font-weight:500;color:var(--sr-muted)}
+.stability-status{font-size:13px;display:flex;justify-content:space-between;gap:16px;color:#925045}
+body.xz-dark .stability-status{color:#e3a6a3}.uncertain .stability-status{color:#34677b}body.xz-dark .uncertain .stability-status{color:#9fc7df}
+body.supplement-reading .stability-row:hover{color:var(--sr-accent)!important;border-bottom-color:var(--sr-accent)}
+@media(max-width:600px){body.supplement-reading .stability-row{grid-template-columns:36px minmax(0,1fr);gap:8px 16px;font-size:15px}.stability-status{grid-column:2;justify-content:flex-start}.stability-code{align-self:start}}
