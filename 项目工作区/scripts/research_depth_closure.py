@@ -103,3 +103,7 @@ manifest = {'inputs': [{'path':str(p.relative_to(ROOT)), 'sha256':hashlib.sha256
 (out4/'复算输入与检查.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
 print(impact.to_string(index=False))
 print(scores.to_string(index=False))
+
+# Publish the ledger as a themed UTF-8 reading page after data generation.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_impact_ledger.py")))
