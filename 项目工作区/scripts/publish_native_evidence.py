@@ -8,7 +8,7 @@ ranks=pd.read_csv(d/'任务三_专题深挖/S2_口径的魔力/02_数据表/S2_2
 cohorts=pd.read_csv(d/'任务三_专题深挖/S3_冠军的保质期/11_历史来源敏感性/固定队列三方案复算.csv')
 scores=pd.read_csv(d/'任务四_开放创作/05_满分升级/15_原项目模型时序核验/原模型五方案评分.csv')
 def text(x,y,t,cl='',anchor='start'):return f'<text x="{x}" y="{y}" class="{cl}" text-anchor="{anchor}">{html.escape(str(t))}</text>'
-def svg(label,marks):return '<svg viewBox="0 0 960 400" role="img" aria-label="'+label+'"><title>'+label+'</title>'+''.join(marks)+'</svg>'
+def svg(label,marks):return '<svg viewBox="0 0 960 390" role="img" aria-label="'+label+'"><title>'+label+'</title>'+''.join(marks)+'</svg>'
 charts={}
 a=[]
 for x,label in [(310,'官方小项 · 名次'),(750,'运动员行 · 名次')]:a.append(text(x,35,label,'ne-muted','middle'))
@@ -45,6 +45,11 @@ for page in d.rglob('*.html'):
    figure=BeautifulSoup(f'<figure class="native-evidence" data-native-evidence="{name}"><h3>{title}</h3>{legend}<div class="ne-scroll" tabindex="0" aria-label="统计图，窄屏可横向查看">{graphic}</div><figcaption>{note} 原始数据与PDF下载见下方。</figcaption></figure>','html.parser').figure
    old.replace_with(figure);changed=True;records.append({'page':str(page.relative_to(d)),'chart':name})
  if changed:
+  for chart in s.select('.native-evidence'):
+   parent=chart.parent
+   if parent.name=='figure':
+    parent['class']=list(dict.fromkeys(parent.get('class',[])+['native-evidence-host']))
+    parent.attrs.pop('style',None)
   import os
   if not s.select_one('#native-evidence-theme'):s.head.append(s.new_tag('link',id='native-evidence-theme',rel='stylesheet',href=os.path.relpath(d/'共享组件/native-evidence.css',page.parent).replace('\\','/')))
   page.write_text(str(s),encoding='utf-8')

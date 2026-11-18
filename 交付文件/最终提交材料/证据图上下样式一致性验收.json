@@ -1,0 +1,64 @@
+[
+  {
+    "width": 390,
+    "upper": {
+      "x": 24,
+      "width": 600,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "16px",
+      "viewBox": "0 0 960 390"
+    },
+    "lower": {
+      "x": 24,
+      "width": 600,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "16px",
+      "viewBox": "0 0 960 390"
+    },
+    "upperText": {
+      "x": 36.546875,
+      "width": 7,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "15px",
+      "viewBox": null
+    },
+    "lowerText": {
+      "x": 36.546875,
+      "width": 7,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "15px",
+      "viewBox": null
+    }
+  },
+  {
+    "width": 1440,
+    "upper": {
+      "x": 86.390625,
+      "width": 1267.21875,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "16px",
+      "viewBox": "0 0 960 390"
+    },
+    "lower": {
+      "x": 86.390625,
+      "width": 1267.21875,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "16px",
+      "viewBox": "0 0 960 390"
+    },
+    "upperText": {
+      "x": 115.01923370361328,
+      "width": 10.999992370605469,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "15px",
+      "viewBox": null
+    },
+    "lowerText": {
+      "x": 115.01923370361328,
+      "width": 10.999992370605469,
+      "font": "\"Noto Sans SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+      "size": "15px",
+      "viewBox": null
+    }
+  }
+]
