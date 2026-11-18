@@ -1,0 +1,35 @@
+[
+  {
+    "width": 390,
+    "values": [
+      "0.983",
+      "0.982",
+      "0.991"
+    ],
+    "background": "rgba(0, 0, 0, 0)",
+    "columns": "320.406px",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "values": [
+      "0.983",
+      "0.982",
+      "0.991"
+    ],
+    "background": "rgba(0, 0, 0, 0)",
+    "columns": "369.406px 369.406px 369.406px",
+    "overflow": false
+  },
+  {
+    "width": 2480,
+    "values": [
+      "0.983",
+      "0.982",
+      "0.991"
+    ],
+    "background": "rgba(0, 0, 0, 0)",
+    "columns": "663.266px 663.266px 663.266px",
+    "overflow": false
+  }
+]
