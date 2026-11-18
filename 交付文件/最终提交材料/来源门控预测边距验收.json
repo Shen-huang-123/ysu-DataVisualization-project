@@ -1,0 +1,68 @@
+[
+  {
+    "viewport": 390,
+    "rects": [
+      {
+        "id": "project-reading-policy",
+        "x": 24,
+        "width": 342
+      },
+      {
+        "id": "forecast-same-unit",
+        "x": 24,
+        "width": 342
+      },
+      {
+        "id": "project-model-audit",
+        "x": 24,
+        "width": 342
+      }
+    ],
+    "aligned": true,
+    "overflow": false
+  },
+  {
+    "viewport": 1440,
+    "rects": [
+      {
+        "id": "project-reading-policy",
+        "x": 86.390625,
+        "width": 1267.21875
+      },
+      {
+        "id": "forecast-same-unit",
+        "x": 86.390625,
+        "width": 1267.21875
+      },
+      {
+        "id": "project-model-audit",
+        "x": 86.390625,
+        "width": 1267.21875
+      }
+    ],
+    "aligned": true,
+    "overflow": false
+  },
+  {
+    "viewport": 2240,
+    "rects": [
+      {
+        "id": "project-reading-policy",
+        "x": 100,
+        "width": 2040
+      },
+      {
+        "id": "forecast-same-unit",
+        "x": 100,
+        "width": 2040
+      },
+      {
+        "id": "project-model-audit",
+        "x": 100,
+        "width": 2040
+      }
+    ],
+    "aligned": true,
+    "overflow": false
+  }
+]

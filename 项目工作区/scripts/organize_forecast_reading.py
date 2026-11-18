@@ -12,6 +12,8 @@ SHARED=ROOT/'交付文件/共享组件'
 PAGES=['index.html','02_2028洛杉矶预测/index.html','03_数据新闻/index.html','05_满分升级/09_赛前条件回放/index.html','05_满分升级/11_官方来源门控预测/index.html','09_预测风暴实验室/index.html']
 for rel in PAGES:
     p=T4/rel;s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
+    if rel=='05_满分升级/11_官方来源门控预测/index.html':
+        s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['forecast-source-page']))
     previous=s.select_one('#legacy-scenarios')
     if previous:
         previous.find('summary',recursive=False).decompose()

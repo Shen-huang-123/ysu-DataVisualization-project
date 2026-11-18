@@ -8,3 +8,9 @@
 .forecast-archive .narrative-layout{min-width:0}
 .wrap>#project-reading-policy{width:100%;max-width:1100px}
 @media(max-width:600px){.forecast-archive{margin:1.25rem 0;padding:1rem 12px}.forecast-archive>summary{font-size:16px}}
+
+/* Standalone audit sections share the main task reading inset. */
+html body.forecast-source-page>section:is(#forecast-same-unit,#project-model-audit){
+ width:auto!important;max-width:none!important;min-width:0;box-sizing:border-box;
+ margin:36px clamp(24px,6vw,100px)!important;padding:32px 0!important;
+}
