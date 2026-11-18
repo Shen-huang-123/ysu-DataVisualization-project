@@ -162,3 +162,34 @@ body.narrative-module .narrative-chapter .xz-kpis article{background:transparent
 html body.narrative-module .sequence-visual>button.sequence-proof,
 html body.narrative-module .sequence-visual>button.sequence-proof:is(:hover,:focus,:focus-visible,:active){transform:translateX(-50%)!important;translate:none!important;rotate:none!important;scale:none!important;transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease!important}
 @media(prefers-reduced-motion:reduce){html body.narrative-module .sequence-visual>button.sequence-proof{transition:none!important}}
+
+/* Product-page restraint within the Olympic visual identity. */
+body.narrative-module{--nr-ink:#182f36;--nr-muted:#52686e;--nr-line:#6b80852e;--nr-accent:#88662e}
+body.narrative-module.xz-dark{--nr-ink:#f1f3ef;--nr-muted:#b0bfbe;--nr-line:#bac8c529;--nr-accent:#ddc393}
+body.narrative-module :is(.oa-light,.oa-landscape){display:none!important}
+body.narrative-module .narrative-opening{padding-block:clamp(48px,7vw,100px)!important}
+body.narrative-module .narrative-opening h2{font-size:clamp(30px,3.5vw,52px)!important;line-height:1.25!important;letter-spacing:-.03em}
+body.narrative-module .narrative-opening>p{font-size:18px!important;line-height:1.8!important}
+body.narrative-module .sequence-eyebrow{display:none}
+body.narrative-module .sequence-heading{margin-bottom:40px}
+body.narrative-module .sequence-heading h2{font-size:clamp(30px,3.6vw,54px)!important;line-height:1.25!important;max-width:26ch}
+body.narrative-module .sequence-step:before{display:none}
+body.narrative-module .sequence-step .sequence-index{margin-top:0;font-size:12px;letter-spacing:.04em}
+body.narrative-module .sequence-step h3{font-weight:600!important;letter-spacing:-.025em}
+body.narrative-module .sequence-canvas{border-top:0;padding-top:0}
+body.narrative-module .sequence-controls a{font-size:13px;font-weight:400}
+body.narrative-module .sequence-proof{width:68px;height:68px;font-size:12px;box-shadow:none!important}
+body.narrative-module .sequence-proof:hover{box-shadow:none!important;outline:0}
+body.narrative-module .sequence-proof:focus-visible{outline:2px solid #ebce96;outline-offset:5px}
+body.narrative-module .narrative-companion{background:var(--nr-panel);margin-bottom:clamp(32px,5vw,64px)}
+body.narrative-module .narrative-route a{font-size:13px!important;letter-spacing:0}
+body.narrative-module .narrative-chapter{padding-top:40px;padding-bottom:clamp(48px,6vw,88px);border-color:var(--nr-line)}
+body.ed-entry.narrative-module .research-closure{border-top:0}
+body.ed-entry.narrative-module .research-closure h2{font-size:clamp(30px,3.6vw,54px)!important}
+body.ed-entry.narrative-module .research-closure [data-rc-panel] .rc-finding{font-size:clamp(26px,2.5vw,40px)!important;letter-spacing:-.02em}
+body.narrative-module .narrative-handoff{border:0!important;padding-top:48px!important}
+@media(min-width:701px) and (min-height:551px){
+ body.narrative-module .sequence-visual:before{background:linear-gradient(90deg,rgba(5,18,25,.88),rgba(5,18,25,.35) 46%,rgba(5,18,25,.67) 72%,rgba(5,18,25,.83))}
+ body.narrative-module .sequence-step h3{font-size:clamp(28px,2.7vw,46px)!important}
+}
+@media(max-width:700px){body.narrative-module .sequence-proof{display:none}body.narrative-module .narrative-opening>p{font-size:16px!important}body.narrative-module .sequence-heading{margin-bottom:24px}}
