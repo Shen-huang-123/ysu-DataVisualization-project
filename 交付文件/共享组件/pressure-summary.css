@@ -1,0 +1,16 @@
+/* Recalculation summary follows the task narrative hierarchy. */
+html body.pressure-summary>main{padding-top:30px!important}
+html body.pressure-summary .method-actions{gap:24px;margin-bottom:34px;padding-bottom:18px;border-bottom:1px solid var(--sr-line)}
+html body.pressure-summary .method-actions a{font-size:13px;text-decoration:none!important}
+html body.pressure-summary .summary-kicker{color:var(--sr-accent)!important;font-size:12px!important;letter-spacing:.08em;margin:0 0 16px!important}
+html body.pressure-summary .method-reading h1{font-family:'Microsoft YaHei',system-ui,sans-serif!important;font-weight:700!important;font-size:clamp(36px,4.8vw,70px)!important;line-height:1.25!important;letter-spacing:-.045em;margin:0 0 22px!important}
+html body.pressure-summary .method-reading h2{font-size:clamp(24px,2.4vw,34px)!important;font-weight:600!important;line-height:1.4;margin:40px 0 20px!important}
+html body.pressure-summary .method-reading>p{font-size:15px!important;line-height:1.9}
+html body.pressure-summary .summary-checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;border-bottom:1px solid var(--sr-line);padding-bottom:28px}
+html body.pressure-summary .summary-checks>p{margin:0!important;padding-top:18px;border-top:1px solid var(--sr-line);font-size:14px!important;line-height:1.95;color:var(--sr-muted)!important}
+html body.pressure-summary .summary-checks strong{display:block;margin-bottom:12px;color:var(--sr-ink)!important;font-size:16px;font-weight:600}
+html body.pressure-summary table{font-size:14px!important}
+html body.pressure-summary table :is(th,td){padding:16px!important;text-align:left!important}
+html body.pressure-summary td{font-variant-numeric:tabular-nums;text-align:right!important;width:20%}
+html body.pressure-summary table code{font-size:11px!important;opacity:.65;background:transparent!important;padding:0}
+@media(max-width:750px){html body.pressure-summary .summary-checks{grid-template-columns:1fr;gap:20px}html body.pressure-summary .method-actions{gap:14px}html body.pressure-summary table :is(th,td){padding:12px 8px!important}}

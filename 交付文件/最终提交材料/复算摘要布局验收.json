@@ -1,0 +1,30 @@
+[
+  {
+    "width": 390,
+    "dark": true,
+    "checks": 3,
+    "metrics": 14,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "dark": false,
+    "checks": 3,
+    "metrics": 14,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "checks": 3,
+    "metrics": 14,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "checks": 3,
+    "metrics": 14,
+    "overflow": false
+  }
+]
