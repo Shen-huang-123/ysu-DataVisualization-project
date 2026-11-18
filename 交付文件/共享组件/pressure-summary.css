@@ -25,3 +25,12 @@ html body.pressure-summary .method-reading table code{display:inline-block;font-
 /* Compact opening below the fixed navigation; override the generic document gutter. */
 html body.supplement-reading.pressure-summary:not(.supp-existing-nav)>main{padding-top:12px!important}
 html body.pressure-summary .method-actions{margin-top:0!important;margin-bottom:24px;padding-bottom:12px}
+
+/* Slow ambient light stays behind reading content. */
+html body.pressure-summary{isolation:isolate}
+html body.pressure-summary::before,html body.pressure-summary::after{content:'';position:fixed;inset:-10%;z-index:-1;pointer-events:none;background-repeat:no-repeat;will-change:transform;transform-origin:center}
+html body.pressure-summary::before{background-image:radial-gradient(ellipse at 12% 30%,#579bb322,transparent 43%),radial-gradient(ellipse at 88% 65%,#bb985c18,transparent 42%);animation:summary-ambient-blue 24s ease-in-out infinite alternate}
+html body.pressure-summary::after{background-image:radial-gradient(ellipse at 72% 12%,#bca26815,transparent 36%),radial-gradient(ellipse at 35% 90%,#6ca9b318,transparent 40%);animation:summary-ambient-gold 32s ease-in-out infinite alternate}
+@keyframes summary-ambient-blue{from{transform:translate3d(-2%,-1%,0) scale(1)}to{transform:translate3d(3%,3%,0) scale(1.06)}}
+@keyframes summary-ambient-gold{from{transform:translate3d(2%,2%,0)}to{transform:translate3d(-3%,-3%,0)}}
+@media(prefers-reduced-motion:reduce){html body.pressure-summary::before,html body.pressure-summary::after{animation:none;will-change:auto}}
