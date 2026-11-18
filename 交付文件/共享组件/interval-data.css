@@ -1,0 +1,26 @@
+/* Full interval register, using the same quiet task-page canvas. */
+html body.supplement-reading.interval-data{background:radial-gradient(ellipse 70% 500px at 100% 0,#bba37114,transparent),#f4f4ef!important}
+html[data-supp-theme=dark] body.supplement-reading.interval-data,html body.interval-data.xz-dark{background:radial-gradient(ellipse 70% 500px at 100% 0,#bba3710d,transparent),#142129!important}
+html body.interval-data>main{padding-top:30px!important}
+html body.interval-data .method-actions{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:42px;padding-bottom:20px;border-bottom:1px solid var(--sr-line)}
+html body.interval-data .method-actions a{font-size:13px;text-decoration:none!important}
+html body.interval-data .interval-kicker{font-size:12px!important;letter-spacing:.1em;margin:0 0 18px!important;color:var(--sr-accent)!important}
+html body.interval-data .interval-reading h1{font-family:'Noto Serif SC','Songti SC','SimSun',serif!important;font-size:clamp(32px,4vw,58px)!important;line-height:1.4!important;letter-spacing:-.03em;font-weight:400!important;margin:0 0 24px!important}
+html body.interval-data .interval-reading>p:not(.interval-kicker){max-width:110ch;font-size:15px!important;line-height:1.95!important;margin:14px 0!important}
+html body.interval-data .interval-reading>p:nth-of-type(3){font-size:13px!important;color:var(--sr-muted)!important}
+html body.interval-data .interval-search{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:32px 0 0;padding:22px 0;border-block:1px solid var(--sr-line);font-size:13px;color:var(--sr-muted)}
+html body.interval-data .interval-search input{min-height:44px;width:300px;max-width:100%;padding:10px 14px;border:1px solid var(--sr-line);border-radius:10px;background:transparent;color:var(--sr-ink);font-size:14px;outline-offset:4px}
+html body.interval-data #interval-count{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--sr-accent)}
+html body.interval-data .supp-table{margin-top:0!important;border:0!important;border-radius:0!important;max-height:70vh;overflow:auto;background:transparent!important;scrollbar-width:thin;scrollbar-color:var(--sr-muted) transparent}
+html body.interval-data table{border-collapse:separate!important;border-spacing:0;min-width:1360px;font-size:14px!important}
+html body.interval-data :is(th,td){padding:17px 16px!important;line-height:1.6;font-variant-numeric:tabular-nums;border-bottom:1px solid var(--sr-line)!important;text-align:right!important;background:transparent!important}
+html body.interval-data th{position:sticky;top:0;z-index:3;background:var(--sr-paper)!important;color:var(--sr-muted)!important;font-size:12px!important;font-weight:500!important;white-space:normal!important;min-width:115px}
+html body.interval-data :is(th,td):first-child{position:sticky;left:0;z-index:2;background:var(--sr-paper)!important;text-align:left!important;min-width:140px;font-weight:500}
+html body.interval-data th:first-child{z-index:4}
+html body.interval-data :is(th,td):nth-child(2){text-align:left!important;color:var(--sr-muted)!important;font-size:12px}
+html body.interval-data tr:hover td{background:color-mix(in srgb,var(--sr-ink) 5%,var(--sr-paper))!important}
+html body.interval-data .gap-positive td:nth-child(8){color:#306b7c!important;font-weight:600}
+html body.interval-data .gap-negative td:nth-child(8){color:#99533e!important;font-weight:600}
+html body.interval-data.xz-dark .gap-positive td:nth-child(8){color:#a2ced7!important}
+html body.interval-data.xz-dark .gap-negative td:nth-child(8){color:#e4b09a!important}
+@media(max-width:650px){html body.interval-data .method-actions{margin-bottom:30px;gap:16px}html body.interval-data .interval-search{gap:12px}html body.interval-data .interval-search input{width:100%;order:3}html body.interval-data .supp-table{max-height:65vh}html body.interval-data :is(th,td){padding:14px 12px!important}html body.interval-data :is(th,td):first-child{min-width:112px}}

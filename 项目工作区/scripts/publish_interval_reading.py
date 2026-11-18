@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from html import escape
 import json,os
 root=Path(__file__).resolve().parents[2];folder=root/'交付文件/任务二_百年全景/09_课程方法可视分析';source=folder/'2024代表团性别结构_区间数据.json';out=source.with_suffix('.html');rows=json.loads(source.read_text('utf8'))
-template=root/'交付文件/任务一_数据体检/05_数据问题影响账本/数据问题影响账本.html';s=BeautifulSoup(template.read_text('utf8'),'html.parser');s.main.clear();s.body['class']=['supplement-reading'];s.title.string='2024代表团性别结构｜区间数据'
+template=root/'交付文件/任务一_数据体检/05_数据问题影响账本/数据问题影响账本.html';s=BeautifulSoup(template.read_text('utf8'),'html.parser');s.main.clear();s.body['class']=['supplement-reading','interval-data'];s.title.string='2024代表团性别结构｜区间数据'
 for n in s.select('[href],[src]'):
  for attr in ['href','src']:
   v=n.get(attr,'')
@@ -20,6 +20,9 @@ for r in rows:
 body+='</tbody></table></div></article>'
 s.main.append(BeautifulSoup(body,'html.parser'))
 style=s.new_tag('style');style.string='.interval-reading h1{font-family:SimSun,serif!important;font-weight:400!important;font-size:clamp(32px,4vw,58px)!important;line-height:1.4!important}.interval-reading p{max-width:110ch}.interval-kicker{font-size:12px;color:var(--sr-accent)!important}.interval-search{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:32px 0;font-size:14px}.interval-search input{background:transparent;color:var(--sr-ink);border:1px solid var(--sr-line);border-radius:10px;padding:12px;font:inherit;max-width:100%}.interval-reading table{min-width:1320px}.interval-reading td,.interval-reading th{white-space:nowrap;text-align:right!important;font-variant-numeric:tabular-nums}.interval-reading td:first-child,.interval-reading th:first-child{text-align:left!important}';s.head.append(style)
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/interval-data.css'))
+for tr in s.select('tbody tr'):
+ tr['class']=['gap-positive' if float(tr.find_all('td')[7].text)>=0 else 'gap-negative']
 script=s.new_tag('script');script.string="document.querySelector('#interval-search').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();let count=0;document.querySelectorAll('tbody tr').forEach(r=>{r.hidden=![r.cells[0].textContent,r.cells[1].textContent].some(v=>v.toLowerCase().includes(q));if(!r.hidden)count++});document.querySelector('#interval-count').textContent=count+' 个代表团'})";s.body.append(script);out.write_text(str(s),'utf8')
 p=folder/'index.html';doc=BeautifulSoup(p.read_text('utf8'),'html.parser')
 for a in doc.select('a[href]'):
