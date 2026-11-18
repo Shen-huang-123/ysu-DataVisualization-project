@@ -21,3 +21,9 @@ html body.score-audit .ex-route summary{padding:20px 0!important;font-size:14px!
 html body.score-audit .ex-route nav{padding:0 0 20px;display:flex;flex-wrap:wrap;gap:16px 32px}
 html body.score-audit .ex-route a,html body.score-audit .ex-tools button{font-size:13px!important;background:transparent!important;border-radius:0!important;color:var(--sa-muted)!important;box-shadow:none!important}
 @media(max-width:650px){html body.score-audit main .controls{gap:12px 24px}html body.score-audit .controls label{flex-basis:100%}html body.score-audit main .grid{gap:16px;grid-template-columns:1fr}html body.score-audit .grid .card{display:flex;align-items:center;justify-content:space-between;gap:20px}html body.score-audit .grid .metric{font-size:36px!important;margin:0}}
+
+/* Legacy dark rule contains three ID exclusions: override all three named actions explicitly. */
+html body.score-audit .controls :is(#template,#demo,#reset):not(#xz-theme):not(#xz-menu-button):not(#xz-top){background:transparent!important;background-image:none!important;color:var(--sa-ink)!important;border:0!important;border-bottom:1px solid var(--sa-line)!important;border-radius:0!important;box-shadow:none!important;transform:none!important;text-shadow:none!important}
+html body.score-audit .controls #demo:not(#xz-theme):not(#xz-menu-button):not(#xz-top){color:var(--sa-accent)!important;border-bottom-color:var(--sa-accent)!important}
+html body.score-audit .controls #reset:not(#xz-theme):not(#xz-menu-button):not(#xz-top){color:var(--sa-muted)!important}
+html body.score-audit .controls :is(#template,#demo,#reset):not(#xz-theme):not(#xz-menu-button):not(#xz-top):hover{color:var(--sa-accent)!important;border-bottom-color:var(--sa-accent)!important}
