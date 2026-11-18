@@ -47,3 +47,9 @@ html body.supplement-reading .topic .metric>span{color:var(--sr-muted)!important
 html body.supplement-reading .topic .metric>strong{color:var(--sr-accent)!important;font-family:inherit!important;font-weight:500!important;font-size:clamp(28px,2.8vw,46px)!important;line-height:1.35!important;letter-spacing:-.035em;font-variant-numeric:tabular-nums;margin:18px 0!important}
 html body.supplement-reading .topic .metric>small{color:var(--sr-muted)!important;font-size:13px!important;line-height:1.85!important;opacity:1!important;margin-top:auto}
 @media(max-width:760px){html body.supplement-reading .topic .metrics{gap:12px}html body.supplement-reading .topic .metrics>.metric{min-height:0;padding:20px 0!important}}
+
+/* A quiet closing link to the cross-topic evidence map. */
+html body.supplement-reading>p:has(>a[href="11_结论稳定性地图/index.html"]){max-width:none!important;margin:32px clamp(24px,6vw,100px) 56px!important;padding:0!important;border:0!important;border-block:1px solid var(--sr-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+html body.supplement-reading>p>a[href="11_结论稳定性地图/index.html"]{display:flex!important;justify-content:space-between;align-items:center;gap:24px;min-height:84px;padding:22px 0!important;background:transparent!important;border:0!important;border-radius:0!important;color:var(--sr-ink)!important;font:500 clamp(18px,2vw,26px)/1.5 'Microsoft YaHei',sans-serif!important;text-decoration:none!important;transform:none!important;transition:color .2s!important}
+html body.supplement-reading>p>a[href="11_结论稳定性地图/index.html"]:hover{color:var(--sr-accent)!important}
+html body.supplement-reading>p>a[href="11_结论稳定性地图/index.html"]:after{content:'↗';color:var(--sr-accent);font-size:26px;font-weight:400}
