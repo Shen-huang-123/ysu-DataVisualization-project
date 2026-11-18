@@ -15,3 +15,6 @@ if not s.find('section',id='robustness2024'):
  history.insert_before(block)
 P.write_text(str(s),encoding='utf-8')
 print(P)
+
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_s2_robustness_chart.py")))
