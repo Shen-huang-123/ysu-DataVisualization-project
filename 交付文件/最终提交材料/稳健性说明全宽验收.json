@@ -1,0 +1,23 @@
+[
+  {
+    "viewport": 390,
+    "textWidth": 331,
+    "chartWidth": 331,
+    "aligned": true,
+    "overflow": false
+  },
+  {
+    "viewport": 1440,
+    "textWidth": 1281,
+    "chartWidth": 1281,
+    "aligned": true,
+    "overflow": false
+  },
+  {
+    "viewport": 2480,
+    "textWidth": 2321,
+    "chartWidth": 2321,
+    "aligned": true,
+    "overflow": false
+  }
+]

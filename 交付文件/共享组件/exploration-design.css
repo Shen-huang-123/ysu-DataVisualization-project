@@ -58,3 +58,6 @@ html body:has(>#story)>#robustness2024 .title{color:var(--ink)!important;opacity
 .s2-robust-chart{overflow-x:auto;max-width:100%;color:var(--ink);padding:16px 0;border-block:1px solid var(--line)}
 .s2-robust-chart svg{display:block;width:100%;min-width:780px;height:auto;background:transparent}
 .s2-robust-chart svg text{fill:currentColor;font:14px 'Microsoft YaHei',sans-serif}
+
+/* The robustness introduction follows the full chart reading width. */
+html body:has(>#story)>#robustness2024>:is(.title,.lede){width:100%!important;max-width:none!important;margin-inline:0!important;box-sizing:border-box}
