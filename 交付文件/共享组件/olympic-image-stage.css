@@ -42,3 +42,8 @@ body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-
 @media(max-width:640px){body.photo-editorial header.photo-editorial-hero.image-stage button.image-stage-cinema{min-height:44px!important}}
 
 body.photo-editorial header.photo-editorial-hero .xz-hero-actions{opacity:1!important;transform:none!important;translate:none!important;animation:none!important}body.photo-editorial header.photo-editorial-hero .xz-hero-actions a{background-image:none!important;backdrop-filter:none!important}
+
+/* Nested report wrappers must not re-center the hero copy on wide displays. */
+body.photo-editorial header.photo-editorial-hero.image-stage>.wrap,
+body.photo-editorial header.photo-editorial-hero.image-stage>.container,
+body.photo-editorial header.photo-editorial-hero.image-stage>.inner{width:100%!important;max-width:none!important;min-width:0!important;margin-inline:0!important;padding-inline:0!important;align-self:stretch!important;box-sizing:border-box;text-align:left!important}
