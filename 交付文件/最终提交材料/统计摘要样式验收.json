@@ -1,0 +1,114 @@
+[
+  {
+    "width": 390,
+    "dark": false,
+    "columns": "151.5px 151.5px",
+    "overflow": false,
+    "cards": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "12",
+        "color": "rgb(24, 47, 54)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "76",
+        "color": "rgb(24, 47, 54)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "329",
+        "color": "rgb(24, 47, 54)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "2",
+        "color": "rgb(24, 47, 54)"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "dark": true,
+    "columns": "151.5px 151.5px",
+    "overflow": false,
+    "cards": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "12",
+        "color": "rgb(241, 243, 239)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "76",
+        "color": "rgb(241, 243, 239)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "329",
+        "color": "rgb(241, 243, 239)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "2",
+        "color": "rgb(241, 243, 239)"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "columns": "176.078px 176.078px 176.078px 176.094px",
+    "overflow": false,
+    "cards": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "12",
+        "color": "rgb(24, 47, 54)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "76",
+        "color": "rgb(24, 47, 54)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "329",
+        "color": "rgb(24, 47, 54)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "2",
+        "color": "rgb(24, 47, 54)"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "columns": "176.078px 176.078px 176.078px 176.094px",
+    "overflow": false,
+    "cards": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "12",
+        "color": "rgb(241, 243, 239)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "76",
+        "color": "rgb(241, 243, 239)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "329",
+        "color": "rgb(241, 243, 239)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "number": "2",
+        "color": "rgb(241, 243, 239)"
+      }
+    ]
+  }
+]
