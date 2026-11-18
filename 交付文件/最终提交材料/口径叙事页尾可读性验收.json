@@ -1,0 +1,34 @@
+[
+  {
+    "width": 390,
+    "dark": false,
+    "background": "rgba(0, 0, 0, 0)",
+    "title": "rgb(32, 59, 69)",
+    "credit": "rgb(73, 99, 107)",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "dark": true,
+    "background": "rgba(0, 0, 0, 0)",
+    "title": "rgb(237, 245, 239)",
+    "credit": "rgb(191, 206, 209)",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "background": "rgba(0, 0, 0, 0)",
+    "title": "rgb(32, 59, 69)",
+    "credit": "rgb(73, 99, 107)",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "background": "rgba(0, 0, 0, 0)",
+    "title": "rgb(237, 245, 239)",
+    "credit": "rgb(191, 206, 209)",
+    "overflow": false
+  }
+]
