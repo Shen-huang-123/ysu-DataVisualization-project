@@ -56,3 +56,6 @@ html body.women-topic>header{grid-template-rows:auto auto auto 1fr;align-items:s
 html body.women-topic>header .women-credit{align-self:end}
 html body.women-topic>header .immersive-float-layer{display:none!important}
 @media(max-width:800px){html body.women-topic>header{grid-template-rows:auto!important}}
+html body.women-topic>header{grid-template-columns:minmax(0,1fr) minmax(280px,.8fr)}
+html body.women-topic>header>.women-hero-photo{max-height:580px!important;width:100%!important;height:580px!important;object-fit:contain!important}
+@media(max-width:800px){html body.women-topic>header>.women-hero-photo{height:auto!important;max-height:none!important;max-width:420px!important;justify-self:center}}

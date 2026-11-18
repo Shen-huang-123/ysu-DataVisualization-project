@@ -33,4 +33,11 @@ if True:
  js=s.new_tag('script',id='women-topic-interaction')
  js.string="""(()=>{const bars=[...document.querySelectorAll('.bar')];bars.forEach(b=>b.addEventListener('click',()=>{bars.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const i=+b.dataset.i;const r=rows[i];document.querySelector('#detail').textContent=r.value.toFixed(1)+'% · 女性获奖记录 '+r.detail+' 行';}));window.addEventListener('load',()=>{const range=document.querySelector('.ex-stage input[type=range]');if(range){range.value=range.max;range.dispatchEvent(new Event('input',{bubbles:true}));}else bars.at(-1)?.click();});})();"""
  s.body.append(js)
+# S8 uses a licensed medal-ceremony photograph, displayed uncropped.
+photo=hero.select_one('.women-hero-photo')
+photo['src']='../媒体/women-podium-2016.jpg'
+photo['alt']='2016年里约奥运会美国女子体操队在颁奖仪式上展示金牌'
+credit=hero.select_one('.women-credit')
+credit.clear()
+credit.append(BeautifulSoup('<figcaption><strong>里约2016 · 女子体操颁奖仪式 <small>· 场景配图，不作为统计证据</small></strong><a href="https://commons.wikimedia.org/wiki/File:Final_Five_Gymnastics_Olympics_Team_Final_Medal_Ceremony.jpeg" target="_blank" rel="noopener">Agência Brasil Fotografias · CC BY 2.0</a></figcaption>','html.parser'))
 p.write_text(str(s),'utf8')
