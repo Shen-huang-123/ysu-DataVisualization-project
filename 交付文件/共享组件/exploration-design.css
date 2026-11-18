@@ -80,3 +80,21 @@ html body:has(>#story):has(>#robustness2024)>footer h2{color:#203b45!important;f
 html body:has(>#story):has(>#robustness2024)>footer p{color:#49636b!important;font-size:14px!important;line-height:1.9!important;opacity:1!important;margin:0!important}
 html body.xz-dark:has(>#story):has(>#robustness2024)>footer h2{color:#edf5ef!important}
 html body.xz-dark:has(>#story):has(>#robustness2024)>footer p{color:#bfced1!important}
+
+/* Quantified conclusion checks: full task-page canvas and native themed bars. */
+html body main.spec-fullwidth{box-sizing:border-box!important;width:100%!important;max-width:none!important;margin:0!important;padding:40px clamp(24px,6vw,100px) 80px!important}
+html body main.spec-fullwidth h1{max-width:none!important;font-size:clamp(38px,5vw,72px)!important;line-height:1.2!important;margin:24px 0 30px!important}
+html body main.spec-fullwidth>p{max-width:none!important}
+.spec-overview{margin:32px 0 40px;padding:28px 0;border-block:1px solid #80969d55;color:inherit;background:transparent}
+.spec-overview h2{font-size:clamp(24px,2.8vw,38px);line-height:1.4;margin:0 0 12px;color:inherit!important}
+.spec-overview p{font-size:14px;line-height:1.8;color:inherit;opacity:.8}
+.spec-bars{margin:32px 0}
+.spec-bar-row{display:grid;grid-template-columns:minmax(180px,24%) 1fr 50px;gap:24px;align-items:center;min-height:72px;font-size:16px}
+.spec-track{height:20px;background:#80969d18;border-radius:4px;overflow:hidden}
+.spec-fill{height:100%;background:#477f90;border-radius:4px}
+body.xz-dark .spec-fill{background:#8bb8c6}
+.spec-bar-row:nth-child(3) .spec-fill{background:#bd9d59}
+.spec-bar-row strong{font-variant-numeric:tabular-nums;color:inherit}
+@media(max-width:650px){.spec-bar-row{grid-template-columns:1fr 42px;gap:12px;padding:16px 0}.spec-bar-row>span{grid-column:1/-1}.spec-track{height:14px}.spec-bar-row strong{font-size:14px}}
+html body.xz-dark:has(main.spec-fullwidth){background:#142129!important;color:#edf5ef!important}
+html body.xz-dark main.spec-fullwidth :is(h1,h2,p,summary,strong,small){color:inherit!important}

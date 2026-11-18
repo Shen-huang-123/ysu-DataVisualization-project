@@ -1,0 +1,86 @@
+[
+  {
+    "width": 390,
+    "dark": true,
+    "overflow": false,
+    "mainWidth": 375,
+    "rows": 5,
+    "values": [
+      "4/4",
+      "2/2",
+      "2/4",
+      "0/3",
+      "4/4"
+    ]
+  },
+  {
+    "width": 390,
+    "dark": false,
+    "overflow": false,
+    "mainWidth": 375,
+    "rows": 5,
+    "values": [
+      "4/4",
+      "2/2",
+      "2/4",
+      "0/3",
+      "4/4"
+    ]
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "overflow": false,
+    "mainWidth": 1425,
+    "rows": 5,
+    "values": [
+      "4/4",
+      "2/2",
+      "2/4",
+      "0/3",
+      "4/4"
+    ]
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "overflow": false,
+    "mainWidth": 1425,
+    "rows": 5,
+    "values": [
+      "4/4",
+      "2/2",
+      "2/4",
+      "0/3",
+      "4/4"
+    ]
+  },
+  {
+    "width": 2480,
+    "dark": true,
+    "overflow": false,
+    "mainWidth": 2465,
+    "rows": 5,
+    "values": [
+      "4/4",
+      "2/2",
+      "2/4",
+      "0/3",
+      "4/4"
+    ]
+  },
+  {
+    "width": 2480,
+    "dark": false,
+    "overflow": false,
+    "mainWidth": 2465,
+    "rows": 5,
+    "values": [
+      "4/4",
+      "2/2",
+      "2/4",
+      "0/3",
+      "4/4"
+    ]
+  }
+]
