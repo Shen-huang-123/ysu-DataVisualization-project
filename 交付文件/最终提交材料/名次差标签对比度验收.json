@@ -1,0 +1,16 @@
+[
+  {
+    "dark": false,
+    "text": "-10",
+    "color": "rgb(33, 82, 79)",
+    "background": "rgb(225, 239, 237)",
+    "contrast": 7.452755764836429
+  },
+  {
+    "dark": true,
+    "text": "-10",
+    "color": "rgb(181, 238, 229)",
+    "background": "rgb(32, 62, 67)",
+    "contrast": 8.91393102055089
+  }
+]
