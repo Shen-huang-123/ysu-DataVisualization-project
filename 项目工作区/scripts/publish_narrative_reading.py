@@ -24,8 +24,8 @@ for name in paths:
  rel=Path(os.path.relpath(SHARED,p.parent)).as_posix()
  link=s.select_one('link[href*="narrative-reading.css"]')
  if not link:link=s.new_tag('link',attrs={'rel':'stylesheet'});s.head.append(link)
- link['href']=rel+'/narrative-reading.css?v=5'
- script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=4';script['defer']=''
+ link['href']=rel+'/narrative-reading.css?v=6'
+ script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=5';script['defer']=''
  closure=s.select_one('script[src*="research-closure.js"]')
  if closure:closure['src']=rel+'/research-closure.js?v=2'
  image_style=s.select_one('link[href*="olympic-image-stage.css"]')
@@ -56,7 +56,7 @@ sources=[I,M/'原模型五方案评分.csv',M/'2028同口径重训情景榜.csv'
 
 本轮控件与排版参考 IOC 品牌演进（https://www.olympics.com/ioc/news/evolving-the-look-of-the-olympic-brand）与 Gédéon 巴黎奥运动效项目（https://www.gedeon.com/projects/olympic-games-look-games）：采用清楚的文字层级、少量五色定位和章节节奏，不复制官方品牌资产。四入口同类主题、年份与视图按钮去除厚底圆角，选中细线、键盘焦点和切换反馈保留；反例面板桌面双栏、手机顺序展开。
 
-简约叙事精修参考 Apple iPhone 产品页（https://www.apple.com/iphone/）：突出真实影像、减少重复标签及边框、保留单一主要操作；不使用Apple标识或产品素材，不隐藏证据来源。原生控件、正文和下载继续保留。
+简约叙事精修参考 Apple iPhone 产品页（https://www.apple.com/iphone/）：突出真实影像、减少重复标签及边框、保留单一主要操作；不使用Apple标识或产品素材，不隐藏证据来源。原生控件、正文和下载继续保留。第二轮优化突出桌面影像与大读数，右侧文字增加局部对比，移动端每段附对应奥运照片与署名；章节衔接采用短句与轻量链接。
 
 复现：运行 `项目工作区/scripts/publish_narrative_reading.py` 同步四入口的数据与资源版本；共享JS/CSS直接维护。未重训或改动源CSV、正式报告数值。
 ''',encoding='utf-8')

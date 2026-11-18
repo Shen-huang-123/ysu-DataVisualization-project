@@ -53,6 +53,12 @@
  const steps=data.steps.map((s,i)=>{
   const article=el('article','sequence-step');article.id='sequence-'+kind+'-'+i;
   article.append(el('small','sequence-index',String(i+1).padStart(2,'0')),el('h3','',s[0]),el('p','',s[1]));
+  if(sourcePhoto){
+   const photoFigure=el('figure','sequence-mobile-photo'),img=el('img','');
+   img.src=new URL(sceneFiles[i],sourcePhoto.src).href;img.alt='';img.loading='lazy';img.decoding='async';
+   const credit=evidence.photos?.[sceneFiles[i]],creditLine=el('figcaption','',credit?`${credit.author} · ${credit.license}`:'奥运历史影像');
+   photoFigure.append(img,creditLine);article.append(photoFigure);
+  }
   const inline=el('div','sequence-inline');inline.append(el('small','',s[2]),el('strong','',s[3]),el('span','',s[4]));article.append(inline);
   const a=el('a','sequence-evidence-link','查看对应证据 ↗');a.href=s[5];article.append(a);text.append(article);return article;
  });
