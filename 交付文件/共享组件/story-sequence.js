@@ -44,11 +44,11 @@
  const sceneLayers=[];
  if(sourcePhoto){const world=el('div','sequence-world');world.setAttribute('aria-hidden','true');sceneFiles.forEach((name,i)=>{const plane=el('div','sequence-plane'),photo=el('img','sequence-scene-photo');photo.src=new URL(name,sourcePhoto.src).href;photo.alt='';photo.decoding='async';photo.loading='lazy';plane.append(photo);world.append(plane);sceneLayers.push(plane)});visual.prepend(world)}
 
- const proof=el('button','sequence-proof','展开证据');proof.type='button';proof.title='点击或短暂按住展开图表证据';proof.setAttribute('aria-expanded','false');proof.setAttribute('aria-controls','sequence-proof-'+kind);canvas.id='sequence-proof-'+kind;
- let holdTimer,held=false;const reveal=open=>{root.dataset.proof=String(open);proof.setAttribute('aria-expanded',String(open));proof.textContent=open?'收起证据':'展开证据'};
- proof.addEventListener('pointerdown',()=>{held=false;holdTimer=setTimeout(()=>{held=true;reveal(true)},240)});
- proof.addEventListener('pointerup',()=>clearTimeout(holdTimer));proof.addEventListener('pointercancel',()=>clearTimeout(holdTimer));proof.addEventListener('pointerleave',()=>clearTimeout(holdTimer));
- proof.addEventListener('click',()=>{if(!held)reveal(proof.getAttribute('aria-expanded')!=='true');held=false});visual.append(proof);reveal(false);
+ const proof=el('button','sequence-proof','展开证据');proof.type='button';proof.title='点击展开或收起图表证据';proof.setAttribute('aria-expanded','false');proof.setAttribute('aria-controls','sequence-proof-'+kind);
+ const reveal=open=>{root.dataset.proof=String(open);proof.setAttribute('aria-expanded',String(open));proof.textContent=open?'收起证据':'展开证据';const art=canvas.querySelector('.sequence-diagram');if(art)art.setAttribute('aria-hidden',String(!open))};
+ // One activation, one toggle. Native click also covers keyboard and touch;
+ // a press duration must never turn a close action back into an open action.
+ proof.addEventListener('click',()=>reveal(proof.getAttribute('aria-expanded')!=='true'));visual.append(proof);reveal(false);
  const text=el('div','sequence-text');
  const steps=data.steps.map((s,i)=>{
   const article=el('article','sequence-step');article.id='sequence-'+kind+'-'+i;
@@ -100,7 +100,7 @@
  function show(i){if(i===active)return;active=i;const s=data.steps[i];
  const credit=evidence.photos?.[sceneFiles[i]];caption.replaceChildren(document.createTextNode(data.source+(credit?` 配图：${credit.author} · ${credit.license}。 `:'')));
  if(credit&&sourcePhoto){const license=el('a','','图片来源与许可 ↗');license.href=new URL('图片来源与许可.html',sourcePhoto.src).href;caption.append(license)}
-current.textContent=`${String(i+1).padStart(2,'0')} / ${String(steps.length).padStart(2,'0')} · ${sceneNames[i]}`;canvas.replaceChildren(el('span','sequence-metric-label',s[2]),el('strong','sequence-metric',s[3]),el('p','sequence-metric-note',s[4]));const art=el('div','sequence-diagram');art.innerHTML=diagram(i);canvas.append(art);root.dataset.frame=i;buttons.forEach((a,j)=>j===i?a.setAttribute('aria-current','step'):a.removeAttribute('aria-current'));steps.forEach((a,j)=>a.classList.toggle('is-active',j===i));if(!matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.getAnimations().forEach(a=>a.cancel());canvas.animate([{opacity:.92,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:220,easing:'cubic-bezier(.2,.7,.2,1)'})}}
+current.textContent=`${String(i+1).padStart(2,'0')} / ${String(steps.length).padStart(2,'0')} · ${sceneNames[i]}`;canvas.replaceChildren(el('span','sequence-metric-label',s[2]),el('strong','sequence-metric',s[3]),el('p','sequence-metric-note',s[4]));const art=el('div','sequence-diagram');art.id='sequence-proof-'+kind;art.setAttribute('aria-hidden',String(root.dataset.proof!=='true'));art.innerHTML=diagram(i);canvas.append(art);root.dataset.frame=i;buttons.forEach((a,j)=>j===i?a.setAttribute('aria-current','step'):a.removeAttribute('aria-current'));steps.forEach((a,j)=>a.classList.toggle('is-active',j===i));if(!matchMedia('(prefers-reduced-motion: reduce)').matches){canvas.getAnimations().forEach(a=>a.cancel());canvas.animate([{opacity:.92,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:220,easing:'cubic-bezier(.2,.7,.2,1)'})}}
  // On narrow screens each passage owns its chart: no sticky panel obscures text.
  steps.forEach((article,i)=>{const chart=el('div','sequence-inline-chart');chart.innerHTML=diagram(i);article.querySelector('.sequence-inline').append(chart)});
  const onward=el('div','sequence-onward');onward.append(el('p','',({audit:'现在，检查这些处理决定能否逐条复现。',panorama:'把刚才的观察，放进自己的筛选条件。',stories:'带着这条反例，进入十个专题的不同问题。',future:'先读最新核验，再决定探索哪一种情景。'})[kind]));

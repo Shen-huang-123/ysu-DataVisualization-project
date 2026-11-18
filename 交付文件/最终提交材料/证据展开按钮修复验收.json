@@ -1,0 +1,90 @@
+[
+  {
+    "page": "任务一_数据体检/index.html",
+    "touch": false,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  },
+  {
+    "page": "任务二_百年全景/05_交互总览/index.html",
+    "touch": false,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  },
+  {
+    "page": "任务三_专题深挖/统一中文入口/index.html",
+    "touch": false,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  },
+  {
+    "page": "任务四_开放创作/index.html",
+    "touch": false,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  },
+  {
+    "page": "任务一_数据体检/index.html",
+    "touch": true,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  },
+  {
+    "page": "任务二_百年全景/05_交互总览/index.html",
+    "touch": true,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  },
+  {
+    "page": "任务三_专题深挖/统一中文入口/index.html",
+    "touch": true,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  },
+  {
+    "page": "任务四_开放创作/index.html",
+    "touch": true,
+    "slowClick": true,
+    "rapidRepeat": true,
+    "keyboard": true,
+    "cancel": true,
+    "sceneChange": true,
+    "aria": true,
+    "errors": []
+  }
+]

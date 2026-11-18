@@ -25,7 +25,7 @@ for name in paths:
  link=s.select_one('link[href*="narrative-reading.css"]')
  if not link:link=s.new_tag('link',attrs={'rel':'stylesheet'});s.head.append(link)
  link['href']=rel+'/narrative-reading.css?v=3'
- script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=3';script['defer']=''
+ script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=4';script['defer']=''
  closure=s.select_one('script[src*="research-closure.js"]')
  if closure:closure['src']=rel+'/research-closure.js?v=2'
  # This count belongs to the old descriptive cohort, not the latest 15-case audit.
@@ -48,7 +48,7 @@ sources=[I,M/'原模型五方案评分.csv',M/'2028同口径重训情景榜.csv'
 - 任务三：113项原判断 → 同队列换来源 → 排除后50项区间跨零，区分来源与样本影响。
 - 任务四：同单位回放误差 → 2028中性基准与条件情景 → 明示未完成验证。不将旧区间用于新基准。
 
-桌面使用摄影背景与证据前景的连续场景，点击或短暂按住展开证据；键盘同样可点击按钮。手机将每段与各自图表顺序排列，减少动态效果时关闭推进和揭幕动画。各任务原有图表、筛选、下载和深度页面保留。无脚本可继续读取原分析正文。
+桌面使用摄影背景与证据前景的连续场景，点击展开或收起证据；键盘同样可点击按钮。手机将每段与各自图表顺序排列，减少动态效果时关闭推进和揭幕动画。各任务原有图表、筛选、下载和深度页面保留。无脚本可继续读取原分析正文。
 
 本轮控件与排版参考 IOC 品牌演进（https://www.olympics.com/ioc/news/evolving-the-look-of-the-olympic-brand）与 Gédéon 巴黎奥运动效项目（https://www.gedeon.com/projects/olympic-games-look-games）：采用清楚的文字层级、少量五色定位和章节节奏，不复制官方品牌资产。四入口同类主题、年份与视图按钮去除厚底圆角，选中细线、键盘焦点和切换反馈保留；反例面板桌面双栏、手机顺序展开。
 
