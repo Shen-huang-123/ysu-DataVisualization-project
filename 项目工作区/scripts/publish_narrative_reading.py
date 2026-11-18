@@ -28,6 +28,10 @@ for name in paths:
  script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=4';script['defer']=''
  closure=s.select_one('script[src*="research-closure.js"]')
  if closure:closure['src']=rel+'/research-closure.js?v=2'
+ image_style=s.select_one('link[href*="olympic-image-stage.css"]')
+ if image_style:image_style['href']=rel+'/olympic-image-stage.css?v=9'
+ hero_motion=s.select_one('#hero-motion-script')
+ if hero_motion and hero_motion.string:hero_motion.string=str(hero_motion.string).replace(',.xz-hero-actions','')
  # This count belongs to the old descriptive cohort, not the latest 15-case audit.
  if s.body.get('data-narrative')=='stories':
   for t in s.find_all(string=lambda t:t and '9例中8例份额上升' in t and t.parent.name not in ['script','style']):t.replace_with(str(t).replace('9例中8例份额上升','原9案描述样本中8例份额上升'))

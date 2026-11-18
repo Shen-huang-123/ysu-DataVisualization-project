@@ -1,0 +1,10 @@
+{
+  "frames": 101,
+  "stable": true,
+  "style": {
+    "opacity": "1",
+    "transform": "none",
+    "color": "rgb(255, 255, 255)",
+    "background": "rgba(0, 0, 0, 0)"
+  }
+}
