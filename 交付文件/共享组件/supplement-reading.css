@@ -39,3 +39,11 @@ html body.supplement-reading #xz-menu#xz-menu :is(h2,a){color:var(--sr-ink)!impo
 body.supplement-reading .top{position:static;background:transparent;box-shadow:none;border:0;justify-content:flex-end;padding:12px clamp(24px,6vw,100px);color:var(--sr-muted)}
 body.supplement-reading .top .brand{display:none}
 body.supplement-reading .top .download{color:var(--sr-accent);border:0;border-radius:0;padding:8px 0}
+
+/* Topic evidence metrics share the reading surface in both themes. */
+html body.supplement-reading .topic .metrics{gap:clamp(24px,3vw,48px);margin:32px 0 40px}
+html body.supplement-reading .topic .metrics>.metric{background:transparent!important;background-image:none!important;border:0!important;border-top:1px solid var(--sr-line)!important;border-radius:0!important;box-shadow:none!important;padding:24px 0!important;min-height:180px;color:var(--sr-ink)!important;transform:none!important}
+html body.supplement-reading .topic .metric>span{color:var(--sr-muted)!important;font-size:14px;line-height:1.6}
+html body.supplement-reading .topic .metric>strong{color:var(--sr-accent)!important;font-family:inherit!important;font-weight:500!important;font-size:clamp(28px,2.8vw,46px)!important;line-height:1.35!important;letter-spacing:-.035em;font-variant-numeric:tabular-nums;margin:18px 0!important}
+html body.supplement-reading .topic .metric>small{color:var(--sr-muted)!important;font-size:13px!important;line-height:1.85!important;opacity:1!important;margin-top:auto}
+@media(max-width:760px){html body.supplement-reading .topic .metrics{gap:12px}html body.supplement-reading .topic .metrics>.metric{min-height:0;padding:20px 0!important}}
