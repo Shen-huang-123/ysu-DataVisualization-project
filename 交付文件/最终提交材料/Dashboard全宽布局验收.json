@@ -1,0 +1,26 @@
+[
+  {
+    "viewport": 390,
+    "mainX": 0,
+    "mainWidth": 375,
+    "overflow": false,
+    "rows": 20,
+    "padding": "24px"
+  },
+  {
+    "viewport": 1440,
+    "mainX": 0,
+    "mainWidth": 1425,
+    "overflow": false,
+    "rows": 20,
+    "padding": "86.4px"
+  },
+  {
+    "viewport": 2240,
+    "mainX": 0,
+    "mainWidth": 2225,
+    "overflow": false,
+    "rows": 20,
+    "padding": "100px"
+  }
+]
