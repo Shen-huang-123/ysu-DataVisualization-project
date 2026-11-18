@@ -69,3 +69,7 @@ path.write_text(shell('2028预测赛后验收单','任务四 · 预先注册的�
 print(json.dumps({'lens_nocs':len(lens),'dynasty_streaks':len(dyn_data),'forecast_nocs':len(forecast_data),'demo_rows':len(demo)},ensure_ascii=False))
 
 
+
+# Keep the post-event acceptance controls aligned with task-page styling.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_score_audit_style.py")))

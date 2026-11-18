@@ -1,0 +1,23 @@
+/* Same quiet type and open surfaces as the task narratives. */
+body.score-audit{--sa-ink:#19363c;--sa-muted:#566e72;--sa-line:#758b8b35;--sa-accent:#88662e;--sa-surface:#19363c07}
+body.score-audit.xz-dark{--sa-ink:#edf2ef;--sa-muted:#adbfbe;--sa-line:#b6c9c52c;--sa-accent:#ddc393;--sa-surface:#edf2ef06}
+html body.score-audit main .controls{display:flex!important;flex-wrap:wrap;align-items:end;gap:16px 28px;background:transparent!important;border:0!important;border-block:1px solid var(--sa-line)!important;border-radius:0!important;padding:28px 0!important;margin:32px 0 20px!important;box-shadow:none!important}
+html body.score-audit .controls label{flex:1 1 330px;min-width:0;display:grid;gap:12px;font-size:13px;font-weight:400;color:var(--sa-muted)}
+html body.score-audit #file{width:100%;min-width:0;max-width:100%;box-sizing:border-box;font:400 14px/1.6 'Microsoft YaHei',sans-serif;color:var(--sa-muted)!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--sa-line)!important;border-radius:0!important;padding:10px 0!important;box-shadow:none!important}
+html body.score-audit #file::file-selector-button{font:500 14px/1.5 'Microsoft YaHei',sans-serif;color:var(--sa-ink);background:var(--sa-surface);border:1px solid var(--sa-line);border-radius:8px;padding:10px 16px;margin-right:14px;cursor:pointer}
+html body.score-audit .controls button{font:500 14px/1.5 'Microsoft YaHei',sans-serif!important;min-height:44px;padding:11px 0!important;border:0!important;border-bottom:1px solid var(--sa-line)!important;border-radius:0!important;background:transparent!important;color:var(--sa-ink)!important;box-shadow:none!important;transform:none!important;cursor:pointer;transition:color .18s,border-color .18s!important;white-space:normal}
+html body.score-audit .controls #demo{color:var(--sa-accent)!important;border-bottom-color:var(--sa-accent)!important}
+html body.score-audit .controls #reset{color:var(--sa-muted)!important}
+html body.score-audit .controls button:hover{border-bottom-color:var(--sa-ink)!important;color:var(--sa-accent)!important;transform:none!important}
+html body.score-audit :is(button,input,summary):focus-visible{outline:2px solid var(--sa-accent)!important;outline-offset:5px}
+html body.score-audit #status{max-width:none!important;background:transparent!important;border:0!important;border-left:2px solid var(--sa-accent)!important;border-radius:0!important;color:var(--sa-muted)!important;padding:4px 0 4px 18px!important;margin:24px 0 36px!important;font-size:14px!important;font-weight:400!important;line-height:1.9!important;box-shadow:none!important}
+html body.score-audit main .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin:32px 0 48px}
+html body.score-audit main :is(.grid,.cards2)>.card{background:transparent!important;border:0!important;border-top:1px solid var(--sa-line)!important;border-radius:0!important;box-shadow:none!important;padding:24px 0!important;min-width:0;transform:none!important}
+html body.score-audit .grid .card>span{font-size:14px;font-weight:400;color:var(--sa-muted)}
+html body.score-audit .grid .metric{display:block;font:500 clamp(36px,4vw,58px)/1.25 'Microsoft YaHei',sans-serif!important;letter-spacing:-.04em;color:var(--sa-ink)!important;margin-top:28px;font-variant-numeric:tabular-nums}
+html body.score-audit .cards2 h3{font-size:22px;font-weight:500;color:var(--sa-ink)}
+html body.score-audit .ex-route{background:transparent!important;border:0!important;border-block:1px solid var(--sa-line)!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin-block:32px!important}
+html body.score-audit .ex-route summary{padding:20px 0!important;font-size:14px!important;font-weight:500!important;color:var(--sa-muted)!important;background:transparent!important;transform:none!important}
+html body.score-audit .ex-route nav{padding:0 0 20px;display:flex;flex-wrap:wrap;gap:16px 32px}
+html body.score-audit .ex-route a,html body.score-audit .ex-tools button{font-size:13px!important;background:transparent!important;border-radius:0!important;color:var(--sa-muted)!important;box-shadow:none!important}
+@media(max-width:650px){html body.score-audit main .controls{gap:12px 24px}html body.score-audit .controls label{flex-basis:100%}html body.score-audit main .grid{gap:16px;grid-template-columns:1fr}html body.score-audit .grid .card{display:flex;align-items:center;justify-content:space-between;gap:20px}html body.score-audit .grid .metric{font-size:36px!important;margin:0}}
