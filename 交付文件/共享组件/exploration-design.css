@@ -39,3 +39,16 @@ html body .ex-route :is(button,a):focus-visible{outline:2px solid var(--route-ac
 /* Rank difference badges must retain text contrast in both themes. */
 html body .xz-delta{background:#e1efed!important;color:#21524f!important;border:1px solid #a9c8c2!important;border-radius:7px!important;padding:4px 10px!important;font-size:14px!important;font-weight:700!important;line-height:1.5!important;font-variant-numeric:tabular-nums;opacity:1!important;box-shadow:none!important}
 html body.xz-dark .xz-delta,html.xz-dark-preload body .xz-delta{background:#203e43!important;color:#b5eee5!important;border-color:#537d7b!important}
+
+/* S2 scrollytelling: quiet exhibition lighting behind evidence. */
+html body:has(>#story):has(>#robustness2024){background:#f2f3ef!important;--s2-surface:#f2f3ef}
+html body.xz-dark:has(>#story):has(>#robustness2024){background:#101e27!important;--s2-surface:#101e27}
+html body:has(>#story):has(>#robustness2024):before{background:none!important;box-shadow:none!important}
+html body:has(>#story):has(>#robustness2024) .oa-world{background:radial-gradient(ellipse 65% 60% at 100% 5%,#668c9b12,transparent 80%)!important}
+html body:has(>#story):has(>#robustness2024) .oa-world :is(.oa-landscape,.oa-light){display:none!important}
+html body:has(>#story):has(>#robustness2024)>header.hero{position:relative;isolation:isolate;background:radial-gradient(ellipse 70% 100% at 100% 30%,#7496a21a,transparent 80%)!important}
+html body.xz-dark:has(>#story):has(>#robustness2024)>header.hero{background:radial-gradient(ellipse 60% 85% at 100% 25%,#72a4b41a,transparent 80%)!important}
+html body:has(>#story):has(>#robustness2024)>header.hero:after{display:none!important}
+html body:has(>#story):has(>#robustness2024)>section{background:transparent!important;box-shadow:none!important}
+html body:has(>#story):has(>#robustness2024) .triptych .lens{background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;border:0!important;border-radius:0!important;border-top:1px solid var(--line)!important}
+html body:has(>#story):has(>#robustness2024) .viz{background:var(--s2-surface)!important;box-shadow:none!important;backdrop-filter:none!important;border-radius:0!important}

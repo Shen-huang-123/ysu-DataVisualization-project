@@ -1,0 +1,30 @@
+[
+  {
+    "width": 390,
+    "dark": false,
+    "background": "rgb(242, 243, 239)",
+    "overflow": false,
+    "buttons": 3
+  },
+  {
+    "width": 390,
+    "dark": true,
+    "background": "rgb(16, 30, 39)",
+    "overflow": false,
+    "buttons": 3
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "background": "rgb(242, 243, 239)",
+    "overflow": false,
+    "buttons": 3
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "background": "rgb(16, 30, 39)",
+    "overflow": false,
+    "buttons": 3
+  }
+]
