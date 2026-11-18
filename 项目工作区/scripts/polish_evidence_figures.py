@@ -90,3 +90,7 @@ tmp=p.with_suffix('.figures.tmp.pdf');doc.save(tmp,garbage=4,deflate=True);doc.c
 print('Published three evidence figures and refreshed three formal-report images.')
 import runpy
 runpy.run_path(str(ROOT/'项目工作区/scripts/build_evidence_feedback.py'),run_name='__main__')
+
+# Native evidence charts are the final web-only presentation pass.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_native_evidence.py")))

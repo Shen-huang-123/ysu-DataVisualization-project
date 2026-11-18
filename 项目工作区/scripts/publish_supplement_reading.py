@@ -41,3 +41,7 @@ print('Unified',len(selected),'authored supplementary pages')
 # Apply chart surfaces last so Markdown and evidence embeds share the active theme.
 import runpy
 runpy.run_path(str(Path(__file__).with_name("publish_chart_surfaces.py")))
+
+# Native evidence charts are the final web-only presentation pass.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_native_evidence.py")))
