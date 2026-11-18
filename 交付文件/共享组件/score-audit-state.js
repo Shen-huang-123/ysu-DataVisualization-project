@@ -1,0 +1,1 @@
+(()=>{const button=document.getElementById('demo'),status=document.getElementById('status');if(!button||!status)return;const update=()=>button.setAttribute('aria-pressed',String(status.textContent.includes('当前为2024历史回测演示')));new MutationObserver(update).observe(status,{childList:true,characterData:true,subtree:true});update()})();
