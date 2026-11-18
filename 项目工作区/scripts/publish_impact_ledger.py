@@ -32,6 +32,11 @@ while i<len(lines):
  blocks.append(f'<h{len(m[1])}>{inline(m[2])}</h{len(m[1])}>' if m else '<p>'+inline(line)+'</p>');i+=1
 content='<article class="method-reading"><nav class="method-actions"><a href="../index.html#research-closure">← 返回数据体检</a><a href="数据问题影响账本.md" download>下载 Markdown 原文</a><a href="问题影响实测.csv" download>下载影响实测 CSV</a></nav>'+''.join(blocks)+'</article>'
 s.main.append(BeautifulSoup(content,'html.parser'))
+s.body['class']=s.body.get('class',[])+['impact-ledger']
+h=s.main.h1;h.string='清洗决定，究竟改变了什么？'
+eyebrow=s.new_tag('p',attrs={'class':'ledger-eyebrow'});eyebrow.string='数据体检 / 数据问题影响账本';h.insert_before(eyebrow)
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/impact-ledger.css'))
+
 for a in s.select('#xz-nav .xz-links a'):
  a.attrs.pop('aria-current',None)
  if '任务一_数据体检/index.html' in a.get('href',''):a['aria-current']='page'

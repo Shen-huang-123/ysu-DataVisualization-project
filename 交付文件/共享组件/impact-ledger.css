@@ -1,0 +1,21 @@
+/* Impact ledger: quiet editorial canvas, aligned with the task pages. */
+html body.supplement-reading.impact-ledger{background:radial-gradient(ellipse 65% 420px at 95% 0,#d6bc8520,transparent 85%),radial-gradient(ellipse 70% 500px at 0 15%,#72a8bc10,transparent 85%),#f4f4ef!important}
+html[data-supp-theme=dark] body.supplement-reading.impact-ledger,html body.supplement-reading.impact-ledger.xz-dark{background:radial-gradient(ellipse 65% 480px at 95% 0,#c6ad7e0d,transparent 85%),radial-gradient(ellipse 70% 600px at 0 10%,#6697b015,transparent 85%),#142129!important}
+html body.impact-ledger>main{padding-top:30px!important}
+html body.impact-ledger .method-actions{gap:24px;margin-bottom:46px;padding-bottom:20px;border-bottom:1px solid var(--sr-line)}
+html body.impact-ledger .method-actions a{font-size:13px;text-decoration:none!important;min-height:36px}
+html body.impact-ledger .ledger-eyebrow{font-size:12px!important;letter-spacing:.1em;color:var(--sr-accent)!important;margin:0 0 16px!important}
+html body.impact-ledger .method-reading h1{font-family:'Noto Serif SC','Songti SC','SimSun',serif!important;font-size:clamp(32px,4vw,62px)!important;line-height:1.4!important;font-weight:400!important;letter-spacing:-.035em!important;margin:0 0 26px!important;max-width:none!important}
+html body.impact-ledger .method-reading h1+p{font-size:16px!important;line-height:1.95;max-width:100ch;margin-bottom:38px!important}
+html body.impact-ledger .supp-table{border:0!important;border-radius:0!important;background:transparent!important}
+html body.impact-ledger table{table-layout:fixed;font-size:15px!important;background:transparent!important}
+html body.impact-ledger :is(th,td){padding:18px 16px!important;text-align:right!important;line-height:1.75;font-variant-numeric:tabular-nums}
+html body.impact-ledger :is(th,td):nth-child(1){width:26%;text-align:left!important}
+html body.impact-ledger :is(th,td):nth-child(2){width:25%;text-align:left!important}
+html body.impact-ledger th{font-size:12px!important;font-weight:500!important;color:var(--sr-muted)!important;background:color-mix(in srgb,var(--sr-ink) 3%,transparent)!important}
+html body.impact-ledger td:last-child{color:var(--sr-accent)!important}
+html body.impact-ledger tbody tr:nth-child(5) td{border-top:2px solid var(--sr-line)!important}
+html body.impact-ledger .method-reading h2{font-size:clamp(24px,2.6vw,34px)!important;font-weight:500!important;line-height:1.5;margin-top:56px!important;padding-top:28px;border-top:1px solid var(--sr-line)}
+html body.impact-ledger .method-reading li{margin:14px 0;font-size:16px}
+@media(max-width:650px){html body.impact-ledger .method-actions{gap:12px;margin-bottom:28px;flex-wrap:wrap}html body.impact-ledger .method-actions a{font-size:12px}html body.impact-ledger table{min-width:740px}html body.impact-ledger :is(th,td){padding:14px 12px!important}html body.impact-ledger .method-reading h1+p{font-size:15px!important}}
+html body.impact-ledger .method-actions{border-image:linear-gradient(90deg,#6b9db466 0 20%,#c7ad7166 20% 40%,#c9d1cd55 40% 60%,#75a58c66 60% 80%,#bc7d8966 80%) 1}
