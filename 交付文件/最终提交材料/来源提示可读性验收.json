@@ -1,0 +1,50 @@
+[
+  {
+    "path": "index.html",
+    "dark": false,
+    "background": "rgba(0, 0, 0, 0)",
+    "text": "rgb(64, 91, 98)",
+    "title": "rgb(32, 61, 69)",
+    "link": "05_满分升级/11_官方来源门控预测/index.html"
+  },
+  {
+    "path": "index.html",
+    "dark": true,
+    "background": "rgb(25, 56, 60)",
+    "text": "rgb(195, 208, 210)",
+    "title": "rgb(240, 244, 242)",
+    "link": "05_满分升级/11_官方来源门控预测/index.html"
+  },
+  {
+    "path": "01_交互式Dashboard/index.html",
+    "dark": false,
+    "background": "rgba(0, 0, 0, 0)",
+    "text": "rgb(64, 91, 98)",
+    "title": "rgb(32, 61, 69)",
+    "link": "../05_满分升级/11_官方来源门控预测/index.html"
+  },
+  {
+    "path": "01_交互式Dashboard/index.html",
+    "dark": true,
+    "background": "rgba(0, 0, 0, 0)",
+    "text": "rgb(195, 208, 210)",
+    "title": "rgb(240, 244, 242)",
+    "link": "../05_满分升级/11_官方来源门控预测/index.html"
+  },
+  {
+    "path": "02_2028洛杉矶预测/index.html",
+    "dark": false,
+    "background": "rgba(0, 0, 0, 0)",
+    "text": "rgb(64, 91, 98)",
+    "title": "rgb(32, 61, 69)",
+    "link": "../05_满分升级/11_官方来源门控预测/index.html"
+  },
+  {
+    "path": "02_2028洛杉矶预测/index.html",
+    "dark": true,
+    "background": "rgba(0, 0, 0, 0)",
+    "text": "rgb(195, 208, 210)",
+    "title": "rgb(240, 244, 242)",
+    "link": "../05_满分升级/11_官方来源门控预测/index.html"
+  }
+]
