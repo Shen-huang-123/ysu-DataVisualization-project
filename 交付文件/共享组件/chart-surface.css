@@ -1,0 +1,5 @@
+/* Presentation only: retain original downloadable chart assets and all marks. */
+img.chart-surface{display:block;max-width:100%;height:auto;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;mix-blend-mode:multiply}
+html[data-supp-theme=dark] img.chart-surface,body.xz-dark img.chart-surface{filter:invert(1) hue-rotate(180deg) contrast(1.12);mix-blend-mode:screen}
+@media print{html img.chart-surface,html body.xz-dark img.chart-surface{filter:none!important;mix-blend-mode:normal!important}}
+

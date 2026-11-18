@@ -18,7 +18,7 @@ body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity
 @keyframes ox-title-in{from{opacity:0;transform:translate3d(0,26px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
 @keyframes ox-copy-in{from{opacity:0;transform:translate3d(0,15px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
 @media(prefers-reduced-motion:reduce){body.ox-flow h1,body.ox-flow :is(header,.hero,main) h1 + p,body.ox-flow :is(header,.hero,main) h1 + .lead,body.ox-flow :is(header,.hero,main) h1 + .导语,body.ox-flow .ox-stage-line{animation:none!important}body.ox-flow .ox-reveal,body.ox-flow.ox-depart,body.ox-flow a[href],body.ox-flow :is(button,select,input[type=range]){opacity:1!important;transform:none!important;transition:none!important}}
-</style><link href="../../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../../共享组件/supplement-reading.js?v=1"></script></head><body class="supplement-reading"><nav aria-label="作品导航" class="supp-nav"><a href="../../../作品总入口/index.html">晓 · 奥运数据观察</a><div><a href="../../../任务一_数据体检/index.html">数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../统一中文入口/index.html">专题深挖</a><a href="../../../任务四_开放创作/index.html">洛杉矶2028</a><button aria-pressed="false" data-supp-theme="" type="button">深色模式</button></div></nav><nav class="top"><a class="brand" href="../../../作品总入口/index.html"><span class="mark">晓</span><span>奥运数据观察 · 文档阅读版</span></a><a class="download" download="S2_口径的魔力_高分版.md" href="S2_%E5%8F%A3%E5%BE%84%E7%9A%84%E9%AD%94%E5%8A%9B_%E9%AB%98%E5%88%86%E7%89%88.md">下载 Markdown 原件 ↓</a></nav><header class="head"><small>RESEARCH NOTE / 浏览器阅读版</small><h1>S2_口径的魔力_高分版</h1></header><div class="layout"><main class="article"><h1>S2 口径的魔力：奖牌榜究竟在奖励什么？</h1>
+</style><link href="../../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../../共享组件/supplement-reading.js?v=1"></script><link href="../../../共享组件/chart-surface.css" id="chart-surface-theme" rel="stylesheet"/></head><body class="supplement-reading"><nav aria-label="作品导航" class="supp-nav"><a href="../../../作品总入口/index.html">晓 · 奥运数据观察</a><div><a href="../../../任务一_数据体检/index.html">数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../统一中文入口/index.html">专题深挖</a><a href="../../../任务四_开放创作/index.html">洛杉矶2028</a><button aria-pressed="false" data-supp-theme="" type="button">深色模式</button></div></nav><nav class="top"><a class="brand" href="../../../作品总入口/index.html"><span class="mark">晓</span><span>奥运数据观察 · 文档阅读版</span></a><a class="download" download="S2_口径的魔力_高分版.md" href="S2_%E5%8F%A3%E5%BE%84%E7%9A%84%E9%AD%94%E5%8A%9B_%E9%AB%98%E5%88%86%E7%89%88.md">下载 Markdown 原件 ↓</a></nav><header class="head"><small>RESEARCH NOTE / 浏览器阅读版</small><h1>S2_口径的魔力_高分版</h1></header><div class="layout"><main class="article"><h1>S2 口径的魔力：奖牌榜究竟在奖励什么？</h1>
 <blockquote>
 <p>团队：晓组织｜燕山大学｜张子涵（60%）、陈旭（40%）<br/>
 分析对象：2024巴黎奥运会；官方329小项口径与运动员获奖记录口径。</p>
@@ -29,20 +29,20 @@ body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity
 <p>官方小项口径回答“一个代表团赢下多少竞赛单元”。例如一支曲棍球队夺冠，不论报名和获奖成员多少，都在官方榜上贡献一枚金牌。运动员行口径回答“产生多少获奖者记录”：同一支队伍的每名获奖成员都会形成一条金牌记录。前者强调竞技项目结果，后者强调奖牌覆盖到多少运动员。离开研究问题讨论哪一种“更公平”没有意义；真正需要防止的是把其中一种口径的数值冒充另一种。</p>
 <p>本专题的官方口径不再使用早期草稿中的二手网页，而是直接使用任务一整理的2024官方329小项获奖结果。金、银、铜获奖国家代码按 <code>|</code> 拆分，从而保留柔道、拳击等项目的双铜牌以及一例并列银牌。运动员行口径来自任务一归一数据，保留经审计的原始重复候选。两种榜单均按金、银、铜依次排序，并排除不参与正式代表团排名的AIN，以避免把“排名规则变化”和“统计单位变化”混为一谈。</p>
 <h2>2. 同一届奥运，奖牌榜发生结构性重排</h2>
-<p><img alt="双口径排名重排" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E5%8F%8C%E5%8F%A3%E5%BE%84%E6%8E%92%E5%90%8D%E9%87%8D%E6%8E%92.png"/></p>
+<p><img alt="双口径排名重排" class="chart-surface" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E5%8F%8C%E5%8F%A3%E5%BE%84%E6%8E%92%E5%90%8D%E9%87%8D%E6%8E%92.png"/></p>
 <p>美国与中国在两种口径中仍居前两位，但相同名次掩盖了不同的内部结构：两国官方金牌同为40枚，美国依靠银牌优势在完整官方榜位列第1，中国第2；转换为运动员行后，美国有131条金牌记录，中国为71条。荷兰从官方第6升至行口径第3，西班牙从第15跃升至第5；相反，日本由第3降至第9，乌兹别克斯坦由第13降至第19。丹麦虽然官方榜仅第29，但凭17条金牌记录升至行口径第14。换言之，行口径会系统性奖励多人项目表现突出的代表团，而更偏个人项目的代表团相对后移。</p>
 <p><strong>方法说明。</strong> 官方榜使用2024官方329小项结果，运动员榜使用2024运动员获奖记录；两者均按金、银、铜依次排序，排除AIN。坡度图左侧选取官方榜前15名，右侧保留这些代表团在行口径完整榜中的实际名次，不把跌出前15者截断。</p>
 <h2>3. 为什么重排：多人获奖结构改变了计数权重</h2>
-<p><img alt="多人项目与金牌行膨胀" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E5%A4%9A%E4%BA%BA%E9%A1%B9%E7%9B%AE%E4%B8%8E%E9%87%91%E7%89%8C%E8%A1%8C%E8%86%A8%E8%83%80.png"/></p>
+<p><img alt="多人项目与金牌行膨胀" class="chart-surface" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E5%A4%9A%E4%BA%BA%E9%A1%B9%E7%9B%AE%E4%B8%8E%E9%87%91%E7%89%8C%E8%A1%8C%E8%86%A8%E8%83%80.png"/></p>
 <p>为描述多人获奖结构，本专题定义“多人获奖组”：在同一 <code>NOC–Event–Medal</code> 组合下出现两条以上运动员记录。对63个至少获得一枚官方金牌且原始表存在金牌记录的代表团，计算多人获奖组贡献的金牌记录占比，以及“运动员金牌记录数 ÷ 官方金牌数”的膨胀倍数。两者的Spearman相关系数为0.973。两项指标共用金牌行数作为构造元素，因此这一高相关是结构描述，不是独立验证；p值不作为机制成立的额外证据。</p>
 <p>西班牙5枚官方金牌对应40条金牌记录，倍率为8.0，其中97.5%的金牌记录来自多人获奖组；荷兰15枚官方金牌对应67条记录，倍率4.47，多人组占91.0%；美国40枚金牌对应131条记录，倍率3.28，多人组占80.9%。中国40枚金牌对应71条记录，倍率1.78，多人组占69.0%。两种计数的差异来自获奖组人数和项目组合，不能解释为“参加团体项目必然提升竞技实力”。是否由单一运动大类驱动，另用2024逐大类剔除试验检验。</p>
 <p><strong>方法说明。</strong> 横轴是多人获奖组金牌记录占全部金牌记录的比例；纵轴是每枚官方金牌对应的运动员金牌记录数；点面积与官方金牌数近似相关。相关检验使用Spearman秩相关，以降低极端倍率和非线性关系的影响。</p>
 <h2>4. 同样是40金，美中讲述的是两种冠军结构</h2>
-<p><img alt="金牌数量与获奖者规模" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E9%87%91%E7%89%8C%E6%95%B0%E9%87%8F%E4%B8%8E%E8%8E%B7%E5%A5%96%E8%80%85%E8%A7%84%E6%A8%A1.png"/></p>
+<p><img alt="金牌数量与获奖者规模" class="chart-surface" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E9%87%91%E7%89%8C%E6%95%B0%E9%87%8F%E4%B8%8E%E8%8E%B7%E5%A5%96%E8%80%85%E8%A7%84%E6%A8%A1.png"/></p>
 <p>官方口径下美国和中国都是40金，但美国的运动员金牌记录接近中国的1.85倍。这不能解释为美国“真正有131枚金牌”，而意味着美国的冠军更多分布在接力、团体和多人艇等会同时产生多名获奖者的项目中。中国则在跳水、射击、举重、乒乓球等个人或较小团队项目上具有更高权重。西班牙、丹麦、塞尔维亚、挪威等代表团的官方金牌不多，却因为足球、手球、水球、曲棍球或多人项目形成较高的运动员记录倍率。</p>
 <p>右侧倍率榜也揭示了为什么不能把“金牌行 ÷ 官方金牌”直接叫作平均队伍人数：同一代表团的金牌组合同时包含个人、双人、接力和完整团队；原始名单还可能包括替补、并列和数据记录差异。它只能被准确称为“每枚官方金牌对应的运动员金牌记录数”。</p>
 <h2>5. 项目结构决定谁被放大</h2>
-<p><img alt="代表团金牌记录项目结构" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E4%BB%A3%E8%A1%A8%E5%9B%A2%E9%87%91%E7%89%8C%E8%AE%B0%E5%BD%95%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png"/></p>
+<p><img alt="代表团金牌记录项目结构" class="chart-surface" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E4%BB%A3%E8%A1%A8%E5%9B%A2%E9%87%91%E7%89%8C%E8%AE%B0%E5%BD%95%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png"/></p>
 <p>项目热力图提供了机制层面的证据。荷兰67条金牌记录中，曲棍球贡献35条、赛艇11条；西班牙的足球贡献22条、水球贡献13条；法国在柔道、橄榄球和排球形成大量记录；美国在田径、游泳、篮球和赛艇中产生大规模获奖者记录。相反，中国的记录结构更分散，单一完整大团队项目对总数的放大作用较弱。因此，行口径并不是简单地“偏爱体育强国”，而是偏爱那些在多人项目上夺冠的代表团。</p>
 <p><strong>方法说明。</strong> 热力图统计各体育大类的运动员金牌记录数，不是官方金牌数。列出2024年金牌记录规模和官方排名具有代表性的八个代表团，并展示合计记录最多的12个体育大类。</p>
 <h2>6. 公平性讨论：三种合理答案</h2>
@@ -62,13 +62,13 @@ body.ox-flow.ox-depart{opacity:.68;transform:translateY(-5px);transition:opacity
 </ul>
 <h1>升级结论：三口径与证据独立的2024稳健性检验</h1>
 <p>在官方小项口径和运动员行口径之间，本研究新增“团队内均分口径”：对同一 <code>NOC–Event–Medal</code> 获奖组，每名运动员获得 <code>1/组内人数</code> 的奖牌份额，因此每个获奖组总和严格为1。它保留运动员记录，同时避免团队人数机械放大奖牌。</p>
-<p><img alt="三口径排名路径" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E4%B8%89%E5%8F%A3%E5%BE%84%E6%8E%92%E5%90%8D%E8%B7%AF%E5%BE%84.png"/></p>
+<p><img alt="三口径排名路径" class="chart-surface" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E4%B8%89%E5%8F%A3%E5%BE%84%E6%8E%92%E5%90%8D%E8%B7%AF%E5%BE%84.png"/></p>
 <p>为了让核心结论不依赖尚未逐项核实的历史奖牌，本研究只用2024年<strong>官方329小项结果</strong>和同届运动员获奖记录做一次敏感性检验：每次剔除一个运动大类，重新计算两套完整榜单，共进行35次。完整数据的两榜 Kendall τ 为 <strong>0.931</strong>；35次剔除后为 <strong>0.908—0.938</strong>，均保留榜单差异。官方前20名代表团的平均绝对名次差，在完整数据中为 <strong>3.45位</strong>，剔除试验范围为 <strong>2.75—4.55位</strong>。</p>
-<p><img alt="2024逐大类剔除稳健性" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_2024%E9%80%90%E5%A4%A7%E7%B1%BB%E5%89%94%E9%99%A4%E7%A8%B3%E5%81%A5%E6%80%A7.png"/></p>
+<p><img alt="2024逐大类剔除稳健性" class="chart-surface" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_2024%E9%80%90%E5%A4%A7%E7%B1%BB%E5%89%94%E9%99%A4%E7%A8%B3%E5%81%A5%E6%80%A7.png"/></p>
 <p>西班牙、荷兰在35次试验中始终因行口径上升，日本、乌兹别克斯坦始终相对后移。这是“不是由某一大类单独造成”的有限稳健性证据；不证明更换全部项目、赛制或届次后仍成立。复算数据见<a href="../02_%E6%95%B0%E6%8D%AE%E8%A1%A8/S2_2024%E9%80%90%E5%A4%A7%E7%B1%BB%E5%89%94%E9%99%A4%E6%95%8F%E6%84%9F%E6%80%A7.csv">逐大类剔除表</a>和<a href="../02_%E6%95%B0%E6%8D%AE%E8%A1%A8/S2_2024%E4%BB%A3%E8%A1%A8%E5%9B%A2%E5%89%94%E9%99%A4%E6%95%8F%E6%84%9F%E6%80%A7.csv">代表团区间表</a>，代码见 <code>项目工作区/scripts/s2_2024_official_leave_one_sport_out.py</code>。</p>
 <h2>历史三届的定位</h2>
 <p>2008、2012、2016的跨届图仅作为<strong>运动员行数据内部口径的探索性复现</strong>。其小项单元来自 <code>NOC–Event–Medal</code> 代理，仍有555项缺现行一手逐项核验；因此不再用三届相关或排名系数证明“现行官方奖牌榜跨届稳定”。两项指标还共享多人组/金牌行信息，不能当作独立机制验证。</p>
-<p><img alt="历史运动员行数据内部探索" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E8%B7%A8%E5%B1%8A%E6%9C%BA%E5%88%B6%E7%A8%B3%E5%AE%9A%E6%80%A7.png"/></p>
+<p><img alt="历史运动员行数据内部探索" class="chart-surface" src="../04_%E6%A0%B8%E5%BF%83%E5%9B%BE%E8%A1%A8/S2_%E8%B7%A8%E5%B1%8A%E6%9C%BA%E5%88%B6%E7%A8%B3%E5%AE%9A%E6%80%A7.png"/></p>
 <p>历史三届分别得到302、302、306个小项代理，外部核验等级见<a href="../08_%E9%80%90%E9%A1%B9%E5%A4%96%E9%83%A8%E6%A0%B8%E9%AA%8C/%E5%8E%86%E5%8F%B2910%E9%A1%B9%E6%9D%A5%E6%BA%90%E8%A6%86%E7%9B%96%E6%80%BB%E8%A1%A8.csv">910项来源覆盖总表</a>。仅绑定IOC届次入口不算逐项核验。<strong>本专题正式结论以2024官方小项与同届运动员记录为准</strong>；历史图保留为问题发现与未来复核路线，不承担2024结论的证据责任。</p>
 </main><aside class="side"><strong>关于这份文档</strong><p>这是 Markdown 原件的网页阅读版，方便在浏览器中查看标题、表格和链接。</p><a download="S2_口径的魔力_高分版.md" href="S2_%E5%8F%A3%E5%BE%84%E7%9A%84%E9%AD%94%E5%8A%9B_%E9%AB%98%E5%88%86%E7%89%88.md">下载原始 .md 文件 ↓</a><div class="note">网页阅读版与同目录 Markdown 原件一起保存在交付包中，可离线打开。</div><a class="back" href="../../../作品总入口/index.html">返回作品总入口 ↗</a></aside></div><script id="ox-motion-bridge-script">(()=>{
 const body=document.body,reduce=matchMedia('(prefers-reduced-motion: reduce)');

@@ -37,3 +37,7 @@ for p in delivery.rglob('*.html'):
  p.write_text(str(s),encoding='utf-8');selected.append(str(p.relative_to(delivery)).replace('\\','/'))
 (delivery/'最终提交材料/附页风格统一清单.json').write_text(json.dumps(selected,ensure_ascii=False,indent=2),encoding='utf-8')
 print('Unified',len(selected),'authored supplementary pages')
+
+# Apply chart surfaces last so Markdown and evidence embeds share the active theme.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("publish_chart_surfaces.py")))
