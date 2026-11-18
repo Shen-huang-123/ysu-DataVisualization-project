@@ -1,0 +1,54 @@
+[
+  {
+    "width": 390,
+    "dark": false,
+    "navBackground": "rgba(0, 0, 0, 0)",
+    "buttonBackground": [
+      "rgba(0, 0, 0, 0)",
+      "rgba(0, 0, 0, 0)"
+    ],
+    "columns": "335px",
+    "links": true,
+    "status": "已恢复记录的筛选条件",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "dark": true,
+    "navBackground": "rgba(0, 0, 0, 0)",
+    "buttonBackground": [
+      "rgba(0, 0, 0, 0)",
+      "rgba(0, 0, 0, 0)"
+    ],
+    "columns": "335px",
+    "links": true,
+    "status": "已恢复记录的筛选条件",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "navBackground": "rgba(0, 0, 0, 0)",
+    "buttonBackground": [
+      "rgba(0, 0, 0, 0)",
+      "rgba(0, 0, 0, 0)"
+    ],
+    "columns": "373.328px 373.328px 373.344px",
+    "links": true,
+    "status": "已恢复记录的筛选条件",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "navBackground": "rgba(0, 0, 0, 0)",
+    "buttonBackground": [
+      "rgba(0, 0, 0, 0)",
+      "rgba(0, 0, 0, 0)"
+    ],
+    "columns": "373.328px 373.328px 373.344px",
+    "links": true,
+    "status": "已恢复记录的筛选条件",
+    "overflow": false
+  }
+]

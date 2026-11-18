@@ -8,6 +8,8 @@ if not s.select_one('#score-audit-style'):s.head.append(s.new_tag('link',id='sco
 s.select_one('#score-audit-style')['href']='../../共享组件/score-audit.css?v=3'
 s.select_one('#status')['role']='status'
 s.select_one('#status')['aria-live']='polite'
+for link in s.select('link[href]'):
+ if 'exploration-design.css' in link['href']:link['href']=link['href'].split('?')[0]+'?v=20261118-route'
 s.select_one('#demo')['aria-pressed']='false'
 if not s.select_one('#score-audit-state'):s.head.append(s.new_tag('script',id='score-audit-state',src='../../共享组件/score-audit-state.js?v=1',defer=''))
 p.write_text(str(s),encoding='utf-8')

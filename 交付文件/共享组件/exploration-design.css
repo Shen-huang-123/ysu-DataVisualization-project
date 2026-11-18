@@ -21,3 +21,17 @@ html.dark .ex-design,html.dark .ex-route{--ex-ink:#e5eeea;--ex-paper:#102b35;--e
 @media(prefers-reduced-motion:reduce){.olympic-interaction-surface .ex-tools button{transition:none}.olympic-selection-set{animation:none}.olympic-interaction-surface .ex-tools button:hover,.olympic-interaction-surface .ex-tools button:active{transform:none}}
 
 body.xz-dark .ex-design,body.xz-dark .ex-route{--ex-ink:#e5eeea;--ex-paper:#102b35;--ex-line:#587179;--ex-accent:#80c4d1}
+
+/* Open chapter routes share the task-page typography instead of the legacy nav bar. */
+html body .ex-route{--route-ink:#19363c;--route-muted:#566e72;--route-line:#758b8b35;--route-accent:#88662e}
+html body.xz-dark .ex-route{--route-ink:#edf2ef;--route-muted:#adbfbe;--route-line:#b6c9c52c;--route-accent:#ddc393}
+html body .ex-route>nav,html body.score-audit .ex-route>nav{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:start!important;gap:18px 32px!important;height:auto!important;min-height:0!important;margin:8px 0 24px!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;color:var(--route-ink)!important}
+html body .ex-route>nav>a{display:block!important;min-width:0;padding:16px 0!important;border:0!important;border-top:1px solid var(--route-line)!important;background:transparent!important;color:var(--route-muted)!important;font:400 14px/1.8 'Microsoft YaHei',sans-serif!important;text-decoration:none!important;border-radius:0!important;transform:none!important;box-shadow:none!important}
+html body .ex-route>nav>a:hover{color:var(--route-accent)!important;border-top-color:var(--route-accent)!important}
+html body .ex-route .ex-tools{display:flex;align-items:center;flex-wrap:wrap;gap:16px 28px;margin:0 0 20px!important;padding:0!important;background:transparent!important;border:0!important}
+html body .ex-route button:not(#xz-theme):not(#xz-menu-button):not(#xz-top){background:transparent!important;background-image:none!important;border:0!important;border-bottom:1px solid var(--route-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--route-muted)!important;font:400 13px/1.6 'Microsoft YaHei',sans-serif!important;padding:10px 0!important;min-height:44px;transform:none!important;cursor:pointer}
+html body .ex-route button:not(#xz-theme):not(#xz-menu-button):not(#xz-top):hover:not(:disabled){color:var(--route-accent)!important;border-bottom-color:var(--route-accent)!important}
+html body .ex-route button:disabled{opacity:.4!important;cursor:default!important}
+html body .ex-route .ex-tools output{font-size:12px;color:var(--route-muted)}
+html body .ex-route :is(button,a):focus-visible{outline:2px solid var(--route-accent)!important;outline-offset:5px}
+@media(max-width:650px){html body .ex-route>nav,html body.score-audit .ex-route>nav{grid-template-columns:1fr!important;gap:0!important}}
