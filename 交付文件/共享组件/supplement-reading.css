@@ -9,3 +9,14 @@ body.supplement-reading :is(h1,h2,h3,h4){font-family:inherit!important;font-weig
 html body.supplement-reading .evidence-feedback svg{min-width:0!important;max-width:100%}html body.supplement-reading .supp-content>.project-audit{margin-inline:0!important}html body.supplement-reading>header:not(.supp-nav){background:var(--sr-paper)!important;color:var(--sr-ink)!important}html body.supplement-reading footer{color:var(--sr-muted);background:var(--sr-paper)}
 
 html body.supplement-reading :is(#project-model-audit,#forecast-same-unit){margin-inline:0!important;max-width:none!important}html body.supplement-reading #project-model-audit .evidence-feedback{margin-inline:0}html body.supplement-reading :is(.supp-content,main)>header{background:transparent!important;color:var(--sr-ink)!important}html body.supplement-reading header p{color:var(--sr-muted)!important}
+
+/* Markdown reading shells must share the active theme, including first paint. */
+html body.supplement-reading .article{background:var(--sr-paper)!important;color:var(--sr-ink)!important;border-color:var(--sr-line)!important;box-shadow:none}
+html body.supplement-reading .article :is(p,li,strong,em){color:inherit}
+html body.supplement-reading .article :is(h1,h2,h3,h4){color:var(--sr-ink)!important;border-color:var(--sr-line)!important}
+html body.supplement-reading .article a{color:var(--sr-accent)!important}
+html body.supplement-reading .article :is(blockquote,code){background:color-mix(in srgb,var(--sr-ink) 7%,var(--sr-paper))!important;color:var(--sr-ink)!important}
+html body.supplement-reading .article pre{background:color-mix(in srgb,var(--sr-ink) 7%,var(--sr-paper))!important;color:var(--sr-ink)!important}
+html body.supplement-reading .side{color:var(--sr-muted)!important}
+html body.supplement-reading .side strong{color:var(--sr-ink)!important}
+html body.supplement-reading .side .note{color:var(--sr-ink)!important;background:color-mix(in srgb,var(--sr-ink) 6%,var(--sr-paper))!important;border-color:var(--sr-line)!important}
