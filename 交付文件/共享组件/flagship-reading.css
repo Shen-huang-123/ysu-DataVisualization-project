@@ -9,3 +9,20 @@ html body.flagship-reading .method-reading strong{font-weight:600;color:var(--sr
 html body.flagship-reading code{font-family:inherit;overflow-wrap:anywhere}
 /* Match the full available reading width of task pages. */
 html body.flagship-reading .method-reading,html body.flagship-reading .method-reading :is(h1,h2,p,ul){width:100%;max-width:none!important;box-sizing:border-box}
+
+/* Full-width research argument, with a consistent label column. */
+html body.flagship-reading .method-reading h1{font-size:clamp(32px,4.2vw,64px)!important;letter-spacing:-.035em;line-height:1.25!important;margin-bottom:24px}
+html body.flagship-reading .method-reading>p:not(.flagship-kicker){font-size:16px;line-height:1.95}
+html body.flagship-reading .flagship-chapters{display:flex;flex-wrap:wrap;gap:12px 36px;padding:18px 0;margin:28px 0 12px;border-block:1px solid var(--sr-line)}
+html body.flagship-reading .flagship-chapters a{font-size:14px;text-decoration:none;padding:8px 0;color:var(--sr-ink)}
+html body.flagship-reading .flagship-chapters a:hover{color:var(--sr-accent)}
+html body.flagship-reading .flagship-chapter{scroll-margin-top:110px;padding:20px 0 28px}
+html body.flagship-reading .flagship-chapter h2{margin:16px 0 24px!important;padding-top:24px;font-size:clamp(23px,2.2vw,32px)!important;line-height:1.5!important}
+html body.flagship-reading .flagship-chapter:first-of-type h2{border-top:0}
+html body.flagship-reading .method-reading .argument-row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;margin:0;padding:20px 0;border-bottom:1px solid var(--sr-line);font-size:16px;line-height:1.95}
+html body.flagship-reading .argument-label{color:var(--sr-accent);font-size:14px;padding-top:2px}
+html body.flagship-reading .argument-label strong{color:inherit!important;font-weight:500}
+html body.flagship-reading .argument-copy{min-width:0;color:var(--sr-ink)}
+html body.flagship-reading .method-reading .chapter-evidence{margin:20px 0 0;font-size:13px;line-height:2;color:var(--sr-muted)}
+html body.flagship-reading .chapter-evidence a{display:inline-block;margin:4px 8px 4px 0;text-decoration-thickness:1px}
+@media(max-width:650px){html body.flagship-reading .method-reading .argument-row{grid-template-columns:1fr;gap:6px;padding:18px 0;font-size:15px}html body.flagship-reading .flagship-chapters{gap:8px 24px}html body.flagship-reading .flagship-chapter{scroll-margin-top:90px}}
