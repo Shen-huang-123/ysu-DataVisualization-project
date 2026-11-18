@@ -14,3 +14,11 @@ html body.pressure-summary table :is(th,td){padding:16px!important;text-align:le
 html body.pressure-summary td{font-variant-numeric:tabular-nums;text-align:right!important;width:20%}
 html body.pressure-summary table code{font-size:11px!important;opacity:.65;background:transparent!important;padding:0}
 @media(max-width:750px){html body.pressure-summary .summary-checks{grid-template-columns:1fr;gap:20px}html body.pressure-summary .method-actions{gap:14px}html body.pressure-summary table :is(th,td){padding:12px 8px!important}}
+
+/* Keep labels and figures in the same UI type family as the task pages. */
+html body.pressure-summary .method-reading table,html body.pressure-summary .method-reading table :is(th,td,code){font-family:'Microsoft YaHei','Noto Sans SC',system-ui,sans-serif!important;font-style:normal!important;letter-spacing:0!important;text-shadow:none!important;-webkit-text-stroke:0!important}
+html body.pressure-summary .method-reading tbody th{font-size:15px!important;font-weight:400!important;line-height:1.8!important}
+html body.pressure-summary .method-reading tbody td{font-size:16px!important;font-weight:500!important;font-variant-numeric:tabular-nums!important;line-height:1.8!important}
+html body.pressure-summary .method-reading thead th{font-size:12px!important;font-weight:500!important}
+html body.pressure-summary .method-reading table code{display:inline-block;font-size:12px!important;font-weight:400!important;line-height:1.7!important;color:var(--sr-muted)!important;opacity:1!important;margin-top:5px;overflow-wrap:anywhere}
+@media(max-width:650px){html body.pressure-summary .method-reading tbody th{font-size:14px!important}html body.pressure-summary .method-reading tbody td{font-size:15px!important}}
