@@ -58,3 +58,5 @@ for page in (root/'交付文件').rglob('*.html'):
 # The supplementary-page theme is the final presentation pass.
 import runpy
 runpy.run_path(str(Path(__file__).with_name("publish_supplement_reading.py")))
+
+runpy.run_path(str(Path(__file__).with_name("publish_pressure_summary.py")))
