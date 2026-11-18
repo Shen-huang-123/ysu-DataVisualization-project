@@ -1,0 +1,90 @@
+[
+  {
+    "width": 390,
+    "dark": false,
+    "height": "48px",
+    "weight": "400",
+    "overflow": false,
+    "options": 3,
+    "rows": [
+      {
+        "value": "official",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "athlete",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "change",
+        "first": "西班牙\t15\t5\t-10"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "dark": true,
+    "height": "48px",
+    "weight": "400",
+    "overflow": false,
+    "options": 3,
+    "rows": [
+      {
+        "value": "official",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "athlete",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "change",
+        "first": "西班牙\t15\t5\t-10"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "dark": false,
+    "height": "48px",
+    "weight": "400",
+    "overflow": false,
+    "options": 3,
+    "rows": [
+      {
+        "value": "official",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "athlete",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "change",
+        "first": "西班牙\t15\t5\t-10"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "dark": true,
+    "height": "48px",
+    "weight": "400",
+    "overflow": false,
+    "options": 3,
+    "rows": [
+      {
+        "value": "official",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "athlete",
+        "first": "美国\t1\t1\t0"
+      },
+      {
+        "value": "change",
+        "first": "西班牙\t15\t5\t-10"
+      }
+    ]
+  }
+]

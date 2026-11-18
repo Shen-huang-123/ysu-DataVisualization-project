@@ -24,7 +24,7 @@ for name in paths:
  rel=Path(os.path.relpath(SHARED,p.parent)).as_posix()
  link=s.select_one('link[href*="narrative-reading.css"]')
  if not link:link=s.new_tag('link',attrs={'rel':'stylesheet'});s.head.append(link)
- link['href']=rel+'/narrative-reading.css?v=9'
+ link['href']=rel+'/narrative-reading.css?v=10'
  script=s.select_one('script[src*="story-sequence.js"]');assert script,p;script['src']=rel+'/story-sequence.js?v=5';script['defer']=''
  closure=s.select_one('script[src*="research-closure.js"]')
  if closure:closure['src']=rel+'/research-closure.js?v=2'

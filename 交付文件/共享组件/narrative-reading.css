@@ -258,3 +258,15 @@ html body.ed-entry.narrative-module[data-narrative] main .xz-kpis>article{backgr
 html body.ed-entry.narrative-module[data-narrative] main .xz-kpis>article strong{display:block;font-family:inherit!important;font-size:clamp(36px,3.4vw,56px)!important;font-weight:500!important;line-height:1.15!important;letter-spacing:-.045em;color:var(--nr-ink)!important;font-variant-numeric:tabular-nums;margin:0 0 14px!important}
 html body.ed-entry.narrative-module[data-narrative] main .xz-kpis>article span{display:block;font-family:inherit!important;font-size:13px!important;font-weight:400!important;line-height:1.8!important;color:var(--nr-muted)!important;max-width:18ch}
 @media(max-width:700px){html body.ed-entry.narrative-module[data-narrative] main .xz-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}html body.ed-entry.narrative-module[data-narrative] main .xz-kpis>article{padding-block:22px!important}}
+
+/* Native filtering controls share the same quiet, readable surface. */
+html body.ed-entry.narrative-module[data-narrative] main select{box-sizing:border-box;min-height:48px!important;height:48px;max-width:100%;padding:10px 36px 10px 14px!important;border:1px solid var(--nr-line)!important;border-radius:10px!important;background:color-mix(in srgb,var(--nr-ink) 3%,transparent)!important;color:var(--nr-ink)!important;font-family:inherit!important;font-size:15px!important;line-height:1.5!important;font-weight:400!important;box-shadow:none!important;transform:none!important;cursor:pointer;transition:border-color 180ms ease,background-color 180ms ease!important;color-scheme:light}
+html body.ed-entry.narrative-module.xz-dark[data-narrative] main select{color-scheme:dark}
+html body.ed-entry.narrative-module[data-narrative] main select option{background:var(--paper,#f5f3ed);color:var(--nr-ink)}
+html body.ed-entry.narrative-module.xz-dark[data-narrative] main select option{background:#11232b}
+html body.ed-entry.narrative-module[data-narrative] main select:is(:hover,:focus){border-color:var(--nr-accent)!important}
+html body.ed-entry.narrative-module[data-narrative] main select:focus-visible{outline:2px solid var(--nr-accent)!important;outline-offset:3px}
+html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar label{display:flex;flex-direction:column;align-items:stretch;gap:10px}
+html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar input{height:48px!important;margin-top:0!important}
+html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar select{margin:0!important}
+@media(prefers-reduced-motion:reduce){html body.ed-entry.narrative-module[data-narrative] main select{transition:none!important}}
