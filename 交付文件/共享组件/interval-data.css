@@ -24,3 +24,20 @@ html body.interval-data .gap-negative td:nth-child(8){color:#99533e!important;fo
 html body.interval-data.xz-dark .gap-positive td:nth-child(8){color:#a2ced7!important}
 html body.interval-data.xz-dark .gap-negative td:nth-child(8){color:#e4b09a!important}
 @media(max-width:650px){html body.interval-data .method-actions{margin-bottom:30px;gap:16px}html body.interval-data .interval-search{gap:12px}html body.interval-data .interval-search input{width:100%;order:3}html body.interval-data .supp-table{max-height:65vh}html body.interval-data :is(th,td){padding:14px 12px!important}html body.interval-data :is(th,td):first-child{min-width:112px}}
+
+/* Follow task two's photographic opening and bold narrative typography. */
+html body.interval-data .interval-task-hero{box-sizing:border-box;position:relative;min-height:520px;padding:72px clamp(24px,6vw,100px) 64px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,#06151be6,#081f278f 54%,#05181e21),url('../任务三_专题深挖/媒体/sports.jpg') center/cover;color:#f1f4ee;border-bottom:3px solid;border-image:linear-gradient(90deg,#729caf 0 20%,#c5ab70 20% 40%,#d7dbd5 40% 60%,#79a58f 60% 80%,#b77d88 80%) 1}
+html body.interval-data .interval-task-hero h1{font-family:'Microsoft YaHei',system-ui,sans-serif!important;font-size:clamp(48px,6.4vw,96px)!important;line-height:1.15!important;font-weight:700!important;letter-spacing:-.055em;margin:20px 0 26px!important;color:#f3f5ef!important}
+html body.interval-data .interval-task-hero p{margin:0;max-width:700px;color:#d0dcd9!important;font-size:17px;line-height:1.9}
+html body.interval-data .interval-task-hero .task-kicker{font-size:12px;letter-spacing:.12em;color:#dec695!important}
+html body.interval-data .interval-credit{position:absolute;bottom:16px;right:clamp(24px,6vw,100px);font-size:11px;color:#dae1dc!important;text-decoration:none!important}
+html body.interval-data>main{padding-top:32px!important}
+html body.interval-data .method-actions{margin-bottom:32px;padding-bottom:16px}
+html body.interval-data .interval-reading h1{font-family:'Microsoft YaHei',system-ui,sans-serif!important;font-size:clamp(28px,3vw,44px)!important;font-weight:650!important;letter-spacing:-.035em!important;margin:0 0 20px!important}
+html body.interval-data .interval-reading>p{max-width:none!important}
+html body.interval-data .interval-reading>p:nth-of-type(2){font-size:13px!important;color:var(--sr-muted)!important}
+html body.interval-data .interval-search{padding:22px 0;margin-top:28px}
+html body.interval-data .supp-table{max-height:78vh;border-top:1px solid var(--sr-line)!important}
+html body.interval-data th{font-weight:600!important}
+@media(max-width:650px){html body.interval-data .interval-task-hero{min-height:430px;padding-top:48px;padding-bottom:52px}html body.interval-data .interval-task-hero p{font-size:15px}html body.interval-data .interval-credit{font-size:10px;left:24px;right:auto}}
+html body.supplement-reading.interval-data>header.interval-task-hero{background-image:linear-gradient(90deg,#06151be6,#081f278f 54%,#05181e21),url('../任务三_专题深挖/媒体/sports.jpg')!important;background-size:cover!important;background-position:center!important}
