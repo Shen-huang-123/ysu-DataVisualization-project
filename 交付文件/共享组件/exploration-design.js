@@ -60,6 +60,7 @@
   const route=element('details',null,'ex-route'),summary=element('summary','本页探索路线 · '+headings.length+' 站'),list=element('nav');list.setAttribute('aria-label','本页章节');route.append(summary,list);
   const controls=element('div',null,'ex-tools'),save=element('button','记录当前筛选'),restore=element('button','恢复已记视图'),status=element('output');save.type=restore.type='button';controls.append(save,restore,status);route.append(controls);
   const fields=()=>[...main.querySelectorAll('select,input[type="range"],input[type="checkbox"],input[type="radio"]')].filter(e=>!route.contains(e));
+  if(!fields().length)controls.remove();
   let snapshot=null;try{snapshot=JSON.parse(sessionStorage.getItem('ex-view:'+path)||'null')}catch(e){}restore.disabled=!snapshot;
   save.onclick=()=>{snapshot=fields().map(e=>({value:e.value,checked:e.checked}));try{sessionStorage.setItem('ex-view:'+path,JSON.stringify(snapshot))}catch(e){}restore.disabled=false;status.textContent='已记录本页 '+snapshot.length+' 个筛选条件'};
   restore.onclick=()=>{if(!snapshot)return;fields().forEach((e,i)=>{if(!snapshot[i])return;e.value=snapshot[i].value;if(e.type==='checkbox'||e.type==='radio')e.checked=snapshot[i].checked;e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}))});status.textContent='已恢复记录的筛选条件'};
@@ -69,4 +70,5 @@
  }
  if(!reduce&&'IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ex-entered');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.ex-design').forEach(e=>{e.classList.add('ex-motion');io.observe(e)})}
 })();
+
 

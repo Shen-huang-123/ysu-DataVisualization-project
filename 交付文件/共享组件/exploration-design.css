@@ -138,3 +138,12 @@ html body main.spec-fullwidth>.note+p a{color:#795b25!important;text-decoration:
 html body.xz-dark main.spec-fullwidth>.note+p a{color:#ddc393!important}
 html body main.spec-fullwidth>.note+p a:hover{border-bottom-color:currentColor}
 @media(max-width:650px){html body main.spec-fullwidth>.note{padding-left:16px!important;font-size:14px!important}html body main.spec-fullwidth>.note+p{gap:12px}}
+/* Shared chapter disclosure: transparent ruled navigation, no pill panel. */
+html body main details.ex-route{background:transparent!important;background-image:none!important;border:0!important;border-block:1px solid var(--route-line)!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin:28px 0 32px!important;color:var(--route-ink)!important}
+html body main details.ex-route>summary{display:flex!important;align-items:center;justify-content:space-between;gap:20px;list-style:none!important;min-height:60px;padding:16px 0!important;margin:0!important;background:transparent!important;border:0!important;border-radius:0!important;color:var(--route-muted)!important;font:500 14px/1.6 'Microsoft YaHei',sans-serif!important;cursor:pointer;transform:none!important;text-shadow:none!important}
+html body main details.ex-route>summary::-webkit-details-marker{display:none}
+html body main details.ex-route>summary::after{content:'+';flex:none;font:300 24px/1 'Microsoft YaHei',sans-serif;color:var(--route-accent)}
+html body main details.ex-route[open]>summary::after{content:'−'}
+html body main details.ex-route>summary:is(:hover,:focus-visible){color:var(--route-accent)!important}
+html body main details.ex-route>summary:focus-visible{outline:2px solid var(--route-accent);outline-offset:4px}
+html body main details.ex-route>nav{margin:0 0 20px!important}
