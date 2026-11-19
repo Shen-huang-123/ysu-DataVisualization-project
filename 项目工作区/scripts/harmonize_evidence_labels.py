@@ -54,4 +54,4 @@ elif hero_fix not in s:
  topic_portal.write_text(s,encoding='utf-8');print('updated portal mobile hero',topic_portal)
 s=topic_portal.read_text(encoding='utf-8')
 if 'TASK 03 / OLYMPIC DATA STORIES' in s:
- topic_portal.write_text(s.replace('TASK 03 / OLYMPIC DATA STORIES','专题深挖 / 十个奥运数据故事'),encoding='utf-8');print('localized portal hero',topic_portal)
+ topic_portal.write_text(s.replace('TASK 03 / OLYMPIC DATA STORIES','03 / 专题深挖'),encoding='utf-8');print('localized portal hero',topic_portal)
