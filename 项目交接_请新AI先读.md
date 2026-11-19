@@ -971,3 +971,5 @@ B仅替换555项的奖牌代表团；C在所有历史年份剔除相关209条同
 2026-11-19：优化任务四两提示：postprocess将.xz-note移到.source-gate-notice前并加稳定ID，forecast-wide-reading.css v2取消厚底色/圆角/最小高度，压缩上下留白，统一6vw宽度和可读文字。原文与来源门控入口保留；结构检查两区域唯一、相邻且目标存在。
 
 2026-11-19：任务四旧情景区及“现实的检验”（#explore-future-4）解除主容器与1100px归档宽度限制，沿用6vw正文边距，小屏24px；预测核验入口铺满所在栏。样式由 forecast-wide-reading.css 维护，publish_forecast_wide_reading.py 引用v3。未改预测数据及证据边界。
+
+2026-11-19：奖牌口径实验室移除整页水波条纹及封面赛道装饰，背景统一为主站深蓝灰纯色，图表、提示及交互不变。生成后运行 publish_medal_lab_background.py，样式仅作用本页。
