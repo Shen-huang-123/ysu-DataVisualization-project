@@ -8,7 +8,7 @@ s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['host-topic']))
 link=s.select_one('#host-topic-style')
 if not link:
  link=s.new_tag('link',id='host-topic-style',rel='stylesheet');s.head.append(link)
-link['href']='../../共享组件/host-topic.css?v=1'
+link['href']='../../共享组件/host-topic.css?v=2'
 if not s.select_one('#host-topic-script'):
  script=s.new_tag('script',id='host-topic-script',src='../../共享组件/host-topic.js',defer='');s.body.append(script)
 p.write_text(str(s),encoding='utf-8')
