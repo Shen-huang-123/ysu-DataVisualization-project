@@ -1,4 +1,10 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
+html body.host-topic #host-proof-charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:40px 0}
+html body.host-topic .host-proof-chart{margin:0;min-width:0;padding:22px 0;border-top:1px solid var(--line);background:transparent}
+html body.host-topic .host-proof-chart h3{font-size:18px!important;font-weight:500!important;line-height:1.6;margin:0 0 16px}
+html body.host-topic .host-proof-chart svg{display:block;width:100%;height:auto;overflow:visible}
+html body.host-topic .host-proof-chart figcaption{position:static!important;background:transparent!important;color:var(--ink)!important;font-size:12px!important;line-height:1.9!important;opacity:.7;padding:12px 0!important}
+@media(max-width:1100px){html body.host-topic #host-proof-charts{grid-template-columns:1fr}html body.host-topic .host-proof-chart svg{max-width:740px}}
 html body.host-topic .s1-main{padding-inline:clamp(24px,7vw,140px)!important}
 html body.host-topic .s1-section{background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;padding:64px 0!important}
 html body.host-topic .s1-section h2{font-family:inherit!important;font-weight:500!important;font-size:clamp(28px,3vw,44px)!important;line-height:1.5!important;letter-spacing:-.025em!important;margin:12px 0 30px!important}
