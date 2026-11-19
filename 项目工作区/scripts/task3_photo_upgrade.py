@@ -42,3 +42,7 @@ print('Added',len(PAGES),'credited photo scenes')
 # Restore S8 task-page presentation after generating content.
 import runpy
 runpy.run_path(str(Path(__file__).with_name("publish_women_topic_style.py")))
+
+# Restore S9 photo and layout after general photo upgrades.
+import runpy
+runpy.run_path(str(Path(__file__).with_name('publish_vanished_topic_style.py')))

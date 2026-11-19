@@ -20,7 +20,7 @@
 
  const bars=[...document.querySelectorAll('main .chart button.bar[data-i]')];
  const profiles=[['S5_','growth','届次透镜','沿时间轴拖动，核对每一届的奖牌行变化。'],['S8_','balance','平等的距离','50% 是比较参照，不代表不同小项的夺牌机会完全相同。'],['S3_地缘','gaps','历史断点','用真实年份间距阅读变化；总量缺口不能单独证明抵制原因。'],['S4_小','compare','双案例对照','选择两个代表团，比较原图中的获奖行；这不是效率排名。'],['S6_','identity','身份核验台','按原页面的身份标签检索；未核验记录不能当作真实个人排名。'],['S9_','archive','赛场档案柜','按项目名检索，查看数据中出现的届数；出现次数不等于永久退出。'],['S10_','rank','项目机会谱','点选项目联动原有详情。刻度仍沿用原图的获奖行口径。']];
- const profile=profiles.find(x=>path.includes(x[0]));
+ const profile=document.body.classList.contains('vanished-topic')?null:profiles.find(x=>path.includes(x[0]));
  function element(tag,text,cls){const e=document.createElement(tag);if(text)e.textContent=text;if(cls)e.className=cls;return e}
  if(profile&&bars.length){
   const [,mode,title,description]=profile,chart=bars[0].parentElement;
@@ -69,3 +69,4 @@
  }
  if(!reduce&&'IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ex-entered');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.ex-design').forEach(e=>{e.classList.add('ex-motion');io.observe(e)})}
 })();
+
