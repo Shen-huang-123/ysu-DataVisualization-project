@@ -13,3 +13,11 @@ html body #forecast-scenario-boundary p,html body #forecast-source-notice p{max-
 html body #forecast-source-notice strong{font-size:23px!important;font-weight:500!important;color:inherit!important}
 html body #forecast-source-notice a{display:inline-block;padding:10px 0!important;border-bottom:1px solid #ad9566!important;color:inherit!important;font-size:15px!important;font-weight:500!important;text-decoration:none!important}
 @media(max-width:650px){html body #forecast-scenario-boundary,html body #forecast-source-notice{margin:24px!important;padding:24px 0!important}}
+
+/* Keep the archived scenario chapters on the same canvas as the main reading. */
+html body.narrative-future>main.xz-container{width:100%!important;max-width:none!important;margin-inline:0!important;padding-inline:6vw!important;box-sizing:border-box!important}
+html body.narrative-future #legacy-scenarios{width:100%!important;max-width:none!important;margin:32px 0!important;padding:24px 0!important;box-sizing:border-box!important}
+html body.narrative-future #legacy-scenarios .narrative-layout,html body.narrative-future #legacy-scenarios .narrative-flow,html body.narrative-future #explore-future-4,html body.narrative-future #explore-future-4>.narrative-future-group{width:100%!important;max-width:none!important;min-width:0!important;box-sizing:border-box!important}
+html body.narrative-future #explore-future-4 .xz-path{width:100%!important;max-width:none!important;grid-template-columns:minmax(0,1fr)!important;min-width:0!important}
+html body.narrative-future #explore-future-4 .xz-path>a{width:100%!important;max-width:none!important;min-width:0!important;box-sizing:border-box!important;overflow-wrap:anywhere}
+@media(max-width:650px){html body.narrative-future>main.xz-container{padding-inline:24px!important}html body.narrative-future #explore-future-4>.narrative-future-group{display:block!important}}
