@@ -46,3 +46,16 @@ html body.medal-growth-topic .chart[hidden]{display:none!important}
 html body.medal-growth-topic .ex-route{position:relative!important;margin:28px 0!important;padding:16px 0!important;background:transparent!important;border:0!important;border-block:1px solid var(--growth-line)!important;border-radius:0!important;color:var(--bg)!important;box-shadow:none!important}
 html body.medal-growth-topic .ex-route nav{position:static!important;background:transparent!important;width:auto!important;padding:12px 0!important;color:var(--bg)!important}
 html body.medal-growth-topic .ex-route a{color:var(--bg)!important}
+/* Evidence follows the same editorial grid as the charts. */
+html body.medal-growth-topic .task3-depth-bridge{background:transparent!important;color:var(--bg)!important;padding:48px 7vw!important;border-top:1px solid var(--growth-line)!important}
+html body.medal-growth-topic .task3-depth-bridge>div{max-width:1376px!important;margin:auto!important}
+html body.medal-growth-topic .task3-depth-bridge h2{max-width:1000px;margin:18px 0 30px!important;font-weight:500!important;line-height:1.45!important}
+html body.medal-growth-topic .growth-metrics{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px!important;margin:30px 0!important}
+html body.medal-growth-topic .growth-metrics>div{padding:20px 0;border-top:1px solid var(--growth-line)}
+html body.medal-growth-topic .growth-metrics b{display:block;font-size:clamp(34px,3.8vw,56px);line-height:1.4;font-weight:500;color:var(--a)}
+html body.medal-growth-topic .growth-metrics span{display:block;margin-top:10px;font-size:14px;line-height:1.8;opacity:.8}
+html body.medal-growth-topic .task3-depth-bridge p{font-size:16px;line-height:1.9!important;margin:24px 0!important}
+html body.medal-growth-topic .task3-depth-bridge a{display:inline-block;padding:10px 0!important;color:var(--bg)!important;font-weight:400!important;text-decoration:none!important;border-bottom:1px solid var(--a)}
+html body.medal-growth-topic>a.research-proof-link{display:block!important;max-width:none!important;margin:0 7vw 38px!important;padding:22px 0!important;background:transparent!important;border:0!important;border-block:1px solid var(--growth-line)!important;border-radius:0!important;color:var(--bg)!important;box-shadow:none!important}
+html body.medal-growth-topic>a.research-proof-link h2,html body.medal-growth-topic>a.research-proof-link strong{font-size:23px!important;font-weight:500!important}
+@media(max-width:650px){html body.medal-growth-topic .growth-metrics{grid-template-columns:1fr!important;gap:8px!important}html body.medal-growth-topic .task3-depth-bridge{padding:36px 24px!important}}
