@@ -76,3 +76,12 @@ html body.legends-topic{padding-top:0!important;border-top:0!important}
 html body.legends-topic>header{margin-top:0!important;padding-top:128px!important}
 html body.legends-topic header .legends-photo{object-fit:cover!important;object-position:center top!important}
 @media(max-width:700px){html body.legends-topic>header{padding-top:0!important}}
+/* Fade the archival image into the exact page surface, including light mode. */
+html body.legends-topic{--legends-surface:#edf2ef}
+html body.legends-topic.xz-dark{--legends-surface:#152129}
+html body.legends-topic>header{background:var(--legends-surface)!important;border-bottom:0!important;box-shadow:none!important}
+html body.legends-topic header .legends-photo{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 66%,#000c 76%,#0005 89%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 66%,#000c 76%,#0005 89%,transparent 100%)}
+html body.legends-topic>header:before{background:linear-gradient(180deg,#101d26bf 0%,#101d2640 32%,transparent 54%)!important}
+html body.legends-topic .legends-credit{color:var(--vt-muted)!important}
+html body.legends-topic>main{border-top:0!important}
+@media(max-width:700px){html body.legends-topic header .legends-photo{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 65%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 65%,transparent 100%)}}
