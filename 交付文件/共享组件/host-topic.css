@@ -1,4 +1,17 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
+html body.host-topic .s1-picker{display:flex!important;flex-wrap:wrap!important;gap:8px 28px!important;border:0!important;border-bottom:1px solid var(--line)!important;padding:8px 0 0!important;margin:28px 0 0!important;background:transparent!important}
+html body.host-topic .s1-picker button{font-family:inherit!important;font-size:15px!important;font-weight:400!important;line-height:1.7!important;padding:14px 0!important;margin:0!important;min-height:48px!important;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;background:transparent!important;background-image:none!important;box-shadow:none!important;color:var(--ink)!important;opacity:.65;transform:none!important;transition:color 150ms ease,opacity 150ms ease!important}
+html body.host-topic .s1-picker button:is(:hover,[aria-pressed=true]){opacity:1!important;background:transparent!important}
+html body.host-topic .s1-picker button[aria-pressed=true]{border-bottom-color:var(--gold)!important;font-weight:500!important}
+html body.host-topic .s1-case{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px)!important;padding:40px 0!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;background-image:none!important;align-items:center}
+html body.host-topic .s1-case h3{font-size:clamp(24px,2.4vw,34px)!important;font-weight:500!important;line-height:1.5!important;margin:0 0 22px!important}
+html body.host-topic .s1-case .s1-change{font-size:clamp(32px,3.5vw,52px)!important;font-weight:500!important;line-height:1.4!important;color:var(--ink)!important;margin:0 0 20px!important}
+html body.host-topic .s1-case p{font-size:15px!important;line-height:1.95!important;margin:0!important;max-width:58ch}
+html body.host-topic .s1-bars{gap:28px!important;min-width:0}
+html body.host-topic .s1-bar{grid-template-columns:64px minmax(0,1fr) 64px!important;gap:16px!important;font-size:14px!important}
+html body.host-topic .s1-bar i{height:8px!important;border-radius:1px!important;box-shadow:none!important}
+html body.host-topic .s1-bar>:last-child{text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:700px){html body.host-topic .s1-case{grid-template-columns:1fr!important;padding:28px 0!important;gap:28px!important}html body.host-topic .s1-picker{gap:0 22px!important}html body.host-topic .s1-picker button{font-size:14px!important}html body.host-topic .s1-bars{gap:20px!important}}
 html body.host-topic .oa-world{display:none!important}
 html body.host-topic{background-image:none!important;background-color:var(--paper)!important}
 html body.host-topic:before,html body.host-topic:after{content:none!important;display:none!important}
