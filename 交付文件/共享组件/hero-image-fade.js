@@ -8,6 +8,7 @@
   const photo=h.querySelector('.image-stage-photo,.geopolitics-photo,.legends-photo,.women-hero-photo,.vanished-photo');
   if(!photo&&!getComputedStyle(h).backgroundImage.includes('url('))return;
   h.classList.add('hero-image-fade');
+  if(!h.querySelector(':scope>.hero-image-fade-layer')){const fade=document.createElement('div');fade.className='hero-image-fade-layer';fade.setAttribute('aria-hidden','true');h.append(fade)}
   let next=h.nextElementSibling;while(next&&getComputedStyle(next).display==='none')next=next.nextElementSibling;const bg=surface(next||document.body),rgb=bg.match(/[\d.]+/g)||[21,33,41];
   h.style.setProperty('--hero-fade-surface',bg);h.style.setProperty('--hero-fade-soft',`rgba(${rgb.slice(0,3).join(',')},.45)`);
   const light=(Number(rgb[0])*.2126+Number(rgb[1])*.7152+Number(rgb[2])*.0722)>150;

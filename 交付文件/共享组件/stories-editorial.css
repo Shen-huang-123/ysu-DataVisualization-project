@@ -38,5 +38,5 @@ body.narrative-stories #explore-stories-1 .grid a.story[hidden],body.narrative-s
 body.narrative-stories #explore-stories-1 .grid a.story:nth-child(n){grid-column:auto!important;grid-row:auto!important}body.narrative-stories #explore-stories-1 .grid a.story[hidden]{display:none!important}
 /* Reveal the archival photograph; keep shading local to the copy. */
 html body.narrative-stories header.hero{background-image:linear-gradient(90deg,rgba(7,22,28,.66) 0%,rgba(7,22,28,.46) 38%,rgba(7,22,28,.12) 72%,rgba(7,22,28,.08) 100%),url('../任务三_专题深挖/媒体/growth.jpg')!important;background-size:cover!important;background-position:center!important}
-html body.narrative-stories header.hero.hero-image-fade::after{height:22%!important}
+html body.narrative-stories header.hero.hero-image-fade>.hero-image-fade-layer{height:22%!important}
 @media(max-width:700px){html body.narrative-stories header.hero{background-image:linear-gradient(90deg,rgba(7,22,28,.66),rgba(7,22,28,.32)),url('../任务三_专题深挖/媒体/growth.jpg')!important}}
