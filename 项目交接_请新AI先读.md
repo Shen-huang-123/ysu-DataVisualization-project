@@ -951,3 +951,8 @@ B仅替换555项的奖牌代表团；C在所有历史年份剔除相关209条同
 2026-11-19：用户反馈S1进入短暂卡出其他画面。检查发现错误预加载archive.jpg及脚本后触发整页xz-enter动画。publish_host_topic_style.py维护host.jpg预加载与静态host-entry-photo；host-topic.css v3固定首屏背景/布局，取消body和首屏文本动画并隐藏装饰层。连续三次刷新检查照片1500像素加载、单一图片、首屏top0、body animation none。证据与案例未改。
 
 2026-11-19：修复S1 task3-depth-bridge透明化后仍继承原内联浅色文字的问题。标题/说明/指标绑定var(--ink)，链接与small按深浅主题独立设置可读配色，opacity固定1。维护host-topic.css与后处理v4；浏览器检查两主题实际颜色。
+
+## 2026-11-19 十专题入口底部优化
+- 用户截图反馈统一中文入口页脚色带突兀、后置研究入口不协调。新增topic-portal-refined.css与publish_topic_portal_refined.py，页脚透明化并响应分栏，3个补充研究入口及后置分析区移至footer前。
+- 保留原作者比例、许可与所有研究目标；研究入口统一6vw左右边缘、细分隔线及中等字重。粒子层固定视口，避免撑大文档。
+- 浏览器1440/390核验透明页脚、3个入口、无footer后分析区、无横向溢出。生成材料后需运行本后处理脚本。
