@@ -1,4 +1,11 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
+html body.host-topic .s1-main>.s1-section:first-child{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:56px 0 48px!important}
+html body.host-topic .s1-facts{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px!important;background:transparent!important;margin:36px 0 28px!important}
+html body.host-topic .s1-facts article{display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:150px;padding:24px 0!important;background:transparent!important;background-image:none!important;border:0!important;border-top:1px solid #b59b6866!important;border-radius:0!important;box-shadow:none!important;transform:none!important}
+html body.host-topic .s1-facts strong{font-family:inherit!important;font-size:clamp(32px,3.8vw,58px)!important;font-weight:500!important;letter-spacing:-.035em!important;line-height:1.2!important;color:var(--ink)!important;margin:0!important;white-space:nowrap;font-variant-numeric:tabular-nums}
+html body.host-topic .s1-facts span{font-size:14px!important;font-weight:400!important;line-height:1.8!important;color:var(--ink)!important;opacity:.72}
+html body.host-topic .s1-main>.s1-section:first-child>p{font-size:14px;opacity:.75;max-width:78ch}
+@media(max-width:700px){html body.host-topic .s1-facts{grid-template-columns:1fr;gap:0!important}html body.host-topic .s1-facts article{min-height:0;gap:12px;padding:22px 0!important}html body.host-topic .s1-facts strong{font-size:38px!important}}
 html body.host-topic{padding-top:0!important;margin-top:0!important}
 html body.host-topic .s1-hero{margin-top:0!important}
 body.host-topic{--paper:#f1f3ef;--ink:#19333c;--gold:#ad925e;--line:#869b9c40;line-height:1.8}
