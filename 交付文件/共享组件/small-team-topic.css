@@ -1,0 +1,30 @@
+html body.small-team-topic{--bg:#203b42;--p:#edf2ef;--a:#b59b68;--st-line:#829a9b40;background:var(--p)!important;color:var(--bg)!important;padding-top:0!important;font-family:'Microsoft YaHei',sans-serif!important}
+html body.small-team-topic.xz-dark{--bg:#e8efec;--p:#152129;--st-line:#a3b8b52c;background:var(--p)!important}
+html body.small-team-topic .oa-world,html body.small-team-topic:before,html body.small-team-topic:after{display:none!important}
+html body.small-team-topic>header{isolation:isolate;min-height:740px!important;height:88vh!important;padding:160px 7vw 120px!important;justify-content:center!important;border:0!important;border-radius:0!important;background:linear-gradient(90deg,#102129df,#10212930),url('../任务三_专题深挖/媒体/islands.jpg') center/cover!important;color:#fff!important}
+html body.small-team-topic>header:after{content:''!important;inset:70% 0 0!important;background:linear-gradient(transparent,var(--p))!important;opacity:1!important;font-size:0!important;z-index:-1}
+html body.small-team-topic header h1{font-family:inherit!important;font-weight:500!important;font-size:clamp(42px,6vw,88px)!important;line-height:1.25!important;letter-spacing:-.025em!important;margin:24px 0!important;max-width:13em}
+html body.small-team-topic header .tag{color:#dfc997!important;font-size:13px!important;font-weight:500!important;letter-spacing:.1em}
+html body.small-team-topic header .lead{font-size:18px!important;line-height:1.95!important;max-width:45em;color:#edf2ef!important}
+html body.small-team-topic .photo-stage.islands{height:auto!important;min-height:0!important;margin:0!important;padding:18px 7vw!important;background:transparent!important;border:0!important}
+html body.small-team-topic .photo-stage.islands img{display:none!important}
+html body.small-team-topic .photo-stage.islands:before,html body.small-team-topic .photo-stage.islands:after{display:none!important}
+html body.small-team-topic .photo-stage.islands figcaption{position:static!important;transform:none!important;background:transparent!important;color:var(--bg)!important;padding:0!important;font-size:12px!important;line-height:1.9!important}
+html body.small-team-topic main{max-width:none!important;width:100%!important;padding:48px 7vw 80px!important;background:transparent!important}
+html body.small-team-topic .insight{font-size:clamp(21px,2.5vw,34px)!important;line-height:1.7!important;max-width:40em!important;margin-bottom:48px!important}
+html body.small-team-topic .viz{grid-template-columns:minmax(0,1.8fr) minmax(260px,1fr)!important;gap:56px!important}
+html body.small-team-topic main h2{font-family:inherit!important;font-size:clamp(25px,2.7vw,38px)!important;font-weight:500!important;line-height:1.5!important}
+html body.small-team-topic .chart{gap:0!important}
+html body.small-team-topic .bar{background:transparent!important;border:0!important;border-bottom:1px solid var(--st-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--bg)!important;padding:18px 0!important;grid-template-columns:140px minmax(0,1fr) 70px!important;gap:20px!important;min-width:0}
+html body.small-team-topic .bar:is(:hover,:focus-visible){background:transparent!important;outline:0!important;border-bottom-color:var(--a)!important}
+html body.small-team-topic .track{height:10px!important;background:transparent!important;border-radius:0!important}
+html body.small-team-topic .track i{box-sizing:border-box;background:transparent!important;border:1px solid #b59b68b8!important;border-radius:1px!important}
+html body.small-team-topic .viz>aside{position:sticky;top:100px;background:transparent!important;border:0!important;border-top:1px solid var(--a)!important;border-radius:0!important;box-shadow:none!important;padding:26px 0!important;color:var(--bg)!important}
+html body.small-team-topic .viz>aside b{font-size:clamp(34px,4vw,56px)!important;font-weight:500!important;color:var(--bg)!important;line-height:1.4!important}
+html body.small-team-topic .method,html body.small-team-topic .evidence{border-top:1px solid var(--st-line)!important;padding-top:32px!important;gap:40px!important;margin-top:56px!important}
+html body.small-team-topic .evidence article{background:transparent!important;border:0!important;border-top:1px solid var(--st-line)!important;border-radius:0!important;padding:24px 0!important}
+html body.small-team-topic :is(.method,.evidence,aside) p{font-size:15px!important;line-height:1.95!important;max-width:72ch}
+html body.small-team-topic .task3-depth-bridge{background:transparent!important;border:0!important;border-top:1px solid var(--st-line)!important;border-radius:0!important;padding:40px 0!important}
+@media(max-width:800px){html body.small-team-topic>header{min-height:680px!important;padding:140px 24px 100px!important}html body.small-team-topic main{padding:36px 24px 60px!important}html body.small-team-topic .viz{display:flex!important;flex-direction:column!important;gap:28px!important}html body.small-team-topic .viz>aside{position:static;order:-1}html body.small-team-topic .bar{grid-template-columns:100px minmax(0,1fr) 60px!important;gap:12px!important;font-size:13px!important}html body.small-team-topic .photo-stage.islands{padding-inline:24px!important}}
+
+html body.small-team-topic :is(.bar,#st-a#st-b#st-c#st-d){background:transparent!important;background-image:none!important;color:var(--bg)!important;box-shadow:none!important}
