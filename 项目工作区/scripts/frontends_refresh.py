@@ -222,3 +222,8 @@ def main():
 
 if __name__=='__main__':main()
 
+
+# Keep reset controls with their filters after page generation.
+if __name__ == '__main__':
+    import runpy
+    runpy.run_path(str(Path(__file__).with_name('publish_research_proof_links.py')))

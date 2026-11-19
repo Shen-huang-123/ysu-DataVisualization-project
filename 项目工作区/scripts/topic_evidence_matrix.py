@@ -114,3 +114,7 @@ print(df[['专题','状态']].to_string(index=False))
 
 import runpy
 runpy.run_path(str(Path(__file__).with_name("publish_stability_list.py")))
+
+# Apply the shared transparent evidence links after inserting legacy entries.
+import runpy
+runpy.run_path(str(Path(__file__).with_name('publish_research_proof_links.py')))
