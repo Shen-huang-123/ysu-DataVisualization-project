@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 <title>Olympedia – 2012 Summer Olympics Overview</title>
-<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="EuXIaWpLlKPhKNmXsu2pUpr8IJ0Rc8y4-H38XJSZRke8oC3si7sLv5fzN-SU7NQx2xdJD5sfP6I3ra8Fw3Z6Mw" />
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<meta content="EN" http-equiv="content-language">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<link href="/icon.png" rel="icon" type="image/png">
-<link rel="stylesheet" href="/assets/bootstrap.min-03423cd68c2bff228a73520e849f02d78d1236de443661f3f5dcd658dd9cbc46.css" media="all" />
-<link rel="stylesheet" href="/assets/bootstrap-sortable-515ee97c8b372ddae7796a36ec518e0785e0e3d3d266162ba2c44a3623540f7b.css" media="all" />
-<link rel="stylesheet" href="/assets/jquery-ui-1.11.4.min-35aebb4aa1818460c44d32da4f18101d34f332741a347654907911af0d145e88.css" media="all" />
-<link rel="stylesheet" href="/assets/lightbox-3afc0e08d652072ea73df78af7d454f122da80b9124d782fb609a7b4b05e0197.css" media="screen" />
-<link rel="stylesheet" href="/assets/application-a970a77a6d1f4f82ba987b68296f2119601e3438cbdec42f82618fb568bf3dba.css" media="all" data-turbolinks-track="true" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.0.0/ol.css" media="screen" />
+<meta content="authenticity_token" name="csrf-param"/>
+<meta content="EuXIaWpLlKPhKNmXsu2pUpr8IJ0Rc8y4-H38XJSZRke8oC3si7sLv5fzN-SU7NQx2xdJD5sfP6I3ra8Fw3Z6Mw" name="csrf-token"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="EN" http-equiv="content-language"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="/icon.png" rel="icon" type="image/png"/>
+<link href="/assets/bootstrap.min-03423cd68c2bff228a73520e849f02d78d1236de443661f3f5dcd658dd9cbc46.css" media="all" rel="stylesheet"/>
+<link href="/assets/bootstrap-sortable-515ee97c8b372ddae7796a36ec518e0785e0e3d3d266162ba2c44a3623540f7b.css" media="all" rel="stylesheet"/>
+<link href="/assets/jquery-ui-1.11.4.min-35aebb4aa1818460c44d32da4f18101d34f332741a347654907911af0d145e88.css" media="all" rel="stylesheet"/>
+<link href="/assets/lightbox-3afc0e08d652072ea73df78af7d454f122da80b9124d782fb609a7b4b05e0197.css" media="screen" rel="stylesheet"/>
+<link data-turbolinks-track="true" href="/assets/application-a970a77a6d1f4f82ba987b68296f2119601e3438cbdec42f82618fb568bf3dba.css" media="all" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/ol@v10.0.0/ol.css" media="screen" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/ol@v10.0.0/dist/ol.js"></script>
 <script src="/assets/omm-34ac1a3b4884461c87bafa8ec1c1c21bcc434c53c51d3b1f82d1dff57ad3856b.js"></script>
 <script src="/assets/jquery-1.11.2.min-224c81cc15edb399b9465fc371dffb02e6fe4c043716571b49b1a7b2bcc09ef1.js"></script>
@@ -22,9 +23,7 @@
 <script src="/assets/bootstrap.min-2b9640a7175349197c70d8b752f484837518c6cbdce416dead60cdeebd875294.js"></script>
 <script src="/assets/moment-93e00e6729db142363a35d17328084c3bd3d62304ecd27f91e9c954550daa1ce.js"></script>
 <script src="/assets/bootstrap-sortable-e790a4de58d52fde6861014956b371ac860d665b62c23af929a33a9f39e84d04.js"></script>
-
-</head>
-
+<link href="../../../../../共享组件/unified-tables.css" id="unified-tables" rel="stylesheet"/></head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="navbar-header">
@@ -37,7 +36,7 @@
 </span>
 </div>
 <a class="navbar-brand" href="/" style="padding-top: 10px">
-<img height="30px" src="/images/logo.png" width="30px">
+<img height="30px" src="/images/logo.png" width="30px"/>
 </a>
 <a class="navbar-brand" href="/">Olympedia</a>
 </div>
@@ -60,7 +59,6 @@ Athletes
 <li><a href="/athletes">Athletes</a></li>
 </ul>
 </li>
-
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 Countries
@@ -74,7 +72,6 @@ Countries
 <li><a href="/countries">Countries</a></li>
 </ul>
 </li>
-
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 Games
@@ -88,7 +85,6 @@ Games
 <li><a href="/venues/menu">Venues</a></li>
 </ul>
 </li>
-
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 Sports
@@ -99,7 +95,6 @@ Sports
 <li><a href="/event_names">Events</a></li>
 </ul>
 </li>
-
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 IOC
@@ -113,7 +108,6 @@ IOC
 <li><a href="/ioc/host_cities">Host city selection</a></li>
 </ul>
 </li>
-
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 Statistics
@@ -135,15 +129,11 @@ Statistics
 <li><a href="/statistics">Statistics</a></li>
 </ul>
 </li>
-
-
-
-
 <li><a href="/feedbacks/new">Feedback</a></li>
-<form class="navbar-form navbar-left" role="search" action="/athletes/quick_search" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="ceiXNeoOM2_UVNLBHEKc3s_rGxnyDwFbCN_ITZljcmkP5UPBHttAsVu2zt2w5TDMyEGsCORwH1Sy0XY0MxU0Ug" autocomplete="off" /><div class="form-group">
-<input type="text" name="query" id="query" class="form-control" placeholder="Athlete search" />
+<form accept-charset="UTF-8" action="/athletes/quick_search" class="navbar-form navbar-left" method="post" role="search"><input autocomplete="off" name="utf8" type="hidden" value="✓"/><input autocomplete="off" name="authenticity_token" type="hidden" value="ceiXNeoOM2_UVNLBHEKc3s_rGxnyDwFbCN_ITZljcmkP5UPBHttAsVu2zt2w5TDMyEGsCORwH1Sy0XY0MxU0Ug"/><div class="form-group">
+<input class="form-control" id="query" name="query" placeholder="Athlete search" type="text"/>
 </div>
-<input type="submit" name="commit" value="Go" class="btn btn-default" data-disable-with="Go" />
+<input class="btn btn-default" data-disable-with="Go" name="commit" type="submit" value="Go"/>
 </form>
 </ul>
 </div>
@@ -155,8 +145,6 @@ Statistics
 </li>
 <li><a href="/editions">Games</a></li><li class="active">2012 Summer Olympics Overview</li>
 </ol>
-
-
 <h1>2012 Summer Olympics</h1>
 <h2>Facts</h2>
 <table class="biotable">
@@ -212,182 +200,165 @@ in 39 disciplines
 </td>
 </tr>
 </table>
-
 <h2>
 Overview
 
 </h2>
 <div class="description">
 <p>London hosted the Olympic Games for the third time in 2012, but neither of the previous could be considered normal host efforts. In 1908 the Games were originally awarded to Roma, which relinquished the responsibility in 1906 because of government funding problems, then exacerbated by an eruption of Mount Vesuvius. Thus, the London 1908 organizers had only 2 years to put on the Games but they did well, hosting the first truly modern Olympic Games. In 1948 London was chosen as host city despite recovering from World War II, its streets and buildings bombed out, and its citizens still on rations, of food and other essentials. They have been called the Austerity Olympics, but again London did their job and did it well.</p>
-
 <p>One would not expect anything less for London 2012. The city won the bid in a closely fought contest against Paris, but only the day after the bid, suicide bombers struck the London Underground, killing 52 passengers, as well as the cowardly terrorists. It raised fears of security problems in the world’s most metropolitan city, and a huge one to protect at best. But after that initial attack, London was safe from 2005 through the Games and there were no major problems during the Olympics, although pre-Games publicity focused on the G4S, the security agency that was hired to assist during the Olympics. They had not hired enough staff and the British Government and police forces were forced to step in and requisition more troops to assist with security. In the end there was no problem.</p>
-
 <p>The Games opened at night with a wondrous Opening Ceremony, highlighted by <a href="/athletes/1100018">Queen Elizabeth II</a> seemingly parachuting out of a helicopter accompanied by James Bond, and Mr. Bean running at St. Andrews to the accompaniment of the “<a href="/definitions/5">Chariots of Fire</a>” theme. One innovation at the Opening Ceremony was that the coach’s representative declared an oath for the first time, this done by canoeing coach <a href="/athletes/1800155">Eric Farrell</a>. Paul McCartney ended the ceremony with “Hey Jude”, and London was ready to revel.</p>
-
 <p>And revel it did. The London Olympics were a magnificent embodiment of the British people, who embraced London 2012 as the organizers, LOCOG, put on a wondrous show. The British weather co-operated as well. London had had the rainiest, coldest spring and early summer in recent memory, but for two weeks, the sun came out, with rare exceptions, such as the women’s cycling road race, and Britain basked in warm Mediterranean-like weather on the final few days of the Games.</p>
-
 <p>London’s venues were spread around the large city, and even the country, with football matches at Old Trafford in Manchester and even in Scotland and Wales, with some held in Glasgow and Cardiff. Many of the venues were centered in the Olympic Park, a concept that had begun with Sydney. Huge crowds flocked daily to the Park, basking in the Olympic experience. For those unable to get tickets to the events, they could sit on the grass on the banks of the River Lea and watch many of them on a huge-screen television.</p>
-
 <p>The venues themselves won praise as they assisted the athletes in their assault on the record books. Multiple world records were set at the velodrome, led by the British track cyclists. The athletics stadium track was considered very fast and even saw three world records, rare anymore at the Olympics, as <a href="/athletes/123568">David Rudisha</a> became the first man to better 1:41 for the 800 metres, Jamaica broke its own record for the 4×100 relay, and the US women’s 4×100 relay team eliminated the second oldest women’s mark on the books, the world record set back in 1985 by a GDR team. At the aquatics stadium, the fast pool led to several world records that had seemed inviolate once the sport had banned the fast skinsuits that grew popular in 2008, and returned to textile suits.</p>
-
 <p>In that pool <a href="/athletes/93860">Michael Phelps</a> was back to assault the record for most Olympic medals won. He succeeded, winning six medals to bring his Olympic career total to 22 medals and 18 golds, although he was less dominant than he had been in Beijing. <a href="/athletes/">Usain Bolt</a> was also back, and won the 100-200-4×100 relay sprint triple, although this time setting only one world record, that in the relay, anchoring for his Jamaican team. But even he was overshadowed at the athletics stadium by a wondrous mid-Games Saturday night and British distance runner <a href="/athletes/115344">Mo Farah</a>.</p>
-
 <p>The night started with <a href="/athletes/124069">Jessica Ennis</a>, the darling of the British media leading up to the Games, finishing her 800 metres to win the women’s heptathlon. The roar from the British fans then increased and reverberated as Britain’s <a href="/athletes/116925">Greg Rutherford</a> scored an upset victory in the men’s long jump. A few minutes later, the crowd grew even louder in the men’s 10,000 metres when Farah won that gold medal, Britain reaching gold three times within an hour, as the sound within Olympic Stadium could be heard at other venues within the Park, and probably even at Old Trafford. One week later, on the final night of athletics competition, Farah came back to complete the 5-10K double, a fitting ending on another Saturday to the cheers of his adoring countrymen.</p>
-
 <p>On the sports fields, the biggest controversy came in badminton – who woulda thunk it? In the final matches of women’s doubles round-robin play, Chinese, Korean, and Indonesian pairs, already qualified to advance, engaged in a charade to throw their matches to gain a better draw in the knock-out rounds. Making no pretense of trying to win, the crowd booed and the officials spoke to them, imploring them to make their best efforts, to no avail. The next day, the officials reacted decisively, disqualifying all eight players and four teams, and advancing four other teams to the single-elimination tournament.</p>
-
 <p>Were there any other problems with London 2012? Precious few, but the major complaint was about the Olympic Torch, or lack of it. It was lit within the stadium infield at the Opening Ceremony, and was moved to a corner of the stadium, thus it was not visible to spectators who have come to look at the Torch as the symbol of the Olympic Games. The Organizing Committee caved a little bit and took to showing a video of the Torch burning on the screens around the stadium, but this was a faux pas.</p>
-
 <p>On the final night, London 2012 closed in the Olympic Stadium with a Symphony of British music, as George Michael, Annie Lennox, The Who, and the Spice Girls, among many others, entertained. And though Sir Paul was not there, John Lennon was shown on the stadium screen singing “Imagine”, ending the Magical Mystery Tour that had been the London Olympic fortnite.</p>
-
 </div>
-
 <h2>Bid process</h2>
 <div class="description">
 <p>The host city for the Games of the XXXth Olympiad was chosen at the 117th IOC Session on 6 July 2005. The original nine candidate cities were La Habana (Havana), Cuba; İstanbul, Turkey; Leipzig, Germany; London; Great Britain; Madrid, Spain; Moskva, Russia; New York, New York, USA; Paris, France; and Rio de Janeiro, Brazil. Four cities were eliminated and the five remaining cities advancing to the final vote were London, Madrid, Moskva, New York, and Paris. London was selected as the host city on the 4th round of voting over Paris, 54-50.</p>
-
 <p>Bid voting at the 117th <a href="/meetings">IOC Session</a> in Singapore on 6 July 2005. Because of the number of candidate cities, an Evaluation Commission of the IOC was nominated whose task was to pare the number of candidates down to a more workable five prior to the final vote. There were four eliminated cities: La Habana (Havana) (Cuba), İstanbul (Turkey), Leipzig (Germany) and Rio de Janeiro (Brazil).</p>
-
 <table class="table table-striped">
-  	<tr>
-  		<th></th>
-  		<th></th>
-  		<th>Round 1</th>
-  		<th>Round 2</th>
-  		<th>Round 3</th>
-  		<th>Round 4</th>
-  	</tr><tr>
-  		<td class="city">London</td>
-  		<td>Great Britain</td>
-  		<td>22</td>
-  		<td>27</td>
-  		<td>39</td>
-  		<td>54</td>
-  	</tr><tr>
-  		<td class="city">Paris</td>
-  		<td>France</td>
-  		<td>21</td>
-  		<td>25</td>
-  		<td>33</td>
-  		<td>50</td>
-  	</tr><tr>
-  		<td class="city">Madrid</td>
-  		<td>Spain</td>
-  		<td>20</td>
-  		<td>32</td>
-  		<td>31</td>
-  		<td>&ndash;</td>
-  	</tr><tr>
-  		<td class="city">New York, New York</td>
-  		<td>United States</td>
-  		<td>19</td>
-  		<td>16</td>
-  		<td>&ndash;</td>
-  		<td>&ndash;</td>
-  	</tr><tr>
-  		<td class="city">Moskva</td>
-  		<td>Russia</td>
-  		<td>15</td>
-  		<td>&ndash;</td>
-  		<td>&ndash;</td>
-  		<td>&ndash;</td>
-  </tr></table>
-
+<tr>
+<th></th>
+<th></th>
+<th>Round 1</th>
+<th>Round 2</th>
+<th>Round 3</th>
+<th>Round 4</th>
+</tr><tr>
+<td class="city">London</td>
+<td>Great Britain</td>
+<td>22</td>
+<td>27</td>
+<td>39</td>
+<td>54</td>
+</tr><tr>
+<td class="city">Paris</td>
+<td>France</td>
+<td>21</td>
+<td>25</td>
+<td>33</td>
+<td>50</td>
+</tr><tr>
+<td class="city">Madrid</td>
+<td>Spain</td>
+<td>20</td>
+<td>32</td>
+<td>31</td>
+<td>–</td>
+</tr><tr>
+<td class="city">New York, New York</td>
+<td>United States</td>
+<td>19</td>
+<td>16</td>
+<td>–</td>
+<td>–</td>
+</tr><tr>
+<td class="city">Moskva</td>
+<td>Russia</td>
+<td>15</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr></table>
 </div>
-
 <h2>Ceremonies</h2>
 <table class="table table-striped table-condensed">
 <tr>
 <th><a href="/ceremonies/officially_opened">Officially opened by</a></th>
-<td><a href="/athletes/1100018">Elizabeth II, Queen of the United Kingdom</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Queen</td>
+<td><a href="/athletes/1100018">Elizabeth II, Queen of the United Kingdom</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Queen</td>
 </tr>
 <tr>
 <th><a href="/ceremonies/torch_bearers">Torchbearer</a></th>
-<td><a href="/athletes/1700508">Ino Menegaki</a></td><td><span class="nowrap"><a href="/countries/GRE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" />GRE</a></span></td><td></td><td>High Priestess at Olympia Flame Lighting Ceremony</td>
+<td><a href="/athletes/1700508">Ino Menegaki</a></td><td><span class="nowrap"><a href="/countries/GRE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GRE</a></span></td><td></td><td>High Priestess at Olympia Flame Lighting Ceremony</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/93497">Spyros Gianniotis</a></td><td><span class="nowrap"><a href="/countries/GRE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" />GRE</a></span></td><td>Marathon SwimmingSwimming</td><td>First torch-bearer at Olympia.</td>
+<td><a href="/athletes/93497">Spyros Gianniotis</a></td><td><span class="nowrap"><a href="/countries/GRE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GRE</a></span></td><td>Marathon SwimmingSwimming</td><td>First torch-bearer at Olympia.</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/37440">Steven Redgrave</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td>Rowing</td><td>Torch bearer within stadium</td>
+<td><a href="/athletes/37440">Steven Redgrave</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td>Rowing</td><td>Torch bearer within stadium</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100081">Callum Airlie</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Lit flame</td>
+<td><a href="/athletes/1100081">Callum Airlie</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Lit flame</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100082">Jordan Duckitt</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Lit flame</td>
+<td><a href="/athletes/1100082">Jordan Duckitt</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Lit flame</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/130203">Desirèe Henry</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td>Athletics</td><td>Lit flame</td>
+<td><a href="/athletes/130203">Desirèe Henry</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td>Athletics</td><td>Lit flame</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100084">Cameron MacRitchie</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Lit flame</td>
+<td><a href="/athletes/1100084">Cameron MacRitchie</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Lit flame</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100085">Aidan Reynolds</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Lit flame</td>
+<td><a href="/athletes/1100085">Aidan Reynolds</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Lit flame</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100086">Adelle Tracey</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td>Athletics</td><td>Lit flame</td>
+<td><a href="/athletes/1100086">Adelle Tracey</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td>Athletics</td><td>Lit flame</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100087">Katie Kirk</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Lit flame</td>
+<td><a href="/athletes/1100087">Katie Kirk</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Lit flame</td>
 </tr>
 <tr>
-<th><a href="/ceremonies/athlete_oath">Taker of the Athlete&#39;s Oath</a></th>
-<td><a href="/athletes/94108">Sarah Stevenson</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td>Taekwondo</td><td></td>
+<th><a href="/ceremonies/athlete_oath">Taker of the Athlete's Oath</a></th>
+<td><a href="/athletes/94108">Sarah Stevenson</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td>Taekwondo</td><td></td>
 </tr>
 <tr>
-<th><a href="/ceremonies/official_oath">Taker of the Official&#39;s Oath</a></th>
-<td><a href="/athletes/1100058">Mik Basi</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td>Boxing</td><td></td>
+<th><a href="/ceremonies/official_oath">Taker of the Official's Oath</a></th>
+<td><a href="/athletes/1100058">Mik Basi</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td>Boxing</td><td></td>
 </tr>
 <tr>
-<th><a href="/ceremonies/coach_oath">Taker of the Coach&#39;s Oath</a></th>
-<td><a href="/athletes/1800155">Eric Farrell</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td>Canoe Sprint</td><td></td>
+<th><a href="/ceremonies/coach_oath">Taker of the Coach's Oath</a></th>
+<td><a href="/athletes/1800155">Eric Farrell</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td>Canoe Sprint</td><td></td>
 </tr>
 <tr>
 <th><a href="/ceremonies/olympic_flag_bearers">Olympic Flag Bearer</a></th>
-<td><a href="/athletes/1200127">Ban Gi-Mun</a></td><td><span class="nowrap"><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" />KOR</a></span></td><td></td><td>Bearer</td>
+<td><a href="/athletes/1200127">Ban Gi-Mun</a></td><td><span class="nowrap"><a href="/countries/KOR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>KOR</a></span></td><td></td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/67405">Haile Gebrselassie</a></td><td><span class="nowrap"><a href="/countries/ETH"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ETH.svg" />ETH</a></span></td><td>Athletics</td><td>Bearer</td>
+<td><a href="/athletes/67405">Haile Gebrselassie</a></td><td><span class="nowrap"><a href="/countries/ETH"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ETH.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>ETH</a></span></td><td>Athletics</td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/8643">Cassius Clay</a></td><td><span class="nowrap"><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" />USA</a></span></td><td>Boxing</td><td>Bearer</td>
+<td><a href="/athletes/8643">Cassius Clay</a></td><td><span class="nowrap"><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>USA</a></span></td><td>Boxing</td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100145">Leymah Gbowee</a></td><td><span class="nowrap"><a href="/countries/LBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/LBR.svg" />LBR</a></span></td><td></td><td>Bearer</td>
+<td><a href="/athletes/1100145">Leymah Gbowee</a></td><td><span class="nowrap"><a href="/countries/LBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/LBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>LBR</a></span></td><td></td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100143">Daniel Barenboim</a></td><td><span class="nowrap"><a href="/countries/ISR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ISR.svg" />ISR</a></span></td><td></td><td>Bearer</td>
+<td><a href="/athletes/1100143">Daniel Barenboim</a></td><td><span class="nowrap"><a href="/countries/ISR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ISR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>ISR</a></span></td><td></td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100144">Marina Silva</a></td><td><span class="nowrap"><a href="/countries/BRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRA.svg" />BRA</a></span></td><td></td><td>Bearer</td>
+<td><a href="/athletes/1100144">Marina Silva</a></td><td><span class="nowrap"><a href="/countries/BRA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>BRA</a></span></td><td></td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100142">Shami Chakrabarti</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Bearer</td>
+<td><a href="/athletes/1100142">Shami Chakrabarti</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100141">Sally Becker</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Bearer</td>
+<td><a href="/athletes/1100141">Sally Becker</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Bearer</td>
 </tr>
 <tr>
 <th></th>
-<td><a href="/athletes/1100140">Doreen Lawrence</a></td><td><span class="nowrap"><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" />GBR</a></span></td><td></td><td>Bearer</td>
+<td><a href="/athletes/1100140">Doreen Lawrence</a></td><td><span class="nowrap"><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/>GBR</a></span></td><td></td><td>Bearer</td>
 </tr>
 <tr>
 <th><a href="/ceremonies">Flagbearers</a></th>
@@ -397,7 +368,6 @@ Overview
 <td></td>
 </tr>
 </table>
-
 <h2>Medal Disciplines</h2>
 <table class="table table-striped">
 <tr>
@@ -544,7 +514,6 @@ Overview
 </td>
 </tr>
 </table>
-
 <h2>Medal table</h2>
 <table class="table table-striped">
 <thead>
@@ -558,15 +527,15 @@ Overview
 </thead>
 <tr>
 <td><a href="/countries/USA">United States</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>48</td>
 <td>26</td>
 <td>32</td>
 <td>106</td>
 </tr>
 <tr>
-<td><a href="/countries/CHN">People&#39;s Republic of China</a></td>
-<td><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" /> CHN</a></td>
+<td><a href="/countries/CHN">People's Republic of China</a></td>
+<td><a href="/countries/CHN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CHN</a></td>
 <td>39</td>
 <td>31</td>
 <td>22</td>
@@ -574,7 +543,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/GBR">Great Britain</a></td>
-<td><a href="/countries/GBR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" /> GBR</a></td>
+<td><a href="/countries/GBR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GBR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> GBR</a></td>
 <td>29</td>
 <td>18</td>
 <td>18</td>
@@ -582,7 +551,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/RUS">Russian Federation</a></td>
-<td><a href="/countries/RUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" /> RUS</a></td>
+<td><a href="/countries/RUS"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RUS.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> RUS</a></td>
 <td>18</td>
 <td>19</td>
 <td>26</td>
@@ -590,7 +559,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/KOR">Republic of Korea</a></td>
-<td><a href="/countries/KOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" /> KOR</a></td>
+<td><a href="/countries/KOR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KOR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> KOR</a></td>
 <td>13</td>
 <td>9</td>
 <td>9</td>
@@ -598,7 +567,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/GER">Germany</a></td>
-<td><a href="/countries/GER"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GER.svg" /> GER</a></td>
+<td><a href="/countries/GER"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GER.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> GER</a></td>
 <td>11</td>
 <td>20</td>
 <td>13</td>
@@ -606,7 +575,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/FRA">France</a></td>
-<td><a href="/countries/FRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FRA.svg" /> FRA</a></td>
+<td><a href="/countries/FRA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FRA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> FRA</a></td>
 <td>11</td>
 <td>11</td>
 <td>13</td>
@@ -614,7 +583,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/AUS">Australia</a></td>
-<td><a href="/countries/AUS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AUS.svg" /> AUS</a></td>
+<td><a href="/countries/AUS"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AUS.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> AUS</a></td>
 <td>8</td>
 <td>15</td>
 <td>12</td>
@@ -622,7 +591,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/ITA">Italy</a></td>
-<td><a href="/countries/ITA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" /> ITA</a></td>
+<td><a href="/countries/ITA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ITA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> ITA</a></td>
 <td>8</td>
 <td>9</td>
 <td>11</td>
@@ -630,7 +599,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/HUN">Hungary</a></td>
-<td><a href="/countries/HUN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/HUN.svg" /> HUN</a></td>
+<td><a href="/countries/HUN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/HUN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> HUN</a></td>
 <td>8</td>
 <td>4</td>
 <td>6</td>
@@ -638,7 +607,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/JPN">Japan</a></td>
-<td><a href="/countries/JPN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JPN.svg" /> JPN</a></td>
+<td><a href="/countries/JPN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JPN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> JPN</a></td>
 <td>7</td>
 <td>14</td>
 <td>17</td>
@@ -646,7 +615,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/IRI">Islamic Republic of Iran</a></td>
-<td><a href="/countries/IRI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" /> IRI</a></td>
+<td><a href="/countries/IRI"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRI.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> IRI</a></td>
 <td>7</td>
 <td>5</td>
 <td>1</td>
@@ -654,7 +623,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/NED">Netherlands</a></td>
-<td><a href="/countries/NED"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NED.svg" /> NED</a></td>
+<td><a href="/countries/NED"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NED.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> NED</a></td>
 <td>6</td>
 <td>6</td>
 <td>8</td>
@@ -662,7 +631,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/NZL">New Zealand</a></td>
-<td><a href="/countries/NZL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NZL.svg" /> NZL</a></td>
+<td><a href="/countries/NZL"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NZL.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> NZL</a></td>
 <td>6</td>
 <td>2</td>
 <td>5</td>
@@ -670,7 +639,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/UKR">Ukraine</a></td>
-<td><a href="/countries/UKR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UKR.svg" /> UKR</a></td>
+<td><a href="/countries/UKR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UKR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> UKR</a></td>
 <td>5</td>
 <td>4</td>
 <td>10</td>
@@ -678,7 +647,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/CUB">Cuba</a></td>
-<td><a href="/countries/CUB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CUB.svg" /> CUB</a></td>
+<td><a href="/countries/CUB"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CUB.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CUB</a></td>
 <td>5</td>
 <td>3</td>
 <td>7</td>
@@ -686,7 +655,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/ESP">Spain</a></td>
-<td><a href="/countries/ESP"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ESP.svg" /> ESP</a></td>
+<td><a href="/countries/ESP"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ESP.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> ESP</a></td>
 <td>4</td>
 <td>10</td>
 <td>6</td>
@@ -694,7 +663,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/JAM">Jamaica</a></td>
-<td><a href="/countries/JAM"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JAM.svg" /> JAM</a></td>
+<td><a href="/countries/JAM"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JAM.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> JAM</a></td>
 <td>4</td>
 <td>5</td>
 <td>4</td>
@@ -702,7 +671,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/CZE">Czechia</a></td>
-<td><a href="/countries/CZE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CZE.svg" /> CZE</a></td>
+<td><a href="/countries/CZE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CZE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CZE</a></td>
 <td>4</td>
 <td>4</td>
 <td>3</td>
@@ -710,15 +679,15 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/RSA">South Africa</a></td>
-<td><a href="/countries/RSA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RSA.svg" /> RSA</a></td>
+<td><a href="/countries/RSA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/RSA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> RSA</a></td>
 <td>4</td>
 <td>1</td>
 <td>1</td>
 <td>6</td>
 </tr>
 <tr>
-<td><a href="/countries/PRK">Democratic People&#39;s Republic of Korea</a></td>
-<td><a href="/countries/PRK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" /> PRK</a></td>
+<td><a href="/countries/PRK">Democratic People's Republic of Korea</a></td>
+<td><a href="/countries/PRK"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PRK.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> PRK</a></td>
 <td>4</td>
 <td>0</td>
 <td>3</td>
@@ -726,7 +695,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/BRA">Brazil</a></td>
-<td><a href="/countries/BRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRA.svg" /> BRA</a></td>
+<td><a href="/countries/BRA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> BRA</a></td>
 <td>3</td>
 <td>5</td>
 <td>9</td>
@@ -734,7 +703,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/ETH">Ethiopia</a></td>
-<td><a href="/countries/ETH"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ETH.svg" /> ETH</a></td>
+<td><a href="/countries/ETH"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ETH.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> ETH</a></td>
 <td>3</td>
 <td>3</td>
 <td>2</td>
@@ -742,7 +711,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/POL">Poland</a></td>
-<td><a href="/countries/POL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POL.svg" /> POL</a></td>
+<td><a href="/countries/POL"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POL.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> POL</a></td>
 <td>3</td>
 <td>2</td>
 <td>6</td>
@@ -750,7 +719,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/KAZ">Kazakhstan</a></td>
-<td><a href="/countries/KAZ"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KAZ.svg" /> KAZ</a></td>
+<td><a href="/countries/KAZ"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KAZ.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> KAZ</a></td>
 <td>3</td>
 <td>1</td>
 <td>7</td>
@@ -758,7 +727,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/CRO">Croatia</a></td>
-<td><a href="/countries/CRO"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CRO.svg" /> CRO</a></td>
+<td><a href="/countries/CRO"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CRO.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CRO</a></td>
 <td>3</td>
 <td>1</td>
 <td>2</td>
@@ -766,7 +735,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/CAN">Canada</a></td>
-<td><a href="/countries/CAN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CAN.svg" /> CAN</a></td>
+<td><a href="/countries/CAN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CAN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CAN</a></td>
 <td>2</td>
 <td>6</td>
 <td>10</td>
@@ -774,7 +743,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/KEN">Kenya</a></td>
-<td><a href="/countries/KEN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KEN.svg" /> KEN</a></td>
+<td><a href="/countries/KEN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KEN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> KEN</a></td>
 <td>2</td>
 <td>5</td>
 <td>6</td>
@@ -782,7 +751,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/BLR">Belarus</a></td>
-<td><a href="/countries/BLR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BLR.svg" /> BLR</a></td>
+<td><a href="/countries/BLR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BLR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> BLR</a></td>
 <td>2</td>
 <td>5</td>
 <td>3</td>
@@ -790,7 +759,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/DEN">Denmark</a></td>
-<td><a href="/countries/DEN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/DEN.svg" /> DEN</a></td>
+<td><a href="/countries/DEN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/DEN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> DEN</a></td>
 <td>2</td>
 <td>4</td>
 <td>3</td>
@@ -798,7 +767,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/ROU">Romania</a></td>
-<td><a href="/countries/ROU"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ROU.svg" /> ROU</a></td>
+<td><a href="/countries/ROU"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ROU.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> ROU</a></td>
 <td>2</td>
 <td>4</td>
 <td>1</td>
@@ -806,7 +775,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/AZE">Azerbaijan</a></td>
-<td><a href="/countries/AZE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AZE.svg" /> AZE</a></td>
+<td><a href="/countries/AZE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AZE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> AZE</a></td>
 <td>2</td>
 <td>2</td>
 <td>5</td>
@@ -814,7 +783,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/SUI">Switzerland</a></td>
-<td><a href="/countries/SUI"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SUI.svg" /> SUI</a></td>
+<td><a href="/countries/SUI"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SUI.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> SUI</a></td>
 <td>2</td>
 <td>2</td>
 <td>0</td>
@@ -822,7 +791,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/NOR">Norway</a></td>
-<td><a href="/countries/NOR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NOR.svg" /> NOR</a></td>
+<td><a href="/countries/NOR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NOR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> NOR</a></td>
 <td>2</td>
 <td>1</td>
 <td>1</td>
@@ -830,7 +799,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/LTU">Lithuania</a></td>
-<td><a href="/countries/LTU"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/LTU.svg" /> LTU</a></td>
+<td><a href="/countries/LTU"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/LTU.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> LTU</a></td>
 <td>2</td>
 <td>0</td>
 <td>3</td>
@@ -838,7 +807,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/TUN">Tunisia</a></td>
-<td><a href="/countries/TUN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TUN.svg" /> TUN</a></td>
+<td><a href="/countries/TUN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TUN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> TUN</a></td>
 <td>2</td>
 <td>0</td>
 <td>1</td>
@@ -846,7 +815,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/SWE">Sweden</a></td>
-<td><a href="/countries/SWE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SWE.svg" /> SWE</a></td>
+<td><a href="/countries/SWE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SWE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> SWE</a></td>
 <td>1</td>
 <td>4</td>
 <td>3</td>
@@ -854,7 +823,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/COL">Colombia</a></td>
-<td><a href="/countries/COL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/COL.svg" /> COL</a></td>
+<td><a href="/countries/COL"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/COL.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> COL</a></td>
 <td>1</td>
 <td>3</td>
 <td>5</td>
@@ -862,7 +831,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/MEX">Mexico</a></td>
-<td><a href="/countries/MEX"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MEX.svg" /> MEX</a></td>
+<td><a href="/countries/MEX"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MEX.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> MEX</a></td>
 <td>1</td>
 <td>3</td>
 <td>4</td>
@@ -870,7 +839,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/GEO">Georgia</a></td>
-<td><a href="/countries/GEO"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GEO.svg" /> GEO</a></td>
+<td><a href="/countries/GEO"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GEO.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> GEO</a></td>
 <td>1</td>
 <td>2</td>
 <td>3</td>
@@ -878,7 +847,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/IRL">Ireland</a></td>
-<td><a href="/countries/IRL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRL.svg" /> IRL</a></td>
+<td><a href="/countries/IRL"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IRL.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> IRL</a></td>
 <td>1</td>
 <td>1</td>
 <td>4</td>
@@ -886,7 +855,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/ARG">Argentina</a></td>
-<td><a href="/countries/ARG"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ARG.svg" /> ARG</a></td>
+<td><a href="/countries/ARG"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ARG.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> ARG</a></td>
 <td>1</td>
 <td>1</td>
 <td>2</td>
@@ -894,7 +863,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/SRB">Serbia</a></td>
-<td><a href="/countries/SRB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SRB.svg" /> SRB</a></td>
+<td><a href="/countries/SRB"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SRB.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> SRB</a></td>
 <td>1</td>
 <td>1</td>
 <td>2</td>
@@ -902,7 +871,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/SLO">Slovenia</a></td>
-<td><a href="/countries/SLO"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SLO.svg" /> SLO</a></td>
+<td><a href="/countries/SLO"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SLO.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> SLO</a></td>
 <td>1</td>
 <td>1</td>
 <td>2</td>
@@ -910,7 +879,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/TTO">Trinidad and Tobago</a></td>
-<td><a href="/countries/TTO"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TTO.svg" /> TTO</a></td>
+<td><a href="/countries/TTO"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TTO.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> TTO</a></td>
 <td>1</td>
 <td>1</td>
 <td>2</td>
@@ -918,7 +887,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/TUR">Türkiye</a></td>
-<td><a href="/countries/TUR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TUR.svg" /> TUR</a></td>
+<td><a href="/countries/TUR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TUR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> TUR</a></td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
@@ -926,7 +895,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/DOM">Dominican Republic</a></td>
-<td><a href="/countries/DOM"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/DOM.svg" /> DOM</a></td>
+<td><a href="/countries/DOM"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/DOM.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> DOM</a></td>
 <td>1</td>
 <td>1</td>
 <td>0</td>
@@ -934,7 +903,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/TPE">Chinese Taipei</a></td>
-<td><a href="/countries/TPE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TPE.svg" /> TPE</a></td>
+<td><a href="/countries/TPE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TPE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> TPE</a></td>
 <td>1</td>
 <td>0</td>
 <td>1</td>
@@ -942,7 +911,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/LAT">Latvia</a></td>
-<td><a href="/countries/LAT"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/LAT.svg" /> LAT</a></td>
+<td><a href="/countries/LAT"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/LAT.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> LAT</a></td>
 <td>1</td>
 <td>0</td>
 <td>1</td>
@@ -950,7 +919,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/ALG">Algeria</a></td>
-<td><a href="/countries/ALG"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ALG.svg" /> ALG</a></td>
+<td><a href="/countries/ALG"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ALG.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> ALG</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -958,7 +927,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/BRN">Bahrain</a></td>
-<td><a href="/countries/BRN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRN.svg" /> BRN</a></td>
+<td><a href="/countries/BRN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BRN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> BRN</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -966,7 +935,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/GRN">Grenada</a></td>
-<td><a href="/countries/GRN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRN.svg" /> GRN</a></td>
+<td><a href="/countries/GRN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> GRN</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -974,7 +943,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/BAH">The Bahamas</a></td>
-<td><a href="/countries/BAH"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BAH.svg" /> BAH</a></td>
+<td><a href="/countries/BAH"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BAH.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> BAH</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -982,7 +951,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/UGA">Uganda</a></td>
-<td><a href="/countries/UGA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UGA.svg" /> UGA</a></td>
+<td><a href="/countries/UGA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UGA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> UGA</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -990,7 +959,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/VEN">Venezuela</a></td>
-<td><a href="/countries/VEN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VEN.svg" /> VEN</a></td>
+<td><a href="/countries/VEN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VEN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> VEN</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -998,7 +967,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/EGY">Egypt</a></td>
-<td><a href="/countries/EGY"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/EGY.svg" /> EGY</a></td>
+<td><a href="/countries/EGY"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/EGY.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> EGY</a></td>
 <td>0</td>
 <td>3</td>
 <td>1</td>
@@ -1006,7 +975,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/IND">India</a></td>
-<td><a href="/countries/IND"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IND.svg" /> IND</a></td>
+<td><a href="/countries/IND"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/IND.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> IND</a></td>
 <td>0</td>
 <td>2</td>
 <td>4</td>
@@ -1014,7 +983,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/MGL">Mongolia</a></td>
-<td><a href="/countries/MGL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MGL.svg" /> MGL</a></td>
+<td><a href="/countries/MGL"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MGL.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> MGL</a></td>
 <td>0</td>
 <td>2</td>
 <td>3</td>
@@ -1022,7 +991,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/THA">Thailand</a></td>
-<td><a href="/countries/THA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/THA.svg" /> THA</a></td>
+<td><a href="/countries/THA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/THA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> THA</a></td>
 <td>0</td>
 <td>2</td>
 <td>2</td>
@@ -1030,7 +999,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/BUL">Bulgaria</a></td>
-<td><a href="/countries/BUL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BUL.svg" /> BUL</a></td>
+<td><a href="/countries/BUL"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BUL.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> BUL</a></td>
 <td>0</td>
 <td>2</td>
 <td>1</td>
@@ -1038,7 +1007,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/FIN">Finland</a></td>
-<td><a href="/countries/FIN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FIN.svg" /> FIN</a></td>
+<td><a href="/countries/FIN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FIN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> FIN</a></td>
 <td>0</td>
 <td>2</td>
 <td>1</td>
@@ -1046,7 +1015,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/INA">Indonesia</a></td>
-<td><a href="/countries/INA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/INA.svg" /> INA</a></td>
+<td><a href="/countries/INA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/INA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> INA</a></td>
 <td>0</td>
 <td>2</td>
 <td>1</td>
@@ -1054,7 +1023,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/SVK">Slovakia</a></td>
-<td><a href="/countries/SVK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SVK.svg" /> SVK</a></td>
+<td><a href="/countries/SVK"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SVK.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> SVK</a></td>
 <td>0</td>
 <td>1</td>
 <td>3</td>
@@ -1062,7 +1031,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/BEL">Belgium</a></td>
-<td><a href="/countries/BEL"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BEL.svg" /> BEL</a></td>
+<td><a href="/countries/BEL"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BEL.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> BEL</a></td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
@@ -1070,7 +1039,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/ARM">Armenia</a></td>
-<td><a href="/countries/ARM"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ARM.svg" /> ARM</a></td>
+<td><a href="/countries/ARM"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/ARM.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> ARM</a></td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
@@ -1078,7 +1047,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/EST">Estonia</a></td>
-<td><a href="/countries/EST"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/EST.svg" /> EST</a></td>
+<td><a href="/countries/EST"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/EST.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> EST</a></td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
@@ -1086,7 +1055,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/MAS">Malaysia</a></td>
-<td><a href="/countries/MAS"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MAS.svg" /> MAS</a></td>
+<td><a href="/countries/MAS"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MAS.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> MAS</a></td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
@@ -1094,7 +1063,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/PUR">Puerto Rico</a></td>
-<td><a href="/countries/PUR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PUR.svg" /> PUR</a></td>
+<td><a href="/countries/PUR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/PUR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> PUR</a></td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
@@ -1102,7 +1071,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/QAT">Qatar</a></td>
-<td><a href="/countries/QAT"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/QAT.svg" /> QAT</a></td>
+<td><a href="/countries/QAT"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/QAT.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> QAT</a></td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
@@ -1110,7 +1079,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/BOT">Botswana</a></td>
-<td><a href="/countries/BOT"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BOT.svg" /> BOT</a></td>
+<td><a href="/countries/BOT"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/BOT.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> BOT</a></td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -1118,7 +1087,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/CYP">Cyprus</a></td>
-<td><a href="/countries/CYP"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CYP.svg" /> CYP</a></td>
+<td><a href="/countries/CYP"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CYP.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CYP</a></td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -1126,7 +1095,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/GAB">Gabon</a></td>
-<td><a href="/countries/GAB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GAB.svg" /> GAB</a></td>
+<td><a href="/countries/GAB"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GAB.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> GAB</a></td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -1134,7 +1103,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/GUA">Guatemala</a></td>
-<td><a href="/countries/GUA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GUA.svg" /> GUA</a></td>
+<td><a href="/countries/GUA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GUA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> GUA</a></td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -1142,7 +1111,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/MNE">Montenegro</a></td>
-<td><a href="/countries/MNE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MNE.svg" /> MNE</a></td>
+<td><a href="/countries/MNE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MNE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> MNE</a></td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -1150,7 +1119,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/POR">Portugal</a></td>
-<td><a href="/countries/POR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POR.svg" /> POR</a></td>
+<td><a href="/countries/POR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/POR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> POR</a></td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -1158,7 +1127,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/UZB">Uzbekistan</a></td>
-<td><a href="/countries/UZB"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UZB.svg" /> UZB</a></td>
+<td><a href="/countries/UZB"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/UZB.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> UZB</a></td>
 <td>0</td>
 <td>0</td>
 <td>3</td>
@@ -1166,7 +1135,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/GRE">Greece</a></td>
-<td><a href="/countries/GRE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" /> GRE</a></td>
+<td><a href="/countries/GRE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/GRE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> GRE</a></td>
 <td>0</td>
 <td>0</td>
 <td>2</td>
@@ -1174,7 +1143,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/SGP">Singapore</a></td>
-<td><a href="/countries/SGP"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SGP.svg" /> SGP</a></td>
+<td><a href="/countries/SGP"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/SGP.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> SGP</a></td>
 <td>0</td>
 <td>0</td>
 <td>2</td>
@@ -1182,7 +1151,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/AFG">Afghanistan</a></td>
-<td><a href="/countries/AFG"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AFG.svg" /> AFG</a></td>
+<td><a href="/countries/AFG"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/AFG.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> AFG</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -1190,7 +1159,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/CMR">Cameroon</a></td>
-<td><a href="/countries/CMR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CMR.svg" /> CMR</a></td>
+<td><a href="/countries/CMR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CMR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CMR</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -1198,7 +1167,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/HKG">Hong Kong, China</a></td>
-<td><a href="/countries/HKG"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/HKG.svg" /> HKG</a></td>
+<td><a href="/countries/HKG"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/HKG.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> HKG</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -1206,7 +1175,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/KSA">Kingdom of Saudi Arabia</a></td>
-<td><a href="/countries/KSA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KSA.svg" /> KSA</a></td>
+<td><a href="/countries/KSA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KSA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> KSA</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -1214,7 +1183,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/KUW">Kuwait</a></td>
-<td><a href="/countries/KUW"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KUW.svg" /> KUW</a></td>
+<td><a href="/countries/KUW"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/KUW.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> KUW</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -1222,7 +1191,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/MAR">Morocco</a></td>
-<td><a href="/countries/MAR"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MAR.svg" /> MAR</a></td>
+<td><a href="/countries/MAR"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/MAR.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> MAR</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -1230,7 +1199,7 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/TJK">Tajikistan</a></td>
-<td><a href="/countries/TJK"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TJK.svg" /> TJK</a></td>
+<td><a href="/countries/TJK"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/TJK.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> TJK</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -1238,14 +1207,13 @@ Overview
 </tr>
 <tr>
 <td><a href="/countries/VIE">Vietnam</a></td>
-<td><a href="/countries/VIE"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VIE.svg" /> VIE</a></td>
+<td><a href="/countries/VIE"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/VIE.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> VIE</a></td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
 </tr>
 </table>
-
 <h2>Most successful competitors</h2>
 <table class="table table-striped">
 <thead>
@@ -1260,7 +1228,7 @@ Overview
 </thead>
 <tr class="top">
 <td><a href="/athletes/93860">Michael Phelps</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>4</td>
 <td>2</td>
 <td>0</td>
@@ -1268,7 +1236,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/126679">Missy Franklin</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>4</td>
 <td>0</td>
 <td>1</td>
@@ -1276,7 +1244,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/115730">Allison Schmitt</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>3</td>
 <td>1</td>
 <td>1</td>
@@ -1284,7 +1252,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/103470">Dana Vollmer</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
@@ -1292,7 +1260,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/105293">Allyson Felix</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
@@ -1300,7 +1268,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/105512">Usain Bolt</a></td>
-<td><a href="/countries/JAM"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JAM.svg" /> JAM</a></td>
+<td><a href="/countries/JAM"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/JAM.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> JAM</a></td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
@@ -1308,7 +1276,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/103585">Ryan Lochte</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>2</td>
 <td>2</td>
 <td>1</td>
@@ -1316,7 +1284,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/112216">Sun Yang</a></td>
-<td><a href="/countries/CHN"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" /> CHN</a></td>
+<td><a href="/countries/CHN"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/CHN.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> CHN</a></td>
 <td>2</td>
 <td>1</td>
 <td>1</td>
@@ -1324,7 +1292,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/112317">Ranomi Kromowidjojo</a></td>
-<td><a href="/countries/NED"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NED.svg" /> NED</a></td>
+<td><a href="/countries/NED"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/NED.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> NED</a></td>
 <td>2</td>
 <td>1</td>
 <td>0</td>
@@ -1332,7 +1300,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/115594">Matt Grevers</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>2</td>
 <td>1</td>
 <td>0</td>
@@ -1340,7 +1308,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/115617">Nathan Adrian</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>2</td>
 <td>1</td>
 <td>0</td>
@@ -1348,7 +1316,7 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/115676">Rebecca Soni</a></td>
-<td><a href="/countries/USA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" /> USA</a></td>
+<td><a href="/countries/USA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/USA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> USA</a></td>
 <td>2</td>
 <td>1</td>
 <td>0</td>
@@ -1356,22 +1324,20 @@ Overview
 </tr>
 <tr class="top">
 <td><a href="/athletes/125868">Yannick Agnel</a></td>
-<td><a href="/countries/FRA"><img style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle" src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FRA.svg" /> FRA</a></td>
+<td><a href="/countries/FRA"><img src="https://olympedia-flags.s3.eu-central-1.amazonaws.com/FRA.svg" style="max-width: 25px; max-height: 15px; padding-right: 2px; vertical-align: middle"/> FRA</a></td>
 <td>2</td>
 <td>1</td>
 <td>0</td>
 <td>3</td>
 </tr>
 </table>
-
 <p>
 <i><a href="/editions/54/medal">All medalists at these Games</a></i>
 </p>
-
 </div>
 </body>
 <footer class="footer">
-<br>
+<br/>
 <div class="panel panel-info">
 <div class="panel-heading">
 <h3 class="panel-title">
@@ -1381,8 +1347,6 @@ Did you know?
 </div>
 <div class="panel-body">
 <p>The Barcelona Olympics in 1992 were the first Games without any form of boycott in 20 years.</p>
-
-
 </div>
 </div>
 <div class="container">
@@ -1400,11 +1364,10 @@ Did you know?
 <a href="/feedbacks/new">Feedback</a>
 </p>
 <p>
-&copy; <a href="/static/about">OlyMADMen</a> 2006 — 2026
+© <a href="/static/about">OlyMADMen</a> 2006 — 2026
 </p>
 </div>
 </footer>
-
 <script src="/assets/lightbox.min-a06f7b5a37bdc88a78a48f95b9149ca917761a07bffb855a6d73c1a435e16552.js"></script>
 <script>
   $('.footnote').tooltip();
