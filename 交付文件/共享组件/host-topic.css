@@ -1,4 +1,16 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
+html body.host-topic .s1-chart-group{min-width:0}
+html body.host-topic .s1-chart-group .s1-chart-axis{margin:0 0 20px;transform:none}
+html body.host-topic .s1-picker button{display:flex!important;flex-direction:column;align-items:flex-start;gap:3px;min-width:64px}
+html body.host-topic .s1-picker button>span{font-size:20px;font-variant-numeric:tabular-nums;line-height:1.4}
+html body.host-topic .s1-picker button>small{font-size:12px;font-weight:400;line-height:1.6}
+html body.host-topic .s1-bars{position:relative}
+html body.host-topic .s1-bar>div{background:linear-gradient(90deg,transparent calc(50% - .5px),#9caeae30 50%,transparent calc(50% + .5px));border-inline:1px solid #9caeae30;padding-block:10px}
+html body.host-topic .s1-chart-axis{grid-column:2;align-self:end;font-size:12px;opacity:.65;margin:0 0 -58px;transform:translateY(-54px)}
+html body.host-topic .s1-chart-axis>div{display:flex;justify-content:space-between;margin:8px 80px 0}
+html body.host-topic .s1-case:has(.s1-chart-axis){row-gap:48px!important}
+html body.host-topic .s1-case .s1-bars{grid-column:2}
+@media(max-width:700px){html body.host-topic .s1-chart-axis{grid-column:1;margin:0;transform:none}html body.host-topic .s1-case .s1-bars{grid-column:1}html body.host-topic .s1-case:has(.s1-chart-axis){row-gap:20px!important}}
 html body.host-topic .s1-picker{display:flex!important;flex-wrap:wrap!important;gap:8px 28px!important;border:0!important;border-bottom:1px solid var(--line)!important;padding:8px 0 0!important;margin:28px 0 0!important;background:transparent!important}
 html body.host-topic .s1-picker button{font-family:inherit!important;font-size:15px!important;font-weight:400!important;line-height:1.7!important;padding:14px 0!important;margin:0!important;min-height:48px!important;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;background:transparent!important;background-image:none!important;box-shadow:none!important;color:var(--ink)!important;opacity:.65;transform:none!important;transition:color 150ms ease,opacity 150ms ease!important}
 html body.host-topic .s1-picker button:is(:hover,[aria-pressed=true]){opacity:1!important;background:transparent!important}
