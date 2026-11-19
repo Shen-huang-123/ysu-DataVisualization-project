@@ -1,0 +1,7 @@
+html body #project-reading-policy{width:auto!important;max-width:none!important;margin:40px 6vw!important;padding:36px 0!important;box-sizing:border-box!important;border-radius:0!important}
+html body #project-reading-policy h2{max-width:none!important;font-size:clamp(26px,2.7vw,42px)!important;font-weight:500!important;line-height:1.5!important;margin:12px 0 24px!important}
+html body #project-reading-policy p{max-width:none!important;line-height:1.95!important}
+html body #project-reading-policy details{max-width:none!important;width:100%!important;box-sizing:border-box!important}
+html body #project-reading-policy table{width:100%!important;max-width:none!important;table-layout:fixed}
+html body #project-reading-policy th,html body #project-reading-policy td{overflow-wrap:anywhere}
+@media(max-width:650px){html body #project-reading-policy{margin:28px 24px!important;padding:24px 0!important}html body #project-reading-policy table{font-size:13px!important}html body #project-reading-policy th,html body #project-reading-policy td{padding:12px 8px!important}}
