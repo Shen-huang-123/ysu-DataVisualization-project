@@ -1,0 +1,7 @@
+/* Shared native choices: transparent surface and one visible focus line. */
+html body[class][class][class][class][class] select:not([multiple]):not([size]){box-sizing:border-box!important;max-width:100%!important;min-width:0;min-height:48px!important;border:0!important;border-bottom:1px solid currentColor!important;border-radius:0!important;background:transparent!important;color:inherit!important;font-family:inherit!important;font-weight:500!important;font-size:16px!important;line-height:1.5!important;padding:10px 32px 10px 2px!important;box-shadow:none!important;outline:0!important;cursor:pointer;transform:none!important;color-scheme:light}
+html body[class][class][class][class][class] select:not([multiple]):not([size]):is(:hover,:focus-visible){border-bottom-color:var(--nr-accent,#b59b68)!important}
+html body[class][class][class][class][class] select:not([multiple]):not([size]):focus-visible{box-shadow:0 2px 0 var(--nr-accent,#b59b68)!important;outline:0!important}
+html body[class][class][class][class][class] select option{background:#f5f3ed!important;color:#18343d!important}
+html body.xz-dark select,html body.dark select,html[data-theme=dark] select,html body[data-theme=dark] select{color-scheme:dark}
+html body.xz-dark select option,html body.dark select option,html[data-theme=dark] select option,html body[data-theme=dark] select option{background:#11232b!important;color:#f1f3ef!important}

@@ -130,7 +130,8 @@
 
 **2008、2012、2016 三届仍有 555 项尚未取得“现行 IOC 逐小项授牌结果”的直接核验。**这 555 项已用 Olympedia 现行公开逐运动奖牌表完成独立二次来源配对：548 项与旧抓取存档三色一致，7 项差异已逐项记录。独立二次对照解决“只有一份旧抓取”的问题，**不等于 555 项获得 IOC 当前官方认证**。见：
 
-2026-11-15 补查 GitHub：`newsdev/odf` 有 OG2016 的 ODF Event 代码表但没有逐项奖牌结果；其他找到的是旧冬奥抓取工具、2024 非官方总榜或 Olympedia 镜像。未发现可核实版本和后续裁决的三届现行 IOC 逐项授牌文件，故 555 项等级不变。记录见 `交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/GitHub公开IOC数据检索_2026-11-15.md`。
+2026-11-15 补查 GitHub：
+ewsdev/odf` 有 OG2016 的 ODF Event 代码表但没有逐项奖牌结果；其他找到的是旧冬奥抓取工具、2024 非官方总榜或 Olympedia 镜像。未发现可核实版本和后续裁决的三届现行 IOC 逐项授牌文件，故 555 项等级不变。记录见 `交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/GitHub公开IOC数据检索_2026-11-15.md`。
 
 同日继续查“获取方法”：`Raymond1030/Olympics-Crawler` 有三届 Olympics.com 运动结果页 URL 清单和逐小项抓取脚本，但仓库未提交结果表；`DavidNCamelo/Olympic-Games-DataScraping` 的已提交 CSV 只有总榜和运动员奖牌，缺小项键。本机 Edge 打开里约田径结果页返回 HTTP/2 协议错误。下一步须在能打开 IOC 页面的环境先做一个运动的抓取和原页保存，再映射到 555 项；详见 `交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/GitHub获取IOC结果的方法核查_2026-11-15.md`。这尚未提升证据等级。
 
@@ -161,7 +162,9 @@ IOC 小项直连在此前环境中返回 502 或 Access Denied。赛时官方成
 3. ECharts 大屏可用 `python 项目工作区/scripts/build_echarts_screen.py` 从 CSV 重建 `data.json` 与离线 `index.html`。首次加入导航的脚本为 `项目工作区/scripts/wire_echarts_screen.py`；它是幂等的。ECharts 6.1.0 已本地打包，并附许可证。
    奖牌口径实验室可用 `python 项目工作区/scripts/build_medal_lens_lab.py` 重建，再用 `python 项目工作区/scripts/wire_medal_lens_lab.py` 接入首页与 S2 专题。方法和数据边界见同目录 `使用说明.md`。
    项目星系与预测风暴实验室可用 `py -3 项目工作区/scripts/build_experience_labs.py` 重建，并运行 `py -3 项目工作区/scripts/wire_experience_labs.py` 接入首页与任务入口。各自目录有 `使用说明.md`。预测风暴的滑杆不会重跑历史回测，蓝色范围不是新情景校准后的预测区间。
-   时空剧场在 `交付文件/任务四_开放创作/08_奥运时空剧场` 中运行 `npm ci`、`npm run build` 重建；数据构建脚本在 `项目工作区/scripts/build_spacetime_data.cjs`。`项目工作区/scripts/wire_spacetime_theatre.py` 负责导航接入。构建后的 HTML 可直接离线打开。
+   时空剧场在 `交付文件/任务四_开放创作/08_奥运时空剧场` 中运行 
+pm ci`、
+pm run build` 重建；数据构建脚本在 `项目工作区/scripts/build_spacetime_data.cjs`。`项目工作区/scripts/wire_spacetime_theatre.py` 负责导航接入。构建后的 HTML 可直接离线打开。
 4. 这个目录已是 Git 仓库，远端 `origin` 指向上述 GitHub 仓库。**本地修改不会自动上传**；完成后 `git add`、`git commit`、`git push origin main`。当前提交号始终以 `git log -1 --oneline` 为准，不把本文件中的旧哈希当成最新状态。
 5. 仓库原始 PDF 采用 Git LFS。换电脑克隆前安装 Git LFS，运行 `git lfs install`；克隆后若 PDF 只是指针文件，运行 `git lfs pull`。运行环境、浏览器缓存和重复打包的旧版本被 `.gitignore` 排除，重要作品文件均已纳入仓库。
 6. 删除本地文件夹不会删除 GitHub 已推送的内容；**未提交或未推送的修改会丢失**。换号后可用仓库 URL 重新克隆，但推送权限取决于新账号是否获授权。
@@ -851,3 +854,5 @@ B仅替换555项的奖牌代表团；C在所有历史年份剔除相关209条同
 
 2026-11-19：任务三沉浸影像按钮取消独立仿写样式，直接复用olympic-image-stage.css中另外三页的同一选择器规则。默认、悬停、按下、焦点、图标与间距统一；桌面32px/手机44px最小高度及右下位置完全一致，移除多余图标外边距与下划线。1440/390对照任务一计算样式一致，按下状态等待过渡后色值一致，Esc退出有效，无溢出；数据与材料保持。
 2026-11-19：任务一“比较决定”下拉控件根据用户截图调整为透明、无圆角的细下划线样式，移除边框与焦点轮廓叠出的双金框；键盘焦点保留单条金色强调线。共享 rc-control 规则也覆盖任务四“回放届次”，原生选项及筛选行为不变。narrative-reading.css、四任务页面缓存版本及 publish_narrative_reading.py 同步至 v11。浏览器验收长选项切换后 6 行、390px 无横向溢出、深色主题文字与选项对比正常。
+
+2026-11-19：下拉栏细下划线样式扩展到全部119个含select的交付页面，unified-selects.css统一透明背景、直角、48px触控高度及焦点强调线，保留原生选择行为；publish_unified_selects.py为重生成后的最后一步。多选列表保留原布局。
