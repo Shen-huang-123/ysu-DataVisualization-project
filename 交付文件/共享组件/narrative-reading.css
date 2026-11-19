@@ -271,6 +271,13 @@ html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar input{heigh
 html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar select{margin:0!important}
 @media(prefers-reduced-motion:reduce){html body.ed-entry.narrative-module[data-narrative] main select{transition:none!important}}
 
+/* The research comparison reads as a choice within the story, not a boxed form field. */
+html body.ed-entry.narrative-module[data-narrative] main .rc-control{gap:14px 20px;font-weight:500}
+html body.ed-entry.narrative-module[data-narrative] main .rc-control select{width:min(100%,27ch);min-width:0;height:52px!important;padding:10px 34px 10px 2px!important;border:0!important;border-bottom:1px solid var(--nr-line)!important;border-radius:0!important;background:transparent!important;font-size:17px!important;font-weight:500!important;letter-spacing:-.015em;box-shadow:none!important}
+html body.ed-entry.narrative-module[data-narrative] main .rc-control select:is(:hover,:focus){border-bottom-color:var(--nr-accent)!important}
+html body.ed-entry.narrative-module[data-narrative] main .rc-control select:focus-visible{outline:0!important;box-shadow:0 2px 0 var(--nr-accent)!important}
+@media(max-width:600px){html body.ed-entry.narrative-module[data-narrative] main .rc-control{align-items:stretch;flex-direction:column;gap:4px}html body.ed-entry.narrative-module[data-narrative] main .rc-control select{width:100%}}
+
 /* Panorama delegation comparison: quiet rows and aligned figures. */
 html body.narrative-panorama .t2-table-wrap{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow-x:auto!important}
 html body.narrative-panorama .t2-table-wrap table{width:100%!important;min-width:620px;border-collapse:collapse!important;table-layout:fixed;background:transparent!important;font-family:'Microsoft YaHei',system-ui,sans-serif!important}
