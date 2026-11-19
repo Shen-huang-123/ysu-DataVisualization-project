@@ -1,7 +1,7 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
 body.host-topic{--paper:#f1f3ef;--ink:#19333c;--gold:#ad925e;--line:#869b9c40;line-height:1.8}
 body.host-topic.xz-dark{--paper:#102129;--ink:#edf1ee;--line:#b2c2c12b;background:var(--paper);color:var(--ink)}
-body.host-topic .s1-hero{position:relative;isolation:isolate;min-height:760px;height:90vh;max-height:1000px;padding:180px 7vw 130px;display:flex;flex-direction:column;justify-content:center;color:#fff;background:linear-gradient(90deg,#06151bd9,#06151b25),url('../任务三_专题深挖/媒体/host.jpg') center/cover}
+body.host-topic .s1-hero{position:relative;isolation:isolate;min-height:760px;height:90vh;max-height:1000px;padding:180px 7vw 130px;display:flex;flex-direction:column;justify-content:center;color:#fff;background:linear-gradient(90deg,#06151bd9,#06151b25),url('../任务三_专题深挖/媒体/host.jpg') center/cover!important}
 body.host-topic .s1-hero:after{content:'';position:absolute;z-index:-1;inset:70% 0 0;background:linear-gradient(transparent,var(--paper))}
 body.host-topic .s1-hero h1{font-family:inherit;font-weight:500;font-size:clamp(48px,6.8vw,100px);line-height:1.18;letter-spacing:-.035em;margin:24px 0 28px}
 body.host-topic .s1-kicker{color:#dec797;font-weight:500;font-size:13px;letter-spacing:.12em}
