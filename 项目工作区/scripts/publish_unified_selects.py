@@ -10,6 +10,7 @@ for p in [root/'index.html',*(root/'交付文件').rglob('*.html')]:
     href=Path(os.path.relpath(css,p.parent)).as_posix()
     tag=f'<link id="unified-selects" rel="stylesheet" href="{href}">'
     s=re.sub(r'<link\b[^>]*id=["\x27]unified-selects["\x27][^>]*>','',s)
-    s=s.replace('</head>',tag+'</head>')
+    s=re.sub(r'</head\s*>',lambda m:tag+m.group(),s,flags=re.I)
+    if 'id="unified-selects"' not in s:s=tag+s
     p.write_text(s,encoding='utf-8');count+=1
 print(f'Updated {count} dropdown pages')
