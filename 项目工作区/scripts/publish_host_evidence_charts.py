@@ -12,7 +12,7 @@ plt.rcParams.update({'font.family':'Microsoft YaHei','svg.fonttype':'none','font
 names={'CHN':'中国','ESP':'西班牙','KOR':'韩国','GBR':'英国','FRA':'法国','JPN':'日本','AUS':'澳大利亚','BRA':'巴西'}
 figures=[]
 def finish(fig,title,note):
- fig.tight_layout(pad=1.6);buf=io.StringIO();fig.savefig(buf,format='svg',transparent=True);plt.close(fig);svg=buf.getvalue();svg=svg[svg.index('<svg'):];svg=re.sub(r'width="[^"]+" height="[^"]+"','width="100%" height="auto"',svg,count=1);figures.append(f'<figure class="host-proof-chart"><h3>{title}</h3>{svg}<figcaption>{note}</figcaption></figure>')
+ fig.tight_layout(pad=1.6);buf=io.StringIO();fig.savefig(buf,format='svg',transparent=True);plt.close(fig);svg=buf.getvalue();svg=svg[svg.index('<svg'):];svg=re.sub(r'width="[^"]+" height="[^"]+"','width="100%"',svg,count=1);figures.append(f'<figure class="host-proof-chart"><h3>{title}</h3>{svg}<figcaption>{note}</figcaption></figure>')
 f,a=plt.subplots(figsize=(6.2,4.6));v=h.sort_values('did_pp');a.barh(range(len(v)),v.did_pp,facecolor='none',edgecolor='#b59b68',linewidth=1.1,height=.55);a.set_yticks(range(len(v)),[f'{names.get(r.NOC,r.NOC)} {int(r.Year)}' for _,r in v.iterrows()]);a.set_xlim(0,6.4);a.set_xlabel('主办国变化 − 匹配组变化（百分点）');a.grid(axis='x',alpha=.12);a.set_axisbelow(True)
 for i,x in enumerate(v.did_pp):a.text(x+.1,i,f'+{x:.2f}',va='center',fontsize=10)
 finish(f,'九个案例：相对变化均为正','原五队匹配、运动员获奖记录口径；不等同于官方小项奖牌。')
@@ -33,5 +33,5 @@ finish(f,'随机化检验：'+summary['randomization_p_label'],'50,000次组内�
 p=host/'index.html';s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser');old=s.select_one('#host-proof-charts');img=s.select_one('img.s1-figure');markup=BeautifulSoup('<div id="host-proof-charts">'+''.join(figures)+'</div>','html.parser')
 if old:old.replace_with(markup)
 elif img:img.replace_with(markup)
-p.write_text(str(s),encoding='utf-8')
+p.write_text('\n'.join(line.rstrip() for line in str(s).splitlines()),encoding='utf-8')
 print('Published three evidence charts')
