@@ -1,4 +1,9 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
+html body.host-topic .s1-picker button[data-index]{background:transparent!important;background-image:none!important;border:1px solid rgb(181 155 104 / 42%)!important;border-radius:4px!important;padding:12px 16px!important;min-width:88px!important;opacity:1!important;color:var(--ink)!important;box-shadow:none!important}
+html body.host-topic .s1-picker button[data-index]:is(:hover,:focus-visible){background:rgb(181 155 104 / 4%)!important;border-color:rgb(205 177 119 / 85%)!important}
+html body.host-topic .s1-picker button[data-index][aria-pressed=true]{background:rgb(181 155 104 / 6%)!important;border-color:#c4a66c!important;box-shadow:inset 0 -1px 0 #c4a66c!important}
+html body.host-topic .s1-picker button[data-index]>small{opacity:.65}
+html body.host-topic .s1-picker:has(button[data-index]){gap:12px!important;padding-bottom:20px!important}
 html body.host-topic .s1-bar i{box-sizing:border-box!important;height:12px!important;min-width:3px!important;background:transparent!important;background-image:none!important;border:1px solid rgb(181 155 104 / 72%)!important;border-radius:2px!important;box-shadow:none!important}
 html body.host-topic .s1-bar:nth-child(2) i{border-color:#c4a66c!important;background:rgb(181 155 104 / 8%)!important}
 html body.host-topic .s1-bar:nth-child(2)>span{color:var(--ink);font-weight:600}
