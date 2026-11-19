@@ -19,4 +19,12 @@
  let timer;const schedule=()=>{update();clearTimeout(timer);timer=setTimeout(update,450)};
  new MutationObserver(schedule).observe(document.body,{attributes:true,attributeFilter:['class','data-theme']});
  addEventListener('resize',schedule,{passive:true});addEventListener('load',schedule);schedule();
+ const stories=document.querySelector('body.narrative-stories>header.hero');
+ if(stories&&!stories.querySelector('.image-stage-cinema')){
+  const button=document.createElement('button');button.type='button';button.className='image-stage-cinema stories-cinema';button.textContent='沉浸影像';button.setAttribute('aria-pressed','false');
+  const set=on=>{stories.classList.toggle('stories-immersed',on);button.setAttribute('aria-pressed',String(on));button.textContent=on?'返回专题':'沉浸影像';for(const el of stories.querySelectorAll('.hero-copy,.hero-foot'))el.inert=on};
+  button.addEventListener('click',()=>set(button.getAttribute('aria-pressed')!=='true'));
+  stories.addEventListener('keydown',e=>{if(e.key==='Escape'&&button.getAttribute('aria-pressed')==='true'){set(false);button.focus()}});
+  stories.append(button);
+ }
 })();
