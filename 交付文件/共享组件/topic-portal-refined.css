@@ -9,3 +9,8 @@ html body.topic-portal-refined>.portal-research-entry span{font-size:14px!import
 html body.topic-portal-refined>.ed-particles{position:fixed!important;inset:0!important;height:100vh!important;max-height:100vh!important;overflow:hidden!important;pointer-events:none}
 @media(max-width:800px){html body.topic-portal-refined footer{grid-template-columns:1fr 1fr!important;gap:22px!important}}
 @media(max-width:500px){html body.topic-portal-refined footer{grid-template-columns:1fr!important}}
+/* Research evidence spans the same content edges as the story directory. */
+html body.topic-portal-refined #dynasty-source-sensitivity,html body.topic-portal-refined #host-source-sensitivity{width:auto!important;max-width:none!important;margin:36px 6vw!important;padding:32px 0!important;box-sizing:border-box!important;border-radius:0!important;background:transparent!important}
+html body.topic-portal-refined #dynasty-source-sensitivity h2,html body.topic-portal-refined #host-source-sensitivity h2{max-width:none!important;font-family:inherit!important;font-size:clamp(26px,2.7vw,42px)!important;font-weight:500!important;line-height:1.5!important;margin:12px 0 24px!important}
+html body.topic-portal-refined #dynasty-source-sensitivity p,html body.topic-portal-refined #host-source-sensitivity p{max-width:none!important;line-height:1.95!important}
+html body.topic-portal-refined #dynasty-source-sensitivity img,html body.topic-portal-refined #host-source-sensitivity img{display:block!important;width:100%!important;max-width:none!important;height:auto!important;margin:26px 0!important;border-radius:0!important}

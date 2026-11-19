@@ -956,3 +956,5 @@ B仅替换555项的奖牌代表团；C在所有历史年份剔除相关209条同
 - 用户截图反馈统一中文入口页脚色带突兀、后置研究入口不协调。新增topic-portal-refined.css与publish_topic_portal_refined.py，页脚透明化并响应分栏，3个补充研究入口及后置分析区移至footer前。
 - 保留原作者比例、许可与所有研究目标；研究入口统一6vw左右边缘、细分隔线及中等字重。粒子层固定视口，避免撑大文档。
 - 浏览器1440/390核验透明页脚、3个入口、无footer后分析区、无横向溢出。生成材料后需运行本后处理脚本。
+
+2026-11-19：用户要求来源敏感性区占满。topic-portal-refined.css v2针对dynasty-source-sensitivity和host-source-sensitivity移除max-width和内部缩进，左右6vw与入口正文对齐，图片width100%，标题与说明同步放宽。后处理版本维护，1440/390核验区域和图片宽度一致且无横向溢出。
