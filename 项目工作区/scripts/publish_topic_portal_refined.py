@@ -11,6 +11,10 @@ for child in list(s.body.children):
   if child.name=='a':child['class']=list(dict.fromkeys(child.get('class',[])+['portal-research-entry']))
 link=s.select_one('#topic-portal-refined-style')
 if not link:link=s.new_tag('link',id='topic-portal-refined-style',rel='stylesheet');s.head.append(link)
-link['href']='../../共享组件/topic-portal-refined.css?v=2'
+link['href']='../../共享组件/topic-portal-refined.css?v=3'
 p.write_text(str(s),encoding='utf-8')
+
+
+import runpy
+runpy.run_path(str(Path(__file__).with_name('publish_portal_interval_svg.py')))
 
