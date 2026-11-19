@@ -1,0 +1,65 @@
+html body.legends-topic{--vt-ink:#243b42;--vt-muted:#5e7275;--vt-line:#829a9b44;--vt-accent:#44798b;background:#edf2ef!important;color:var(--vt-ink)!important;font-family:'Microsoft YaHei','Noto Sans SC',sans-serif!important}
+html body.legends-topic.xz-dark{--vt-ink:#e7efec;--vt-muted:#b4c4c3;--vt-line:#a3b8b52c;--vt-accent:#85afbd;background:#152129!important}
+html body.legends-topic>header{position:relative!important;isolation:isolate;height:clamp(500px,66vw,740px)!important;min-height:0!important;max-height:none!important;padding:48px clamp(24px,6vw,100px) 72px!important;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#152129!important;color:#fff!important}
+html body.legends-topic>header:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#101d26ed 0%,#101d2670 50%,#101d2620 100%)}
+html body.legends-topic>header:after{display:none!important}
+html body.legends-topic header .legends-photo{position:absolute!important;inset:0!important;z-index:-2;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 45%;filter:grayscale(1);transform:none!important;animation:none!important}
+html body.legends-topic header :is(h1,.lead,.tag){position:relative;z-index:1;max-width:none!important;width:100%}
+html body.legends-topic header h1{font-family:inherit!important;font-size:clamp(44px,6vw,88px)!important;line-height:1.18!important;letter-spacing:-.03em;margin:18px 0!important;font-weight:700}
+html body.legends-topic header .tag{color:#dfc98e!important;font-size:13px;font-weight:500;letter-spacing:.08em}
+html body.legends-topic header .lead{font-size:clamp(16px,1.5vw,21px)!important;line-height:1.85;margin:0!important}
+html body.legends-topic .legends-credit{position:absolute;bottom:20px;left:clamp(24px,6vw,100px);right:24px;font-size:11px;color:#d0d9d9;display:flex;gap:14px;flex-wrap:wrap}
+html body.legends-topic .legends-credit strong{font-size:11px;font-weight:400}
+html body.legends-topic main{width:auto!important;max-width:none!important;margin:0!important;padding:48px clamp(24px,6vw,100px)!important;background:transparent!important}
+html body.legends-topic main .insight{max-width:none!important;font-size:clamp(19px,2.1vw,28px)!important;line-height:1.8;margin:0 0 40px!important;color:var(--vt-ink)!important}
+html body.legends-topic .viz{display:grid!important;grid-template-columns:minmax(0,1fr) 290px;gap:48px;background:transparent!important;align-items:start}
+html body.legends-topic main h2{font-family:inherit!important;font-size:28px!important;color:var(--vt-ink)!important}
+html body.legends-topic .chart{width:100%;background:transparent!important}
+html body.legends-topic main .bar{display:grid!important;grid-template-columns:110px minmax(60px,1fr) 40px 110px;gap:16px;align-items:center;width:100%;min-height:60px;padding:14px 0!important;border:0!important;border-bottom:1px solid var(--vt-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:var(--vt-ink)!important;font-family:inherit!important;font-size:14px!important;text-align:left;transform:none!important;cursor:pointer}
+html body.legends-topic main .bar:is(:hover,:focus-visible,[aria-pressed=true]){border-bottom-color:#bba574!important;outline:none}
+html body.legends-topic main .bar[aria-pressed=true] .label{text-decoration:underline;text-underline-offset:5px;text-decoration-color:#bba574}
+html body.legends-topic .bar .track{display:block;height:8px!important;background:#829a9b18!important;border-radius:0!important;overflow:visible}
+html body.legends-topic .bar .track i{display:block;height:100%;background:var(--vt-accent)!important;border-radius:0!important;transform:none!important}
+html body.legends-topic .bar strong{font-size:15px!important;font-weight:500;text-align:right}
+html body.legends-topic .legends-years{font-size:12px;color:var(--vt-muted);text-align:right;font-variant-numeric:tabular-nums}
+html body.legends-topic .viz aside{position:sticky;top:110px;padding:24px 0!important;background:transparent!important;border:0!important;border-block:1px solid var(--vt-line)!important;border-radius:0!important;box-shadow:none!important;color:var(--vt-muted)!important}
+html body.legends-topic #pick{display:block;font-size:32px;color:var(--vt-ink);margin:14px 0}
+html body.legends-topic :is(.evidence,.method){display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;border-top:1px solid var(--vt-line);padding-top:28px}
+html body.legends-topic :is(.evidence article,.method>div){background:transparent!important;border:0!important;padding:0!important;border-radius:0!important;color:var(--vt-ink)!important;box-shadow:none!important}
+html body.legends-topic :is(main p,.task3-depth-bridge p){font-size:15px;line-height:1.9;color:var(--vt-muted)!important}
+html body.legends-topic .task3-depth-bridge{padding:32px clamp(24px,6vw,100px)!important;background:transparent!important;color:var(--vt-ink)!important}
+html body.legends-topic .task3-depth-bridge>div{max-width:none!important;border-top:1px solid var(--vt-line);padding-top:28px}
+html body.legends-topic .task3-depth-bridge h2{font-family:inherit!important;font-size:clamp(24px,3vw,38px)!important}
+html body.legends-topic .task3-depth-bridge :is(article,[style*='border-radius']){background:transparent!important;border-radius:0!important;box-shadow:none!important}
+html body.legends-topic>footer{padding:24px clamp(24px,6vw,100px)!important;background:transparent!important;color:var(--vt-muted)!important;border-top:1px solid var(--vt-line);font-size:12px}
+html body.legends-topic :is(.ed-particles,.oa-world,.oa-landscape,.oa-light){display:none!important}
+@media(max-width:700px){html body.legends-topic .viz{grid-template-columns:1fr;gap:24px}html body.legends-topic .viz aside{position:static;grid-row:1}html body.legends-topic main .bar{grid-template-columns:84px minmax(30px,1fr) 22px;gap:10px}.legends-years{grid-column:2/4}html body.legends-topic :is(.evidence,.method){grid-template-columns:1fr;gap:24px}html body.legends-topic>header{height:580px!important}html body.legends-topic header .lead{margin-bottom:50px!important}}
+html body.legends-topic .ox-reveal{opacity:1!important;transform:none!important;filter:none!important}
+html body.legends-topic header :is(h1,.lead){opacity:1!important;color:#f3f6f3!important;text-shadow:none!important}
+html body.legends-topic .viz{min-height:0!important;height:auto!important}
+html body.legends-topic main .chart{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+html body.legends-topic main .bar :is(.label,strong){font-family:inherit!important;text-shadow:none!important;font-size:14px!important;font-weight:400!important;color:var(--vt-ink)!important}
+html body.legends-topic .evidence article>span{color:var(--vt-accent)!important;font-size:14px;font-weight:600}
+html body.legends-topic :is(main,.task3-depth-bridge) *{text-shadow:none!important}
+html body.legends-topic>header{height:660px!important;padding:56px clamp(24px,6vw,100px)!important;justify-content:center!important;background:transparent!important;color:var(--vt-ink)!important}
+html body.legends-topic>header:before{display:none!important}
+html body.legends-topic header .legends-photo{inset:0 0 0 auto!important;width:40%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:grayscale(1)}
+html body.legends-topic header :is(h1,.lead,.tag){width:55%!important;color:var(--vt-ink)!important}
+html body.legends-topic header h1{font-size:clamp(42px,5vw,76px)!important;line-height:1.25!important}
+html body.legends-topic header .tag{color:#b59a63!important}
+html body.legends-topic .legends-credit{left:clamp(24px,6vw,100px);right:43%;bottom:32px;color:var(--vt-muted)}
+html body.legends-topic .legends-credit a{color:inherit}
+html body.legends-topic main .bar{grid-template-columns:185px minmax(40px,1fr) 40px!important;gap:18px;min-height:76px}
+html body.legends-topic .legends-years{grid-column:1/-1;text-align:left;margin-top:-8px;color:var(--vt-muted)}
+html body.legends-topic main .bar[hidden]{display:none!important}
+html body.legends-topic .legends-tools{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;padding:12px 0 24px;border-bottom:1px solid var(--vt-line)}
+html body.legends-topic .legends-tools label{font-size:13px;color:var(--vt-muted)}
+html body.legends-topic .legends-tools input{flex:1;min-width:180px;max-width:480px;padding:12px 0;background:transparent!important;border:0;border-bottom:1px solid var(--vt-line);border-radius:0;color:var(--vt-ink);font:14px 'Microsoft YaHei',sans-serif;outline-offset:4px}
+html body.legends-topic .legends-tools output{font-size:12px;color:var(--vt-muted)}
+html body.legends-topic main .bar :is(.label,strong){font-size:14px!important;font-weight:400!important;text-shadow:none!important}
+@media(max-width:700px){html body.legends-topic>header{height:auto!important;min-height:0!important;padding:0 24px 100px!important;overflow:visible!important}html body.legends-topic header .legends-photo{position:relative!important;inset:auto!important;width:calc(100% + 48px)!important;max-width:none!important;margin:0 -24px 28px!important;height:460px!important;z-index:0}html body.legends-topic header :is(h1,.lead,.tag){width:100%!important}html body.legends-topic header .lead{margin-bottom:0!important}html body.legends-topic .legends-credit{left:24px;right:24px;bottom:24px}html body.legends-topic main .bar{grid-template-columns:140px minmax(20px,1fr) 28px!important;gap:12px}html body.legends-topic .legends-tools input{min-width:100%;max-width:none}}
+html body.legends-topic>header{align-items:flex-start!important;text-align:left!important}
+html body.legends-topic header :is(h1,.lead,.tag){margin-left:0!important;margin-right:0!important;text-align:left!important;align-self:flex-start!important}
+html body.legends-topic .viz>div{grid-column:1!important;grid-row:1!important;min-width:0!important}
+html body.legends-topic .viz>aside{grid-column:2!important;grid-row:1!important;min-width:0!important}
+@media(max-width:700px){html body.legends-topic .viz>aside{grid-column:1!important;grid-row:1!important}html body.legends-topic .viz>div{grid-column:1!important;grid-row:2!important}}

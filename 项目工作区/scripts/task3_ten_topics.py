@@ -164,3 +164,4 @@ runpy.run_path(str(Path(__file__).with_name("publish_women_topic_style.py")))
 import runpy
 runpy.run_path(str(Path(__file__).with_name('publish_vanished_topic_style.py')))
 runpy.run_path(str(Path(__file__).with_name('publish_geopolitics_topic_style.py')))
+runpy.run_path(str(Path(__file__).with_name('publish_legends_topic_style.py')))
