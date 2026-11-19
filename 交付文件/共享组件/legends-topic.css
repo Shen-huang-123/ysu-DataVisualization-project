@@ -85,3 +85,10 @@ html body.legends-topic>header:before{background:linear-gradient(180deg,#101d26b
 html body.legends-topic .legends-credit{color:var(--vt-muted)!important}
 html body.legends-topic>main{border-top:0!important}
 @media(max-width:700px){html body.legends-topic header .legends-photo{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 65%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 65%,transparent 100%)}}
+/* Editorial heading: measured weight, archival accent, readable introduction. */
+html body.legends-topic header .tag{display:flex!important;align-items:center;gap:14px;font-size:12px!important;line-height:1.5!important;font-weight:500!important;letter-spacing:.12em!important;color:#e4cf9e!important}
+html body.legends-topic header .tag:before{content:'';display:block;width:38px;height:1px;background:currentColor;flex:none}
+html body.legends-topic header h1{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif!important;font-size:clamp(38px,4.7vw,72px)!important;font-weight:600!important;line-height:1.24!important;letter-spacing:.015em!important;margin:24px 0 28px!important;text-wrap:balance;text-shadow:none!important}
+html body.legends-topic header .lead{width:min(100%,46em)!important;max-width:46em!important;font-size:clamp(15px,1.2vw,19px)!important;font-weight:400!important;line-height:1.95!important;letter-spacing:.025em!important;color:#e5eae7!important;margin:0!important;text-wrap:pretty}
+html body.legends-topic>header:before{background:linear-gradient(180deg,#101d26dc 0%,#101d267a 25%,transparent 54%)!important}
+@media(max-width:700px){html body.legends-topic header .tag{font-size:11px!important;color:var(--vt-accent)!important}html body.legends-topic header h1{font-size:36px!important;line-height:1.35!important;margin:18px 0 20px!important}html body.legends-topic header .lead{font-size:15px!important;color:var(--vt-muted)!important;line-height:1.9!important}}
