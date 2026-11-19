@@ -163,3 +163,4 @@ runpy.run_path(str(Path(__file__).with_name("publish_women_topic_style.py")))
 # Restore S9 topic layout after general topic generation.
 import runpy
 runpy.run_path(str(Path(__file__).with_name('publish_vanished_topic_style.py')))
+runpy.run_path(str(Path(__file__).with_name('publish_geopolitics_topic_style.py')))
