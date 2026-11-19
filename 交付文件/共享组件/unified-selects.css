@@ -8,7 +8,7 @@ html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]){
  padding:12px 40px 12px 4px!important;box-shadow:none!important;outline:0!important;cursor:pointer;transform:none!important;color-scheme:light;
  transition:border-color 160ms ease,box-shadow 160ms ease,background-color 160ms ease!important;
 }
-html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]):hover{border-bottom-color:var(--nr-accent,#b59b68)!important;background-color:color-mix(in srgb,currentColor 3%,transparent)!important}
+html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]):hover{border-bottom-color:var(--nr-accent,#b59b68)!important;background-color:color-mix(in srgb,currentColor 1%,transparent)!important}
 html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]):focus-visible{border-bottom-color:var(--nr-accent,#b59b68)!important;box-shadow:0 1px 0 var(--nr-accent,#b59b68)!important}
 html body:is(body,#dropdown-specificity) select:disabled{opacity:.45!important;cursor:not-allowed!important;box-shadow:none!important}
 html body:is(body,#dropdown-specificity) select option{background:#f5f3ed!important;color:#18343d!important;font-weight:400}
@@ -20,21 +20,21 @@ html body:is(body,#dropdown-specificity):is(.xz-dark,.dark,[data-theme=dark]) se
 /* A quiet framed control, with a fully styled native picker where supported. */
 html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]){
  border:1px solid color-mix(in srgb,currentColor 20%,transparent)!important;border-radius:6px!important;
- padding:11px 44px 11px 16px!important;background-color:color-mix(in srgb,currentColor 3%,transparent)!important;
+ padding:11px 44px 11px 16px!important;background-color:color-mix(in srgb,currentColor 1%,transparent)!important;
  background-position:right 16px center!important;font-size:15px!important;font-weight:400!important;letter-spacing:0!important;
  box-shadow:0 1px 2px #00000008!important;
 }
-html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]):hover{border-color:var(--nr-accent,#ad925e)!important;background-color:color-mix(in srgb,currentColor 5%,transparent)!important}
+html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]):hover{border-color:var(--nr-accent,#ad925e)!important;background-color:color-mix(in srgb,currentColor 3%,transparent)!important}
 html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]):focus-visible{border-color:var(--nr-accent,#ad925e)!important;box-shadow:0 0 0 3px #b59b681f!important}
 @supports (appearance:base-select){
  html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]),html body:is(body,#dropdown-specificity) select::picker(select){appearance:base-select!important}
  html body:is(body,#dropdown-specificity) select:not([multiple]):not([size]){background-image:none!important;padding-right:16px!important;gap:24px}
  html body:is(body,#dropdown-specificity) select::picker-icon{color:var(--nr-accent,#ad925e);font-size:12px;transition:rotate 160ms ease}
  html body:is(body,#dropdown-specificity) select:open::picker-icon{rotate:180deg}
- html body:is(body,#dropdown-specificity) select::picker(select){background:#f7f5ef;color:#18343d;border:1px solid #87959545;border-radius:8px;padding:6px;box-shadow:0 16px 40px #00000026;margin-block:8px;max-height:min(360px,55vh);overflow:auto}
+ html body:is(body,#dropdown-specificity) select::picker(select){background:rgb(247 245 239 / 82%);backdrop-filter:blur(16px);color:#18343d;border:1px solid #87959545;border-radius:8px;padding:6px;box-shadow:0 16px 40px #00000026;margin-block:8px;max-height:min(360px,55vh);overflow:auto}
  html body:is(body,#dropdown-specificity) select option{padding:12px 14px!important;min-height:44px;gap:16px;border-radius:4px;background:transparent!important;color:inherit!important;line-height:1.5;white-space:normal}
- html body:is(body,#dropdown-specificity) select option:is(:hover,:focus){background:#ad925e1c!important;outline:0}
- html body:is(body,#dropdown-specificity) select option:checked{background:#ad925e24!important;font-weight:500}
+ html body:is(body,#dropdown-specificity) select option:is(:hover,:focus){background:#ad925e14!important;outline:0}
+ html body:is(body,#dropdown-specificity) select option:checked{background:#ad925e1c!important;font-weight:500}
  html body:is(body,#dropdown-specificity) select option::checkmark{color:#ad925e;order:2;margin-left:auto}
- html body:is(body,#dropdown-specificity):is(.xz-dark,.dark,[data-theme=dark]) select::picker(select),html[data-theme=dark] body:is(body,#dropdown-specificity) select::picker(select){background:#172a32;color:#f1f3ef;border-color:#aebdbd33;box-shadow:0 16px 40px #0006}
+ html body:is(body,#dropdown-specificity):is(.xz-dark,.dark,[data-theme=dark]) select::picker(select),html[data-theme=dark] body:is(body,#dropdown-specificity) select::picker(select){background:rgb(23 42 50 / 80%);color:#f1f3ef;border-color:#aebdbd33;box-shadow:0 16px 40px #0006}
 }
