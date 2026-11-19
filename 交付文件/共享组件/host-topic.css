@@ -1,4 +1,6 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
+html body.host-topic{padding-top:0!important;margin-top:0!important}
+html body.host-topic .s1-hero{margin-top:0!important}
 body.host-topic{--paper:#f1f3ef;--ink:#19333c;--gold:#ad925e;--line:#869b9c40;line-height:1.8}
 body.host-topic.xz-dark{--paper:#102129;--ink:#edf1ee;--line:#b2c2c12b;background:var(--paper);color:var(--ink)}
 body.host-topic .s1-hero{position:relative;isolation:isolate;min-height:760px;height:90vh;max-height:1000px;padding:180px 7vw 130px;display:flex;flex-direction:column;justify-content:center;color:#fff;background:linear-gradient(90deg,#06151bd9,#06151b25),url('../任务三_专题深挖/媒体/host.jpg') center/cover!important}
