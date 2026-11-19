@@ -8,7 +8,7 @@ s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['host-topic']))
 link=s.select_one('#host-topic-style')
 if not link:
  link=s.new_tag('link',id='host-topic-style',rel='stylesheet');s.head.append(link)
-link['href']='../../共享组件/host-topic.css?v=3'
+link['href']='../../共享组件/host-topic.css?v=4'
 for preload in s.select('link[rel="preload"][as="image"]'):
  preload['href']='../媒体/host.jpg'
 hero=s.select_one('.s1-hero')
@@ -20,3 +20,4 @@ if not s.select_one('#host-topic-script'):
 p.write_text(str(s),encoding='utf-8')
 import runpy
 runpy.run_path(str(Path(__file__).with_name('publish_host_evidence_charts.py')))
+

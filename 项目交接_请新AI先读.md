@@ -949,3 +949,5 @@ B仅替换555项的奖牌代表团；C在所有历史年份剔除相关209条同
 2026-11-19：用户反馈S10照片后的蓝色方块图。核查为.art-figure无名称、无数值的装饰矩形，已从本页移除，照片说明直接接main；15个交互项目点和原始条形不变。publish_medal_sports_topic_style.py维护删除及v2缓存版本，浏览器核验结构和数据项数量。
 
 2026-11-19：用户反馈S1进入短暂卡出其他画面。检查发现错误预加载archive.jpg及脚本后触发整页xz-enter动画。publish_host_topic_style.py维护host.jpg预加载与静态host-entry-photo；host-topic.css v3固定首屏背景/布局，取消body和首屏文本动画并隐藏装饰层。连续三次刷新检查照片1500像素加载、单一图片、首屏top0、body animation none。证据与案例未改。
+
+2026-11-19：修复S1 task3-depth-bridge透明化后仍继承原内联浅色文字的问题。标题/说明/指标绑定var(--ink)，链接与small按深浅主题独立设置可读配色，opacity固定1。维护host-topic.css与后处理v4；浏览器检查两主题实际颜色。

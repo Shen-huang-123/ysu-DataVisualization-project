@@ -122,3 +122,8 @@ html body.host-topic .s1-hero:before{content:''!important;position:absolute!impo
 html body.host-topic .s1-hero:after,html body.host-topic .s1-hero>.ed-rings-scene,html body.host-topic .s1-hero>.immersive-float-layer{display:none!important}
 html body.host-topic .s1-hero h1,html body.host-topic .s1-hero p,html body.host-topic .s1-hero .s1-kicker{animation:none!important;opacity:1!important;transform:none!important}
 @media(max-width:700px){html body.host-topic .s1-hero{padding:120px 24px 70px!important;min-height:780px!important}}
+/* Transparent evidence needs theme-aware foregrounds in daylight mode. */
+html body.host-topic .task3-depth-bridge,html body.host-topic .task3-depth-bridge h2,html body.host-topic .task3-depth-bridge p,html body.host-topic .task3-depth-bridge b,html body.host-topic .task3-depth-bridge span{color:var(--ink)!important;opacity:1!important;text-shadow:none!important}
+html body.host-topic .task3-depth-bridge small,html body.host-topic .task3-depth-bridge a{color:#805723!important;opacity:1!important}
+html body.host-topic.xz-dark .task3-depth-bridge small,html body.host-topic.xz-dark .task3-depth-bridge a{color:#ddc18a!important}
+html body.host-topic .task3-depth-bridge a{font-weight:500!important;text-underline-offset:6px}
