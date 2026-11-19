@@ -71,3 +71,8 @@ html body.legends-topic header :is(h1,.lead,.tag){width:100%!important;color:#f3
 html body.legends-topic header .lead{max-width:100%!important;font-size:clamp(16px,1.4vw,21px)!important}
 html body.legends-topic .legends-credit{left:clamp(24px,6vw,100px);right:24px;bottom:24px;color:#e2e8e4!important}
 @media(max-width:700px){html body.legends-topic>header{height:auto!important;min-height:0!important;max-height:none!important;padding:0 24px 110px!important;background:transparent!important;color:var(--vt-ink)!important}html body.legends-topic header .legends-photo{position:relative!important;inset:auto!important;width:calc(100% + 48px)!important;height:auto!important;margin:0 -24px 24px!important;z-index:0}html body.legends-topic>header:before{display:none!important}html body.legends-topic header :is(h1,.lead,.tag){color:var(--vt-ink)!important}html body.legends-topic .legends-credit{color:var(--vt-muted)!important;left:24px;right:24px}}
+/* Let the archival photograph reach the top edge behind the fixed navigation. */
+html body.legends-topic{padding-top:0!important;border-top:0!important}
+html body.legends-topic>header{margin-top:0!important;padding-top:128px!important}
+html body.legends-topic header .legends-photo{object-fit:cover!important;object-position:center top!important}
+@media(max-width:700px){html body.legends-topic>header{padding-top:0!important}}
