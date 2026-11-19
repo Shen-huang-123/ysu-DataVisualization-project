@@ -28,3 +28,21 @@ html body.medal-growth-topic .evidence article{padding:26px 0!important;border:0
 html body.medal-growth-topic .evidence span{color:var(--a)!important}
 html body.medal-growth-topic footer{padding:30px 7vw!important;background:transparent!important;color:var(--bg)!important;border-top:1px solid var(--growth-line)!important}
 @media(max-width:800px){html body.medal-growth-topic #medal-growth-hero{min-height:720px!important;padding:130px 24px 70px!important}html body.medal-growth-topic main{padding:40px 24px!important}html body.medal-growth-topic .viz{grid-template-columns:1fr!important;gap:28px!important}html body.medal-growth-topic .viz aside{position:static!important;grid-row:1}html body.medal-growth-topic .method,html body.medal-growth-topic .evidence{grid-template-columns:1fr!important}html body.medal-growth-topic .photo-stage{padding:18px 24px!important}}
+/* The session lens belongs to the page, rather than a separate blue card. */
+html body.medal-growth-topic .ex-growth{--ex-ink:var(--bg);--ex-paper:var(--p);--ex-line:var(--growth-line);--ex-accent:var(--a);padding:24px 0!important;margin:0 0 28px!important;border:0!important;border-top:1px solid var(--growth-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:var(--bg)!important}
+html body.medal-growth-topic .ex-growth h3{font-size:26px!important;font-weight:500!important;line-height:1.5!important}
+html body.medal-growth-topic .ex-growth>p{color:var(--bg)!important;opacity:.75;line-height:1.8!important}
+html body.medal-growth-topic .ex-growth .ex-tools button:is(button,#mg-a#mg-b#mg-c#mg-d){padding:10px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--a)!important;border-radius:0!important;color:var(--bg)!important;box-shadow:none!important;font-weight:400!important}
+html body.medal-growth-topic .ex-growth .ex-stage{overflow:visible!important}
+html body.medal-growth-topic .ex-growth svg{min-width:0!important;width:100%!important;margin:16px 0 8px}
+html body.medal-growth-topic .ex-growth .ex-series{stroke:var(--a)!important;stroke-width:2.5}
+html body.medal-growth-topic .ex-growth .ex-dot{fill:var(--a)!important;stroke:var(--p)!important}
+html body.medal-growth-topic .ex-growth .ex-dot[aria-pressed=true]{fill:var(--bg)!important;stroke:var(--a)!important;stroke-width:3}
+html body.medal-growth-topic .ex-growth input[type=range]{appearance:none;background:transparent!important;height:32px;cursor:ew-resize;accent-color:var(--a)}
+html body.medal-growth-topic .ex-growth input[type=range]::-webkit-slider-runnable-track{height:3px;background:var(--growth-line);border:0}
+html body.medal-growth-topic .ex-growth input[type=range]::-webkit-slider-thumb{appearance:none;width:16px;height:16px;margin-top:-6px;border:2px solid var(--p);border-radius:50%;background:var(--a);box-shadow:0 0 0 1px var(--a)}
+html body.medal-growth-topic .ex-growth .ex-readout{font-size:20px!important;font-weight:500!important;border-color:var(--growth-line)!important;padding-top:18px!important}
+html body.medal-growth-topic .chart[hidden]{display:none!important}
+html body.medal-growth-topic .ex-route{position:relative!important;margin:28px 0!important;padding:16px 0!important;background:transparent!important;border:0!important;border-block:1px solid var(--growth-line)!important;border-radius:0!important;color:var(--bg)!important;box-shadow:none!important}
+html body.medal-growth-topic .ex-route nav{position:static!important;background:transparent!important;width:auto!important;padding:12px 0!important;color:var(--bg)!important}
+html body.medal-growth-topic .ex-route a{color:var(--bg)!important}
