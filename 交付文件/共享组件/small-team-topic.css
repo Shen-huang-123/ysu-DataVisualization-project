@@ -1,3 +1,5 @@
+html body.small-team-topic>header>.immersive-float-layer{display:none!important}
+html body.small-team-topic>header:before{display:none!important;content:none!important}
 html body.small-team-topic{--bg:#203b42;--p:#edf2ef;--a:#b59b68;--st-line:#829a9b40;background:var(--p)!important;color:var(--bg)!important;padding-top:0!important;font-family:'Microsoft YaHei',sans-serif!important}
 html body.small-team-topic.xz-dark{--bg:#e8efec;--p:#152129;--st-line:#a3b8b52c;background:var(--p)!important}
 html body.small-team-topic .oa-world,html body.small-team-topic:before,html body.small-team-topic:after{display:none!important}
