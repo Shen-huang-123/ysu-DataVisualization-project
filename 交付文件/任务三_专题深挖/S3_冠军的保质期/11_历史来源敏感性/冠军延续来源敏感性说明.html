@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>冠军延续来源敏感性说明</title><style>
+:root{color-scheme:light dark}body{margin:0;background:#edf2ef;color:#203b42;font:16px/1.95 'Microsoft YaHei',sans-serif}main{max-width:1120px;margin:auto;padding:60px 28px}h1{font-size:clamp(28px,4vw,44px);font-weight:500;line-height:1.5}h2{font-weight:500;font-size:26px;margin-top:40px}a{color:inherit;text-underline-offset:6px}table{display:block;overflow:auto;width:100%;border-collapse:collapse;font-size:14px}th,td{padding:14px 12px;border-bottom:1px solid #829a9b40;text-align:left;white-space:nowrap}th{border-bottom:1px solid #b59b68}img{max-width:100%;height:auto}.tools{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;border-bottom:1px solid #b59b6870;padding-bottom:20px}@media(prefers-color-scheme:dark){body{background:#152129;color:#e8efec}}
+</style></head><body><main><nav class="tools"><a href="index.html">返回来源敏感性研究</a><a href="冠军延续来源敏感性说明.md" download>下载 Markdown 原文</a></nav><h1>历史来源修订后，冠军延续的下降还成立吗？</h1>
+<p>固定既有113个1960—2016连续小项，保持原有早段1964—1976、后段1996—2016及小项成组重抽样。A使用原代理；B仅替换S2队列中与S3的Sport+Event+Year精确匹配的金牌代表团集合；C为避免早晚段组成不一致，剔除任一届涉及555项的小项的<strong>整条1960—2016序列</strong>。另列C的原代理同子队列作选择对照。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">方案</th>
+<th style="text-align: right;">小项数</th>
+<th style="text-align: right;">转移数</th>
+<th style="text-align: right;">早段卫冕率</th>
+<th style="text-align: right;">后段卫冕率</th>
+<th style="text-align: right;">后减前百分点</th>
+<th style="text-align: right;">区间下限</th>
+<th style="text-align: right;">区间上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">原代理固定队列</td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">1582</td>
+<td style="text-align: right;">0.345133</td>
+<td style="text-align: right;">0.271386</td>
+<td style="text-align: right;">-7.37463</td>
+<td style="text-align: right;">-13.2006</td>
+<td style="text-align: right;">-1.62242</td>
+</tr>
+<tr>
+<td style="text-align: left;">二次来源替换_同113项</td>
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">1582</td>
+<td style="text-align: right;">0.345133</td>
+<td style="text-align: right;">0.271386</td>
+<td style="text-align: right;">-7.37463</td>
+<td style="text-align: right;">-13.2006</td>
+<td style="text-align: right;">-1.62242</td>
+</tr>
+<tr>
+<td style="text-align: left;">剔除涉及未决项的完整小项队列</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">700</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.316667</td>
+<td style="text-align: right;">-7.33333</td>
+<td style="text-align: right;">-16.1667</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr>
+<td style="text-align: left;">原代理_与排除方案同子队列</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">700</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.316667</td>
+<td style="text-align: right;">-7.33333</td>
+<td style="text-align: right;">-16.1667</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+</tbody>
+</table>
+<p>555个来源记录中550个与S3观测精确对应，5个未匹配、不猜测映射；10个金牌集合变化，影响17条转移的冠军集合，其中6条卫冕判定改变。全4511条转移的三个时代复算见附表。</p>
+<h2>可以保留与必须收窄的判断</h2>
+<p>同113项二次来源情景差值为-7.37个百分点，成组95%区间[-13.20, -1.62]。只对这一固定队列和时间窗判断下降是否保持，不能写成所有运动或所有年代都如此。</p>
+<p>排除后仅剩50个小项，差值-7.33个百分点，区间[-16.17, 1.50]。区间跨过零，排除子队列尚不足以确认下降；原代理同50项也得到相同结果，不能把变化归因于来源替换。该样本运动结构不同，且剩余项也不等于全部取得现行IOC结果；不能将它称为官方认证样本。</p>
+<p>研究单位是代表团小项金牌控制权；并列金牌集合存在交集即延续。不是个人冠军寿命，也没有证明竞争加剧这一机制。未更换其他历史年份的记录，未解决小项实质规则变化、政体身份与抵制混杂；二次来源本身仍可能存在误差。本轮不更新主场模型或预测。</p>
+<h2>复现</h2>
+<p><code>py 项目工作区/scripts/dynasty_source_sensitivity.py</code>。输入哈希、精确映射、受影响转移、逐小项变化及全样本时代表均在本目录。旧图和原数据保留原版本；新增结果单列来源情景，避免将二次来源修订伪装为IOC结果。</p></main></body></html>

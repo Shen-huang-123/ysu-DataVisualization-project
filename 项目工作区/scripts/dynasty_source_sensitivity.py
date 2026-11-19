@@ -100,3 +100,6 @@ ax.set_xlim(-18,18);ax.set_ylim(-.6,2.8);ax.set_xlabel('后段减早段卫冕率
 ax.set_title('同队列替换不改变下降；排除子队列的区间跨零',loc='left',pad=18,fontsize=14)
 for sp in ax.spines.values():sp.set_visible(False)
 ax.tick_params(length=0);fig.tight_layout();fig.savefig(OUT/'冠军延续来源敏感性.png',dpi=160);plt.close(fig)
+
+import runpy
+runpy.run_path(str(Path(__file__).with_name('publish_dynasty_source_reading.py')))
