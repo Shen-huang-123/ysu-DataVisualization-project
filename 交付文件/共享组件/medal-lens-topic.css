@@ -41,3 +41,7 @@ html body.medal-lens-topic details.ex-route>nav{position:static!important;inset:
 html body.medal-lens-topic details.ex-route>nav a{display:block;padding:14px 0!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;color:var(--ink)!important;font-size:15px;line-height:1.6;text-decoration:none}
 html body.medal-lens-topic details.ex-route>nav a:hover{color:var(--gold)!important}
 html body.medal-lens-topic h2[id]{scroll-margin-top:110px}
+/* Editorial hero entry: transparent surface and a quiet gold underline. */
+html body.medal-lens-topic #medal-lens-hero a{display:inline-flex!important;align-items:center;gap:14px!important;margin-top:24px!important;padding:12px 0!important;border:0!important;border-bottom:1px solid #c5aa74!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:#eee3cb!important;font-size:17px!important;font-weight:500!important;line-height:1.6!important;text-decoration:none!important;transition:color .18s ease,border-color .18s ease}
+html body.medal-lens-topic #medal-lens-hero a:hover{color:#fff!important;border-bottom-color:#f0d49a!important}
+html body.medal-lens-topic #medal-lens-hero a:focus-visible{outline:2px solid #e4c78b;outline-offset:6px}
