@@ -1,0 +1,23 @@
+html body.photo-credits-page{--ink:#19333c;--paper:#f0f3ee;--line:#809c9840;--accent:#805e2f;background:var(--paper)!important;color:var(--ink)!important;padding-top:0!important}
+html body.photo-credits-page.xz-dark{--ink:#e9efec;--paper:#102129;--line:#aac3bb30;--accent:#d9bd88}
+html body.photo-credits-page .hero{min-height:75vh;padding:150px 6vw 80px!important;background:linear-gradient(90deg,#102129e8,#10212980),url('../任务三_专题深挖/媒体/sports.jpg') center/cover!important;color:white!important}
+html body.photo-credits-page .hero h1{font-family:inherit!important;font-size:clamp(42px,6vw,84px)!important;font-weight:500!important;line-height:1.25!important;letter-spacing:-.03em!important}
+html body.photo-credits-page .hero small{color:#dfc795!important;font-weight:500!important;font-size:13px}
+html body.photo-credits-page main{max-width:none!important;padding:60px 6vw 70px!important}
+html body.photo-credits-page .intro{border-color:var(--line)!important;align-items:start}
+html body.photo-credits-page .intro h2{font:500 clamp(28px,3vw,42px)/1.5 'Microsoft YaHei',sans-serif!important}
+html body.photo-credits-page .intro p,html body.photo-credits-page dt,html body.photo-credits-page .toolbar span{color:var(--ink)!important;opacity:.75}
+html body.photo-credits-page .toolbar{gap:12px 24px!important;margin:24px 0 36px}
+html body.photo-credits-page .toolbar button:is(button,#pc-a#pc-b#pc-c#pc-d){background:transparent!important;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;color:var(--ink)!important;padding:12px 0!important;box-shadow:none!important;font-size:14px!important;font-weight:400!important}
+html body.photo-credits-page .toolbar button.active:is(button,#pc-a#pc-b#pc-c#pc-d){border-bottom-color:var(--accent)!important;font-weight:600!important}
+html body.photo-credits-page .grid{gap:40px 30px!important}
+html body.photo-credits-page .photo-card{background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;transform:none!important}
+html body.photo-credits-page .photo-frame{height:240px;border-radius:0!important;margin-top:16px}
+html body.photo-credits-page .photo-body{padding:22px 0!important}
+html body.photo-credits-page .photo-body h2{font:500 22px/1.5 'Microsoft YaHei',sans-serif!important;min-height:0!important;color:var(--ink)!important}
+html body.photo-credits-page .category,html body.photo-credits-page .photo-body a{color:var(--accent)!important;font-weight:500!important}
+html body.photo-credits-page dl div{border-color:var(--line)!important;font-size:13px!important;padding:10px 0}
+html body.photo-credits-page .note{background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;padding:24px 0!important;color:var(--ink)!important;line-height:1.9}
+html body.photo-credits-page footer{background:transparent!important;color:var(--ink)!important;border-top:1px solid var(--line)!important;padding:28px 6vw!important}
+html body.photo-credits-page footer a{color:var(--accent)!important}
+@media(max-width:650px){html body.photo-credits-page .hero{padding:130px 24px 60px!important}html body.photo-credits-page main{padding:36px 24px!important}}
