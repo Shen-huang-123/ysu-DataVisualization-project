@@ -5,3 +5,11 @@ html body #project-reading-policy details{max-width:none!important;width:100%!im
 html body #project-reading-policy table{width:100%!important;max-width:none!important;table-layout:fixed}
 html body #project-reading-policy th,html body #project-reading-policy td{overflow-wrap:anywhere}
 @media(max-width:650px){html body #project-reading-policy{margin:28px 24px!important;padding:24px 0!important}html body #project-reading-policy table{font-size:13px!important}html body #project-reading-policy th,html body #project-reading-policy td{padding:12px 8px!important}}
+html body #forecast-scenario-boundary,html body #forecast-source-notice{width:auto!important;max-width:none!important;min-height:0!important;height:auto!important;margin:32px 6vw!important;padding:32px 0!important;display:block!important;background:transparent!important;background-image:none!important;border:0!important;border-top:1px solid var(--line,#839d9840)!important;border-radius:0!important;box-shadow:none!important;color:inherit!important;transform:none!important}
+html body #forecast-scenario-boundary h2{font-family:inherit!important;font-size:clamp(27px,3vw,40px)!important;font-weight:500!important;line-height:1.5!important;margin:12px 0 18px!important;color:inherit!important}
+html body #forecast-scenario-boundary>span{font-size:13px!important;color:#8b6834!important;font-weight:500!important}
+html body.xz-dark #forecast-scenario-boundary>span{color:#d8be89!important}
+html body #forecast-scenario-boundary p,html body #forecast-source-notice p{max-width:90ch!important;font-size:16px!important;line-height:1.95!important;margin:16px 0!important;color:inherit!important}
+html body #forecast-source-notice strong{font-size:23px!important;font-weight:500!important;color:inherit!important}
+html body #forecast-source-notice a{display:inline-block;padding:10px 0!important;border-bottom:1px solid #ad9566!important;color:inherit!important;font-size:15px!important;font-weight:500!important;text-decoration:none!important}
+@media(max-width:650px){html body #forecast-scenario-boundary,html body #forecast-source-notice{margin:24px!important;padding:24px 0!important}}
