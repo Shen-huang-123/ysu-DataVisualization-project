@@ -12,4 +12,12 @@ shared=s.select_one('#unified-selects')
 if not shared:
  shared=s.new_tag('link',id='unified-selects',rel='stylesheet');s.head.append(shared)
 shared['href']='../../共享组件/unified-selects.css?v=5'
+main=s.select_one('main')
+bridge=s.select_one('.task3-depth-bridge')
+if bridge:main.append(bridge)
+related=s.select_one('.st-related')
+if not related:
+ related=s.new_tag('section',attrs={'class':'st-related','aria-label':'继续核对研究证据'});main.append(related)
+for a in list(s.select('body>a[href]')):
+ if any(key in a.get('href','') for key in ['02_客观样本','03_']):related.append(a)
 p.write_text(str(s),encoding='utf-8')

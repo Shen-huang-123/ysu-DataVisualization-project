@@ -1,4 +1,18 @@
 html body.small-team-topic>header>.immersive-float-layer{display:none!important}
+html body.small-team-topic .task3-depth-bridge{color:var(--bg)!important;margin-top:56px!important;padding:40px 0!important}
+html body.small-team-topic .task3-depth-bridge>div{max-width:none!important;margin:0!important}
+html body.small-team-topic .task3-depth-bridge h2{font-size:clamp(26px,2.8vw,40px)!important;line-height:1.55!important;font-weight:500!important;max-width:30em}
+html body.small-team-topic .task3-depth-bridge p{font-size:15px!important;line-height:1.95!important;max-width:78ch!important}
+html body.small-team-topic .task3-depth-bridge a{font-size:14px!important;font-weight:400!important;color:var(--bg)!important;text-decoration:none!important;border-bottom:1px solid #b59b6870;padding-bottom:10px;display:inline-block}
+html body.small-team-topic .task3-depth-bridge small{color:var(--a)!important;font-size:12px;letter-spacing:.08em!important}
+html body.small-team-topic .st-related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;border-top:1px solid var(--st-line);padding:36px 0 0;margin-top:16px}
+html body.small-team-topic .st-related>a{display:block!important;max-width:none!important;margin:0!important;padding:20px 0!important;border:0!important;border-block:1px solid #b59b6860!important;border-radius:0!important;background:transparent!important;color:var(--bg)!important;text-decoration:none!important;font-size:18px!important;line-height:1.8!important}
+html body.small-team-topic .st-related>a :is(h2,p,small){color:inherit!important}
+html body.small-team-topic .st-related>a h2{font-size:22px!important;line-height:1.6!important;margin:10px 0!important}
+html body.small-team-topic .st-related>a p{font-size:14px!important;line-height:1.9!important;opacity:.7}
+html body.small-team-topic .st-related>a small{font-size:12px!important;opacity:.6}
+html body.small-team-topic footer{background:transparent!important;color:var(--bg)!important;border-top:1px solid var(--st-line);font-size:12px!important;line-height:1.9;padding:28px 7vw!important;gap:12px 32px}
+@media(max-width:700px){html body.small-team-topic .st-related{grid-template-columns:1fr;gap:20px}html body.small-team-topic footer{padding-inline:24px!important}}
 html body.small-team-topic .ex-pair>div:has(select){border-top:0!important;padding-top:8px!important}
 html body.small-team-topic .ex-pair>div:has(select):before{content:'代表团一';display:block;margin-bottom:10px;color:var(--bg);opacity:.55;font-size:12px;letter-spacing:.08em}
 html body.small-team-topic .ex-pair>div:nth-child(2):has(select):before{content:'代表团二'}
