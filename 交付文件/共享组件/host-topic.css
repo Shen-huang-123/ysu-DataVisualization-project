@@ -1,7 +1,4 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
-html body.host-topic .s1-picker button[data-index]{border:0!important;border-bottom:1px solid rgb(181 155 104 / 42%)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:14px 0 18px!important;align-items:flex-start!important;text-align:left}
-html body.host-topic .s1-picker button[data-index]:is(:hover,:focus-visible){background:transparent!important;border-bottom-color:#c4a66c!important}
-html body.host-topic .s1-picker button[data-index][aria-pressed=true]{background:transparent!important;border-bottom:2px solid #c4a66c!important;box-shadow:none!important}
 html body.host-topic .s1-main{padding-inline:clamp(24px,7vw,140px)!important}
 html body.host-topic .s1-section{background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;padding:64px 0!important}
 html body.host-topic .s1-section h2{font-family:inherit!important;font-weight:500!important;font-size:clamp(28px,3vw,44px)!important;line-height:1.5!important;letter-spacing:-.025em!important;margin:12px 0 30px!important}
@@ -105,3 +102,6 @@ body.host-topic .s1-links a{background:transparent;color:inherit;border:0;border
 body.host-topic .s1-figure{border:0;border-radius:0}
 body.host-topic button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
 @media(max-width:700px){body.host-topic .s1-hero{min-height:700px;height:88vh;padding:140px 24px 110px;background-position:58% center}body.host-topic .s1-hero p{font-size:16px}body.host-topic .s1-main{padding:0 24px 64px}body.host-topic .s1-section{padding:44px 0}body.host-topic .photo-stage.host{padding-inline:24px!important}body.host-topic .photo-stage.host figcaption{flex-direction:column}body.host-topic .s1-case{gap:24px}body.host-topic .s1-facts{gap:12px}}
+html body.host-topic .s1-picker button[data-index]{border:0!important;border-bottom:1px solid rgb(181 155 104 / 42%)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:14px 0 18px!important;align-items:flex-start!important;text-align:left}
+html body.host-topic .s1-picker button[data-index]:is(:hover,:focus-visible){background:transparent!important;border-bottom-color:#c4a66c!important}
+html body.host-topic .s1-picker button[data-index][aria-pressed=true]{background:transparent!important;border-bottom:2px solid #c4a66c!important;box-shadow:none!important}
