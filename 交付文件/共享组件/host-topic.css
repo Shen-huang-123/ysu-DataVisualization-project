@@ -1,0 +1,35 @@
+/* Host study: stadium photography followed by readable comparison evidence. */
+body.host-topic{--paper:#f1f3ef;--ink:#19333c;--gold:#ad925e;--line:#869b9c40;line-height:1.8}
+body.host-topic.xz-dark{--paper:#102129;--ink:#edf1ee;--line:#b2c2c12b;background:var(--paper);color:var(--ink)}
+body.host-topic .s1-hero{position:relative;isolation:isolate;min-height:760px;height:90vh;max-height:1000px;padding:180px 7vw 130px;display:flex;flex-direction:column;justify-content:center;color:#fff;background:linear-gradient(90deg,#06151bd9,#06151b25),url('../任务三_专题深挖/媒体/host.jpg') center/cover}
+body.host-topic .s1-hero:after{content:'';position:absolute;z-index:-1;inset:70% 0 0;background:linear-gradient(transparent,var(--paper))}
+body.host-topic .s1-hero h1{font-family:inherit;font-weight:500;font-size:clamp(48px,6.8vw,100px);line-height:1.18;letter-spacing:-.035em;margin:24px 0 28px}
+body.host-topic .s1-kicker{color:#dec797;font-weight:500;font-size:13px;letter-spacing:.12em}
+body.host-topic .s1-hero p{max-width:40em;font-size:18px;line-height:1.95;color:#edf0ed}
+body.host-topic .photo-stage.host{height:auto!important;min-height:0!important;margin:0!important;padding:12px 7vw 24px!important;background:transparent!important;border:0!important}
+body.host-topic .photo-stage.host img{display:none!important}
+body.host-topic .photo-stage.host figcaption{position:static!important;background:transparent!important;color:var(--ink)!important;padding:0!important;display:flex;justify-content:space-between;gap:16px;font-size:12px}
+body.host-topic .s1-main{max-width:none;width:100%;padding:0 7vw 100px}
+body.host-topic .s1-section{padding:72px 0;border-color:var(--line)}
+body.host-topic .s1-section h2{font-weight:500;font-size:clamp(28px,3vw,44px);line-height:1.45;letter-spacing:-.025em;max-width:28em;margin:10px 0 28px}
+body.host-topic .s1-section p{max-width:72ch;line-height:1.95}
+body.host-topic .s1-facts{gap:32px;margin:36px 0}
+body.host-topic .s1-facts article{padding:26px 0;background:transparent;border:0;border-top:1px solid var(--line);border-radius:0}
+body.host-topic .s1-facts strong{font-weight:500;color:var(--ink);letter-spacing:-.04em;margin-bottom:14px}
+body.host-topic .s1-facts span{opacity:.75;line-height:1.8}
+body.host-topic .s1-picker{gap:4px 24px;border-bottom:1px solid var(--line);padding-bottom:12px}
+body.host-topic .s1-picker button{font:inherit;color:inherit;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;padding:10px 0}
+body.host-topic .s1-picker button[aria-pressed=true]{color:var(--ink);background:transparent;border-color:var(--gold)}
+body.host-topic .s1-case{padding:32px 0;border:0;border-radius:0;background:transparent;gap:48px}
+body.host-topic .s1-case h3{font-weight:500}
+body.host-topic .s1-case .s1-change{font-weight:500;color:var(--ink)}
+body.host-topic .s1-bar{grid-template-columns:80px minmax(0,1fr) 72px}
+body.host-topic .s1-bar i{height:8px;border-radius:1px}
+body.host-topic .s1-details{gap:24px 48px}
+body.host-topic .s1-details article{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:26px 0}
+body.host-topic .s1-note{background:transparent;border-left:2px solid var(--gold);padding:12px 24px}
+body.host-topic .s1-links{gap:16px 28px}
+body.host-topic .s1-links a{background:transparent;color:inherit;border:0;border-bottom:1px solid var(--gold);border-radius:0;padding:10px 0}
+body.host-topic .s1-figure{border:0;border-radius:0}
+body.host-topic button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+@media(max-width:700px){body.host-topic .s1-hero{min-height:700px;height:88vh;padding:140px 24px 110px;background-position:58% center}body.host-topic .s1-hero p{font-size:16px}body.host-topic .s1-main{padding:0 24px 64px}body.host-topic .s1-section{padding:44px 0}body.host-topic .photo-stage.host{padding-inline:24px!important}body.host-topic .photo-stage.host figcaption{flex-direction:column}body.host-topic .s1-case{gap:24px}body.host-topic .s1-facts{gap:12px}}

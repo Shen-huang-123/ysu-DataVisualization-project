@@ -1,0 +1,12 @@
+"""Restore the host topic design after generating the research page."""
+from pathlib import Path
+from bs4 import BeautifulSoup
+root=Path(__file__).resolve().parents[2]
+p=root/'交付文件/任务三_专题深挖/S1_东道主效应/index.html'
+s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
+s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['host-topic']))
+link=s.select_one('#host-topic-style')
+if not link:
+ link=s.new_tag('link',id='host-topic-style',rel='stylesheet');s.head.append(link)
+link['href']='../../共享组件/host-topic.css?v=1'
+p.write_text(str(s),encoding='utf-8')
