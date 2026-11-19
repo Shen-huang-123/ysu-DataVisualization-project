@@ -1,4 +1,7 @@
 /* Host study: stadium photography followed by readable comparison evidence. */
+html body.host-topic .oa-world{display:none!important}
+html body.host-topic{background-image:none!important;background-color:var(--paper)!important}
+html body.host-topic:before,html body.host-topic:after{content:none!important;display:none!important}
 html body.host-topic .photo-stage.host{position:relative!important;overflow:visible!important;isolation:isolate;display:block!important;height:auto!important;min-height:0!important}
 html body.host-topic .photo-stage.host:before,html body.host-topic .photo-stage.host:after{display:none!important;content:none!important}
 html body.host-topic .photo-stage.host figcaption{position:static!important;inset:auto!important;transform:none!important;width:100%!important;display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:16px 32px!important;min-height:0!important;padding:18px 0 26px!important;background:transparent!important;border-bottom:1px solid var(--line)!important}
