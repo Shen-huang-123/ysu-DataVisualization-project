@@ -87,3 +87,7 @@ print('Integrated host evidence:',len(paths),'existing pages; standalone and two
 # Refresh the complete web reading edition after material updates.
 import runpy
 runpy.run_path(str(Path(__file__).with_name("publish_flagship_reading.py")))
+
+# Render the web interval chart from the same CSV after material generation.
+import runpy
+runpy.run_path(str(Path(__file__).with_name('publish_host_interval_chart.py')))
