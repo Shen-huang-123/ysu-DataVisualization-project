@@ -1,0 +1,29 @@
+html body.medal-lens-topic{--paper:#edf2ef;--ink:#203b42;--gold:#b59b68;--line:#829a9b40;background:var(--paper)!important;color:var(--ink)!important;padding-top:0!important}
+html body.medal-lens-topic.xz-dark{--paper:#152129;--ink:#e8efec;--line:#a3b8b52c}
+html body.medal-lens-topic .oa-world,html body.medal-lens-topic>header>.immersive-float-layer,html body.medal-lens-topic:before{display:none!important}
+html body.medal-lens-topic .hero{position:relative;isolation:isolate;min-height:850px!important;padding:150px 7vw 110px!important;grid-template-columns:1.2fr .8fr!important;gap:7vw!important;background:linear-gradient(90deg,#102129ed,#10212985),url('../任务三_专题深挖/媒体/lens.jpg') center/cover!important;color:white!important}
+html body.medal-lens-topic .hero:before{display:none!important}
+html body.medal-lens-topic .hero:after{content:'';position:absolute;inset:78% 0 0;background:linear-gradient(transparent,var(--paper));z-index:-1}
+html body.medal-lens-topic .hero h1{font-family:inherit!important;font-weight:500!important;font-size:clamp(46px,6.5vw,94px)!important;line-height:1.2!important;letter-spacing:-.03em}
+html body.medal-lens-topic .hero p{font-size:18px!important;line-height:1.95!important;color:#edf2ef!important}
+html body.medal-lens-topic .eyebrow{font-size:13px!important;font-weight:500!important;color:#dfc997!important}
+html body.medal-lens-topic .lens{padding:22px 0!important;background:transparent!important;border:0!important;border-top:1px solid #b59b6880!important;border-radius:0!important;box-shadow:none!important;font-size:14px;line-height:1.8}
+html body.medal-lens-topic .lens b{font-size:36px!important;font-weight:500!important;line-height:1.6!important;color:#f1e5cb!important}
+html body.medal-lens-topic .photo-stage{height:auto!important;min-height:0!important;background:transparent!important;margin:0!important;padding:18px 7vw!important}
+html body.medal-lens-topic .photo-stage img,html body.medal-lens-topic .photo-stage:before,html body.medal-lens-topic .photo-stage:after{display:none!important}
+html body.medal-lens-topic .photo-stage figcaption{position:static!important;transform:none!important;background:transparent!important;color:var(--ink)!important;font-size:12px!important;line-height:1.9!important;padding:0!important}
+html body.medal-lens-topic section{padding:64px 7vw!important;border-color:var(--line)!important;background:transparent!important;min-height:0}
+html body.medal-lens-topic .title{font-family:inherit!important;font-size:clamp(28px,3.2vw,46px)!important;font-weight:500!important;line-height:1.5!important;max-width:none!important;margin:12px 0 28px!important}
+html body.medal-lens-topic .lede{font-size:17px!important;line-height:1.95!important;max-width:78ch}
+html body.medal-lens-topic .viz{background:transparent!important;border:0!important;border-top:1px solid #b59b6870!important;border-radius:0!important;box-shadow:none!important;padding:24px 0!important;top:100px}
+html body.medal-lens-topic .step{padding:20px 0 20px 24px!important;border-left:1px solid var(--line)!important;line-height:1.9}
+html body.medal-lens-topic .step.active{border-left-color:var(--gold)!important}
+html body.medal-lens-topic .step h3{font-size:23px!important;font-weight:500!important;line-height:1.6}
+html body.medal-lens-topic .controls button:is(button,#ml-a#ml-b#ml-c#ml-d){background:transparent!important;color:var(--ink)!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;padding:12px 0!important;margin-right:18px;font:inherit;min-height:44px}
+html body.medal-lens-topic .controls button.active:is(button,#ml-a#ml-b#ml-c#ml-d){border-bottom:2px solid var(--gold)!important}
+html body.medal-lens-topic .track{height:10px!important;background:transparent!important;border-radius:0!important}
+html body.medal-lens-topic .fill{box-sizing:border-box;background:transparent!important;border:1px solid #b59b68b8;border-radius:1px!important}
+html body.medal-lens-topic .year{padding:24px 0!important;background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;line-height:1.9}
+html body.medal-lens-topic .year strong{font-size:42px!important;font-weight:500!important;color:var(--ink)!important}
+html body.medal-lens-topic footer{background:transparent!important;color:var(--ink)!important;border-top:1px solid var(--line);padding:32px 7vw!important}
+@media(max-width:850px){html body.medal-lens-topic .hero{grid-template-columns:1fr!important;min-height:800px!important;padding:130px 24px 80px!important;gap:28px!important}html body.medal-lens-topic .triptych{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px!important}html body.medal-lens-topic .lens b{font-size:26px!important}html body.medal-lens-topic section{padding:44px 24px!important}html body.medal-lens-topic .viz{position:relative;top:0;min-height:0}html body.medal-lens-topic .rankrow{grid-template-columns:28px 48px minmax(0,1fr) 48px;font-size:12px;gap:6px}}
