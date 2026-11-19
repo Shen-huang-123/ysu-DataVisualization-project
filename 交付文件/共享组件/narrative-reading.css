@@ -282,3 +282,16 @@ html body.narrative-panorama .t2-table-wrap tr:hover td{background:#829a9b0c!imp
 html body.narrative-panorama.xz-dark .t2-table-wrap :is(th,td){color:#e5eeeb!important}
 html body.narrative-panorama.xz-dark .t2-table-wrap th{color:#a9bfbe!important}
 @media(max-width:650px){html body.narrative-panorama .t2-table-wrap :is(th,td){padding:14px 12px!important}}
+/* Refine comparison hierarchy while retaining the live filter output. */
+html body.narrative-panorama .t2-table-wrap table{table-layout:fixed!important}
+html body.narrative-panorama .t2-table-wrap :is(th,td):first-child{width:34%!important;font-weight:500!important}
+html body.narrative-panorama .t2-table-wrap :is(th,td):nth-child(2){width:22%!important}
+html body.narrative-panorama .t2-table-wrap :is(th,td):nth-child(3){width:22%!important}
+html body.narrative-panorama .t2-table-wrap :is(th,td):last-child{width:22%!important;padding-right:12px!important}
+html body.narrative-panorama .t2-table-wrap thead th{padding-block:20px!important;border-bottom:2px solid #829a9b60!important;letter-spacing:.02em}
+html body.narrative-panorama .t2-table-wrap tbody td{padding-block:18px!important;font-size:15px!important}
+html body.narrative-panorama .t2-table-wrap tbody td:last-child{color:#386d7c!important;font-weight:500!important}
+html body.narrative-panorama.xz-dark .t2-table-wrap tbody td:last-child{color:#a4ced4!important}
+html body.narrative-panorama .t2-table-wrap tbody tr:hover td:first-child{box-shadow:inset 2px 0 #b59b68!important}
+html body.narrative-panorama .t2-table-wrap tbody tr:last-child td{border-bottom-color:#829a9b70!important}
+@media(max-width:650px){html body.narrative-panorama .t2-table-wrap table{min-width:580px!important}html body.narrative-panorama .t2-table-wrap tbody td{font-size:14px!important;padding-block:15px!important}}
