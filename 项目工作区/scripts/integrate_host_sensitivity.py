@@ -94,3 +94,4 @@ runpy.run_path(str(Path(__file__).with_name('publish_host_interval_chart.py')))
 
 # Keep the shared table stylesheet on newly generated standalone evidence pages.
 runpy.run_path(str(Path(__file__).with_name('publish_unified_tables.py')))
+runpy.run_path(str(Path(__file__).with_name('publish_table_interactions.py')))
