@@ -17,3 +17,6 @@ html body.narrative-panorama .t2-table-wrap table tbody tr:hover td{background:t
 html body.narrative-panorama.task2-redesign main .t2-table-wrap table :is(tbody,tr,td),html body.narrative-panorama.task2-redesign main .t2-table-wrap table tbody tr:nth-child(n),html body.narrative-panorama.task2-redesign main .t2-table-wrap table tbody tr:hover{background:transparent!important;background-image:none!important;box-shadow:none!important}
 html body.narrative-panorama.task2-redesign main .t2-table-wrap table tbody tr:nth-child(n) td:nth-child(n){color:var(--ut-ink)!important;font-weight:400!important;box-shadow:none!important;text-align:left!important}
 html body.narrative-panorama.task2-redesign main .t2-table-wrap table thead th:nth-child(n){background:var(--ut-head)!important;color:var(--ut-muted)!important;text-align:left!important;border-bottom:1px solid var(--ut-gold)!important}
+/* The container and table must also be transparent, not only their cells. */
+html body.narrative-panorama.task2-redesign main .t2-table-wrap,
+html body.narrative-panorama.task2-redesign main .t2-table-wrap table{background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
