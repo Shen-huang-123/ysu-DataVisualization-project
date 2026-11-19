@@ -10,6 +10,14 @@ header=s.body.find('header',recursive=False);photo=s.select_one('figure.photo-st
 if photo and not header.select_one('.legends-photo'):
  img=photo.img.extract();img['class']=['legends-photo'];header.insert(0,img)
  caption=photo.figcaption.extract();caption['class']=['legends-credit'];header.append(caption);photo.decompose()
+photo=header.select_one('.legends-photo')
+if photo:
+ photo['src']='../媒体/legends-nurmi-wide-1924.jpg';photo['alt']='1924年巴黎奥运会越野赛中的帕沃·努尔米'
+credit=header.select_one('.legends-credit')
+if credit:
+ credit.clear()
+ label=s.new_tag('span');label.string='巴黎1924 · 努尔米参加越野赛 · 场景配图，不作为统计证据';credit.append(label)
+ source=s.new_tag('a',href='https://commons.wikimedia.org/wiki/File:1924_Summer_Olympics_Cross_Country_Nurmi_2.jpg',target='_blank',rel='noopener');source.string='Agence Rol · 公共领域 ↗';credit.append(source)
 for e in s.select('.art-figure'):e.decompose()
 for x in s.find_all('script'):
  m=re.search(r'const rows=(\[.*?\]);',x.text)
@@ -30,3 +38,4 @@ if footer:
 s.select_one('.viz h2').string='姓名对应的金牌行 · 核验候选'
 s.select_one('.viz aside small').string='点击记录查看详情'
 p.write_text(str(s),encoding='utf-8')
+

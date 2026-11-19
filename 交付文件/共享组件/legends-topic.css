@@ -63,3 +63,11 @@ html body.legends-topic header :is(h1,.lead,.tag){margin-left:0!important;margin
 html body.legends-topic .viz>div{grid-column:1!important;grid-row:1!important;min-width:0!important}
 html body.legends-topic .viz>aside{grid-column:2!important;grid-row:1!important;min-width:0!important}
 @media(max-width:700px){html body.legends-topic .viz>aside{grid-column:1!important;grid-row:1!important}html body.legends-topic .viz>div{grid-column:1!important;grid-row:2!important}}
+/* Wide archival source replaces the narrow portrait; keep the complete frame. */
+html body.legends-topic>header{height:calc(100vw * 5638 / 8091)!important;min-height:620px!important;max-height:none!important;padding:56px clamp(24px,6vw,100px)!important;justify-content:flex-start!important;background:#152129!important;color:#f3f6f3!important}
+html body.legends-topic header .legends-photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;z-index:-2}
+html body.legends-topic>header:before{display:block!important;position:absolute;inset:0;z-index:-1;opacity:1!important;background:linear-gradient(180deg,#101d26bf 0%,#101d2640 32%,transparent 52%,#101d2680 100%)!important}
+html body.legends-topic header :is(h1,.lead,.tag){width:100%!important;color:#f3f6f3!important}
+html body.legends-topic header .lead{max-width:100%!important;font-size:clamp(16px,1.4vw,21px)!important}
+html body.legends-topic .legends-credit{left:clamp(24px,6vw,100px);right:24px;bottom:24px;color:#e2e8e4!important}
+@media(max-width:700px){html body.legends-topic>header{height:auto!important;min-height:0!important;max-height:none!important;padding:0 24px 110px!important;background:transparent!important;color:var(--vt-ink)!important}html body.legends-topic header .legends-photo{position:relative!important;inset:auto!important;width:calc(100% + 48px)!important;height:auto!important;margin:0 -24px 24px!important;z-index:0}html body.legends-topic>header:before{display:none!important}html body.legends-topic header :is(h1,.lead,.tag){color:var(--vt-ink)!important}html body.legends-topic .legends-credit{color:var(--vt-muted)!important;left:24px;right:24px}}
