@@ -59,3 +59,5 @@ html body.medal-growth-topic .task3-depth-bridge a{display:inline-block;padding:
 html body.medal-growth-topic>a.research-proof-link{display:block!important;max-width:none!important;margin:0 7vw 38px!important;padding:22px 0!important;background:transparent!important;border:0!important;border-block:1px solid var(--growth-line)!important;border-radius:0!important;color:var(--bg)!important;box-shadow:none!important}
 html body.medal-growth-topic>a.research-proof-link h2,html body.medal-growth-topic>a.research-proof-link strong{font-size:23px!important;font-weight:500!important}
 @media(max-width:650px){html body.medal-growth-topic .growth-metrics{grid-template-columns:1fr!important;gap:8px!important}html body.medal-growth-topic .task3-depth-bridge{padding:36px 24px!important}}
+/* Decorative particles must never extend the document scroll area. */
+html body.medal-growth-topic>.ed-particles{position:fixed!important;inset:0!important;width:100%!important;height:100vh!important;max-height:100vh!important;overflow:hidden!important;pointer-events:none!important}
