@@ -31,3 +31,13 @@ html body.medal-lens-topic .year{padding:24px 0!important;background:transparent
 html body.medal-lens-topic .year strong{font-size:42px!important;font-weight:500!important;color:var(--ink)!important}
 html body.medal-lens-topic footer{background:transparent!important;color:var(--ink)!important;border-top:1px solid var(--line);padding:32px 7vw!important}
 @media(max-width:850px){html body.medal-lens-topic .hero{grid-template-columns:1fr!important;min-height:800px!important;padding:130px 24px 80px!important;gap:28px!important}html body.medal-lens-topic .triptych{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px!important}html body.medal-lens-topic .lens b{font-size:26px!important}html body.medal-lens-topic section{padding:44px 24px!important}html body.medal-lens-topic .viz{position:relative;top:0;min-height:0}html body.medal-lens-topic .rankrow{grid-template-columns:28px 48px minmax(0,1fr) 48px;font-size:12px;gap:6px}}
+/* Keep the in-page route in document flow, separate from the fixed site nav. */
+html body.medal-lens-topic details.ex-route{position:relative!important;inset:auto!important;margin:28px 7vw 36px!important;padding:0!important;border:0!important;border-block:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;z-index:1!important}
+html body.medal-lens-topic details.ex-route>summary{display:flex!important;align-items:center;justify-content:space-between;min-height:60px;padding:12px 0!important;list-style:none!important;color:var(--ink)!important;font-size:16px;cursor:pointer}
+html body.medal-lens-topic details.ex-route>summary::-webkit-details-marker{display:none}
+html body.medal-lens-topic details.ex-route>summary::after{content:'＋';color:var(--gold);font-size:22px}
+html body.medal-lens-topic details.ex-route[open]>summary::after{content:'−'}
+html body.medal-lens-topic details.ex-route>nav{position:static!important;inset:auto!important;display:grid!important;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));width:auto!important;gap:0 28px!important;padding:0 0 20px!important;background:transparent!important;box-shadow:none!important;border:0!important;transform:none!important}
+html body.medal-lens-topic details.ex-route>nav a{display:block;padding:14px 0!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;color:var(--ink)!important;font-size:15px;line-height:1.6;text-decoration:none}
+html body.medal-lens-topic details.ex-route>nav a:hover{color:var(--gold)!important}
+html body.medal-lens-topic h2[id]{scroll-margin-top:110px}

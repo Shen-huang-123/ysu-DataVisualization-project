@@ -11,5 +11,7 @@ if not hero.select_one('.medal-lens-photo'):
  hero.insert(0,photo)
 link=s.select_one('#medal-lens-topic-style')
 if not link:link=s.new_tag('link',id='medal-lens-topic-style',rel='stylesheet');s.head.append(link)
-link['href']='../../../共享组件/medal-lens-topic.css?v=1'
+link['href']='../../../共享组件/medal-lens-topic.css?v=2'
+for script in s.select('script[src]'):
+ if 'exploration-design.js' in script['src']:script['src']='../../../共享组件/exploration-design.js?v=20261119-route'
 p.write_text(str(s),encoding='utf-8')

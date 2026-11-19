@@ -66,7 +66,7 @@
   restore.onclick=()=>{if(!snapshot)return;fields().forEach((e,i)=>{if(!snapshot[i])return;e.value=snapshot[i].value;if(e.type==='checkbox'||e.type==='radio')e.checked=snapshot[i].checked;e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}))});status.textContent='已恢复记录的筛选条件'};
 
   headings.forEach((h,i)=>{if(!h.id)h.id='ex-section-'+i;const a=element('a',String(i+1).padStart(2,'0')+'  '+h.textContent.trim());a.href='#'+h.id;a.onclick=e=>{e.preventDefault();h.scrollIntoView({behavior:reduce?'instant':'smooth',block:'start'});if(innerWidth<650)route.open=false};list.append(a)});
-  const anchor=main.querySelector('.insight')||main.firstElementChild;anchor?.after(route);
+  const anchor=document.body.classList.contains('medal-lens-topic')?(main.querySelector('.photo-stage')||main.querySelector('header.hero')):(main.querySelector('.insight')||main.firstElementChild);anchor?.after(route);
  }
  if(!reduce&&'IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ex-entered');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.ex-design').forEach(e=>{e.classList.add('ex-motion');io.observe(e)})}
 })();
