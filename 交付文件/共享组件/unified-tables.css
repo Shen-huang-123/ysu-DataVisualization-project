@@ -34,3 +34,6 @@ html body table.ut-interactive tbody tr>:is(th,td){transition:border-color .18s 
 html body #host-source-sensitivity table.ut-interactive tbody tr:is(:hover,:focus-visible,[data-ut-selected])>:is(th,td){border-bottom-color:var(--ut-gold)!important}
 html body #host-source-sensitivity table.ut-interactive tbody tr:is(:focus-visible,[data-ut-selected])>:first-child{text-decoration:underline;text-decoration-color:var(--ut-gold);text-underline-offset:6px;text-decoration-thickness:2px}
 @media(prefers-reduced-motion:reduce){html body table.ut-interactive tbody tr>:is(th,td){transition:none}}
+/* Apply comparison feedback consistently to every enhanced table. */
+html body table.ut-interactive:is(table,#ut-table) tbody tr:is(:hover,:focus-visible,[data-ut-selected])>:is(th,td){border-bottom-color:var(--ut-gold)!important}
+html body table.ut-interactive:is(table,#ut-table) tbody tr:is(:focus-visible,[data-ut-selected])>:first-child{text-decoration:underline;text-decoration-color:var(--ut-gold);text-underline-offset:6px;text-decoration-thickness:2px}

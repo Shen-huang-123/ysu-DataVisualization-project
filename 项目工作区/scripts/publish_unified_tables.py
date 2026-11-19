@@ -12,3 +12,6 @@ for p in base.rglob('*.html'):
  if old:old.extract()
  s.head.append(s.new_tag('link',id='unified-tables',rel='stylesheet',href=Path(os.path.relpath(base/'共享组件/unified-tables.css',p.parent)).as_posix()))
  p.write_text(str(s),'utf8')
+# Apply row interactions to all generated tables as well.
+import runpy
+runpy.run_path(str(Path(__file__).with_name('publish_table_interactions.py')))
