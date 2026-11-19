@@ -270,3 +270,15 @@ html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar label{displ
 html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar input{height:48px!important;margin-top:0!important}
 html body.ed-entry.narrative-module[data-narrative] main .xz-toolbar select{margin:0!important}
 @media(prefers-reduced-motion:reduce){html body.ed-entry.narrative-module[data-narrative] main select{transition:none!important}}
+
+/* Panorama delegation comparison: quiet rows and aligned figures. */
+html body.narrative-panorama .t2-table-wrap{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow-x:auto!important}
+html body.narrative-panorama .t2-table-wrap table{width:100%!important;min-width:620px;border-collapse:collapse!important;table-layout:fixed;background:transparent!important;font-family:'Microsoft YaHei',system-ui,sans-serif!important}
+html body.narrative-panorama .t2-table-wrap :is(thead,tbody,tr,th,td){background:transparent!important;border:0!important;box-shadow:none!important;color:var(--ink,#20383e)!important;font-family:'Microsoft YaHei',system-ui,sans-serif!important;text-shadow:none!important}
+html body.narrative-panorama .t2-table-wrap :is(th,td){padding:17px 20px!important;border-bottom:1px solid #829a9b38!important;font-size:14px!important;font-weight:400!important;text-align:right!important;font-variant-numeric:tabular-nums;line-height:1.6!important}
+html body.narrative-panorama .t2-table-wrap th{font-size:12px!important;color:var(--muted,#61777a)!important;font-weight:500!important;border-top:1px solid #829a9b60!important}
+html body.narrative-panorama .t2-table-wrap :is(th,td):first-child{text-align:left!important;width:30%;padding-left:12px!important}
+html body.narrative-panorama .t2-table-wrap tr:hover td{background:#829a9b0c!important}
+html body.narrative-panorama.xz-dark .t2-table-wrap :is(th,td){color:#e5eeeb!important}
+html body.narrative-panorama.xz-dark .t2-table-wrap th{color:#a9bfbe!important}
+@media(max-width:650px){html body.narrative-panorama .t2-table-wrap :is(th,td){padding:14px 12px!important}}
