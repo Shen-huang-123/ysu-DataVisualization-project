@@ -154,3 +154,6 @@ body.voyage-live #voyage-stage.voyage-cosmos,html.voyage-preparing #voyage-stage
 
 /* The final header exists before animation libraries initialize. */
 html.voyage-preparing .topbar{transition:none!important}
+
+/* Restore photographs to the original WebGL tunnel layer. */
+@media(min-width:651px){#voyage-stage.voyage-cosmos .memory-in-3d .voyage-photo{visibility:hidden!important}}
