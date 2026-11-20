@@ -17,6 +17,12 @@ html body.ip-dynasty main .scroll table :is(th,td):nth-child(3){width:15%!import
 html body.ip-dynasty main .scroll table :is(th,td):nth-child(4){width:20%!important;white-space:nowrap}
 html body.ip-dynasty main .scroll table :is(th,td):nth-child(5){width:13%!important;text-align:right!important}
 html body.ip-dynasty main .scroll table tbody tr:hover td{background:#8aaeb014!important}
+/* Match the task pages' shared table typography and theme tokens. */
+html body.ip-dynasty main .scroll table :is(th,td){padding:18px 16px!important;font-size:14px!important;line-height:1.8!important;color:var(--ut-ink)!important;border-bottom:1px solid var(--ut-line)!important;text-align:left!important}
+html body.ip-dynasty main .scroll table thead th:nth-child(n){background:var(--ut-head)!important;color:var(--ut-muted)!important;font-size:13px!important;font-weight:600!important;border-top:0!important;border-bottom:1px solid var(--ut-gold)!important;text-align:left!important}
+html body.ip-dynasty main .scroll table tbody tr:hover td{background:transparent!important}
+html body.ip-dynasty main .scroll table :is(th,td):nth-child(5){text-align:left!important}
+@media(max-width:650px){html body.ip-dynasty main .scroll table :is(th,td){padding:13px 12px!important;font-size:13px!important}}
 html body.ip-dynasty #dynasty-table-note{font-size:14px!important;color:var(--muted)!important;line-height:1.9!important;margin:16px 0 0!important}
 
 html body.ip-dynasty main.wrap,html body.ip-dynasty footer.wrap{width:100%!important;max-width:none!important;padding-inline:6vw!important;box-sizing:border-box!important}
