@@ -1,0 +1,33 @@
+from pathlib import Path
+from bs4 import BeautifulSoup
+root=Path(__file__).resolve().parents[2]
+p=root/'交付文件/任务三_专题深挖/S2_口径的魔力/07_口径实验室/index.html'
+s=BeautifulSoup(p.read_text(encoding='utf8'),'html.parser')
+st=s.select_one('#rule-lab-refined')
+if not st:st=s.new_tag('style',id='rule-lab-refined');s.head.append(st)
+st.string="""
+html body.ip-lab{background:#f2f3ee!important;background-image:none!important}
+html body.ip-lab.xz-dark{background:#182128!important;--ink:#edf3f2;--muted:#c0d0d4;--line:#94b0ba40}
+html body.ip-lab .oa-world{display:none!important}
+html body.ip-lab::before{background:none!important}
+html body.ip-lab main.wrap,html body.ip-lab footer.wrap{width:100%!important;max-width:none!important;padding-inline:6vw!important;box-sizing:border-box!important}
+html body.ip-lab main>section{margin:0!important;padding:40px 0!important;border-bottom:1px solid var(--line)!important}
+html body.ip-lab main h2{font:500 clamp(26px,3vw,42px)/1.5 'Microsoft YaHei',sans-serif!important;color:var(--ink)!important}
+html body.ip-lab main :is(.muted,.note,small){color:var(--muted)!important;line-height:1.9!important;font-size:14px!important}
+html body.ip-lab main .controls{display:flex!important;flex-wrap:wrap!important;gap:24px!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:24px 0!important}
+html body.ip-lab main .controls label{color:var(--ink)!important;font-weight:400!important;min-width:min(240px,100%)}
+html body.ip-lab main .controls input[type=range]{accent-color:var(--teal);min-width:200px}
+html body.ip-lab main .grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:32px!important}
+html body.ip-lab main .grid>.card:nth-child(n){background:transparent!important;background-image:none!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;padding:20px 0!important;transform:none!important;color:var(--ink)!important}
+html body.ip-lab main .metric{font:500 clamp(30px,4vw,52px)/1.4 'Microsoft YaHei',sans-serif!important;color:var(--ink)!important}
+html body.ip-lab main :is(.scroll,.pill,.cards2>*){background:transparent!important;background-image:none!important;border-radius:0!important;box-shadow:none!important}
+html body.ip-lab main .scroll{overflow-x:auto!important;border:0!important}
+html body.ip-lab main table{width:100%!important;min-width:660px!important;border-collapse:collapse!important;box-shadow:none!important;border-radius:0!important;background:transparent!important}
+html body.ip-lab main table :is(thead,tbody,tr,th,td),html body.ip-lab main table tbody#board tr:nth-child(n)>*{background:transparent!important;background-image:none!important;color:var(--ink)!important;box-shadow:none!important}
+html body.ip-lab main table :is(th,td){font:400 14px/1.8 'Microsoft YaHei',sans-serif!important;padding:16px!important;border:0!important;border-bottom:1px solid var(--line)!important;text-align:left!important;font-variant-numeric:tabular-nums}
+html body.ip-lab main table thead th{color:var(--muted)!important;font-size:13px!important;border-bottom-color:#a28c5e!important}
+html body.ip-lab main .cards2>*{border:0!important;border-top:1px solid var(--line)!important;padding:20px 0!important;color:var(--ink)!important}
+html body.ip-lab .photo-editorial-credit{background:transparent!important;border:0!important;border-radius:0!important;color:var(--ink)!important}
+@media(max-width:650px){html body.ip-lab main.wrap,html body.ip-lab footer.wrap{padding-inline:24px!important}html body.ip-lab main .grid{grid-template-columns:1fr!important;gap:8px!important}html body.ip-lab main>section{padding:28px 0!important}}
+"""
+p.write_text(str(s),encoding='utf8')
