@@ -50,12 +50,16 @@
  let ambientTime=0;
  let width=0,height=0,lastProgress=0,quality=1.5,slowFrames=0,sampleFrames=0,totalRenderMs=0;
  const photoRects=[];
+ const hover={x:0,y:0,tx:0,ty:0};
+ addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const index=Math.round(lastProgress*6),rect=photoRects[index];if(!rect)return;const nx=(e.clientX-rect.x)/(rect.w/2),ny=(e.clientY-rect.y)/(rect.h/2);if(Math.abs(nx)<=1&&Math.abs(ny)<=1){hover.tx=nx;hover.ty=ny}else{hover.tx=0;hover.ty=0}},{passive:true});
+ document.documentElement.addEventListener('pointerleave',()=>{hover.tx=hover.ty=0});
+ addEventListener('blur',()=>{hover.tx=hover.ty=0});
 
 
  function resize(){const w=host.clientWidth,h=host.clientHeight;if(w===width&&h===height)return;width=w;height=h;if(!w||!h)return;renderer.setPixelRatio(Math.min(devicePixelRatio||1,quality));renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();photoRects.length=0;document.querySelectorAll(".voyage-scene .voyage-photo").forEach(el=>{const r=el.getBoundingClientRect();photoRects.push({x:r.x+r.width/2,y:r.y+r.height/2,w:r.width,h:r.height})})}
  function render(p){lastProgress=p;if(!width||!height)resize();if(!width||!height)return;const step=p*6,chapter=Math.floor(step),phase=step-chapter,t=Math.max(0,Math.min(1,(phase-.18)/.66)),flow=t*t*(3-2*t),z=-(chapter+flow)*17.5,boost=Math.pow(Math.sin(t*Math.PI),2);camera.position.set(Math.sin(z*.035)*1.1+Math.sin(ambientTime*.28)*.035,Math.cos(z*.03)*.5+Math.sin(ambientTime*.23)*.025,z);camera.lookAt(Math.sin((z-12)*.035)*1.1,Math.cos((z-12)*.03)*.5,z-12);camera.fov=72+boost*7;camera.updateProjectionMatrix();trailMaterial.opacity=.15+boost*.45;camera.updateMatrixWorld();
- const pos=p*6;
- memories.forEach((mesh,i)=>{const delta=i-pos,rect=photoRects[i];if(!rect)return;const opacity=Math.max(0,1-Math.abs(delta)*2.3);mesh.visible=opacity>.01&&width>650;if(!mesh.visible)return;const depth=8+Math.abs(delta)*18;const v=new THREE.Vector3(rect.x/width*2-1,1-rect.y/height*2,.5).unproject(camera).sub(camera.position).normalize();mesh.position.copy(camera.position).addScaledVector(v,depth/Math.max(.1,-v.clone().applyQuaternion(camera.quaternion.clone().invert()).z));mesh.quaternion.copy(camera.quaternion);mesh.rotateY(delta*.14);const worldHeight=2*Math.tan(camera.fov*Math.PI/360)*depth;mesh.scale.set(worldHeight*camera.aspect*rect.w/width,worldHeight*rect.h/height,1);mesh.material.opacity=opacity;});
+ const pos=p*6;hover.x+=(hover.tx-hover.x)*.085;hover.y+=(hover.ty-hover.y)*.085;
+ memories.forEach((mesh,i)=>{const delta=i-pos,rect=photoRects[i];if(!rect)return;const opacity=Math.max(0,1-Math.abs(delta)*2.3);mesh.visible=opacity>.01&&width>650;if(!mesh.visible)return;const depth=8+Math.abs(delta)*18;const v=new THREE.Vector3((rect.x+Math.sin(ambientTime*.45+i)*2+hover.x*4)/width*2-1,1-(rect.y+Math.sin(ambientTime*.55+i)*4+hover.y*3)/height*2,.5).unproject(camera).sub(camera.position).normalize();mesh.position.copy(camera.position).addScaledVector(v,depth/Math.max(.1,-v.clone().applyQuaternion(camera.quaternion.clone().invert()).z));mesh.quaternion.copy(camera.quaternion);mesh.rotateY(delta*.14+hover.x*.035+Math.sin(ambientTime*.32+i)*.007);mesh.rotateX(-hover.y*.025);const worldHeight=2*Math.tan(camera.fov*Math.PI/360)*depth;mesh.scale.set(worldHeight*camera.aspect*rect.w/width,worldHeight*rect.h/height,1);mesh.material.opacity=opacity;});
  const starPositions=stars.attributes.position.array;
  for(let i=0;i<count;i++){const base=-((i*0.61803398875)%1)*178;starPositions[i*3+2]=((base+ambientTime*.42+180)%178)-178;}
  stars.attributes.position.needsUpdate=true;
