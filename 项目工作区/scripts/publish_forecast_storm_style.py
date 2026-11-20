@@ -55,3 +55,6 @@ if not s.select_one('#storm-motion-control'):
  script.string="(()=>{const h=document.querySelector('.hero'),b=document.querySelector('.storm-motion-toggle');if(b)b.onclick=()=>{const paused=h.classList.toggle('storm-paused');b.textContent=paused?'播放背景':'暂停背景';b.setAttribute('aria-pressed',String(paused))}})();"
  s.body.append(script)
 p.write_text(str(s),encoding='utf8')
+
+import runpy
+runpy.run_path(str(root/'项目工作区/scripts/publish_storm_navigation.py'))
