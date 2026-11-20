@@ -13,7 +13,7 @@ if (!pages.length) throw new Error('Pass relative index.html paths');
 fs.mkdirSync(out, { recursive: true });
 
 (async () => {
-  const browser = await chromium.launch({ headless: true, executablePath: process.env.QA_BROWSER || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe' });
+  const browser = await chromium.launch({ headless: true, executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe' });
   try {
     for (const rel of pages) {
       for (const [width, height] of (onlyMobileDark ? [[390, 844]] : [[1440, 900], [390, 844]])) {
