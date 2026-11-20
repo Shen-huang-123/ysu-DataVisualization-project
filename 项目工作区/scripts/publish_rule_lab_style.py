@@ -6,6 +6,10 @@ s=BeautifulSoup(p.read_text(encoding='utf8'),'html.parser')
 st=s.select_one('#rule-lab-refined')
 if not st:st=s.new_tag('style',id='rule-lab-refined');s.head.append(st)
 st.string="""
+html body.ip-lab main.wrap{padding-top:0!important;margin-top:0!important}
+html body.ip-lab main.wrap>section:first-child{padding-top:24px!important}
+html body.ip-lab .photo-editorial-credit{margin:0 6vw!important;padding:12px 0!important;min-height:0!important;line-height:1.6!important;display:block!important;max-width:none!important}
+
 html body.ip-lab main .controls:is(.controls,#rule-controls){display:grid!important;grid-template-columns:minmax(240px,1fr) 64px minmax(220px,.6fr)!important;align-items:end!important;gap:24px!important;padding:24px 0!important;background:transparent!important;background-color:transparent!important;background-image:none!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}
 html body.ip-lab main .controls label{display:grid!important;gap:14px!important;min-width:0!important;font-size:14px!important;line-height:1.8!important}
 html body.ip-lab main .controls #alpha{display:block!important;width:100%!important;min-width:0!important;margin:0!important;height:46px!important;background:transparent!important;border:0!important;box-shadow:none!important}
