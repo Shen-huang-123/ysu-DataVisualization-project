@@ -32,3 +32,6 @@ html body.ip-dynasty.xz-dark main .ip-eyebrow{color:#d8be89!important}
 html body.ip-dynasty .photo-editorial-credit{display:block!important;width:auto!important;max-width:none!important;margin:14px 6vw 0!important;padding:8px 0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;color:var(--ink)!important;text-align:right;font-size:12px!important}
 """
 p.write_text(str(s),encoding='utf-8')
+
+import runpy
+runpy.run_path(str(root/'项目工作区/scripts/publish_survival_interval_svg.py'))
