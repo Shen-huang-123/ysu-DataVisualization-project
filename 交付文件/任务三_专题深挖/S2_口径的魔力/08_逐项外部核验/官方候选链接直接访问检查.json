@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-20",
+  "historical_events": 910,
+  "secondary_subset": 555,
+  "existing_partial_ledger": 4,
+  "probes": [
+    {
+      "url": "https://www.olympics.com/ioc/news/ioc-executive-board-approves-olympic-medal-diploma-and-medallist-pin-reallocation-for-london-2012-olympic-games",
+      "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=15)",
+      "verified_medals": false
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012-1",
+      "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=15)",
+      "verified_medals": false
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012",
+      "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=15)",
+      "verified_medals": false
+    },
+    {
+      "url": "https://www.olympics.com/en/olympic-games/beijing-2008/results/archery/individual-fita-olympic-round-70m-men",
+      "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=15)",
+      "verified_medals": false
+    },
+    {
+      "url": "https://www.olympics.com/en/olympic-games/beijing-2008/results/archery/team-fita-olympic-round-70m-men",
+      "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=15)",
+      "verified_medals": false
+    },
+    {
+      "url": "https://www.olympics.com/en/olympic-games/beijing-2008/results/archery/individual-fita-olympic-round-70m-women",
+      "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=15)",
+      "verified_medals": false
+    },
+    {
+      "url": "https://www.olympics.com/en/olympic-games/beijing-2008/results/archery/team-fita-olympic-round-70m-women",
+      "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=15)",
+      "verified_medals": false
+    }
+  ],
+  "new_current_three_medal_verifications": 0,
+  "scope": "HTTP成功不等于奖牌核验；原成绩册不等于现行裁决后结果；未修改主数据"
+}
