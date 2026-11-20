@@ -6,6 +6,12 @@ s=BeautifulSoup(p.read_text(encoding='utf8'),'html.parser')
 st=s.select_one('#rule-lab-refined')
 if not st:st=s.new_tag('style',id='rule-lab-refined');s.head.append(st)
 st.string="""
+html body.ip-lab{padding-top:0!important;margin-top:0!important}
+html body.ip-lab>header.photo-editorial-hero.image-stage,html body.ip-lab>header.photo-editorial-hero{margin-top:0!important;min-height:100svh!important;width:100%!important;box-sizing:border-box!important;padding:130px 6vw 100px!important}
+html body.ip-lab>header.photo-editorial-hero>.wrap{width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+html body.ip-lab #xz-nav{background:transparent!important;border:0!important;box-shadow:none!important}
+@media(max-width:650px){html body.ip-lab>header.photo-editorial-hero.image-stage,html body.ip-lab>header.photo-editorial-hero{padding:110px 24px 90px!important}}
+
 html body.ip-lab{background:#f2f3ee!important;background-image:none!important}
 html body.ip-lab.xz-dark{background:#182128!important;--ink:#edf3f2;--muted:#c0d0d4;--line:#94b0ba40}
 html body.ip-lab .oa-world{display:none!important}
