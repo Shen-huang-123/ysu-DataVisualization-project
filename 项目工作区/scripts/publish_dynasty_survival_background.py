@@ -6,6 +6,10 @@ s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
 st=s.select_one('#dynasty-survival-background')
 if not st:st=s.new_tag('style',id='dynasty-survival-background');s.head.append(st)
 st.string="""
+html body.ip-dynasty main .scroll table tbody#top tr:nth-child(n),
+html body.ip-dynasty main .scroll table tbody#top tr:nth-child(n):is(:hover,:focus,:focus-within,[data-ut-selected]),
+html body.ip-dynasty main .scroll table tbody#top tr:nth-child(n)>:is(td,th){background:transparent!important;background-color:transparent!important;background-image:none!important;box-shadow:none!important}
+
 html body.ip-dynasty main .scroll{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow-x:auto!important}
 html body.ip-dynasty main .scroll table{table-layout:fixed!important;min-width:740px!important;background:transparent!important}
 html body.ip-dynasty main .scroll table :is(thead,tbody,tr,th,td){background:transparent!important;background-image:none!important;border-radius:0!important;box-shadow:none!important;color:var(--ink)!important}
