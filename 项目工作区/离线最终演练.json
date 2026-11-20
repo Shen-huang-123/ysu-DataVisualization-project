@@ -1,0 +1,107 @@
+{
+  "offline": true,
+  "results": [
+    {
+      "width": 1440,
+      "page": "index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    },
+    {
+      "width": 1440,
+      "page": "交付文件/最终提交材料/评审探索路线.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    },
+    {
+      "width": 1440,
+      "page": "交付文件/最终提交材料/00_先看这里.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    },
+    {
+      "width": 1440,
+      "page": "交付文件/任务三_专题深挖/S2_口径的魔力/07_口径实验室/index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": "100%",
+      "rows": 20
+    },
+    {
+      "width": 1440,
+      "page": "交付文件/任务三_专题深挖/S3_冠军的保质期/07_王朝生存图/index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 12
+    },
+    {
+      "width": 1440,
+      "page": "交付文件/任务四_开放创作/09_预测风暴实验室/index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    },
+    {
+      "width": 390,
+      "page": "index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    },
+    {
+      "width": 390,
+      "page": "交付文件/最终提交材料/评审探索路线.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    },
+    {
+      "width": 390,
+      "page": "交付文件/最终提交材料/00_先看这里.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    },
+    {
+      "width": 390,
+      "page": "交付文件/任务三_专题深挖/S2_口径的魔力/07_口径实验室/index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": "100%",
+      "rows": 20
+    },
+    {
+      "width": 390,
+      "page": "交付文件/任务三_专题深挖/S3_冠军的保质期/07_王朝生存图/index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 12
+    },
+    {
+      "width": 390,
+      "page": "交付文件/任务四_开放创作/09_预测风暴实验室/index.html",
+      "errors": [],
+      "overflow": false,
+      "alphaUpdated": null,
+      "rows": 0
+    }
+  ],
+  "remaining": [
+    "第二台设备人工打开与操作",
+    "视频成片及音频核对",
+    "主办方上传渠道、文件限制与截止时间确认"
+  ],
+  "packageSource": "e8f308672258406fa6dd5db479e49258635bf31e"
+}
