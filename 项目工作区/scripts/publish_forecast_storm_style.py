@@ -6,6 +6,13 @@ s=BeautifulSoup(p.read_text(encoding='utf8'),'html.parser')
 st=s.select_one('#storm-refined-style')
 if not st:st=s.new_tag('style',id='storm-refined-style');s.head.append(st)
 st.string="""
+html body .hero{position:relative;isolation:isolate;min-height:580px!important;width:calc(100% / .88)!important;margin-left:calc(-6% / .88)!important;padding:90px 6vw 80px!important;background:linear-gradient(0deg,#182128,transparent 35%),linear-gradient(90deg,#101e27ed 0%,#101e27bd 48%,#101e2744 100%),url('../../任务三_专题深挖/媒体/la.jpg') center 48%/cover no-repeat!important;border:0!important}
+html body .hero:before,html body .hero:after{content:none!important;display:none!important}
+html body .hero aside{color:#e2e9e8!important;border-left:1px solid #ddc393!important}
+html body .hero h1{color:#fff!important}
+html body .hero .storm-photo-credit{position:absolute;bottom:20px;right:6vw;font-size:12px!important;color:#cbd7d8!important;max-width:none!important;margin:0!important}
+@media(max-width:800px){html body .hero{width:calc(100% + 48px)!important;margin-left:-24px!important;padding:64px 24px 70px!important;min-height:580px!important}html body .hero .storm-photo-credit{right:24px;left:24px;font-size:11px!important}}
+
 html body{background:#182128!important;background-image:none!important;color:#edf3f2!important;--muted:#bdcdd0;--line:#94b0ba40;font-family:'Microsoft YaHei',sans-serif!important}
 html body:before,html body:after{background:none!important}
 html body .oa-world,html body .immersive-float-layer{display:none!important}
@@ -30,4 +37,9 @@ html body input[type=range]{accent-color:#8bc7db}
 html body .chart{background:transparent!important;border-radius:0!important;box-shadow:none!important}
 @media(max-width:800px){html body .wrap{width:calc(100% - 48px)!important}html body .hero{display:block!important}html body .hero aside{max-width:none!important;margin-top:24px}html body .grid{grid-template-columns:1fr!important}html body .results{min-width:0}html body table{font-size:13px!important}}
 """
+hero=s.select_one('.hero')
+if hero and not hero.select_one('.storm-photo-credit'):
+ credit=s.new_tag('p',attrs={'class':'storm-photo-credit'})
+ credit.string='1984年洛杉矶历史影像 · 场景配图'
+ link=s.new_tag('a',href='../../任务三_专题深挖/媒体/图片来源与许可.html');link.string=' · 图片来源与许可 ↗';credit.append(link);hero.append(credit)
 p.write_text(str(s),encoding='utf8')
