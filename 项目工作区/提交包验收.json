@@ -1,0 +1,30 @@
+{
+  "source_commit": "e8f308672258406fa6dd5db479e49258635bf31e",
+  "archive": "项目工作区\\outputs\\submission\\百年圣火_完整离线提交包_e8f30867.zip",
+  "archive_bytes": 710906079,
+  "file_count": 1908,
+  "crc_pass": true,
+  "extracted_hashes_pass": true,
+  "extracted_root": "项目工作区\\outputs\\submission\\百年圣火_完整离线提交包_e8f30867_解压验收",
+  "limits": [
+    "本机独立目录解压验收，不等于第二台设备",
+    "视频成片及实际提交渠道仍由团队确认"
+  ],
+  "browser_checks": [
+    {
+      "page": "index.html",
+      "errors": [],
+      "heading": "百年圣火谁被看见？"
+    },
+    {
+      "page": "交付文件/最终提交材料/00_先看这里.html",
+      "errors": [],
+      "heading": "00_先看这里"
+    },
+    {
+      "page": "交付文件/任务三_专题深挖/S2_口径的魔力/07_口径实验室/index.html",
+      "errors": [],
+      "heading": "奖牌榜口径实验室"
+    }
+  ]
+}
