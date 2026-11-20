@@ -53,3 +53,7 @@ print(json.dumps({'official_validation':summary,'story':str(STORY/'index.html')}
 # Synchronize evidence scope after story regeneration.
 from publish_ioc_evidence_ledger import main as publish_ioc_ledger
 publish_ioc_ledger()
+
+# Preserve conclusion-adjacent evidence notes after regeneration.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()

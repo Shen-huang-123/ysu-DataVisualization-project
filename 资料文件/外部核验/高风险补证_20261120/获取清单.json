@@ -1,0 +1,98 @@
+[
+  {
+    "key": "iwf_reanalysis",
+    "url": "https://iwf.sport/anti-doping/reanalysis/",
+    "attempt_utc": "2026-11-20T12:57:58.685430+00:00",
+    "http_status": 403,
+    "final_url": "https://iwf.sport/anti-doping/reanalysis/",
+    "bytes": 5457,
+    "capture": "access failed or challenge; not evidence",
+    "accepted_primary_content": false
+  },
+  {
+    "key": "canada_girard",
+    "url": "https://olympic.ca/press/christine-girard-awarded-london-2012-and-beijing-2008-medals/",
+    "attempt_utc": "2026-11-20T12:57:58.685821+00:00",
+    "http_status": 200,
+    "final_url": "https://olympic.ca/press/christine-girard-awarded-london-2012-and-beijing-2008-medals/",
+    "bytes": 72844,
+    "raw_file": "资料文件\\外部核验\\高风险补证_20261120\\原始页面\\canada_girard.html",
+    "sha256": "ef5f6f4c5ef22cdacfec235a31a51bc8b95b78b68dc4951aed8aa3f076e8789f",
+    "capture": "direct response archived; scope requires content review",
+    "accepted_primary_content": true
+  },
+  {
+    "key": "uww_2008",
+    "url": "https://uww.org/articles/ioc-sanctions-wrestlers-failing-anti-doping-test-beijing-2008",
+    "attempt_utc": "2026-11-20T12:57:58.685960+00:00",
+    "http_status": 200,
+    "final_url": "https://uww.org/articles/ioc-sanctions-wrestlers-failing-anti-doping-test-beijing-2008",
+    "bytes": 599351,
+    "raw_file": "资料文件\\外部核验\\高风险补证_20261120\\原始页面\\uww_2008.html",
+    "sha256": "4772e2aa1b8d607a5cdc5fd7f7d5aa6981ec67f163cd986cafb98de41da3c2c2",
+    "capture": "direct response archived; scope requires content review",
+    "accepted_primary_content": true
+  },
+  {
+    "key": "uww_2019",
+    "url": "https://uww.org/articles/ioc-determines-taymazov-fails-london-re-test",
+    "attempt_utc": "2026-11-20T12:57:58.686146+00:00",
+    "http_status": 200,
+    "final_url": "https://uww.org/articles/ioc-determines-taymazov-fails-london-re-test",
+    "bytes": 344254,
+    "raw_file": "资料文件\\外部核验\\高风险补证_20261120\\原始页面\\uww_2019.html",
+    "sha256": "6a0afb498dfded356e1554455081ba906d940fc388382149352a42fab73a1faf",
+    "capture": "direct response archived; scope requires content review",
+    "accepted_primary_content": true
+  },
+  {
+    "key": "iwf_hsu",
+    "url": "https://iwf.sport/2018/06/13/hsu-shu-ching-two-time-olympic-champion-announced-her-retirement/",
+    "attempt_utc": "2026-11-20T12:57:58.686274+00:00",
+    "http_status": 403,
+    "final_url": "https://iwf.sport/2018/06/13/hsu-shu-ching-two-time-olympic-champion-announced-her-retirement/",
+    "bytes": 5680,
+    "capture": "access failed or challenge; not evidence",
+    "accepted_primary_content": false
+  },
+  {
+    "key": "ioc_2021",
+    "url": "https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012-and-pyeongchang-2018",
+    "attempt_utc": "2026-11-20T12:58:00.088587+00:00",
+    "capture": "request failed; not evidence",
+    "error": "HTTPSConnectionPool(host='www.olympics.com', port=443): Read timed out. (read timeout=16)",
+    "accepted_primary_content": false
+  },
+  {
+    "key": "cas_aloyan",
+    "url": "https://jurisprudence.tas-cas.org/Shared%20Documents/4927.pdf",
+    "attempt_utc": "2026-11-20T12:58:00.105725+00:00",
+    "http_status": 200,
+    "final_url": "https://jurisprudence.tas-cas.org/Shared%20Documents/4927.pdf",
+    "bytes": 10300,
+    "raw_file": "资料文件\\外部核验\\高风险补证_20261120\\原始页面\\cas_aloyan.html",
+    "sha256": "588051a73de8cba1da1246a7ff96f5ccee120c992949fac4e144a692c1534670",
+    "capture": "HTTP200返回Jurisprudence网页壳，不是裁决PDF；不作为裁决原件",
+    "accepted_primary_content": false
+  },
+  {
+    "key": "iwf_2008_index",
+    "url": "https://iwf.sport/results/results-by-events/results-by-events-upto2018/?event_year=2008",
+    "attempt_utc": "2026-11-20T12:58:00.793032+00:00",
+    "http_status": 403,
+    "final_url": "https://iwf.sport/results/results-by-events/results-by-events-upto2018/?event_year=2008",
+    "bytes": 5674,
+    "capture": "access failed or challenge; not evidence",
+    "accepted_primary_content": false
+  },
+  {
+    "key": "iwf_2012_index",
+    "url": "https://iwf.sport/results/results-by-events/results-by-events-upto2018/?event_year=2012",
+    "attempt_utc": "2026-11-20T12:58:01.147341+00:00",
+    "http_status": 403,
+    "final_url": "https://iwf.sport/results/results-by-events/results-by-events-upto2018/?event_year=2012",
+    "bytes": 5674,
+    "capture": "access failed or challenge; not evidence",
+    "accepted_primary_content": false
+  }
+]

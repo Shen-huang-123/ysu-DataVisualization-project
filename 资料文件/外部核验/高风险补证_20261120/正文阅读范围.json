@@ -1,0 +1,58 @@
+[
+  {
+    "url": "https://iwf.sport/anti-doping/reanalysis/",
+    "scope": "IWF复检程序与被取消资格名单；后续奖牌递补由IOC负责，不能用程序状态推定全项奖牌",
+    "locator": "复检说明及2008/2012分级名单",
+    "capture": "浏览服务读取；直接HTTP403，未取得该页原件",
+    "read_date": "2026-11-20",
+    "new_complete_current_IOC_certification": false
+  },
+  {
+    "url": "https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012-and-pyeongchang-2018",
+    "scope": "男子69公斤级铜牌PRK；女子69公斤级铜牌COL；女子银牌在该公告时点暂缓，不据过期禁赛日期自动断言2026已颁发",
+    "locator": "男子69kg与女子69kg正文及限制",
+    "capture": "浏览服务正文复读；直接下载超时",
+    "read_date": "2026-11-20",
+    "new_complete_current_IOC_certification": false
+  },
+  {
+    "url": "https://www.olympics.com/cio/news/reattribution-de-medailles-et-de-diplomes-dans-cinq-epreuves-des-jeux-olympiques-de-londres-2012",
+    "scope": "男子C1 200米RUS银ESP铜；120kg摔跤并列IRI/RUS金、KAZ/USA铜，RUS附当时禁赛暂缓颁发脚注",
+    "locator": "第4、第5小项及脚注",
+    "capture": "浏览服务正文复读；未取得本轮原HTML",
+    "read_date": "2026-11-20",
+    "new_complete_current_IOC_certification": false
+  },
+  {
+    "url": "https://olympic.ca/press/christine-girard-awarded-london-2012-and-beijing-2008-medals/",
+    "scope": "加拿大奥委会亲历颁发报道：Girard获得2012金、2008铜；仅支持该运动员及奖牌，不覆盖整项三色",
+    "locator": "2018-12-03新闻正文",
+    "capture": "原HTML已保存并哈希",
+    "read_date": "2026-11-20",
+    "new_complete_current_IOC_certification": false
+  },
+  {
+    "url": "https://uww.org/articles/ioc-sanctions-wrestlers-failing-anti-doping-test-beijing-2008",
+    "scope": "UWW公布2008自由式60kg银铜和120kg金银及一铜等变动；是协会当年发布范围，不自动当作2026完整IOC结果",
+    "locator": "网页内嵌articleBody及新名次段",
+    "capture": "原HTML已保存并哈希；正文含嵌入结构数据",
+    "read_date": "2026-11-20",
+    "new_complete_current_IOC_certification": false
+  },
+  {
+    "url": "https://uww.org/articles/ioc-determines-taymazov-fails-london-re-test",
+    "scope": "2019报道的IRI金RUS银是旧时点说明，需结合2021IOC并列金决定；不得覆盖较晚决定",
+    "locator": "2019-07-26正文及奖牌名单",
+    "capture": "原HTML已保存并哈希；正文含嵌入结构数据",
+    "read_date": "2026-11-20",
+    "new_complete_current_IOC_certification": false
+  },
+  {
+    "url": "https://iwf.sport/2018/06/13/hsu-shu-ching-two-time-olympic-champion-announced-her-retirement/",
+    "scope": "IWF刊载Hsu2012/2016金牌背景，但正文标注转载Taipei Times；不能作为独立IOC裁决或原创证据",
+    "locator": "正文及Source署名",
+    "capture": "浏览服务读取；直接HTTP403",
+    "read_date": "2026-11-20",
+    "new_complete_current_IOC_certification": false
+  }
+]

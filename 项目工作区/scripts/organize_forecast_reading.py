@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup,Tag
 ROOT=Path(__file__).resolve().parents[2]
 T4=ROOT/'交付文件/任务四_开放创作'
 SHARED=ROOT/'交付文件/共享组件'
-PAGES=['index.html','02_2028洛杉矶预测/index.html','03_数据新闻/index.html','05_满分升级/09_赛前条件回放/index.html','05_满分升级/11_官方来源门控预测/index.html','09_预测风暴实验室/index.html']
+PAGES=['01_交互式Dashboard/index.html','index.html','02_2028洛杉矶预测/index.html','03_数据新闻/index.html','05_满分升级/09_赛前条件回放/index.html','05_满分升级/11_官方来源门控预测/index.html','09_预测风暴实验室/index.html']
 for rel in PAGES:
     p=T4/rel;s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
     if rel=='05_满分升级/11_官方来源门控预测/index.html':

@@ -85,7 +85,9 @@ def run(source,target,leaky=False,forecast_pool=None):
         forecast['主阅读基准名次']=forecast['历史加权基线'].rank(method='min',ascending=False).astype(int)
         forecast['混合相对基准变化']=forecast['55基线45项目']-forecast['历史加权基线']
         forecast.sort_values(['主阅读基准名次','NOC']).reset_index().to_csv(OUT/'2028同口径重训情景榜.csv',index=False,encoding='utf-8-sig')
-        pd.DataFrame(cellrows).to_csv(OUT/'2028未归一项目格预测.csv',index=False,encoding='utf-8-sig')
+        forecast_cells=pd.DataFrame([r for r in cellrows if r['Year']==target and r['来源']==source and r['选择规则']==selected])
+        assert len(forecast_cells)==len(z) and forecast_cells.Year.eq(2028).all()
+        forecast_cells.to_csv(OUT/'2028未归一项目格预测.csv',index=False,encoding='utf-8-sig')
         protocol=dict(source=source,train_years=sorted(map(int,p.loc[train,'Year'].unique())),selection_max_year=int(select.Year.max()),latest_medal_year=max(history),prior_medal_year=history[-2],conditional_pool=total,source_of_pool='沿用既有榜单1120单位总池以比较模型，不代表最终官方规模',model_parameters=params,reading_policy='历史加权基准为主阅读，RF/GB与55/45混合作条件比较；不宣称45%最优或区间已校准',unit_limit='历史小项槽代理+2024逐项表，缺2020可比小项；2028资格及新增运动不由本核心决定')
         (OUT/'2028重训协议.json').write_text(json.dumps(protocol,ensure_ascii=False,indent=2),encoding='utf-8')
         print('2028 event-unit core refitted; baseline is main reading, ML is scenario.',flush=True)

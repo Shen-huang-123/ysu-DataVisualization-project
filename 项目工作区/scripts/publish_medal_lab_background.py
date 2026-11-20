@@ -41,3 +41,7 @@ html body #rank-chart{width:100%!important;background:transparent!important;bord
 label=s.select_one('section.more .eyebrow')
 if label:label.string='证据与方法'
 p.write_text(str(s),encoding='utf-8')
+
+# Preserve conclusion-adjacent evidence notes after regeneration.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()

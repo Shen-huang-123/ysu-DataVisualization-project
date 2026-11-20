@@ -49,7 +49,7 @@ def reading_block(parent):
     rows=''.join(f'<tr><td>{int(r["主阅读基准名次"])}</td><th>{NOC_ZH.get(r["NOC"],r["NOC"])}</th><td>{r["历史加权基线"]:.1f}</td><td>{r["55基线45项目"]:.1f}</td></tr>' for _,r in forecast.head(10).iterrows())
     return '<!-- PROJECT_READING_START -->'+css+f'<section id="project-reading-policy" class="project-audit"><h2>2028主阅读：先看中性基准，再比较模型情景</h2><p>{policy}</p><p>{outlook}</p><details open><summary>最新重训基准前十与45%项目情景</summary><table><caption>条件总池1120；未加主场、排名或资格调整。按基准总量排序。</caption><thead><tr><th>序</th><th>代表团</th><th>中性基准</th><th>55/45情景</th></tr></thead><tbody>{rows}</tbody></table></details><p><a href="{rel}/2028同口径重训情景榜.csv" download>下载最新完整参考榜</a> · <a href="{rel}/index.html">原模型逐折核验</a></p><p><small>本页其他旧榜、排名门控和区间控件保留为既有条件情景；其点值和区间不能套用到本次新基准。</small></p></section><!-- PROJECT_READING_END -->'
 
-paths=[T4/'index.html',T4/'02_2028洛杉矶预测/index.html',T4/'03_数据新闻/index.html',T4/'05_满分升级/09_赛前条件回放/index.html',T4/'05_满分升级/11_官方来源门控预测/index.html',T4/'09_预测风暴实验室/index.html']
+paths=[T4/'01_交互式Dashboard/index.html',T4/'index.html',T4/'02_2028洛杉矶预测/index.html',T4/'03_数据新闻/index.html',T4/'05_满分升级/09_赛前条件回放/index.html',T4/'05_满分升级/11_官方来源门控预测/index.html',T4/'09_预测风暴实验室/index.html']
 for p in paths:
     text=p.read_text(encoding='utf-8')
     for tag in ['PROJECT_MODEL','PROJECT_READING']:text=re.sub(f'<!-- {tag}_START -->.*?<!-- {tag}_END -->','',text,flags=re.S)
@@ -129,3 +129,7 @@ runpy.run_path(str(ROOT/'项目工作区/scripts/organize_forecast_reading.py'),
 # Reapply reviewed web presentation after regenerating audit blocks.
 import runpy
 runpy.run_path(str(Path(__file__).with_name("publish_project_chart_style.py")))
+
+# Preserve conclusion-adjacent evidence notes after regeneration.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()

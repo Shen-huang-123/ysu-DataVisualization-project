@@ -71,3 +71,7 @@ def main():
     notice='<!-- IOC_CURRENT_START -->\n## 当前状态（2026-11-20）\n\n97份Olympedia原件已恢复且SHA256全通过；910行来源标签与导入审核已修。555仅指旧存档主来源子集，不是全局IOC认证缺口。男子69公斤级铜牌已补IOC动作证据，以下旧阶段描述不代表当前状态。详见[当前台账与修复说明](任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/证据链修复_20261120/index.html)。本轮新增完整IOC认证0项。\n<!-- IOC_CURRENT_END -->\n\n'
     progress.write_text(notice+text,encoding='utf-8');print(json.dumps(summary,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()
+
+# Preserve conclusion-adjacent evidence notes after regeneration.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()

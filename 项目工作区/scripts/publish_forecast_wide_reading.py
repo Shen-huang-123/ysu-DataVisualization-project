@@ -13,3 +13,7 @@ if notice:
  notice['id']='forecast-source-notice'
  if note:notice.insert_before(note.extract())
 p.write_text(str(s),encoding='utf-8')
+
+# Preserve conclusion-adjacent evidence notes after regeneration.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()

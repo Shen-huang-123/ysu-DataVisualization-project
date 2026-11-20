@@ -147,3 +147,7 @@ readme='''# 任务四｜开放创作
 '''; (TASK/'00_先看这里.md').write_text(readme,encoding='utf-8')
 print(json.dumps({'forecast_rows':len(base),'backtest_rows':len(back),'mae':mae,'top_mae':top_mae,'dashboard':str(DASH/'index.html')},ensure_ascii=False,indent=2))
 
+
+# Keep historical dashboard scenarios behind the current reading policy.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()

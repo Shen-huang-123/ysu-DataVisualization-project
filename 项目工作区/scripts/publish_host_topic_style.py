@@ -21,3 +21,7 @@ p.write_text(str(s),encoding='utf-8')
 import runpy
 runpy.run_path(str(Path(__file__).with_name('publish_host_evidence_charts.py')))
 
+
+# Preserve conclusion-adjacent evidence notes after regeneration.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()

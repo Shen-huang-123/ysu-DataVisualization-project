@@ -63,3 +63,7 @@ p.write_text(str(s),encoding='utf8')
 
 import runpy
 runpy.run_path(str(root/'项目工作区/scripts/publish_storm_navigation.py'))
+
+# Preserve conclusion-adjacent evidence notes after regeneration.
+from publish_evidence_closure import main as publish_closure_notes
+publish_closure_notes()
