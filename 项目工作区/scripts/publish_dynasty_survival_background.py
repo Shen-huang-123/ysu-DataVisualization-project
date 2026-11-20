@@ -6,6 +6,13 @@ s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
 st=s.select_one('#dynasty-survival-background')
 if not st:st=s.new_tag('style',id='dynasty-survival-background');s.head.append(st)
 st.string="""
+html body.ip-dynasty main .controls:is(.controls,#ds-controls){background:transparent!important;background-image:none!important;border:0!important;box-shadow:none!important}
+html body.ip-dynasty main .grid>.card:nth-child(n):is(.card,#ds-card){background:transparent!important;background-color:transparent!important;background-image:none!important;box-shadow:none!important;border-radius:0!important}
+html body.ip-dynasty main .controls :is(select,#sport,#era){background:transparent!important;background-image:none!important;box-shadow:none!important;border-radius:0!important;border:0!important;border-bottom:1px solid var(--line)!important;color:var(--ink)!important;font-weight:400!important;min-height:46px!important}
+html body.ip-dynasty main .controls select option{background:var(--ds-bg)!important;color:var(--ink)!important}
+html body.ip-dynasty.xz-dark #curve text{fill:#c0d0d4!important}
+html body.ip-dynasty #curve text{font-family:'Microsoft YaHei',sans-serif!important}
+
 html body.ip-dynasty main .scroll table tbody#top tr:nth-child(n),
 html body.ip-dynasty main .scroll table tbody#top tr:nth-child(n):is(:hover,:focus,:focus-within,[data-ut-selected]),
 html body.ip-dynasty main .scroll table tbody#top tr:nth-child(n)>:is(td,th){background:transparent!important;background-color:transparent!important;background-image:none!important;box-shadow:none!important}
