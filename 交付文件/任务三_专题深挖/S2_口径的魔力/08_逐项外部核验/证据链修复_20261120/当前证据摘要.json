@@ -1,0 +1,12 @@
+{
+  "raw_pages_sha256_pass": 97,
+  "events": 910,
+  "legacy_snapshot_subset": 555,
+  "secondary_agreement": 548,
+  "secondary_differences": 7,
+  "partial_actions": 12,
+  "partial_action_events": 8,
+  "high_priority_snapshot_events": 35,
+  "new_complete_current_ioc_certifications": 0,
+  "note": "555是旧存档主来源子集，非全局IOC未认证数。"
+}

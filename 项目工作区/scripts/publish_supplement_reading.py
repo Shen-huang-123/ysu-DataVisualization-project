@@ -1,10 +1,11 @@
 """Canonical final styling pass for authored research pages, excluding source archives and immersive scenes."""
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 import os,json
 root=Path(__file__).resolve().parents[2];delivery=root/'交付文件';selected=[]
 exclusions=['原始页面','99_旧版归档','媒体','screen.template','文档阅读入口.html','07_ECharts大屏','08_奥运时空剧场','10_百年项目星系','09_预测风暴实验室','09_奖牌口径实验室']
-for p in delivery.rglob('*.html'):
+for p in presentation_html(delivery):
  if any(x in str(p) for x in exclusions):continue
  s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
  if not s.body or not s.head or (s.select_one('#xz-nav') and 'supplement-reading' not in s.body.get('class',[])) or s.find('meta',attrs={'http-equiv':lambda v:v and v.lower()=='refresh'}):continue

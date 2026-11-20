@@ -1,4 +1,5 @@
 """Publish UTF-8 browser reading and retain Markdown as an explicit download."""
+from evidence_guard import presentation_html
 from pathlib import Path
 import markdown
 root=Path(__file__).resolve().parents[2]
@@ -27,7 +28,7 @@ style=doc.new_tag('style');style.string='''html body.dynasty-method-reading{padd
 for table in doc.select('table'):
  wrap=doc.new_tag('div',attrs={'class':'method-table','tabindex':'0','role':'region','aria-label':'复算结果表，可横向查看'});table.wrap(wrap)
 (folder/(stem+'.html')).write_text(str(doc),encoding='utf-8')
-for p in (root/'交付文件').rglob('*.html'):
+for p in presentation_html(root/'交付文件'):
  if p==folder/(stem+'.html'):continue
  s=p.read_text(encoding='utf-8')
  if stem+'.md' in s:p.write_text(s.replace(stem+'.md',stem+'.html'),encoding='utf-8')

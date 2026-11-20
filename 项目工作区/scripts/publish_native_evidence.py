@@ -1,4 +1,5 @@
 """Publish core evidence as native SVG using unchanged audited CSV values."""
+from evidence_guard import presentation_html
 from pathlib import Path
 import json,html
 import pandas as pd
@@ -35,7 +36,7 @@ for j,year in enumerate([2012,2016,2024]):
 a.append(text(774,385,'最近奖牌特征为2016','ne-muted','middle'))
 charts['03_原模型与同口径基准']=('项目模型有局部收益，但没有稳定胜过基准',svg('小项二次来源全体代表团MAE，越低越好',a),'同单位内比较：2012和2016混合优于基线，2024仍略差。2024最近小项特征为2016，间隔八年；不能据此确认45%权重稳定有效。')
 records=[]
-for page in d.rglob('*.html'):
+for page in presentation_html(d):
  if any(k in str(page) for k in ['原始页面','99_旧']):continue
  s=BeautifulSoup(page.read_text(encoding='utf-8'),'html.parser');changed=False
  for name,(title,graphic,note) in charts.items():

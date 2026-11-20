@@ -1,3 +1,4 @@
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 from html import escape
@@ -51,7 +52,7 @@ for filename in ['三方案逐代表团奖牌与名次.csv','替代来源差异�
  a=s.new_tag('a',href=filename,attrs={'download':''});a.string='下载 '+filename;downloads.append(a)
 s.main.article.append(downloads)
 out.write_text(str(s),'utf8')
-for p in delivery.rglob('*.html'):
+for p in presentation_html(delivery):
  if p==out:continue
  text=p.read_text('utf8')
  if '未决证据影响报告.md' not in text:continue

@@ -1,0 +1,139 @@
+[
+  {
+    "script": "host_source_sensitivity",
+    "file": "三方案共同案例摘要.csv",
+    "rows": 3,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "host_source_sensitivity",
+    "file": "三方案完整对照权重.csv",
+    "rows": 4272,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "host_source_sensitivity",
+    "file": "三方案逐主办案例.csv",
+    "rows": 45,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "host_source_sensitivity",
+    "file": "三方案逐届覆盖.csv",
+    "rows": 84,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "host_source_sensitivity",
+    "file": "原运动员行模型复现.csv",
+    "rows": 17,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "dynasty_source_sensitivity",
+    "file": "555项与S3精确映射.csv",
+    "rows": 555,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "dynasty_source_sensitivity",
+    "file": "二次来源情景全部控制权转移.csv",
+    "rows": 4511,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "dynasty_source_sensitivity",
+    "file": "全样本时代复算.csv",
+    "rows": 6,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "dynasty_source_sensitivity",
+    "file": "受影响控制权转移.csv",
+    "rows": 17,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "dynasty_source_sensitivity",
+    "file": "固定队列三方案复算.csv",
+    "rows": 4,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "dynasty_source_sensitivity",
+    "file": "逐小项前后段变化.csv",
+    "rows": 326,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "forecast_same_unit_replay",
+    "file": "三折同口径评分.csv",
+    "rows": 27,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "forecast_same_unit_replay",
+    "file": "三折逐队预测.csv",
+    "rows": 5643,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "forecast_same_unit_replay",
+    "file": "内部时序调参记录.csv",
+    "rows": 120,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "forecast_same_unit_replay",
+    "file": "逐折数据边界.csv",
+    "rows": 6,
+    "agrees_with_published": true,
+    "max_numeric_error": 0.0
+  },
+  {
+    "script": "olympedia_secondary_audit",
+    "file": "历史555项独立交叉对照.csv",
+    "rows": 555,
+    "agrees_with_published": true,
+    "comparison": "original row order",
+    "max_numeric_error": 0
+  },
+  {
+    "script": "olympedia_secondary_audit",
+    "file": "历史910项双层证据总表.csv",
+    "rows": 910,
+    "agrees_with_published": true,
+    "comparison": "original row order",
+    "max_numeric_error": 0
+  },
+  {
+    "script": "olympedia_secondary_audit",
+    "file": "Olympedia逐项奖牌表.csv",
+    "rows": 565,
+    "agrees_with_published": true,
+    "comparison": "sorted all columns; parallel order only",
+    "max_numeric_error": 0
+  },
+  {
+    "script": "olympedia_secondary_audit",
+    "file": "原始页面清单.csv",
+    "rows": 97,
+    "agrees_with_published": true,
+    "comparison": "original row order",
+    "max_numeric_error": 0
+  }
+]

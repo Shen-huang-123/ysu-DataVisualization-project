@@ -1,3 +1,4 @@
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 from html import escape
@@ -41,7 +42,7 @@ for a in s.select('#xz-nav .xz-links a'):
  a.attrs.pop('aria-current',None)
  if '任务一_数据体检/index.html' in a.get('href',''):a['aria-current']='page'
 out.write_text(str(s),'utf8')
-for p in delivery.rglob('*.html'):
+for p in presentation_html(delivery):
  if p==out:continue
  text=p.read_text('utf8')
  if '数据问题影响账本.md' not in text:continue

@@ -1,8 +1,9 @@
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 import os
 ROOT=Path(__file__).resolve().parents[2]
-for p in (ROOT/'交付文件').rglob('*.html'):
+for p in presentation_html(ROOT/'交付文件'):
  text=p.read_text(encoding='utf-8-sig')
  if '<table' not in text.lower():continue
  soup=BeautifulSoup(text,'html.parser')

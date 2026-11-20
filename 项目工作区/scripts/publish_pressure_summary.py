@@ -1,4 +1,5 @@
 """Publish the JSON audit summary as an offline readable page; retain raw download."""
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 import json,html
@@ -38,7 +39,7 @@ for para in list(first.find_next_siblings('p',limit=3)):
 first.insert_after(checks)
 if not s.select_one('#pressure-summary-css'):s.head.append(s.new_tag('link',id='pressure-summary-css',rel='stylesheet',href='../../共享组件/pressure-summary.css'))
 (folder/'结论压力测试摘要.html').write_text(str(s),'utf-8')
-for page in (ROOT/'交付文件').rglob('*.html'):
+for page in presentation_html(ROOT/'交付文件'):
  text=page.read_text('utf-8');doc=BeautifulSoup(text,'html.parser');changed=False
  for a in doc.select('a[href]'):
   href=a['href']

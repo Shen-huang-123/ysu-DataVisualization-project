@@ -216,4 +216,7 @@ def main() -> None:
     (OUT / '核验摘要.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    from evidence_guard import verify_olympedia
+    verify_olympedia()
+    main()

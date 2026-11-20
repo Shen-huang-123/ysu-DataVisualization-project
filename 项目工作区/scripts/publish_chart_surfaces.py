@@ -1,11 +1,12 @@
 """Blend authored statistical chart surfaces with page themes; never alter source assets."""
+from evidence_guard import presentation_html
 from pathlib import Path
 from urllib.parse import unquote
 import json,os
 from bs4 import BeautifulSoup
 root=Path(__file__).resolve().parents[2];delivery=root/'交付文件';records=[]
 exclude=('原始页面','99_旧','媒体','模板')
-for page in delivery.rglob('*.html'):
+for page in presentation_html(delivery):
  if any(x in str(page.relative_to(delivery)) for x in exclude):continue
  text=page.read_text(encoding='utf-8');s=BeautifulSoup(text,'html.parser');images=[]
  if not s.head:continue

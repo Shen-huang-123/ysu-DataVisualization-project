@@ -1,8 +1,9 @@
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 import os
 ROOT=Path(__file__).resolve().parents[2]
-for path in (ROOT/'交付文件').rglob('*.html'):
+for path in presentation_html(ROOT/'交付文件'):
     text=path.read_text(encoding='utf-8-sig'); soup=BeautifulSoup(text,'html.parser'); changed=False
     for a in soup.select('a[style]'):
         if a.find('strong') and any(c in a.get('style','').replace(' ','').lower() for c in ['background:#173b58','background:#223b','background:#213b','background:#173e54']):

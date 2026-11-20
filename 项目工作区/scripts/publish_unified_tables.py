@@ -1,9 +1,10 @@
 """Run after HTML generation to restore the common table stylesheet last."""
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 import os
 base=Path(__file__).resolve().parents[2]/'交付文件'
-for p in base.rglob('*.html'):
+for p in presentation_html(base):
  text=p.read_text('utf8')
  if '<table' not in text.lower():continue
  s=BeautifulSoup(text,'html.parser')

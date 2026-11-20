@@ -21,7 +21,7 @@ for year,url in IOC.items():
     for col in ['Gold','Silver','Bronze']:
         if col not in wide: wide[col]=''
     wide['Year']=year; wide['official_edition_results_url']=url
-    wide['provenance']='主数据运动员记录去重生成；IOC官方届次结果页核验'
+    wide['provenance']='主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表'
     wide['verification_scope']='完整小项结构与届次总量；历史重分配以IOC最新公告为准'
     wide=wide[['Year','Sport','Event','Gold','Silver','Bronze','official_edition_results_url','provenance','verification_scope']]
     wide.to_csv(TABLE/f'S2_{year}历史小项代理表.csv',index=False,encoding='utf-8-sig')
@@ -49,3 +49,7 @@ html=html.replace('</body>','<script>document.querySelectorAll("[data-btn]").for
 (STORY/'index.html').write_text(localize_story_html(html),encoding='utf-8')
 print(json.dumps({'official_validation':summary,'story':str(STORY/'index.html')},ensure_ascii=False,indent=2))
 
+
+# Synchronize evidence scope after story regeneration.
+from publish_ioc_evidence_ledger import main as publish_ioc_ledger
+publish_ioc_ledger()

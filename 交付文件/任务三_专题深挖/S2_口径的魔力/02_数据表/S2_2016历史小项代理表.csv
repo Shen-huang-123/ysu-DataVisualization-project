@@ -1,307 +1,307 @@
 ﻿Year,Sport,Event,Gold,Silver,Bronze,official_edition_results_url,provenance,verification_scope
-2016,Archery,Archery Men's Individual,KOR,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Archery,Archery Men's Team,KOR,USA,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Archery,Archery Women's Individual,KOR,GER,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Archery,Archery Women's Team,KOR,RUS,TPE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Men's 1,500 metres",USA,ALG,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Men's 10,000 metres",GBR,KEN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 100 metres,JAM,USA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 110 metres Hurdles,JAM,ESP,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 20 kilometres Walk,CHN,CHN,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 200 metres,JAM,CAN,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Men's 3,000 metres Steeplechase",KEN,USA,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 4 x 100 metres Relay,JAM,JPN,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 4 x 400 metres Relay,USA,JAM,BAH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 400 metres,RSA,GRN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 400 metres Hurdles,USA,KEN,TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Men's 5,000 metres",GBR,USA,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 50 kilometres Walk,SVK,AUS,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's 800 metres,KEN,ALG,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Decathlon,USA,FRA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Discus Throw,GER,POL,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Hammer Throw,TJK,BLR,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's High Jump,CAN,QAT,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Javelin Throw,GER,KEN,TTO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Long Jump,USA,RSA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Marathon,KEN,ETH,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Pole Vault,BRA,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Shot Put,USA,USA,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Men's Triple Jump,USA,USA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Women's 1,500 metres",KEN,ETH,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Women's 10,000 metres",ETH,KEN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 100 metres,JAM,USA,JAM,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 100 metres Hurdles,USA,USA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 20 kilometres Walk,CHN,MEX,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 200 metres,JAM,NED,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Women's 3,000 metres Steeplechase",BRN,KEN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 4 x 100 metres Relay,USA,JAM,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 4 x 400 metres Relay,USA,JAM,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 400 metres,BAH,USA,JAM,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 400 metres Hurdles,USA,DEN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,"Athletics Women's 5,000 metres",KEN,KEN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's 800 metres,RSA,BDI,KEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Discus Throw,CRO,FRA,CUB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Hammer Throw,POL,CHN,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Heptathlon,BEL,GBR,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's High Jump,ESP,BUL,CRO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Javelin Throw,CRO,RSA,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Long Jump,USA,USA,SRB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Marathon,KEN,BRN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Pole Vault,GRE,USA,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Shot Put,USA,NZL,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Athletics,Athletics Women's Triple Jump,COL,VEN,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Badminton,Badminton Men's Doubles,CHN,MAS,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Badminton,Badminton Men's Singles,CHN,MAS,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Badminton,Badminton Mixed Doubles,INA,MAS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Badminton,Badminton Women's Doubles,JPN,DEN,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Badminton,Badminton Women's Singles,ESP,IND,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Basketball,Basketball Men's Basketball,USA,SRB,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Basketball,Basketball Women's Basketball,USA,ESP,SRB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Beach Volleyball,Beach Volleyball Men's Beach Volleyball,BRA,ITA,NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Beach Volleyball,Beach Volleyball Women's Beach Volleyball,GER,BRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Bantamweight,CUB,USA,RUS|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Flyweight,UZB,,CHN|VEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Heavyweight,RUS,KAZ,CUB|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Light-Flyweight,UZB,COL,CUB|USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Light-Heavyweight,CUB,KAZ,FRA|GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Light-Welterweight,UZB,AZE,GER|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Lightweight,BRA,FRA,CUB|MGL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Middleweight,CUB,UZB,AZE|MEX,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Super-Heavyweight,FRA,GBR,CRO|KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Men's Welterweight,KAZ,UZB,FRA|MAR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Women's Flyweight,GBR,FRA,CHN|COL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Women's Lightweight,FRA,CHN,FIN|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Boxing,Boxing Women's Middleweight,USA,NED,CHN|KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Canadian Doubles, 1,000 metres",GER,BRA,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Canadian Doubles, Slalom",SVK,GBR,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Canadian Singles, 1,000 metres",GER,BRA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Canadian Singles, 200 metres",UKR,AZE,BRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Canadian Singles, Slalom",FRA,SVK,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Kayak Doubles, 1,000 metres",GER,SRB,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Kayak Doubles, 200 metres",ESP,GBR,LTU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Kayak Fours, 1,000 metres",GER,SVK,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Kayak Singles, 1,000 metres",ESP,CZE,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Kayak Singles, 200 metres",GBR,FRA,ESP|GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Men's Kayak Singles, Slalom",GBR,SLO,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Women's Kayak Doubles, 500 metres",HUN,GER,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Women's Kayak Fours, 500 metres",HUN,GER,BLR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Women's Kayak Singles, 200 metres",NZL,POL,AZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Women's Kayak Singles, 500 metres",HUN,DEN,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Canoeing,"Canoeing Women's Kayak Singles, Slalom",ESP,NZL,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Men's BMX,USA,NED,COL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Men's Individual Time Trial,SUI,NED,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Men's Keirin,GBR,NED,MAS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,"Cycling Men's Mountainbike, Cross-Country",SUI,CZE,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Men's Omnium,ITA,GBR,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,"Cycling Men's Road Race, Individual",BEL,DEN,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Men's Sprint,GBR,GBR,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,"Cycling Men's Team Pursuit, 4,000 metres",GBR,AUS,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Men's Team Sprint,GBR,NZL,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Women's BMX,COL,USA,VEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Women's Individual Time Trial,USA,RUS,NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Women's Keirin,NED,GBR,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,"Cycling Women's Mountainbike, Cross-Country",SWE,POL,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Women's Omnium,GBR,USA,BEL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,"Cycling Women's Road Race, Individual",NED,SWE,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Women's Sprint,GER,GBR,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Women's Team Pursuit,GBR,USA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Cycling,Cycling Women's Team Sprint,CHN,RUS,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Men's Platform,CHN,MEX,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Men's Springboard,CHN,GBR,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Men's Synchronized Platform,CHN,USA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Men's Synchronized Springboard,GBR,USA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Women's Platform,CHN,CHN,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Women's Springboard,CHN,CHN,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Women's Synchronized Platform,CHN,MAS,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Diving,Diving Women's Synchronized Springboard,CHN,ITA,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Equestrianism,"Equestrianism Mixed Dressage, Individual",GBR,GER,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Equestrianism,"Equestrianism Mixed Dressage, Team",GER,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Equestrianism,"Equestrianism Mixed Jumping, Individual",GBR,SWE,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Equestrianism,"Equestrianism Mixed Jumping, Team",FRA,USA,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Equestrianism,"Equestrianism Mixed Three-Day Event, Individual",GER,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Equestrianism,"Equestrianism Mixed Three-Day Event, Team",FRA,GER,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Men's Foil, Individual",ITA,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Men's Foil, Team",RUS,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Men's Sabre, Individual",HUN,USA,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Men's epee, Individual",KOR,HUN,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Men's epee, Team",FRA,ITA,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Women's Foil, Individual",RUS,ITA,TUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Women's Sabre, Individual",RUS,RUS,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Women's Sabre, Team",RUS,UKR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Women's epee, Individual",HUN,ITA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Fencing,"Fencing Women's epee, Team",ROU,CHN,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Football,Football Men's Football,BRA,GER,NGR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Football,Football Women's Football,GER,SWE,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Golf,Golf Men's Individual,GBR,SWE,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Golf,Golf Women's Individual,KOR,NZL,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Floor Exercise,GBR,BRA,BRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Horizontal Bar,GER,USA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Horse Vault,PRK,RUS,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Individual All-Around,JPN,UKR,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Parallel Bars,UKR,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Pommelled Horse,GBR,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Rings,GRE,BRA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Men's Team All-Around,JPN,RUS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Women's Balance Beam,NED,USA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Women's Floor Exercise,USA,USA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Women's Horse Vault,USA,RUS,SUI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Women's Individual All-Around,USA,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Women's Team All-Around,USA,RUS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Gymnastics,Gymnastics Women's Uneven Bars,RUS,USA,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Handball,Handball Men's Handball,DEN,FRA,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Handball,Handball Women's Handball,RUS,FRA,NOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Hockey,Hockey Men's Hockey,ARG,BEL,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Hockey,Hockey Women's Hockey,GBR,NED,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Men's Extra-Lightweight,RUS,KAZ,JPN|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Men's Half-Heavyweight,CZE,AZE,FRA|JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Men's Half-Lightweight,ITA,KOR,JPN|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Men's Half-Middleweight,RUS,USA,JPN|UAE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Men's Heavyweight,FRA,JPN,BRA|ISR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Men's Lightweight,JPN,AZE,BEL|GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Men's Middleweight,JPN,GEO,CHN|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Women's Extra-Lightweight,ARG,KOR,JPN|KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Women's Half-Heavyweight,USA,FRA,BRA|SLO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Women's Half-Lightweight,KOS,ITA,JPN|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Women's Half-Middleweight,SLO,FRA,ISR|NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Women's Heavyweight,FRA,CUB,CHN|JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Women's Lightweight,BRA,MGL,JPN|POR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Judo,Judo Women's Middleweight,JPN,COL,GBR|GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Modern Pentathlon,Modern Pentathlon Men's Individual,RUS,UKR,MEX,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Modern Pentathlon,Modern Pentathlon Women's Individual,AUS,FRA,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rhythmic Gymnastics,Rhythmic Gymnastics Women's Group,RUS,ESP,BUL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rhythmic Gymnastics,Rhythmic Gymnastics Women's Individual,RUS,RUS,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Coxed Eights,GBR,GER,NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Coxless Fours,GBR,AUS,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Coxless Pairs,NZL,RSA,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Double Sculls,CRO,LTU,NOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Lightweight Coxless Fours,SUI,DEN,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Lightweight Double Sculls,FRA,IRL,NOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Quadruple Sculls,GER,AUS,EST,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Men's Single Sculls,NZL,CRO,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Women's Coxed Eights,USA,GBR,ROU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Women's Coxless Pairs,GBR,NZL,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Women's Double Sculls,POL,GBR,LTU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Women's Lightweight Double Sculls,NED,CAN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Women's Quadruple Sculls,GER,NED,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rowing,Rowing Women's Single Sculls,AUS,USA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rugby Sevens,Rugby Sevens Men's Rugby Sevens,FIJ,GBR,RSA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Rugby Sevens,Rugby Sevens Women's Rugby Sevens,AUS,NZL,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Men's One Person Dinghy,AUS,CRO,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Men's One Person Heavyweight Dinghy,GBR,SLO,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Men's Skiff,NZL,AUS,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Men's Two Person Dinghy,CRO,AUS,GRE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Men's Windsurfer,NED,GBR,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Mixed Multihull,ARG,AUS,AUT,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Women's One Person Dinghy,NED,IRL,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Women's Skiff,BRA,NZL,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Women's Two Person Dinghy,GBR,NZL,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Sailing,Sailing Women's Windsurfer,FRA,CHN,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Men's Air Pistol, 10 metres",VIE,BRA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Men's Air Rifle, 10 metres",ITA,UKR,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,Shooting Men's Double Trap,IOA,ITA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Men's Free Pistol, 50 metres",KOR,VIE,PRK,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Men's Rapid-Fire Pistol, 25 metres",GER,FRA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,Shooting Men's Skeet,ITA,SWE,IOA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",GER,KOR,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",ITA,RUS,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,Shooting Men's Trap,CRO,ITA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Women's Air Pistol, 10 metres",CHN,RUS,GRE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Women's Air Rifle, 10 metres",USA,CHN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,Shooting Women's Skeet,ITA,ITA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",GER,CHN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,"Shooting Women's Sporting Pistol, 25 metres",GRE,GER,SUI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Shooting,Shooting Women's Trap,AUS,NZL,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,"Swimming Men's 1,500 metres Freestyle",ITA,USA,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 10 kilometres Open Water,NED,GRE,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 100 metres Backstroke,USA,CHN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 100 metres Breaststroke,GBR,RSA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 100 metres Butterfly,SGP,HUN|RSA|USA,,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 100 metres Freestyle,AUS,BEL,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 200 metres Backstroke,USA,AUS,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 200 metres Breaststroke,KAZ,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 200 metres Butterfly,USA,JPN,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 200 metres Freestyle,CHN,RSA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 200 metres Individual Medley,USA,JPN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 4 x 100 metres Freestyle Relay,USA,FRA,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 4 x 100 metres Medley Relay,USA,GBR,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 4 x 200 metres Freestyle Relay,USA,GBR,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 400 metres Freestyle,AUS,CHN,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 400 metres Individual Medley,JPN,USA,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Men's 50 metres Freestyle,USA,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 10 kilometres Open Water,NED,ITA,BRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 100 metres Backstroke,HUN,USA,CAN|CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 100 metres Breaststroke,USA,RUS,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 100 metres Butterfly,SWE,CAN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 100 metres Freestyle,CAN|USA,,SWE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 200 metres Backstroke,USA,HUN,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 200 metres Breaststroke,JPN,RUS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 200 metres Butterfly,ESP,AUS,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 200 metres Freestyle,USA,SWE,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 200 metres Individual Medley,HUN,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 4 x 100 metres Freestyle Relay,AUS,USA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 4 x 100 metres Medley Relay,USA,AUS,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 4 x 200 metres Freestyle Relay,USA,AUS,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 400 metres Freestyle,USA,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 400 metres Individual Medley,HUN,USA,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 50 metres Freestyle,DEN,USA,BLR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Swimming,Swimming Women's 800 metres Freestyle,USA,GBR,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Synchronized Swimming,Synchronized Swimming Women's Duet,RUS,CHN,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Synchronized Swimming,Synchronized Swimming Women's Team,RUS,CHN,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Table Tennis,Table Tennis Men's Singles,CHN,CHN,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Table Tennis,Table Tennis Men's Team,CHN,JPN,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Table Tennis,Table Tennis Women's Singles,CHN,CHN,PRK,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Table Tennis,Table Tennis Women's Team,CHN,GER,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Men's Featherweight,JOR,RUS,ESP|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Men's Flyweight,CHN,THA,DOM|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Men's Heavyweight,AZE,NIG,BRA|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Men's Welterweight,CIV,GBR,AZE|TUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Women's Featherweight,GBR,ESP,EGY|IRI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Women's Flyweight,KOR,SRB,AZE|THA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Women's Heavyweight,CHN,MEX,GBR|USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Taekwondo,Taekwondo Women's Welterweight,KOR,FRA,CIV|TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Tennis,Tennis Men's Doubles,ESP,ROU,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Tennis,Tennis Men's Singles,GBR,ARG,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Tennis,Tennis Mixed Doubles,USA,USA,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Tennis,Tennis Women's Doubles,RUS,SUI,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Tennis,Tennis Women's Singles,PUR,GER,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Trampolining,Trampolining Men's Individual,BLR,CHN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Trampolining,Trampolining Women's Individual,CAN,GBR,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Triathlon,Triathlon Men's Olympic Distance,GBR,GBR,RSA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Triathlon,Triathlon Women's Olympic Distance,USA,SUI,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Volleyball,Volleyball Men's Volleyball,BRA,ITA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Volleyball,Volleyball Women's Volleyball,CHN,SRB,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Water Polo,Water Polo Men's Water Polo,SRB,CRO,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Water Polo,Water Polo Women's Water Polo,USA,ITA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Bantamweight,CHN,PRK,THA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Featherweight,COL,INA,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Heavyweight,UZB,ARM,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Light-Heavyweight,IRI,CHN,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Lightweight,CHN,TUR,COL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Middle-Heavyweight,IRI,BLR,LTU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Middleweight,KAZ,CHN,EGY,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Men's Super-Heavyweight,GEO,ARM,GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Women's Featherweight,TPE,PHI,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Women's Flyweight,THA,INA,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Women's Heavyweight,PRK,BLR,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Women's Light-Heavyweight,CHN,KAZ,EGY,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Women's Lightweight,THA,THA,TPE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Women's Middleweight,CHN,PRK,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Weightlifting,Weightlifting Women's Super-Heavyweight,CHN,PRK,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Featherweight, Freestyle",GEO,JPN,AZE|IRI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Featherweight, Greco-Roman",CUB,JPN,NOR|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Heavyweight, Freestyle",USA,AZE,ROU|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Heavyweight, Greco-Roman",ARM,CUB,IRI|TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Light-Heavyweight, Freestyle",RUS,TUR,AZE|USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Light-Heavyweight, Greco-Roman",RUS,UKR,BLR|GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Middleweight, Freestyle",IRI,RUS,AZE|TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Middleweight, Greco-Roman",RUS,DEN,IRI|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Super-Heavyweight, Freestyle",TUR,IRI,BLR|GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Super-Heavyweight, Greco-Roman",CUB,TUR,AZE|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Welterweight, Freestyle",RUS,AZE,ITA|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Men's Welterweight, Greco-Roman",SRB,ARM,AZE|GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Women's Featherweight, Freestyle",USA,JPN,AZE|SWE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Women's Flyweight, Freestyle",JPN,AZE,BUL|CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Women's Heavyweight, Freestyle",CAN,KAZ,CHN|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Women's Light-Heavyweight, Freestyle",JPN,RUS,KAZ|SWE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Women's Lightweight, Freestyle",JPN,RUS,IND|TUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
-2016,Wrestling,"Wrestling Women's Middleweight, Freestyle",JPN,BLR,KAZ|POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重生成；IOC官方届次结果页核验,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Archery,Archery Men's Individual,KOR,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Archery,Archery Men's Team,KOR,USA,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Archery,Archery Women's Individual,KOR,GER,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Archery,Archery Women's Team,KOR,RUS,TPE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Men's 1,500 metres",USA,ALG,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Men's 10,000 metres",GBR,KEN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 100 metres,JAM,USA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 110 metres Hurdles,JAM,ESP,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 20 kilometres Walk,CHN,CHN,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 200 metres,JAM,CAN,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Men's 3,000 metres Steeplechase",KEN,USA,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 4 x 100 metres Relay,JAM,JPN,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 4 x 400 metres Relay,USA,JAM,BAH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 400 metres,RSA,GRN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 400 metres Hurdles,USA,KEN,TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Men's 5,000 metres",GBR,USA,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 50 kilometres Walk,SVK,AUS,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's 800 metres,KEN,ALG,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Decathlon,USA,FRA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Discus Throw,GER,POL,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Hammer Throw,TJK,BLR,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's High Jump,CAN,QAT,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Javelin Throw,GER,KEN,TTO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Long Jump,USA,RSA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Marathon,KEN,ETH,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Pole Vault,BRA,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Shot Put,USA,USA,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Men's Triple Jump,USA,USA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Women's 1,500 metres",KEN,ETH,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Women's 10,000 metres",ETH,KEN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 100 metres,JAM,USA,JAM,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 100 metres Hurdles,USA,USA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 20 kilometres Walk,CHN,MEX,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 200 metres,JAM,NED,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Women's 3,000 metres Steeplechase",BRN,KEN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 4 x 100 metres Relay,USA,JAM,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 4 x 400 metres Relay,USA,JAM,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 400 metres,BAH,USA,JAM,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 400 metres Hurdles,USA,DEN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,"Athletics Women's 5,000 metres",KEN,KEN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's 800 metres,RSA,BDI,KEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Discus Throw,CRO,FRA,CUB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Hammer Throw,POL,CHN,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Heptathlon,BEL,GBR,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's High Jump,ESP,BUL,CRO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Javelin Throw,CRO,RSA,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Long Jump,USA,USA,SRB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Marathon,KEN,BRN,ETH,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Pole Vault,GRE,USA,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Shot Put,USA,NZL,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Athletics,Athletics Women's Triple Jump,COL,VEN,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Badminton,Badminton Men's Doubles,CHN,MAS,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Badminton,Badminton Men's Singles,CHN,MAS,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Badminton,Badminton Mixed Doubles,INA,MAS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Badminton,Badminton Women's Doubles,JPN,DEN,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Badminton,Badminton Women's Singles,ESP,IND,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Basketball,Basketball Men's Basketball,USA,SRB,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Basketball,Basketball Women's Basketball,USA,ESP,SRB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Beach Volleyball,Beach Volleyball Men's Beach Volleyball,BRA,ITA,NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Beach Volleyball,Beach Volleyball Women's Beach Volleyball,GER,BRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Bantamweight,CUB,USA,RUS|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Flyweight,UZB,,CHN|VEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Heavyweight,RUS,KAZ,CUB|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Light-Flyweight,UZB,COL,CUB|USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Light-Heavyweight,CUB,KAZ,FRA|GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Light-Welterweight,UZB,AZE,GER|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Lightweight,BRA,FRA,CUB|MGL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Middleweight,CUB,UZB,AZE|MEX,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Super-Heavyweight,FRA,GBR,CRO|KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Men's Welterweight,KAZ,UZB,FRA|MAR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Women's Flyweight,GBR,FRA,CHN|COL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Women's Lightweight,FRA,CHN,FIN|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Boxing,Boxing Women's Middleweight,USA,NED,CHN|KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Canadian Doubles, 1,000 metres",GER,BRA,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Canadian Doubles, Slalom",SVK,GBR,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Canadian Singles, 1,000 metres",GER,BRA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Canadian Singles, 200 metres",UKR,AZE,BRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Canadian Singles, Slalom",FRA,SVK,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Kayak Doubles, 1,000 metres",GER,SRB,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Kayak Doubles, 200 metres",ESP,GBR,LTU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Kayak Fours, 1,000 metres",GER,SVK,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Kayak Singles, 1,000 metres",ESP,CZE,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Kayak Singles, 200 metres",GBR,FRA,ESP|GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Men's Kayak Singles, Slalom",GBR,SLO,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Women's Kayak Doubles, 500 metres",HUN,GER,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Women's Kayak Fours, 500 metres",HUN,GER,BLR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Women's Kayak Singles, 200 metres",NZL,POL,AZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Women's Kayak Singles, 500 metres",HUN,DEN,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Canoeing,"Canoeing Women's Kayak Singles, Slalom",ESP,NZL,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Men's BMX,USA,NED,COL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Men's Individual Time Trial,SUI,NED,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Men's Keirin,GBR,NED,MAS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,"Cycling Men's Mountainbike, Cross-Country",SUI,CZE,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Men's Omnium,ITA,GBR,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,"Cycling Men's Road Race, Individual",BEL,DEN,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Men's Sprint,GBR,GBR,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,"Cycling Men's Team Pursuit, 4,000 metres",GBR,AUS,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Men's Team Sprint,GBR,NZL,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Women's BMX,COL,USA,VEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Women's Individual Time Trial,USA,RUS,NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Women's Keirin,NED,GBR,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,"Cycling Women's Mountainbike, Cross-Country",SWE,POL,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Women's Omnium,GBR,USA,BEL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,"Cycling Women's Road Race, Individual",NED,SWE,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Women's Sprint,GER,GBR,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Women's Team Pursuit,GBR,USA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Cycling,Cycling Women's Team Sprint,CHN,RUS,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Men's Platform,CHN,MEX,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Men's Springboard,CHN,GBR,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Men's Synchronized Platform,CHN,USA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Men's Synchronized Springboard,GBR,USA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Women's Platform,CHN,CHN,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Women's Springboard,CHN,CHN,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Women's Synchronized Platform,CHN,MAS,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Diving,Diving Women's Synchronized Springboard,CHN,ITA,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Equestrianism,"Equestrianism Mixed Dressage, Individual",GBR,GER,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Equestrianism,"Equestrianism Mixed Dressage, Team",GER,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Equestrianism,"Equestrianism Mixed Jumping, Individual",GBR,SWE,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Equestrianism,"Equestrianism Mixed Jumping, Team",FRA,USA,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Equestrianism,"Equestrianism Mixed Three-Day Event, Individual",GER,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Equestrianism,"Equestrianism Mixed Three-Day Event, Team",FRA,GER,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Men's Foil, Individual",ITA,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Men's Foil, Team",RUS,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Men's Sabre, Individual",HUN,USA,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Men's epee, Individual",KOR,HUN,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Men's epee, Team",FRA,ITA,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Women's Foil, Individual",RUS,ITA,TUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Women's Sabre, Individual",RUS,RUS,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Women's Sabre, Team",RUS,UKR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Women's epee, Individual",HUN,ITA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Fencing,"Fencing Women's epee, Team",ROU,CHN,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Football,Football Men's Football,BRA,GER,NGR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Football,Football Women's Football,GER,SWE,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Golf,Golf Men's Individual,GBR,SWE,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Golf,Golf Women's Individual,KOR,NZL,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Floor Exercise,GBR,BRA,BRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Horizontal Bar,GER,USA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Horse Vault,PRK,RUS,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Individual All-Around,JPN,UKR,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Parallel Bars,UKR,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Pommelled Horse,GBR,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Rings,GRE,BRA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Men's Team All-Around,JPN,RUS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Women's Balance Beam,NED,USA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Women's Floor Exercise,USA,USA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Women's Horse Vault,USA,RUS,SUI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Women's Individual All-Around,USA,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Women's Team All-Around,USA,RUS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Gymnastics,Gymnastics Women's Uneven Bars,RUS,USA,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Handball,Handball Men's Handball,DEN,FRA,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Handball,Handball Women's Handball,RUS,FRA,NOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Hockey,Hockey Men's Hockey,ARG,BEL,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Hockey,Hockey Women's Hockey,GBR,NED,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Men's Extra-Lightweight,RUS,KAZ,JPN|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Men's Half-Heavyweight,CZE,AZE,FRA|JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Men's Half-Lightweight,ITA,KOR,JPN|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Men's Half-Middleweight,RUS,USA,JPN|UAE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Men's Heavyweight,FRA,JPN,BRA|ISR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Men's Lightweight,JPN,AZE,BEL|GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Men's Middleweight,JPN,GEO,CHN|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Women's Extra-Lightweight,ARG,KOR,JPN|KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Women's Half-Heavyweight,USA,FRA,BRA|SLO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Women's Half-Lightweight,KOS,ITA,JPN|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Women's Half-Middleweight,SLO,FRA,ISR|NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Women's Heavyweight,FRA,CUB,CHN|JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Women's Lightweight,BRA,MGL,JPN|POR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Judo,Judo Women's Middleweight,JPN,COL,GBR|GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Modern Pentathlon,Modern Pentathlon Men's Individual,RUS,UKR,MEX,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Modern Pentathlon,Modern Pentathlon Women's Individual,AUS,FRA,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rhythmic Gymnastics,Rhythmic Gymnastics Women's Group,RUS,ESP,BUL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rhythmic Gymnastics,Rhythmic Gymnastics Women's Individual,RUS,RUS,UKR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Coxed Eights,GBR,GER,NED,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Coxless Fours,GBR,AUS,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Coxless Pairs,NZL,RSA,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Double Sculls,CRO,LTU,NOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Lightweight Coxless Fours,SUI,DEN,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Lightweight Double Sculls,FRA,IRL,NOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Quadruple Sculls,GER,AUS,EST,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Men's Single Sculls,NZL,CRO,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Women's Coxed Eights,USA,GBR,ROU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Women's Coxless Pairs,GBR,NZL,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Women's Double Sculls,POL,GBR,LTU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Women's Lightweight Double Sculls,NED,CAN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Women's Quadruple Sculls,GER,NED,POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rowing,Rowing Women's Single Sculls,AUS,USA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rugby Sevens,Rugby Sevens Men's Rugby Sevens,FIJ,GBR,RSA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Rugby Sevens,Rugby Sevens Women's Rugby Sevens,AUS,NZL,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Men's One Person Dinghy,AUS,CRO,NZL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Men's One Person Heavyweight Dinghy,GBR,SLO,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Men's Skiff,NZL,AUS,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Men's Two Person Dinghy,CRO,AUS,GRE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Men's Windsurfer,NED,GBR,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Mixed Multihull,ARG,AUS,AUT,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Women's One Person Dinghy,NED,IRL,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Women's Skiff,BRA,NZL,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Women's Two Person Dinghy,GBR,NZL,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Sailing,Sailing Women's Windsurfer,FRA,CHN,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Men's Air Pistol, 10 metres",VIE,BRA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Men's Air Rifle, 10 metres",ITA,UKR,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,Shooting Men's Double Trap,IOA,ITA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Men's Free Pistol, 50 metres",KOR,VIE,PRK,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Men's Rapid-Fire Pistol, 25 metres",GER,FRA,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,Shooting Men's Skeet,ITA,SWE,IOA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Men's Small-Bore Rifle, Prone, 50 metres",GER,KOR,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Men's Small-Bore Rifle, Three Positions, 50 metres",ITA,RUS,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,Shooting Men's Trap,CRO,ITA,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Women's Air Pistol, 10 metres",CHN,RUS,GRE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Women's Air Rifle, 10 metres",USA,CHN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,Shooting Women's Skeet,ITA,ITA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Women's Small-Bore Rifle, Three Positions, 50 metres",GER,CHN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,"Shooting Women's Sporting Pistol, 25 metres",GRE,GER,SUI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Shooting,Shooting Women's Trap,AUS,NZL,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,"Swimming Men's 1,500 metres Freestyle",ITA,USA,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 10 kilometres Open Water,NED,GRE,FRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 100 metres Backstroke,USA,CHN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 100 metres Breaststroke,GBR,RSA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 100 metres Butterfly,SGP,HUN|RSA|USA,,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 100 metres Freestyle,AUS,BEL,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 200 metres Backstroke,USA,AUS,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 200 metres Breaststroke,KAZ,USA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 200 metres Butterfly,USA,JPN,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 200 metres Freestyle,CHN,RSA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 200 metres Individual Medley,USA,JPN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 4 x 100 metres Freestyle Relay,USA,FRA,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 4 x 100 metres Medley Relay,USA,GBR,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 4 x 200 metres Freestyle Relay,USA,GBR,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 400 metres Freestyle,AUS,CHN,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 400 metres Individual Medley,JPN,USA,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Men's 50 metres Freestyle,USA,FRA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 10 kilometres Open Water,NED,ITA,BRA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 100 metres Backstroke,HUN,USA,CAN|CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 100 metres Breaststroke,USA,RUS,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 100 metres Butterfly,SWE,CAN,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 100 metres Freestyle,CAN|USA,,SWE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 200 metres Backstroke,USA,HUN,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 200 metres Breaststroke,JPN,RUS,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 200 metres Butterfly,ESP,AUS,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 200 metres Freestyle,USA,SWE,AUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 200 metres Individual Medley,HUN,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 4 x 100 metres Freestyle Relay,AUS,USA,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 4 x 100 metres Medley Relay,USA,AUS,DEN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 4 x 200 metres Freestyle Relay,USA,AUS,CAN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 400 metres Freestyle,USA,GBR,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 400 metres Individual Medley,HUN,USA,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 50 metres Freestyle,DEN,USA,BLR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Swimming,Swimming Women's 800 metres Freestyle,USA,GBR,HUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Synchronized Swimming,Synchronized Swimming Women's Duet,RUS,CHN,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Synchronized Swimming,Synchronized Swimming Women's Team,RUS,CHN,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Table Tennis,Table Tennis Men's Singles,CHN,CHN,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Table Tennis,Table Tennis Men's Team,CHN,JPN,GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Table Tennis,Table Tennis Women's Singles,CHN,CHN,PRK,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Table Tennis,Table Tennis Women's Team,CHN,GER,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Men's Featherweight,JOR,RUS,ESP|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Men's Flyweight,CHN,THA,DOM|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Men's Heavyweight,AZE,NIG,BRA|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Men's Welterweight,CIV,GBR,AZE|TUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Women's Featherweight,GBR,ESP,EGY|IRI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Women's Flyweight,KOR,SRB,AZE|THA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Women's Heavyweight,CHN,MEX,GBR|USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Taekwondo,Taekwondo Women's Welterweight,KOR,FRA,CIV|TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Tennis,Tennis Men's Doubles,ESP,ROU,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Tennis,Tennis Men's Singles,GBR,ARG,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Tennis,Tennis Mixed Doubles,USA,USA,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Tennis,Tennis Women's Doubles,RUS,SUI,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Tennis,Tennis Women's Singles,PUR,GER,CZE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Trampolining,Trampolining Men's Individual,BLR,CHN,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Trampolining,Trampolining Women's Individual,CAN,GBR,CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Triathlon,Triathlon Men's Olympic Distance,GBR,GBR,RSA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Triathlon,Triathlon Women's Olympic Distance,USA,SUI,GBR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Volleyball,Volleyball Men's Volleyball,BRA,ITA,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Volleyball,Volleyball Women's Volleyball,CHN,SRB,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Water Polo,Water Polo Men's Water Polo,SRB,CRO,ITA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Water Polo,Water Polo Women's Water Polo,USA,ITA,RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Bantamweight,CHN,PRK,THA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Featherweight,COL,INA,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Heavyweight,UZB,ARM,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Light-Heavyweight,IRI,CHN,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Lightweight,CHN,TUR,COL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Middle-Heavyweight,IRI,BLR,LTU,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Middleweight,KAZ,CHN,EGY,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Men's Super-Heavyweight,GEO,ARM,GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Women's Featherweight,TPE,PHI,KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Women's Flyweight,THA,INA,JPN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Women's Heavyweight,PRK,BLR,ESP,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Women's Light-Heavyweight,CHN,KAZ,EGY,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Women's Lightweight,THA,THA,TPE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Women's Middleweight,CHN,PRK,KAZ,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Weightlifting,Weightlifting Women's Super-Heavyweight,CHN,PRK,USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Featherweight, Freestyle",GEO,JPN,AZE|IRI,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Featherweight, Greco-Roman",CUB,JPN,NOR|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Heavyweight, Freestyle",USA,AZE,ROU|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Heavyweight, Greco-Roman",ARM,CUB,IRI|TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Light-Heavyweight, Freestyle",RUS,TUR,AZE|USA,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Light-Heavyweight, Greco-Roman",RUS,UKR,BLR|GER,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Middleweight, Freestyle",IRI,RUS,AZE|TUR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Middleweight, Greco-Roman",RUS,DEN,IRI|KOR,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Super-Heavyweight, Freestyle",TUR,IRI,BLR|GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Super-Heavyweight, Greco-Roman",CUB,TUR,AZE|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Welterweight, Freestyle",RUS,AZE,ITA|UZB,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Men's Welterweight, Greco-Roman",SRB,ARM,AZE|GEO,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Women's Featherweight, Freestyle",USA,JPN,AZE|SWE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Women's Flyweight, Freestyle",JPN,AZE,BUL|CHN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Women's Heavyweight, Freestyle",CAN,KAZ,CHN|RUS,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Women's Light-Heavyweight, Freestyle",JPN,RUS,KAZ|SWE,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Women's Lightweight, Freestyle",JPN,RUS,IND|TUN,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准
+2016,Wrestling,"Wrestling Women's Middleweight, Freestyle",JPN,BLR,KAZ|POL,https://www.olympics.com/en/olympic-games/rio-2016/results,主数据运动员记录去重代理；IOC届次链接仅供追溯；逐项证据见来源覆盖总表,完整小项结构与届次总量；历史重分配以IOC最新公告为准

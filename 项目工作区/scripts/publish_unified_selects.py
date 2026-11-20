@@ -1,10 +1,11 @@
 """Apply shared native dropdown styling to generated HTML; safe to rerun."""
+from evidence_guard import presentation_html
 from pathlib import Path
 import os,re
 root=Path(__file__).resolve().parents[2]
 css=root/'交付文件/共享组件/unified-selects.css'
 count=0
-for p in [root/'index.html',*(root/'交付文件').rglob('*.html')]:
+for p in [root/'index.html',*presentation_html(root/'交付文件')]:
     s=p.read_text(encoding='utf-8')
     if not re.search(r'<select\b',s,re.I):continue
     href=Path(os.path.relpath(css,p.parent)).as_posix()+"?v=5"

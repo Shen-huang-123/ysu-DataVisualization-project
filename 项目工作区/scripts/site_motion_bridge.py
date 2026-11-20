@@ -2,11 +2,12 @@
 
 Only pages without the existing xz-motion-script receive this layer.
 """
+from evidence_guard import presentation_html
 from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-PAGES = sorted((ROOT/'交付文件').rglob('*.html'))
+PAGES = sorted(presentation_html(ROOT/'交付文件'))
 if (ROOT/'index.html').exists():
     PAGES.append(ROOT/'index.html')
 STYLE = '''<style id="ox-motion-bridge-style">

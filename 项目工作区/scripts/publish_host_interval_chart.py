@@ -1,3 +1,4 @@
+from evidence_guard import presentation_html
 from pathlib import Path
 import csv,re
 ROOT=Path(__file__).resolve().parents[2]
@@ -12,7 +13,7 @@ for i,r in enumerate(rows):
  name=['小项原代理','二次来源替换','排除未决同名系列'][i]
  parts.append(f'<div class="hi-row"><div class="hi-label">{name}</div><div class="hi-plot">{plot}</div><div class="hi-value">{x:+.2f}<small>95%区间 [{lo:+.2f}, {hi:+.2f}]</small></div></div>')
 figure='<figure class="host-interval" aria-label="同15个主办案例，三方案平均差值及案例成组95%区间"><figcaption>三种来源方案，平均关联均为正</figcaption><div class="hi-note">同15个主办案例 · 圆点为平均差值，横线为案例成组95%区间；不代表每届都受益</div>'+''.join(parts)+'<div class="hi-axis"><span>主办届 − 合成对照</span><div class="hi-ticks">'+''.join(f'<span>{i}</span>' for i in range(7))+'</div><span>单位：百分点</span></div></figure>'
-for p in (ROOT/'交付文件').rglob('*.html'):
+for p in presentation_html(ROOT/'交付文件'):
  text=p.read_text(encoding='utf-8-sig')
  if 'id="host-source-sensitivity"' not in text:continue
  text=re.sub(r'<style id="host-interval-style">.*?</style>','',text,flags=re.S)

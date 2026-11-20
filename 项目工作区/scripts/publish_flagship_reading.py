@@ -1,3 +1,4 @@
+from evidence_guard import presentation_html
 from pathlib import Path
 from bs4 import BeautifulSoup
 from html import escape
@@ -70,7 +71,7 @@ for code in s.main.select('code'):
  if code.get_text().endswith('未决证据影响报告.md'):
   a=s.new_tag('a',href=code.get_text()[:-3]+'.html');a.string='阅读未决证据影响报告';code.replace_with(a)
 out.write_text(str(s),'utf8')
-for p in delivery.rglob('*.html'):
+for p in presentation_html(delivery):
  if p==out:continue
  text=p.read_text('utf8')
  if '三篇旗舰专题_研究闭环.md' not in text:continue

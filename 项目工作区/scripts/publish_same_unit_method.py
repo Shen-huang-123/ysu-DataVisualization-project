@@ -1,4 +1,5 @@
 """Publish the authored replay method as UTF-8 HTML; retain Markdown downloads."""
+from evidence_guard import presentation_html
 from pathlib import Path
 import html,re,runpy
 from bs4 import BeautifulSoup
@@ -24,7 +25,7 @@ for part in re.split(r'\n\s*\n',source.read_text(encoding='utf-8-sig').strip()):
    n=len(heading[1]);blocks.append(f'<h{n}>'+inline(heading[2])+f'</h{n}>')
   else:blocks.append('<p>'+inline(part)+'</p>')
 target.write_text('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>同口径时序重训｜方法与限制</title><style>.method-reading{max-width:1100px;margin:auto}.method-reading h2{margin-top:48px}.method-reading p{max-width:84ch;line-height:1.9}.method-reading code{overflow-wrap:anywhere}.method-reading img{max-width:100%}.method-actions{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:36px}.method-reading table{white-space:nowrap}</style></head><body><main><article class="method-reading"><nav class="method-actions"><a href="index.html">← 返回同口径时序重训</a><a href="同口径时序重训说明.md" download>下载 Markdown 原文</a></nav>'+''.join(blocks)+'</article></main></body></html>',encoding='utf-8')
-for page in (root/'交付文件').rglob('*.html'):
+for page in presentation_html(root/'交付文件'):
  if '原始页面' in str(page) or page==target:continue
  text=page.read_text(encoding='utf-8')
  if source.name not in text:continue
