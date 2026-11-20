@@ -22,23 +22,13 @@
   ctx.clearRect(0,0,w,h);
   const cx=w*(w<650?.62:.52),cy=h*.5,span=Math.max(w,h)*.52;
   const travel=reduce?0:progress*3.2;
-  // Match the original gold/cyan perspective tunnel even without WebGL.
-  for(let i=52;i>=0;i--){
-   const depth=8+((i*3.25+travel*6)%173);
-   const radius=h*.69*4.2/depth;
-   const centerX=w*.52+Math.sin(-depth*.035)*h*.12;
-   const centerY=h*.5-Math.cos(-depth*.03)*h*.055;
-   ctx.beginPath();
-   for(let j=0;j<=120;j++){
-    const angle=j/120*Math.PI*2;
-    const warp=1+.055*Math.sin(angle*5+i*.31)+.035*Math.sin(angle*9-i*.403);
-    const x=centerX+Math.cos(angle)*radius*warp;
-    const y=centerY+Math.sin(angle)*radius*.774*warp;
-    if(j===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
-   }
-   const gold=i%5===0;
-   ctx.strokeStyle=gold?'rgba(212,173,115,.58)':i%2?'rgba(102,169,178,.36)':'rgba(184,208,210,.16)';
-   ctx.lineWidth=gold?1.4:.8;ctx.stroke();
+  for(let i=0;i<7;i++){
+   const z=((i/7-travel*.55)%1+1)%1;
+   const rad=26+Math.pow(1-z,2.15)*span;
+   const opacity=(1-z)*(.055+.06*Math.sin(Math.PI*z));
+   if(opacity<.012)continue;
+   ctx.beginPath();ctx.ellipse(cx,cy,rad,rad*.63,-.12,.17*Math.PI,1.83*Math.PI);
+   ctx.strokeStyle=`rgba(128,185,190,${opacity})`;ctx.lineWidth=Math.max(.6,(1-z)*1.8);ctx.stroke();
   }
   for(const s of seeds){
    const z=((s.z-travel)%1+1)%1;
@@ -47,7 +37,7 @@
    const alpha=Math.min(.9,(1-z)*.84)*(z<.08?z/.08:1);
    const color=s.hue>.84?`rgba(238,194,132,${alpha})`:`rgba(197,222,222,${alpha})`;
    const size=s.size*(.55+(1-z)*1.35);
-   ctx.fillStyle=color;ctx.fillRect(x-size/2,y-size/2,size,size);
+   ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,size,0,Math.PI*2);ctx.fill();
    if(!reduce&&z<.55){
     const trail=5+(1-z)*15;
     const angle=Math.atan2(y-cy,x-cx);
