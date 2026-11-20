@@ -37,9 +37,18 @@ html body input[type=range]{accent-color:#8bc7db}
 html body .chart{background:transparent!important;border-radius:0!important;box-shadow:none!important}
 @media(max-width:800px){html body .wrap{width:calc(100% - 48px)!important}html body .hero{display:block!important}html body .hero aside{max-width:none!important;margin-top:24px}html body .grid{grid-template-columns:1fr!important}html body .results{min-width:0}html body table{font-size:13px!important}}
 """
+st.string += "\nhtml body :is(h2,h3,strong,b,label,summary,caption){color:#edf3f2!important}\nhtml body :is(p,small,.control p,.interval-label,.bt span,.forecast-archive-note){color:#c4d2d6!important;opacity:1!important}\nhtml body .hero p,html body .hero .eyebrow{color:#edf3f2!important}\nhtml body .hero{overflow:hidden!important;background:none!important;position:relative!important;isolation:isolate}\nhtml body .hero>.storm-motion-photo{position:absolute;inset:-4%;z-index:-2;background:url('../../任务三_专题深挖/媒体/la.jpg') center/cover no-repeat;animation:storm-photo-drift 28s ease-in-out infinite alternate;pointer-events:none}\nhtml body .hero>.storm-motion-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#182128,transparent 32%),linear-gradient(90deg,#101e27f5,#101e27d9 58%,#101e2770);pointer-events:none}\n@keyframes storm-photo-drift{from{transform:scale(1.02) translateX(-1%)}to{transform:scale(1.08) translateX(1%)}}\nhtml body .hero.storm-paused .storm-motion-photo{animation-play-state:paused}\nhtml body .storm-motion-toggle{position:absolute;right:6vw;top:20px;background:#182128b3!important;color:#edf3f2!important;border:1px solid #b1c6cc77!important;border-radius:0!important;padding:8px 12px;min-height:40px;cursor:pointer}\n@media(prefers-reduced-motion:reduce){html body .hero>.storm-motion-photo{animation:none!important}html body .storm-motion-toggle{display:none!important}}\n"
 hero=s.select_one('.hero')
 if hero and not hero.select_one('.storm-photo-credit'):
  credit=s.new_tag('p',attrs={'class':'storm-photo-credit'})
  credit.string='1984年洛杉矶历史影像 · 场景配图'
  link=s.new_tag('a',href='../../任务三_专题深挖/媒体/图片来源与许可.html');link.string=' · 图片来源与许可 ↗';credit.append(link);hero.append(credit)
+if hero and not hero.select_one('.storm-motion-photo'):
+ for cls in ['storm-motion-photo','storm-motion-shade']:
+  layer=s.new_tag('div',attrs={'class':cls,'aria-hidden':'true'});hero.insert(0,layer)
+ button=s.new_tag('button',attrs={'class':'storm-motion-toggle','type':'button','aria-pressed':'false'});button.string='暂停背景';hero.append(button)
+if not s.select_one('#storm-motion-control'):
+ script=s.new_tag('script',id='storm-motion-control')
+ script.string="(()=>{const h=document.querySelector('.hero'),b=document.querySelector('.storm-motion-toggle');if(b)b.onclick=()=>{const paused=h.classList.toggle('storm-paused');b.textContent=paused?'播放背景':'暂停背景';b.setAttribute('aria-pressed',String(paused))}})();"
+ s.body.append(script)
 p.write_text(str(s),encoding='utf8')
