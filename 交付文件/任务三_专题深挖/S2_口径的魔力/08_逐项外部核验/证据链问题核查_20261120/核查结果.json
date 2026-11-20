@@ -1,0 +1,809 @@
+{
+  "scope": "本地已保存证据检查，不代表2026-11-20重新访问IOC官网",
+  "event_rows": 910,
+  "unique_event_keys": 910,
+  "source_types": {
+    "Olympics.com第三方2023抓取存档": 555,
+    "世界田联现行竞赛结果": 138,
+    "世界泳联现行逐项结果": 137,
+    "国际柔联现行逐级别结果": 42,
+    "世界跆拳道联盟现行逐级别结果": 23,
+    "官方原始补证": 6,
+    "IOC现行官方修订": 4,
+    "IOC单色重分配+官方成绩册其余两色": 2,
+    "官方原始补证（协会奖牌页错误）": 1,
+    "官方原始补证（协会接口错误）": 1,
+    "国际举联现行竞赛排名（IOC授牌待核）": 1
+  },
+  "secondary_rows": 555,
+  "secondary_results": {
+    "三色与旧存档一致": 548,
+    "旧存档与现行二次来源有差异": 7
+  },
+  "raw_pages": 97,
+  "raw_hash_matches": 0,
+  "recoverable_original_hash_matches": 97,
+  "overstated_provenance_rows": {
+    "2008": 302,
+    "2012": 302,
+    "2016": 306
+  },
+  "raw_files": [
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_ARC.html",
+      "expected_sha256": "e41e7eab11badec9ed4c3fc683752c322c98107f7a950d69aee3915b9e4fc85c",
+      "current_sha256": "c59f9fb04ff434c5359e1ea579528a61f50a73b8c56caf9b8036fa720a1bc3ad",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_BDM.html",
+      "expected_sha256": "19783af63fbf4ccb0cc795630c3382ba44ca0f3095211d7d994a55d451365b60",
+      "current_sha256": "54b860dfeace8eb68b209d71b6c81b19e91082867f869ea4f0fab535af591aac",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_BBL.html",
+      "expected_sha256": "1342a323634423bc55098dbcd5d5f2fdaca63a7e402e53f450f0100a7f2429e1",
+      "current_sha256": "405f1373f2f8a1982cce81fc305bd53faebc0d2b8d7807c1cf24fc3fc0aebf19",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_BKB.html",
+      "expected_sha256": "25dd87b14475128240fcabba08a99a48ec50002c6a81c6b6bdb1ac9cbdd57df4",
+      "current_sha256": "f2860175bf2302c172ef47328251db0bfbee726a8b98e26a88390df15744e539",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_VBV.html",
+      "expected_sha256": "7eeeaede28bd2c7ce946d512facef78a7e82c05ef84395079ca38c26dcf609ec",
+      "current_sha256": "dcc85bd3ce6d95abb26289469424d5cb0b1f14983387f961bbccd6d65266182d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_BOX.html",
+      "expected_sha256": "4067a7180653ab014ecdb123b5c22b90b5163b199d274b96b9783cbd3c13b7e6",
+      "current_sha256": "8003b16a5d251ab177e393ee1615788be69eb6d5f3c1d8e9931445d0779e4da6",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_CSL.html",
+      "expected_sha256": "a3ebeac12cb493210674c454d7cc473e0f02d34cf8af20ef370874f16c1fe011",
+      "current_sha256": "26a34a8135b36376c85057b9a15f08273b7714bd8cb3f810bcd9b70576b2befb",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_CSP.html",
+      "expected_sha256": "5be2ff2c87350f2fde14503d659c1f7230ba6c2841bc8edc5eb5ce6318741034",
+      "current_sha256": "26ea7e08bae5bcb1108005468198785a887811caeaa722ddd6705e519008cc9b",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_BMX.html",
+      "expected_sha256": "4f8f9f0ad15af5e5935a1445286847af5ba1730420636660ccdedf49a7517729",
+      "current_sha256": "3395107a6c7215816d2c4ad6b416f7ddbd04b7a3a3a5c7ea5d0fe135f9e8c302",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_CRD.html",
+      "expected_sha256": "624ba6c54e8d744648af9d39ddc3053c9b307bfc903c4bab8f8a7698064ab614",
+      "current_sha256": "2e3a50d6f73135bd91ee6323fdd540092dcd4394ace11dcb56e01121978b6627",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_CTR.html",
+      "expected_sha256": "d7353c8561781a21e2bb5f0817d0c209e259e873465bec6fcce95584ba87c293",
+      "current_sha256": "605bca0b57047fe4661acae112a856d8dd56c1addc090b65634ca4121e65dde0",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_MTB.html",
+      "expected_sha256": "b32c657300da9360cf8c949add1525da2b30a7971be6ba00b3bdb34f32f3d9ae",
+      "current_sha256": "c6b2f90ec87a602903f5c6227e794cf9ebe5de3079abe6e46e3bf9ce258dcf1f",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_EDR.html",
+      "expected_sha256": "cb8fc717191fd052da6aec7db67af73fb9318978d016a4eafe0078796b0d4cac",
+      "current_sha256": "a7beb35e297fc92fe31579e7ec69ae032da6b149c224b026ec449a266d5d4b83",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_EJP.html",
+      "expected_sha256": "8043152966c0289df8a3562cdeb62d267f5d915e1dce515b6809a75114b0c727",
+      "current_sha256": "0e01bf7510c2e06a7ceed9aca04d75e059024b214761de1e9741e676a457cb00",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_EVE.html",
+      "expected_sha256": "23e817edabe967405babd86793295b9a0d46413d31f16397fb6081e06fa9aedc",
+      "current_sha256": "77a239e5224c5564d932269a9526bd774ec3f33041b14b370549f8d97d50f16d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_FEN.html",
+      "expected_sha256": "6f9badc49ddda13f72d244084611e4933cbc28615d950f9408c33af78188d2a3",
+      "current_sha256": "b68171bdcf919eef6a3f5712d78efafea37f0d9f821ac6792ed20c11fc43a9fa",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_FBL.html",
+      "expected_sha256": "9010c73fa5308b846c48167cc96da26aaf7bad9e0de23fdaa939bf088c8bfcd9",
+      "current_sha256": "cfe3404f7c87959eb75b94868778ac8570c59a76d8ddeafe422f37ce2ac5a0f9",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_GAR.html",
+      "expected_sha256": "63021684dc04382a2808a767bfa0617038e6ebd1e7c680e635cbe922411179e5",
+      "current_sha256": "7c27fb6fe673af4b558d64c2dc4b760ef6979c6e88f377647858e4e098314d27",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_HBL.html",
+      "expected_sha256": "2f90a2e20081fa18a072e64a8bfee316cd9a2e11c8cb7b3b98f44b63a3e349cb",
+      "current_sha256": "ab3969ec5991abb29f114730867d9d3f2f8f4241d8a0973eb70a68328ee4fb26",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_HOC.html",
+      "expected_sha256": "ca3c13f287d98bcfff87ce296d974fb2cfe0ad0e1a1e5eb79b7a30dfdf2d1c5e",
+      "current_sha256": "2498d1a199bd8792b6cec25edb276f4f0a14c2d12462ff79836a6d5463cb3cef",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_MPN.html",
+      "expected_sha256": "b30a905c61d0fcdafe2417f7ad65576a7a1ca0ac79db087f5b67bb638cf7a265",
+      "current_sha256": "27293b8d135f5c19249aa70e8ce002e2d42109e0432066b06907041a49f6d545",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_GRY.html",
+      "expected_sha256": "a1b51820b3ab78ef4df976e9f668f8d6ea35b4cf2799323e09a796321cbeade4",
+      "current_sha256": "0534adbc7bb2a31dca2cb33ef3517675c7193ed76060ac3f834a2441c0b9a38a",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_ROW.html",
+      "expected_sha256": "a81577051bd64eefaf24e4ad8355596981e571093eb358962a57862d3690a7da",
+      "current_sha256": "682b50742b6302b54d33bf9ceb4bff3f6a038844d667975767fee479ef41e394",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_SAL.html",
+      "expected_sha256": "153ca7e33d17c7d036d22cd3ba86161ee78f9700e6aa9766fad29f49e2a3c2c1",
+      "current_sha256": "6e046305f42fc1f171154c61587795f10e7772a8ba0bc9fb18a966ea6830f5b9",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_SHO.html",
+      "expected_sha256": "14b784ff06021b3ba50ffae498bcf60b0ec730603e5dbde1640a9b28b58ff435",
+      "current_sha256": "900cd431bf57125424d89d4589fe7d5bed8818f1eecb33515c6c2e85a4474a28",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_SBL.html",
+      "expected_sha256": "0b870d383ee705be5fabf64f3903d7d0272f7827336932686428e7567ef8d08f",
+      "current_sha256": "5219f29ee0f3a75eb7d2e8df08a64faafae0251c9a46f6ef8560de0e0b05b4ac",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_TTE.html",
+      "expected_sha256": "e7ef7e1966d6634206800a0c49016ea9e343868fd4b25b24bc3b64a1386278ac",
+      "current_sha256": "555ee12491997d6eee511fc6854dcb91d74abaeb90445159025dce5c94d7fbbd",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_TEN.html",
+      "expected_sha256": "9e7f6ec12c5f8a02a18bf02fac89b8bf3306cababd0c5aa5dec15929295d52e8",
+      "current_sha256": "e6db7134a1cab0e7a138c4085c7e5e35e47944fd9e9cc2c2753bf8db84e9e8d6",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_GTR.html",
+      "expected_sha256": "70263164087b16076cb587aa08a540c2c23286d71fab7633dd0845d4cdb03db2",
+      "current_sha256": "074fc3c59ff13b653c75b46b3d4c7f29a8e9f830e068bc1cc294909097862f87",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_TRI.html",
+      "expected_sha256": "01c7a34af7a220d46865e519abb689d9c7bac959f8c22ae42926c01b74a6cde0",
+      "current_sha256": "a679e7a3919a57aed4fc0a6ba009f49e7df4363f7d37919fea1a87747931f2d0",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_VVO.html",
+      "expected_sha256": "b5868475038a4b715aa5b760f04f4ed829a16cbfb3235587fc5f9a866b2bae3b",
+      "current_sha256": "f0ade6b7b720a9ae2dd1e785ace93482ed87dee7bf0653b4d9504f4d284c5889",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_WLF.html",
+      "expected_sha256": "c4a8cfc5b986d99ae679dc31f9f2715c8d28de0fa8b971040a444d9c667e13c7",
+      "current_sha256": "21d5a8d302f54a56a4ba3f7b53d917aa8916a769d8aa941c28447ceb9c652355",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2008_WRE.html",
+      "expected_sha256": "1e3a25dafa54f90e978bb17593056f08a4b103ca08b02abaed3e80496e7e8c9d",
+      "current_sha256": "7152c3f12f8fccb5c3f76f4c35a0b664b44bab69672d44fc7a71bc727eb0fe3d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_ARC.html",
+      "expected_sha256": "68d6973406fd83e6c48e8627dc08231361e5986ab569c14bbf2ee5466666c651",
+      "current_sha256": "24a3baad2b55e2a9447ff3908049705b82747e01ee21b97dc2294ac1053b4abe",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_BDM.html",
+      "expected_sha256": "2cd2e60d523e35fc4401dff1273b82f7f6101929eebcce125f92de646a5c5fb1",
+      "current_sha256": "7d10fe6aba7dad868ffc25739249a6c7b13096b236b516a2239251ae17c84d71",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_BKB.html",
+      "expected_sha256": "05a9c4bcab32095ee934cee743a23bda067d15a852e8312df9fa3c1128c31777",
+      "current_sha256": "bff47875326cdb5e2636d084efe68fb43d707dfdd1f0afa84fc820ab79dfb611",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_VBV.html",
+      "expected_sha256": "b9f885fd7807ee4f8776f14ef4fc8863b05e5fdf90dd31b26fdcbb1aeaac3cfd",
+      "current_sha256": "7ea556f390bb774cf0dc13ec1579c30222f40f7083eca4523a9ddcad9c55f90c",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_BOX.html",
+      "expected_sha256": "b5388ad966314575ecc0b2345d1ac46a0bf600d433c31859d1208e4dd6dffba2",
+      "current_sha256": "2a29febcaac393e8b73eed8659f472c6240977bbd44beb9f85ca05d9eb44fdb7",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_CSL.html",
+      "expected_sha256": "c235a2f6273b5952575ee00955e7a018619d9b807227deb1eed072bc8a978854",
+      "current_sha256": "2f6624df2a39b6a2684ed3bed38976dbc01fd8128d95f07f8a76e0faf77ccd6f",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_CSP.html",
+      "expected_sha256": "eaf807b3e9125d95da156b999344b1b2d881d4a34a0a796f2a01e1d5f9b3e0c2",
+      "current_sha256": "5f8c87af0fa5583b2773be1f5fa032cc2b23fbff1f646e4b5943b20c1fff986b",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_BMX.html",
+      "expected_sha256": "bb6b08d383b83a36c42c9ff22f2459d5de53e78cf736b402354ac4463746cf67",
+      "current_sha256": "2569fd6a3a7bb9d1c7b4eb7535d326d29bf5023604bbd24e90a2b18480439aba",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_CRD.html",
+      "expected_sha256": "d58974a856f79bce0b06059d0ac50b4a77017ea47596cb36a286442234cf6aac",
+      "current_sha256": "4c40fbf361cd50c297202700f0b2cb6db99efaa7b0e016b68a6006fe61feb9be",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_CTR.html",
+      "expected_sha256": "e5dc645c72caa2b9517b897a94d2d0e1fbaaa50ae5306c9e16edb927b606d403",
+      "current_sha256": "53061cd6d098b18cc8004a9974f5863dab490b630a49a81b58477156714e5bf9",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_MTB.html",
+      "expected_sha256": "beac758b5ec4fd1ee6fb312edd30fd695551785a556b61ab8ffc8a93bc86641b",
+      "current_sha256": "fdc822ea213092839850306de5cdf57ffbd29ff00868b38e21a0b1fbc56782cf",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_EDR.html",
+      "expected_sha256": "62fbc8d8bdee0b0e069d906c6c0fb0dd124dd5c9007280fb963efc096781af43",
+      "current_sha256": "c9f10a7228a9b2fb33c0ffacf8f98d5326bcdafe157be7853520916480b4f4d9",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_EJP.html",
+      "expected_sha256": "6b7c68d4293a8f6c1900d6962767f2f1b6e5c01e1127b91deda54671dec74545",
+      "current_sha256": "b2feccaadd265824acb978fc9179130530814012a2389a63c3b8ff336d9a1723",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_EVE.html",
+      "expected_sha256": "5d57ca45aed3614e9272e65ce50b114f37611c2456b01d7ba9460b795b459907",
+      "current_sha256": "c6d2811632cbc7e6c815626590c61541b8f963fbff62350784be909f634dfe22",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_FEN.html",
+      "expected_sha256": "c51f1e4c51f7f919a04a211c6024bf948d68523e91547b5fe33c605c4cd5169b",
+      "current_sha256": "16938b31cb0643bdfa670be6351c732390949dc16d338e6c5264260496b90189",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_FBL.html",
+      "expected_sha256": "76569f29a3c2db2b6cf5c379023636aac628c0f218fa8b99271752f937c86089",
+      "current_sha256": "f3f3e57cc5968054f7cd322e3e95a903b055158f5a7e018007cbd46123236946",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_GAR.html",
+      "expected_sha256": "ab02ab4c00412ac684614a43a7d067849ee9f8931034947aa6b32a4115cb4ecb",
+      "current_sha256": "9c8407a6919a28682646a751395f7d4de2d740d4a028acfad5d5745baeef3e9e",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_HBL.html",
+      "expected_sha256": "f38a28a95d1a97f13b39bb00a8943576dc9f6138e037f4ed4c28d7dd652e684b",
+      "current_sha256": "9c779b8b71c4f7a19937d13265c2280783f04a7447ca1ef24ef6ff1de9617458",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_HOC.html",
+      "expected_sha256": "23a2ca3fb7de70a456857f9e3441ed3686a786a3ce6f5ee0debae7121fbac991",
+      "current_sha256": "cb4ca673c7808413355c2e52079a843b5f2cf7457ba6272aad21aee94f7a3e4d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_MPN.html",
+      "expected_sha256": "22057b896844647d612d37a1538ed35638161099a76709ecdb4f300c19f65a6e",
+      "current_sha256": "12cbaead9e4eb35e08e302eebba2a7d3b7cdfdba5a59c9b690c90ba9b557385b",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_GRY.html",
+      "expected_sha256": "97831ea2cde3e9e92d5868ef50a50dcfe8f199c4ba0bdcbb7060b9ad246aac5a",
+      "current_sha256": "3d92b399a76ece2f1a97849bbe72024124bcd3da443c3344c8e1f5a6f17cc1ad",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_ROW.html",
+      "expected_sha256": "cf26f289dc0b0042f0440fea8e653ca26e2f88e787ce5dc0d34e2a2488c486b2",
+      "current_sha256": "72392246830f6b0810a9565e925334933a324488f101796d571d6d67a6dec02a",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_SAL.html",
+      "expected_sha256": "eb0b5373453fe29e9f20fe7bcf8ca642080138302893091d3341e73ff49b6301",
+      "current_sha256": "89e0a377983758e4876447b699e652231f2049aed6bab8fc10d3943d8cc0ed24",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_SHO.html",
+      "expected_sha256": "892555d6eb4a41ce5f7ecfc90a7716d73784cd5c132fd0e19c09c8cdb33a4e63",
+      "current_sha256": "474ef6f4ff06deab8e4baa5317dbbe511a7e2791e6787c608db99c01dc59cfdd",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_TTE.html",
+      "expected_sha256": "a9dfe91f6b794146b192330f81983ff99d57fa68e09fd4c5ae27220ef795b629",
+      "current_sha256": "b46dc8a69603933057ca2aab63b0adda81e7cc3a44712c4718468738824ee5ba",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_TEN.html",
+      "expected_sha256": "919d6d7b621c200f1098bc665ae6faf445f3d301f4fcf532a17ecd37f7bac366",
+      "current_sha256": "7ce03cc95538200dc423c34cf4afca65f62ead31c9421b8d0eeefe6e4ae35864",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_GTR.html",
+      "expected_sha256": "74adbfe2083ae6362cd4122093313c6fb9d49f990834353e2b9c73a129e223ed",
+      "current_sha256": "9aa910a1d3af34f8c7771abb0bc0a7610bae0c4357ba677a6db7cc7dbaba1a81",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_TRI.html",
+      "expected_sha256": "a1ef014d36bcfadd1b24b29ed3d257e16d40eabd79dcf320bcdde25409b73acb",
+      "current_sha256": "e5029a0dd87f5f959383b71d9a3f53e5e77084abc82005865e0c6f3146070622",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_VVO.html",
+      "expected_sha256": "0530ec122d5273077cd6c4a277bfc4723c4752a1f3afcfe67e5613956718ec4e",
+      "current_sha256": "f8f348d6a3cc582c9d0af1558d3f43fc432082ea3ebf0830690fffb6fb1b8ec5",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_WLF.html",
+      "expected_sha256": "34be9426553b093dd8daa41c734a35d5e4d391daf5e9c38365b60898ab201b4d",
+      "current_sha256": "e4485ce4e83fcb89cd1aec588a329c66dbffa7e46bce7e5573382b616e988d9d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2012_WRE.html",
+      "expected_sha256": "79b9a203f796d636eb27056c007700c4bd130ca46e3e6d39b9bba7e90c11f3e2",
+      "current_sha256": "606af75f5d542a88a9a05136ce2d419e4fcb3e67033f431529ec44072fe5c3c7",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_ARC.html",
+      "expected_sha256": "31041ea97c604fe2d64f133f0a95e86a6169de549764c500b35a435d94c0b1e9",
+      "current_sha256": "e2530bce844302eafad0e3910227834ef87a384855ca02d3691ef8db3a879812",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_BDM.html",
+      "expected_sha256": "e4a4fc14007f66357964a60e1b852e066bbec09cf66683509de0617fd40b29fe",
+      "current_sha256": "b4067742e6a3a05d0ee89556c2667d8d6503492902c523810920a3d29ae4beac",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_BKB.html",
+      "expected_sha256": "1369672518c9cece0dd08801dff0552c8c54c4f37aba08b461eabe73d8bd613e",
+      "current_sha256": "3c917387e158671bba93750af94928ff86c63beb6afb2646037696b32b3696cc",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_VBV.html",
+      "expected_sha256": "8060b48d07fb2803a93f32fb804b0a1595603c7dd44ecb295242287798b313bf",
+      "current_sha256": "41662e69558c1f7077fed4c10f269b343193ff2a7d7dccd85fa4f5e2556e7378",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_BOX.html",
+      "expected_sha256": "453bb7b6ca1f95862f5e8252b779026dff9984808ca25bcb5b7c4b82aba84989",
+      "current_sha256": "e1911e1bd5ffd60e768f3dba59b73e715c144f1a0146cc76c28bb3ec9cef241b",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_CSL.html",
+      "expected_sha256": "384be61c9eb979ed4618a70d1b91064ff9599266f080e20d254da7523fba0bf5",
+      "current_sha256": "13b4be69750d1b49224816bc7d50f46c93c80f073d9097c64738533a261f0cd5",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_CSP.html",
+      "expected_sha256": "839a8887774c11c590bab0f47de522be2ae21234b0db57e3f5702dd621d6fe1e",
+      "current_sha256": "17b3539653bf78f3027ab5826ffa203e1eed08b3f683ad537cb82cfd505e7a77",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_BMX.html",
+      "expected_sha256": "e8b34f415fedf78b82e04f0c2f4e40b9f8c143e39df22972f44c71643a074bcf",
+      "current_sha256": "a5ba25f5401275041e759543fef14356de207fdd2f74eaea81184588bf9afdff",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_CRD.html",
+      "expected_sha256": "e8f743b7f9e795bb6d74196c253e8ed2a68d81cb1307f9abfcf3f95b2302f59a",
+      "current_sha256": "5c6c6d6bd3637e96e86a2b533b481fc620abea0ead5f14ea564f672c859dfe1b",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_CTR.html",
+      "expected_sha256": "4bb13d246f6b4d93e0cf793f90e9e5fed964d15700c7aecb2e76e10b8e0a624a",
+      "current_sha256": "d109029979dfa6c62d5d0cdd46ba9032a1b24cc1fe19767599a1afa44f3354e3",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_MTB.html",
+      "expected_sha256": "5ae553cd5fccf1468d56936aea2b860812f99634e949030504a11e3691fcd3a2",
+      "current_sha256": "b7a1e3a20074bd4344f4791abbefef680568cb8a42c1cb0c6fe548251f6bcb9a",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_EDR.html",
+      "expected_sha256": "80f5cab9f9365bdf407680462c42289e18e2b85ab0bf55cc4caa098564155f83",
+      "current_sha256": "d13f7bdfd72b1c3c3a62453b5940175b70550f7f7f405557500d5812052610af",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_EJP.html",
+      "expected_sha256": "f5b075f64bc815a2073aa5ace931044b04d8283a49e9503802989a18eb9778a3",
+      "current_sha256": "fd79ec0e21a974b30339a2e051763e1ae3e6f2dec675bf7ea47c285f73997188",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_EVE.html",
+      "expected_sha256": "05fadd684e7a6d426d706466fdfb2a9ac4016c0bee344f9a5de0d146ff12f1ed",
+      "current_sha256": "a7055f9b19675e0d2c5c9460ed0d1cc9d3a2bc573b99332f22b9e7d288352186",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_FEN.html",
+      "expected_sha256": "ef57272bd1bdba3eed68a83a905caa727905eb62e70385b46ca48a95e3b6da45",
+      "current_sha256": "43f41abf949508b564368153d085731f60977ef20865fbea28d17361c63fb03f",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_FBL.html",
+      "expected_sha256": "d08226aeab664b62a353172d9b9939871db75f83709b3b946982ed8d05f74769",
+      "current_sha256": "42338fc55c92797acaecc745b269d6b8e3797b7eb1844b2fd28fa64ba652e9de",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_GLF.html",
+      "expected_sha256": "7ab775b7f591f9e72d40ce6fb5fde8a4a236545c5c7139b1ba1f7af23c406976",
+      "current_sha256": "5ec7820022323a1cba18d47270e8ca686a753bd135ead619dacb509381e5d69f",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_GAR.html",
+      "expected_sha256": "b81f1d985e50eb84c68a0526740555c6ada07943b4f2b3ee20a4301b68ccb73a",
+      "current_sha256": "36c55bd1bd4d4cc9425df0f0d6f38e9b1f34a8833e3c296c4a350892ab74c81c",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_HBL.html",
+      "expected_sha256": "9adc88743ba7eb08fd69e7c2009a11b2510aa045f6de5f3d9b6bd4dd5e5223da",
+      "current_sha256": "efda594a48f8a7bc01977ad6a27c4e374cc2cb4796dcf802013e2a4ce3c343f6",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_HOC.html",
+      "expected_sha256": "0344f1a62539deaf64af8b6072c198007106c6478503282f0ba4711ee0c82377",
+      "current_sha256": "d2886aca974141888c8a77cbcb033f5ec40900969f2475c758077f7d443a8c6d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_MPN.html",
+      "expected_sha256": "690336fbd9fb1063e7de8d5d04b978c8c2f60063ca5a1c03cfdb53847edfc9e3",
+      "current_sha256": "b5b0478d27f7d4e3fce787f7649b76a30785f9307dceadf387a35ca1562e7efb",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_GRY.html",
+      "expected_sha256": "a35598285e0a0ab03f1bbd2f158bf00562425a359b09c7e4a23445e7151740ed",
+      "current_sha256": "b8ae2e34a1c0ee833cdc2b7e4419eca550ad07e00d34cd4d5446368f46bc375d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_ROW.html",
+      "expected_sha256": "23b8b8cc31d880112eda0e791b6798d1c25a201888e12f60a5fb9b5dd6ec21be",
+      "current_sha256": "d92d63b192bb1caeaf790311ee1a89be4cbb87db58e0a2c34e614315c575bd70",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_RU7.html",
+      "expected_sha256": "dacb61811cfcf2f2aea67cd9bc060c986b261089d9aac009d7cc58dfefee0c5c",
+      "current_sha256": "8a3674586a8e05d83adf8cc55e6849cb034ab1546d27157510b3c146d0c169f0",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_SAL.html",
+      "expected_sha256": "6936f50a34537c8c4438caa478467710eb813b0f7d4131470aedc1a4c8af7f0f",
+      "current_sha256": "757629f709994b74ae0791f7686804374c766c7ad7254f8d0d56e2d899d29054",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_SHO.html",
+      "expected_sha256": "e8b006874e687f1751cdfc3b55074b48f4f4852ffbc4dc14351b2d84a39ed163",
+      "current_sha256": "29e2239b7e794d53440fab25b7362f056c53e5cb36c3c0e7fa21cd3747adc288",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_TTE.html",
+      "expected_sha256": "c47c9c95a827fcafedc5cc2c1a95da1d1fa7198c1093f4fa0eea363bc5ab83a3",
+      "current_sha256": "35c7d6e8d63ad4b88204e9155f0fd0cd62c3bbfd8f87e193162e5379b17e4938",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_TEN.html",
+      "expected_sha256": "31b26b80709d7de780b35f79295a91f99ae3890dd3cee89e452a7c4b67f4dea9",
+      "current_sha256": "082a78844c7d9c0b618a4ccc02cc3757f2eaa88053154333c0afd52d936bd179",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_GTR.html",
+      "expected_sha256": "1e112e0eea252d0ba784ae80074117d540cad40afaa65ddbda3b3645626b7d0c",
+      "current_sha256": "5bf7da30d0be06084239ab4d5bfca388fce67a5bff5e3f34cb553dbb3aef7e73",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_TRI.html",
+      "expected_sha256": "d4a31024c78bd291eea5d561b8b3a64ce140a003d0fc87e5a6827b73d466a0df",
+      "current_sha256": "543620b0a4fc061b2e99354d737f75b12d52221f765fe0ce1258426c9277795d",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_VVO.html",
+      "expected_sha256": "2df1e29eb8fc3566deaa383f52633e5d948470b68bd32c5b9200f0111b8eef5b",
+      "current_sha256": "e7a6839e26094fcb0573e64c3ca7ea3a7686858324d65cde1a1b45bb3d442d78",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_WLF.html",
+      "expected_sha256": "013cebeee15770ad0f0ac1da0dc0806b40f0caaa9f10bd51bc22b7ef34931a90",
+      "current_sha256": "9a077a713420b00cab7138dbf6f168dff01dfdb184555273d42ad0430e7ec9fd",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    },
+    {
+      "file": "交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/原始页面/2016_WRE.html",
+      "expected_sha256": "4b139c86975b68ecf23bb9131d24404156a2d857d55ee5b3ec1b89614a86f916",
+      "current_sha256": "d8d60ad92b34b3fd238cfd97a58eda151b5aa29da573e25f8f22b32371e7afe1",
+      "current_matches": false,
+      "original_commit": "95f2a8c0bc181196fa2b0c598f7b3a239695e9a3",
+      "original_matches": true
+    }
+  ]
+}
