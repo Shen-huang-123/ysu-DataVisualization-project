@@ -72,3 +72,6 @@ p.write_text(str(s),encoding='utf-8')
 
 import runpy
 runpy.run_path(str(root/'项目工作区/scripts/publish_survival_interval_svg.py'))
+
+import runpy
+runpy.run_path(str(root/'项目工作区/scripts/publish_core_evidence_notes.py'))
