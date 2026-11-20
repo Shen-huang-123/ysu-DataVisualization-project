@@ -1,0 +1,61 @@
+{
+  "hash_checks": [
+    {
+      "input": "交付文件\\任务三_专题深挖\\S3_冠军的保质期\\02_数据表\\S3_逐小项冠军控制权转移.csv",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务三_专题深挖\\S3_冠军的保质期\\09_固定小项队列检验\\固定小项逐届控制权转移.csv",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务三_专题深挖\\S2_口径的魔力\\08_逐项外部核验\\Olympedia独立交叉核验\\历史555项独立交叉对照.csv",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务一_数据体检\\02_交付数据\\归一数据_保留原始字段.csv.gz",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务三_专题深挖\\S2_口径的魔力\\08_逐项外部核验\\Olympedia独立交叉核验\\历史555项独立交叉对照.csv",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务三_专题深挖\\S2_口径的魔力\\02_数据表\\S2_2008历史小项代理表.csv",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务三_专题深挖\\S2_口径的魔力\\02_数据表\\S2_2012历史小项代理表.csv",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务三_专题深挖\\S2_口径的魔力\\02_数据表\\S2_2016历史小项代理表.csv",
+      "match": true
+    },
+    {
+      "input": "交付文件\\任务二_百年全景\\02_数据表\\B_20届主办事件研究.csv",
+      "match": true
+    }
+  ],
+  "recomputed": [
+    {
+      "script": "dynasty_source_sensitivity.py",
+      "csv": "固定队列三方案复算.csv",
+      "match": true,
+      "rows": 4
+    },
+    {
+      "script": "host_source_sensitivity.py",
+      "csv": "三方案共同案例摘要.csv",
+      "match": true,
+      "rows": 3
+    }
+  ],
+  "limits": [
+    "未重跑S2全量生成及正式PDF版式检查；本轮复算S1/S3来源敏感性"
+  ],
+  "s2_payload": {
+    "teams": 91,
+    "mismatches": []
+  }
+}
