@@ -124,9 +124,7 @@ body.voyage-live #voyage-scrollspace{display:block;height:700svh;pointer-events:
 .voyage-scene:is([data-scene="2"],[data-scene="4"]) .voyage-content a.voyage-cta[style*="background:transparent"]{color:#14343d;border-color:#14343da8;background:#f8f5efbd!important}
 @media(max-width:650px){.voyage-scene .voyage-content a.voyage-cta[style*="background:transparent"]{margin-left:0!important;margin-top:10px}.voyage-task .voyage-content{max-width:100%}}
 @media(prefers-reduced-motion:reduce){.voyage-scene,.voyage-ring,.voyage-cta,.voyage-materials a,.voyage-direct a{transition:none!important;animation:none!important}.voyage-tunnel,.voyage-warp{display:none}}
-</style><script>document.documentElement.classList.add('voyage-preparing')</script><link rel="stylesheet" href="assets/voyage-cosmos.css?v=20261120-restored-tunnel"><link rel="stylesheet" href="交付文件/共享组件/olympic-guide.css">
-<link rel="preload" as="image" href="交付文件/任务三_专题深挖/媒体/host.jpg" fetchpriority="high">
-</head>
+</style><script>document.documentElement.classList.add('voyage-preparing')</script><link rel="stylesheet" href="assets/voyage-cosmos.css"></head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="topbar"><a class="brand" href="#top" aria-label="返回页首"><span class="brandmark">晓</span>晓组织 · 数说奥运</a><nav><a href="#stories">四项任务</a><a href="#materials">正式材料</a><a class="outline" href="交付文件/作品总入口/index.html">进入交互总览 ↗</a></nav></div>
@@ -210,7 +208,7 @@ if(images.length){
 
 
 <script src="交付文件/共享组件/gsap/gsap.min.js"></script><script src="交付文件/共享组件/gsap/ScrollTrigger.min.js"></script>
-<script src="assets/three.min.js"></script><script src="assets/voyage-image-data.js"></script><script src="assets/voyage-3d.js?v=20261120-restored-tunnel"></script><script src="assets/voyage-stars.js?v=20261120-tunnel-fallback"></script><script id="index-vortex-story-script">(()=>{
+<script src="assets/three.min.js"></script><script src="assets/voyage-image-data.js"></script><script src="assets/voyage-3d.js"></script><script src="assets/voyage-stars.js"></script><script id="index-vortex-story-script">(()=>{
 const stage=document.querySelector('#voyage-stage'),spacer=document.querySelector('#voyage-scrollspace');
 if(!stage||!spacer||!window.gsap||!window.ScrollTrigger){document.documentElement.classList.remove('voyage-preparing');return}
 document.body.classList.add('voyage-live');document.documentElement.classList.add('voyage-live');gsap.registerPlugin(ScrollTrigger);
@@ -223,7 +221,7 @@ function render(){
  else if(window.drawVoyageStars)window.drawVoyageStars(state.p);
  const pos=state.p*(scenes.length-1),from=Math.floor(pos),to=Math.min(scenes.length-1,from+1),phase=pos-from,small=innerWidth<650,nearest=reduce?Math.round(pos):phase>=.53?to:from;
  const smooth=t=>{const v=clamp(t,0,1);return v*v*(3-2*v)};
- const outgoing=1-smooth(phase/.46),incoming=smooth((phase-.54)/.22);
+ const outgoing=1-smooth((phase-.28)/.18),incoming=smooth((phase-.54)/.22);
  scenes.forEach((scene,i)=>{
   const isFrom=i===from,isTo=i===to&&to!==from;
   const opacity=reduce?(i===nearest?1:0):isFrom?outgoing:isTo?incoming:0;
@@ -241,13 +239,8 @@ function render(){
 }
 const journeyTween=gsap.to(state,{p:1,ease:'none',onUpdate:render,scrollTrigger:{id:'index-vortex-story',trigger:spacer,start:'top top',end:'bottom bottom',scrub:.32,invalidateOnRefresh:true}});render();document.documentElement.classList.remove('voyage-preparing');
 function syncRestoredScroll(){const trigger=journeyTween.scrollTrigger;if(!trigger)return;trigger.refresh();const span=Math.max(1,trigger.end-trigger.start);journeyTween.progress(clamp((trigger.scroll()-trigger.start)/span,0,1));render()}
-addEventListener('pageshow',()=>{requestAnimationFrame(()=>requestAnimationFrame(syncRestoredScroll));setTimeout(syncRestoredScroll,120);scheduleAuto()});addEventListener('pagehide',()=>{stopAuto();stopNavigation()});
-let navigationTween=null,navigationTarget=null;
-const beginLink=stage.querySelector('a[href="#voyage-1"]'),beginLabel=beginLink?.firstChild,beginText=beginLabel?.textContent;
-function navigationFeedback(active){stage.classList.toggle('voyage-navigating',active);stage.setAttribute('aria-busy',String(active));if(beginLabel)beginLabel.textContent=active&&navigationTarget===1?'正在深入 ':beginText}
-function stopNavigation(){if(navigationTween){navigationTween.kill();navigationTween=null}navigationTarget=null;navigationFeedback(false)}
-function travelTo(index,onComplete,secondsPerStation=4.8){const trigger=journeyTween.scrollTrigger;if(!trigger)return null;const y=trigger.start+clamp(index,0,scenes.length-1)/(scenes.length-1)*(trigger.end-trigger.start),travel={y:trigger.scroll()},distance=Math.abs(y-travel.y),stationSpan=(trigger.end-trigger.start)/(scenes.length-1);if(reduce||distance<1){scrollTo({top:y,behavior:'instant'});ScrollTrigger.update();return null}return gsap.to(travel,{y,duration:secondsPerStation*Math.min(2,Math.max(.65,distance/Math.max(1,stationSpan))),ease:'power1.inOut',onUpdate:()=>scrollTo({top:travel.y,behavior:'instant'}),onComplete})}
-function go(index){if(navigationTween&&navigationTarget===index)return;stopAuto();stopNavigation();navigationTarget=index;navigationFeedback(true);navigationTween=travelTo(index,()=>{navigationTween=null;navigationTarget=null;navigationFeedback(false);scheduleAuto()},2.2);if(!navigationTween){navigationTarget=null;navigationFeedback(false)}}
+addEventListener('pageshow',()=>{requestAnimationFrame(()=>requestAnimationFrame(syncRestoredScroll));setTimeout(syncRestoredScroll,120);scheduleAuto()});addEventListener('pagehide',stopAuto);
+function go(index){const trigger=journeyTween.scrollTrigger;const start=trigger?.start||0,end=trigger?.end||Math.max(0,spacer.getBoundingClientRect().height-innerHeight);scrollTo({top:start+clamp(index,0,scenes.length-1)/(scenes.length-1)*(end-start),behavior:reduce?'instant':'smooth'})}
 steps.forEach(button=>button.addEventListener('click',()=>go(Number(button.dataset.voyageGo))));
 document.querySelectorAll('.topbar a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{const hash=link.getAttribute('href');if(!['#top','#stories','#materials'].includes(hash))return;e.preventDefault();go(hash==='#top'?0:hash==='#stories'?2:6)}));
 stage.querySelector('a[href="#voyage-1"]')?.addEventListener('click',e=>{e.preventDefault();go(1)});
@@ -261,13 +254,15 @@ function autoStep(){
  if(current>=scenes.length-1)autoDirection=-1;
  if(current<=0)autoDirection=1;
  const next=clamp(current+autoDirection,0,scenes.length-1);
+ const target=trigger.start+next/(scenes.length-1)*(trigger.end-trigger.start);
  if(autoTween)autoTween.kill();
- autoTween=travelTo(next,()=>{autoTween=null});
+ const travel={y:trigger.scroll()};
+ autoTween=gsap.to(travel,{y:target,duration:4.8,ease:'power1.inOut',onUpdate:()=>scrollTo(0,travel.y),onComplete:()=>{autoTween=null}});
 }
 function scheduleAuto(){stopAuto();if(!autoEnabled||reduce||readingHover)return;idleTimer=setTimeout(()=>{autoStep();autoTimer=setInterval(autoStep,10500)},9000)}
-function userActivity(e){if(e.type==='wheel'||e.type==='touchmove'||(e.type==='keydown'&&['Escape','ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(e.key)))stopNavigation();scheduleAuto()}
-['wheel','touchstart','touchmove','pointerdown','keydown'].forEach(type=>document.addEventListener(type,userActivity,{passive:true}));
-document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAuto();stopNavigation()}else scheduleAuto()});
+function userActivity(){scheduleAuto()}
+['wheel','touchstart','pointerdown','keydown'].forEach(type=>document.addEventListener(type,userActivity,{passive:true}));
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAuto();else scheduleAuto()});
 autoButton?.addEventListener('click',()=>{autoEnabled=!autoEnabled;autoButton.setAttribute('aria-pressed',String(autoEnabled));autoButton.title=autoEnabled?'关闭闲置自动巡游':'开启闲置自动巡游';autoButton.innerHTML='<span aria-hidden="true">'+(autoEnabled?'◉':'○')+'</span> '+(autoEnabled?'自动巡游':'巡游已暂停');scheduleAuto()});
 stage.querySelectorAll('.voyage-content').forEach(content=>{
  content.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){readingHover=true;stopAuto()}});
@@ -281,5 +276,4 @@ scenes.slice(2,6).forEach((scene,i)=>scene.querySelectorAll('a[href]').forEach(l
 const rankData={official:['15','按官方小项计，西班牙赢得 5 枚金牌，金牌榜位列第 15。团队项目每个小项仍只计一枚。'],rows:['05','按运动员获奖行计，西班牙产生 40 条金牌获奖记录，排名升至第 5。多人项目会放大行数。']};
 stage.querySelectorAll('[data-voyage-rank]').forEach(button=>button.addEventListener('click',()=>{const key=button.dataset.voyageRank;stage.querySelectorAll('[data-voyage-rank]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));stage.querySelector('#voyage-rank-number').textContent=rankData[key][0];stage.querySelector('#voyage-rank-explain').textContent=rankData[key][1]}));
 document.addEventListener('keydown',e=>{if(!document.body.classList.contains('voyage-live')||e.altKey||e.ctrlKey||e.metaKey||e.target.closest('input,textarea,select,button,a,[contenteditable]'))return;if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();go(Math.min(6,last+1))}else if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();go(Math.max(0,last-1))}});
-})();</script><script src="交付文件/共享组件/olympic-guide.js" defer></script>
-</body></html>
+})();</script></body></html>
