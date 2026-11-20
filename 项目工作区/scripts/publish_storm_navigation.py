@@ -23,6 +23,6 @@ for name in ['integrated-nav.css?v=9']:
 if not s.find('script',src='../../共享组件/integrated-nav.js?v=5'):s.body.append(s.new_tag('script',src='../../共享组件/integrated-nav.js?v=5'))
 st=s.select_one('#storm-nav-spacing')
 if not st:st=s.new_tag('style',id='storm-nav-spacing');s.head.append(st)
-st.string="html body>.wrap{padding-top:70px!important}html body #xz-nav{background:transparent!important}html body #xz-menu a{color:#edf3f2!important}html body #xz-menu{background:#182128!important}"
+st.string="html body{padding-top:0!important;margin-top:0!important}html body>.wrap{padding-top:0!important;margin-top:0!important}html body .wrap>.hero{margin-top:0!important;min-height:100svh!important;padding-top:130px!important}html body #xz-nav{background:transparent!important}html body #xz-menu a{color:#edf3f2!important}html body #xz-menu{background:#182128!important}"
 s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['xz-dark']))
 p.write_text(str(s),encoding='utf8')
