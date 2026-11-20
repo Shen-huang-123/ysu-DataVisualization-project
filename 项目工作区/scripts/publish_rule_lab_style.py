@@ -6,6 +6,17 @@ s=BeautifulSoup(p.read_text(encoding='utf8'),'html.parser')
 st=s.select_one('#rule-lab-refined')
 if not st:st=s.new_tag('style',id='rule-lab-refined');s.head.append(st)
 st.string="""
+html body.ip-lab main .scroll table{table-layout:fixed!important}
+html body.ip-lab main .scroll table :is(thead,tbody,tr,th,td),html body.ip-lab main .scroll table tbody#board tr:nth-child(n),html body.ip-lab main .scroll table tbody#board tr:nth-child(n)>td:nth-child(n){background:transparent!important;background-color:transparent!important;background-image:none!important;box-shadow:none!important;border-radius:0!important}
+html body.ip-lab main .scroll table :is(th,td){padding:16px!important;line-height:1.8!important;font-size:14px!important;border-bottom:1px solid var(--line)!important;color:var(--ink)!important;font-weight:400!important;font-variant-numeric:tabular-nums}
+html body.ip-lab main .scroll table :is(th,td):nth-child(1){width:10%!important;text-align:left!important}
+html body.ip-lab main .scroll table :is(th,td):nth-child(2){width:30%!important;text-align:left!important}
+html body.ip-lab main .scroll table :is(th,td):nth-child(n+3){width:20%!important;text-align:right!important}
+html body.ip-lab main .scroll table thead th:nth-child(n){color:var(--muted)!important;font-size:13px!important;border-bottom:1px solid #a28c5e!important}
+html body.ip-lab main .scroll table tbody#board tr[style]>td:nth-child(2){text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:6px;text-decoration-thickness:2px}
+html body.ip-lab main .scroll table tbody#board tr[style]>td{border-bottom-color:var(--teal)!important}
+@media(max-width:650px){html body.ip-lab main .scroll table :is(th,td){padding:12px!important;font-size:13px!important}}
+
 html body.ip-lab main.wrap{padding-top:0!important;margin-top:0!important}
 html body.ip-lab main.wrap>section:first-child{padding-top:24px!important}
 html body.ip-lab .photo-editorial-credit{margin:0 6vw!important;padding:12px 0!important;min-height:0!important;line-height:1.6!important;display:block!important;max-width:none!important}
