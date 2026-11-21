@@ -61,7 +61,7 @@ html=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta nam
 (OUT/'index.html').write_text(html,encoding='utf-8')
 map_page=OUT/'index.html'
 map_text=map_page.read_text(encoding='utf-8')
-map_text=map_text.replace('<div class="filters"', '<p><a href="02_量化口径实验/index.html" style="display:inline-block;padding:13px 22px;border-radius:999px;background:#173b58;color:#fff;text-decoration:none">查看五个核心结论的量化口径实验 ↗</a></p><div class="filters"',1)
+map_text=map_text.replace('<div class="filters"', '<p><a href="02_量化口径实验/index.html" class="stability-experiment">查看五个核心结论的量化口径实验 ↗</a></p><div class="filters"',1)
 map_page.write_text(map_text,encoding='utf-8')
 import os
 portal=TASK/'统一中文入口'/'index.html'

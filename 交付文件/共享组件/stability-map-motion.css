@@ -41,3 +41,38 @@ body.stability-map-motion .oa-world::after {
   body.stability-map-motion .oa-world::before,
   body.stability-map-motion .oa-world::after { animation: none; }
 }
+
+/* The experiment link is the primary action; filters retain their pressed state. */
+body.stability-map-motion main .stability-experiment,
+body.stability-map-motion main .filters button[data-filter] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 1px solid color-mix(in srgb, currentColor 33%, transparent);
+  border-radius: 8px;
+  font-weight: 600;
+}
+body.stability-map-motion main .stability-experiment {
+  background: color-mix(in srgb, var(--sr-accent) 16%, transparent);
+  color: var(--sr-ink);
+  text-decoration: none;
+}
+body.stability-map-motion main .filters {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+body.stability-map-motion main .filters button[data-filter] {
+  background: transparent;
+  color: var(--sr-muted);
+}
+body.stability-map-motion main .stability-experiment:hover,
+body.stability-map-motion main .filters button[data-filter]:hover {
+  border-color: var(--sr-accent);
+  color: var(--sr-ink);
+}
+body.stability-map-motion main .filters button[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--sr-accent) 14%, transparent);
+  border-color: var(--sr-accent);
+  color: var(--sr-ink);
+}
