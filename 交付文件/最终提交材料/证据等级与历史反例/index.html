@@ -7,9 +7,31 @@
 </style><link href="../../共享组件/exploration-design.css?v=20261115-atmosphere" rel="stylesheet"/>
 <link href="../../共享组件/olympic-atmosphere.css?v=3" rel="stylesheet"/>
 <link href="../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../共享组件/supplement-reading.js?v=1"></script><link href="../../共享组件/chart-surface.css" id="chart-surface-theme" rel="stylesheet"/><link href="../../共享组件/integrated-nav.css?v=9" id="supp-task-nav-assets" rel="stylesheet"/><script defer="" src="../../共享组件/integrated-nav.js?v=5"></script><style>
-body.evidence-reading .wrap { max-width: 72rem; }
-body.evidence-reading .wrap .hero { padding-block: clamp(28px, 5vw, 72px) 24px; }
-body.evidence-reading .wrap .hero h1 { font-size: clamp(30px, 5vw, 64px); line-height: 1.18; }
+body.supplement-reading.evidence-reading > .wrap {
+  width: min(90%, 76rem) !important;
+  max-width: 76rem !important;
+  margin-inline: auto !important;
+  padding: 24px 0 0 !important;
+}
+body.evidence-reading .wrap > .top { display: flex !important; justify-content: space-between !important; padding: 0 0 12px; }
+.evidence-reading .wrap > .top a { display: inline-flex; align-items: center; min-height: 44px; }
+body.evidence-reading .wrap .hero { min-height: 0 !important; }
+.evidence-reading .evidence-overview { padding: clamp(16px, 3vw, 32px); }
+.evidence-overview h2 { margin: 0 0 18px; font-size: clamp(23px, 3vw, 34px); }
+.evidence-levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.evidence-level { min-width: 0; border-top: 2px solid var(--sr-accent); padding-top: 12px; }
+.evidence-level h3 { margin: 0; font-size: 1rem; }
+.evidence-level strong { display: block; font-size: clamp(28px, 4vw, 48px); font-variant-numeric: tabular-nums; line-height: 1.2; margin: 6px 0; }
+.evidence-level p { margin: 0; color: var(--sr-muted); line-height: 1.65; }
+.evidence-split { display: grid; grid-template-columns: 4fr 2fr 1fr; gap: 3px; margin: 12px 0 6px; }
+.evidence-split span { text-align: center; padding: 3px 0; background: color-mix(in srgb, var(--sr-accent) 24%, transparent); font-weight: 700; }
+.evidence-split span:nth-child(2) { background: color-mix(in srgb, var(--sr-muted) 20%, transparent); }
+.evidence-split span:last-child { background: transparent; border: 1px solid var(--sr-muted); }
+.evidence-reading .caption { padding-inline: clamp(16px, 3vw, 32px); border-top: 1px solid color-mix(in srgb, var(--sr-muted) 28%, transparent); }
+@media (max-width: 700px) { .evidence-levels { grid-template-columns: 1fr; } }
+
+body.evidence-reading .wrap .hero { padding-block: clamp(22px, 3vw, 42px) 20px; }
+body.evidence-reading .wrap .hero h1 { font-size: clamp(28px, 3.8vw, 52px); line-height: 1.18; }
 .evidence-reading .reading-jumps { display:flex; flex-wrap:wrap; gap: 8px 24px; margin-block: 24px 0; }
 .evidence-reading .reading-jumps a { display:inline-flex; align-items:center; min-height:44px; color:var(--sr-accent); }
 .evidence-reading :is(#evidence-figure,#cases-title) { scroll-margin-top: 104px; }
@@ -26,9 +48,15 @@ body.evidence-reading .wrap .case small { color:var(--sr-accent); }
 body.evidence-reading .wrap .case a { display:inline-flex; align-items:center; min-height:44px; }
 body.evidence-reading .wrap .conclusion { border-radius:0; background:color-mix(in srgb,var(--sr-accent) 9%,transparent); border-left:2px solid var(--sr-accent); margin-block:32px 54px; }
 </style></head><body class="supplement-reading evidence-reading"><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../作品总入口/index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../任务一_数据体检/index.html">01 数据体检</a><a href="../../任务二_百年全景/05_交互总览/index.html">02 百年全景</a><a href="../../任务三_专题深挖/统一中文入口/index.html">03 专题深挖</a><a href="../../任务四_开放创作/index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../任务一_数据体检/index.html">数据体检</a><a href="../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../任务三_专题深挖/统一中文入口/index.html">专题深挖</a><a href="../../任务四_开放创作/index.html">洛杉矶2028</a></aside>
-<div class="wrap"><nav class="top"><a href="../../作品总入口/index.html">← 返回实验室</a><span>百年圣火 · 证据等级与历史反例</span><a href="../报告/百年圣火_正式报告.pdf">统一报告 ↗</a></nav>
-<header class="hero"><div class="eyebrow">01 / 证据不是一个等级</div><h1>主结论以2024为锚，<br/>历史负责挑战它。</h1><p>同一套奖牌排序规则下，西班牙的巴黎金牌名次由小项口径第15变成运动员行口径第5。三届历史资料用于检查这种重排机制是否脆弱；它们没有被写成现行IOC逐项授牌。</p><nav class="reading-jumps" aria-label="本页导航"><a href="#evidence-figure">证据等级图 ↓</a><a href="#cases-title">七处历史差异 ↓</a></nav></header>
-<div class="figure" id="evidence-figure"><div aria-label="证据等级图，可横向滚动查看" class="zoom" role="region" tabindex="0"><img alt="证据等级图：2024年329项逐项结果为主证据；历史555项已与Olympedia独立二次对照，其中548项一致、7项有差异；两项已知事后变化代入历史排名后，2008无名次变化，2012两队各变一位，前十集合不变。" class="chart-surface" src="证据等级图.png"/></div><div class="caption">看清统计单位与证明范围，再解读名次。窄屏可左右滑动查看全图。<br/><a download="" href="证据等级图.svg">下载矢量图 ↓</a><a download="" href="证据等级与历史反例_复算结果.json">下载复算结果 ↓</a><a href="../../任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/双来源核验报告.md">阅读逐项核验报告 ↗</a></div></div>
+<div class="wrap"><nav class="top"><a href="../../作品总入口/index.html">← 返回实验室</a><a href="../报告/百年圣火_正式报告.pdf">统一报告 ↗</a></nav>
+<header class="hero"><div class="eyebrow">证据等级与历史反例</div><h1>巴黎 2024 支撑主结论，历史案例检验其稳健性</h1><p>同一套奖牌排序规则下，西班牙的巴黎金牌名次由小项口径第15变成运动员行口径第5。三届历史资料用于检查这种重排机制是否脆弱；它们没有被写成现行IOC逐项授牌。</p><nav class="reading-jumps" aria-label="本页导航"><a href="#evidence-figure">证据等级图 ↓</a><a href="#cases-title">七处历史差异 ↓</a></nav></header>
+<div class="figure" id="evidence-figure"><section class="evidence-overview" aria-labelledby="overview-title">
+<h2 id="overview-title">三层证据各回答什么？</h2>
+<div class="evidence-levels">
+<section class="evidence-level"><h3>巴黎 2024 · 主证据</h3><strong>329 项</strong><p>逐项结果与同届运动员记录用于比较两种统计口径。</p></section>
+<section class="evidence-level"><h3>2008、2012、2016 · 历史对照</h3><strong>555 项</strong><p>旧存档与 Olympedia 二次对照，其中 548 项一致、7 项有差异。</p></section>
+<section class="evidence-level"><h3>差异追溯 · 逐项裁定</h3><div class="evidence-split" aria-hidden="true"><span>4</span><span>2</span><span>1</span></div><p>4 项字段缺失、2 项事后变化、1 项局部递补已核。</p></section>
+</div></section><div class="caption"><a download="" href="证据等级图.png">下载原图 PNG ↓</a><a download="" href="证据等级图.svg">下载矢量图 ↓</a><a download="" href="证据等级与历史反例_复算结果.json">下载复算结果 ↓</a><a href="../../任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/双来源核验报告.md">阅读逐项核验报告 ↗</a></div></div>
 <section aria-labelledby="cases-title" class="section"><div class="eyebrow">02 / 七处差异逐项裁定</div><h2 id="cases-title">冲突出现时，先问发生了什么。</h2><p>下面七项是旧抓取存档与独立公开表的差异。筛选后可见每类的处理决定；“已核对赛时结果”和“现行IOC授牌”是不同判断。</p><div aria-label="筛选差异类型" class="filters" role="group"><button aria-pressed="true" data-filter="all" type="button">全部 7 项</button><button aria-pressed="false" data-filter="missing" type="button">字段缺失 4</button><button aria-pressed="false" data-filter="changed" type="button">事后变化 2</button><button aria-pressed="false" data-filter="open" type="button">局部递补 1</button></div>
 <div class="cases">
 <article class="case" data-kind="missing"><small>字段缺失 · 2008</small><h3>皮划艇男子 K1 1000 米</h3><p>旧存档缺银牌；赛时成绩册记载挪威 Larsen 第2名。</p><a href="../../任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/双来源核验报告.md">查看页码与来源 ↗</a></article>
