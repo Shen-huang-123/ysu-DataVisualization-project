@@ -475,3 +475,5 @@
 2026-11-21后续补证：实际发现并修正2012女子举重63kg/75kg在2023抓取存档与Olympedia中的共同交叉配对。historical_ioc_event_audit.py现对性别/公斤级别/超重量级作硬约束；olympedia_secondary_audit.py对级别与性别词集合硬约束，禁止不合法配对落入输出。检查45条旧存档举重配对及555子集中的41条Olympedia举重配对。四组隔离复算（S1、S3、同口径岭回归、原RF/GB时序模型）全部数值结论在1e-8内不变；S3三个明细CSV修正两项代表团集合/链接，输入哈希同步。主榜212队数值、固定113项下降7.37与排除50项跨零均保留。
 
 新增逐段核读6篇官方机构资料，2份直接网页原件归档并记录SHA256，IWF4份403只保留阅读记录，未假称原件。Girard的63kg伦敦金牌获加拿大奥委会直接声明支持；Valentín的伦敦金牌补颁有西班牙协会/IWF报道，但仪式日相差一天；IWF2019的北京/里约颜色与其2025回顾相反，故按事实粒度限定采信。IWF中华台北授牌报道系奥委会转述，其总奖牌计数句不采用。完整现行IOC三色认证新增仍为0，35项及俄罗斯暂缓颁牌/CAS原件/完整预测集成历史验证未决边界保留。补证入口：[后续补证与配对更正](交付文件/任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/后续补证_20261121/index.html)。原件资料文件/外部核验/后续补证_20261121；生成器fetch_followup_evidence.py（拒绝覆盖已有归档）、publish_followup_evidence.py；复现先更正匹配再四组隔离复算，再publish_followup_evidence、publish_ioc_evidence_ledger、validate_evidence_closure、publish_evidence_closure和render_evidence_closure_pdf。补充HTML/MD/PDF、35项逐项说明和来源台账同步。qa_weightlifting_evidence.py新增4项回归，与既有5项闭环和7项导入测试通过；8页面1440/390浏览器检查无脚本异常/页面溢出/说明重叠，2页PDF已渲染目检。首页未改。
+
+2026-11-21：专题深挖总览的球场线框换为蓝青与暖金缓动光带，跟随深浅主题，系统减少动态效果时显示静态光晕。样式维护于 topic-portal-refined.css，入口生成器已同步。
