@@ -170,6 +170,9 @@ def main() -> None:
                 if not alias and sex(a.Event) != sex(b.Event_olympedia):
                     scores[i,j] = -1000
                     continue
+                if sport == 'Weightlifting' and set(an.split()) != set(bn.split()):
+                    scores[i,j] = -1000
+                    continue
                 name = token_set_ratio(an, bn)
                 am = [codes(a[f'{m}_archive']) for m in ('Gold','Silver','Bronze')]
                 bm = [codes(b[f'{m}_olympedia']) for m in ('Gold','Silver','Bronze')]
@@ -178,6 +181,7 @@ def main() -> None:
         ri, ci = linear_sum_assignment(-scores)
         for i,j in zip(ri,ci):
             a,b = left.iloc[i], right.iloc[j]
+            assert scores[i,j] > -1000, (year, sport, a.Event, b.Event_olympedia)
             archive_match = [codes(a[f'{m}_archive']) == codes(b[f'{m}_olympedia']) for m in ('Gold','Silver','Bronze')]
             proxy_match = [codes(a[f'{m}_proxy']) == codes(b[f'{m}_olympedia']) for m in ('Gold','Silver','Bronze')]
             name_score = token_set_ratio(normal(a.Event).replace(normal(sport), '').strip(), normal(b.Event_olympedia))

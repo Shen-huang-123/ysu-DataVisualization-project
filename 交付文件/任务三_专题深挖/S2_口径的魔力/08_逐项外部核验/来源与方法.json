@@ -6,5 +6,5 @@
   "archive_last_commit_utc": "2023-02-25T02:06:34Z",
   "sha256": "d31351e057198744b40754e63e9189a86487424c55766751f2a09f0ee3f8b3eb",
   "scope": "Olympics.com 2023 third-party scrape, not 2026 live official results",
-  "matching": "sport-specific one-to-one assignment by medal-country sets, name similarity and gender; nonmatches not forced to verified"
+  "matching": "sport-specific one-to-one assignment; weightlifting sex and kg/category are hard constraints, medal sets and name similarity only rank eligible pairs; nonmatches not forced to verified"
 }

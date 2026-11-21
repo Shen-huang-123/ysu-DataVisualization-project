@@ -11,6 +11,7 @@ def main():
     info=json.loads((BASE/'闭环核验摘要.json').read_text(encoding='utf-8'))
     risk=pd.read_csv(BASE/'35项风险重排与影响.csv');matrix=pd.read_csv(BASE/'最终预测验证矩阵.csv');scores=pd.read_csv(BASE/'实际模型基线对比.csv')
     paragraphs=[
+      '2026-11-21后续核查：发现2012女子举重63kg/75kg在旧存档和Olympedia中共同交叉配对，现已加入性别与级别硬约束并更正。四组隔离复算的数值结论在1e-8容差内不变，冠军转移附表项目身份已纠正。新增核读6篇官方机构资料、归档2篇原件；4篇直接访问受限，仅保留阅读记录。颁牌日期及新闻局部颜色冲突保留说明，新增完整IOC小项三色认证仍为0。',
       '本轮完成35项逐条分类、对关键结论的影响评估、实际发布模型的复算核验，以及核心图旁来源说明。未完成的官方授牌状态和完整集成联合历史验证继续明确保留，不把访问成功或公式重现称作全部预测能力验证。',
       f"35项中有{info['gold_changes']}项原代理金牌集合与二次来源不同，{info['baseline_sensitive_events']}项在单项退回原代理时会改变2028中性主榜。重新分为10项金牌变动优先、8项其他预测或冠军转移关联、17项其余后续核查。这是待核优先级，不是35项真伪裁决。",
       f"单项退回原代理对1120固定总池、同一212队主榜的最大点值变化为{info['maximum_one_event_baseline_change']:.3f}单位。此为一次只变一项的敏感性，不是误差上界，不能相加，也不证明对东道主和冠军结论同样影响很小。冠军与主办关联须读各自替换/排除检验。",
@@ -25,7 +26,7 @@ def main():
     body='# 关键结论证据闭环核验（2026-11-20）\n\n'+'\n\n'.join(paragraphs)+'\n\n## 最终预测验证矩阵\n\n'+matrix.to_markdown(index=False)+'\n\n## 实际模型与基线\n\n'+scores[['Year','模型','MAE','RMSE']].to_markdown(index=False)+'\n'
     (BASE/'关键结论核验说明.md').write_text(body,encoding='utf-8')
     (FINAL/'关键结论证据与预测验证补充说明.md').write_text(body,encoding='utf-8')
-    link_files=['35项风险重排与影响.csv','最终预测验证矩阵.csv','实际模型基线对比.csv','闭环核验摘要.json','关键结论核验说明.md']
+    link_files=['35项风险重排与影响.csv','最终预测验证矩阵.csv','实际模型基线对比.csv','闭环核验摘要.json','关键结论核验说明.md','../后续补证_20261121/index.html']
     links=''.join(f'<li><a href="{escape(f)}">{escape(f)}</a></li>' for f in link_files)
     style='body{max-width:1120px;margin:40px auto;padding:0 24px;background:#101e25;color:#e8eeee;font:16px/1.85 system-ui}a{color:#a6d8d2}h1{font-size:32px}p{margin:1.3em 0}table{border-collapse:collapse;width:100%;font-size:14px}td,th{text-align:left;padding:10px;border-bottom:1px solid #65777b;vertical-align:top}.scroll{overflow:auto}@media print{@page{size:A4;margin:16mm}body{max-width:none;margin:0;padding:0;background:white;color:#17282e;font-size:10pt}a{color:#17282e}h1{font-size:20pt}h2{break-after:avoid}.validation-matrix{break-before:page}.download-section{display:none}tr{break-inside:avoid}.scroll{overflow:visible}table{font-size:8.5pt}td,th{padding:5px}p{orphans:3;widows:3}}'
     page='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>关键结论证据闭环核验</title><style>'+style+'</style><h1>关键结论证据闭环核验</h1>'+''.join('<p>'+escape(t)+'</p>' for t in paragraphs)+'<h2 class="validation-matrix">最终预测验证矩阵</h2><div class="scroll">'+matrix.to_html(index=False,border=0)+'</div><h2>实际模型与基线</h2><div class="scroll">'+scores[['Year','模型','MAE','RMSE']].round(4).to_html(index=False,border=0)+'</div><section class="download-section"><h2>下载与逐项复核</h2><ul>'+links+'</ul></section></html>'

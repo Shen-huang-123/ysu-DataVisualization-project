@@ -24,7 +24,7 @@
 2008,Weightlifting,Weightlifting Men's Heavyweight,105kg-heavyweight-men,BLR,BLR,RUS,RUS,RUS,POL,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/105kg-heavyweight-men
 2008,Weightlifting,Weightlifting Men's Light-Heavyweight,85kg-men,CHN,CHN,BLR,ARM,ARM,CUB,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/85kg-men
 2008,Weightlifting,Weightlifting Men's Lightweight,69kg-men,CHN,CHN,FRA,FRA,ARM,CUB,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/69kg-men
-2008,Weightlifting,Weightlifting Men's Middle-Heavyweight,94kg-men,KAZ,POL,POL,GEO,RUS,CUB,优先复核配对,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/94kg-men
+2008,Weightlifting,Weightlifting Men's Middle-Heavyweight,94kg-men,KAZ,POL,POL,GEO,RUS,CUB,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/94kg-men
 2008,Weightlifting,Weightlifting Women's Featherweight,53kg-women,THA,THA,KOR,KOR,BLR,INA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/53kg-women
 2008,Weightlifting,Weightlifting Women's Flyweight,48kg-women,CHN,TPE,TUR,KOR,TPE,THA,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/48kg-women
 2008,Weightlifting,Weightlifting Women's Heavyweight,75kg-women,CHN,KAZ,KAZ,ESP,RUS,MEX,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/beijing-2008/results/weightlifting/75kg-women
@@ -57,13 +57,13 @@
 2012,Weightlifting,Weightlifting Men's Heavyweight,105kg-heavyweight-men,UKR,IRI,IRI,POL,POL,UZB,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/105kg-heavyweight-men
 2012,Weightlifting,Weightlifting Men's Light-Heavyweight,85kg-men,POL,POL,RUS,IRI,IRI,EGY,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/85kg-men
 2012,Weightlifting,Weightlifting Men's Lightweight,69kg-men,CHN,CHN,INA,INA,ROU,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/69kg-men
-2012,Weightlifting,Weightlifting Men's Middle-Heavyweight,94kg-men,KAZ,IRI,RUS,KOR,MDA,POL,优先复核配对,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/94kg-men
+2012,Weightlifting,Weightlifting Men's Middle-Heavyweight,94kg-men,KAZ,IRI,RUS,KOR,MDA,POL,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/94kg-men
 2012,Weightlifting,Weightlifting Men's Super-Heavyweight,105kg-superheavyweight-men,IRI,IRI,IRI,IRI,RUS,,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/105kg-superheavyweight-men
 2012,Weightlifting,Weightlifting Women's Featherweight,53kg-women,KAZ,TPE,TPE,INA,MDA,UKR,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/53kg-women
-2012,Weightlifting,Weightlifting Women's Heavyweight,63kg-women,KAZ,CAN,RUS,BUL,BLR,MEX,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/63kg-women
+2012,Weightlifting,Weightlifting Women's Heavyweight,75kg-women,KAZ,ESP,RUS,EGY,BLR,CMR,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/75kg-women
 2012,Weightlifting,Weightlifting Women's Light-Heavyweight,69kg-women,PRK,PRK,ROU,,BLR,COL|KAZ,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/69kg-women
 2012,Weightlifting,Weightlifting Women's Lightweight,58kg-women,CHN,CHN,THA,THA,UKR,THA,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/58kg-women
-2012,Weightlifting,Weightlifting Women's Middleweight,75kg-women,KAZ,ESP,RUS,EGY,CAN,CMR,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/75kg-women
+2012,Weightlifting,Weightlifting Women's Middleweight,63kg-women,KAZ,CAN,RUS,BUL,CAN,MEX,金牌冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/63kg-women
 2012,Weightlifting,Weightlifting Women's Super-Heavyweight,-75kg-women,CHN,CHN,RUS,RUS,ARM,KOR,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/london-2012/results/weightlifting/-75kg-women
 2012,Wrestling,"Wrestling Men's Super-Heavyweight, Freestyle",freestyle-120kg-men,UZB,IRI|RUS,GEO,,IRI|RUS,KAZ|USA,存档奖牌字段缺失,https://www.olympics.com/en/olympic-games/london-2012/results/wrestling/freestyle-120kg-men
 2016,Boxing,Boxing Men's Flyweight,52kg-men,UZB,UZB,,VEN,CHN|VEN,CHN,银铜冲突_查重分配,https://www.olympics.com/en/olympic-games/rio-2016/results/boxing/52kg-men

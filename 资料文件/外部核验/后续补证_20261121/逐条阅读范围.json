@@ -1,0 +1,74 @@
+[
+  {
+    "source_key": "canada_63kg",
+    "source_url": "https://olympic.ca/press/canadian-weightlifter-christine-girard-to-be-awarded-london-2012-olympic-gold/",
+    "publication_date": "2018-04-19",
+    "reviewed_on": "2026-11-21",
+    "review_method": "浏览服务逐段阅读；中文释义，非网页原件",
+    "supported_fact": "加拿大奥委会声明确认Girard获伦敦女子63kg金牌；颁发完成另见2018-12-03报道。",
+    "boundary": "奥委会直接声明；只覆盖该运动员该奖牌，不认证全项三色。",
+    "raw_file": "资料文件\\外部核验\\后续补证_20261121\\原始页面\\canada_63kg.html",
+    "raw_sha256": "5b0b554fb8ff28f3326938496d045fc5ad901688b858ae4cf18745f381b7d1ab",
+    "capture_state": "直接原件已归档"
+  },
+  {
+    "source_key": "iwf_valentin_2019",
+    "source_url": "https://iwf.sport/2019/03/05/lidia-valentin-recieved-olympic-gold-medal/",
+    "publication_date": "2019-03-05",
+    "reviewed_on": "2026-11-21",
+    "review_method": "浏览服务逐段阅读；中文释义，非网页原件",
+    "supported_fact": "伦敦金牌已向Valentín补颁。",
+    "boundary": "仪式日写3月1日，与西班牙协会2月28日相差一天；文中北京铜/里约银与IWF2025回顾相反，不采这两处颜色。",
+    "raw_file": "",
+    "raw_sha256": "",
+    "capture_state": "直接访问失败；仅保留阅读记录，未冒充原件"
+  },
+  {
+    "source_key": "spain_valentin",
+    "source_url": "https://www.fedehalter.org/lydia-valentin-ha-recibido-por-fin-su-medalla-de-oro-de-londres-2012/",
+    "publication_date": "正文2019-02-28；网站元数据2020-09-11",
+    "reviewed_on": "2026-11-21",
+    "review_method": "浏览服务逐段阅读；中文释义，非网页原件",
+    "supported_fact": "西班牙协会报道IOC委员向Valentín颁发伦敦金牌。",
+    "boundary": "正文仪式日与IWF报道有一天冲突；只确认已颁金牌，不据此确定精确日或全项颜色。",
+    "raw_file": "资料文件\\外部核验\\后续补证_20261121\\原始页面\\spain_valentin.html",
+    "raw_sha256": "81d705dde676801254fb64de5340bb9c3654b165fb893b2407f34db36b88f414",
+    "capture_state": "直接原件已归档"
+  },
+  {
+    "source_key": "iwf_valentin_2025",
+    "source_url": "https://iwf.sport/2025/04/07/iwf120y-56-2016-the-first-third-olympic-medal-for-lydia-valentin/",
+    "publication_date": "2025-04-07",
+    "reviewed_on": "2026-11-21",
+    "review_method": "浏览服务逐段阅读；中文释义，非网页原件",
+    "supported_fact": "回顾列里约女子75kg铜牌、北京递补银牌及伦敦递补金牌。",
+    "boundary": "历史回顾支持运动员奖牌序列；不是完整现行项目表。伦敦75kg项目身份还与2012结果书及原代理选手身份交叉。",
+    "raw_file": "",
+    "raw_sha256": "",
+    "capture_state": "直接访问失败；仅保留阅读记录，未冒充原件"
+  },
+  {
+    "source_key": "iwf_three_medals",
+    "source_url": "https://iwf.sport/2018/11/08/three-lifters-awarded-olympic-medals/",
+    "publication_date": "2018-11-08",
+    "reviewed_on": "2026-11-21",
+    "review_method": "浏览服务逐段阅读；中文释义，非网页原件",
+    "supported_fact": "报道Gulnoi伦敦女子58kg铜、Mohammadpour伦敦男子94kg金、Ulanov里约男子85kg铜已经补颁。",
+    "boundary": "支持三条授牌动作；不扩展到各项全部三色。",
+    "raw_file": "",
+    "raw_sha256": "",
+    "capture_state": "直接访问失败；仅保留阅读记录，未冒充原件"
+  },
+  {
+    "source_key": "iwf_taipei_medals",
+    "source_url": "https://iwf.sport/2018/01/29/olympic-medals-awarded-to-wei-ling-chen-and-ying-chi-lu/",
+    "publication_date": "2018-01-29",
+    "reviewed_on": "2026-11-21",
+    "review_method": "浏览服务逐段阅读；中文释义，非网页原件",
+    "supported_fact": "图注和正文支持Chen女子48kg北京金、Lu女子63kg北京银，1月25日授牌。",
+    "boundary": "文章注明来源为中华台北奥委会，属于官方机构转述；总奖牌计数句存在明显范围疑点，不采用、不计独立来源数。",
+    "raw_file": "",
+    "raw_sha256": "",
+    "capture_state": "直接访问失败；仅保留阅读记录，未冒充原件"
+  }
+]

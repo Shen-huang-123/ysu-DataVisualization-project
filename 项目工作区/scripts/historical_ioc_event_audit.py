@@ -69,6 +69,16 @@ for year,slug in game.items():
         scores=np.zeros((len(pp),len(ss)))
         for i,a in pp.iterrows():
             for j,b in ss.iterrows():
+                if sp=='Weightlifting':
+                    label=a.Event.split("'s ")[-1]
+                    male="Men's" in a.Event
+                    categories={'Bantamweight':56,'Featherweight':62,'Lightweight':69,'Middleweight':77,'Light-Heavyweight':85,'Middle-Heavyweight':94,'Heavyweight':105,'Super-Heavyweight':105} if male else {'Flyweight':48,'Featherweight':53,'Lightweight':58,'Middleweight':63,'Light-Heavyweight':69,'Heavyweight':75,'Super-Heavyweight':75}
+                    expected=categories[label]
+                    digits=re.findall(r'\d+',b.event)
+                    super_class=(b.event.startswith('-') and expected in (75,105)) or any(t in b.event.lower() for t in ['plus','over','+','more','superheavyweight'])
+                    if not digits or int(digits[0])!=expected or super_class!=(label=='Super-Heavyweight') or sex(a.Event)!=sex(b.event):
+                        scores[i,j]=-1000
+                        continue
                 same=[codes(a[m])==codes(b[m]) for m in ['Gold','Silver','Bronze']]
                 overlap=sum(len(codes(a[m])&codes(b[m])) for m in ['Gold','Silver','Bronze'])
                 medal=28*same[0]+13*same[1]+9*same[2]+2*overlap
@@ -76,10 +86,11 @@ for year,slug in game.items():
                 right=norm(b.event)
                 name=90*fuzz.token_set_ratio(left,right)/100
                 if sex(a.Event)!=sex(b.event):name-=100
-                scores[i,j]=medal+name
+                scores[i,j]=medal+name+(80 if sp=='Weightlifting' else 0)
         ri,ci=linear_sum_assignment(-scores)
         assigned=set(ri)
         for i,j in zip(ri,ci):
+            assert scores[i,j]>-1000, ('No admissible event match',year,sp,pp.iloc[i].Event)
             a=pp.iloc[i];b=ss.iloc[j]
             checks={m:codes(a[m])==codes(b[m]) for m in ['Gold','Silver','Bronze']}
             status='三色一致' if all(checks.values()) else ('仅金牌一致' if checks['Gold'] else '金牌不一致')
@@ -110,13 +121,13 @@ for year,g in result.groupby('Year'):
                     'gold_match':int(g.gold_match.sum()),'gold_mismatch':int((~g.gold_match).sum()),
                     'manual_review':int(g.status.eq('匹配待人工复核').sum())})
 summ=pd.DataFrame(summary);summ.to_csv(OUT/'逐届核验覆盖.csv',index=False,encoding='utf-8-sig')
-meta={'source_url':URL,'source_project':'https://github.com/numbats/olympics','source_method':'https://numbats.github.io/olympics/reference/scrape.html','commit':'ab2d03770c8b435fa7e452a5a1ddfc933433299c','archive_last_commit_utc':'2023-02-25T02:06:34Z','sha256':sha,'scope':'Olympics.com 2023 third-party scrape, not 2026 live official results','matching':'sport-specific one-to-one assignment by medal-country sets, name similarity and gender; nonmatches not forced to verified'}
+meta={'source_url':URL,'source_project':'https://github.com/numbats/olympics','source_method':'https://numbats.github.io/olympics/reference/scrape.html','commit':'ab2d03770c8b435fa7e452a5a1ddfc933433299c','archive_last_commit_utc':'2023-02-25T02:06:34Z','sha256':sha,'scope':'Olympics.com 2023 third-party scrape, not 2026 live official results','matching':'sport-specific one-to-one assignment; weightlifting sex and kg/category are hard constraints, medal sets and name similarity only rank eligible pairs; nonmatches not forced to verified'}
 (OUT/'来源与方法.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding='utf-8')
 md='# 2008、2012、2016逐小项外部核验\n\n'
 md+='本次把原主数据的逐小项代理，与 `numbats/olympics` 研究项目从 Olympics.com 抓取的结果存档逐项对照。存档文件的最后更新为2023-02-25；它是**Olympics.com 来源的第三方历史快照**，不是IOC在2026年导出的当前官方表。奖牌后续重分配可能使当前官网与快照不同。\n\n'
 md+='| 届次 | 代理小项 | 存档覆盖 | 三色一致 | 金牌一致 | 金牌不一致 | 未覆盖 |\n|---|---:|---:|---:|---:|---:|---:|\n'
 for r in summ.itertuples():md+=f'| {r.Year} | {r.proxy_events} | {r.archived_events} | {r.three_medal_match} | {r.gold_match} | {r.gold_mismatch} | {r.unmatched} |\n'
-md+='\n匹配先按运动限定，再用奖牌代表团集合、项目名称和性别做一对一分配。每项的原值、存档值、比分和官方项目URL见 `逐小项三色对照.csv`。不一致和低分配对不能自动替换：可能来自主数据错误、存档漏项、赛事名称映射或IOC后续重分配。`未匹配小项.csv` 明确保留缺口。\n\n'
+md+='\n匹配先按运动限定；举重性别与公斤级别为硬约束，其余用奖牌代表团集合、项目名称和性别做一对一分配。每项的原值、存档值、比分和官方项目URL见 `逐小项三色对照.csv`。不一致和低分配对不能自动替换：可能来自主数据错误、存档漏项、赛事名称映射或IOC后续重分配。`未匹配小项.csv` 明确保留缺口。\n\n'
 md+='因此本次完成**独立逐项对照**，并没有完成对2026年现行IOC页面全部910项的实时核验。作品不能再只写“总量核对”，但也不应把存档直接改名为当前官方真值。复算：`python 项目工作区/scripts/historical_ioc_event_audit.py`，需 `pyreadr` 和 `rapidfuzz`。\n'
 md+='\n**差异复核优先级**：`待复核差异清单.csv` 把低分配对、存档奖牌字段缺失、金牌冲突和银铜冲突分开。比如2008男子100米的存档金牌字段为空，不能由此推断原数据的牙买加金牌错误。奖牌重分配需用IOC决议或现行赛事页逐案确认，不能仅凭第三方快照作自动修正。原有文件名“历史小项代理表”沿用旧流程，来源等级实际是**主数据去重代理**；本说明及结果列覆盖其命名含义。\n'
 (OUT/'核验说明.md').write_text(md,encoding='utf-8')

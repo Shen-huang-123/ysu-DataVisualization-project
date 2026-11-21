@@ -74,6 +74,15 @@ def main():
         risk.loc[index,'关联卫冕判定变化行数']=int(related['原卫冕'].ne(related['替代卫冕']).sum())
         risk.loc[index,'东道主影响边界']='已在555项整体替换及排除检验中考察；未逐项因果归因'
         risk.loc[index,'新优先顺序']=1 if gold_changed else 2 if effect>1e-8 or len(related) else 3
+    followup={
+        (2012,"Weightlifting Women's Middleweight"):'加拿大奥委会2018-04-19直接声明确认Girard的63kg金牌；与75kg交叉配对已修正。原件已归档，非全项三色认证。',
+        (2012,"Weightlifting Women's Heavyweight"):'西班牙协会与IWF报道均确认Valentín伦敦金牌已颁；与63kg交叉配对已修正。仪式日相差一天，不裁定精确日。',
+        (2012,"Weightlifting Women's Lightweight"):'IWF2018-11-08报道Gulnoi获58kg铜牌并已颁；网页下载403，保留逐段阅读记录，不充作原件或全项认证。',
+        (2012,"Weightlifting Men's Middle-Heavyweight"):'IWF2018-11-08报道Mohammadpour获94kg金牌并已颁；网页下载403，保留阅读记录，非全项认证。',
+        (2008,"Weightlifting Women's Flyweight"):'IWF转述奥委会授牌报道支持Chen48kg金牌；总奖牌计数句不采用；下载403，仅保留阅读记录。',
+        (2008,"Weightlifting Women's Middleweight"):'IWF转述奥委会授牌报道支持Lu63kg银牌；总奖牌计数句不采用；下载403，仅保留阅读记录。',
+    }
+    risk['20261121局部补证与边界']=[followup.get((int(r.Year),r.Event),'本轮未取得可闭合全项三色的新原件；保留既有逐项状态') for r in risk.itertuples()]
     risk=risk.sort_values(['新优先顺序','单项退回原代理_2028基准最大变化','Year','Event'],ascending=[True,False,True,True]);risk.to_csv(OUT/'35项风险重排与影响.csv',index=False,encoding='utf-8-sig')
     comparisons=[]
     for name in ['2028同口径重训情景榜.csv','原模型五方案评分.csv','2028未归一项目格预测.csv','原模型逐队误差.csv']:

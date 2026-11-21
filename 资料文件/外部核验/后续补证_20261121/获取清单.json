@@ -1,0 +1,60 @@
+[
+  {
+    "key": "canada_63kg",
+    "url": "https://olympic.ca/press/canadian-weightlifter-christine-girard-to-be-awarded-london-2012-olympic-gold/",
+    "attempted_utc": "2026-11-21T00:30:07.861641+00:00",
+    "status": 200,
+    "final_url": "https://olympic.ca/press/canadian-weightlifter-christine-girard-to-be-awarded-london-2012-olympic-gold/",
+    "bytes": 72107,
+    "raw_file": "资料文件\\外部核验\\后续补证_20261121\\原始页面\\canada_63kg.html",
+    "sha256": "5b0b554fb8ff28f3326938496d045fc5ad901688b858ae4cf18745f381b7d1ab",
+    "capture": "original response; requires scoped content review"
+  },
+  {
+    "key": "iwf_valentin_2019",
+    "url": "https://iwf.sport/2019/03/05/lidia-valentin-recieved-olympic-gold-medal/",
+    "attempted_utc": "2026-11-21T00:30:07.862068+00:00",
+    "status": 403,
+    "final_url": "https://iwf.sport/2019/03/05/lidia-valentin-recieved-olympic-gold-medal/",
+    "bytes": 5593,
+    "capture": "failed or challenge; not primary evidence archive"
+  },
+  {
+    "key": "spain_valentin",
+    "url": "https://www.fedehalter.org/lydia-valentin-ha-recibido-por-fin-su-medalla-de-oro-de-londres-2012/",
+    "attempted_utc": "2026-11-21T00:30:07.862281+00:00",
+    "status": 200,
+    "final_url": "https://www.fedehalter.org/lydia-valentin-ha-recibido-por-fin-su-medalla-de-oro-de-londres-2012/",
+    "bytes": 280889,
+    "raw_file": "资料文件\\外部核验\\后续补证_20261121\\原始页面\\spain_valentin.html",
+    "sha256": "81d705dde676801254fb64de5340bb9c3654b165fb893b2407f34db36b88f414",
+    "capture": "original response; requires scoped content review"
+  },
+  {
+    "key": "iwf_valentin_2025",
+    "url": "https://iwf.sport/2025/04/07/iwf120y-56-2016-the-first-third-olympic-medal-for-lydia-valentin/",
+    "attempted_utc": "2026-11-21T00:30:07.862593+00:00",
+    "status": 403,
+    "final_url": "https://iwf.sport/2025/04/07/iwf120y-56-2016-the-first-third-olympic-medal-for-lydia-valentin/",
+    "bytes": 5680,
+    "capture": "failed or challenge; not primary evidence archive"
+  },
+  {
+    "key": "iwf_three_medals",
+    "url": "https://iwf.sport/2018/11/08/three-lifters-awarded-olympic-medals/",
+    "attempted_utc": "2026-11-21T00:30:08.371628+00:00",
+    "status": 403,
+    "final_url": "https://iwf.sport/2018/11/08/three-lifters-awarded-olympic-medals/",
+    "bytes": 5575,
+    "capture": "failed or challenge; not primary evidence archive"
+  },
+  {
+    "key": "iwf_taipei_medals",
+    "url": "https://iwf.sport/2018/01/29/olympic-medals-awarded-to-wei-ling-chen-and-ying-chi-lu/",
+    "attempted_utc": "2026-11-21T00:30:08.387204+00:00",
+    "status": 403,
+    "final_url": "https://iwf.sport/2018/01/29/olympic-medals-awarded-to-wei-ling-chen-and-ying-chi-lu/",
+    "bytes": 5653,
+    "capture": "failed or challenge; not primary evidence archive"
+  }
+]

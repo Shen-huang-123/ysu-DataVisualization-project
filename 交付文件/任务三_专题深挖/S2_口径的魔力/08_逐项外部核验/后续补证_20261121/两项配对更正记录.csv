@@ -1,0 +1,3 @@
+﻿Year,Event,weight_kg,previous_secondary_event,corrected_secondary_event,corrected_gold,event_url,reason
+2012,Weightlifting Women's Heavyweight,75,"Middleweight, Women","Heavyweight, Women",ESP,https://www.olympedia.org/results/331090,原自动匹配对事后奖牌集合赋权过大，交叉配到另一体重级别；改为性别和体重级别硬约束
+2012,Weightlifting Women's Middleweight,63,"Heavyweight, Women","Middleweight, Women",CAN,https://www.olympedia.org/results/331045,原自动匹配对事后奖牌集合赋权过大，交叉配到另一体重级别；改为性别和体重级别硬约束
