@@ -533,3 +533,5 @@
 任务三奖牌口径实验室在代表团证据旁增加逐运动剔除对照。重建实验室后运行 publish_s2_removal_explorer.py，将既有复算结果嵌入离线页面。
 
 任务四公开核心模型名义80%区间的两次时序覆盖检验、逐队明细和完整公式历史类比边界。2028仍只发布新基准点估计。页面重建后运行 publish_forecast_interval_audit.py 同步预测和数据新闻入口。
+
+任务四新增东京339项存档的严格核心留出、棒球回归的完整配方类比及纳入东京残差的巴黎覆盖复核。先运行 tokyo_forecast_replay.py 再运行 publish_forecast_interval_audit.py。IOC三届逐项页抽查未取得现行完整证据，保留原等级与研究中心申请入口。

@@ -1,0 +1,7 @@
+{
+  "archive_sha256": "d31351e057198744b40754e63e9189a86487424c55766751f2a09f0ee3f8b3eb",
+  "strict_replay_protocol": "../15_原项目模型时序核验/输入哈希与模型协议.json",
+  "programme_source": "https://www.olympics.com/ioc/tokyo-2020-facts-and-figures",
+  "ranking_source": "https://static.wbsc.org/uploads/federations/278/cms/documents/8d9568c2-596e-53fe-f532-d1c35832aaaa.pdf",
+  "entry_source": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=849110&parentDocumentId=849101"
+}
