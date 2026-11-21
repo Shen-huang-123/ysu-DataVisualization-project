@@ -41,7 +41,7 @@ def summary_table(source):
 css='''<style>.project-audit{font-family:inherit;max-width:1100px;margin:3rem auto;padding:clamp(18px,3vw,36px);box-sizing:border-box;border-block:1px solid #87979566;line-height:1.85}.project-audit h2{font-size:clamp(22px,3vw,32px);line-height:1.4}.project-audit img{display:block;width:100%;height:auto;margin:24px 0}.project-audit table{width:100%;border-collapse:collapse;font-size:clamp(12px,1.2vw,16px);margin-block:20px}.project-audit th,.project-audit td{text-align:left;padding:10px 4px;border-bottom:1px solid #87979566}.project-audit caption{text-align:left}.project-audit summary{cursor:pointer;font-weight:600}.project-audit a{overflow-wrap:anywhere}.project-audit select{font:inherit;color:inherit;background:transparent;border:1px solid #87979599;padding:8px 12px;max-width:100%}.project-audit option{color:#172a30;background:#f7f3eb}</style>'''
 def audit_block(parent):
     rel=Path(os.path.relpath(OUT,parent)).as_posix()
-    return '<!-- PROJECT_MODEL_START -->'+css+f'<section id="project-model-audit" class="project-audit"><h2>{title}</h2><p>{intro}</p><img loading="lazy" src="{rel}/原项目模型同口径核验.png" alt="小项二次来源情景的历史基线、RF/GB和55/45混合逐折MAE">'+summary_table('小项二次来源')+f'<details><summary>看运动员行与原代理：换口径后是否同样成立？</summary>'+summary_table('运动员行原口径')+summary_table('小项原代理')+f'<p>{coverage}</p></details><details><summary>看前视风险、训练时间与证据边界</summary><p>{selection}</p><p>{temporal}</p><p>{boundary}</p></details><h3>据此调整正式阅读方式</h3><p>{policy}</p><p>{outlook}</p><p><a href="{rel}/原模型五方案评分.csv" download>50行完整评分</a> · <a href="{rel}/原模型逐队误差.csv" download>逐队误差</a> · <a href="{rel}/原项目模型核验说明.md">方法与限制</a> · <a href="{rel}/原项目模型复核_最新交付附页.pdf">PDF核验附页</a></p></section><!-- PROJECT_MODEL_END -->'
+    return '<!-- PROJECT_MODEL_START -->'+css+f'<section id="project-model-audit" class="project-audit"><h2>{title}</h2><p>{intro}</p><img loading="lazy" src="{rel}/原项目模型同口径核验.png" alt="小项二次来源情景的历史基线、RF/GB和55/45混合逐折MAE">'+summary_table('小项二次来源')+f'<details><summary>看运动员行与原代理：换口径后是否同样成立？</summary>'+summary_table('运动员行原口径')+summary_table('小项原代理')+f'<p>{coverage}</p></details><details><summary>看前视风险、训练时间与证据边界</summary><p>{selection}</p><p>{temporal}</p><p>{boundary}</p></details><h3>据此调整正式阅读方式</h3><p>{policy}</p><p>{outlook}</p><p><a href="{rel}/原模型五方案评分.csv" download>50行完整评分</a> · <a href="{rel}/原模型逐队误差.csv" download>逐队误差</a> · <a href="{rel}/原项目模型核验说明.html">方法与限制</a> · <a href="{rel}/原项目模型复核_最新交付附页.pdf">PDF核验附页</a></p></section><!-- PROJECT_MODEL_END -->'
 
 def reading_block(parent):
     rel=Path(os.path.relpath(OUT,parent)).as_posix()
@@ -62,6 +62,22 @@ for p in paths:
 
 md='# '+title+'\n\n'+intro+'\n\n## 具体的前视风险\n\n'+selection+'\n\n## 冻结协议与时间边界\n\n'+temporal+'\n\n'+boundary+'\n\n'+coverage+'\n\n## 主阅读决策\n\n'+policy+'\n\n'+outlook+'\n\n## 完整逐折评分\n\n'+s.to_markdown(index=False)+'\n\n## 每折数据覆盖\n\n'+a.drop(columns=['特征哈希','耗时秒']).to_markdown(index=False)+'\n\n## 复现\n\n`py 项目工作区/scripts/project_model_strict_replay.py`，再运行 `py 项目工作区/scripts/publish_project_model_audit.py`。原参数冻结，不使用本轮目标分数调参；可用训练届次过少，不宣称已充分识别超参数或最优混合权重。本报告是事后时序复算，非独立前瞻验证。所有原始输入与旧榜保留，另发2028重训核心对照榜；没有伪造2028实际成绩或校准区间。\n'
 (OUT/'原项目模型核验说明.md').write_text(md,encoding='utf-8')
+import markdown
+def render_method_page(source):
+    body = markdown.markdown(source, extensions=['tables','fenced_code'])
+    return ('<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<title>原项目模型核验说明</title><style>'
+            ':root{color-scheme:light dark}body{max-width:78rem;margin:auto;padding:clamp(16px,5vw,72px);font:16px/1.85 system-ui}'
+            'a{text-underline-offset:4px}nav{display:flex;gap:12px 24px;flex-wrap:wrap}'
+            'table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}'
+            'td,th{padding:8px 12px;border-bottom:1px solid #82979566}img{max-width:100%;height:auto}'
+            'pre{overflow:auto}code{overflow-wrap:anywhere}</style>'
+            '<main><nav><a href="index.html">← 返回原项目模型时序核验</a>'
+            '<a href="原项目模型核验说明.md" download>下载 Markdown 原文</a></nav>'
+            +body+'</main></html>')
+
+(OUT/'原项目模型核验说明.html').write_text(render_method_page(md),encoding='utf-8')
 append='\n\n<!-- PROJECT_MODEL_START -->\n## 2026-11-17：原RF/GB项目模型重跑与阅读决策\n\n'+intro+'\n\n'+selection+'\n\n'+policy+'\n\n'+outlook+'\n\n'+coverage+'\n\n详见任务四/05_满分升级/15_原项目模型时序核验；复算 project_model_strict_replay.py，发布 publish_project_model_audit.py。独立岭回归的失败不能外推为原RF/GB完全无效；原RF/GB的运动员行改善也不能外推成官方奖牌预测稳定改进。\n<!-- PROJECT_MODEL_END -->\n'
 for p in [T4/'02_2028洛杉矶预测/预测方法与验证方案.md',ROOT/'交付文件/证据边界核验进度.md',ROOT/'项目交接_请新AI先读.md']:
     text=p.read_text(encoding='utf-8');text=re.sub(r'\n*<!-- PROJECT_MODEL_START -->.*?<!-- PROJECT_MODEL_END -->\n*','',text,flags=re.S);p.write_text(text+append,encoding='utf-8')
