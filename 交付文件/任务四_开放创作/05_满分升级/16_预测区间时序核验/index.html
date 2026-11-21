@@ -1,0 +1,220 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>预测验证与区间覆盖</title>
+<style>:root{color-scheme:light dark}body{margin:0;font:16px/1.7 system-ui}main{max-width:76rem;margin:auto;padding:clamp(16px,5vw,64px)}h1{font-size:clamp(2rem,4vw,3.8rem);line-height:1.2}.scroll{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:.65rem;text-align:left;border-bottom:1px solid #829d9c88;font-variant-numeric:tabular-nums}thead{background:color-mix(in srgb,currentColor 9%,transparent)}a{text-underline-offset:4px}</style></head><body><main>
+<nav><a href="../../02_2028洛杉矶预测/index.html">返回预测页</a> · <a href="预测区间核验说明.md" download>下载核验说明</a></nav><h1>预测验证与区间覆盖</h1>
+<p>2024 留出评估中，中性基准的统一半宽区间覆盖 75.9% 的评分代表团。预测至少 5 槽组的覆盖从 32.6% 提升到 72.1%，平均宽度从 3.72 增至 13.64 槽。分组改善了高预测量覆盖，仍未达到 80%。</p>
+<h2>区间用过去的误差校准，再由未来届次评分</h2>
+<p>使用小项二次来源下的严格滚动留出逐队结果，分别检验历史加权基线和 55/45 核心情景。2016 只用 2012 误差，2024 只用 2012、2016 误差。区间半宽为校准集绝对残差从小到大第 ⌈0.8(n+1)⌉ 个值，下限截在零。目标届实际结果只用来测覆盖及误差。评估含评分池内全部代表团，另按赛前预测至少 5 槽切片，以免全体读数掩盖高预测量代表团表现。</p>
+<div class="scroll" role="region" aria-label="核验数据表" tabindex="0"><table>
+<thead>
+<tr>
+<th>区间方法</th>
+<th>评估届次</th>
+<th>模型</th>
+<th>分组</th>
+<th>校准届次</th>
+<th style="text-align: right;">覆盖队数</th>
+<th style="text-align: right;">实测覆盖率</th>
+<th style="text-align: right;">平均宽度（槽）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>统一半宽</td>
+<td>2016</td>
+<td>历史加权基线</td>
+<td>全体</td>
+<td>2012</td>
+<td style="text-align: right;">170/208</td>
+<td style="text-align: right;">81.7%</td>
+<td style="text-align: right;">2.70</td>
+</tr>
+<tr>
+<td>统一半宽</td>
+<td>2016</td>
+<td>历史加权基线</td>
+<td>预测至少5槽</td>
+<td>2012</td>
+<td style="text-align: right;">15/41</td>
+<td style="text-align: right;">36.6%</td>
+<td style="text-align: right;">3.93</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2016</td>
+<td>历史加权基线</td>
+<td>全体</td>
+<td>2012</td>
+<td style="text-align: right;">172/208</td>
+<td style="text-align: right;">82.7%</td>
+<td style="text-align: right;">3.31</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2016</td>
+<td>历史加权基线</td>
+<td>预测至少5槽</td>
+<td>2012</td>
+<td style="text-align: right;">28/41</td>
+<td style="text-align: right;">68.3%</td>
+<td style="text-align: right;">11.57</td>
+</tr>
+<tr>
+<td>统一半宽</td>
+<td>2024</td>
+<td>历史加权基线</td>
+<td>全体</td>
+<td>2012+2016</td>
+<td style="text-align: right;">161/212</td>
+<td style="text-align: right;">75.9%</td>
+<td style="text-align: right;">2.56</td>
+</tr>
+<tr>
+<td>统一半宽</td>
+<td>2024</td>
+<td>历史加权基线</td>
+<td>预测至少5槽</td>
+<td>2012+2016</td>
+<td style="text-align: right;">14/43</td>
+<td style="text-align: right;">32.6%</td>
+<td style="text-align: right;">3.72</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2024</td>
+<td>历史加权基线</td>
+<td>全体</td>
+<td>2012+2016</td>
+<td style="text-align: right;">160/212</td>
+<td style="text-align: right;">75.5%</td>
+<td style="text-align: right;">3.78</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2024</td>
+<td>历史加权基线</td>
+<td>预测至少5槽</td>
+<td>2012+2016</td>
+<td style="text-align: right;">31/43</td>
+<td style="text-align: right;">72.1%</td>
+<td style="text-align: right;">13.64</td>
+</tr>
+<tr>
+<td>统一半宽</td>
+<td>2016</td>
+<td>55基线45项目</td>
+<td>全体</td>
+<td>2012</td>
+<td style="text-align: right;">172/208</td>
+<td style="text-align: right;">82.7%</td>
+<td style="text-align: right;">2.71</td>
+</tr>
+<tr>
+<td>统一半宽</td>
+<td>2016</td>
+<td>55基线45项目</td>
+<td>预测至少5槽</td>
+<td>2012</td>
+<td style="text-align: right;">14/37</td>
+<td style="text-align: right;">37.8%</td>
+<td style="text-align: right;">3.89</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2016</td>
+<td>55基线45项目</td>
+<td>全体</td>
+<td>2012</td>
+<td style="text-align: right;">170/208</td>
+<td style="text-align: right;">81.7%</td>
+<td style="text-align: right;">3.20</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2016</td>
+<td>55基线45项目</td>
+<td>预测至少5槽</td>
+<td>2012</td>
+<td style="text-align: right;">26/37</td>
+<td style="text-align: right;">70.3%</td>
+<td style="text-align: right;">11.76</td>
+</tr>
+<tr>
+<td>统一半宽</td>
+<td>2024</td>
+<td>55基线45项目</td>
+<td>全体</td>
+<td>2012+2016</td>
+<td style="text-align: right;">155/212</td>
+<td style="text-align: right;">73.1%</td>
+<td style="text-align: right;">2.41</td>
+</tr>
+<tr>
+<td>统一半宽</td>
+<td>2024</td>
+<td>55基线45项目</td>
+<td>预测至少5槽</td>
+<td>2012+2016</td>
+<td style="text-align: right;">10/41</td>
+<td style="text-align: right;">24.4%</td>
+<td style="text-align: right;">3.48</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2024</td>
+<td>55基线45项目</td>
+<td>全体</td>
+<td>2012+2016</td>
+<td style="text-align: right;">159/212</td>
+<td style="text-align: right;">75.0%</td>
+<td style="text-align: right;">3.57</td>
+</tr>
+<tr>
+<td>按预测量分组</td>
+<td>2024</td>
+<td>55基线45项目</td>
+<td>预测至少5槽</td>
+<td>2012+2016</td>
+<td style="text-align: right;">29/41</td>
+<td style="text-align: right;">70.7%</td>
+<td style="text-align: right;">13.07</td>
+</tr>
+</tbody>
+</table></div>
+<p>统一半宽在 2024 全体样本中低于 80% 覆盖，高预测量组覆盖更低。另以赛前预测量是否达到 5 槽分组，仅从同组早期残差估半宽，检查覆盖改善与区间变宽的代价。分组是探索性对照，表中保留两种方法，未用结果选择或发布 2028 区间。</p>
+<p>2012 缺少更早的同协议留出误差，因此只作校准输入。逐队误差受同届总池与代表团结构约束，校准误差跨届也可能变动。80% 是设定目标，覆盖率是这两届的实际观察。后验整理的历史数据存在修订，2016 至 2024 之间也有 2020 小项口径缺口。此实验评估核心模型的逐队区间，2028 主榜仍只发布点估计。</p>
+<h2>完整集成公式的历史验证到哪里</h2>
+<div class="scroll" role="region" aria-label="核验数据表" tabindex="0"><table>
+<thead>
+<tr>
+<th>验证层</th>
+<th>历史证据</th>
+<th>证据适用范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心模型</td>
+<td>2012、2016、2024 严格时序回测，对比基线、RF、GB、RF/GB 和 55/45</td>
+<td>小项代理下的总量预测</td>
+</tr>
+<tr>
+<td>奖牌池、主场、资格</td>
+<td>三届赛前条件和资格情景回放</td>
+<td>奖牌池只用早期历史估计，资格采用条件情景</td>
+</tr>
+<tr>
+<td>新增运动与完整配方</td>
+<td>2016 七人制橄榄球赛前排名类比，45/45/10 加主场和总池归一</td>
+<td>仅一届两小项，无法覆盖 LA28 五项运动和真实资格</td>
+</tr>
+<tr>
+<td>旧集成预测区间</td>
+<td>2028 历史情景保留旧区间</td>
+<td>缺少同协议跨届完整公式残差，无法给出经历史检验的 2028 完整集成覆盖率</td>
+</tr>
+</tbody>
+</table></div>
+<p>2016 类比中，关闭排名与加入赛前排名的全体 MAE 分别为 2.1698 与 2.1691 枚/队，变化 -0.0007。两种条件下前十均重合 9 队。这个对照说明完整公式能在已有赛前快照的历史案例中运行，排名分量的误差改善很小。</p>
+<p><a href="逐届覆盖与宽度.csv">逐届覆盖与宽度 CSV</a> · <a href="逐队区间与覆盖.csv">逐队区间与覆盖 CSV</a> · <a href="../15_原项目模型时序核验/原模型逐队误差.csv">核心模型逐队误差</a> · <a href="../09_赛前条件回放/index.html">赛前条件回放</a> · <a href="../12_新增运动端到端类比回放/index.html">2016 完整公式类比</a></p>
+<p>复算脚本为 <code>项目工作区/scripts/publish_forecast_interval_audit.py</code>。</p></main></body></html>

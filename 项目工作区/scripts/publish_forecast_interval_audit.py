@@ -1,0 +1,125 @@
+"""Validate nominal 80% residual intervals on later Olympic editions."""
+import math
+import re
+from pathlib import Path
+
+import markdown
+import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[2]
+TASK = ROOT / '交付文件/任务四_开放创作'
+BASE = TASK / '05_满分升级'
+MODEL = BASE / '15_原项目模型时序核验'
+OUT = BASE / '16_预测区间时序核验'
+OUT.mkdir(exist_ok=True)
+MODELS = ['历史加权基线', '55基线45项目']
+YEAR = [2012, 2016, 2024]
+residuals = pd.read_csv(MODEL / '原模型逐队误差.csv')
+data = residuals[
+    residuals['来源'].eq('小项二次来源')
+    & residuals['选择规则'].eq('仅此前届次')
+    & residuals['模型'].isin(MODELS)
+].copy()
+assert sorted(data.Year.unique()) == YEAR
+assert not data.duplicated(['Year', '模型', 'NOC']).any()
+assert (data[['实际', '预测']] >= 0).all().all()
+
+outputs = []
+summary = []
+for model in MODELS:
+    series = data[data['模型'].eq(model)]
+    for target in YEAR[1:]:
+        past = series[series.Year.lt(target)]
+        current = series[series.Year.eq(target)].copy()
+        assert len(past) > 0 and len(current) > 0
+        for method in ['统一半宽', '按预测量分组']:
+            result = current.copy()
+            result['半宽'] = 0.0
+            groups = [(past, current)]
+            if method == '按预测量分组':
+                groups = [(past[past['预测'].lt(5)], current[current['预测'].lt(5)]),
+                          (past[past['预测'].ge(5)], current[current['预测'].ge(5)])]
+            for prior, evaluation in groups:
+                calibration = (prior['实际'] - prior['预测']).abs().sort_values()
+                assert len(prior) >= 4
+                radius = calibration.iloc[math.ceil((len(prior) + 1) * .8) - 1]
+                result.loc[evaluation.index, '半宽'] = radius
+            result['区间方法'] = method
+            result['校准届次'] = '+'.join(map(str, sorted(past.Year.unique())))
+            result['下限'] = (result['预测'] - result['半宽']).clip(lower=0)
+            result['上限'] = result['预测'] + result['半宽']
+            result['覆盖'] = result['实际'].between(result['下限'], result['上限'])
+            result['宽度'] = result['上限'] - result['下限']
+            outputs.append(result)
+            for label, sample in [('全体', result), ('预测至少5槽', result[result['预测'].ge(5)])]:
+                summary.append({
+                    '区间方法': method, '评估届次': target, '模型': model, '评估分组': label,
+                    '校准届次': result['校准届次'].iat[0], '校准记录数': len(past),
+                    '评分队数': len(sample), '覆盖队数': int(sample['覆盖'].sum()),
+                    '覆盖率': sample['覆盖'].mean(), '平均宽度': sample['宽度'].mean(),
+                    '平均绝对误差': (sample['实际'] - sample['预测']).abs().mean(),
+                })
+detail = pd.concat(outputs, ignore_index=True)
+detail.to_csv(OUT / '逐队区间与覆盖.csv', index=False, encoding='utf-8-sig')
+scores = pd.DataFrame(summary)
+scores.to_csv(OUT / '逐届覆盖与宽度.csv', index=False, encoding='utf-8-sig')
+lines = []
+for r in summary:
+    lines.append(f"| {r['区间方法']} | {r['评估届次']} | {r['模型']} | {r['评估分组']} | {r['校准届次']} | {r['覆盖队数']}/{r['评分队数']} | {r['覆盖率']:.1%} | {r['平均宽度']:.2f} |")
+baseline_2024 = scores[
+    scores['评估届次'].eq(2024) & scores['模型'].eq(MODELS[0])
+].set_index(['区间方法', '评估分组'])
+fixed_all = baseline_2024.loc[('统一半宽', '全体'), '覆盖率']
+fixed_high = baseline_2024.loc[('统一半宽', '预测至少5槽')]
+group_high = baseline_2024.loc[('按预测量分组', '预测至少5槽')]
+analog = pd.read_csv(BASE / '12_新增运动端到端类比回放/2016端到端类比评分.csv').set_index('情景')
+off = analog.loc['关闭排名', '全体MAE']
+on = analog.loc['加入赛前排名', '全体MAE']
+md = f"""# 预测验证与区间覆盖
+
+2024 留出评估中，中性基准的统一半宽区间覆盖 {fixed_all:.1%} 的评分代表团。预测至少 5 槽组的覆盖从 {fixed_high['覆盖率']:.1%} 提升到 {group_high['覆盖率']:.1%}，平均宽度从 {fixed_high['平均宽度']:.2f} 增至 {group_high['平均宽度']:.2f} 槽。分组改善了高预测量覆盖，仍未达到 80%。
+
+## 区间用过去的误差校准，再由未来届次评分
+
+使用小项二次来源下的严格滚动留出逐队结果，分别检验历史加权基线和 55/45 核心情景。2016 只用 2012 误差，2024 只用 2012、2016 误差。区间半宽为校准集绝对残差从小到大第 ⌈0.8(n+1)⌉ 个值，下限截在零。目标届实际结果只用来测覆盖及误差。评估含评分池内全部代表团，另按赛前预测至少 5 槽切片，以免全体读数掩盖高预测量代表团表现。
+
+| 区间方法 | 评估届次 | 模型 | 分组 | 校准届次 | 覆盖队数 | 实测覆盖率 | 平均宽度（槽） |
+| --- | --- | --- | --- | --- | ---: | ---: | ---: |
+{chr(10).join(lines)}
+
+统一半宽在 2024 全体样本中低于 80% 覆盖，高预测量组覆盖更低。另以赛前预测量是否达到 5 槽分组，仅从同组早期残差估半宽，检查覆盖改善与区间变宽的代价。分组是探索性对照，表中保留两种方法，未用结果选择或发布 2028 区间。
+
+2012 缺少更早的同协议留出误差，因此只作校准输入。逐队误差受同届总池与代表团结构约束，校准误差跨届也可能变动。80% 是设定目标，覆盖率是这两届的实际观察。后验整理的历史数据存在修订，2016 至 2024 之间也有 2020 小项口径缺口。此实验评估核心模型的逐队区间，2028 主榜仍只发布点估计。
+
+## 完整集成公式的历史验证到哪里
+
+| 验证层 | 历史证据 | 证据适用范围 |
+| --- | --- | --- |
+| 核心模型 | 2012、2016、2024 严格时序回测，对比基线、RF、GB、RF/GB 和 55/45 | 小项代理下的总量预测 |
+| 奖牌池、主场、资格 | 三届赛前条件和资格情景回放 | 奖牌池只用早期历史估计，资格采用条件情景 |
+| 新增运动与完整配方 | 2016 七人制橄榄球赛前排名类比，45/45/10 加主场和总池归一 | 仅一届两小项，无法覆盖 LA28 五项运动和真实资格 |
+| 旧集成预测区间 | 2028 历史情景保留旧区间 | 缺少同协议跨届完整公式残差，无法给出经历史检验的 2028 完整集成覆盖率 |
+
+2016 类比中，关闭排名与加入赛前排名的全体 MAE 分别为 {off:.4f} 与 {on:.4f} 枚/队，变化 {on-off:+.4f}。两种条件下前十均重合 9 队。这个对照说明完整公式能在已有赛前快照的历史案例中运行，排名分量的误差改善很小。
+
+[逐届覆盖与宽度 CSV](逐届覆盖与宽度.csv) · [逐队区间与覆盖 CSV](逐队区间与覆盖.csv) · [核心模型逐队误差](../15_原项目模型时序核验/原模型逐队误差.csv) · [赛前条件回放](../09_赛前条件回放/index.html) · [2016 完整公式类比](../12_新增运动端到端类比回放/index.html)
+
+复算脚本为 `项目工作区/scripts/publish_forecast_interval_audit.py`。
+"""
+(OUT / '预测区间核验说明.md').write_text(md, encoding='utf-8')
+body = markdown.markdown(md, extensions=['tables'])
+body = body.replace('<table>', '<div class="scroll" role="region" aria-label="核验数据表" tabindex="0"><table>').replace('</table>', '</table></div>')
+page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>预测验证与区间覆盖</title>
+<style>:root{color-scheme:light dark}body{margin:0;font:16px/1.7 system-ui}main{max-width:76rem;margin:auto;padding:clamp(16px,5vw,64px)}h1{font-size:clamp(2rem,4vw,3.8rem);line-height:1.2}.scroll{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:.65rem;text-align:left;border-bottom:1px solid #829d9c88;font-variant-numeric:tabular-nums}thead{background:color-mix(in srgb,currentColor 9%,transparent)}a{text-underline-offset:4px}</style></head><body><main>
+<nav><a href="../../02_2028洛杉矶预测/index.html">返回预测页</a> · <a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
+(OUT / 'index.html').write_text(page + body + '</main></body></html>', encoding='utf-8')
+for section in ['02_2028洛杉矶预测', '03_数据新闻']:
+    file = TASK / section / 'index.html'
+    html = file.read_text(encoding='utf-8')
+    html = re.sub(r'<!-- FORECAST_INTERVAL_START -->.*?<!-- FORECAST_INTERVAL_END -->', '', html, flags=re.S)
+    anchor = re.search(r'<a\b[^>]*href="../05_满分升级/15_原项目模型时序核验/index.html"[^>]*>.*?</a>', html, flags=re.S)
+    assert anchor, file
+    link = '<!-- FORECAST_INTERVAL_START --> · <a href="../05_满分升级/16_预测区间时序核验/index.html">查历史区间覆盖与完整公式回放</a><!-- FORECAST_INTERVAL_END -->'
+    file.write_text(html[:anchor.end()] + link + html[anchor.end():], encoding='utf-8')
+print(scores.to_string(index=False))
