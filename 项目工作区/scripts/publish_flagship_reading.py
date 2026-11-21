@@ -27,7 +27,13 @@ while i<len(lines):
    cells=[c.strip() for c in lines[i].strip('|').split('|')];i+=1
    if all(re.fullmatch(r':?-+:?',c) for c in cells):continue
    table.append(cells)
-  blocks.append('<div class="supp-table" role="region" tabindex="0" aria-label="清洗决定影响数据表"><table><thead><tr>'+''.join('<th>'+inline(c)+'</th>' for c in table[0])+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+inline(c)+'</td>' for c in row)+'</tr>' for row in table[1:])+'</tbody></table></div>');continue
+  blocks.append('<div class="supp-table" role="region" tabindex="0" aria-label="专题结果对照表"><table><thead><tr>'+''.join('<th scope="col">'+inline(c)+'</th>' for c in table[0])+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+inline(c)+'</td>' for c in row)+'</tr>' for row in table[1:])+'</tbody></table></div>');continue
+ image=re.fullmatch(r'!\[(.+)\]\((.+)\)',line)
+ if image:
+  alt,path=map(escape,image.groups())
+  blocks.append(f'<figure style="margin:1.5rem 0"><a href="{path}"><img src="{path}" alt="{alt}" style="display:block;max-width:100%;height:auto"></a><figcaption>{alt}</figcaption></figure>')
+  i+=1
+  continue
  if line.startswith('- '):
   items=[]
   while i<len(lines) and lines[i].startswith('- '):items.append('<li>'+inline(lines[i][2:])+'</li>');i+=1
