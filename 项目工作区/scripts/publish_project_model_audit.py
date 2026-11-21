@@ -64,18 +64,41 @@ md='# '+title+'\n\n'+intro+'\n\n## 具体的前视风险\n\n'+selection+'\n\n## 
 (OUT/'原项目模型核验说明.md').write_text(md,encoding='utf-8')
 import markdown
 def render_method_page(source):
-    body = markdown.markdown(source, extensions=['tables','fenced_code'])
-    return ('<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
-            '<meta name="viewport" content="width=device-width,initial-scale=1">'
-            '<title>原项目模型核验说明</title><style>'
-            ':root{color-scheme:light dark}body{max-width:78rem;margin:auto;padding:clamp(16px,5vw,72px);font:16px/1.85 system-ui}'
-            'a{text-underline-offset:4px}nav{display:flex;gap:12px 24px;flex-wrap:wrap}'
-            'table{display:block;max-width:100%;overflow:auto;border-collapse:collapse}'
-            'td,th{padding:8px 12px;border-bottom:1px solid #82979566}img{max-width:100%;height:auto}'
-            'pre{overflow:auto}code{overflow-wrap:anywhere}</style>'
-            '<main><nav><a href="index.html">← 返回原项目模型时序核验</a>'
-            '<a href="原项目模型核验说明.md" download>下载 Markdown 原文</a></nav>'
-            +body+'</main></html>')
+    from bs4 import BeautifulSoup
+    shell = BeautifulSoup((OUT/'index.html').read_text(encoding='utf-8'), 'html.parser')
+    doc = BeautifulSoup(
+        '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<title>原项目模型核验说明</title><style>'
+        'body.supplement-reading .method-actions{display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:24px}'
+        '.method-actions a{display:inline-flex;align-items:center;min-height:44px}'
+        '.model-method-table{max-width:100%;overflow-x:auto}'
+        '.model-method-table table{width:100%;min-width:34rem}'
+        'body.supplement-reading article.model-method > h1{font-size:clamp(28px,3.6vw,54px);line-height:1.25}'
+        '</style></head><body class="supplement-reading"><main><article class="model-method">'
+        '<nav class="method-actions" aria-label="核验说明操作"><a href="index.html">← 返回原项目模型时序核验</a>'
+        '<a href="原项目模型核验说明.md" download>下载 Markdown 原文</a></nav>'
+        + markdown.markdown(source, extensions=['tables','fenced_code'])
+        + '</article></main></body></html>', 'html.parser')
+    for selector in (
+        '#supplement-assets', 'script[src*="supplement-reading.js"]',
+        '#chart-surface-theme', '#supp-task-nav-assets',
+        'script[src*="integrated-nav.js"]', '#unified-tables',
+    ):
+        asset = shell.select_one(selector)
+        if asset is not None:
+            doc.head.append(asset.extract())
+    for selector in reversed(('#xz-nav', '#xz-menu')):
+        element = shell.select_one(selector)
+        if element is not None:
+            doc.body.insert(0, element.extract())
+    for table in doc.select('article table'):
+        wrapper = doc.new_tag('div', attrs={
+            'class': 'model-method-table', 'tabindex': '0',
+            'role': 'region', 'aria-label': '核验结果表，可横向滚动',
+        })
+        table.wrap(wrapper)
+    return str(doc)
 
 (OUT/'原项目模型核验说明.html').write_text(render_method_page(md),encoding='utf-8')
 append='\n\n<!-- PROJECT_MODEL_START -->\n## 2026-11-17：原RF/GB项目模型重跑与阅读决策\n\n'+intro+'\n\n'+selection+'\n\n'+policy+'\n\n'+outlook+'\n\n'+coverage+'\n\n详见任务四/05_满分升级/15_原项目模型时序核验；复算 project_model_strict_replay.py，发布 publish_project_model_audit.py。独立岭回归的失败不能外推为原RF/GB完全无效；原RF/GB的运动员行改善也不能外推成官方奖牌预测稳定改进。\n<!-- PROJECT_MODEL_END -->\n'
