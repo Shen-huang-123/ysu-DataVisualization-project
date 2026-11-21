@@ -60,8 +60,8 @@ def main():
     tree=DashboardOnly().visit(ast.parse(organizer.read_text(encoding='utf-8')));ast.fix_missing_locations(tree)
     exec(compile(tree,str(organizer),'exec'),{'__name__':'dashboard_reading','__file__':str(organizer)})
     captions=[
-      ('交付文件/任务三_专题深挖/S1_东道主效应/index.html','host-proof-charts','来源：既有运动员行分析，另有小项来源替换与排除检验。核查：三方案结果可复现。边界：主办选择、抵制、身份与项目变化仍可能混杂，图中关联不能直接解释为主办的因果收益。'),
-      ('交付文件/任务三_专题深挖/S3_冠军的保质期/07_王朝生存图/index.html','curve','来源：历史小项代理与二次来源情景。核查：固定113项来源替换仍下降7.37个百分点；排除后50项区间跨零。边界：研究的是代表团同小项金牌控制权，不是个人寿命，也未证明竞争加剧是原因。'),
+      ('交付文件/任务三_专题深挖/S1_东道主效应/index.html','host-proof-charts','反例｜里约2016巴西。实际奖牌份额低于合成对照：运动员行为 −0.23 个百分点，小项原代理为 −0.11，二次来源替换后为 −0.17，排除未决同名系列后为 −1.22。四种读法方向一致，差值幅度随口径与样本改变。结果描述实际值与合成对照的差距，仍可能受主办选择与参赛结构影响。'),
+      ('交付文件/任务三_专题深挖/S3_冠军的保质期/07_王朝生存图/index.html','curve','反例｜来源替换与样本排除给出不同的证据强度。固定113项的后段卫冕率比早段低7.37个百分点，95%区间为 −13.20 至 −1.62，替换二次来源后结果相同。排除未决系列后，50项的差值仍为负（−7.33个百分点），但95%区间为 −16.17 至 +1.50，跨过零。这里比较代表团对同一小项金牌的延续。'),
       ('交付文件/任务三_专题深挖/S2_口径的魔力/07_口径实验室/index.html','rule-ranking-table','来源：2024年329小项表是主证据；历史三届为代理与分层对照。核查：换统计单位会改变榜单，已有35项历史高风险逐项清单。边界：规则实验不是新的官方排名，历史代理未获全项IOC认证。'),
       ('交付文件/任务三_专题深挖/S2_口径的魔力/09_奖牌口径实验室/index.html','rank-chart','来源：2024年329小项表。核查：三口径保持各自定义；历史证据和高风险逐项记录单列。边界：运动员行反映团队规模，不等同于官方小项奖牌；不能据此判断公平性。'),
       ('交付文件/任务四_开放创作/01_交互式Dashboard/index.html','project-reading-policy','来源：最新中性基准。核查：当前主榜可复现；旧集成与旧区间须主动展开比较。边界：未校准的旧区间不能作为此主榜或完整集成的80%预测区间。'),
@@ -78,6 +78,12 @@ def main():
             if not found:raise ValueError('Missing evidence caption target '+name+' '+target)
         href=Path(os.path.relpath(BASE/'index.html',p.parent)).as_posix()
         note='<!-- EVIDENCE_CLOSURE_START --><aside data-evidence-closure="20261120" style="margin:18px 0;padding:14px 0;border-top:1px solid #89959466;line-height:1.85;font-size:14px">'+escape(message)+' <a href="'+href+'">逐项证据与验证矩阵</a></aside><!-- EVIDENCE_CLOSURE_END -->'
+        case_links={
+          'host-proof-charts':'01_来源与口径敏感性/index.html',
+          'curve':'../11_历史来源敏感性/index.html',
+        }
+        if target in case_links:
+            note=note.replace(' <a href=', ' <a href="'+case_links[target]+'">查看原表和复算</a> · <a href=', 1)
         # Before SVG/table/chart containers; inside a reading section, after its opening tag.
         position=found.end() if target=='project-reading-policy' else found.start()
         p.write_text(text[:position]+note+text[position:],encoding='utf-8')
