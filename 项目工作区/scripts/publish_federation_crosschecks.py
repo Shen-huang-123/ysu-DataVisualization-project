@@ -27,11 +27,38 @@ for sport, fed, gender, *values in data:
         g,s,b=medals.split()
         rows.append(dict(Year=year,Event=f"{sport} {gender}'s {sport}",协会=fed,
                          Gold=g,Silver=s,Bronze=b,一手来源=url,复核日期='2026-11-21'))
+BWF = 'https://res.cloudinary.com/badminton/images/v1721624876/wordpress_assets_test/Badminton-World-Federation-Paris-2024-Media-Guide/Badminton-World-Federation-Paris-2024-Media-Guide.pdf'
+ITF = 'https://www.itftennis.com/media/2451/tokyo-2020-olympic-tennis-event-regulations.pdf'
+FIVB = 'https://en.volleyballworld.com/volleyball/competitions/volleyball-olympic-games-paris-2024/competition/previous-winners'
+BEACH = 'https://en.volleyballworld.com/beachvolleyball/competitions/olympics-2020/competition/beachvolleyball-at-the-olympics'
+additional = [
+    ("Badminton Men's Singles", 'BWF', BWF, 'CHN MAS CHN', 'CHN MAS CHN', 'CHN MAS DEN'),
+    ("Badminton Women's Singles", 'BWF', BWF, 'CHN CHN INA', 'CHN CHN IND', 'ESP IND JPN'),
+    ("Badminton Men's Doubles", 'BWF', BWF, 'INA CHN KOR', 'CHN DEN KOR', 'CHN MAS GBR'),
+    ("Badminton Women's Doubles", 'BWF', BWF, 'CHN KOR CHN', 'CHN JPN RUS', 'JPN DEN KOR'),
+    ('Badminton Mixed Doubles', 'BWF', BWF, 'KOR INA CHN', 'CHN CHN DEN', 'INA MAS CHN'),
+    ("Tennis Men's Singles", 'ITF', ITF, 'ESP CHI SRB', 'GBR SUI ARG', 'GBR ARG JPN'),
+    ("Tennis Women's Singles", 'ITF', ITF, 'RUS RUS RUS', 'USA RUS BLR', 'PUR GER CZE'),
+    ("Tennis Men's Doubles", 'ITF', ITF, 'SUI SWE USA', 'USA FRA FRA', 'ESP ROU USA'),
+    ("Tennis Women's Doubles", 'ITF', ITF, 'USA ESP CHN', 'USA CZE RUS', 'RUS SUI CZE'),
+    ('Tennis Mixed Doubles', 'ITF', ITF, None, 'BLR GBR USA', 'USA USA CZE'),
+    ("Volleyball Men's Volleyball", 'Volleyball World', FIVB, 'USA BRA RUS', 'RUS BRA ITA', 'BRA ITA USA'),
+    ("Volleyball Women's Volleyball", 'Volleyball World', FIVB, 'BRA USA CHN', 'BRA USA JPN', 'CHN SRB USA'),
+    ("Beach Volleyball Men's Beach Volleyball", 'Volleyball World', BEACH, 'USA BRA BRA', 'GER BRA LAT', 'BRA ITA NED'),
+    ("Beach Volleyball Women's Beach Volleyball", 'Volleyball World', BEACH, 'USA CHN CHN', 'USA USA BRA', 'GER BRA USA'),
+]
+for event,fed,url,*medal_sets in additional:
+    for year,medals in zip((2008,2012,2016),medal_sets):
+        if medals is None:
+            continue
+        gold,silver,bronze=medals.split()
+        rows.append(dict(Year=year,Event=event,协会=fed,Gold=gold,Silver=silver,
+                         Bronze=bronze,一手来源=url,复核日期='2026-11-21'))
 first=pd.DataFrame(rows)
 old=pd.read_csv(BASE/'Olympedia独立交叉核验/历史555项独立交叉对照.csv',keep_default_na=False)
 queue=pd.read_csv(OUT/'555项优先取证范围.csv')
 keys=['Year','Event']
-assert len(first.merge(queue,on=keys,validate='one_to_one'))==18
+assert len(first.merge(queue,on=keys,validate='one_to_one'))==len(first)==59
 cols=['Gold','Silver','Bronze']
 comparison=[f'{colour}_{source}' for source in ('archive','olympedia','proxy') for colour in cols]
 result=first.merge(old[keys+comparison+['event_url']],on=keys,how='left',validate='one_to_one',indicator=True)
@@ -48,9 +75,9 @@ for _,r in result.iterrows():
     table.append(f"| {r.Year} | {r.Event} | {r.Gold} / {r.Silver} / {r.Bronze} | {' | '.join(marks)} | [{r['协会']}]({r['一手来源']}) |")
 body=f"""# 三届历史奖牌 · 国际单项协会交叉核验
 
-北京 2008、伦敦 2012、里约 2016 各核对 6 项，覆盖男女篮球、手球和曲棍球。18 项均位于此前的 555 项优先取证清单。本次手工读取 FIBA 奥运历史榜、IHF 决赛名次或奖牌表、FIH 奥运奖牌手册，再以届次和小项键逐色与旧存档、Olympedia、主数据代理比对。
+累计核对北京 2008 19 项、伦敦 2012 20 项、里约 2016 20 项，均在 555 项优先取证清单。原有篮球、手球和曲棍球 18 项，本轮新增羽毛球 15 项、网球 14 项、室内排球和沙滩排球各 6 项。按届次和小项逐色与旧存档、Olympedia 和主数据代理比对。双打每对只计一个奖牌槽。
 
-三色一致的项目数分别为 **旧存档 {counts['旧存档']}/18、Olympedia {counts['Olympedia']}/18、主数据代理 {counts['主数据代理']}/18**。协会结果提供各项目的一手交叉证据，现行 IOC 全量核验仍以 IOC 逐项结果为准，现有数据表保留原版本。
+三色一致的项目数分别为 **旧存档 {counts['旧存档']}/59、Olympedia {counts['Olympedia']}/59、主数据代理 {counts['主数据代理']}/59**。协会结果提供各项目的一手交叉证据，现行 IOC 全量核验仍以 IOC 逐项结果为准，现有数据表保留原版本。
 
 | 届次 | 小项 | 协会金 / 银 / 铜 | 旧存档 | Olympedia | 主数据代理 | 一手来源 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -65,5 +92,5 @@ p=OUT/'index.html'
 s=re.sub(r'<!-- FEDERATION_CHECK_START -->.*?<!-- FEDERATION_CHECK_END -->','',p.read_text(encoding='utf-8'),flags=re.S)
 marker='<h2>取证清单</h2>'
 assert s.count(marker)==1
-p.write_text(s.replace(marker,'<!-- FEDERATION_CHECK_START --><p><a href="协会一手逐项交叉核验.html">查篮球、手球和曲棍球 18 项协会核验结果</a></p><!-- FEDERATION_CHECK_END -->'+marker),encoding='utf-8')
+p.write_text(s.replace(marker,'<!-- FEDERATION_CHECK_START --><p><a href="协会一手逐项交叉核验.html">查七项运动的 59 项协会核验结果</a></p><!-- FEDERATION_CHECK_END -->'+marker),encoding='utf-8')
 print(counts)
