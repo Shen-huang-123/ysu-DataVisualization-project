@@ -1,4 +1,41 @@
-(async()=>{const yieldToPage=()=>new Promise(resolve=>requestAnimationFrame(()=>setTimeout(resolve,0)));await yieldToPage();const host=document.querySelector('.model-stage'),canvas=host.querySelector('canvas');if(!window.THREE)return;host.dataset.loading='true';await yieldToPage();const T=THREE,scene=new T.Scene(),camera=new T.PerspectiveCamera(38,1,.1,100),renderer=new T.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:"high-performance"});renderer.outputEncoding=T.sRGBEncoding;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<750?1.15:1.35));const world=new T.Group();scene.add(world);const ambient=new T.HemisphereLight(0xe4f3ff,0x68715c,1.5);scene.add(ambient);const sun=new T.DirectionalLight(0xffe2ad,2);sun.position.set(5,9,4);scene.add(sun);const materialCache=new Map();const mat=(c)=>{if(!materialCache.has(c))materialCache.set(c,new T.MeshStandardMaterial({color:c,roughness:.7,metalness:.08}));return materialCache.get(c)};function box(w,h,d,c,x,y,z){const m=new T.Mesh(new T.BoxGeometry(w,h,d),mat(c));m.position.set(x,y,z);world.add(m);return m}function ring(r,t,c,x,y,z){const m=new T.Mesh(new T.TorusGeometry(r,t,12,80),mat(c));m.rotation.x=-Math.PI/2;m.position.set(x,y,z);world.add(m);return m}
+(async () => {
+const host = document.querySelector('.model-stage');
+if (!host) return;
+const canvas = host.querySelector('canvas');
+const notice = document.createElement('div');
+notice.className = 'model-load-notice';
+notice.hidden = true;
+const message = document.createElement('p');
+message.setAttribute('role', 'status');
+const retry = document.createElement('button');
+retry.type = 'button';
+retry.textContent = '重新加载场馆';
+retry.addEventListener('click', () => location.reload());
+notice.append(message, retry);
+host.append(notice);
+host.dataset.loading = 'true';
+let contextLost = false;
+let initialized = false;
+function showUnavailable(text) {
+  host.dataset.loading = 'false';
+  host.dataset.rendered = 'false';
+  message.textContent = text;
+  notice.hidden = false;
+}
+canvas.addEventListener('webglcontextlost', event => {
+  event.preventDefault();
+  contextLost = true;
+  showUnavailable('场馆图形连接已中断，正在等待恢复。');
+});
+canvas.addEventListener('webglcontextrestored', () => {
+  contextLost = false;
+  if (!initialized) host.dataset.loading = 'true';
+});
+const yieldToPage = () => new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 0)));
+try {
+await yieldToPage();
+if (!window.THREE) throw new Error('Three.js is unavailable');
+const T=THREE,scene=new T.Scene(),camera=new T.PerspectiveCamera(38,1,.1,100),renderer=new T.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:"default"});renderer.outputEncoding=T.sRGBEncoding;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<750?1.15:1.35));const world=new T.Group();scene.add(world);const ambient=new T.HemisphereLight(0xe4f3ff,0x68715c,1.5);scene.add(ambient);const sun=new T.DirectionalLight(0xffe2ad,2);sun.position.set(5,9,4);scene.add(sun);const materialCache=new Map();const mat=(c)=>{if(!materialCache.has(c))materialCache.set(c,new T.MeshStandardMaterial({color:c,roughness:.7,metalness:.08}));return materialCache.get(c)};function box(w,h,d,c,x,y,z){const m=new T.Mesh(new T.BoxGeometry(w,h,d),mat(c));m.position.set(x,y,z);world.add(m);return m}function ring(r,t,c,x,y,z){const m=new T.Mesh(new T.TorusGeometry(r,t,12,80),mat(c));m.rotation.x=-Math.PI/2;m.position.set(x,y,z);world.add(m);return m}
 renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);renderer.shadowMap.autoUpdate=false;renderer.shadowMap.needsUpdate=true;Object.assign(sun.shadow.camera,{left:-10,right:10,top:10,bottom:-10,near:.5,far:40});sun.shadow.bias=-.001;
 // A lightweight rim light avoids an expensive startup environment-map bake.
 const rim=new T.DirectionalLight(0xc9dce6,.35);rim.position.set(-5,4,-6);scene.add(rim);
@@ -131,11 +168,13 @@ await yieldToPage();
 // Pre-baked skinned poses retain the character silhouette without runtime GLTF, textures or bones.
 const runners=[],lite=window.OLYMPIC_RUNNER_LITE;
 function decode64(s,Type){const raw=atob(s),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);return new Type(bytes.buffer)}
+if (lite) {
 const posePositions=decode64(lite.positions,Int16Array),poseNormals=decode64(lite.normals,Int8Array),skinColors=decode64(lite.colors,Uint8Array),clothMask=decode64(lite.cloth,Uint8Array),runnerIndices=decode64(lite.indices,Uint16Array),frameSize=lite.count*3;
 const kits=[0x24758a,0xa34d3c,0xd3a750,0x43765c,0x6d648b,0xc2c8be];
 const poseAttributes=[],normalAttributes=[];for(let f=0;f<lite.frames;f++){const pp=new Float32Array(frameSize),nn=new Float32Array(frameSize);for(let v=0;v<frameSize;v++){pp[v]=posePositions[f*frameSize+v]*lite.unit;nn[v]=poseNormals[f*frameSize+v]/127}poseAttributes.push(new T.BufferAttribute(pp,3));normalAttributes.push(new T.BufferAttribute(nn,3))}
 const shortsColor=new T.Color(0x283039),shoeColor=new T.Color(0xcbd0c3),sampleColor=new T.Color();
 for(let i=0;i<6;i++){await yieldToPage();const geometry=new T.BufferGeometry(),colors=new Float32Array(frameSize),kit=new T.Color(kits[i]);for(let v=0;v<lite.count;v++){const mask=clothMask[v],c=mask===1?kit:mask===2?shortsColor:mask===3?shoeColor:sampleColor.setRGB(skinColors[v*3]/255,skinColors[v*3+1]/255,skinColors[v*3+2]/255).convertSRGBToLinear();colors.set([c.r,c.g,c.b],v*3)}geometry.setAttribute('position',poseAttributes[0]);geometry.setAttribute('normal',normalAttributes[0]);geometry.morphAttributes.position=poseAttributes;geometry.morphAttributes.normal=normalAttributes;geometry.setAttribute('color',new T.BufferAttribute(colors,3));geometry.setIndex(new T.BufferAttribute(runnerIndices,1));const g=new T.Mesh(geometry,new T.MeshStandardMaterial({vertexColors:true,roughness:.85,metalness:0}));g.frustumCulled=false;world.add(g);runners.push({g,offset:i*.88,r:2.545+i*.13,speed:.27+i*.009})}
+}
 function animateRunners(t){runners.forEach((r,i)=>{const a=r.offset-t*r.speed,phase=((t*1.25+i*.17)%lite.duration)/lite.duration*lite.frames,f0=Math.floor(phase),f1=(f0+1)%lite.frames,alpha=phase-f0;r.g.morphTargetInfluences.fill(0);r.g.morphTargetInfluences[f0]=1-alpha;r.g.morphTargetInfluences[f1]=alpha;r.g.position.set(Math.cos(a)*r.r*1.3,.16,Math.sin(a)*r.r);r.g.rotation.y=Math.atan2(1.3*Math.sin(a),-Math.cos(a))})}
 window.OLYMPIC_RUNNER_LITE=null;host.dataset.character='baked';
 // Finish markings and a quiet in-world clock give the running scene a focal point.
@@ -161,4 +200,18 @@ let openRoof=false;const roofButton=document.createElement('button');roofButton.
 const lifeControls=document.createElement('div');lifeControls.className='model-life';lifeControls.innerHTML='<button id="model-cheer">点燃欢呼 ↗</button><button id="model-life-toggle" aria-pressed="'+lifeRunning+'">'+(lifeRunning?'暂停场内动态':'播放场内动态')+'</button>';host.append(lifeControls);document.getElementById('model-cheer').onclick=()=>{lifeRunning=true;cheerStart=lifeTime;syncLife()};function syncLife(){const b=document.getElementById('model-life-toggle');b.textContent=lifeRunning?'暂停场内动态':'播放场内动态';b.setAttribute('aria-pressed',String(lifeRunning))}document.getElementById('model-life-toggle').onclick=()=>{lifeRunning=!lifeRunning;syncLife()};host.querySelectorAll('button').forEach(b=>{b.style.setProperty('background','transparent','important');b.style.setProperty('box-shadow','none','important');b.style.setProperty('border-radius','0','important')});host.querySelector('.model-hint').textContent='拖拽吊顶照片旋转画廊 · 拖拽场馆旋转视角 · 点击照片进入实验室';
 let visible=true;new IntersectionObserver(entries=>visible=entries[0].isIntersecting,{rootMargin:'100px'}).observe(host);
 const labRoofTrace=ellipseTrace(6.27,4.82,1.99,0x8ac8d4,.55,researchBase);
-const daySun=new T.Color(0xffe3b5),nightSun=new T.Color(0x8caee8),projected=new T.Vector3();let frameBudget=1000/(innerWidth<750?30:60),last=0,lastFrameTime=0,frameAverage=frameBudget,slowFrames=0,currentDpr=Math.min(devicePixelRatio,innerWidth<750?1.15:1.35);function draw(time){requestAnimationFrame(draw);if(document.hidden||!visible){last=time;lastFrameTime=0;return}if(time-last<frameBudget-.5)return;const elapsed=time-last,frameElapsed=lastFrameTime?time-lastFrameTime:33,dt=Math.min(.05,frameElapsed/1000);lastFrameTime=time;last=time;frameAverage=frameAverage*.96+Math.min(frameElapsed,150)*.04;if(frameAverage>frameBudget*1.5)slowFrames++;else slowFrames=Math.max(0,slowFrames-1);if(slowFrames>60&&currentDpr>.8){currentDpr=Math.max(.8,currentDpr-.2);renderer.setPixelRatio(currentDpr);renderer.setSize(stageWidth,stageHeight,false);slowFrames=0;frameAverage=frameBudget;}if(slowFrames>120&&frameBudget<30){frameBudget=1000/30;slowFrames=0;frameAverage=frameBudget}if(lifeRunning){lifeTime+=dt;raceTime+=dt}animateLab(lifeTime);animateRunners(raceTime);updateClock(lifeTime);if(Math.floor(lifeTime*18)!==crowdTick){crowdTick=Math.floor(lifeTime*18);animateCrowd(lifeTime)}if(!down){if(spin){yaw+=dt*.06;photoOrbit.rotation.y+=dt*.14}if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&Math.abs(galleryVelocity)>.004){photoOrbit.rotation.y+=galleryVelocity*dt;galleryVelocity*=Math.exp(-dt*5)}}const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;lighting+=(Number(night)-lighting)*Math.min(1,dt*3);ambient.intensity=1.02-lighting*.57;sun.intensity=1.3-lighting*.78;sun.color.copy(daySun).lerp(nightSun,lighting);glow.intensity=.5+lighting*2;roofLightMaterial.emissiveIntensity=.05+lighting*2.2;let roofMoving=false;roofParts.forEach(r=>{if(r.userData.restY===undefined)r.userData.restY=r.position.y;const target=r.userData.restY+(openRoof?2:0);if(Math.abs(target-r.position.y)>.002){r.position.y+=(target-r.position.y)*Math.min(1,dt*5);roofMoving=true}});labRoofTrace.position.y+=((openRoof?2:0)-labRoofTrace.position.y)*Math.min(1,dt*5);if(roofMoving)renderer.shadowMap.needsUpdate=true;pos();orientPhotos();renderer.render(scene,camera);positionPins();}function positionPins(){pins.forEach(({label,point})=>{projected.copy(point).project(camera);label.style.transform='translate3d('+Math.max(65,Math.min(stageWidth-65,(projected.x*.5*1.24+.5)*stageWidth))+'px,'+Math.max(60,Math.min(stageHeight-110,(-projected.y*.5*1.42+.5)*stageHeight))+'px,0) translate(-50%,-50%)'})}resize();desired.set(Math.sin(yaw)*Math.cos(pitch)*distance,Math.sin(pitch)*distance,Math.cos(yaw)*Math.cos(pitch)*distance);camera.position.copy(desired);camera.lookAt(0,0,0);await yieldToPage();if(renderer.compileAsync)await renderer.compileAsync(scene,camera);await yieldToPage();night=bodyNight();lighting=Number(night);ambient.intensity=1.02-lighting*.57;sun.intensity=1.3-lighting*.78;sun.color.copy(daySun).lerp(nightSun,lighting);glow.intensity=.5+lighting*2;roofLightMaterial.emissiveIntensity=.05+lighting*2.2;renderer.shadowMap.needsUpdate=true;positionPins();orientPhotos();renderer.render(scene,camera);await yieldToPage();renderer.render(scene,camera);host.dataset.rendered='true';host.dataset.loading='false';last=performance.now();requestAnimationFrame(draw)})();
+const daySun=new T.Color(0xffe3b5),nightSun=new T.Color(0x8caee8),projected=new T.Vector3();let frameBudget=1000/(innerWidth<750?30:60),last=0,lastFrameTime=0,frameAverage=frameBudget,slowFrames=0,currentDpr=Math.min(devicePixelRatio,innerWidth<750?1.15:1.35);function draw(time){requestAnimationFrame(draw);if(document.hidden||!visible||contextLost){last=time;lastFrameTime=0;return}if(time-last<frameBudget-.5)return;const elapsed=time-last,frameElapsed=lastFrameTime?time-lastFrameTime:33,dt=Math.min(.05,frameElapsed/1000);lastFrameTime=time;last=time;frameAverage=frameAverage*.96+Math.min(frameElapsed,150)*.04;if(frameAverage>frameBudget*1.5)slowFrames++;else slowFrames=Math.max(0,slowFrames-1);if(slowFrames>60&&currentDpr>.8){currentDpr=Math.max(.8,currentDpr-.2);renderer.setPixelRatio(currentDpr);renderer.setSize(stageWidth,stageHeight,false);slowFrames=0;frameAverage=frameBudget;}if(slowFrames>120&&frameBudget<30){frameBudget=1000/30;slowFrames=0;frameAverage=frameBudget}if(lifeRunning){lifeTime+=dt;raceTime+=dt}animateLab(lifeTime);animateRunners(raceTime);updateClock(lifeTime);if(Math.floor(lifeTime*18)!==crowdTick){crowdTick=Math.floor(lifeTime*18);animateCrowd(lifeTime)}if(!down){if(spin){yaw+=dt*.06;photoOrbit.rotation.y+=dt*.14}if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&Math.abs(galleryVelocity)>.004){photoOrbit.rotation.y+=galleryVelocity*dt;galleryVelocity*=Math.exp(-dt*5)}}const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;lighting+=(Number(night)-lighting)*Math.min(1,dt*3);ambient.intensity=1.02-lighting*.57;sun.intensity=1.3-lighting*.78;sun.color.copy(daySun).lerp(nightSun,lighting);glow.intensity=.5+lighting*2;roofLightMaterial.emissiveIntensity=.05+lighting*2.2;let roofMoving=false;roofParts.forEach(r=>{if(r.userData.restY===undefined)r.userData.restY=r.position.y;const target=r.userData.restY+(openRoof?2:0);if(Math.abs(target-r.position.y)>.002){r.position.y+=(target-r.position.y)*Math.min(1,dt*5);roofMoving=true}});labRoofTrace.position.y+=((openRoof?2:0)-labRoofTrace.position.y)*Math.min(1,dt*5);if(roofMoving)renderer.shadowMap.needsUpdate=true;pos();orientPhotos();renderer.render(scene,camera);markRendered();positionPins();}function positionPins(){pins.forEach(({label,point})=>{projected.copy(point).project(camera);label.style.transform='translate3d('+Math.max(65,Math.min(stageWidth-65,(projected.x*.5*1.24+.5)*stageWidth))+'px,'+Math.max(60,Math.min(stageHeight-110,(-projected.y*.5*1.42+.5)*stageHeight))+'px,0) translate(-50%,-50%)'})}resize();desired.set(Math.sin(yaw)*Math.cos(pitch)*distance,Math.sin(pitch)*distance,Math.cos(yaw)*Math.cos(pitch)*distance);camera.position.copy(desired);camera.lookAt(0,0,0);await yieldToPage();await yieldToPage();night=bodyNight();lighting=Number(night);ambient.intensity=1.02-lighting*.57;sun.intensity=1.3-lighting*.78;sun.color.copy(daySun).lerp(nightSun,lighting);glow.intensity=.5+lighting*2;roofLightMaterial.emissiveIntensity=.05+lighting*2.2;renderer.shadowMap.needsUpdate=true;positionPins();orientPhotos();renderer.render(scene,camera);await yieldToPage();renderer.render(scene,camera);initialized = true;
+markRendered();
+last=performance.now();
+requestAnimationFrame(draw);
+function markRendered() {
+  if (contextLost || renderer.getContext().isContextLost() || host.dataset.rendered === 'true') return;
+  host.dataset.rendered = 'true';
+  host.dataset.loading = 'false';
+  notice.hidden = true;
+}
+} catch (error) {
+  console.warn('Olympic venue initialization failed', error);
+  showUnavailable('暂时无法显示 3D 场馆。你可以重新加载场馆，或继续浏览下面的内容。');
+}
+})();

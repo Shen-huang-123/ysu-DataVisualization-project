@@ -60,3 +60,28 @@ body .model-pin{left:0;top:0;will-change:transform}
 /* Never expose default lighting, unpositioned labels or partially prepared buffers. */
 body .model-stage:not([data-rendered="true"]) canvas,body .model-stage:not([data-rendered="true"]) .model-pin,body .model-stage:not([data-rendered="true"]) .model-life,body .model-stage:not([data-rendered="true"]) .model-controls,body .model-stage:not([data-rendered="true"]) .model-hint{visibility:hidden}
 body .model-stage .model-controls button,body .model-stage .model-life button{background:transparent!important;box-shadow:none!important;border-radius:0!important}
+
+.model-stage .model-load-notice {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  color: #eef3f3;
+  background: #11232d;
+}
+.model-stage .model-load-notice[hidden] { display: none; }
+.model-load-notice p { max-width: 28em; margin: 0; }
+.model-load-notice button {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  color: #f4d8a5;
+  background: transparent;
+  cursor: pointer;
+}
