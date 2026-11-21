@@ -251,7 +251,7 @@ function go(index){
  stopManual();stopAuto();
  if(reduce){scrollTo({top:target,behavior:'instant'});return}
  const travel={y:scrollY};
- manualTween=gsap.to(travel,{y:target,duration:4.8,ease:'power1.inOut',onUpdate:()=>scrollTo(0,travel.y),onComplete:()=>{manualTween=null;scheduleAuto()}});
+ manualTween=gsap.to(travel,{y:target,duration:2.8,ease:'power1.inOut',onUpdate:()=>scrollTo(0,travel.y),onComplete:()=>{manualTween=null;scheduleAuto()}});
 }
 addEventListener('pagehide',stopManual);
 steps.forEach(button=>button.addEventListener('click',()=>go(Number(button.dataset.voyageGo))));
