@@ -47,9 +47,33 @@ body.evidence-reading .wrap .cases .case { min-height:0; padding:20px 0; border:
 body.evidence-reading .wrap .case small { color:var(--sr-accent); }
 body.evidence-reading .wrap .case a { display:inline-flex; align-items:center; min-height:44px; }
 body.evidence-reading .wrap .conclusion { border-radius:0; background:color-mix(in srgb,var(--sr-accent) 9%,transparent); border-left:2px solid var(--sr-accent); margin-block:32px 54px; }
+body.evidence-reading .hero details.ex-route {
+  border: 0 !important;
+  border-block: 1px solid var(--route-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+  max-width: 740px;
+}
+body.evidence-reading .hero .ex-route > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 8px 0 !important;
+  list-style: none;
+  color: var(--route-accent);
+  cursor: pointer;
+}
+body.evidence-reading .hero .ex-route > summary::-webkit-details-marker { display: none; }
+body.evidence-reading .hero .ex-route > summary::after { content: '+'; font-size: 1.25em; }
+body.evidence-reading .hero .ex-route[open] > summary::after { content: '−'; }
+body.evidence-reading .hero .ex-route > nav { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)) !important; }
 </style></head><body class="supplement-reading evidence-reading"><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../作品总入口/index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../任务一_数据体检/index.html">01 数据体检</a><a href="../../任务二_百年全景/05_交互总览/index.html">02 百年全景</a><a href="../../任务三_专题深挖/统一中文入口/index.html">03 专题深挖</a><a href="../../任务四_开放创作/index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../任务一_数据体检/index.html">数据体检</a><a href="../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../任务三_专题深挖/统一中文入口/index.html">专题深挖</a><a href="../../任务四_开放创作/index.html">洛杉矶2028</a></aside>
 <div class="wrap"><nav class="top"><a href="../../作品总入口/index.html">← 返回实验室</a><a href="../报告/百年圣火_正式报告.pdf">统一报告 ↗</a></nav>
-<header class="hero"><div class="eyebrow">证据等级与历史反例</div><h1>巴黎 2024 支撑主结论，历史案例检验其稳健性</h1><p>同一套奖牌排序规则下，西班牙的巴黎金牌名次由小项口径第15变成运动员行口径第5。三届历史资料用于检查这种重排机制是否脆弱；它们没有被写成现行IOC逐项授牌。</p><nav class="reading-jumps" aria-label="本页导航"><a href="#evidence-figure">证据等级图 ↓</a><a href="#cases-title">七处历史差异 ↓</a></nav></header>
+<header class="hero"><div class="eyebrow">证据等级与历史反例</div><h1>巴黎 2024 支撑主结论，历史案例检验其稳健性</h1><div data-ex-route-slot></div><p>同一套奖牌排序规则下，西班牙的巴黎金牌名次由小项口径第15变成运动员行口径第5。三届历史资料用于检查这种重排机制是否脆弱；它们没有被写成现行IOC逐项授牌。</p><nav class="reading-jumps" aria-label="本页导航"><a href="#evidence-figure">证据等级图 ↓</a><a href="#cases-title">七处历史差异 ↓</a></nav></header>
 <div class="figure" id="evidence-figure"><section class="evidence-overview" aria-labelledby="overview-title">
 <h2 id="overview-title">三层证据各回答什么？</h2>
 <div class="evidence-levels">
@@ -70,6 +94,6 @@ body.evidence-reading .wrap .conclusion { border-radius:0; background:color-mix(
 <aside class="conclusion"><strong>结论经受了这两项已知事后变化的挑战。</strong><p>代入重分配后，2008名次不变，2012只有两队各变一位，两届前十集合都不变。这是局部敏感性检查；未核的其他历史小项依然保留代理标记。核心口径重排的正式论证仍以巴黎2024逐项结果层和同届运动员记录为主。</p></aside>
 <footer class="foot">数据与限制：2024逐项结果层、赛题运动员记录、Olympedia公开奖牌表、赛时成绩册和明确的后续裁决分层使用。<a href="../../任务三_专题深挖/S2_口径的魔力/08_逐项外部核验/Olympedia独立交叉核验/历史555项独立交叉对照.csv">555项对照表</a> · <a href="../00_先看这里.html">最终提交材料</a></footer></div>
 <script>document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const kind=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelectorAll('.case').forEach(card=>card.hidden=kind!=='all'&&card.dataset.kind!==kind)}));</script>
-<script defer="" src="../../共享组件/exploration-design.js?v=20261115-controls"></script>
+<script defer="" src="../../共享组件/exploration-design.js?v=20261121-route"></script>
 <script defer="" src="../../共享组件/olympic-atmosphere.js?v=1"></script>
 </body></html>
