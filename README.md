@@ -549,3 +549,5 @@ LA28 资格快照公开逐席台账和官方最终报名节点，分别显示已
 预测主榜旁展示2024留出误差、区间实测覆盖和资格台账；历史主报告并列芬兰金牌补录及伦敦划艇递补案例。重建页面后运行 publish_review_readouts.py。
 
 本地正式答卷 PDF 已移出末页提交核对清单并验为20页，Word重导出后运行 check_answer_pdf_page_limit.py，提交前检查独立维护。
+
+A–D八张核心图已重绘并同步四视角复核页。先生成任务二数据，再运行 publish_task2_core_figures.py。任务二专题 PDF 与20页模板答卷在本地同步；模板答卷重导出后先查页数，再运行 sync_task2_answer_pdf_figures.py。
