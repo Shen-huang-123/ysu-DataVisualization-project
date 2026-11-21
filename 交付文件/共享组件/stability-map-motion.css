@@ -1,0 +1,43 @@
+/* Keep the moving light at the edges of the topic index. */
+body.stability-map-motion .oa-world {
+  --portal-blue: #5ca39c55;
+  --portal-gold: #cf9d5950;
+  background: none;
+}
+body.stability-map-motion .oa-world[data-night="true"] {
+  --portal-blue: #4aa8b34d;
+  --portal-gold: #d6a26442;
+}
+body.stability-map-motion .oa-world .oa-landscape,
+body.stability-map-motion .oa-world .oa-light {
+  display: none;
+}
+body.stability-map-motion .oa-world::before,
+body.stability-map-motion .oa-world::after {
+  content: "";
+  position: absolute;
+  width: 52vw;
+  height: 90vh;
+  border-radius: 50%;
+  animation: topic-aurora-drift 17s ease-in-out infinite alternate;
+}
+body.stability-map-motion .oa-world::before {
+  top: -28vh;
+  left: -29vw;
+  background: radial-gradient(ellipse, var(--portal-blue), transparent 70%);
+}
+body.stability-map-motion .oa-world::after {
+  bottom: -30vh;
+  right: -28vw;
+  background: radial-gradient(ellipse, var(--portal-gold), transparent 70%);
+  animation-duration: 23s;
+  animation-direction: alternate-reverse;
+}
+@keyframes topic-aurora-drift {
+  from { transform: translateY(-7vh) scale(0.96); opacity: .55; }
+  to { transform: translateY(22vh) scale(1.3); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.stability-map-motion .oa-world::before,
+  body.stability-map-motion .oa-world::after { animation: none; }
+}

@@ -12,4 +12,11 @@ for r in rows:
  status=r['状态'];tone='sensitive' if status=='口径敏感' else 'uncertain'
  parts.append(f'<a class="stability-row {tone}" href="../{escape(r["证据入口"],quote=True)}"><span class="stability-code">{escape(r["专题"])}</span><span>{escape(r["未经检验的直觉"])}</span><span class="stability-status">{escape(status)} <span aria-hidden="true">↗</span></span></a>')
 parts.append('</div><p class="stability-download"><a href="结论稳定性地图.png" download>下载原始地图 PNG ↓</a> · 分类是证据状态，不是专题质量评分。</p></section>')
-target.replace_with(BeautifulSoup(''.join(parts),'html.parser'));p.write_text(str(s),'utf-8')
+target.replace_with(BeautifulSoup(''.join(parts),'html.parser'))
+s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['stability-map-motion']))
+link=s.select_one('#stability-map-motion-style')
+if link is None:
+ link=s.new_tag('link',id='stability-map-motion-style',rel='stylesheet')
+ s.head.append(link)
+link['href']='../../共享组件/stability-map-motion.css?v=1'
+p.write_text(str(s),'utf-8')
