@@ -617,10 +617,11 @@ html body.la-news-reading #主场 #主场图 tbody td:last-child {
 }
 
 html body.la-news-reading #验证 {
+  min-height: 0 !important;
   width: 100%;
   max-width: none !important;
   box-sizing: border-box;
-  padding: clamp(26px, 5vw, 64px) 0 !important;
+  padding: clamp(26px, 5vw, 64px) 0 24px !important;
 }
 html body.la-news-reading #验证 > h2 {
   font-size: clamp(28px, 3.3vw, 52px) !important;
@@ -644,7 +645,7 @@ html body.la-news-reading #验证 > .导语 {
 html body.la-news-reading #legacy-scenarios > .news-source-review {
   box-sizing: border-box;
   max-width: none;
-  margin: 0 0 24px;
+  margin: 20px 0 24px !important;
   padding: 16px clamp(14px, 2vw, 24px);
   background: color-mix(in srgb, var(--news-link) 8%, transparent) !important;
   border: 0;
