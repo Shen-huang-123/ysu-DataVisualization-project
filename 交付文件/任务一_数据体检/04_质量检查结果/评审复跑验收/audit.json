@@ -1,0 +1,103 @@
+{
+  "sha256": "3d3c716f8e2c082c0f8c36c45b64997d3c8edba4ef3df222acfcf44fb5e298a9",
+  "shape": [
+    252565,
+    11
+  ],
+  "columns": [
+    "player_id",
+    "Name",
+    "Sex",
+    "Team",
+    "NOC",
+    "Year",
+    "Season",
+    "City",
+    "Sport",
+    "Event",
+    "Medal"
+  ],
+  "missing": {
+    "player_id": 0,
+    "Name": 0,
+    "Sex": 0,
+    "Team": 0,
+    "NOC": 0,
+    "Year": 0,
+    "Season": 0,
+    "City": 0,
+    "Sport": 0,
+    "Event": 0,
+    "Medal": 0
+  },
+  "distinct": {
+    "player_id": 235903,
+    "Name": 129992,
+    "Sex": 2,
+    "Team": 1193,
+    "NOC": 234,
+    "Year": 31,
+    "Season": 1,
+    "City": 23,
+    "Sport": 76,
+    "Event": 1041,
+    "Medal": 4
+  },
+  "exact_duplicate_rows": 0,
+  "duplicates_without_id": 1466,
+  "medals": {
+    "No medal": 213747,
+    "Bronze": 13070,
+    "Gold": 13002,
+    "Silver": 12746
+  },
+  "years": [
+    1896,
+    1900,
+    1904,
+    1906,
+    1908,
+    1912,
+    1920,
+    1924,
+    1928,
+    1932,
+    1936,
+    1948,
+    1952,
+    1956,
+    1960,
+    1964,
+    1968,
+    1972,
+    1976,
+    1980,
+    1984,
+    1988,
+    1992,
+    1996,
+    2000,
+    2004,
+    2008,
+    2012,
+    2016,
+    2020,
+    2024
+  ],
+  "sex": {
+    "M": 178544,
+    "F": 74021
+  },
+  "season": {
+    "Summer": 252565
+  },
+  "comma_sport_rows": 89,
+  "generic_event_rows_strict_list": 6072,
+  "medal_rows_1906": 458,
+  "cities_1956": {
+    "Melbourne": 4829,
+    "Stockholm": 298
+  },
+  "id_multiple_names": 12883,
+  "names_spanning_over_40_years": 670
+}

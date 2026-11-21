@@ -1132,3 +1132,5 @@ LA28 资格快照公开逐席台账和官方最终报名节点，分别显示已
 本地正式答卷 PDF 已移出末页提交核对清单并验为20页，Word重导出后运行 check_answer_pdf_page_limit.py，提交前检查独立维护。
 
 A–D八张核心图已重绘并同步四视角复核页。先生成任务二数据，再运行 publish_task2_core_figures.py。任务二专题 PDF 与20页模板答卷在本地同步；模板答卷重导出后先查页数，再运行 sync_task2_answer_pdf_figures.py。
+
+评审复跑用赛题CSV隔离执行任务一审计和归一，再核对关键数字与63/75公斤、芬兰金牌样例。运行 run_judge_data_audit.py；从 Q1–Q6 复核索引进入六项验收。
