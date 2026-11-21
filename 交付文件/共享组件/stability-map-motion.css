@@ -42,37 +42,50 @@ body.stability-map-motion .oa-world::after {
   body.stability-map-motion .oa-world::after { animation: none; }
 }
 
-/* The experiment link is the primary action; filters retain their pressed state. */
-body.stability-map-motion main .stability-experiment,
-body.stability-map-motion main .filters button[data-filter] {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 9px 16px;
-  border: 1px solid color-mix(in srgb, currentColor 33%, transparent);
-  border-radius: 8px;
-  font-weight: 600;
-}
 body.stability-map-motion main .stability-experiment {
-  background: color-mix(in srgb, var(--sr-accent) 16%, transparent);
-  color: var(--sr-ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-inline-size: 34rem;
+  min-height: 52px;
+  padding: 10px 14px 10px 0;
+  border-block: 1px solid color-mix(in srgb, var(--sr-accent) 42%, transparent);
+  color: var(--sr-accent);
+  font-weight: 600;
   text-decoration: none;
 }
+body.stability-map-motion main .stability-experiment:hover {
+  background: color-mix(in srgb, var(--sr-accent) 9%, transparent);
+  border-color: var(--sr-accent);
+}
+body.stability-map-motion .stability-experiment span {
+  flex: none;
+  font-size: 1.15em;
+}
 body.stability-map-motion main .filters {
-  gap: 8px;
+  display: flex;
+  gap: clamp(4px, 2vw, 24px);
   flex-wrap: wrap;
+  padding-block: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--sr-muted) 28%, transparent);
 }
 body.stability-map-motion main .filters button[data-filter] {
+  min-height: 44px;
+  padding: 8px clamp(4px, 1vw, 12px);
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
   background: transparent;
   color: var(--sr-muted);
+  font-weight: 500;
+  box-shadow: none;
 }
-body.stability-map-motion main .stability-experiment:hover,
 body.stability-map-motion main .filters button[data-filter]:hover {
-  border-color: var(--sr-accent);
   color: var(--sr-ink);
 }
-body.stability-map-motion main .filters button[aria-pressed="true"] {
-  background: color-mix(in srgb, var(--sr-accent) 14%, transparent);
-  border-color: var(--sr-accent);
-  color: var(--sr-ink);
+body.stability-map-motion main .filters button[data-filter][aria-pressed="true"] {
+  border-bottom-color: var(--sr-accent);
+  color: var(--sr-accent);
+  font-weight: 650;
 }
