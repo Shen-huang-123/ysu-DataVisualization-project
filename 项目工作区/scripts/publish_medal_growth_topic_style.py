@@ -9,7 +9,7 @@ if not h.select_one('.growth-photo'):
  img=s.new_tag('img',attrs={'class':'growth-photo','src':'../媒体/growth.jpg','alt':'1896年雅典奥运会体育场历史照片，场景配图','fetchpriority':'high'});h.insert(0,img)
 link=s.select_one('#medal-growth-style')
 if not link:link=s.new_tag('link',id='medal-growth-style',rel='stylesheet');s.head.append(link)
-link['href']='../../共享组件/medal-growth-topic.css?v=4'
+link['href']='../../共享组件/medal-growth-topic.css?v=5'
 bridge=s.select_one('.task3-depth-bridge')
 if bridge:
  metrics=bridge.select_one('h2 + div')

@@ -1,6 +1,6 @@
 html body.medal-growth-topic{--bg:#392e28;--a:#b2693e;--p:#f2eee6;--growth-line:#927e6340;background:var(--p)!important;color:var(--bg)!important;padding-top:0!important}
 html body.medal-growth-topic.xz-dark{--bg:#eee8df;--p:#182127;--a:#dcaa7d;--growth-line:#c4b59d35}
-html body.medal-growth-topic #medal-growth-hero{position:relative;isolation:isolate;min-height:88vh!important;display:flex!important;justify-content:center!important;align-items:flex-start!important;padding:150px 7vw 100px!important;clip-path:none!important;border:0!important;border-radius:0!important;background:#242723!important;color:#fff!important}
+html body.medal-growth-topic #medal-growth-hero{position:relative;isolation:isolate;min-height:100vh!important;min-height:100svh!important;margin-top:0!important;box-sizing:border-box!important;display:flex!important;justify-content:center!important;align-items:flex-start!important;padding:150px 7vw 100px!important;clip-path:none!important;border:0!important;border-radius:0!important;background:#242723!important;color:#fff!important}
 html body.medal-growth-topic #medal-growth-hero>.growth-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:none!important}
 html body.medal-growth-topic #medal-growth-hero:before{content:''!important;display:block!important;position:absolute;inset:0;background:linear-gradient(90deg,#18201de8,#18201d75 65%,#18201d35)!important;z-index:-1;border:0!important;border-radius:0!important}
 html body.medal-growth-topic #medal-growth-hero:after,html body.medal-growth-topic #medal-growth-hero>.ed-rings-scene,html body.medal-growth-topic .oa-world{display:none!important}
@@ -27,7 +27,7 @@ html body.medal-growth-topic .method,html body.medal-growth-topic .evidence{gap:
 html body.medal-growth-topic .evidence article{padding:26px 0!important;border:0!important;border-top:1px solid var(--a)!important;border-radius:0!important;background:transparent!important;color:var(--bg)!important;box-shadow:none!important;transform:none!important}
 html body.medal-growth-topic .evidence span{color:var(--a)!important}
 html body.medal-growth-topic footer{padding:30px 7vw!important;background:transparent!important;color:var(--bg)!important;border-top:1px solid var(--growth-line)!important}
-@media(max-width:800px){html body.medal-growth-topic #medal-growth-hero{min-height:720px!important;padding:130px 24px 70px!important}html body.medal-growth-topic main{padding:40px 24px!important}html body.medal-growth-topic .viz{grid-template-columns:1fr!important;gap:28px!important}html body.medal-growth-topic .viz aside{position:static!important;grid-row:1}html body.medal-growth-topic .method,html body.medal-growth-topic .evidence{grid-template-columns:1fr!important}html body.medal-growth-topic .photo-stage{padding:18px 24px!important}}
+@media(max-width:800px){html body.medal-growth-topic #medal-growth-hero{padding:130px 24px 70px!important}html body.medal-growth-topic main{padding:40px 24px!important}html body.medal-growth-topic .viz{grid-template-columns:1fr!important;gap:28px!important}html body.medal-growth-topic .viz aside{position:static!important;grid-row:1}html body.medal-growth-topic .method,html body.medal-growth-topic .evidence{grid-template-columns:1fr!important}html body.medal-growth-topic .photo-stage{padding:18px 24px!important}}
 /* The session lens belongs to the page, rather than a separate blue card. */
 html body.medal-growth-topic .ex-growth{--ex-ink:var(--bg);--ex-paper:var(--p);--ex-line:var(--growth-line);--ex-accent:var(--a);padding:24px 0!important;margin:0 0 28px!important;border:0!important;border-top:1px solid var(--growth-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:var(--bg)!important}
 html body.medal-growth-topic .ex-growth h3{font-size:26px!important;font-weight:500!important;line-height:1.5!important}
@@ -61,3 +61,9 @@ html body.medal-growth-topic>a.research-proof-link h2,html body.medal-growth-top
 @media(max-width:650px){html body.medal-growth-topic .growth-metrics{grid-template-columns:1fr!important;gap:8px!important}html body.medal-growth-topic .task3-depth-bridge{padding:36px 24px!important}}
 /* Decorative particles must never extend the document scroll area. */
 html body.medal-growth-topic>.ed-particles{position:fixed!important;inset:0!important;width:100%!important;height:100vh!important;max-height:100vh!important;overflow:hidden!important;pointer-events:none!important}
+
+html body.medal-growth-topic #xz-nav{
+ background:linear-gradient(180deg,#10191eee,#10191eaa)!important;
+ box-shadow:none!important;
+}
+html body.medal-growth-topic #xz-nav :is(a,button){color:#f3f5f4!important}
