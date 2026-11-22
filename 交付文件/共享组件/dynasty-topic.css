@@ -24,9 +24,9 @@ html body.dynasty-topic .轴 .填充{box-sizing:border-box;background:transparen
 html body.dynasty-topic{--纸:#edf2ef;--墨:#203b42;--金:#b59b68;--线:#829a9b40;background:var(--纸)!important;color:var(--墨)!important;padding-top:0!important}
 html body.dynasty-topic.xz-dark{--纸:#152129;--墨:#e8efec;--线:#a3b8b52c}
 html body.dynasty-topic .oa-world,html body.dynasty-topic>header>.immersive-float-layer,html body.dynasty-topic:before{display:none!important}
-html body.dynasty-topic>header{position:relative;isolation:isolate;min-height:800px;padding:160px 7vw 90px!important;background:linear-gradient(90deg,#102129ed,#10212960),url('../任务三_专题深挖/媒体/dynasty.jpg') center/cover!important;color:#fff!important;border:0!important}
+html body.dynasty-topic>header{position:relative;isolation:isolate;min-height:100vh!important;min-height:100svh!important;height:auto!important;max-height:none!important;box-sizing:border-box;margin:0!important;padding:160px 7vw 90px!important;background:linear-gradient(to bottom,transparent 57%,var(--纸) 100%),linear-gradient(90deg,#102129ed,#10212960),url('../任务三_专题深挖/媒体/dynasty.jpg') center/cover!important;color:#fff!important;border:0!important}
 html body.dynasty-topic>header:before{display:none!important}
-html body.dynasty-topic>header:after{content:''!important;position:absolute;inset:75% 0 0;background:linear-gradient(transparent,var(--纸));z-index:-1}
+html body.dynasty-topic>header::after{display:none!important;content:none!important}
 html body.dynasty-topic header h1{font-family:inherit!important;font-size:clamp(48px,6.5vw,92px)!important;font-weight:500!important;line-height:1.2!important;margin:24px 0!important;letter-spacing:-.03em}
 html body.dynasty-topic .眉题{font-size:13px!important;color:#dfc997!important;font-weight:500!important}
 html body.dynasty-topic .导语{font-size:18px!important;line-height:1.95!important;max-width:46em}
@@ -50,4 +50,7 @@ html body.dynasty-topic .进度{background:transparent!important;border-radius:0
 html body.dynasty-topic .填充{background:transparent!important;border:1px solid #b59b68a0;border-radius:0!important}
 html body.dynasty-topic .说明,html body.dynasty-topic .task3-depth-bridge{background:transparent!important;color:var(--墨)!important;border:0!important;border-top:1px solid var(--线)!important;border-radius:0!important;padding:40px 7vw!important;line-height:1.95}
 html body.dynasty-topic h2{font-size:clamp(25px,2.8vw,38px)!important;font-weight:500!important;line-height:1.55!important}
-@media(max-width:700px){html body.dynasty-topic>header{padding:140px 24px 80px!important;min-height:780px}html body.dynasty-topic .数据卡{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}html body.dynasty-topic .大数{font-size:26px!important}html body.dynasty-topic .卡{font-size:11px!important}html body.dynasty-topic main,html body.dynasty-topic .说明,html body.dynasty-topic .task3-depth-bridge{padding-inline:24px!important}html body.dynasty-topic .控制 select{min-width:0;flex:1 1 140px}}
+@media(max-width:700px){html body.dynasty-topic>header{padding:140px 24px 80px!important}html body.dynasty-topic .数据卡{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}html body.dynasty-topic .大数{font-size:26px!important}html body.dynasty-topic .卡{font-size:11px!important}html body.dynasty-topic main,html body.dynasty-topic .说明,html body.dynasty-topic .task3-depth-bridge{padding-inline:24px!important}html body.dynasty-topic .控制 select{min-width:0;flex:1 1 140px}}
+
+html body.dynasty-topic #xz-nav{background:linear-gradient(180deg,#10191eee,#10191eaa)!important;box-shadow:none!important}
+html body.dynasty-topic #xz-nav :is(a,button){color:#f3f5f4!important}
