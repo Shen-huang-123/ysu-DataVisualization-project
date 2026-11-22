@@ -8,7 +8,7 @@ s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['host-topic']))
 link=s.select_one('#host-topic-style')
 if not link:
  link=s.new_tag('link',id='host-topic-style',rel='stylesheet');s.head.append(link)
-link['href']='../../共享组件/host-topic.css?v=5'
+link['href']='../../共享组件/host-topic.css?v=6'
 for preload in s.select('link[rel="preload"][as="image"]'):
  preload['href']='../媒体/host.jpg'
 hero=s.select_one('.s1-hero')
