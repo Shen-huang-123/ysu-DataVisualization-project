@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 root=Path(__file__).resolve().parents[2]
 p=root/'交付文件/任务三_专题深挖/S2_口径的魔力/09_奖牌口径实验室/index.html'
 s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
+s.select_one('main.grid')['data-medal-route']=''
 style=s.select_one('#medal-lab-background')
 if not style:
  style=s.new_tag('style',id='medal-lab-background');s.head.append(style)
@@ -76,13 +77,24 @@ html body #rank-discovery h2{font-size:1.05rem;margin:0 0 8px}
 html body main.grid{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(320px,1fr);align-items:start;gap:clamp(24px,3vw,48px)!important;min-width:0!important}
 html body main.grid>.panel{width:100%!important;max-width:none!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:20px 0!important;border-top:2px solid #6a8a96!important}
 html body main.grid>.ex-route{grid-column:1/-1;order:1;width:100%!important;margin:0!important;min-height:0!important}
-html body main.grid>details.ex-route{
- --route-ink:#f3f5f2;--route-muted:#d5e0e3;--route-line:#607782;--route-accent:#ebce91;
- background:#202e37!important;padding-inline:clamp(14px,2vw,26px)!important;
+html body main.grid>.medal-route{
+ --route-ink:#f3f5f2;--route-muted:#c5d1d5;--route-line:#607782;--route-accent:#ebce91;
+ background:transparent!important;border:0;border-top:1px solid var(--route-line);
+ border-radius:0;padding:14px 0 0!important;
 }
-html body main.grid>details.ex-route>summary{color:var(--route-ink)!important;font-size:16px!important;font-weight:700!important}
-html body main.grid>details.ex-route>summary::after{content:'展开 +';font:600 14px/1.5 'Microsoft YaHei',sans-serif}
-html body main.grid>details.ex-route[open]>summary::after{content:'收起 −'}
+html body main.grid>.medal-route h2{font-size:.9rem;margin:0;color:var(--route-muted)}
+html body main.grid>.medal-route>nav{
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ gap:6px 24px!important;margin:8px 0 10px!important;
+}
+html body main.grid>.medal-route>nav>a{
+ border:0!important;padding:8px 0!important;font-size:1rem;text-decoration:underline;
+ text-decoration-color:#607782;text-underline-offset:5px;
+}
+html body main.grid>.medal-route .ex-tools{margin-bottom:0!important}
+@media(max-width:540px){
+ html body main.grid>.medal-route>nav{grid-template-columns:1fr!important;gap:0!important}
+}
 html body main.grid>.case{min-height:0!important;border-top-color:#ebce91!important}
 html body .case .shift strong{color:#ebce91;font-variant-numeric:tabular-nums}
 html body #medal-rank-comparison{margin:0 0 18px;padding:12px 0;border-block:1px solid #526771}

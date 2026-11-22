@@ -57,7 +57,11 @@
  // A route derived from this page's actual sections, not a second site-wide menu.
  const headings=[...main.querySelectorAll('h2')].filter(h=>!h.closest('nav,dialog,[hidden],.xz-explore')&&!h.textContent.includes('探索全部作品'));
  if(headings.length>1&&!document.body.classList.contains('narrative-module')){
-  const route=element('details',null,'ex-route'),summary=element('summary','本页探索路线 · '+headings.length+' 站'),list=element('nav');list.setAttribute('aria-label','本页章节');route.append(summary,list);
+  const inlineRoute=main.hasAttribute('data-medal-route');
+  const route=element(inlineRoute?'section':'details',null,inlineRoute?'ex-route medal-route':'ex-route');
+  const summary=inlineRoute?element('h2','本页探索路线'):element('summary','本页探索路线 · '+headings.length+' 站');
+  const routeLabels={'chart-title':'奖牌榜','rank-feedback-title':'口径切换结果','case-name':'代表团与剔除实验'};
+  const list=element('nav');list.setAttribute('aria-label','本页章节');route.append(summary,list);
   const controls=element('div',null,'ex-tools'),save=element('button','记录当前筛选'),restore=element('button','恢复已记视图'),status=element('output');save.type=restore.type='button';controls.append(save,restore,status);route.append(controls);
   const fields=()=>[...main.querySelectorAll('select,input[type="range"],input[type="checkbox"],input[type="radio"]')].filter(e=>!route.contains(e));
   if(!fields().length)controls.remove();
@@ -65,7 +69,7 @@
   save.onclick=()=>{snapshot=fields().map(e=>({value:e.value,checked:e.checked}));try{sessionStorage.setItem('ex-view:'+path,JSON.stringify(snapshot))}catch(e){}restore.disabled=false;status.textContent='已记录本页 '+snapshot.length+' 个筛选条件'};
   restore.onclick=()=>{if(!snapshot)return;fields().forEach((e,i)=>{if(!snapshot[i])return;e.value=snapshot[i].value;if(e.type==='checkbox'||e.type==='radio')e.checked=snapshot[i].checked;e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}))});status.textContent='已恢复记录的筛选条件'};
 
-  headings.forEach((h,i)=>{if(!h.id)h.id='ex-section-'+i;const a=element('a',String(i+1).padStart(2,'0')+'  '+h.textContent.trim());a.href='#'+h.id;a.onclick=e=>{e.preventDefault();h.scrollIntoView({behavior:reduce?'instant':'smooth',block:'start'});if(innerWidth<650)route.open=false};list.append(a)});
+  headings.forEach((h,i)=>{if(!h.id)h.id='ex-section-'+i;const label=inlineRoute?(routeLabels[h.id]||h.textContent.trim()):String(i+1).padStart(2,'0')+'  '+h.textContent.trim();const a=element('a',label);a.href='#'+h.id;a.onclick=e=>{e.preventDefault();h.scrollIntoView({behavior:reduce?'instant':'smooth',block:'start'});if(!inlineRoute&&innerWidth<650)route.open=false};list.append(a)});
   const anchor=document.body.classList.contains('medal-lens-topic')?(main.querySelector('.photo-stage')||main.querySelector('header.hero')):(main.querySelector('.insight')||main.firstElementChild);const slot=main.querySelector('[data-ex-route-slot]');if(slot)slot.replaceWith(route);else anchor?.after(route);
  }
  if(!reduce&&'IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ex-entered');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.ex-design').forEach(e=>{e.classList.add('ex-motion');io.observe(e)})}
