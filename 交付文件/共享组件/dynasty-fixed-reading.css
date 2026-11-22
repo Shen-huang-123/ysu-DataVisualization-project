@@ -22,10 +22,10 @@ html body.xz-dark .dynasty-fixed-reading .grid .card b{color:#edf3f2!important}
 html body.xz-dark .dynasty-fixed-reading .grid .card:last-child b{color:#e5cc9b!important}
 html body .dynasty-fixed-reading>img.dynasty-fixed-trend{
  display:block;width:100%;height:auto;border:0!important;border-radius:0!important;
- background:transparent!important;box-shadow:none!important;mix-blend-mode:multiply!important;
+ background:transparent!important;box-shadow:none!important;mix-blend-mode:normal!important;
 }
 html body.xz-dark .dynasty-fixed-reading>img.dynasty-fixed-trend{
- filter:invert(1) hue-rotate(180deg) contrast(1.12)!important;mix-blend-mode:screen!important;
+ filter:invert(1) hue-rotate(180deg) contrast(1.12)!important;mix-blend-mode:normal!important;
 }
 @media(max-width:700px){
  html body .dynasty-fixed-reading h1 br{display:initial}
