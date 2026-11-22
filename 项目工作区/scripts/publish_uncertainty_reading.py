@@ -43,7 +43,7 @@ for cell in s.main.select('th,td'):
 for table in s.main.select('.supp-table'):
  table['aria-label']='三方案敏感性复算数据表'
 s.body['class']=s.body.get('class',[])+['flagship-reading','uncertainty-reading']
-s.head.append(s.new_tag('link',rel='stylesheet',href='../../../../共享组件/flagship-reading.css?v=uncertainty-layout-2'))
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../../../共享组件/flagship-reading.css?v=uncertainty-motion-3'))
 article=s.main.article
 outline=s.new_tag('nav',attrs={'class':'uncertainty-outline','aria-label':'报告目录'})
 heading=s.new_tag('strong')

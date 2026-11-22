@@ -72,3 +72,24 @@ html body.uncertainty-reading .supp-table :is(td,th).uncertainty-number{
 @media(max-width:650px){
  html body.uncertainty-reading .uncertainty-outline strong{flex-basis:100%}
 }
+
+html body.uncertainty-reading h2[id^="evidence-section-"]:target {
+  border-top-color:var(--sr-accent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:has(body.uncertainty-reading) { scroll-behavior:smooth }
+  html body.uncertainty-reading .uncertainty-outline a {
+    transition:color 160ms ease,text-decoration-color 160ms ease;
+  }
+  html body.uncertainty-reading .uncertainty-outline a:hover { color:var(--sr-ink) }
+  html body.uncertainty-reading h2[id^="evidence-section-"]:target {
+    animation:uncertainty-section-arrival 1.15s ease-out both;
+  }
+}
+@keyframes uncertainty-section-arrival {
+  from {background-color:color-mix(in srgb,var(--sr-accent) 14%,transparent)}
+  to {background-color:transparent}
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(body.uncertainty-reading) { scroll-behavior:auto!important }
+}
