@@ -53,3 +53,22 @@ html[data-supp-theme=dark] body.supplement-reading.uncertainty-reading {
 @media print {
   html body.supplement-reading.uncertainty-reading { background-image: none !important; }
 }
+
+html body.uncertainty-reading .method-reading h1{max-width:22ch!important;text-wrap:balance}
+html body.uncertainty-reading .method-reading>p{max-width:76ch!important}
+html body.uncertainty-reading .uncertainty-outline{
+ display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 22px;
+ padding:14px 0;margin:26px 0 36px;border-block:1px solid var(--sr-line);
+}
+html body.uncertainty-reading .uncertainty-outline a{display:inline-block;padding:6px 0;font-size:14px}
+html body.uncertainty-reading h2[id^="evidence-section-"]{scroll-margin-top:96px}
+html body.uncertainty-reading .supp-table thead th{
+ background:color-mix(in srgb,var(--sr-ink) 7%,var(--sr-paper))!important;
+ font-weight:600!important;color:var(--sr-ink)!important;
+}
+html body.uncertainty-reading .supp-table :is(td,th).uncertainty-number{
+ text-align:right!important;font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+@media(max-width:650px){
+ html body.uncertainty-reading .uncertainty-outline strong{flex-basis:100%}
+}

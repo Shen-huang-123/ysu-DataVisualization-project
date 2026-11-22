@@ -43,7 +43,27 @@ for cell in s.main.select('th,td'):
 for table in s.main.select('.supp-table'):
  table['aria-label']='三方案敏感性复算数据表'
 s.body['class']=s.body.get('class',[])+['flagship-reading','uncertainty-reading']
-s.head.append(s.new_tag('link',rel='stylesheet',href='../../../../共享组件/flagship-reading.css?v=uncertainty-background-1'))
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../../../共享组件/flagship-reading.css?v=uncertainty-layout-2'))
+article=s.main.article
+outline=s.new_tag('nav',attrs={'class':'uncertainty-outline','aria-label':'报告目录'})
+heading=s.new_tag('strong')
+heading.string='报告目录'
+outline.append(heading)
+for index, chapter in enumerate(article.find_all('h2',recursive=False),1):
+ chapter['id']=f'evidence-section-{index}'
+ link=s.new_tag('a',href=f'#evidence-section-{index}')
+ link.string=chapter.get_text(strip=True)
+ outline.append(link)
+article.h1.find_next_sibling('p').insert_after(outline)
+for table in article.select('table'):
+ headers=table.select('thead th')
+ rows=table.select('tbody tr')
+ for index, cell in enumerate(headers):
+  cell['scope']='col'
+  values=[row.find_all('td',recursive=False)[index] for row in rows]
+  if all(re.fullmatch(r'[+−-]?[0-9]+(?:[.,][0-9]+)*%?', value.get_text(strip=True)) for value in values):
+   cell['class']=['uncertainty-number']
+   for value in values:value['class']=['uncertainty-number']
 for a in s.select('#xz-nav .xz-links a'):
  a.attrs.pop('aria-current',None)
  if '任务三_专题深挖/统一中文入口/index.html' in a.get('href',''):a['aria-current']='page'
