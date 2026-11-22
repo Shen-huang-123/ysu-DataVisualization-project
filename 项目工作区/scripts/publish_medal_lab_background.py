@@ -73,6 +73,17 @@ html body main.grid>.panel{width:100%!important;max-width:none!important;backgro
 html body main.grid>.ex-route{grid-column:1/-1;order:-1;width:100%!important;margin:0!important;min-height:0!important}
 html body main.grid>.case{min-height:0!important;border-top-color:#ebce91!important}
 html body .case .shift strong{color:#ebce91;font-variant-numeric:tabular-nums}
+html body #medal-rank-comparison{margin:0 0 18px;padding:12px 0;border-block:1px solid #526771}
+html body #medal-rank-heading{font-size:1rem;margin:0 0 12px}
+.medal-rank-axis{display:flex;justify-content:space-between;margin-inline:6em 4.6em;color:#c0d0d4;font-size:.75rem}
+#medal-rank-comparison dl{margin:4px 0 0}
+#medal-rank-comparison dl>div{display:grid;grid-template-columns:5em minmax(0,1fr);gap:10px;align-items:center;padding:6px 0;font-size:.82rem}
+#medal-rank-comparison dd{display:grid;grid-template-columns:minmax(0,1fr) 4em;gap:10px;align-items:center;margin:0}
+#medal-rank-comparison b{text-align:end;font-variant-numeric:tabular-nums;white-space:nowrap}
+.medal-rank-track{position:relative;display:block;height:2px;background:#647b84}
+.medal-rank-track::after{content:"";position:absolute;top:50%;left:var(--position);width:9px;height:9px;border-radius:50%;background:#8bc7db;transform:translate(-50%,-50%)}
+#medal-rank-comparison .is-active{color:#ebce91;font-weight:700}
+#medal-rank-comparison .is-active .medal-rank-track::after{background:#ebce91}
 html body .metric-row{gap:0;border-block:1px solid #526771}
 html body .metric{min-width:0;border:0;border-radius:0;background:transparent;padding:10px 9px}
 html body .metric+.metric{border-inline-start:1px solid #526771}
@@ -102,6 +113,49 @@ if title:
  title.append('奖牌榜如何重排？')
 label=s.select_one('section.more .eyebrow')
 if label:label.string='证据与方法'
+comparison = s.select_one('#medal-rank-comparison')
+if not comparison:
+ comparison = BeautifulSoup("""<section id="medal-rank-comparison" aria-labelledby="medal-rank-heading" hidden>
+ <h3 id="medal-rank-heading">三种口径的名次</h3>
+ <div class="medal-rank-axis" aria-hidden="true"><span>第 1 名</span><span id="medal-rank-end"></span></div>
+ <dl>
+ <div data-rank-lens="official"><dt>官方小项</dt><dd><span class="medal-rank-track" aria-hidden="true"></span><b></b></dd></div>
+ <div data-rank-lens="fractional"><dt>团队内均分</dt><dd><span class="medal-rank-track" aria-hidden="true"></span><b></b></dd></div>
+ <div data-rank-lens="rows"><dt>运动员行</dt><dd><span class="medal-rank-track" aria-hidden="true"></span><b></b></dd></div>
+ </dl>
+ </section>""", 'html.parser').section
+ s.select_one('.case .shift').insert_after(comparison)
+behavior = s.select_one('#medal-rank-comparison-script')
+if not behavior:
+ behavior = s.new_tag('script', id='medal-rank-comparison-script')
+ s.body.append(behavior)
+behavior.string = """
+(() => {
+  const panel = document.getElementById('medal-rank-comparison');
+  const chooser = document.getElementById('case-select');
+  const {cases} = JSON.parse(document.getElementById('lab-data').textContent);
+  const byNoc = new Map(cases.map(item => [item.noc, item]));
+  const lenses = [...panel.querySelectorAll('[data-rank-lens]')];
+  const lastRank = Math.max(...cases.flatMap(item => lenses.map(row => item[row.dataset.rankLens].rank)));
+  document.getElementById('medal-rank-end').textContent = '第 ' + lastRank + ' 名';
+  function renderRanks() {
+    const item = byNoc.get(chooser.value);
+    if (!item) return;
+    for (const row of lenses) {
+      const lens = row.dataset.rankLens;
+      const rank = item[lens].rank;
+      const active = document.querySelector('[data-lens="' + lens + '"]').getAttribute('aria-pressed') === 'true';
+      row.classList.toggle('is-active', active);
+      row.querySelector('.medal-rank-track').style.setProperty('--position', (rank - 1) * 100 / Math.max(1, lastRank - 1) + '%');
+      row.querySelector('b').textContent = '第 ' + rank + ' 名';
+    }
+    panel.hidden = false;
+  }
+  chooser.addEventListener('change', renderRanks);
+  new MutationObserver(renderRanks).observe(document.getElementById('case-shift'), {childList:true, subtree:true});
+  renderRanks();
+})();
+"""
 p.write_text(str(s),encoding='utf-8')
 
 # Preserve conclusion-adjacent evidence notes after regeneration.
