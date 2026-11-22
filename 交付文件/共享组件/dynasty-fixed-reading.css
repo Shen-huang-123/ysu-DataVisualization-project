@@ -64,3 +64,18 @@ html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity p{max-widt
 html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity img{
  width:100%;max-width:none!important;mix-blend-mode:normal!important
 }
+
+/* Keep the background quiet beneath chart labels and evidence tables. */
+html body:has(>main.dynasty-fixed-reading){
+ --fixed-paper:#f1f3f0;--fixed-cool:#80afbd35;--fixed-warm:#c7a77924;
+ background:
+   radial-gradient(ellipse at 0 0,var(--fixed-cool),transparent 65%) 0 0/100% 760px no-repeat,
+   radial-gradient(ellipse at 100% 0,var(--fixed-warm),transparent 60%) 0 0/100% 620px no-repeat,
+   var(--fixed-paper)!important;
+}
+html body.xz-dark:has(>main.dynasty-fixed-reading){
+ --fixed-paper:#142129;--fixed-cool:#31657e5c;--fixed-warm:#a77c3d28;
+}
+html body:has(>main.dynasty-fixed-reading)>.oa-world,
+html body:has(>main.dynasty-fixed-reading)::before,
+html body:has(>main.dynasty-fixed-reading)::after{display:none!important}
