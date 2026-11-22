@@ -1,11 +1,11 @@
-html body.medal-lens-topic #medal-lens-hero{background:#102129!important;overflow:hidden!important}
+html body.medal-lens-topic #medal-lens-hero{background:var(--paper)!important;overflow:hidden!important;min-height:100vh!important;min-height:100svh!important;height:auto!important;max-height:none!important;box-sizing:border-box!important;margin:0!important;border:0!important;--lens-cover-mask:linear-gradient(to bottom,#000 70%,transparent)}
 html body.medal-lens-topic #medal-lens-hero>.medal-lens-photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;z-index:-2;opacity:1!important;filter:none!important}
 html body.medal-lens-topic #medal-lens-hero:before{content:''!important;display:block!important;position:absolute!important;inset:0!important;z-index:-1;background:linear-gradient(90deg,#102129cc 0%,#10212975 55%,#10212938 100%)!important;border:0!important;border-radius:0!important}
 html body.medal-lens-topic #medal-lens-hero>.ed-rings-scene{display:none!important}
 html body.medal-lens-topic{--paper:#edf2ef;--ink:#203b42;--gold:#b59b68;--line:#829a9b40;background:var(--paper)!important;color:var(--ink)!important;padding-top:0!important}
 html body.medal-lens-topic.xz-dark{--paper:#152129;--ink:#e8efec;--line:#a3b8b52c}
 html body.medal-lens-topic .oa-world,html body.medal-lens-topic>header>.immersive-float-layer,html body.medal-lens-topic:before{display:none!important}
-html body.medal-lens-topic .hero{position:relative;isolation:isolate;min-height:850px!important;padding:150px 7vw 110px!important;grid-template-columns:1.2fr .8fr!important;gap:7vw!important;background:linear-gradient(90deg,#102129ed,#10212985),url('../任务三_专题深挖/媒体/lens.jpg') center/cover!important;color:white!important}
+html body.medal-lens-topic .hero{position:relative;isolation:isolate;padding:150px 7vw 110px!important;grid-template-columns:1.2fr .8fr!important;gap:7vw!important;background:linear-gradient(90deg,#102129ed,#10212985),url('../任务三_专题深挖/媒体/lens.jpg') center/cover!important;color:white!important}
 html body.medal-lens-topic .hero:before{display:none!important}
 html body.medal-lens-topic .hero:after{content:'';position:absolute;inset:78% 0 0;background:linear-gradient(transparent,var(--paper));z-index:-1}
 html body.medal-lens-topic .hero h1{font-family:inherit!important;font-weight:500!important;font-size:clamp(46px,6.5vw,94px)!important;line-height:1.2!important;letter-spacing:-.03em}
@@ -30,7 +30,7 @@ html body.medal-lens-topic .fill{box-sizing:border-box;background:transparent!im
 html body.medal-lens-topic .year{padding:24px 0!important;background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important;line-height:1.9}
 html body.medal-lens-topic .year strong{font-size:42px!important;font-weight:500!important;color:var(--ink)!important}
 html body.medal-lens-topic footer{background:transparent!important;color:var(--ink)!important;border-top:1px solid var(--line);padding:32px 7vw!important}
-@media(max-width:850px){html body.medal-lens-topic .hero{grid-template-columns:1fr!important;min-height:800px!important;padding:130px 24px 80px!important;gap:28px!important}html body.medal-lens-topic .triptych{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px!important}html body.medal-lens-topic .lens b{font-size:26px!important}html body.medal-lens-topic section{padding:44px 24px!important}html body.medal-lens-topic .viz{position:relative;top:0;min-height:0}html body.medal-lens-topic .rankrow{grid-template-columns:28px 48px minmax(0,1fr) 48px;font-size:12px;gap:6px}}
+@media(max-width:850px){html body.medal-lens-topic .hero{grid-template-columns:1fr!important;padding:130px 24px 80px!important;gap:28px!important}html body.medal-lens-topic .triptych{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px!important}html body.medal-lens-topic .lens b{font-size:26px!important}html body.medal-lens-topic section{padding:44px 24px!important}html body.medal-lens-topic .viz{position:relative;top:0;min-height:0}html body.medal-lens-topic .rankrow{grid-template-columns:28px 48px minmax(0,1fr) 48px;font-size:12px;gap:6px}}
 /* Keep the in-page route in document flow, separate from the fixed site nav. */
 html body.medal-lens-topic details.ex-route{position:relative!important;inset:auto!important;margin:28px 7vw 36px!important;padding:0!important;border:0!important;border-block:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;z-index:1!important}
 html body.medal-lens-topic details.ex-route>summary{display:flex!important;align-items:center;justify-content:space-between;min-height:60px;padding:12px 0!important;list-style:none!important;color:var(--ink)!important;font-size:16px;cursor:pointer}
@@ -54,3 +54,9 @@ html body.medal-lens-topic .viz .controls button:focus-visible{outline:2px solid
 html body.medal-lens-topic .viz .track{height:12px!important;background:transparent!important;border:0!important;border-radius:0!important}
 html body.medal-lens-topic .viz .fill{background:#528c88!important;border:0!important;border-radius:0!important;box-shadow:none!important}
 html body.medal-lens-topic.xz-dark .viz .fill{background:#8ac4be!important}
+
+html body.medal-lens-topic #medal-lens-hero::after{display:none!important;content:none!important}
+html body.medal-lens-topic #medal-lens-hero::before,
+html body.medal-lens-topic #medal-lens-hero>.medal-lens-photo{mask-image:var(--lens-cover-mask)!important}
+html body.medal-lens-topic #xz-nav{background:linear-gradient(180deg,#10191eee,#10191eaa)!important;box-shadow:none!important}
+html body.medal-lens-topic #xz-nav :is(a,button){color:#f3f5f4!important}
