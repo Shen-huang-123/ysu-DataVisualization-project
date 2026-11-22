@@ -53,6 +53,18 @@ html body.ip-dynasty main table{width:100%!important;border-radius:0!important;b
 
 html body.ip-dynasty{--ds-bg:#f2f3ee;background:var(--ds-bg)!important;background-image:none!important}
 html body.ip-dynasty.xz-dark{--ds-bg:#182128;--ink:#edf3f2;--muted:#c0d0d4;background:var(--ds-bg)!important}
+
+html body.ip-dynasty{padding-top:0!important}
+html body.ip-dynasty header:is(.photo-editorial-hero,.photo-editorial-hero.image-stage){
+ min-height:100vh!important;min-height:100svh!important;
+ box-sizing:border-box!important;margin-top:0!important;
+ padding-top:clamp(88px,11vh,150px)!important;
+}
+html body.ip-dynasty #xz-nav{
+ background:linear-gradient(180deg,#10191eee,#10191eaa)!important;
+ box-shadow:none!important;
+}
+html body.ip-dynasty #xz-nav :is(a,button){color:#f3f5f4!important}
 html body.ip-dynasty .oa-world{display:none!important}
 html body.ip-dynasty::before,html body.ip-dynasty::after{background:none!important;box-shadow:none!important}
 html body.ip-dynasty header.photo-editorial-hero.image-stage::before{background:linear-gradient(0deg,var(--ds-bg),transparent 28%),linear-gradient(90deg,#07191fd9, #07191f55 58%,transparent)!important}
