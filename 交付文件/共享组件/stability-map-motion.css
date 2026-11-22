@@ -89,3 +89,20 @@ body.stability-map-motion main .filters button[data-filter][aria-pressed="true"]
   color: var(--sr-accent);
   font-weight: 650;
 }
+
+html body.stability-map-motion .stability-review{
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr) auto;
+ gap:clamp(18px,3vw,46px);align-items:start;padding:22px 0;border-bottom:1px solid var(--sr-line);
+}
+html body.stability-map-motion .stability-review h3{
+ font-size:clamp(17px,1.5vw,22px)!important;margin:6px 0 8px;line-height:1.5!important;
+}
+html body.stability-map-motion .stability-review .stability-status{font-size:.82rem}
+html body.stability-map-motion .stability-review-result p{margin:0 0 5px}
+html body.stability-map-motion .stability-review-result strong{color:var(--sr-ink)}
+html body.stability-map-motion .stability-review .stability-review-limit{font-size:.84rem}
+html body.stability-map-motion .stability-review-link{display:inline-block;min-height:44px;padding-block:10px;white-space:nowrap}
+@media(max-width:760px){
+ html body.stability-map-motion .stability-review{grid-template-columns:minmax(0,1fr);gap:8px}
+ html body.stability-map-motion .stability-review-link{justify-self:start}
+}
