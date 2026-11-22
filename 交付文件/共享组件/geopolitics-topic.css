@@ -60,3 +60,16 @@ html body.geopolitics-topic>header:before{display:block!important;background:lin
 html body.geopolitics-topic main :is(h2,h3){opacity:1!important;color:var(--vt-ink)!important;filter:none!important}
 html body.geopolitics-topic .olympic-selection-set{animation:none!important;outline:none!important}
 html body.geopolitics-topic .ex-design{outline:none!important}
+
+html body.geopolitics-topic{--vt-paper:#edf2ef;padding-top:0!important}
+html body.geopolitics-topic.xz-dark{--vt-paper:#152129}
+html body.geopolitics-topic>header{
+ --vt-cover-mask:linear-gradient(to bottom,#000 70%,transparent);
+ height:auto!important;min-height:100vh!important;min-height:100svh!important;
+ box-sizing:border-box!important;margin:0!important;border:0!important;
+ padding-block:100px max(90px,26svh)!important;background:var(--vt-paper)!important;
+}
+html body.geopolitics-topic>header::before,
+html body.geopolitics-topic>header>.geopolitics-photo{mask-image:var(--vt-cover-mask)!important}
+html body.geopolitics-topic #xz-nav{background:linear-gradient(180deg,#10191eee,#10191eaa)!important;box-shadow:none!important}
+html body.geopolitics-topic #xz-nav :is(a,button){color:#f3f5f4!important}

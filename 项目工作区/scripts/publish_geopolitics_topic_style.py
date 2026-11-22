@@ -4,7 +4,10 @@ ROOT=Path(__file__).resolve().parents[2]
 p=ROOT/'交付文件/任务三_专题深挖/S3_地缘政治的投影/index.html'
 s=BeautifulSoup(p.read_text(encoding='utf-8-sig'),'html.parser')
 s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['geopolitics-topic']))
-if not s.find('link',id='geopolitics-topic-style'):s.head.append(s.new_tag('link',id='geopolitics-topic-style',rel='stylesheet',href='../../共享组件/geopolitics-topic.css'))
+link=s.find('link',id='geopolitics-topic-style')
+if not link:
+ link=s.new_tag('link',id='geopolitics-topic-style',rel='stylesheet');s.head.append(link)
+link['href']='../../共享组件/geopolitics-topic.css?v=2'
 header=s.body.find('header',recursive=False);photo=s.select_one('figure.photo-stage')
 if photo and not header.select_one('.geopolitics-photo'):
  img=photo.img.extract();img['class']=['geopolitics-photo'];header.insert(0,img)
