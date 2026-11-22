@@ -1,0 +1,45 @@
+"""Publish a readable edition table from the fixed-cohort results."""
+import csv
+from html import escape
+from pathlib import Path
+import re
+
+ROOT = Path(__file__).resolve().parents[2]
+FOLDER = ROOT / '交付文件/任务三_专题深挖/S3_冠军的保质期/09_固定小项队列检验'
+TABLE = '固定队列逐届卫冕率.csv'
+
+
+def edition_table(folder):
+    with (folder / TABLE).open(encoding='utf-8-sig', newline='') as file:
+        editions = list(csv.DictReader(file))
+    rows = []
+    for edition in editions:
+        year = int(edition['to_year'])
+        size = int(edition['size'])
+        rate = float(edition['mean'])
+        period = '早段' if year <= 1976 else '后段' if year >= 1996 else '主比较排除'
+        rows.append(f'<tr><th scope="row">{year}</th><td>{period}</td><td>{size}</td><td>{rate:.1%}</td></tr>')
+    return f'''<!-- DYNASTY_EDITION_TABLE_START -->
+<details class="dynasty-edition-table">
+<summary>查看逐届卫冕率</summary>
+<p>1980—1992 年保留在趋势图与下表中，主比较使用早段和后段。</p>
+<div class="dynasty-table-scroll" role="region" aria-label="固定小项逐届卫冕率" tabindex="0">
+<table><thead><tr><th scope="col">目标届次</th><th scope="col">比较时间窗</th><th scope="col">可比小项</th><th scope="col">卫冕率</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
+</div>
+<p><a href="{escape(TABLE)}" download>下载逐届卫冕率 CSV ↓</a></p>
+</details>
+<!-- DYNASTY_EDITION_TABLE_END -->'''
+
+
+def publish_edition_table(folder=FOLDER):
+    page = folder / 'index.html'
+    html = page.read_text(encoding='utf-8')
+    html = re.sub(r'\n?<!-- DYNASTY_EDITION_TABLE_START -->.*?<!-- DYNASTY_EDITION_TABLE_END -->', '', html, flags=re.S)
+    html, count = re.subn(r'<img\b[^>]*\bdynasty-fixed-trend\b[^>]*>', lambda match: match[0] + '\n' + edition_table(folder), html)
+    if count != 1:
+        raise ValueError('Expected exactly one fixed-cohort trend image')
+    page.write_text(html, encoding='utf-8')
+
+
+if __name__ == '__main__':
+    publish_edition_table()

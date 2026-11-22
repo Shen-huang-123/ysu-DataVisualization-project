@@ -31,3 +31,14 @@ html body.xz-dark .dynasty-fixed-reading>img.dynasty-fixed-trend{
  html body .dynasty-fixed-reading h1 br{display:initial}
  html body .dynasty-fixed-reading .grid{grid-template-columns:1fr!important;gap:8px}
 }
+
+.dynasty-edition-table{margin:16px 0 26px;border-block:1px solid #879ca367;padding:12px 0}
+.dynasty-edition-table summary{cursor:pointer;min-height:44px;padding:10px 0;font-weight:650}
+.dynasty-table-scroll{overflow-x:auto}
+.dynasty-edition-table table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:320px}
+html body .dynasty-edition-table :is(th,td){
+ padding:9px 10px!important;border:0!important;border-bottom:1px solid #879ca34d!important;
+ color:inherit!important;background:transparent!important;text-align:start;font-variant-numeric:tabular-nums;
+}
+html body .dynasty-edition-table thead th{background:#8ca5ad22!important}
+html body .dynasty-edition-table :is(th,td):nth-child(n+3){text-align:end}
