@@ -45,6 +45,16 @@ html body #rank-chart{width:100%!important;background:transparent!important;bord
 <select id="removed-sport" style="width:100%;margin-block:.4rem;min-height:44px"><option value="none">不剔除运动</option><option value="Archery">射箭</option><option value="Artistic Swimming">花样游泳</option><option value="Athletics">田径</option><option value="Badminton">羽毛球</option><option value="Basketball">篮球</option><option value="Boxing">拳击</option><option value="Breaking">霹雳舞</option><option value="Canoeing">皮划艇</option><option value="Cycling">自行车</option><option value="Diving">跳水</option><option value="Equestrian">马术</option><option value="Fencing">击剑</option><option value="Football">足球</option><option value="Golf">高尔夫球</option><option value="Gymnastics">体操</option><option value="Handball">手球</option><option value="Hockey">曲棍球</option><option value="Judo">柔道</option><option value="Modern Pentathlon">现代五项</option><option value="Rowing">赛艇</option><option value="Rugby">橄榄球</option><option value="Sailing">帆船</option><option value="Shooting">射击</option><option value="Skateboarding">滑板</option><option value="Sport Climbing">运动攀岩</option><option value="Surfing">冲浪</option><option value="Swimming">游泳</option><option value="Table Tennis">乒乓球</option><option value="Taekwondo">跆拳道</option><option value="Tennis">网球</option><option value="Triathlon">铁人三项</option><option value="Volleyball">排球</option><option value="Water Polo">水球</option><option value="Weightlifting">举重</option><option value="Wrestling">摔跤</option></select>
 </div>
 <p id="sport-removal-result" role="status" aria-live="polite" aria-atomic="true">西班牙完整样本上升 10 位，剔除足球后仍上升 3 位。</p>
+<details id="sport-removal-audit" hidden>
+<summary>比较全部单项剔除</summary>
+<p id="sport-removal-summary"></p>
+<div style="overflow:auto;max-height:24rem">
+<table style="width:100%">
+<thead><tr><th scope="col">剔除的运动</th><th scope="col">运动员行榜相对小项榜</th><th scope="col">相对完整样本</th></tr></thead>
+<tbody id="sport-removal-comparison"></tbody>
+</table>
+</div>
+</details>
 <p>剔除试验使用共同匹配样本。名次差来自全榜重排，多个剔除结果不能相加。</p>
 <p><a href="../02_数据表/S2_2024代表团剔除敏感性.csv" download>下载逐运动剔除结果</a> · <a href="../西班牙双口径案例.html">查看西班牙运动构成与原始数据</a></p>
 <script type="application/json" id="sport-removal-data">{"none":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Archery":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":5,"ITA":0,"GER":2,"NZL":0,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-6,"IRL":6,"BRA":2},"Artistic Swimming":{"USA":0,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-4,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Athletics":{"USA":-1,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-5,"GBR":-1,"KOR":4,"ITA":-1,"GER":2,"NZL":-1,"CAN":6,"UZB":6,"HUN":3,"ESP":-14,"SWE":4,"KEN":0,"NOR":-18,"IRL":9,"BRA":5},"Badminton":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":2,"ITA":0,"GER":2,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Basketball":{"USA":-1,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-4,"GBR":0,"KOR":3,"ITA":-1,"GER":3,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-6,"IRL":6,"BRA":2},"Boxing":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":5,"HUN":5,"ESP":-9,"SWE":4,"KEN":6,"NOR":-4,"IRL":4,"BRA":3},"Breaking":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Canoeing":{"USA":0,"CHN":0,"JPN":6,"AUS":2,"FRA":0,"NED":-3,"GBR":-1,"KOR":2,"ITA":-1,"GER":5,"NZL":-2,"CAN":5,"UZB":7,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-6,"IRL":5,"BRA":2},"Cycling":{"USA":-1,"CHN":1,"JPN":5,"AUS":5,"FRA":-1,"NED":-6,"GBR":-1,"KOR":6,"ITA":-3,"GER":3,"NZL":-2,"CAN":5,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Diving":{"USA":0,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-4,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Equestrian":{"USA":0,"CHN":0,"JPN":6,"AUS":2,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":3,"NZL":0,"CAN":5,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-6,"IRL":6,"BRA":2},"Fencing":{"USA":-1,"CHN":1,"JPN":6,"AUS":4,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":3,"NZL":-2,"CAN":4,"UZB":5,"HUN":5,"ESP":-10,"SWE":4,"KEN":5,"NOR":-6,"IRL":4,"BRA":1},"Football":{"USA":-1,"CHN":1,"JPN":5,"AUS":2,"FRA":-1,"NED":-3,"GBR":-2,"KOR":3,"ITA":-2,"GER":0,"NZL":-2,"CAN":4,"UZB":6,"HUN":4,"ESP":-3,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Golf":{"USA":-1,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-2,"CAN":5,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Gymnastics":{"USA":0,"CHN":1,"JPN":8,"AUS":4,"FRA":-1,"NED":-4,"GBR":-1,"KOR":2,"ITA":-2,"GER":2,"NZL":-2,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":5,"NOR":-5,"IRL":5,"BRA":-4},"Handball":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":2,"UZB":4,"HUN":2,"ESP":-10,"SWE":3,"KEN":4,"NOR":3,"IRL":5,"BRA":1},"Hockey":{"USA":0,"CHN":0,"JPN":6,"AUS":2,"FRA":-2,"NED":-1,"GBR":-1,"KOR":5,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-11,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Judo":{"USA":0,"CHN":0,"JPN":6,"AUS":4,"FRA":0,"NED":-2,"GBR":-2,"KOR":4,"ITA":-2,"GER":2,"NZL":-2,"CAN":4,"UZB":6,"HUN":4,"ESP":-11,"SWE":5,"KEN":5,"NOR":-5,"IRL":5,"BRA":-2},"Modern Pentathlon":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Rowing":{"USA":-1,"CHN":1,"JPN":5,"AUS":2,"FRA":-1,"NED":-7,"GBR":1,"KOR":5,"ITA":0,"GER":3,"NZL":-2,"CAN":5,"UZB":5,"HUN":3,"ESP":-10,"SWE":4,"KEN":5,"NOR":-5,"IRL":11,"BRA":2},"Rugby":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":3,"ITA":-1,"GER":0,"NZL":4,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-6,"IRL":6,"BRA":2},"Sailing":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-5,"GBR":-1,"KOR":5,"ITA":-2,"GER":2,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-9,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Shooting":{"USA":0,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-4,"GBR":-1,"KOR":1,"ITA":-1,"GER":3,"NZL":0,"CAN":3,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Skateboarding":{"USA":0,"CHN":0,"JPN":7,"AUS":2,"FRA":0,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-2,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Sport Climbing":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Surfing":{"USA":-1,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Swimming":{"USA":-1,"CHN":2,"JPN":5,"AUS":5,"FRA":-3,"NED":-2,"GBR":1,"KOR":4,"ITA":-3,"GER":3,"NZL":-2,"CAN":3,"UZB":6,"HUN":1,"ESP":-9,"SWE":-1,"KEN":7,"NOR":-4,"IRL":-2,"BRA":4},"Table Tennis":{"USA":0,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-4,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":4,"KEN":7,"NOR":-5,"IRL":6,"BRA":2},"Taekwondo":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":2,"ITA":0,"GER":2,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Tennis":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-2,"GER":2,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":5,"BRA":2},"Triathlon":{"USA":0,"CHN":0,"JPN":6,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2},"Volleyball":{"USA":0,"CHN":0,"JPN":5,"AUS":3,"FRA":-1,"NED":-3,"GBR":-1,"KOR":3,"ITA":2,"GER":1,"NZL":-2,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":4,"KEN":5,"NOR":-4,"IRL":5,"BRA":4},"Water Polo":{"USA":0,"CHN":0,"JPN":5,"AUS":2,"FRA":-1,"NED":-3,"GBR":-2,"KOR":4,"ITA":-2,"GER":1,"NZL":-1,"CAN":3,"UZB":5,"HUN":3,"ESP":-6,"SWE":4,"KEN":5,"NOR":-5,"IRL":5,"BRA":1},"Weightlifting":{"USA":0,"CHN":1,"JPN":6,"AUS":3,"FRA":-1,"NED":-4,"GBR":-1,"KOR":4,"ITA":-1,"GER":1,"NZL":-1,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-10,"IRL":7,"BRA":3},"Wrestling":{"USA":-1,"CHN":1,"JPN":2,"AUS":4,"FRA":0,"NED":-2,"GBR":0,"KOR":4,"ITA":0,"GER":1,"NZL":-2,"CAN":4,"UZB":6,"HUN":4,"ESP":-10,"SWE":5,"KEN":6,"NOR":-5,"IRL":6,"BRA":2}}</script>
@@ -53,6 +63,10 @@ html body #rank-chart{width:100%!important;background:transparent!important;bord
   const entry = document.getElementById('sport-removal');
   const choice = entry.querySelector('#removed-sport');
   const result = entry.querySelector('#sport-removal-result');
+  const audit = entry.querySelector('#sport-removal-audit');
+  const summary = entry.querySelector('#sport-removal-summary');
+  const comparison = entry.querySelector('#sport-removal-comparison');
+  const sports = Array.from(choice.options).slice(1);
   const focus = document.getElementById('case-select');
   const name = document.getElementById('case-name');
   const scenarios = JSON.parse(entry.querySelector('#sport-removal-data').textContent);
@@ -64,6 +78,32 @@ html body #rank-chart{width:100%!important;background:transparent!important;bord
     if (shift === 0) return '名次相同';
     return (shift < 0 ? '上升 ' : '下降 ') + Math.abs(shift) + ' 位';
   }
+  function relativeToBaseline(shift, baseline) {
+    const change = baseline - shift;
+    return change === 0 ? '持平' : '相对名次' + (change > 0 ? '提高 ' : '降低 ') + Math.abs(change) + ' 位';
+  }
+  function renderComparison(noc, baseline) {
+    const comparable = sports
+      .map(option => ({option, shift: scenarios[option.value][noc]}))
+      .filter(item => item.shift !== undefined)
+      .sort((left, right) => Math.abs(right.shift - baseline) - Math.abs(left.shift - baseline));
+    audit.hidden = comparable.length === 0;
+    const count = comparable.filter(item => Math.sign(item.shift) === Math.sign(baseline)).length;
+    summary.textContent = '可比较 ' + comparable.length + ' / ' + sports.length +
+      ' 项，其中 ' + count + ' 项与完整样本的升降方向相同（含持平）。按名次差变化幅度排列。';
+    const rows = comparable.map(({option, shift}) => {
+      const row = document.createElement('tr');
+      const label = document.createElement('th');
+      label.scope = 'row';
+      label.textContent = option.textContent + (option.value === choice.value ? '（当前）' : '');
+      row.append(label);
+      for (const value of [describe(shift), relativeToBaseline(shift, baseline)]) {
+        row.insertCell().textContent = value;
+      }
+      return row;
+    });
+    comparison.replaceChildren(...rows);
+  }
   function render() {
     const noc = focus.value;
     if (!noc) return;
@@ -71,12 +111,15 @@ html body #rank-chart{width:100%!important;background:transparent!important;bord
     const baseline = scenarios.none[noc];
     const shift = scenarios[choice.value][noc];
     if (baseline === undefined) {
+      audit.hidden = true;
+      comparison.replaceChildren();
       result.textContent = label + '未列入逐运动剔除复核表。';
       return;
     }
     const scenario = choice.value === 'none' ? '完整样本' : '剔除' + choice.selectedOptions[0].textContent + '后';
     const reading = shift === undefined ? '该情景无可比记录' : describe(shift);
     result.textContent = label + ' · ' + scenario + '：' + reading + '。完整样本：' + describe(baseline) + '。';
+    renderComparison(noc, baseline);
   }
   choice.addEventListener('change', () => {
     const target = new URL(location.href);

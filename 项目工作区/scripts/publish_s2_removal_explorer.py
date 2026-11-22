@@ -35,6 +35,16 @@ def publish():
 <select id="removed-sport" style="width:100%;margin-block:.4rem;min-height:44px"><option value="none">不剔除运动</option>{options}</select>
 </div>
 <p id="sport-removal-result" role="status" aria-live="polite" aria-atomic="true">西班牙完整样本上升 10 位，剔除足球后仍上升 3 位。</p>
+<details id="sport-removal-audit" hidden>
+<summary>比较全部单项剔除</summary>
+<p id="sport-removal-summary"></p>
+<div style="overflow:auto;max-height:24rem">
+<table style="width:100%">
+<thead><tr><th scope="col">剔除的运动</th><th scope="col">运动员行榜相对小项榜</th><th scope="col">相对完整样本</th></tr></thead>
+<tbody id="sport-removal-comparison"></tbody>
+</table>
+</div>
+</details>
 <p>剔除试验使用共同匹配样本。名次差来自全榜重排，多个剔除结果不能相加。</p>
 <p><a href="../02_数据表/{TABLE.name}" download>下载逐运动剔除结果</a> · <a href="../西班牙双口径案例.html">查看西班牙运动构成与原始数据</a></p>
 <script type="application/json" id="sport-removal-data">{data}</script>
@@ -43,6 +53,10 @@ def publish():
   const entry = document.getElementById('sport-removal');
   const choice = entry.querySelector('#removed-sport');
   const result = entry.querySelector('#sport-removal-result');
+  const audit = entry.querySelector('#sport-removal-audit');
+  const summary = entry.querySelector('#sport-removal-summary');
+  const comparison = entry.querySelector('#sport-removal-comparison');
+  const sports = Array.from(choice.options).slice(1);
   const focus = document.getElementById('case-select');
   const name = document.getElementById('case-name');
   const scenarios = JSON.parse(entry.querySelector('#sport-removal-data').textContent);
@@ -54,6 +68,32 @@ def publish():
     if (shift === 0) return '名次相同';
     return (shift < 0 ? '上升 ' : '下降 ') + Math.abs(shift) + ' 位';
   }}
+  function relativeToBaseline(shift, baseline) {{
+    const change = baseline - shift;
+    return change === 0 ? '持平' : '相对名次' + (change > 0 ? '提高 ' : '降低 ') + Math.abs(change) + ' 位';
+  }}
+  function renderComparison(noc, baseline) {{
+    const comparable = sports
+      .map(option => ({{option, shift: scenarios[option.value][noc]}}))
+      .filter(item => item.shift !== undefined)
+      .sort((left, right) => Math.abs(right.shift - baseline) - Math.abs(left.shift - baseline));
+    audit.hidden = comparable.length === 0;
+    const count = comparable.filter(item => Math.sign(item.shift) === Math.sign(baseline)).length;
+    summary.textContent = '可比较 ' + comparable.length + ' / ' + sports.length +
+      ' 项，其中 ' + count + ' 项与完整样本的升降方向相同（含持平）。按名次差变化幅度排列。';
+    const rows = comparable.map(({{option, shift}}) => {{
+      const row = document.createElement('tr');
+      const label = document.createElement('th');
+      label.scope = 'row';
+      label.textContent = option.textContent + (option.value === choice.value ? '（当前）' : '');
+      row.append(label);
+      for (const value of [describe(shift), relativeToBaseline(shift, baseline)]) {{
+        row.insertCell().textContent = value;
+      }}
+      return row;
+    }});
+    comparison.replaceChildren(...rows);
+  }}
   function render() {{
     const noc = focus.value;
     if (!noc) return;
@@ -61,12 +101,15 @@ def publish():
     const baseline = scenarios.none[noc];
     const shift = scenarios[choice.value][noc];
     if (baseline === undefined) {{
+      audit.hidden = true;
+      comparison.replaceChildren();
       result.textContent = label + '未列入逐运动剔除复核表。';
       return;
     }}
     const scenario = choice.value === 'none' ? '完整样本' : '剔除' + choice.selectedOptions[0].textContent + '后';
     const reading = shift === undefined ? '该情景无可比记录' : describe(shift);
     result.textContent = label + ' · ' + scenario + '：' + reading + '。完整样本：' + describe(baseline) + '。';
+    renderComparison(noc, baseline);
   }}
   choice.addEventListener('change', () => {{
     const target = new URL(location.href);
