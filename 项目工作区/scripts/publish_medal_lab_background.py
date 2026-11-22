@@ -60,17 +60,22 @@ html body .native-evidence figcaption{color:#c0d0d4!important;font-size:14px!imp
 
 /* Keep the chart and the selected delegation on the same reading line. */
 html body .wrap{max-width:1680px!important;width:100%!important;padding-inline:clamp(20px,4vw,68px)!important}
-html body .hero{padding-block:clamp(32px,5vw,72px) clamp(24px,3.5vw,46px);gap:clamp(24px,5vw,72px);align-items:center}
-html body .hero h1{font-size:clamp(38px,5.1vw,76px);line-height:1.12;letter-spacing:-.045em;margin:12px 0 18px}
-html body .hero-aside{font-size:15px;line-height:1.8}
-html body .hero-aside strong{font-size:clamp(19px,2vw,26px);margin-bottom:8px}
-html body .controls{gap:12px;padding:14px 0}
-html body .lens-switch{border-radius:9px;background:#111c24}
-html body .lens-switch button{min-height:44px;border-radius:6px;padding:8px 12px;white-space:nowrap}
-html body .lens-switch button[aria-pressed="true"]{background:#ebce91!important;color:#17212a!important}
+html body .hero{display:block;padding-block:clamp(30px,4vw,54px) 24px}
+html body .hero .eyebrow{font-size:.78rem;letter-spacing:.06em}
+html body .hero h1{font-size:clamp(32px,4.3vw,64px);line-height:1.16;letter-spacing:-.04em;margin:10px 0 12px}
+html body .hero p{max-width:58ch;line-height:1.65}
+html body .medal-method{margin-top:12px;color:#c0d0d4;font-size:.85rem;line-height:1.65;max-width:72ch}
+html body .medal-method summary{cursor:pointer;color:#ebce91;width:fit-content}
+html body .medal-method p{margin:6px 0 0}
+html body .controls{gap:12px;padding:10px 0}
+html body .lens-switch{border:0;border-radius:0;background:transparent;padding:0}
+html body .lens-switch button{min-height:44px;border-radius:0;padding:8px 12px;white-space:nowrap;border-bottom:2px solid transparent}
+html body .lens-switch button[aria-pressed="true"]{background:transparent!important;color:#ebce91!important;border-bottom-color:#ebce91}
+html body #rank-discovery{margin:18px 0 0;padding:14px 0 0;border:0;border-top:1px solid #526771;border-radius:0;background:transparent;box-shadow:none}
+html body #rank-discovery h2{font-size:1.05rem;margin:0 0 8px}
 html body main.grid{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(320px,1fr);align-items:start;gap:clamp(24px,3vw,48px)!important;min-width:0!important}
 html body main.grid>.panel{width:100%!important;max-width:none!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:20px 0!important;border-top:2px solid #6a8a96!important}
-html body main.grid>.ex-route{grid-column:1/-1;order:-1;width:100%!important;margin:0!important;min-height:0!important}
+html body main.grid>.ex-route{grid-column:1/-1;order:1;width:100%!important;margin:0!important;min-height:0!important}
 html body main.grid>.case{min-height:0!important;border-top-color:#ebce91!important}
 html body .case .shift strong{color:#ebce91;font-variant-numeric:tabular-nums}
 html body #medal-rank-comparison{margin:0 0 18px;padding:12px 0;border-block:1px solid #526771}
@@ -106,11 +111,22 @@ html body #sport-removal a{color:#ebce91;text-decoration:underline;text-underlin
 eyebrow=s.select_one('.hero .eyebrow')
 if eyebrow:eyebrow.string='巴黎 2024 · 奖牌口径实验室'
 title=s.select_one('.hero h1')
-if title:
- title.clear()
- title.append('换一种计数，')
- title.append(s.new_tag('br'))
- title.append('奖牌榜如何重排？')
+if title:title.string='换一种计数，奖牌榜如何重排？'
+intro=s.select_one('.hero > div > p')
+if intro:intro.string='切换巴黎 2024 的三种奖牌口径，比较 91 个代表团的名次与金牌构成。'
+aside=s.select_one('.hero-aside')
+if aside:
+ method=s.new_tag('details',attrs={'class':'medal-method'})
+ summary=s.new_tag('summary')
+ summary.string='这三种口径怎么数？'
+ method.append(summary)
+ paragraph=s.new_tag('p')
+ paragraph.string=aside.get_text().removeprefix('同一组比赛结果，三种回答。')
+ method.append(paragraph)
+ aside.replace_with(method)
+feedback=s.select_one('#rank-discovery')
+chart=s.select_one('#rank-chart')
+if feedback and chart:chart.insert_after(feedback.extract())
 label=s.select_one('section.more .eyebrow')
 if label:label.string='证据与方法'
 comparison = s.select_one('#medal-rank-comparison')
