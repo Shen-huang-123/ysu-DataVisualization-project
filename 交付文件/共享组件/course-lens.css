@@ -48,3 +48,26 @@ html body.course-lens header.hero>.immersive-float-layer{display:none!important}
 html body.course-lens header.hero>.course-track-art{position:absolute!important;right:-36px;top:12px;width:min(46vw,640px);height:auto;opacity:.32;z-index:0;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 25%);animation:none!important}
 html body.course-lens header.hero>.question{z-index:1}
 @media(max-width:650px){html body.course-lens header.hero>.course-track-art{width:85vw;right:-26vw;top:0;opacity:.18}}
+
+html body.course-lens{padding-top:0!important}
+html body.course-lens>header.hero{
+ position:relative;isolation:isolate;overflow:hidden;align-content:center;
+ min-height:100vh!important;min-height:100svh!important;box-sizing:border-box!important;
+ margin:0!important;border-bottom:0;padding-block:150px 15svh!important;
+ background:linear-gradient(to bottom,transparent 65%,var(--sr-paper)),
+   radial-gradient(ellipse at 87% 24%,color-mix(in srgb,var(--sr-accent) 16%,transparent),transparent 62%),
+   var(--sr-paper)!important;
+}
+html body.course-lens>header.hero>.course-track-art{
+ top:0;height:100%;width:min(65vw,1000px);object-fit:contain;
+ mask-image:linear-gradient(to bottom,#000 58%,transparent);
+}
+@media(max-width:650px){
+ html body.course-lens>header.hero{padding-block:144px 13svh!important}
+ html body.course-lens>header.hero>.course-track-art{width:95vw;object-position:top right}
+}
+
+html body.course-lens>.top{
+ position:absolute!important;inset:68px 0 auto;z-index:2;
+ padding-block:8px!important;border:0!important;
+}
