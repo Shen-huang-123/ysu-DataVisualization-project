@@ -34,8 +34,8 @@ html body.small-team-topic>header:before{display:none!important;content:none!imp
 html body.small-team-topic{--bg:#203b42;--p:#edf2ef;--a:#b59b68;--st-line:#829a9b40;background:var(--p)!important;color:var(--bg)!important;padding-top:0!important;font-family:'Microsoft YaHei',sans-serif!important}
 html body.small-team-topic.xz-dark{--bg:#e8efec;--p:#152129;--st-line:#a3b8b52c;background:var(--p)!important}
 html body.small-team-topic .oa-world,html body.small-team-topic:before,html body.small-team-topic:after{display:none!important}
-html body.small-team-topic>header{isolation:isolate;min-height:740px!important;height:88vh!important;padding:160px 7vw 120px!important;justify-content:center!important;border:0!important;border-radius:0!important;background:linear-gradient(90deg,#102129df,#10212930),url('../任务三_专题深挖/媒体/islands.jpg') center/cover!important;color:#fff!important}
-html body.small-team-topic>header:after{content:''!important;inset:70% 0 0!important;background:linear-gradient(transparent,var(--p))!important;opacity:1!important;font-size:0!important;z-index:-1}
+html body.small-team-topic>header{isolation:isolate;min-height:740px!important;height:88vh!important;padding:160px 7vw 120px!important;justify-content:center!important;border:0!important;border-radius:0!important;background:linear-gradient(to bottom,transparent 58%,var(--p) 100%),linear-gradient(90deg,#102129df,#10212930),url('../任务三_专题深挖/媒体/islands.jpg') center/cover!important;color:#fff!important}
+html body.small-team-topic>header::after{display:none!important;content:none!important}
 html body.small-team-topic header h1{font-family:inherit!important;font-weight:500!important;font-size:clamp(42px,6vw,88px)!important;line-height:1.25!important;letter-spacing:-.025em!important;margin:24px 0!important;max-width:13em}
 html body.small-team-topic header .tag{color:#dfc997!important;font-size:13px!important;font-weight:500!important;letter-spacing:.1em}
 html body.small-team-topic header .lead{font-size:18px!important;line-height:1.95!important;max-width:45em;color:#edf2ef!important}

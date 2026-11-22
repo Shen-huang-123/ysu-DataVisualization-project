@@ -7,7 +7,7 @@ s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['small-team-topic']))
 link=s.select_one('#small-team-topic-style')
 if not link:
  link=s.new_tag('link',id='small-team-topic-style',rel='stylesheet');s.head.append(link)
-link['href']='../../共享组件/small-team-topic.css?v=1'
+link['href']='../../共享组件/small-team-topic.css?v=2'
 shared=s.select_one('#unified-selects')
 if not shared:
  shared=s.new_tag('link',id='unified-selects',rel='stylesheet');s.head.append(shared)
