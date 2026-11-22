@@ -5,8 +5,10 @@ import html,re
 root=Path(__file__).resolve().parents[2]
 p=root/'交付文件/任务二_百年全景/07_结论压力测试/结论压力测试.html'
 s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
-if not s.select_one('#pressure-reading-style'):
- link=s.new_tag('link',id='pressure-reading-style',rel='stylesheet',href='pressure-reading.css?v=1');s.head.append(link)
+link=s.select_one('#pressure-reading-style')
+if not link:
+ link=s.new_tag('link',id='pressure-reading-style',rel='stylesheet');s.head.append(link)
+link['href']='pressure-reading.css?v=2'
 if not s.select_one('.pressure-photo-credit'):
  credit=s.new_tag('a',attrs={'class':'pressure-photo-credit','href':'../../任务三_专题深挖/媒体/图片来源与许可.html'})
  credit.string='1896 雅典 · 历史影像 / Public domain'

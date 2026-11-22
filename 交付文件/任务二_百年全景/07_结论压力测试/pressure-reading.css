@@ -2,3 +2,22 @@
 :root{--ink:#19363c;--muted:#5a7073;--line:#24485125;--accent:#85612c;--paper:#f5f3ed}html{scroll-behavior:smooth;scroll-padding-top:90px}body{background:var(--paper);color:var(--ink);font-family:'Noto Sans SC','Microsoft YaHei',system-ui,sans-serif}header{position:relative;isolation:isolate;min-height:75svh;padding:40px clamp(24px,6vw,100px) 72px;display:flex;flex-direction:column;justify-content:center;background:#102830;overflow:hidden}header:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#102830 5%,#102830e0 47%,#10283055),url('../../任务三_专题深挖/媒体/growth.jpg') center/cover}header>a{align-self:start;margin-bottom:50px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;color:#e0c797}h1{font-family:inherit;font-weight:500;font-size:clamp(38px,5.4vw,78px);line-height:1.2;letter-spacing:-.045em;max-width:18ch;margin:0 0 28px}header p{max-width:49ch;font-weight:400;color:#cedbd9;font-size:17px;line-height:1.9;margin:0}main{width:100%;max-width:none;padding:0 clamp(24px,6vw,100px) 80px}.pressure-route{position:sticky;top:0;z-index:3;background:var(--paper);display:flex;gap:clamp(20px,4vw,64px);padding:18px 0;border-bottom:1px solid var(--line);overflow-x:auto}.pressure-route a{white-space:nowrap;text-decoration:none;font-size:13px;line-height:1.8;min-height:32px;display:flex;align-items:center;color:var(--muted)}.pressure-route a:hover,.pressure-route a[aria-current]{color:var(--accent)}.facts{gap:32px;margin:0;padding:48px 0 56px}.facts div{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:24px 0 0}.facts b{font-family:inherit;font-size:clamp(32px,3.6vw,54px);line-height:1.2;letter-spacing:-.04em;font-weight:500;color:var(--ink);margin-bottom:14px}.facts span{color:var(--muted);line-height:1.8}figure{margin:0 0 64px}figure img{display:block;border-radius:12px;box-shadow:none;background:#fff;width:100%;height:auto}figcaption{font-size:12px;color:var(--muted);line-height:1.9;margin-top:16px;max-width:90ch}section{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(32px,7vw,120px);padding:56px 0;border-top:1px solid var(--line)}h2{font-family:inherit;font-weight:500;font-size:clamp(26px,2.8vw,40px);line-height:1.4;letter-spacing:-.035em;margin:0;max-width:18ch}section p{font-size:16px;line-height:2;margin:0;max-width:60ch;color:var(--muted)}section p a{display:inline-block;margin-top:20px;color:var(--accent);text-underline-offset:6px}.pressure-downloads{display:flex;gap:24px;flex-wrap:wrap;padding:28px 0}.pressure-downloads a{font-size:14px;color:var(--accent);min-height:44px;display:inline-flex;align-items:center;text-underline-offset:6px}footer{background:#102830;padding:32px clamp(24px,6vw,100px);line-height:1.9}a:focus-visible{outline:2px solid #cba666;outline-offset:5px}.ox-stage-line{display:none!important}@media(max-width:700px){header{min-height:65svh;padding-top:24px}header>a{margin-bottom:32px}header p{font-size:15px}.facts{grid-template-columns:1fr;gap:24px;padding-block:32px}.facts div{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px}.facts b{margin:0;font-size:34px}.pressure-route{gap:24px}section{grid-template-columns:1fr;gap:24px;padding:36px 0}section p{font-size:15px}figure{margin-bottom:40px}figure img{border-radius:6px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 header>.pressure-photo-credit{font-size:11px;opacity:.7;margin:24px 0 0;min-height:24px} @media(max-width:700px){.facts div:last-child b{font-size:26px;white-space:nowrap}}
+
+html body.supplement-reading main section[id^="pressure-"] {scroll-margin-top:96px}
+html body.supplement-reading main section[id^="pressure-"]:target > h2 {
+ border-inline-start:3px solid var(--sr-accent);
+ padding-inline-start:12px;
+}
+@media (prefers-reduced-motion:no-preference) {
+ html:has(body .pressure-route){scroll-behavior:smooth}
+ html body.supplement-reading main section[id^="pressure-"]:target > h2 {
+  animation:pressure-section-arrival 1.15s ease-out both;
+ }
+}
+@keyframes pressure-section-arrival {
+ from {background-color:color-mix(in srgb,var(--sr-accent) 14%,transparent)}
+ to {background-color:transparent}
+}
+@media (prefers-reduced-motion:reduce) {
+ html:has(body .pressure-route){scroll-behavior:auto!important}
+}
