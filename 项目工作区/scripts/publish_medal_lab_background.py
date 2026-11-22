@@ -6,7 +6,35 @@ s=BeautifulSoup(p.read_text(encoding='utf-8'),'html.parser')
 style=s.select_one('#medal-lab-background')
 if not style:
  style=s.new_tag('style',id='medal-lab-background');s.head.append(style)
-style.string="""/* Local reading surface: no decorative water ribbons behind evidence. */
+backdrop = s.select_one('.medal-lab-backdrop')
+if not backdrop:
+ backdrop = s.new_tag('div', attrs={'class':'medal-lab-backdrop','aria-hidden':'true'})
+ s.body.insert(0, backdrop)
+style.string="""/* Keep the moving light behind the reading surface. */
+html body{isolation:isolate}
+html body .medal-lab-backdrop{
+ position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;
+}
+.medal-lab-backdrop::before,.medal-lab-backdrop::after{
+ content:"";position:absolute;width:min(75vw,1100px);height:78vh;
+}
+.medal-lab-backdrop::before{
+ top:-26vh;right:-15vw;
+ background:radial-gradient(ellipse at center,rgba(66,144,172,.36),transparent 70%);
+ animation:medal-lab-drift 24s ease-in-out infinite alternate;
+}
+.medal-lab-backdrop::after{
+ bottom:-39vh;left:-20vw;
+ background:radial-gradient(ellipse at center,rgba(196,151,82,.24),transparent 72%);
+ animation:medal-lab-drift 32s ease-in-out -12s infinite alternate-reverse;
+}
+@keyframes medal-lab-drift{
+ from{transform:translate3d(0,0,0)}
+ to{transform:translate3d(-8vw,17vh,0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .medal-lab-backdrop::before,.medal-lab-backdrop::after{animation:none}
+}
 html body{background:#182128!important;background-image:none!important}
 html body .oa-world,html body .immersive-float-layer{display:none!important}
 html body::before,html body::after{background:none!important;background-image:none!important;box-shadow:none!important}
