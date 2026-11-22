@@ -1,6 +1,6 @@
 html body.medal-sports-topic{--bg:#173e4b;--a:#287f9c;--p:#edf3f3;--sports-line:#6b969e40;background:var(--p)!important;color:var(--bg)!important;padding-top:0!important}
 html body.medal-sports-topic.xz-dark{--bg:#eee8df;--p:#182127;--a:#80c2d0;--sports-line:#94bdc735}
-html body.medal-sports-topic #medal-sports-hero{position:relative;isolation:isolate;min-height:88vh!important;display:flex!important;justify-content:center!important;align-items:flex-start!important;padding:150px 7vw 100px!important;clip-path:none!important;border:0!important;border-radius:0!important;background:#242723!important;color:#fff!important}
+html body.medal-sports-topic #medal-sports-hero{position:relative;isolation:isolate;min-height:100vh!important;min-height:100svh!important;height:auto!important;max-height:none!important;box-sizing:border-box!important;margin:0!important;display:flex!important;justify-content:center!important;align-items:flex-start!important;padding:150px 7vw 100px!important;clip-path:none!important;border:0!important;border-radius:0!important;background:var(--p)!important;--sports-cover-mask:linear-gradient(to bottom,#000 70%,transparent);color:#fff!important}
 html body.medal-sports-topic #medal-sports-hero>.sports-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:none!important}
 html body.medal-sports-topic #medal-sports-hero:before{content:''!important;display:block!important;position:absolute;inset:0;background:linear-gradient(90deg,#18201de8,#18201d75 65%,#18201d35)!important;z-index:-1;border:0!important;border-radius:0!important}
 html body.medal-sports-topic #medal-sports-hero:after,html body.medal-sports-topic #medal-sports-hero>.ed-rings-scene,html body.medal-sports-topic .oa-world{display:none!important}
@@ -27,7 +27,7 @@ html body.medal-sports-topic .method,html body.medal-sports-topic .evidence{gap:
 html body.medal-sports-topic .evidence article{padding:26px 0!important;border:0!important;border-top:1px solid var(--a)!important;border-radius:0!important;background:transparent!important;color:var(--bg)!important;box-shadow:none!important;transform:none!important}
 html body.medal-sports-topic .evidence span{color:var(--a)!important}
 html body.medal-sports-topic footer{padding:30px 7vw!important;background:transparent!important;color:var(--bg)!important;border-top:1px solid var(--sports-line)!important}
-@media(max-width:800px){html body.medal-sports-topic #medal-sports-hero{min-height:720px!important;padding:130px 24px 70px!important}html body.medal-sports-topic main{padding:40px 24px!important}html body.medal-sports-topic .viz{grid-template-columns:1fr!important;gap:28px!important}html body.medal-sports-topic .viz aside{position:static!important;grid-row:1}html body.medal-sports-topic .method,html body.medal-sports-topic .evidence{grid-template-columns:1fr!important}html body.medal-sports-topic .photo-stage{padding:18px 24px!important}}
+@media(max-width:800px){html body.medal-sports-topic #medal-sports-hero{padding:130px 24px 70px!important}html body.medal-sports-topic main{padding:40px 24px!important}html body.medal-sports-topic .viz{grid-template-columns:1fr!important;gap:28px!important}html body.medal-sports-topic .viz aside{position:static!important;grid-row:1}html body.medal-sports-topic .method,html body.medal-sports-topic .evidence{grid-template-columns:1fr!important}html body.medal-sports-topic .photo-stage{padding:18px 24px!important}}
 /* The session lens belongs to the page, rather than a separate blue card. */
 html body.medal-sports-topic .ex-rank{--ex-ink:var(--bg);--ex-paper:var(--p);--ex-line:var(--sports-line);--ex-accent:var(--a);padding:24px 0!important;margin:0 0 28px!important;border:0!important;border-top:1px solid var(--sports-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:var(--bg)!important}
 html body.medal-sports-topic .ex-rank h3{font-size:26px!important;font-weight:500!important;line-height:1.5!important}
@@ -62,10 +62,15 @@ html body.medal-sports-topic>a.research-proof-link h2,html body.medal-sports-top
 /* Decorative particles must never extend the document scroll area. */
 html body.medal-sports-topic>.ed-particles{position:fixed!important;inset:0!important;width:100%!important;height:100vh!important;max-height:100vh!important;overflow:hidden!important;pointer-events:none!important}
 /* Sports retain a wider visual rhythm and a pool-blue accent. */
-html body.medal-sports-topic #medal-sports-hero{min-height:86vh!important}
+
 html body.medal-sports-topic #medal-sports-hero .lead{max-width:760px!important}
 html body.medal-sports-topic .ex-rank .ex-stem{stroke:var(--a)!important;stroke-width:5;opacity:.65}
 html body.medal-sports-topic .ex-rank svg{margin:24px 0!important}
 html body.medal-sports-topic .ex-rank .ex-dot[aria-pressed=true]{r:8}
 html body.medal-sports-topic .ex-rank .ex-readout{color:var(--bg)!important}
 html body.medal-sports-topic .task3-depth-bridge small{color:var(--a)!important}
+
+html body.medal-sports-topic #medal-sports-hero::before,
+html body.medal-sports-topic #medal-sports-hero>.sports-photo{mask-image:var(--sports-cover-mask)!important}
+html body.medal-sports-topic #xz-nav{background:linear-gradient(180deg,#10191eee,#10191eaa)!important;box-shadow:none!important}
+html body.medal-sports-topic #xz-nav :is(a,button){color:#f3f5f4!important}
