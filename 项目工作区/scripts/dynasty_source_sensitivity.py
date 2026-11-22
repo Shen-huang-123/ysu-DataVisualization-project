@@ -89,17 +89,26 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif']=['Microsoft YaHei','SimHei']
 plt.rcParams['axes.unicode_minus']=False
-fig,ax=plt.subplots(figsize=(10,4.3),facecolor='#f7f3eb');ax.set_facecolor('#f7f3eb')
+fig,ax=plt.subplots(figsize=(10,3.5))
+ax.axvspan(0,2,color='#a64155',alpha=.07)
+ax.axvline(0,color='#68777d',ls='--',lw=1,zorder=1)
 for i,r in enumerate(summary[:3]):
-    x=r['后减前百分点'];color='#247487' if i<2 else '#a64155'
-    ax.errorbar(x,2-i,xerr=[[x-r['区间下限']],[r['区间上限']-x]],fmt='o',color=color,capsize=5,lw=2)
-    ax.text(4,2-i,f"{x:.2f}  [{r['区间下限']:.2f}, {r['区间上限']:.2f}]",va='center',fontsize=10)
-ax.axvline(0,color='#68777d',ls='--',lw=1)
+    x=r['后减前百分点']
+    lower,upper=r['区间下限'],r['区间上限']
+    color='#247487' if upper<0 else '#a64155'
+    ax.errorbar(x,2-i,xerr=[[x-lower],[upper-x]],fmt='o',color=color,capsize=4,lw=2)
+    ax.text(3,2-i,f"{x:.2f}  [{lower:.2f}, {upper:.2f}]",va='center',fontsize=10,color='#344e58',clip_on=False)
 ax.set_yticks([2,1,0],['原代理 · 固定113项','二次来源替换 · 同113项','排除未决系列 · 剩50项'])
-ax.set_xlim(-18,18);ax.set_ylim(-.6,2.8);ax.set_xlabel('后段减早段卫冕率（百分点）；横线为小项成组95%区间')
-ax.set_title('同队列替换不改变下降；排除子队列的区间跨零',loc='left',pad=18,fontsize=14)
-for sp in ax.spines.values():sp.set_visible(False)
-ax.tick_params(length=0);fig.tight_layout();fig.savefig(OUT/'冠军延续来源敏感性.png',dpi=160);plt.close(fig)
+ax.set_xlim(-18,2)
+ax.set_xticks([-18,-12,-6,0])
+ax.set_ylim(-.5,2.5)
+ax.set_xlabel('后段减早段卫冕率（百分点）',labelpad=10,color='#344e58')
+ax.set_title('固定队列与排除子队列的95%区间',loc='left',pad=15,fontsize=14,color='#1b3947')
+ax.spines[:].set_visible(False)
+ax.tick_params(length=0,pad=8,colors='#344e58',labelsize=10)
+fig.subplots_adjust(left=.24,right=.73,bottom=.18,top=.84)
+fig.savefig(OUT/'冠军延续来源敏感性.png',dpi=160,transparent=True)
+plt.close(fig)
 
 import runpy
 runpy.run_path(str(Path(__file__).with_name('publish_dynasty_source_reading.py')))
