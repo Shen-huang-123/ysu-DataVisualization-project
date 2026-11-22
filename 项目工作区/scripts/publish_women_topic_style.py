@@ -4,7 +4,7 @@ ROOT=Path(__file__).resolve().parents[2]
 p=ROOT/'交付文件/任务三_专题深挖/S8_她们登上领奖台/index.html'
 s=BeautifulSoup(p.read_text('utf8'),'html.parser')
 s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['women-topic']))
-if not s.select_one('#women-topic-style'):s.head.append(s.new_tag('link',id='women-topic-style',rel='stylesheet',href='../../共享组件/women-topic.css'))
+if not s.select_one('#women-topic-style'):s.head.append(s.new_tag('link',id='women-topic-style',rel='stylesheet',href='../../共享组件/women-topic.css?v=2'))
 hero=s.body.find('header',recursive=False)
 if hero:
  tag=hero.select_one('.tag')
