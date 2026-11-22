@@ -16,7 +16,10 @@ if(D.kind==='rank'){
  $('rank-meaning').textContent=lens==='rows'?'变化来自计数单位与团体项目结构，不能把获金行数叫作官方金牌数，也不代表实力突然改变。':lens==='fractional'?'每个 NOC–Event–Medal 获奖组总权重为1；其分组不保证与官方小项逐一对应。':'这是小项计数的参照端点。切到运动员行，查看同一结果如何改变排名。';
  state({'ef-lens':lens,'ef-noc':c.noc});
  }
- const focus=query.get('ef-noc'),lens=query.get('ef-lens');if(cases[focus]){$('case-select').value=focus;$('case-select').dispatchEvent(new Event('change'))}if(['official','fractional','rows'].includes(lens))document.querySelector(`[data-lens="${lens}"]`).click();
+ const focus=query.get('ef-noc'),lens=query.get('ef-lens');if(Object.hasOwn(cases,focus)&&$('case-select').value!==focus){$('case-select').value=focus;$('case-select').dispatchEvent(new Event('change'))}if(['official','fractional','rows'].includes(lens)){
+ const button=document.querySelector(`[data-lens="${lens}"]`);
+ if(button.getAttribute('aria-pressed')!=='true')button.click();
+ }
  // Observe existing chart/select interactions rather than maintaining a second ranking state.
  new MutationObserver(render).observe($('case-shift'),{childList:true});render();
 }
