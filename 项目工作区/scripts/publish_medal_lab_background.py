@@ -76,6 +76,13 @@ html body #rank-discovery h2{font-size:1.05rem;margin:0 0 8px}
 html body main.grid{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(320px,1fr);align-items:start;gap:clamp(24px,3vw,48px)!important;min-width:0!important}
 html body main.grid>.panel{width:100%!important;max-width:none!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:20px 0!important;border-top:2px solid #6a8a96!important}
 html body main.grid>.ex-route{grid-column:1/-1;order:1;width:100%!important;margin:0!important;min-height:0!important}
+html body main.grid>details.ex-route{
+ --route-ink:#f3f5f2;--route-muted:#d5e0e3;--route-line:#607782;--route-accent:#ebce91;
+ background:#202e37!important;padding-inline:clamp(14px,2vw,26px)!important;
+}
+html body main.grid>details.ex-route>summary{color:var(--route-ink)!important;font-size:16px!important;font-weight:700!important}
+html body main.grid>details.ex-route>summary::after{content:'展开 +';font:600 14px/1.5 'Microsoft YaHei',sans-serif}
+html body main.grid>details.ex-route[open]>summary::after{content:'收起 −'}
 html body main.grid>.case{min-height:0!important;border-top-color:#ebce91!important}
 html body .case .shift strong{color:#ebce91;font-variant-numeric:tabular-nums}
 html body #medal-rank-comparison{margin:0 0 18px;padding:12px 0;border-block:1px solid #526771}
