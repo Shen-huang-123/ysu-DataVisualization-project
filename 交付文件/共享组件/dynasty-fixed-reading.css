@@ -60,7 +60,7 @@ html body:has(main.dynasty-fixed-reading) :is(#dynasty-source-sensitivity,a.rese
 }
 html body:has(main.dynasty-fixed-reading) a.research-proof-link{display:block!important}
 html body:has(main.dynasty-fixed-reading) a.research-proof-link::after{content:none!important}
-html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity p{max-width:86ch}
+html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity p{max-width:none!important}
 html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity img{
- max-width:1200px;mix-blend-mode:normal!important
+ width:100%;max-width:none!important;mix-blend-mode:normal!important
 }
