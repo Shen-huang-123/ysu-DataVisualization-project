@@ -30,14 +30,48 @@ html body .native-evidence svg .ne-on{fill:#10212a!important;font-weight:700!imp
 html body .native-evidence .ne-grid{stroke:#94b0ba88!important;stroke-width:1.3}
 html body .native-evidence figcaption{color:#c0d0d4!important;font-size:14px!important}
 
-html body .wrap{max-width:none!important;width:100%!important;padding-inline:4vw!important}
-html body main.grid{display:flex!important;flex-direction:column!important;gap:32px!important;min-width:0!important}
-html body main.grid>.panel{width:100%!important;max-width:none!important;background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:26px 0!important;border-top:1px solid var(--line)!important}
-html body main.grid>.ex-route{order:-1;width:100%!important;margin:0!important;min-height:0!important;align-self:stretch!important}
-html body main.grid>.case{min-height:0!important}
+/* Keep the chart and the selected delegation on the same reading line. */
+html body .wrap{max-width:1680px!important;width:100%!important;padding-inline:clamp(20px,4vw,68px)!important}
+html body .hero{padding-block:clamp(32px,5vw,72px) clamp(24px,3.5vw,46px);gap:clamp(24px,5vw,72px);align-items:center}
+html body .hero h1{font-size:clamp(38px,5.1vw,76px);line-height:1.12;letter-spacing:-.045em;margin:12px 0 18px}
+html body .hero-aside{font-size:15px;line-height:1.8}
+html body .hero-aside strong{font-size:clamp(19px,2vw,26px);margin-bottom:8px}
+html body .controls{gap:12px;padding:14px 0}
+html body .lens-switch{border-radius:9px;background:#111c24}
+html body .lens-switch button{min-height:44px;border-radius:6px;padding:8px 12px;white-space:nowrap}
+html body .lens-switch button[aria-pressed="true"]{background:#ebce91!important;color:#17212a!important}
+html body main.grid{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(320px,1fr);align-items:start;gap:clamp(24px,3vw,48px)!important;min-width:0!important}
+html body main.grid>.panel{width:100%!important;max-width:none!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:20px 0!important;border-top:2px solid #6a8a96!important}
+html body main.grid>.ex-route{grid-column:1/-1;order:-1;width:100%!important;margin:0!important;min-height:0!important}
+html body main.grid>.case{min-height:0!important;border-top-color:#ebce91!important}
+html body .case .shift strong{color:#ebce91;font-variant-numeric:tabular-nums}
+html body .metric-row{gap:0;border-block:1px solid #526771}
+html body .metric{min-width:0;border:0;border-radius:0;background:transparent;padding:10px 9px}
+html body .metric+.metric{border-inline-start:1px solid #526771}
 html body #rank-chart{width:100%!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
-@media(max-width:650px){html body .wrap{padding-inline:24px!important}html body main.grid{gap:24px!important}}
+html body #sport-removal-result{background:#24343d;border-inline-start:3px solid #ebce91;padding:12px 14px;line-height:1.65}
+html body #sport-removal-audit summary{cursor:pointer;padding-block:10px;color:#ebce91}
+html body #sport-removal-audit table{border-collapse:collapse;font-size:.82rem;line-height:1.5}
+html body #sport-removal-audit :is(th,td){padding:8px 6px;text-align:start;border-bottom:1px solid #526771}
+html body #sport-removal a{color:#ebce91;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){
+ html body main.grid{grid-template-columns:minmax(0,1fr);gap:24px!important}
+ html body .hero{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:480px){
+ html body .controls .spacer{display:none}
+ html body .lens-switch{width:100%;justify-content:space-between;gap:2px}
+ html body .lens-switch button{font-size:.82rem;padding-inline:8px}
+}
 """
+eyebrow=s.select_one('.hero .eyebrow')
+if eyebrow:eyebrow.string='巴黎 2024 · 奖牌口径实验室'
+title=s.select_one('.hero h1')
+if title:
+ title.clear()
+ title.append('换一种计数，')
+ title.append(s.new_tag('br'))
+ title.append('奖牌榜如何重排？')
 label=s.select_one('section.more .eyebrow')
 if label:label.string='证据与方法'
 p.write_text(str(s),encoding='utf-8')
