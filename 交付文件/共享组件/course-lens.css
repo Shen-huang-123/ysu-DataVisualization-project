@@ -71,3 +71,17 @@ html body.course-lens>.top{
  position:absolute!important;inset:68px 0 auto;z-index:2;
  padding-block:8px!important;border:0!important;
 }
+
+html body.course-lens>header.hero::before{
+ content:''!important;display:block!important;position:absolute!important;inset:0!important;
+ z-index:-1;border:0!important;border-radius:0!important;opacity:1!important;
+ background:linear-gradient(90deg,#101d25ed,#101d25a8 56%,#101d257d),
+   url('../任务三_专题深挖/媒体/growth.jpg') center 47%/cover!important;
+ mask-image:linear-gradient(to bottom,#000 78%,transparent)!important;
+}
+html body.course-lens>header.hero>.course-track-art{display:none!important}
+html body.course-lens>header.hero :is(h1,p,.question,.course-cover-credit){color:#f3f5f2!important}
+html body.course-lens>header.hero .question{border-left-color:#aabdbd99}
+html body.course-lens .course-cover-credit{grid-column:1/-1;justify-self:start;font-size:12px;text-underline-offset:4px}
+html body.course-lens #xz-nav{background:#101d25dd!important;box-shadow:none!important}
+html body.course-lens #xz-nav :is(a,button),html body.course-lens>.top a{color:#f3f5f2!important}
