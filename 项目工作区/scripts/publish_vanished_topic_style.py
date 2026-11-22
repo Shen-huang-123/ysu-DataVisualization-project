@@ -5,7 +5,10 @@ ROOT=Path(__file__).resolve().parents[2]
 p=ROOT/'交付文件/任务三_专题深挖/S9_消失的赛场/index.html'
 s=BeautifulSoup(p.read_text(encoding='utf-8-sig'),'html.parser')
 s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['vanished-topic']))
-if not s.find('link',id='vanished-topic-style'):s.head.append(s.new_tag('link',id='vanished-topic-style',rel='stylesheet',href='../../共享组件/vanished-topic.css'))
+link=s.find('link',id='vanished-topic-style')
+if not link:
+ link=s.new_tag('link',id='vanished-topic-style',rel='stylesheet');s.head.append(link)
+link['href']='../../共享组件/vanished-topic.css?v=2'
 header=s.body.find('header',recursive=False);photo=s.select_one('figure.photo-stage')
 if photo and not header.select_one('.vanished-photo'):
  img=photo.img.extract();img['class']=['vanished-photo'];header.insert(0,img)
