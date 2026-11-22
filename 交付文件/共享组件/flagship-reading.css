@@ -31,3 +31,25 @@ html body.uncertainty-reading table :is(th,td){font-family:'Microsoft YaHei',sys
 html body.uncertainty-reading .supp-table{margin-block:28px}
 html body.uncertainty-reading .method-reading>ul{padding-left:22px;color:var(--sr-ink);line-height:2}
 html body.uncertainty-reading .method-reading>ul li{margin-block:12px}
+
+/* Limit the background treatment to the opening of the uncertainty report. */
+html body.supplement-reading.uncertainty-reading {
+  --uncertainty-cool: #27637b20;
+  --uncertainty-warm: #ae79241a;
+  background-image:
+    radial-gradient(ellipse at 94% 0%, var(--uncertainty-warm), transparent 66%),
+    radial-gradient(ellipse at 4% 2%, var(--uncertainty-cool), transparent 68%) !important;
+  background-size: 100% 650px !important;
+  background-repeat: no-repeat !important;
+}
+html body.supplement-reading.uncertainty-reading.xz-dark,
+html[data-supp-theme=dark] body.supplement-reading.uncertainty-reading {
+  --uncertainty-cool: #3474944d;
+  --uncertainty-warm: #bd935c30;
+}
+@media (max-width: 650px) {
+  html body.supplement-reading.uncertainty-reading { background-size: 100% 470px !important; }
+}
+@media print {
+  html body.supplement-reading.uncertainty-reading { background-image: none !important; }
+}

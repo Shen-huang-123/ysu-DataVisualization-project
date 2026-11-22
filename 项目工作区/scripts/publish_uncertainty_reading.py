@@ -43,7 +43,7 @@ for cell in s.main.select('th,td'):
 for table in s.main.select('.supp-table'):
  table['aria-label']='三方案敏感性复算数据表'
 s.body['class']=s.body.get('class',[])+['flagship-reading','uncertainty-reading']
-s.head.append(s.new_tag('link',rel='stylesheet',href='../../../../共享组件/flagship-reading.css'))
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../../../共享组件/flagship-reading.css?v=uncertainty-background-1'))
 for a in s.select('#xz-nav .xz-links a'):
  a.attrs.pop('aria-current',None)
  if '任务三_专题深挖/统一中文入口/index.html' in a.get('href',''):a['aria-current']='page'
