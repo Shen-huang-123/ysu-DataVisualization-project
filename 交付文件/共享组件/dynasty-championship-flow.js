@@ -37,6 +37,43 @@
   chart.append(layer, labels, previousYear, currentYear);
   const marks = new Map();
   let animation;
+  let pinned;
+  let hovered;
+  let focused;
+
+  function highlight() {
+    const active = hovered || pinned || focused;
+    chart.classList.toggle('flow-tracing', Boolean(active) && Array.from(layer.children)
+      .some(path => path.style.pointerEvents !== 'none' && path.dataset[active.side] === active.code));
+    for (const path of layer.children) {
+      path.classList.toggle('flow-highlight', Boolean(active && path.dataset[active.side] === active.code));
+    }
+    for (const label of labels.children) {
+      const selected = pinned?.side === label.dataset.side && pinned.code === label.dataset.code;
+      label.setAttribute('aria-pressed', String(selected));
+    }
+  }
+
+  function connectLabel(node, side, code) {
+    const target = {side: side ? 'target' : 'source', code};
+    Object.assign(node.dataset, target);
+    node.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'touch') { hovered = target; highlight(); }
+    });
+    node.addEventListener('pointerleave', () => { hovered = undefined; highlight(); });
+    node.addEventListener('focus', () => { if (node.matches(':focus-visible')) focused = target; highlight(); });
+    node.addEventListener('blur', () => { focused = undefined; highlight(); });
+    node.addEventListener('click', () => {
+      pinned = pinned?.side === target.side && pinned.code === code ? undefined : target;
+      highlight();
+    });
+    node.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        node.dispatchEvent(new Event('click'));
+      }
+    });
+  }
 
   function morph(targets, duration) {
     cancelAnimationFrame(animation);
@@ -51,6 +88,7 @@
     const tracks = Array.from(marks, ([key, entry]) => {
       const target = targets.get(key);
       entry.node.style.pointerEvents = target ? '' : 'none';
+      if (entry.parent === labels) entry.node.setAttribute('tabindex', target ? '0' : '-1');
       return {key, entry, start: entry.values,
         end: target?.values || [...entry.values.slice(0, -1), 0], exiting: !target};
     });
@@ -62,6 +100,9 @@
         if (progress === 1 && exiting) {
           entry.node.remove();
           marks.delete(key);
+          const {side, code} = entry.node.dataset;
+          if (hovered && hovered.side === side && hovered.code === code) hovered = undefined;
+          if (focused && focused.side === side && focused.code === code) focused = undefined;
           continue;
         }
         const values = entry.values = start.map((value, i) => value + (end[i] - value) * eased);
@@ -75,8 +116,10 @@
         entry.node.style.opacity = values.at(-1);
       }
       if (progress < 1) animation = requestAnimationFrame(frame);
+      else highlight();
     }
     frame(started);
+    highlight();
   }
 
   function render(playing = false) {
@@ -104,7 +147,10 @@
       const label = names[source] + ' → ' + names[target] + ' · ' + (defended ? '卫冕' : '易主') + ' ' + count + ' 项';
       const key = JSON.stringify([source, target, defended]);
       const node = marks.get(key)?.node || mark('path', {class: defended ? 'flow-defended' : 'flow-changed'});
-      if (!node.firstChild) node.append(mark('title', {}, label));
+      if (!node.firstChild) {
+        Object.assign(node.dataset, {source, target});
+        node.append(mark('title', {}, label));
+      }
       targets.set(key, {node, parent: layer, title: label, values: [y1, y2, count * 1.6, 1]});
       const li = document.createElement('li');
       li.textContent = label;
@@ -114,7 +160,8 @@
       for (const [code, y] of positions) {
         const key = side + ':' + code;
         const node = marks.get(key)?.node || mark('text', {x: side ? 575 : 145,
-          'text-anchor': side ? 'start' : 'end', 'dominant-baseline': 'central'}, names[code]);
+          'text-anchor': side ? 'start' : 'end', 'dominant-baseline': 'central', role: 'button'}, names[code]);
+        if (!marks.has(key)) connectLabel(node, side, code);
         targets.set(key, {node, parent: labels, values: [y, 1]});
       }
     }

@@ -94,8 +94,19 @@ html body .dynasty-flow-controls #dynasty-flow-play{background:#e8cd97;color:#15
 .dynasty-flow-stage{border-block:1px solid #879ca34d}
 .dynasty-flow svg{display:block;width:100%;max-width:1050px;margin-inline:auto}
 .dynasty-flow svg text{fill:currentColor;font-size:15px}
-.dynasty-flow svg path{fill:none;opacity:.44;stroke:#268393}
+.dynasty-flow svg path{fill:none;stroke:#268393}
 .dynasty-flow svg .flow-defended{stroke:#b48339}
-.dynasty-flow svg path:hover{opacity:1}
+.dynasty-flow svg path{stroke-opacity:.56;transition:stroke-opacity 180ms ease-out;stroke-linecap:round}
+.dynasty-flow svg path:hover,.dynasty-flow svg .flow-highlight{stroke-opacity:1}
+.dynasty-flow svg.flow-tracing path:not(.flow-highlight){stroke-opacity:.13}
+.dynasty-flow svg [role="button"]{cursor:pointer}
+.dynasty-flow svg [role="button"]:is(:hover,:focus-visible,[aria-pressed="true"]){font-weight:700;text-decoration:underline}
+.dynasty-flow-hint{font-size:.85rem}
+.dynasty-flow-key span::before{
+ content:"";display:inline-block;width:1.2em;height:3px;margin-inline-end:.5em;
+ vertical-align:middle;border-radius:2px;background:#b48339
+}
+.dynasty-flow-key span+span::before{background:#268393}
+@media(prefers-reduced-motion:reduce){.dynasty-flow svg path{transition:none}}
 .dynasty-flow summary{cursor:pointer;padding-block:12px}
 @media(max-width:650px){.dynasty-flow svg text{font-size:21px}}

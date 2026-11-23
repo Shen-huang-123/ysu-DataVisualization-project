@@ -61,10 +61,11 @@ def championship_flow(folder):
 </div>
 <p class="dynasty-flow-key"><span>暖金 · 卫冕</span><span>蓝青 · 易主</span></p>
 <p id="dynasty-flow-status" role="status"></p>
-<div class="dynasty-flow-stage"><svg id="dynasty-flow-chart" role="img" aria-label="左侧为上届代表团，右侧为本届代表团"></svg></div>
+<p class="dynasty-flow-hint">悬停代表团名称可预览流向，点击可锁定追踪，再点一次取消。</p>
+<div class="dynasty-flow-stage"><svg id="dynasty-flow-chart" role="group" aria-label="左侧为上届代表团，右侧为本届代表团"></svg></div>
 <details><summary>查看代表团转移明细</summary><ul id="dynasty-flow-list"></ul></details>
 <script type="application/json" id="dynasty-flow-data">{data}</script>
-<script src="../../../共享组件/dynasty-championship-flow.js?v=3" defer></script>
+<script src="../../../共享组件/dynasty-championship-flow.js?v=4" defer></script>
 </section>'''
 
 
