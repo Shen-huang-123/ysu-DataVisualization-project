@@ -64,7 +64,7 @@ def championship_flow(folder):
 <div class="dynasty-flow-stage"><svg id="dynasty-flow-chart" role="img" aria-label="左侧为上届代表团，右侧为本届代表团"></svg></div>
 <details><summary>查看代表团转移明细</summary><ul id="dynasty-flow-list"></ul></details>
 <script type="application/json" id="dynasty-flow-data">{data}</script>
-<script src="../../../共享组件/dynasty-championship-flow.js?v=2" defer></script>
+<script src="../../../共享组件/dynasty-championship-flow.js?v=3" defer></script>
 </section>'''
 
 

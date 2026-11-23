@@ -30,7 +30,56 @@
     return node;
   }
 
-  function render() {
+  const layer = mark('g', {});
+  const labels = mark('g', {});
+  const previousYear = mark('text', {x: 18, y: 22});
+  const currentYear = mark('text', {x: 565, y: 22});
+  chart.append(layer, labels, previousYear, currentYear);
+  const marks = new Map();
+  let animation;
+
+  function morph(targets, duration) {
+    cancelAnimationFrame(animation);
+    for (const [key, target] of targets) {
+      if (!marks.has(key)) {
+        target.parent.append(target.node);
+        marks.set(key, {...target, values: [...target.values.slice(0, -1), 0]});
+      }
+      const entry = marks.get(key);
+      if (target.title) entry.node.firstChild.textContent = target.title;
+    }
+    const tracks = Array.from(marks, ([key, entry]) => {
+      const target = targets.get(key);
+      entry.node.style.pointerEvents = target ? '' : 'none';
+      return {key, entry, start: entry.values,
+        end: target?.values || [...entry.values.slice(0, -1), 0], exiting: !target};
+    });
+    const started = performance.now();
+    function frame(now) {
+      const progress = duration ? Math.min(1, (now - started) / duration) : 1;
+      const eased = progress * progress * (3 - 2 * progress);
+      for (const {key, entry, start, end, exiting} of tracks) {
+        if (progress === 1 && exiting) {
+          entry.node.remove();
+          marks.delete(key);
+          continue;
+        }
+        const values = entry.values = start.map((value, i) => value + (end[i] - value) * eased);
+        const [y1, y2, width] = values;
+        if (entry.parent === layer) {
+          entry.node.setAttribute('d', 'M 155 ' + y1 + ' C 270 ' + y1 + ', 450 ' + y2 + ', 565 ' + y2);
+          entry.node.setAttribute('stroke-width', width);
+        } else {
+          entry.node.setAttribute('y', y1);
+        }
+        entry.node.style.opacity = values.at(-1);
+      }
+      if (progress < 1) animation = requestAnimationFrame(frame);
+    }
+    frame(started);
+  }
+
+  function render(playing = false) {
     const [start, end, flows] = editions[index];
     const displayed = flows.filter(([, , defended]) => filter === 'all' || defended === (filter === 'defended'));
     const total = flows.reduce((sum, row) => sum + row[3], 0);
@@ -46,34 +95,30 @@
     const from = coordinates(left);
     const to = coordinates(right);
     buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
-    const previous = chart.querySelector('.flow-frame-current');
-    const frame = mark('g', {class: 'flow-frame-current'});
-    frame.append(mark('text', {x: 18, y: 22}, start + ' 上届'), mark('text', {x: 565, y: 22}, end + ' 本届'));
+    previousYear.textContent = start + ' ' + "上届";
+    currentYear.textContent = end + ' ' + "本届";
+    const targets = new Map();
     const items = [];
     displayed.sort((a,b) => b[3] - a[3]).forEach(([source, target, defended, count]) => {
       const y1 = from.get(source), y2 = to.get(target);
       const label = names[source] + ' → ' + names[target] + ' · ' + (defended ? '卫冕' : '易主') + ' ' + count + ' 项';
-      const path = mark('path', {d: 'M 155 ' + y1 + ' C 270 ' + y1 + ', 450 ' + y2 + ', 565 ' + y2,
-        class: defended ? 'flow-defended' : 'flow-changed', 'stroke-width': count * 1.6});
-      path.append(mark('title', {}, label));
-      frame.append(path);
+      const key = JSON.stringify([source, target, defended]);
+      const node = marks.get(key)?.node || mark('path', {class: defended ? 'flow-defended' : 'flow-changed'});
+      if (!node.firstChild) node.append(mark('title', {}, label));
+      targets.set(key, {node, parent: layer, title: label, values: [y1, y2, count * 1.6, 1]});
       const li = document.createElement('li');
       li.textContent = label;
       items.push(li);
     });
-    for (const [code,y] of from) frame.append(mark('text', {x: 145,y,'text-anchor':'end','dominant-baseline':'central'}, names[code]));
-    for (const [code,y] of to) frame.append(mark('text', {x: 575,y,'dominant-baseline':'central'}, names[code]));
-    for (const layer of [...chart.children]) {
-      if (layer !== previous) layer.remove();
+    for (const [side, positions] of [[0, from], [1, to]]) {
+      for (const [code, y] of positions) {
+        const key = side + ':' + code;
+        const node = marks.get(key)?.node || mark('text', {x: side ? 575 : 145,
+          'text-anchor': side ? 'start' : 'end', 'dominant-baseline': 'central'}, names[code]);
+        targets.set(key, {node, parent: labels, values: [y, 1]});
+      }
     }
-    chart.append(frame);
-    if (previous && !motion.matches) {
-      previous.classList.remove('flow-frame-current');
-      previous.setAttribute('aria-hidden', 'true');
-      previous.style.pointerEvents = 'none';
-      previous.animate([{opacity:1},{opacity:0}], {duration:380,easing:'ease-out'}).onfinish = () => previous.remove();
-      frame.animate([{opacity:.15},{opacity:1}], {duration:380,easing:'ease-out'});
-    } else previous?.remove();
+    morph(targets, motion.matches || !marks.size ? 0 : playing ? 1150 : 450);
     list.replaceChildren(...items);
   }
 
@@ -95,7 +140,7 @@
       index += 1;
       render();
       if (index === editions.length - 1) pause();
-    }, 1800);
+    }, 1500);
   });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) pause();
