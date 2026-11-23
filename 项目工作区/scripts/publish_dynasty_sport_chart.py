@@ -29,6 +29,14 @@ def sport_chart(folder):
         )
     return f'''<!-- DYNASTY_SPORT_CHART_START -->
 <style>
+html body:has(>main>.dy-sport-chart){{
+ --dy-paper:#f2f5f3;--dy-wash:#dcebed;
+ background:linear-gradient(165deg,var(--dy-wash),var(--dy-paper) 74%) top/100% 430px no-repeat,var(--dy-paper)!important;
+}}
+html body.xz-dark:has(>main>.dy-sport-chart){{--dy-paper:#142129;--dy-wash:#203844}}
+html body:has(>main>.dy-sport-chart)::before,
+html body:has(>main>.dy-sport-chart)::after,
+html body:has(>main>.dy-sport-chart)>:is(.oa-world,.ed-particles){{display:none!important}}
 html body main:has(>.dy-sport-chart){{box-sizing:border-box;width:100%;max-width:none!important;padding:clamp(22px,3vh,42px) clamp(16px,4.5vw,112px) 32px!important}}
 html body main:has(>.dy-sport-chart)>.scroll table{{width:100%;font-variant-numeric:tabular-nums}}
 html body main:has(>.dy-sport-chart)>.scroll :is(th,td){{padding-block:12px!important}}
