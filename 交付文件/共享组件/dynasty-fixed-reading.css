@@ -64,7 +64,14 @@ html body:has(main.dynasty-fixed-reading) a.research-proof-link{display:block!im
 html body:has(main.dynasty-fixed-reading) a.research-proof-link::after{content:none!important}
 html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity p{max-width:none!important}
 html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity img{
- width:100%;max-width:none!important;mix-blend-mode:normal!important
+ width:100%;max-width:none!important;aspect-ratio:auto 1600 / 560;mix-blend-mode:normal!important
+}
+
+html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity{
+ margin-bottom:12px!important;padding-bottom:14px!important;
+}
+html body:has(main.dynasty-fixed-reading) #dynasty-source-sensitivity>p:last-child{
+ margin-bottom:0;
 }
 
 /* Keep the background quiet beneath chart labels and evidence tables. */
@@ -78,7 +85,7 @@ html body:has(>main.dynasty-fixed-reading){
 html body.xz-dark:has(>main.dynasty-fixed-reading){
  --fixed-paper:#142129;--fixed-cool:#31657e5c;--fixed-warm:#a77c3d28;
 }
-html body:has(>main.dynasty-fixed-reading)>.oa-world,
+html body:has(>main.dynasty-fixed-reading)>:is(.oa-world,.ed-particles),
 html body:has(>main.dynasty-fixed-reading)::before,
 html body:has(>main.dynasty-fixed-reading)::after{display:none!important}
 
