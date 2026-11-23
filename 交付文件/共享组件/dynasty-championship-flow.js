@@ -1,6 +1,8 @@
 (() => {
   const get = id => document.getElementById('dynasty-flow-' + id);
-  const editions = JSON.parse(get('data').textContent);
+  const {editions, names} = JSON.parse(get('data').textContent);
+  const play = get('play');
+  let timer;
   const edition = get('edition');
   const kind = get('kind');
   const chart = get('chart');
@@ -32,12 +34,12 @@
     const from = coordinates(left);
     const to = coordinates(right);
     chart.setAttribute('viewBox', '0 0 720 ' + height);
-    chart.replaceChildren(mark('text', {x: 18, y: 22}, start + ' 上届'), mark('text', {x: 630, y: 22}, end + ' 本届'));
+    chart.replaceChildren(mark('text', {x: 18, y: 22}, start + ' 上届'), mark('text', {x: 565, y: 22}, end + ' 本届'));
     const items = [];
     displayed.sort((a,b) => b[3] - a[3]).forEach(([source, target, defended, count]) => {
       const y1 = from.get(source), y2 = to.get(target);
-      const label = source + ' → ' + target + ' · ' + (defended ? '卫冕' : '易主') + ' ' + count + ' 项';
-      const path = mark('path', {d: 'M 93 ' + y1 + ' C 270 ' + y1 + ', 450 ' + y2 + ', 627 ' + y2,
+      const label = names[source] + ' → ' + names[target] + ' · ' + (defended ? '卫冕' : '易主') + ' ' + count + ' 项';
+      const path = mark('path', {d: 'M 155 ' + y1 + ' C 270 ' + y1 + ', 450 ' + y2 + ', 565 ' + y2,
         class: defended ? 'flow-defended' : 'flow-changed', 'stroke-width': count * 1.6});
       path.append(mark('title', {}, label));
       chart.append(path);
@@ -45,12 +47,38 @@
       li.textContent = label;
       items.push(li);
     });
-    for (const [code,y] of from) chart.append(mark('text', {x: 82,y,'text-anchor':'end','dominant-baseline':'central'}, code));
-    for (const [code,y] of to) chart.append(mark('text', {x: 638,y,'dominant-baseline':'central'}, code));
+    for (const [code,y] of from) chart.append(mark('text', {x: 145,y,'text-anchor':'end','dominant-baseline':'central'}, names[code]));
+    for (const [code,y] of to) chart.append(mark('text', {x: 575,y,'dominant-baseline':'central'}, names[code]));
     list.replaceChildren(...items);
   }
 
-  edition.addEventListener('change', render);
+  function pause() {
+    clearInterval(timer);
+    timer = undefined;
+    play.textContent = '播放历届';
+  }
+
+  play.addEventListener('click', () => {
+    if (timer !== undefined) {
+      pause();
+      return;
+    }
+    if (edition.selectedIndex === editions.length - 1) edition.selectedIndex = 0;
+    play.textContent = '暂停播放';
+    render();
+    timer = setInterval(() => {
+      edition.selectedIndex += 1;
+      render();
+      if (edition.selectedIndex === editions.length - 1) pause();
+    }, 1800);
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) pause();
+  });
+  edition.addEventListener('change', () => {
+    pause();
+    render();
+  });
   kind.addEventListener('change', render);
   render();
 })();

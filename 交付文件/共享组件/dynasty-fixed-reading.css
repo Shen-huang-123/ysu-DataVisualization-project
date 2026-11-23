@@ -89,3 +89,19 @@ html body:has(>main.dynasty-fixed-reading)::after{display:none!important}
 .dynasty-flow svg .flow-defended{stroke:#b48339}
 .dynasty-flow svg path:hover{opacity:1}
 .dynasty-flow summary{cursor:pointer;padding-block:12px}
+
+.dynasty-flow-controls{align-items:end;padding:12px 0}
+.dynasty-flow-controls label{display:grid;gap:5px;font-size:.9rem}
+html body .dynasty-flow-controls :is(select,button){
+ min-height:44px;padding:7px 14px;border:1px solid #81959e;border-radius:6px;
+ font:inherit;background:#edf2f2;color:#193c49;
+}
+html body.xz-dark .dynasty-flow-controls :is(select,button){background:#203641;color:#f1f5f3;color-scheme:dark}
+html body .dynasty-flow-controls button{cursor:pointer;border-color:#ad9464}
+.dynasty-flow-key{display:flex;gap:18px;font-size:.85rem}
+.dynasty-flow svg{max-width:1250px;margin-inline:auto}
+.dynasty-flow .dynasty-table-scroll{max-height:65vh;overflow:auto;border-block:1px solid #879ca34d}
+@media(prefers-reduced-motion:no-preference){
+ .dynasty-flow svg path{animation:dynasty-flow-in .55s ease-out both}
+ @keyframes dynasty-flow-in{from{opacity:0}to{opacity:.48}}
+}

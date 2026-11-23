@@ -6,6 +6,8 @@ from html import escape
 from pathlib import Path
 import re
 
+from task2_localization import NOC_ZH
+
 ROOT = Path(__file__).resolve().parents[2]
 FOLDER = ROOT / '交付文件/任务三_专题深挖/S3_冠军的保质期/09_固定小项队列检验'
 TABLE = '固定队列逐届卫冕率.csv'
@@ -40,17 +42,22 @@ def championship_flow(folder):
             edition = (row['from_year'], row['to_year'])
             key = (row['previous'], row['current'], row['defended'].lower() == 'true')
             editions.setdefault(edition, Counter())[key] += 1
-    data = json.dumps([
-        [start, end, [[*key, count] for key, count in flows.items()]]
-        for (start, end), flows in sorted(editions.items())
-    ]).replace('<', '\\u003c')
+    codes = {code for flows in editions.values() for source, target, _ in flows for code in (source, target)}
+    names = {code: '／'.join(NOC_ZH[part] for part in code.split('|')) for code in sorted(codes)}
+    data = json.dumps({
+        'names': names,
+        'editions': [[start, end, [[*key, count] for key, count in flows.items()]]
+                     for (start, end), flows in sorted(editions.items())],
+    }, ensure_ascii=False)
     return f'''<section class="dynasty-flow" aria-labelledby="dynasty-flow-title">
 <h2 id="dynasty-flow-title">谁接过了冠军？</h2>
 <p>连线从上届金牌代表团指向本届金牌代表团，线宽表示小项数。数据为固定队列的历史 Event 代理。</p>
 <div class="dynasty-flow-controls">
 <label>相邻届次 <select id="dynasty-flow-edition"></select></label>
 <label>转移类型 <select id="dynasty-flow-kind"><option value="all">全部</option><option value="defended">卫冕</option><option value="changed">易主</option></select></label>
+<button type="button" id="dynasty-flow-play">播放历届</button>
 </div>
+<p class="dynasty-flow-key"><span>暖金 · 卫冕</span><span>蓝青 · 易主</span></p>
 <p id="dynasty-flow-status" role="status"></p>
 <div class="dynasty-table-scroll" role="region" aria-label="冠军归属连线" tabindex="0"><svg id="dynasty-flow-chart" role="img" aria-label="左侧为上届代表团，右侧为本届代表团"></svg></div>
 <details><summary>查看代表团转移明细</summary><ul id="dynasty-flow-list"></ul></details>
