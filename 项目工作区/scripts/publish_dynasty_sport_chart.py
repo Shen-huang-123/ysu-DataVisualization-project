@@ -30,7 +30,26 @@ def sport_chart(folder):
     return f'''<!-- DYNASTY_SPORT_CHART_START -->
 <style>
 html body main:has(>.dy-sport-chart){{box-sizing:border-box;width:100%;max-width:none!important;padding:clamp(22px,3vh,42px) clamp(16px,4.5vw,112px) 32px!important}}
-html body main:has(>.dy-sport-chart)>.scroll table{{width:100%}}
+html body main:has(>.dy-sport-chart)>.scroll table{{width:100%;font-variant-numeric:tabular-nums}}
+html body main:has(>.dy-sport-chart)>.scroll :is(th,td){{padding-block:12px!important}}
+html body main:has(>.dy-sport-chart)>.scroll :is(th,td):nth-child(n+3){{text-align:right!important}}
+html body main:has(>.dy-sport-chart)>.note{{
+ background:transparent!important;color:inherit!important;border-radius:0!important;
+ border-inline-start:3px solid #ad9464;padding:6px 0 6px 16px!important;margin:18px 0 10px;
+}}
+html body main:has(>.dy-sport-chart)>.note+p{{margin:10px 0 0}}
+html body:has(main>.dy-sport-chart) :is(main>.note+p,#dynasty-source-sensitivity) a{{
+ color:#226078!important;text-underline-offset:4px;
+}}
+html body.xz-dark:has(main>.dy-sport-chart) :is(main>.note+p,#dynasty-source-sensitivity) a{{color:#acd4df!important}}
+html body:has(main>.dy-sport-chart) #dynasty-source-sensitivity{{
+ width:auto!important;max-width:none!important;box-sizing:border-box;
+ margin:0 clamp(16px,4.5vw,112px) 16px!important;padding:20px 0 16px!important;
+}}
+html body:has(main>.dy-sport-chart) #dynasty-source-sensitivity h2{{margin-top:0}}
+html body:has(main>.dy-sport-chart) #dynasty-source-sensitivity img{{
+ width:100%;max-width:none!important;aspect-ratio:auto 1600 / 560;
+}}
 html body main:has(>.dy-sport-chart)>details.ex-route{{margin-block:12px 16px!important}}
 html body main:has(>.dy-sport-chart)>details.ex-route>summary{{min-height:44px;padding-block:4px!important}}
 .dy-sport-chart{{--up:#17687b;--down:#934a34;--ruler:#718b9666;margin:2rem 0;color:inherit}}
