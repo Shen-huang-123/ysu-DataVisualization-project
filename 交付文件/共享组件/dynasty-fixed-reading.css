@@ -81,27 +81,21 @@ html body:has(>main.dynasty-fixed-reading)::before,
 html body:has(>main.dynasty-fixed-reading)::after{display:none!important}
 
 .dynasty-flow{margin:28px 0;padding:20px 0;border-block:1px solid #879ca367}
-.dynasty-flow-controls{display:flex;gap:12px 24px;flex-wrap:wrap}
-.dynasty-flow-controls select{min-height:44px}
-.dynasty-flow svg{display:block;width:100%;min-width:540px;max-width:1050px}
-.dynasty-flow svg text{fill:currentColor;font-size:14px}
-.dynasty-flow svg path{fill:none;opacity:.48;stroke:#268393}
+.dynasty-flow-controls{display:flex;gap:12px 20px;flex-wrap:wrap;align-items:center;padding:12px 0}
+#dynasty-flow-edition{flex:1 0 100%}
+.dynasty-flow-controls [role="group"]{display:flex;flex-wrap:wrap;gap:6px}
+html body .dynasty-flow-controls button{
+ min-height:44px;padding:6px 11px;border:1px solid #81959e;border-radius:5px;
+ font:inherit;background:transparent;color:inherit;cursor:pointer
+}
+html body .dynasty-flow-controls button[aria-pressed="true"],
+html body .dynasty-flow-controls #dynasty-flow-play{background:#e8cd97;color:#152730;border-color:#e8cd97}
+.dynasty-flow-key{display:flex;gap:18px;font-size:.85rem}
+.dynasty-flow-stage{border-block:1px solid #879ca34d}
+.dynasty-flow svg{display:block;width:100%;max-width:1050px;margin-inline:auto}
+.dynasty-flow svg text{fill:currentColor;font-size:15px}
+.dynasty-flow svg path{fill:none;opacity:.44;stroke:#268393}
 .dynasty-flow svg .flow-defended{stroke:#b48339}
 .dynasty-flow svg path:hover{opacity:1}
 .dynasty-flow summary{cursor:pointer;padding-block:12px}
-
-.dynasty-flow-controls{align-items:end;padding:12px 0}
-.dynasty-flow-controls label{display:grid;gap:5px;font-size:.9rem}
-html body .dynasty-flow-controls :is(select,button){
- min-height:44px;padding:7px 14px;border:1px solid #81959e;border-radius:6px;
- font:inherit;background:#edf2f2;color:#193c49;
-}
-html body.xz-dark .dynasty-flow-controls :is(select,button){background:#203641;color:#f1f5f3;color-scheme:dark}
-html body .dynasty-flow-controls button{cursor:pointer;border-color:#ad9464}
-.dynasty-flow-key{display:flex;gap:18px;font-size:.85rem}
-.dynasty-flow svg{max-width:1250px;margin-inline:auto}
-.dynasty-flow .dynasty-table-scroll{max-height:65vh;overflow:auto;border-block:1px solid #879ca34d}
-@media(prefers-reduced-motion:no-preference){
- .dynasty-flow svg path{animation:dynasty-flow-in .55s ease-out both}
- @keyframes dynasty-flow-in{from{opacity:0}to{opacity:.48}}
-}
+@media(max-width:650px){.dynasty-flow svg text{font-size:21px}}

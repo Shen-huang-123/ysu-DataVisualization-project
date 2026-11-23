@@ -53,16 +53,18 @@ def championship_flow(folder):
 <h2 id="dynasty-flow-title">谁接过了冠军？</h2>
 <p>连线从上届金牌代表团指向本届金牌代表团，线宽表示小项数。数据为固定队列的历史 Event 代理。</p>
 <div class="dynasty-flow-controls">
-<label>相邻届次 <select id="dynasty-flow-edition"></select></label>
-<label>转移类型 <select id="dynasty-flow-kind"><option value="all">全部</option><option value="defended">卫冕</option><option value="changed">易主</option></select></label>
+<div id="dynasty-flow-edition" role="group" aria-label="选择相邻届次"></div>
+<div id="dynasty-flow-kind" role="group" aria-label="转移类型">
+<button type="button" data-kind="all" aria-pressed="true">全部</button><button type="button" data-kind="defended" aria-pressed="false">卫冕</button><button type="button" data-kind="changed" aria-pressed="false">易主</button>
+</div>
 <button type="button" id="dynasty-flow-play">播放历届</button>
 </div>
 <p class="dynasty-flow-key"><span>暖金 · 卫冕</span><span>蓝青 · 易主</span></p>
 <p id="dynasty-flow-status" role="status"></p>
-<div class="dynasty-table-scroll" role="region" aria-label="冠军归属连线" tabindex="0"><svg id="dynasty-flow-chart" role="img" aria-label="左侧为上届代表团，右侧为本届代表团"></svg></div>
+<div class="dynasty-flow-stage"><svg id="dynasty-flow-chart" role="img" aria-label="左侧为上届代表团，右侧为本届代表团"></svg></div>
 <details><summary>查看代表团转移明细</summary><ul id="dynasty-flow-list"></ul></details>
 <script type="application/json" id="dynasty-flow-data">{data}</script>
-<script src="../../../共享组件/dynasty-championship-flow.js" defer></script>
+<script src="../../../共享组件/dynasty-championship-flow.js?v=2" defer></script>
 </section>'''
 
 
