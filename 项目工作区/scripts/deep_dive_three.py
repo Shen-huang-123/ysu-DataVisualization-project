@@ -7,6 +7,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from task2_localization import SPORT_ZH
+from publish_dynasty_sport_chart import sport_chart
 
 ROOT = Path(__file__).resolve().parents[2]
 T3 = ROOT/'交付文件'/'任务三_专题深挖'
@@ -117,7 +118,7 @@ def dynasty():
     for _,r in sex.iterrows():md+=f'| {r.sex_group} | {r.era} | {r["size"]} | {r["mean"]:.1%} |\n'
     md+='\n逐运动和逐小项的正向反例已单列。分层是探索性描述，运动数与小项数很不均衡；不能把性别或赛制差异解释为成因。赛事规则、参赛资格、政体变化仍是未控制混杂；同名 Event 也未核验规则完全稳定。\n\n复算：`python 项目工作区/scripts/deep_dive_three.py`。\n'
     (S7/'机制与反例说明.md').write_text(md,encoding='utf-8')
-    body=f'<img src="逐运动反例.png" alt="逐运动卫冕趋势"><h2>性别分层</h2><div class="scroll"><table><tr><th>分组</th><th>时段</th><th>转移数</th><th>卫冕率</th></tr>{sexrows}</table></div><div class="note">总体下降并不保证每种运动都下降。性别和多人赛制仅按历史小项名称代理，不能视为因果机制；规则变化仍未逐项核验。</div><p><a href="逐运动趋势与反例.csv">逐运动数据</a>　<a href="固定小项反例.csv">查看小项反例</a>　<a href="机制与反例说明.md">方法与边界</a></p>'
+    body=f'{sport_chart(S7)}<h2>性别分层</h2><div class="scroll"><table><tr><th>分组</th><th>时段</th><th>转移数</th><th>卫冕率</th></tr>{sexrows}</table></div><div class="note">总体下降并不保证每种运动都下降。性别和多人赛制仅按历史小项名称代理，不能视为因果机制；规则变化仍未逐项核验。</div><p><a href="逐运动趋势与反例.csv">逐运动数据</a>　<a href="固定小项反例.csv">查看小项反例</a>　<a href="机制与反例说明.md">方法与边界</a></p>'
     page('王朝为何变短？先看反例。','在113个固定小项中拆开运动、性别和疑似多人赛制，检验总体趋势是否掩盖相反方向。',body,S7)
     return {'sports':len(sport),'counterexample_sports':int((sport.late_minus_early_pp>0).sum())}
 
