@@ -79,3 +79,13 @@ html body.xz-dark:has(>main.dynasty-fixed-reading){
 html body:has(>main.dynasty-fixed-reading)>.oa-world,
 html body:has(>main.dynasty-fixed-reading)::before,
 html body:has(>main.dynasty-fixed-reading)::after{display:none!important}
+
+.dynasty-flow{margin:28px 0;padding:20px 0;border-block:1px solid #879ca367}
+.dynasty-flow-controls{display:flex;gap:12px 24px;flex-wrap:wrap}
+.dynasty-flow-controls select{min-height:44px}
+.dynasty-flow svg{display:block;width:100%;min-width:540px;max-width:1050px}
+.dynasty-flow svg text{fill:currentColor;font-size:14px}
+.dynasty-flow svg path{fill:none;opacity:.48;stroke:#268393}
+.dynasty-flow svg .flow-defended{stroke:#b48339}
+.dynasty-flow svg path:hover{opacity:1}
+.dynasty-flow summary{cursor:pointer;padding-block:12px}

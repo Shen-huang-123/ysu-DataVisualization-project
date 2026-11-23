@@ -1,5 +1,7 @@
 """Publish a readable edition table from the fixed-cohort results."""
 import csv
+import json
+from collections import Counter
 from html import escape
 from pathlib import Path
 import re
@@ -31,11 +33,37 @@ def edition_table(folder):
 <!-- DYNASTY_EDITION_TABLE_END -->'''
 
 
+def championship_flow(folder):
+    editions = {}
+    with (folder / '固定小项逐届控制权转移.csv').open(encoding='utf-8-sig', newline='') as file:
+        for row in csv.DictReader(file):
+            edition = (row['from_year'], row['to_year'])
+            key = (row['previous'], row['current'], row['defended'].lower() == 'true')
+            editions.setdefault(edition, Counter())[key] += 1
+    data = json.dumps([
+        [start, end, [[*key, count] for key, count in flows.items()]]
+        for (start, end), flows in sorted(editions.items())
+    ]).replace('<', '\\u003c')
+    return f'''<section class="dynasty-flow" aria-labelledby="dynasty-flow-title">
+<h2 id="dynasty-flow-title">谁接过了冠军？</h2>
+<p>连线从上届金牌代表团指向本届金牌代表团，线宽表示小项数。数据为固定队列的历史 Event 代理。</p>
+<div class="dynasty-flow-controls">
+<label>相邻届次 <select id="dynasty-flow-edition"></select></label>
+<label>转移类型 <select id="dynasty-flow-kind"><option value="all">全部</option><option value="defended">卫冕</option><option value="changed">易主</option></select></label>
+</div>
+<p id="dynasty-flow-status" role="status"></p>
+<div class="dynasty-table-scroll" role="region" aria-label="冠军归属连线" tabindex="0"><svg id="dynasty-flow-chart" role="img" aria-label="左侧为上届代表团，右侧为本届代表团"></svg></div>
+<details><summary>查看代表团转移明细</summary><ul id="dynasty-flow-list"></ul></details>
+<script type="application/json" id="dynasty-flow-data">{data}</script>
+<script src="../../../共享组件/dynasty-championship-flow.js" defer></script>
+</section>'''
+
+
 def publish_edition_table(folder=FOLDER):
     page = folder / 'index.html'
     html = page.read_text(encoding='utf-8')
     html = re.sub(r'\n?<!-- DYNASTY_EDITION_TABLE_START -->.*?<!-- DYNASTY_EDITION_TABLE_END -->', '', html, flags=re.S)
-    html, count = re.subn(r'<img\b[^>]*\bdynasty-fixed-trend\b[^>]*>', lambda match: match[0] + '\n' + edition_table(folder), html)
+    html, count = re.subn(r'<img\b[^>]*\bdynasty-fixed-trend\b[^>]*>', lambda match: match[0] + '\n' + edition_table(folder).replace('<!-- DYNASTY_EDITION_TABLE_END -->', championship_flow(folder) + '\n<!-- DYNASTY_EDITION_TABLE_END -->'), html)
     if count != 1:
         raise ValueError('Expected exactly one fixed-cohort trend image')
     page.write_text(html, encoding='utf-8')
