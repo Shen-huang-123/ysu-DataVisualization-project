@@ -36,3 +36,4 @@ html body.impact-ledger .method-reading h1+p{
 @media(max-width:700px){
  html body.impact-ledger>.oa-world{opacity:.52}
 }
+html body.impact-ledger>.oa-world .oa-landscape{display:none}

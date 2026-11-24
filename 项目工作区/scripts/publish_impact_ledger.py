@@ -36,7 +36,7 @@ s.main.append(BeautifulSoup(content,'html.parser'))
 s.body['class']=s.body.get('class',[])+['impact-ledger']
 h=s.main.h1;h.string='清洗决定，究竟改变了什么？'
 eyebrow=s.new_tag('p',attrs={'class':'ledger-eyebrow'});eyebrow.string='数据体检 / 数据问题影响账本';h.insert_before(eyebrow)
-s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/impact-ledger.css?v=reading-surface'))
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/impact-ledger.css?v=soft-light'))
 s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/olympic-atmosphere.css?v=3'))
 s.head.append(s.new_tag('script',src='../../共享组件/olympic-atmosphere.js?v=1',defer=''))
 
