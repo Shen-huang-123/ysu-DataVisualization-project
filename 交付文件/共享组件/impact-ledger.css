@@ -19,3 +19,18 @@ html body.impact-ledger .method-reading h2{font-size:clamp(24px,2.6vw,34px)!impo
 html body.impact-ledger .method-reading li{margin:14px 0;font-size:16px}
 @media(max-width:650px){html body.impact-ledger .method-actions{gap:12px;margin-bottom:28px;flex-wrap:wrap}html body.impact-ledger .method-actions a{font-size:12px}html body.impact-ledger table{min-width:740px}html body.impact-ledger :is(th,td){padding:14px 12px!important}html body.impact-ledger .method-reading h1+p{font-size:15px!important}}
 html body.impact-ledger .method-actions{border-image:linear-gradient(90deg,#6b9db466 0 20%,#c7ad7166 20% 40%,#c9d1cd55 40% 60%,#75a58c66 60% 80%,#bc7d8966 80%) 1}
+
+html body.supplement-reading.impact-ledger{isolation:isolate}
+html body.supplement-reading.impact-ledger::before{
+ content:"";position:absolute;inset:0 0 auto;height:clamp(180px,30vh,290px);
+ z-index:-1;pointer-events:none;
+ background:radial-gradient(ellipse at 38% 0%,#549ba744,transparent 67%);
+ animation:ledger-light-drift 13s ease-in-out infinite alternate;
+}
+@keyframes ledger-light-drift{
+ from{transform:translateX(-10%) scaleX(.8);opacity:.45}
+ to{transform:translateX(10%) scaleX(.8);opacity:.9}
+}
+@media(prefers-reduced-motion:reduce){
+ html body.supplement-reading.impact-ledger::before{animation:none;opacity:.55}
+}
