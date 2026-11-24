@@ -1,5 +1,6 @@
 """Reproducible small-delegation cohort and IOC-source audit for topic three."""
 from pathlib import Path
+from task2_localization import NOC_ZH
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -49,8 +50,9 @@ md = f'''# 小代表团：预先定义的可复现样本
 `python 项目工作区/scripts/task3_evidence_upgrade.py`。源数据为任务一审计后的 `olympics_flagged.csv.gz`。运动员行口径会受团体项目人数影响；本清单不等于按官方小项奖牌定义的最小代表团榜。
 '''
 (OUT / '样本定义与反例.md').write_text(md, encoding='utf-8')
-rows = ''.join(f'<tr><td>{r.NOC}</td><td>{r.editions}</td><td>{r.median_participation_rows:g}</td><td>{r.medal_editions}</td><td>{r.medal_rows}</td></tr>' for r in chosen.itertuples())
+rows = ''.join(f'<tr><td>{NOC_ZH.get(r.NOC, r.NOC)}</td><td>{r.editions}</td><td>{r.median_participation_rows:g}</td><td>{r.medal_editions}</td><td>{r.medal_rows}</td></tr>' for r in chosen.itertuples())
 html = f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小代表团客观样本</title><style>body{{margin:0;background:#eee9df;color:#172c43;font-family:"Microsoft YaHei",sans-serif}}main{{max-width:980px;margin:auto;padding:60px 24px}}h1{{font-size:clamp(36px,6vw,66px)}}p{{line-height:1.8}}table{{width:100%;border-collapse:collapse;background:#fffaf2;border-radius:18px;overflow:hidden}}td,th{{padding:13px;text-align:left;border-bottom:1px solid #ddd2c3}}.note{{background:#153653;color:#fff;padding:26px;border-radius:22px;margin:28px 0}}a{{color:#216299}}.note a{{color:#b8dcff}}</style><style id="sample-conclusion-style">
+html:has(#sample-conclusion-style) body .oa-landscape{{display:none!important}}
 html:has(#sample-conclusion-style) body main .note{{
  background:transparent!important;color:inherit!important;box-shadow:none!important;
  border:0!important;border-inline-start:3px solid #ab905e!important;border-radius:0!important;
