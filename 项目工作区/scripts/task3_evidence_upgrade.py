@@ -50,7 +50,18 @@ md = f'''# 小代表团：预先定义的可复现样本
 '''
 (OUT / '样本定义与反例.md').write_text(md, encoding='utf-8')
 rows = ''.join(f'<tr><td>{r.NOC}</td><td>{r.editions}</td><td>{r.median_participation_rows:g}</td><td>{r.medal_editions}</td><td>{r.medal_rows}</td></tr>' for r in chosen.itertuples())
-html = f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小代表团客观样本</title><style>body{{margin:0;background:#eee9df;color:#172c43;font-family:"Microsoft YaHei",sans-serif}}main{{max-width:980px;margin:auto;padding:60px 24px}}h1{{font-size:clamp(36px,6vw,66px)}}p{{line-height:1.8}}table{{width:100%;border-collapse:collapse;background:#fffaf2;border-radius:18px;overflow:hidden}}td,th{{padding:13px;text-align:left;border-bottom:1px solid #ddd2c3}}.note{{background:#153653;color:#fff;padding:26px;border-radius:22px;margin:28px 0}}a{{color:#216299}}.note a{{color:#b8dcff}}</style></head><body><main><small>任务三 / 小代表团</small><h1>先定门槛，<br>再讲突破。</h1><p>2000—2024 年至少参加三届的 {len(eligible)} 个代表团中，参赛行中位数的下四分位门槛是 <strong>{threshold:g} 行</strong>。再要求至少一届获奖，并单列中立、难民和独立身份，得到 {len(chosen)} 个代表团。</p><table><thead><tr><th>代表团代码</th><th>参赛届数</th><th>典型参赛行</th><th>获奖届数</th><th>获奖行</th></tr></thead><tbody>{rows}</tbody></table><div class="note"><h2>这个结果挑战了原专题的选例</h2><p>原七个故事案例大多不在最小规模四分位内。它们可以继续讲述，但不能代替按统一门槛筛出的总体。小样本的比例极不稳定，也不能把运动员获奖行当作官方奖牌数或运动员培养效率。</p><a href="原七案例与客观门槛对照.csv">查看原七案例对照</a></div><p><a href="2000_2024全部候选及纳入判定.csv">下载全部候选与排除理由</a>　<a href="入选代表团逐届记录.csv">下载逐届数据</a></p></main></body></html>'''
+html = f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小代表团客观样本</title><style>body{{margin:0;background:#eee9df;color:#172c43;font-family:"Microsoft YaHei",sans-serif}}main{{max-width:980px;margin:auto;padding:60px 24px}}h1{{font-size:clamp(36px,6vw,66px)}}p{{line-height:1.8}}table{{width:100%;border-collapse:collapse;background:#fffaf2;border-radius:18px;overflow:hidden}}td,th{{padding:13px;text-align:left;border-bottom:1px solid #ddd2c3}}.note{{background:#153653;color:#fff;padding:26px;border-radius:22px;margin:28px 0}}a{{color:#216299}}.note a{{color:#b8dcff}}</style><style id="sample-conclusion-style">
+html:has(#sample-conclusion-style) body main .note{{
+ background:transparent!important;color:inherit!important;box-shadow:none!important;
+ border:0!important;border-inline-start:3px solid #ab905e!important;border-radius:0!important;
+ padding:6px 0 6px 18px!important;margin:24px 0 16px!important;
+}}
+html:has(#sample-conclusion-style) body main .note h2{{margin:0 0 10px!important}}
+html:has(#sample-conclusion-style) body main .note p{{margin:0 0 10px!important;max-width:80ch}}
+html:has(#sample-conclusion-style) body main :is(.note,.note+p) a{{color:#205c70!important;text-underline-offset:.2em}}
+html:has(#sample-conclusion-style) body.xz-dark main :is(.note,.note+p) a{{color:#b3dbe6!important}}
+html:has(#sample-conclusion-style) body main .note+p{{display:flex;flex-wrap:wrap;gap:8px 16px;margin:12px 0 0!important}}
+</style></head><body><main><small>任务三 / 小代表团</small><h1>先定门槛，<br>再讲突破。</h1><p>2000—2024 年至少参加三届的 {len(eligible)} 个代表团中，参赛行中位数的下四分位门槛是 <strong>{threshold:g} 行</strong>。再要求至少一届获奖，并单列中立、难民和独立身份，得到 {len(chosen)} 个代表团。</p><table><thead><tr><th>代表团代码</th><th>参赛届数</th><th>典型参赛行</th><th>获奖届数</th><th>获奖行</th></tr></thead><tbody>{rows}</tbody></table><div class="note"><h2>这个结果挑战了原专题的选例</h2><p>原七个故事案例大多不在最小规模四分位内。它们可以继续讲述，但不能代替按统一门槛筛出的总体。小样本的比例极不稳定，也不能把运动员获奖行当作官方奖牌数或运动员培养效率。</p><a href="原七案例与客观门槛对照.csv">查看原七案例对照</a></div><p><a href="2000_2024全部候选及纳入判定.csv">下载全部候选与排除理由</a>　<a href="入选代表团逐届记录.csv">下载逐届数据</a></p></main></body></html>'''
 (OUT / 'index.html').write_text(html, encoding='utf-8')
 source = BASE / 'S4_小代表团的大突破' / '研究说明.md'
 txt = source.read_text(encoding='utf-8')
