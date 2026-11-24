@@ -79,7 +79,8 @@ items = ''.join(
     for topic, title, url, implication in sources
     for year, name in [topic.rsplit(' ', 1)]
 )
-(s3 / 'IOC一手来源核验.html').write_text(f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S3 IOC一手来源核验</title><style>body{{margin:0;background:#eee9df;color:#172c43;font-family:"Microsoft YaHei",sans-serif}}main{{max-width:900px;margin:auto;padding:60px 24px}}h1{{font-size:clamp(36px,6vw,60px)}}li{{background:#fffaf2;margin:14px 0;padding:20px;border-radius:18px;line-height:1.7}}a{{color:#196298}}.note{{padding:25px;border-radius:20px;background:#173754;color:#fff;line-height:1.8}}</style><style id="ioc-source-contrast">
+(s3 / 'IOC一手来源核验.html').write_text(f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S3 IOC一手来源核验</title><style>body{{margin:0;background:#eee9df;color:#172c43;font-family:"Microsoft YaHei",sans-serif}}main{{max-width:900px;margin:auto;padding:60px 24px}}h1{{font-size:clamp(36px,6vw,60px)}}li{{background:#fffaf2;margin:14px 0;padding:20px;border-radius:18px;line-height:1.7}}a{{color:#196298}}.note{{padding:25px;border-radius:20px;background:#173754;color:#fff;line-height:1.8}}</style><link rel="stylesheet" href="../../共享组件/olympic-atmosphere.css?v=3"><script defer src="../../共享组件/olympic-atmosphere.js?v=1"></script><style id="ioc-source-contrast">
+html:has(#ioc-source-contrast) body .oa-landscape{{display:none}} html:has(#ioc-source-contrast) body>.oa-world{{opacity:.8}}
 html:has(#ioc-source-contrast) body{{
  --ioc-paper:#f5f5ef;--ioc-wash:#dce9e6;
  background:linear-gradient(165deg,var(--ioc-wash),transparent 76%) top/100% 360px no-repeat,var(--ioc-paper)!important;
@@ -89,7 +90,7 @@ html:has(#ioc-source-contrast) body.xz-dark,html:has(#ioc-source-contrast)[data-
 }}
 html:has(#ioc-source-contrast) body::before,
 html:has(#ioc-source-contrast) body::after,
-html:has(#ioc-source-contrast) body>:is(.oa-world,.ed-particles){{display:none!important}}
+html:has(#ioc-source-contrast) body>:is(.oa-landscape,.ed-particles){{display:none!important}}
 
 html:has(#ioc-source-contrast) body main>ol{{--ioc-rule:#8caaa859;list-style:none;padding:0;margin:28px 0;border-top:1px solid var(--ioc-rule)}}
 html:has(#ioc-source-contrast) body main>ol>li{{display:grid;grid-template-columns:8rem minmax(0,1fr);column-gap:24px;margin:0!important;padding:20px 4px!important;border:0;border-bottom:1px solid var(--ioc-rule);border-radius:0!important;background:transparent!important;color:#20343c!important}}
