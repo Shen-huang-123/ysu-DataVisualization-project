@@ -83,6 +83,11 @@ html:has(#ioc-source-contrast) body main>ol>li a{{color:#175b70!important}}
 html:has(#ioc-source-contrast) body.xz-dark main>ol>li,html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li{{background:#203039!important;color:#f1f5f4!important}}
 html:has(#ioc-source-contrast) body.xz-dark main>ol>li p,html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li p{{color:#c5d4d9!important}}
 html:has(#ioc-source-contrast) body.xz-dark main>ol>li a,html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li a{{color:#a9dce9!important}}
+
+html:has(#ioc-source-contrast) body main>ol{{padding-inline-start:1.8em;margin:24px 0}}
+html:has(#ioc-source-contrast) body main>ol>li{{margin:0!important;padding:15px 12px!important;border-radius:0!important;border-bottom:1px solid currentColor;border-bottom-color:color-mix(in srgb,currentColor 20%,transparent);background:transparent!important}}
+html:has(#ioc-source-contrast) body main>ol>li p{{margin:5px 0 0!important;max-width:78ch}}
+html:has(#ioc-source-contrast) body main>ol>li a{{text-underline-offset:.2em}}
 </style></head><body><main><small>任务三 / 地缘政治的投影</small><h1>数据记录缺席，<br>史料解释背景。</h1><ol>{items}</ol><div class="note">数据直接支持代表团代码、参赛行和奖牌行。IOC 文献支持特定事件与身份制度。不得从某代表团在数据中缺席，反推它的唯一政治动机。</div></main></body></html>''', encoding='utf-8')
 s3_research = s3 / '研究说明.md'
 s3_text = s3_research.read_text(encoding='utf-8').split('\n\n## IOC 一手来源核验')[0]
