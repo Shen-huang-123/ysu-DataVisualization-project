@@ -18,3 +18,14 @@ html body.topic-portal-refined .source-interval-figure{margin:30px 0!important;p
 .source-interval-figure svg{display:block;width:100%;height:auto;overflow:visible;font-family:'Microsoft YaHei',sans-serif;color:inherit}
 .source-interval-figure text{fill:currentColor;font-size:17px}.source-interval-figure .iv-heading{font-size:26px;font-weight:500}.source-interval-figure .iv-label{font-size:20px}.source-interval-figure .iv-muted{font-size:15px;opacity:.7}.source-interval-figure .iv-value{font-size:18px;font-variant-numeric:tabular-nums}.source-interval-figure .iv-grid{stroke:currentColor;opacity:.1}.source-interval-figure .iv-zero{opacity:.55;stroke-dasharray:5 6}.source-interval-figure .iv-stable{stroke:#59a4af;fill:#59a4af;stroke-width:2}.source-interval-figure .iv-caution{stroke:#be8251;fill:#be8251;stroke-width:2}.source-interval-figure .iv-interval{stroke-width:4}.source-interval-figure figcaption{position:static!important;background:transparent!important;padding:16px 0 0!important;color:inherit!important;font-size:14px!important;line-height:1.8}
 @media(max-width:650px){.source-interval-figure{overflow-x:auto}.source-interval-figure svg{min-width:780px}}
+
+/* Keep the entrance photo behind the bottom chapter rail. */
+html body.ed-entry.topic-portal-refined.narrative-stories header:is(.hero,.photo-editorial-hero){
+ min-height:100vh!important;
+ min-height:100svh!important;
+ box-sizing:border-box;
+}
+html body.ed-entry.topic-portal-refined.narrative-stories header.hero-image-fade>.hero-image-fade-layer{
+ height:14%!important;
+ min-height:72px!important;
+}
