@@ -106,7 +106,7 @@ depth=TASK/'十专题深度核验.html'
 if depth.exists():
     text=depth.read_text(encoding='utf-8')
     if 'href="11_结论稳定性地图/index.html"' not in text:
-        text=text.replace('</body>','<p style="max-width:1050px;margin:32px auto;padding:22px;border-radius:18px;background:#173b58"><a href="11_结论稳定性地图/index.html" style="color:#fff;font-size:20px">十专题结论稳定性地图</a></p></body>',1)
+        text=text.replace('<footer>', '<a class="topic-map-entry" href="11_结论稳定性地图/index.html">十专题结论稳定性地图<span aria-hidden="true">↗</span></a><footer>', 1)
     text=text.replace('下一步应按代码逐个查 IOC 与各国奥委会档案。','IOC 一手文献已核对抵制背景与特殊身份制度；单个缺席代码的动机仍不能由数据推断。')
     text=text.replace('本页只挑选七个分析案例，不构成全部小代表团的公平排行榜。','原七个故事案例均不在预设最小四分位样本内；客观筛选的完整候选与排除理由见 S4 专题。')
     depth.write_text(text,encoding='utf-8')
