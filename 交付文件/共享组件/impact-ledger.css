@@ -19,3 +19,20 @@ html body.impact-ledger .method-reading h2{font-size:clamp(24px,2.6vw,34px)!impo
 html body.impact-ledger .method-reading li{margin:14px 0;font-size:16px}
 @media(max-width:650px){html body.impact-ledger .method-actions{gap:12px;margin-bottom:28px;flex-wrap:wrap}html body.impact-ledger .method-actions a{font-size:12px}html body.impact-ledger table{min-width:740px}html body.impact-ledger :is(th,td){padding:14px 12px!important}html body.impact-ledger .method-reading h1+p{font-size:15px!important}}
 html body.impact-ledger .method-actions{border-image:linear-gradient(90deg,#6b9db466 0 20%,#c7ad7166 20% 40%,#c9d1cd55 40% 60%,#75a58c66 60% 80%,#bc7d8966 80%) 1}
+
+/* Keep the shared scenery in the margins and give the evidence a steady surface. */
+html body.impact-ledger>.oa-world{opacity:.76}
+html body.impact-ledger .supp-table{
+ background:var(--ledger-paper)!important;
+ border:1px solid var(--sr-line)!important;
+ border-radius:10px!important;
+}
+html body.impact-ledger .supp-table th{
+ background:color-mix(in srgb,var(--ledger-paper) 93%,var(--sr-ink))!important;
+}
+html body.impact-ledger .method-reading h1+p{
+ max-width:72ch; text-wrap:pretty;
+}
+@media(max-width:700px){
+ html body.impact-ledger>.oa-world{opacity:.52}
+}
