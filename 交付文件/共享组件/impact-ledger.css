@@ -1,6 +1,6 @@
 /* Impact ledger: quiet editorial canvas, aligned with the task pages. */
-html body.supplement-reading.impact-ledger{background:radial-gradient(ellipse 65% 420px at 95% 0,#d6bc8520,transparent 85%),radial-gradient(ellipse 70% 500px at 0 15%,#72a8bc10,transparent 85%),#f4f4ef!important}
-html[data-supp-theme=dark] body.supplement-reading.impact-ledger,html body.supplement-reading.impact-ledger.xz-dark{background:radial-gradient(ellipse 65% 480px at 95% 0,#c6ad7e0d,transparent 85%),radial-gradient(ellipse 70% 600px at 0 10%,#6697b015,transparent 85%),#142129!important}
+html body.supplement-reading.impact-ledger{--ledger-paper:#f1f5f4;--ledger-wash:#dceae8;background:linear-gradient(162deg,var(--ledger-wash),transparent 78%) top/100% 420px no-repeat,var(--ledger-paper)!important}
+html[data-supp-theme=dark] body.supplement-reading.impact-ledger,html body.supplement-reading.impact-ledger.xz-dark{--ledger-paper:#142129;--ledger-wash:#223943;background:linear-gradient(162deg,var(--ledger-wash),transparent 78%) top/100% 420px no-repeat,var(--ledger-paper)!important}
 html body.impact-ledger>main{padding-top:30px!important}
 html body.impact-ledger .method-actions{gap:24px;margin-bottom:46px;padding-bottom:20px;border-bottom:1px solid var(--sr-line)}
 html body.impact-ledger .method-actions a{font-size:13px;text-decoration:none!important;min-height:36px}
