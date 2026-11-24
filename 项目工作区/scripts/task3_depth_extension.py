@@ -232,6 +232,52 @@ for s in sections:
 nav = "".join(f"<a href='#{s['code']}'>{s['code']} {escape(s['title'])}</a>" for s in sections)
 html = f"""<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>任务三｜十专题深度核验</title><style>
 *{{box-sizing:border-box}}html{{scroll-behavior:smooth}}body{{margin:0;background:#f0eee8;color:#153039;font-family:'Microsoft YaHei',system-ui,sans-serif}}a{{color:inherit;text-decoration:none}}a:focus-visible{{outline:3px solid #d8a267;outline-offset:4px}}header{{background:#102b34;color:#f4f2e9;padding:75px clamp(22px,6vw,90px) 85px}}header a{{font-size:13px;color:#dfb681}}header h1{{font-family:'STSong','SimSun',serif;font-size:clamp(48px,8vw,105px);font-weight:500;letter-spacing:-.07em;line-height:1.08;margin:35px 0 23px}}header p{{font-size:18px;line-height:1.85;max-width:850px;color:#d1deda}}nav{{position:sticky;top:0;z-index:5;display:flex;gap:9px;padding:12px clamp(16px,4vw,55px);overflow:auto;background:#102b34e8;backdrop-filter:blur(12px);color:#e7eeea;border-top:1px solid #ffffff25}}nav:not(#xz-nav) a{{flex:none;font-size:12px;padding:8px 12px;border:1px solid #ffffff35;border-radius:99px;white-space:nowrap}}nav:not(#xz-nav) a:hover{{background:#e5b87e;color:#102b34}}main{{max-width:1380px;margin:auto;padding:40px clamp(18px,5vw,70px) 110px}}.topic{{scroll-margin-top:80px;border-bottom:1px solid #b8c4be;padding:80px 0 90px}}.topic-head{{display:grid;grid-template-columns:1fr 1.5fr;gap:30px;align-items:end}}.topic-head small{{grid-column:1/-1;color:#ae6f45;font-size:12px;font-weight:800;letter-spacing:.2em}}h2{{font-family:'STSong','SimSun',serif;font-size:clamp(42px,6vw,76px);font-weight:500;letter-spacing:-.06em;line-height:1.1;margin:0}}.topic-head p{{font-size:clamp(18px,2.2vw,25px);line-height:1.55;margin:0}}.metrics{{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:42px 0}}.metric{{background:#fffdf8;padding:25px;border-radius:18px;min-height:180px;border-top:3px solid #ca8c5f;display:flex;flex-direction:column}}.metric span{{font-size:13px;color:#677579}}.metric strong{{font-family:Georgia,'Microsoft YaHei',serif;font-weight:500;font-size:clamp(27px,3vw,42px);margin:16px 0 10px;color:#af5838;line-height:1.15}}.metric small{{font-size:12px;line-height:1.65;color:#627276;margin-top:auto}}.read{{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 65px}}.read h3{{font-size:14px;color:#9d613d;margin:0 0 12px}}.read p{{font-size:15px;line-height:1.9;margin:0;color:#39535a}}.open{{display:inline-block;border-bottom:1px solid #153039;margin-top:42px;padding-bottom:9px;font-size:14px;font-weight:800}}.open:hover{{color:#b26139;border-color:#b26139}}footer{{background:#102b34;color:#c7d9d6;padding:32px clamp(22px,6vw,90px);font-size:12px;line-height:1.8}}@media(max-width:760px){{.topic-head,.metrics,.read{{grid-template-columns:1fr}}.topic{{padding:55px 0}}.metrics{{margin:32px 0}}.metric{{min-height:130px}}}}@media(prefers-reduced-motion:reduce){{html{{scroll-behavior:auto}}}}
+</style><style id="topic-review-layout">
+html:has(#topic-review-layout) body{{
+ --review-paper:#f3f5f1;--review-ink:#183640;--review-muted:#445c65;
+ --review-line:#b8cac8;--review-accent:#1d6170;
+ background:radial-gradient(ellipse 85% 560px at 0 0,#dbeae7,transparent),var(--review-paper)!important;
+}}
+html:has(#topic-review-layout) body.xz-dark,
+html[data-supp-theme="dark"]:has(#topic-review-layout) body{{
+ --review-paper:#17242c;--review-ink:#eef4f1;--review-muted:#bacbd0;
+ --review-line:#536a73;--review-accent:#add9e1;
+ background:radial-gradient(ellipse 85% 560px at 0 0,#243d46,transparent),var(--review-paper)!important;
+}}
+html:has(#topic-review-layout) body>header:has(h1){{
+ background:transparent!important;color:var(--review-ink)!important;
+ padding:clamp(26px,5vw,68px) 6vw 24px!important;
+}}
+html:has(#topic-review-layout) body>header:has(h1) h1{{
+ color:var(--review-ink)!important;font-size:clamp(38px,5vw,72px)!important;margin:20px 0 12px!important;line-height:1.18!important;
+}}
+html:has(#topic-review-layout) body>header:has(h1) p{{color:var(--review-muted)!important;margin-bottom:0}}
+html:has(#topic-review-layout) body>header:has(h1) a{{color:var(--review-accent)!important}}
+html:has(#topic-review-layout) body>nav:has(a[href="#S10"]){{
+ position:relative!important;top:auto!important;display:flex!important;flex-wrap:wrap;gap:8px!important;
+ padding:12px 6vw!important;background:var(--review-paper)!important;border-block:1px solid var(--review-line)!important;
+}}
+html:has(#topic-review-layout) body>nav:has(a[href="#S10"]) a{{
+ color:var(--review-accent)!important;border:1px solid var(--review-line)!important;border-radius:4px!important;
+}}
+html:has(#topic-review-layout) body>nav:has(a[href="#S10"]) a:hover{{background:var(--review-ink)!important;color:var(--review-paper)!important}}
+html:has(#topic-review-layout) body main:has(>.topic){{
+ max-width:none!important;width:100%!important;padding:0 6vw 48px!important;
+}}
+html:has(#topic-review-layout) body main>.topic{{
+ padding:clamp(28px,4vw,58px) 0!important;scroll-margin-top:92px;border-color:var(--review-line)!important;
+}}
+html:has(#topic-review-layout) body main>.topic h2{{font-size:clamp(30px,3.4vw,52px)!important;color:var(--review-ink)!important}}
+html:has(#topic-review-layout) body .topic :is(.topic-head small,.metric strong,.read h3,.open){{color:var(--review-accent)!important}}
+html:has(#topic-review-layout) body .topic .metrics{{margin:22px 0 26px!important;gap:14px 24px}}
+html:has(#topic-review-layout) body .topic .metric{{
+ min-height:0!important;padding:12px 0!important;border:0!important;border-top:2px solid var(--review-line)!important;border-radius:0!important;background:transparent!important;
+}}
+html:has(#topic-review-layout) body .topic .metric strong{{margin:6px 0!important}}
+html:has(#topic-review-layout) body .topic :is(.metric span,.metric small,.read p,.topic-head p){{color:var(--review-muted)!important}}
+html:has(#topic-review-layout) body .topic .read{{gap:20px 44px}}
+html:has(#topic-review-layout) body .topic .open{{margin-top:22px!important;border-color:var(--review-line)}}
+@media(max-width:760px){{html:has(#topic-review-layout) body .topic :is(.topic-head,.metrics,.read){{grid-template-columns:minmax(0,1fr)!important;gap:14px}}}}
 </style></head><body><header><a href='统一中文入口/index.html'>← 返回十专题交互入口</a><h1>十个专题，<br>十次交叉核验。</h1><p>每个结论都要回答：数字怎样算、换一个分母会怎样、哪个反例会推翻直觉、证据到哪里为止。这里是可复算的深度阅读版。</p></header><nav>{nav}</nav><main>{''.join(cards)}</main><footer>数据：赛题归一表及任务三既有分析表。除明确标出的官方小项结果外，获奖统计均为运动员行口径。2028 预测不进入历史核验。</footer></body></html>"""
 (BASE / "十专题深度核验.html").write_text(html, encoding="utf-8")
 
