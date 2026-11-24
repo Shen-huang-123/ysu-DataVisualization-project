@@ -282,6 +282,20 @@ html:has(#topic-review-layout) body .topic :is(.metric span,.metric small,.read 
 html:has(#topic-review-layout) body .topic .read{{gap:20px 44px}}
 html:has(#topic-review-layout) body .topic .open{{margin-top:22px!important;border-color:var(--review-line)}}
 @media(max-width:760px){{html:has(#topic-review-layout) body .topic :is(.topic-head,.metrics,.read){{grid-template-columns:minmax(0,1fr)!important;gap:14px}}}}
+
+html:has(#topic-review-layout) body>nav:has(a[href="#S10"]){{
+ display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));
+ gap:0 18px!important;overflow:visible!important;
+}}
+html:has(#topic-review-layout) body>nav:has(a[href="#S10"]) a{{
+ display:flex;align-items:center;min-height:44px;white-space:normal!important;
+ border:0!important;border-radius:0!important;padding:8px 4px!important;
+ border-bottom:1px solid var(--review-line)!important;font-size:clamp(13px,1.1vw,17px)!important;
+}}
+html:has(#topic-review-layout) body>nav:has(a[href="#S10"]) a:is(:hover,:focus-visible){{
+ background:transparent!important;color:var(--review-ink)!important;text-decoration:underline;text-underline-offset:.25em;
+}}
+@media(max-width:900px){{html:has(#topic-review-layout) body>nav:has(a[href="#S10"]){{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
 </style></head><body><header><a href='统一中文入口/index.html'>← 返回十专题交互入口</a><h1>十个专题，<br>十次交叉核验。</h1><p>每个结论都要回答：数字怎样算、换一个分母会怎样、哪个反例会推翻直觉、证据到哪里为止。这里是可复算的深度阅读版。</p></header><nav>{nav}</nav><main>{''.join(cards)}</main><footer>数据：赛题归一表及任务三既有分析表。除明确标出的官方小项结果外，获奖统计均为运动员行口径。2028 预测不进入历史核验。</footer></body></html>"""
 (BASE / "十专题深度核验.html").write_text(html, encoding="utf-8")
 
