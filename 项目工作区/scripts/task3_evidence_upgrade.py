@@ -83,7 +83,7 @@ items = ''.join(
 html:has(#ioc-source-contrast) body .oa-landscape{{display:none}} html:has(#ioc-source-contrast) body>.oa-world{{opacity:.8}}
 html:has(#ioc-source-contrast) body{{
  --ioc-paper:#f5f5ef;--ioc-wash:#dce9e6;
- background:linear-gradient(165deg,var(--ioc-wash),transparent 76%) top/100% 360px no-repeat,var(--ioc-paper)!important;
+ background:radial-gradient(ellipse 85% 620px at 0 0,var(--ioc-wash),transparent 100%),var(--ioc-paper)!important;
 }}
 html:has(#ioc-source-contrast) body.xz-dark,html:has(#ioc-source-contrast)[data-supp-theme=dark] body{{
  --ioc-paper:#18242c;--ioc-wash:#243b45;
