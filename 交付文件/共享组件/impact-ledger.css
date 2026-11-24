@@ -1,6 +1,6 @@
 /* Impact ledger: quiet editorial canvas, aligned with the task pages. */
-html body.supplement-reading.impact-ledger{--ledger-paper:#f1f5f4;--ledger-wash:#dceae8;background:linear-gradient(162deg,var(--ledger-wash),transparent 78%) top/100% 420px no-repeat,var(--ledger-paper)!important}
-html[data-supp-theme=dark] body.supplement-reading.impact-ledger,html body.supplement-reading.impact-ledger.xz-dark{--ledger-paper:#142129;--ledger-wash:#223943;background:linear-gradient(162deg,var(--ledger-wash),transparent 78%) top/100% 420px no-repeat,var(--ledger-paper)!important}
+html body.supplement-reading.impact-ledger{--ledger-paper:#f1f5f4;background:var(--ledger-paper)!important}
+html[data-supp-theme=dark] body.supplement-reading.impact-ledger,html body.supplement-reading.impact-ledger.xz-dark{--ledger-paper:#142129;background:var(--ledger-paper)!important}
 html body.impact-ledger>main{padding-top:30px!important}
 html body.impact-ledger .method-actions{gap:24px;margin-bottom:46px;padding-bottom:20px;border-bottom:1px solid var(--sr-line)}
 html body.impact-ledger .method-actions a{font-size:13px;text-decoration:none!important;min-height:36px}
@@ -19,18 +19,3 @@ html body.impact-ledger .method-reading h2{font-size:clamp(24px,2.6vw,34px)!impo
 html body.impact-ledger .method-reading li{margin:14px 0;font-size:16px}
 @media(max-width:650px){html body.impact-ledger .method-actions{gap:12px;margin-bottom:28px;flex-wrap:wrap}html body.impact-ledger .method-actions a{font-size:12px}html body.impact-ledger table{min-width:740px}html body.impact-ledger :is(th,td){padding:14px 12px!important}html body.impact-ledger .method-reading h1+p{font-size:15px!important}}
 html body.impact-ledger .method-actions{border-image:linear-gradient(90deg,#6b9db466 0 20%,#c7ad7166 20% 40%,#c9d1cd55 40% 60%,#75a58c66 60% 80%,#bc7d8966 80%) 1}
-
-html body.supplement-reading.impact-ledger{isolation:isolate}
-html body.supplement-reading.impact-ledger::before{
- content:"";position:fixed;inset:0;
- z-index:-1;pointer-events:none;
- background:radial-gradient(ellipse at 32% 17%,#549ba749,transparent 59%),radial-gradient(ellipse at 72% 86%,#759eac3b,transparent 57%);
- animation:ledger-light-drift 13s ease-in-out infinite alternate;
-}
-@keyframes ledger-light-drift{
- from{transform:translateX(-10%) scaleX(.8);opacity:.45}
- to{transform:translateX(10%) scaleX(.8);opacity:.9}
-}
-@media(prefers-reduced-motion:reduce){
- html body.supplement-reading.impact-ledger::before{animation:none;opacity:.55}
-}
