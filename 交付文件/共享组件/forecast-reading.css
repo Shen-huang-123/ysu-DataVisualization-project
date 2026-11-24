@@ -14,3 +14,11 @@ html body.forecast-source-page>section:is(#forecast-same-unit,#project-model-aud
  width:auto!important;max-width:none!important;min-width:0;box-sizing:border-box;
  margin:36px clamp(24px,6vw,100px)!important;padding:32px 0!important;
 }
+
+html body.forecast-source-page>main{padding-top:18px!important}
+html body.forecast-source-page>main>#project-reading-policy{
+ margin-top:0!important;padding-top:8px!important;border-top:0!important;
+}
+html body.forecast-source-page #project-reading-policy>h2{margin-top:0!important}
+html body.forecast-source-page>main>details.ex-route{margin:16px 0!important}
+html body.forecast-source-page>main>details.ex-route>summary{min-height:44px;padding-block:6px!important}

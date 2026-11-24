@@ -19,7 +19,7 @@ for rel in PAGES:
         previous.find('summary',recursive=False).decompose()
         previous.select_one('.forecast-archive-note').decompose()
         previous.unwrap()
-    for el in s.select('link[href$="forecast-reading.css"],script[src$="forecast-reading.js"]'):el.decompose()
+    for el in s.select('link[href*="forecast-reading.css"],script[src$="forecast-reading.js"]'):el.decompose()
     policy=s.select_one('#project-reading-policy');assert policy,rel
     archive=s.new_tag('details',id='legacy-scenarios',attrs={'class':'forecast-archive'})
     summary=s.new_tag('summary');summary.string='历史情景对照｜展开旧榜、假设与回放';archive.append(summary)
@@ -54,10 +54,13 @@ for rel in PAGES:
     for a in s.select('a[href]'):
         if '11_官方来源门控预测' in a['href'] and '审慎' in a.get_text() and not a.find_parent(id='legacy-scenarios'):
             a.string='查看旧来源门控情景'
+    if rel == '05_满分升级/11_官方来源门控预测/index.html':
+        if not s.select_one('[data-ex-route-slot]'):
+            archive.insert_before(s.new_tag('div', attrs={'data-ex-route-slot': '', 'hidden': ''}))
     for filename,tag in [('forecast-reading.css','link'),('forecast-reading.js','script')]:
         uri=Path(os.path.relpath(SHARED/filename,p.parent)).as_posix()
         el=s.new_tag(tag)
-        if tag=='link':el['rel']='stylesheet';el['href']=uri;s.head.append(el)
+        if tag=='link':el['rel']='stylesheet';el['href']=uri+('?v=compact-source' if rel=='05_满分升级/11_官方来源门控预测/index.html' else '');s.head.append(el)
         else:el['src']=uri;el['defer']='';s.body.append(el)
     p.write_text(str(s),encoding='utf-8')
 print('Current reading and legacy scenarios separated on six forecast pages.')
