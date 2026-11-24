@@ -74,20 +74,25 @@ for topic, title, url, implication in sources:
     s3_note += f'- **{topic}**：[ {title} ]({url})。{implication}。\n'
 s3_note += '\n## 结论层级\n\n数据直接支持各届出现的代表团代码、参赛行和奖牌行。IOC 文献支持特定历史事件和身份制度。两类证据合读，才能解释部分结构断点；不得从未出现的代码反推个别代表团的唯一缺席动机。1980 / 1984 年的参赛总量与 IOC 官方国家奥委会数量可能口径不同，本专题标为数据集覆盖值。\n'
 (s3 / 'IOC一手来源核验.md').write_text(s3_note, encoding='utf-8')
-items = ''.join(f'<li><strong>{topic}</strong>：<a href="{url}">{title}</a><p>{implication}。</p></li>' for topic,title,url,implication in sources)
+items = ''.join(
+    f'<li><span class="ioc-year">{year}</span><strong>{name}</strong><p>{implication}。</p><a href="{url}">{title}</a></li>'
+    for topic, title, url, implication in sources
+    for year, name in [topic.rsplit(' ', 1)]
+)
 (s3 / 'IOC一手来源核验.html').write_text(f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>S3 IOC一手来源核验</title><style>body{{margin:0;background:#eee9df;color:#172c43;font-family:"Microsoft YaHei",sans-serif}}main{{max-width:900px;margin:auto;padding:60px 24px}}h1{{font-size:clamp(36px,6vw,60px)}}li{{background:#fffaf2;margin:14px 0;padding:20px;border-radius:18px;line-height:1.7}}a{{color:#196298}}.note{{padding:25px;border-radius:20px;background:#173754;color:#fff;line-height:1.8}}</style><style id="ioc-source-contrast">
-html:has(#ioc-source-contrast) body main>ol>li{{background:#f6f3eb!important;color:#20343c!important}}
-html:has(#ioc-source-contrast) body main>ol>li strong{{color:inherit!important}}
-html:has(#ioc-source-contrast) body main>ol>li p{{color:#40555f!important}}
-html:has(#ioc-source-contrast) body main>ol>li a{{color:#175b70!important}}
-html:has(#ioc-source-contrast) body.xz-dark main>ol>li,html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li{{background:#203039!important;color:#f1f5f4!important}}
-html:has(#ioc-source-contrast) body.xz-dark main>ol>li p,html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li p{{color:#c5d4d9!important}}
+html:has(#ioc-source-contrast) body main>ol{{--ioc-rule:#8caaa859;list-style:none;padding:0;margin:28px 0;border-top:1px solid var(--ioc-rule)}}
+html:has(#ioc-source-contrast) body main>ol>li{{display:grid;grid-template-columns:8rem minmax(0,1fr);column-gap:24px;margin:0!important;padding:20px 4px!important;border:0;border-bottom:1px solid var(--ioc-rule);border-radius:0!important;background:transparent!important;color:#20343c!important}}
+html:has(#ioc-source-contrast) body .ioc-year{{grid-row:1/4;color:#52646c;font-variant-numeric:tabular-nums;align-self:start;padding-top:.2em}}
+html:has(#ioc-source-contrast) body main>ol>li strong{{color:inherit!important;font-size:1.14em}}
+html:has(#ioc-source-contrast) body main>ol>li p{{color:#40555f!important;margin:4px 0 7px!important;max-width:78ch}}
+html:has(#ioc-source-contrast) body main>ol>li a{{color:#175b70!important;justify-self:start;text-underline-offset:.22em;overflow-wrap:anywhere}}
+html:has(#ioc-source-contrast) body.xz-dark main>ol>li,html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li{{color:#f1f5f4!important}}
+html:has(#ioc-source-contrast) body.xz-dark main>ol>li :is(p,.ioc-year),html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li :is(p,.ioc-year){{color:#c5d4d9!important}}
 html:has(#ioc-source-contrast) body.xz-dark main>ol>li a,html:has(#ioc-source-contrast)[data-supp-theme=dark] body main>ol>li a{{color:#a9dce9!important}}
-
-html:has(#ioc-source-contrast) body main>ol{{padding-inline-start:1.8em;margin:24px 0}}
-html:has(#ioc-source-contrast) body main>ol>li{{margin:0!important;padding:15px 12px!important;border-radius:0!important;border-bottom:1px solid currentColor;border-bottom-color:color-mix(in srgb,currentColor 20%,transparent);background:transparent!important}}
-html:has(#ioc-source-contrast) body main>ol>li p{{margin:5px 0 0!important;max-width:78ch}}
-html:has(#ioc-source-contrast) body main>ol>li a{{text-underline-offset:.2em}}
+@media(max-width:650px){{
+html:has(#ioc-source-contrast) body main>ol>li{{grid-template-columns:minmax(0,1fr);padding-block:16px!important}}
+html:has(#ioc-source-contrast) body .ioc-year{{grid-row:auto;margin-bottom:4px}}
+}}
 </style></head><body><main><small>任务三 / 地缘政治的投影</small><h1>数据记录缺席，<br>史料解释背景。</h1><ol>{items}</ol><div class="note">数据直接支持代表团代码、参赛行和奖牌行。IOC 文献支持特定事件与身份制度。不得从某代表团在数据中缺席，反推它的唯一政治动机。</div></main></body></html>''', encoding='utf-8')
 s3_research = s3 / '研究说明.md'
 s3_text = s3_research.read_text(encoding='utf-8').split('\n\n## IOC 一手来源核验')[0]
