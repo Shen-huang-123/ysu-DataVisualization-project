@@ -20,7 +20,7 @@ for r in rows:
 body+='</tbody></table></div></article>'
 s.main.append(BeautifulSoup(body,'html.parser'))
 style=s.new_tag('style');style.string='.interval-reading h1{font-family:SimSun,serif!important;font-weight:400!important;font-size:clamp(32px,4vw,58px)!important;line-height:1.4!important}.interval-reading p{max-width:110ch}.interval-kicker{font-size:12px;color:var(--sr-accent)!important}.interval-search{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:32px 0;font-size:14px}.interval-search input{background:transparent;color:var(--sr-ink);border:1px solid var(--sr-line);border-radius:10px;padding:12px;font:inherit;max-width:100%}.interval-reading table{min-width:1320px}.interval-reading td,.interval-reading th{white-space:nowrap;text-align:right!important;font-variant-numeric:tabular-nums}.interval-reading td:first-child,.interval-reading th:first-child{text-align:left!important}';s.head.append(style)
-s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/interval-data.css?v=full-cover'))
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/interval-data.css?v=pool-tone'))
 article=s.select_one('.interval-reading')
 hero=s.new_tag('header',attrs={'class':'interval-task-hero'})
 hero.append(BeautifulSoup('<p class="task-kicker">百年全景 · 2024 代表团性别结构</p><h1>参与之后，<br>谁留下成绩？</h1><p>在同一份记录中，比较参与份额、获奖份额与差距区间。</p><a href="../../任务三_专题深挖/媒体/图片来源与许可.html" class="interval-credit">奥运历史影像 · 来源与许可 ↗</a>','html.parser'))

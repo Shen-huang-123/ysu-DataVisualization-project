@@ -1,6 +1,6 @@
 /* Full interval register, using the same quiet task-page canvas. */
-html body.supplement-reading.interval-data{background:radial-gradient(ellipse 70% 500px at 100% 0,#bba37114,transparent),#f4f4ef!important}
-html[data-supp-theme=dark] body.supplement-reading.interval-data,html body.interval-data.xz-dark{background:radial-gradient(ellipse 70% 500px at 100% 0,#bba3710d,transparent),#142129!important}
+html body.supplement-reading.interval-data{--interval-canvas:#eef4f5;--sr-paper:#eef4f5;background:var(--interval-canvas)!important}
+html[data-supp-theme=dark] body.supplement-reading.interval-data,html body.interval-data.xz-dark{--interval-canvas:#13242d;--sr-paper:#13242d;background:var(--interval-canvas)!important}
 html body.interval-data>main{padding-top:30px!important}
 html body.interval-data .method-actions{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:42px;padding-bottom:20px;border-bottom:1px solid var(--sr-line)}
 html body.interval-data .method-actions a{font-size:13px;text-decoration:none!important}
@@ -46,5 +46,5 @@ html body.supplement-reading.interval-data{padding-top:0!important}
 html body.supplement-reading.interval-data>header.interval-task-hero{
  min-height:100vh!important;min-height:100svh!important;
  padding-top:clamp(88px,12vh,140px);
- background-image:linear-gradient(to bottom,transparent 86%,var(--sr-paper,#142129) 100%),linear-gradient(90deg,#06151be6,#081f278f 54%,#05181e21),url('../任务三_专题深挖/媒体/sports.jpg')!important;
+ background-image:linear-gradient(to bottom,transparent 86%,var(--interval-canvas) 100%),linear-gradient(90deg,#06151be6,#081f278f 54%,#05181e21),url('../任务三_专题深挖/媒体/sports.jpg')!important;
 }
