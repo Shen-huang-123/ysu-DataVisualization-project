@@ -65,3 +65,20 @@ body.evidence-chain .reveal-dots i.on { background: var(--sr-accent); opacity: 1
     top: 60px;
   }
 }
+
+.evidence-chain .evidence-flow { margin-block: clamp(30px,5vw,64px); }
+.evidence-flow article { padding-block: 18px; border-top: 1px solid var(--sr-line); }
+.evidence-flow ol {
+  list-style: none; counter-reset: evidence-step; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px 28px;
+}
+.evidence-flow li { counter-increment: evidence-step; padding-top: 12px; border-top: 2px solid var(--sr-line); }
+.evidence-flow li strong::before { content: counter(evidence-step,decimal-leading-zero); margin-inline-end: .65em; color: var(--sr-muted); font-variant-numeric: tabular-nums; }
+.evidence-flow li:last-child { border-color: var(--sr-accent); }
+.evidence-flow li:last-child strong { color: var(--sr-accent); }
+.evidence-flow li p { margin: 6px 0; }
+.evidence-flow a { text-underline-offset: 3px; }
+@media(max-width:720px) {
+  .evidence-flow ol { grid-template-columns: minmax(0,1fr); }
+  .evidence-flow li { border-top: 0; border-inline-start: 2px solid var(--sr-line); padding: 4px 0 4px 12px; }
+}
