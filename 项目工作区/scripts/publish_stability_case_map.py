@@ -77,45 +77,46 @@ def publish():
 #stability-case-map .host-map-heading{{margin-bottom:20px}}
 #stability-case-map h2,#stability-case-map h3{{margin:0}}
 #stability-case-map .host-map-heading p{{margin:6px 0 0}}
-#stability-case-map .host-map-layout{{color:#eaf2f4;background:#101f2a;border:1px solid #34505e;border-radius:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(225px,24%);overflow:hidden}}
+#stability-case-map .host-map-layout{{color:var(--sr-ink);display:grid;column-gap:clamp(18px,3vw,48px);grid-template-columns:minmax(0,1fr) minmax(225px,24%);align-items:start}}
 #stability-case-map .host-map-main{{min-width:0}}
-#stability-case-map svg{{display:block;width:100%;height:auto;background:radial-gradient(ellipse at 54% 38%,#203b4a,#112632 76%)}}
-#stability-case-map .host-graticule{{fill:none;stroke:#7495a2;stroke-opacity:.18;stroke-width:.65}}
-#stability-case-map polygon{{fill:#345463;stroke:#658695;stroke-width:.55}}
+#stability-case-map svg{{display:block;width:100%;height:auto;background:transparent}}
+#stability-case-map .host-map-geography{{mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)}}
+#stability-case-map .host-graticule{{fill:none;stroke:var(--sr-muted);stroke-opacity:.15;stroke-width:.65}}
+#stability-case-map polygon{{fill:color-mix(in srgb,var(--sr-muted) 22%,transparent);stroke:color-mix(in srgb,var(--sr-muted) 55%,transparent);stroke-width:.55}}
 #stability-case-map circle{{fill:#e9c98f}}
 #stability-case-map .host-pin{{fill:#142733;stroke:#e9c98f;stroke-width:1.4}}
 #stability-case-map line{{stroke:#e9c98f;stroke-width:1;pointer-events:none}}
 #stability-case-map text{{fill:#fff0d4;text-anchor:middle;dominant-baseline:central;font:700 11px system-ui;pointer-events:none}}
-#stability-case-map .host-map-links{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:8px clamp(8px,1.6vw,24px);gap:0 10px;border-top:1px solid #34505e}}
-#stability-case-map .host-map-links a{{display:flex;align-items:center;gap:7px;min-height:44px;padding:4px 5px;color:#ebf2f4;border-bottom:1px solid transparent;text-decoration:none;font-size:.88rem}}
-#stability-case-map .host-map-links a span{{font-size:.68rem;color:#a8beca;font-variant-numeric:tabular-nums}}
-#stability-case-map .host-map-links a:is(:hover,:focus-visible){{background:#203744}}
-#stability-case-map aside{{padding:clamp(16px,2vw,32px);background:#152934;border-left:1px solid #34505e}}
-#stability-case-map aside > p{{margin:0 0 5px;color:#b7cbd4;font-size:.8rem;letter-spacing:.08em}}
+#stability-case-map .host-map-links{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:8px clamp(8px,1.6vw,24px);gap:0 10px;border-top:1px solid var(--sr-line)}}
+#stability-case-map .host-map-links a{{display:flex;align-items:center;gap:7px;min-height:44px;padding:4px 5px;color:var(--sr-ink);border-bottom:1px solid transparent;text-decoration:none;font-size:.88rem}}
+#stability-case-map .host-map-links a span{{font-size:.68rem;color:var(--sr-muted);font-variant-numeric:tabular-nums}}
+#stability-case-map .host-map-links a:is(:hover,:focus-visible){{background:var(--sr-line)}}
+#stability-case-map aside{{padding:12px 0 10px clamp(16px,2vw,28px);border-left:1px solid var(--sr-line)}}
+#stability-case-map aside > p{{margin:0 0 5px;color:var(--sr-muted);font-size:.8rem;letter-spacing:.08em}}
 #stability-case-map article{{display:none;scroll-margin-top:110px}}
 #stability-case-map aside:not(:has(article:target)) article:first-of-type,#stability-case-map article:target{{display:block}}
 #stability-case-map article h3{{font-size:clamp(1.45rem,2.6vw,2rem)}}
 #stability-case-map article ul{{list-style:none;margin:8px 0 16px;padding:0}}
-#stability-case-map article li{{display:grid;gap:2px;padding:12px 0;border-bottom:1px solid #34505e;font-variant-numeric:tabular-nums}}
-#stability-case-map article strong{{color:#f1d29a;font-size:clamp(1.4rem,2vw,2rem);line-height:1.15}}
+#stability-case-map article li{{display:grid;gap:2px;padding:12px 0;border-bottom:1px solid var(--sr-line);font-variant-numeric:tabular-nums}}
+#stability-case-map article strong{{color:var(--sr-accent);font-size:clamp(1.4rem,2vw,2rem);line-height:1.15}}
 #stability-case-map article strong span{{font-size:.72rem;font-weight:500}}
-#stability-case-map article small,#stability-case-map article li > span{{color:#c1d3db}}
-#stability-case-map aside > a{{color:#f1d29a;text-decoration:underline;text-underline-offset:4px}}
+#stability-case-map article small,#stability-case-map article li > span{{color:var(--sr-muted)}}
+#stability-case-map aside > a{{color:var(--sr-accent);text-decoration:underline;text-underline-offset:4px}}
 {active},
-#stability-case-map:not(:has(article:target)) [href="#host-map-case-1"]{{color:#f1d29a;border-bottom-color:#e9c98f}}
+#stability-case-map:not(:has(article:target)) [href="#host-map-case-1"]{{color:var(--sr-accent);border-bottom-color:var(--sr-accent)}}
 :is({active}, #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"], #stability-case-map svg a:is(:hover,:focus-visible)) .host-pin{{fill:#e9c98f}}
 :is({active}, #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"], #stability-case-map svg a:is(:hover,:focus-visible)) text{{fill:#142733}}
 #stability-case-map .host-map-note{{margin:12px 0 0;font-size:.84rem}}
 @media (max-width:820px){{
   #stability-case-map .host-map-layout{{grid-template-columns:minmax(0,1fr)}}
-  #stability-case-map aside{{border-left:0;border-top:1px solid #34505e}}
+  #stability-case-map aside{{border-left:0;border-top:1px solid var(--sr-line);padding-inline:0;margin-top:12px}}
 }}
 @media (max-width:560px){{#stability-case-map .host-map-links{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
 </style>
 <div class="host-map-heading"><h2 id="stability-case-map-title">主场效应案例地图</h2>
 <p>选择城市，比较主办届与前一届的获奖记录份额。{len(cities)} 座城市，{sum(map(len,cities.values()))} 届案例。</p></div>
 <div class="host-map-layout"><div class="host-map-main"><svg viewBox="0 0 900 365" aria-label="主场效应案例世界地图">
-<g aria-hidden="true"><path class="host-graticule" d="{grid}"/>{''.join(land)}</g>{''.join(pins)}</svg>
+<g class="host-map-geography" aria-hidden="true"><path class="host-graticule" d="{grid}"/>{''.join(land)}</g>{''.join(pins)}</svg>
 <nav class="host-map-links" aria-label="主办城市">{''.join(links)}</nav></div>
 <aside aria-label="城市案例"><p>前一届 → 主办届</p>{''.join(cards)}<a href="../S1_东道主效应/index.html">查看主场效应核验 ↗</a></aside></div>
 <p class="host-map-note">差值用于描述两届变化，不能单独证明主场的因果作用。底图来自项目内的 Natural Earth 110m 数据。</p>
