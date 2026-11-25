@@ -15,3 +15,8 @@ body.supplement-reading .reveal-story .reveal-step small,
 body.supplement-reading .reveal-story .reveal-kicker { color: var(--sr-accent); }
 .reveal-row { opacity: 1; }
 .reveal-row:not(.active) .reveal-fill { opacity: .55; }
+
+/* Keep the shared ambient light behind the evidence. */
+body.evidence-chain > .oa-world { opacity: .68; }
+body.evidence-chain > .oa-world .oa-landscape { display: none; }
+body.evidence-chain .reveal-story { border-top: 1px solid var(--sr-line); }
