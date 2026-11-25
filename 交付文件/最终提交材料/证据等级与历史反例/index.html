@@ -8,10 +8,10 @@
 <link href="../../共享组件/olympic-atmosphere.css?v=3" rel="stylesheet"/>
 <link href="../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../共享组件/supplement-reading.js?v=1"></script><link href="../../共享组件/chart-surface.css" id="chart-surface-theme" rel="stylesheet"/><link href="../../共享组件/integrated-nav.css?v=9" id="supp-task-nav-assets" rel="stylesheet"/><script defer="" src="../../共享组件/integrated-nav.js?v=5"></script><style>
 body.supplement-reading.evidence-reading > .wrap {
-  width: min(90%, 76rem) !important;
-  max-width: 76rem !important;
+  width: 100% !important;
+  max-width: none !important;
   margin-inline: auto !important;
-  padding: 24px 0 0 !important;
+  padding: 24px clamp(24px, 6vw, 100px) 0 !important;
 }
 body.evidence-reading .wrap > .top { display: flex !important; justify-content: space-between !important; padding: 0 0 12px; }
 .evidence-reading .wrap > .top a { display: inline-flex; align-items: center; min-height: 44px; }
@@ -55,7 +55,7 @@ body.evidence-reading .hero details.ex-route {
   box-shadow: none !important;
   margin: 0 0 16px !important;
   padding: 0 !important;
-  max-width: 740px;
+  max-width: none;
 }
 body.evidence-reading .hero .ex-route > summary {
   display: flex;
