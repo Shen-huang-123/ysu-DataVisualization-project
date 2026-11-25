@@ -22,3 +22,14 @@ html body.forecast-source-page>main>#project-reading-policy{
 html body.forecast-source-page #project-reading-policy>h2{margin-top:0!important}
 html body.forecast-source-page>main>details.ex-route{margin:16px 0!important}
 html body.forecast-source-page>main>details.ex-route>summary{min-height:44px;padding-block:6px!important}
+html body.supplement-reading.forecast-source-page:has(#project-reading-policy){
+ --source-paper:#f3f5f2;--source-tint:#dce9e7;
+ background:radial-gradient(ellipse 86% 520px at 0 0,var(--source-tint),transparent),var(--source-paper)!important;
+}
+html body.supplement-reading.forecast-source-page:has(#project-reading-policy).xz-dark,
+html[data-supp-theme=dark] body.supplement-reading.forecast-source-page:has(#project-reading-policy){
+ --source-paper:#16232b;--source-tint:#223944;
+}
+html body.forecast-source-page::before,
+html body.forecast-source-page::after,
+html body.forecast-source-page>:is(.oa-world,.ed-particles){display:none!important}

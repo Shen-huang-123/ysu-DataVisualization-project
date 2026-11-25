@@ -60,7 +60,7 @@ for rel in PAGES:
     for filename,tag in [('forecast-reading.css','link'),('forecast-reading.js','script')]:
         uri=Path(os.path.relpath(SHARED/filename,p.parent)).as_posix()
         el=s.new_tag(tag)
-        if tag=='link':el['rel']='stylesheet';el['href']=uri+('?v=compact-source' if rel=='05_满分升级/11_官方来源门控预测/index.html' else '');s.head.append(el)
+        if tag=='link':el['rel']='stylesheet';el['href']=uri+('?v=source-canvas' if rel=='05_满分升级/11_官方来源门控预测/index.html' else '');s.head.append(el)
         else:el['src']=uri;el['defer']='';s.body.append(el)
     p.write_text(str(s),encoding='utf-8')
 print('Current reading and legacy scenarios separated on six forecast pages.')
