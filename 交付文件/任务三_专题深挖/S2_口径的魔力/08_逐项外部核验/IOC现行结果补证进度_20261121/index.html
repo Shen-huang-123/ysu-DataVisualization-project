@@ -14,6 +14,26 @@ html body.ioc-progress.supplement-reading:not(.supp-existing-nav)>main {padding-
 .progress-evidence > p:has(> a:only-child):not(:has(a[download])) {margin:0;border-top:1px solid var(--sr-line)}
 .progress-evidence > p > a:not([download]) {display:flex;min-height:44px;align-items:center;padding-block:8px}
 @media(max-width:420px){.progress-scope{gap:8px}.progress-scope dt{font-size:.78rem}}
+
+.ioc-progress .progress-evidence > p > a:is(:hover, :focus-visible) {
+  background-color: color-mix(in srgb, var(--sr-accent) 9%, transparent);
+}
+.ioc-progress .progress-evidence a:focus-visible {
+  outline: 2px solid var(--sr-accent);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ioc-progress .progress-scope > div {
+    animation: ioc-scope-in 380ms cubic-bezier(.22,1,.36,1) both;
+  }
+  .ioc-progress .progress-scope > div:nth-child(2) { animation-delay: 55ms; }
+  .ioc-progress .progress-scope > div:nth-child(3) { animation-delay: 110ms; }
+  .ioc-progress .progress-evidence > p > a { transition: background-color 160ms ease; }
+}
+@keyframes ioc-scope-in {
+  from { opacity: .72; translate: 0 6px; }
+  to { opacity: 1; translate: 0 0; }
+}
 </style></head><body class="supplement-reading ioc-progress"><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../../../../index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../../../任务一_数据体检/index.html">01 数据体检</a><a href="../../../../任务二_百年全景/05_交互总览/index.html">02 百年全景</a><a aria-current="page" href="../../../统一中文入口/index.html">03 专题深挖</a><a href="../../../../任务四_开放创作/index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../../../任务一_数据体检/index.html">数据体检</a><a href="../../../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../../统一中文入口/index.html">专题深挖</a><a href="../../../../任务四_开放创作/index.html">洛杉矶2028</a></aside><main><a href="../证据链修复_20261120/index.html">← 返回证据台账</a><h1>历史小项 IOC 现行结果补证</h1><p>2026-11-21 核查。910 项台账保留各项已有证据。其中 555 项的主来源为旧抓取存档，优先取得现行逐项结果。该子集数量与全局 IOC 认证缺口采用不同口径。</p><dl class="progress-scope">
 <div><dt>历史证据台账</dt><dd>910 项</dd></div>
 <div><dt>旧存档优先取证范围</dt><dd>555 项</dd></div>
