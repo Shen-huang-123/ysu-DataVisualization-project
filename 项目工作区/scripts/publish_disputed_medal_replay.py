@@ -113,7 +113,40 @@ body=f"""# 优先分歧复核与奖牌榜影响
 """
 (OUT/'优先分歧复核与复算.md').write_text(body,encoding='utf-8')
 html=markdown.markdown(body,extensions=['tables'])
-(OUT/'优先分歧复核与复算.html').write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>优先分歧复核与奖牌榜影响</title><style>:root{color-scheme:light dark}main{max-width:75rem;margin:auto;padding:clamp(16px,4vw,54px);font:16px/1.75 system-ui}.table{overflow:auto}table{min-width:46rem;border-collapse:collapse}td,th{padding:.6rem;border-bottom:1px solid #82978d88;text-align:left}</style><main>'+html.replace('<table>','<div class="table" role="region" aria-label="逐项分歧" tabindex="0"><table>').replace('</table>','</table></div>')+'</main></html>',encoding='utf-8')
+def render_replay(html, reviewed, beijing, london):
+    table = '<div class="table" role="region" aria-label="逐项分歧" tabindex="0"><table>'
+    content = html.replace('<table>', table).replace('</table>', '</table></div>')
+    summary = f"""<dl class="summary">
+<div><dt>优先复核分歧</dt><dd>{reviewed} 项</dd></div>
+<div><dt>北京 · 名次变化</dt><dd>{beijing} 队</dd></div>
+<div><dt>伦敦 · 名次变化</dt><dd>{london} 队</dd></div>
+</dl><h2>逐项证据与名次复算</h2>"""
+    content = content.replace('<div class="table"', summary + '<div class="table"', 1)
+    return """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>优先分歧复核与奖牌榜影响</title>
+<style>
+:root{color-scheme:light dark;--paper:#f5f3ed;--ink:#19363c;--muted:#52686b;--accent:#785525;--line:#758b8b55}
+@media(prefers-color-scheme:dark){:root{--paper:#15222b;--ink:#eef2ee;--muted:#b0c0bf;--accent:#ddc393;--line:#b6c9c540}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif}
+main{padding:clamp(24px,5vw,80px) clamp(20px,6vw,100px)}
+h1{font-size:clamp(30px,4vw,58px);line-height:1.2;margin:24px 0 16px}h2{font-size:clamp(22px,2.6vw,34px);line-height:1.3}
+p{max-width:78ch;color:var(--muted)}a{color:var(--accent);text-underline-offset:4px}
+a:focus-visible,.table:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 12px;border-block:1px solid var(--line);padding-block:16px;margin:24px 0}
+.summary dt{color:var(--muted);font-size:.85rem}.summary dd{margin:0;font-size:clamp(22px,3vw,38px);font-weight:650;color:var(--accent)}
+.table{overflow:auto;border:1px solid var(--line);margin-bottom:22px}
+table{width:100%;min-width:48rem;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td,th{padding:.75rem;text-align:left;border-bottom:1px solid var(--line)}
+th{background:color-mix(in srgb,var(--paper) 90%,var(--ink));font-size:.9rem}
+td:nth-child(3),td:nth-child(5){color:var(--accent);font-weight:600}
+tbody tr:last-child td{border-bottom:0}
+</style></head><body><main><nav aria-label="补证记录"><a href="index.html">← 返回补证记录</a></nav>""" + content + '</main></body></html>'
+
+
+(OUT/'优先分歧复核与复算.html').write_text(
+    render_replay(html, len(ledger), changes.get(2008, 0), changes.get(2012, 0)),
+    encoding='utf-8',
+)
 index=OUT/'index.html'
 page=re.sub(r'<!-- PRIORITY_REPLAY_START -->.*?<!-- PRIORITY_REPLAY_END -->','',index.read_text(encoding='utf-8'),flags=re.S)
 marker='<h2>取证清单</h2>'
