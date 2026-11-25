@@ -53,15 +53,9 @@ def publish():
         dx, dy = {'伦敦': (-26, -24), '巴黎': (27, 4), '巴塞罗那': (-19, 25)}.get(city, (0, 0))
         leader = (f'<line x1="{x:.1f}" y1="{y:.1f}" x2="{x+dx:.1f}" y2="{y+dy:.1f}"/>'
                   f'<circle class="host-location" cx="{x:.1f}" cy="{y:.1f}" r="2"/>' if dx or dy else '')
-        label_left = city in {'伦敦', '巴塞罗那', '北京', '里约热内卢', '悉尼'}
-        label_x = x + dx + (-15 if label_left else 15)
-        label_y = y + dy - (15 if city == '首尔' else 0)
-        anchor = 'end' if label_left else 'start'
         pins.append(f'<a href="#{target}" aria-label="{label}"><title>{label}</title>{leader}'
                     f'<circle class="host-pin" cx="{x+dx:.1f}" cy="{y+dy:.1f}" r="10"/>'
-                    f'<text class="host-pin-number" x="{x+dx:.1f}" y="{y+dy:.1f}">{i}</text>'
-                    f'<text class="host-pin-label" x="{label_x:.1f}" y="{label_y:.1f}" '
-                    f'style="text-anchor:{anchor}" aria-hidden="true">{label}</text></a>')
+                    f'<text class="host-pin-number" x="{x+dx:.1f}" y="{y+dy:.1f}">{i}</text></a>')
         detail = []
         for year in years:
             before, host = shares[year, -1], shares[year, 0]
@@ -90,11 +84,9 @@ def publish():
 #stability-case-map .host-graticule{{fill:none;stroke:var(--sr-muted);stroke-opacity:.15;stroke-width:.65}}
 #stability-case-map polygon{{fill:color-mix(in srgb,var(--sr-muted) 22%,transparent);stroke:color-mix(in srgb,var(--sr-muted) 55%,transparent);stroke-width:.55}}
 #stability-case-map circle{{fill:#e9c98f}}
-#stability-case-map .host-pin{{fill:#142733;stroke:#e9c98f;stroke-width:1.4}}
-#stability-case-map line{{stroke:#e9c98f;stroke-opacity:.7;stroke-width:1;pointer-events:none}}
+#stability-case-map .host-pin{{fill:#142733;stroke:#e9c98f;stroke-opacity:.68;stroke-width:1.1}}
+#stability-case-map line{{stroke:#e9c98f;stroke-opacity:.48;stroke-width:.8;pointer-events:none}}
 #stability-case-map text{{fill:#fff0d4;text-anchor:middle;dominant-baseline:central;font:700 11px system-ui;pointer-events:none}}
-#stability-case-map .host-pin-label{{display:none;fill:#fff0d4;stroke:#142733;stroke-width:2.8;stroke-linejoin:round;paint-order:stroke;font-size:12px;pointer-events:auto}}
-@media (min-width:1080px){{#stability-case-map .host-pin-label{{display:block}}}}
 #stability-case-map .host-map-links{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:8px clamp(8px,1.6vw,24px);gap:0 10px;border-top:1px solid var(--sr-line)}}
 #stability-case-map .host-map-links a{{display:flex;align-items:center;gap:7px;min-height:44px;padding:4px 5px;color:var(--sr-ink);border-bottom:1px solid transparent;text-decoration:none;font-size:.88rem}}
 #stability-case-map .host-map-links a span{{font-size:.68rem;color:var(--sr-muted);font-variant-numeric:tabular-nums}}
@@ -112,7 +104,7 @@ def publish():
 #stability-case-map aside > a{{color:var(--sr-accent);text-decoration:underline;text-underline-offset:4px}}
 {active},
 #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"]{{color:var(--sr-accent);border-bottom-color:var(--sr-accent)}}
-:is({active}, #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"], #stability-case-map svg a:is(:hover,:focus-visible)) .host-pin{{fill:#e9c98f}}
+:is({active}, #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"], #stability-case-map svg a:is(:hover,:focus-visible)) .host-pin{{fill:#e9c98f;stroke-opacity:1}}
 :is({active}, #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"], #stability-case-map svg a:is(:hover,:focus-visible)) .host-pin-number{{fill:#142733}}
 #stability-case-map .host-map-note{{margin:12px 0 0;font-size:.84rem}}
 @media (max-width:820px){{
