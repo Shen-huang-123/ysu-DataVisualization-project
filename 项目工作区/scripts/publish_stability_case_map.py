@@ -48,7 +48,7 @@ def publish():
     for i, ((city, lon, lat), years) in enumerate(cities.items(), 1):
         label = escape(city)
         target = f'host-map-case-{i}'
-        links.append(f'<a href="#{target}">{i} · {label}</a>')
+        links.append(f'<a href="#{target}"><span>{i:02}</span>{label}</a>')
         x, y = point(lon, lat)
         dx, dy = {'伦敦': (-42, -20), '巴黎': (38, -13), '巴塞罗那': (-23, 28)}.get(city, (0, 0))
         leader = (f'<line x1="{x:.1f}" y1="{y:.1f}" x2="{x+dx:.1f}" y2="{y+dy:.1f}"/>'
@@ -59,41 +59,66 @@ def publish():
         detail = []
         for year in years:
             before, host = shares[year, -1], shares[year, 0]
-            detail.append(f'<li><span>{year} 年</span><strong>{host-before:+.2f} 个百分点</strong>'
+            detail.append(f'<li><span>{year} 年</span><strong>{host-before:+.2f} <span>个百分点</span></strong>'
                           f'<small>{before:.2f}% → {host:.2f}%</small></li>')
-        cards.append(f'<article id="{target}" tabindex="-1"><h4>{i} · {label}</h4><ul>{"".join(detail)}</ul>'
+        cards.append(f'<article id="{target}" tabindex="-1"><h3>{label}</h3><ul>{"".join(detail)}</ul>'
                      '</article>')
+
+    grid = ''.join(f'M{x} 0V365' for x in range(75, 900, 75))
+    grid += ''.join(f'M0 {y}H900' for y in range(62, 365, 75))
+    active = ',\n'.join(
+        f'#stability-case-map:has(#host-map-case-{i}:target) [href="#host-map-case-{i}"]'
+        for i in range(1, len(cities) + 1)
+    )
 
     section = f'''<section id="stability-case-map" aria-labelledby="stability-case-map-title">
 <style>
-#stability-case-map{{margin:30px 0 40px;padding-block:22px;border-block:1px solid color-mix(in srgb,currentColor 22%,transparent);scroll-margin-top:100px}}
-#stability-case-map h2,#stability-case-map h4{{margin:0 0 10px}}
-#stability-case-map svg{{display:block;width:100%;height:auto;background:#132a35;border-radius:10px}}
-#stability-case-map polygon{{fill:#44636d;stroke:#587782;stroke-width:.4}}
-#stability-case-map circle{{fill:#f1cc89}}
-#stability-case-map .host-pin{{stroke:#182e39;stroke-width:2}}
-#stability-case-map line{{stroke:#f1cc89;stroke-width:1;pointer-events:none}}
-#stability-case-map text{{fill:#142630;text-anchor:middle;dominant-baseline:central;font:bold 10px system-ui;pointer-events:none}}
-#stability-case-map svg a:is(:hover,:focus) circle{{fill:white;stroke:#121e25;stroke-width:3}}
-#stability-case-map .host-map-layout{{display:grid;grid-template-columns:minmax(0,1fr) minmax(224px,24%);gap:clamp(16px,2vw,32px);align-items:start}}
-#stability-case-map .host-map-links{{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}}
-#stability-case-map .host-map-links a{{padding:5px 10px;border:1px solid color-mix(in srgb,currentColor 30%,transparent);border-radius:4px}}
-#stability-case-map aside{{padding:18px;border:1px solid color-mix(in srgb,currentColor 24%,transparent);border-radius:10px}}
-#stability-case-map article{{display:none;scroll-margin-top:100px}}
+#stability-case-map{{margin:38px 0 48px;padding-block:24px;scroll-margin-top:100px}}
+#stability-case-map .host-map-heading{{margin-bottom:20px}}
+#stability-case-map h2,#stability-case-map h3{{margin:0}}
+#stability-case-map .host-map-heading p{{margin:6px 0 0}}
+#stability-case-map .host-map-layout{{color:#eaf2f4;background:#101f2a;border:1px solid #34505e;border-radius:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(225px,24%);overflow:hidden}}
+#stability-case-map .host-map-main{{min-width:0}}
+#stability-case-map svg{{display:block;width:100%;height:auto;background:radial-gradient(ellipse at 54% 38%,#203b4a,#112632 76%)}}
+#stability-case-map .host-graticule{{fill:none;stroke:#7495a2;stroke-opacity:.18;stroke-width:.65}}
+#stability-case-map polygon{{fill:#345463;stroke:#658695;stroke-width:.55}}
+#stability-case-map circle{{fill:#e9c98f}}
+#stability-case-map .host-pin{{fill:#142733;stroke:#e9c98f;stroke-width:1.4}}
+#stability-case-map line{{stroke:#e9c98f;stroke-width:1;pointer-events:none}}
+#stability-case-map text{{fill:#fff0d4;text-anchor:middle;dominant-baseline:central;font:700 11px system-ui;pointer-events:none}}
+#stability-case-map .host-map-links{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:8px clamp(8px,1.6vw,24px);gap:0 10px;border-top:1px solid #34505e}}
+#stability-case-map .host-map-links a{{display:flex;align-items:center;gap:7px;min-height:44px;padding:4px 5px;color:#ebf2f4;border-bottom:1px solid transparent;text-decoration:none;font-size:.88rem}}
+#stability-case-map .host-map-links a span{{font-size:.68rem;color:#a8beca;font-variant-numeric:tabular-nums}}
+#stability-case-map .host-map-links a:is(:hover,:focus-visible){{background:#203744}}
+#stability-case-map aside{{padding:clamp(16px,2vw,32px);background:#152934;border-left:1px solid #34505e}}
+#stability-case-map aside > p{{margin:0 0 5px;color:#b7cbd4;font-size:.8rem;letter-spacing:.08em}}
+#stability-case-map article{{display:none;scroll-margin-top:110px}}
 #stability-case-map aside:not(:has(article:target)) article:first-of-type,#stability-case-map article:target{{display:block}}
-#stability-case-map article ul{{list-style:none;margin:0 0 14px;padding:0}}
-#stability-case-map article li{{display:grid;gap:2px;padding:10px 0;border-bottom:1px solid color-mix(in srgb,currentColor 20%,transparent)}}
-#stability-case-map article strong{{font-size:1.15em}}
-#stability-case-map aside > a{{text-decoration:underline}}
-@media (max-width:720px){{#stability-case-map .host-map-layout{{grid-template-columns:minmax(0,1fr)}}}}
+#stability-case-map article h3{{font-size:clamp(1.45rem,2.6vw,2rem)}}
+#stability-case-map article ul{{list-style:none;margin:8px 0 16px;padding:0}}
+#stability-case-map article li{{display:grid;gap:2px;padding:12px 0;border-bottom:1px solid #34505e;font-variant-numeric:tabular-nums}}
+#stability-case-map article strong{{color:#f1d29a;font-size:clamp(1.4rem,2vw,2rem);line-height:1.15}}
+#stability-case-map article strong span{{font-size:.72rem;font-weight:500}}
+#stability-case-map article small,#stability-case-map article li > span{{color:#c1d3db}}
+#stability-case-map aside > a{{color:#f1d29a;text-decoration:underline;text-underline-offset:4px}}
+{active},
+#stability-case-map:not(:has(article:target)) [href="#host-map-case-1"]{{color:#f1d29a;border-bottom-color:#e9c98f}}
+:is({active}, #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"], #stability-case-map svg a:is(:hover,:focus-visible)) .host-pin{{fill:#e9c98f}}
+:is({active}, #stability-case-map:not(:has(article:target)) [href="#host-map-case-1"], #stability-case-map svg a:is(:hover,:focus-visible)) text{{fill:#142733}}
+#stability-case-map .host-map-note{{margin:12px 0 0;font-size:.84rem}}
+@media (max-width:820px){{
+  #stability-case-map .host-map-layout{{grid-template-columns:minmax(0,1fr)}}
+  #stability-case-map aside{{border-left:0;border-top:1px solid #34505e}}
+}}
+@media (max-width:560px){{#stability-case-map .host-map-links{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
 </style>
-<h2 id="stability-case-map-title">主场效应案例地图</h2>
-<p>选择地图标记或城市名称，查看获奖记录份额变化。{sum(map(len,cities.values()))} 届案例按举办地定位，东京两届共用一处标记。</p>
-<div class="host-map-layout"><div><svg viewBox="0 0 900 365" aria-label="主场效应案例世界地图">
-<g aria-hidden="true">{''.join(land)}</g>{''.join(pins)}</svg>
+<div class="host-map-heading"><h2 id="stability-case-map-title">主场效应案例地图</h2>
+<p>选择城市，比较主办届与前一届的获奖记录份额。{len(cities)} 座城市，{sum(map(len,cities.values()))} 届案例。</p></div>
+<div class="host-map-layout"><div class="host-map-main"><svg viewBox="0 0 900 365" aria-label="主场效应案例世界地图">
+<g aria-hidden="true"><path class="host-graticule" d="{grid}"/>{''.join(land)}</g>{''.join(pins)}</svg>
 <nav class="host-map-links" aria-label="主办城市">{''.join(links)}</nav></div>
-<aside aria-label="城市案例">{''.join(cards)}<a href="../S1_东道主效应/index.html">查看主场效应核验 ↗</a></aside></div>
-<p>数值为前一届到主办届的获奖记录份额变化，单位为百分比与百分点。地图仅定位案例，差值不能单独证明主场的因果作用。底图使用项目既有 Natural Earth 110m 数据。</p>
+<aside aria-label="城市案例"><p>前一届 → 主办届</p>{''.join(cards)}<a href="../S1_东道主效应/index.html">查看主场效应核验 ↗</a></aside></div>
+<p class="host-map-note">差值用于描述两届变化，不能单独证明主场的因果作用。底图来自项目内的 Natural Earth 110m 数据。</p>
 </section>'''
     soup = BeautifulSoup(PAGE.read_text(encoding='utf-8'), 'html.parser')
     prior = soup.select_one('#stability-case-map')
