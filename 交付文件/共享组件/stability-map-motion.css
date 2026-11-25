@@ -90,19 +90,35 @@ body.stability-map-motion main .filters button[data-filter][aria-pressed="true"]
   font-weight: 650;
 }
 
-html body.stability-map-motion .stability-review{
- display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr) auto;
- gap:clamp(18px,3vw,46px);align-items:start;padding:22px 0;border-bottom:1px solid var(--sr-line);
+
+.stability-list .matrix-filters { border: 0; padding: 0; margin: 18px 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.matrix-filters legend { color: var(--sr-muted); font-size: .85rem; }
+.matrix-filters input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.matrix-filters label { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border-bottom: 2px solid transparent; }
+.matrix-filters input:checked + label { color: var(--sr-accent); border-color: currentColor; }
+.matrix-filters input:focus-visible + label { outline: 2px solid currentColor; outline-offset: 3px; }
+.matrix-filters label span { color: var(--sr-muted); font-variant-numeric: tabular-nums; }
+.stability-list:has(#matrix-sensitive:checked) .matrix-row.uncertain,
+.stability-list:has(#matrix-uncertain:checked) .matrix-row.sensitive { display: none; }
+.matrix-head, .matrix-row summary {
+  display: grid; grid-template-columns: 3ch minmax(0,1fr) minmax(0,1.2fr) 6em 1ch;
+  align-items: start; gap: clamp(10px,2vw,28px); padding: 14px 4px;
 }
-html body.stability-map-motion .stability-review h3{
- font-size:clamp(17px,1.5vw,22px)!important;margin:6px 0 8px;line-height:1.5!important;
-}
-html body.stability-map-motion .stability-review .stability-status{font-size:.82rem}
-html body.stability-map-motion .stability-review-result p{margin:0 0 5px}
-html body.stability-map-motion .stability-review-result strong{color:var(--sr-ink)}
-html body.stability-map-motion .stability-review .stability-review-limit{font-size:.84rem}
-html body.stability-map-motion .stability-review-link{display:inline-block;min-height:44px;padding-block:10px;white-space:nowrap}
-@media(max-width:760px){
- html body.stability-map-motion .stability-review{grid-template-columns:minmax(0,1fr);gap:8px}
- html body.stability-map-motion .stability-review-link{justify-self:start}
+.matrix-head { color: var(--sr-muted); font-size: .86rem; }
+.matrix-row { border-top: 1px solid var(--sr-line); }
+.matrix-row summary { cursor: pointer; min-height: 44px; list-style: none; }
+.matrix-row summary::-webkit-details-marker { display: none; }
+.matrix-row summary::after { content: "+"; color: var(--sr-accent); }
+.matrix-row[open] summary::after { content: "−"; }
+.matrix-row summary:hover, .matrix-row[open] summary { background: var(--sr-line); }
+.matrix-topic, .matrix-status { color: var(--sr-muted); font-size: .86rem; }
+.matrix-row.sensitive .matrix-status { color: var(--sr-accent); }
+.matrix-evidence { padding: 10px 12px 18px; }
+.matrix-evidence p { margin: 5px 0; }
+.matrix-evidence b { margin-right: .45em; }
+.matrix-evidence a { display: inline-block; padding-block: 8px; }
+@media(max-width:760px) {
+  .matrix-head { display: none; }
+  .matrix-row summary { grid-template-columns: 3ch minmax(0,1fr) auto 1ch; }
+  .matrix-result { grid-column: 2 / -1; grid-row: 2; }
 }
