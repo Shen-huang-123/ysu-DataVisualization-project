@@ -42,12 +42,17 @@ body.stability-map-motion .oa-world::after {
   body.stability-map-motion .oa-world::after { animation: none; }
 }
 
+body.stability-map-motion main p:has(> .stability-experiment) {
+  max-inline-size: none;
+  width: 100%;
+}
 body.stability-map-motion main .stability-experiment {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  max-inline-size: 34rem;
+  inline-size: 100%;
+  box-sizing: border-box;
   min-height: 52px;
   padding: 10px 14px 10px 0;
   border-block: 1px solid color-mix(in srgb, var(--sr-accent) 42%, transparent);

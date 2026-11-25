@@ -66,7 +66,7 @@ link=s.select_one('#stability-map-motion-style')
 if link is None:
  link=s.new_tag('link',id='stability-map-motion-style',rel='stylesheet')
  s.head.append(link)
-link['href']='../../共享组件/stability-map-motion.css?v=6'
+link['href']='../../共享组件/stability-map-motion.css?v=7'
 p.write_text(str(s),'utf-8')
 
 from publish_stability_case_map import publish as publish_case_map
