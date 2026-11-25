@@ -22,3 +22,6 @@ if link is None:
  s.head.append(link)
 link['href']='../../共享组件/stability-map-motion.css?v=4'
 p.write_text(str(s),'utf-8')
+
+from publish_stability_case_map import publish as publish_case_map
+publish_case_map()
