@@ -51,7 +51,7 @@ html body.impact-ledger>.oa-world .oa-landscape{display:none}
 .impact-figures figure { margin: 0; padding: 15px 0; border-bottom: 1px solid var(--sr-line); min-width: 0; }
 .impact-figures figcaption { display: grid; grid-template-columns: 1fr auto; gap: 4px 8px; }
 .impact-figures figcaption b { color: var(--sr-accent); }
-.impact-figures figcaption span { grid-column: 1 / -1; font-variant-numeric: tabular-nums; }
+.impact-figures .impact-values { grid-column: 1 / -1; font-variant-numeric: tabular-nums; }
 .impact-plot { position: relative; height: 26px; margin-inline: 8px; }
 .impact-plot::before { content: ""; position: absolute; inset: 50% 0 auto; border-top: 1px solid var(--sr-line); }
 .impact-plot i { position: absolute; top: 50%; }
@@ -59,8 +59,15 @@ html body.impact-ledger>.oa-world .oa-landscape{display:none}
 .impact-before { left: var(--before); width: 11px; height: 11px; border: 2px solid var(--sr-ink); background: var(--ledger-paper); border-radius: 50%; transform: translate(-50%, -50%); }
 .impact-after { left: var(--after); width: 9px; height: 9px; background: var(--sr-accent); transform: translate(-50%, -50%) rotate(45deg); }
 .impact-scale { display: flex; justify-content: space-between; padding-inline: 8px; color: var(--sr-muted); font-size: .78rem; }
-.impact-key { display: flex; gap: 16px; font-size: .85rem; }
-.impact-key span:last-child { color: var(--sr-accent); }
+.impact-key { display: flex; flex-wrap: wrap; gap: 6px; border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+.impact-key legend { color: var(--sr-muted); font-size: .85rem; margin-bottom: 6px; }
+.impact-key input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.impact-key label { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border: 1px solid var(--sr-line); border-radius: 6px; cursor: pointer; }
+.impact-key label:hover { border-color: currentColor; }
+.impact-key input:checked + label { color: var(--sr-accent); border-color: currentColor; background: var(--sr-line); }
+.impact-key input:focus-visible + label { outline: 2px solid currentColor; outline-offset: 3px; }
+.impact-chart:has(#impact-before-only:checked) :is(.impact-after,.impact-value-after,.impact-arrow,.impact-span,figcaption b),
+.impact-chart:has(#impact-after-only:checked) :is(.impact-before,.impact-value-before,.impact-arrow,.impact-span,figcaption b) { display: none; }
 .impact-chart .impact-note { margin-top: 12px; font-size: .85rem; }
 .impact-data summary { padding: 12px 0; cursor: pointer; color: var(--sr-accent); }
 @media (max-width: 650px) {

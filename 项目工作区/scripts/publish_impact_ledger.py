@@ -54,11 +54,13 @@ def impact_chart():
             if not lo <= min(before, after) <= max(before, after) <= hi:
                 raise ValueError(f'{label} 的数据超出图轴范围')
             x1, x2 = ((value - lo) / (hi - lo) * 100 for value in (before, after))
-            values = f'{before:.2f}% → {after:.2f}%' if share else f'{before:,.0f} → {after:,.0f}'
+            before_text, after_text = (
+                f'{value:.2f}%' if share else f'{value:,.0f}' for value in (before, after)
+            )
             delta = f'{change:+.3f} 个百分点' if share else f'{change:+,.0f} 行'
             axis = [f'{value:.1f}%' if share else f'{value:,.0f}' for value in (lo, hi)]
             figures.append(f"""<figure><figcaption><strong>{label}</strong><b>{delta}</b>
-<span>{values}</span></figcaption>
+<span class="impact-values"><span class="impact-value-before">{before_text}</span><span class="impact-arrow"> → </span><span class="impact-value-after">{after_text}</span></span></figcaption>
 <div class="impact-plot" aria-hidden="true" style="--before:{x1:.3f}%;--after:{x2:.3f}%">
 <i class="impact-span"></i><i class="impact-before"></i><i class="impact-after"></i>
 </div><div class="impact-scale" aria-hidden="true"><span>{axis[0]}</span><span>{axis[1]}</span></div></figure>""")
@@ -69,7 +71,11 @@ def impact_chart():
 <div class="impact-figures">{''.join(figures)}</div></section>""")
     return f"""<section class="impact-chart" aria-labelledby="impact-chart-title">
 <h2 id="impact-chart-title">清洗前后的指标变化</h2>
-<p class="impact-key"><span>○ 处理前</span><span>◆ 处理后</span></p>
+<fieldset class="impact-key"><legend>图表视图</legend>
+<input type="radio" name="impact-view" id="impact-compare" checked/><label for="impact-compare">前后对比</label>
+<input type="radio" name="impact-view" id="impact-before-only"/><label for="impact-before-only">○ 处理前</label>
+<input type="radio" name="impact-view" id="impact-after-only"/><label for="impact-after-only">◆ 处理后</label>
+</fieldset>
 
 <div role="group" aria-label="清洗情景">{''.join(sections)}</div><p class="impact-note">每项指标使用独立刻度，切换情景时刻度固定。剔除疑似重复超额行以排除 1906 年后的数据为起点。</p></section>"""
 
@@ -84,7 +90,7 @@ s.main.append(BeautifulSoup(content,'html.parser'))
 s.body['class']=s.body.get('class',[])+['impact-ledger']
 h=s.main.h1;h.string='清洗决定，究竟改变了什么？'
 eyebrow=s.new_tag('p',attrs={'class':'ledger-eyebrow'});eyebrow.string='数据体检 / 数据问题影响账本';h.insert_before(eyebrow)
-s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/impact-ledger.css?v=compact-dumbbell'))
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/impact-ledger.css?v=interactive-dumbbell'))
 s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/olympic-atmosphere.css?v=3'))
 s.head.append(s.new_tag('script',src='../../共享组件/olympic-atmosphere.js?v=1',defer=''))
 
