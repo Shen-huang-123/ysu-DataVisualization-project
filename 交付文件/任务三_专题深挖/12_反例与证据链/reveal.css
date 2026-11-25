@@ -112,3 +112,16 @@ body.evidence-chain main .case .step.ok { border-color: var(--sr-accent); }
 body.evidence-chain main .case .step strong { color: var(--sr-ink); margin: 8px 0; font-size: clamp(18px,1.7vw,24px); }
 body.evidence-chain main .case .step.ok strong { color: var(--sr-accent); }
 body.evidence-chain main .case .step :is(p, small) { color: var(--sr-muted); }
+
+@media (prefers-reduced-motion: no-preference) {
+  body.evidence-chain > .oa-world .oa-light {
+    animation: evidence-light 24s ease-in-out infinite alternate;
+  }
+  body.evidence-chain .evidence-summary a {
+    transition: background-color 180ms ease;
+  }
+  @keyframes evidence-light {
+    from { translate: -12px -8px; opacity: .62; }
+    to { translate: 18px 12px; opacity: 1; }
+  }
+}

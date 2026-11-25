@@ -25,3 +25,23 @@
   steps.forEach(step => observer.observe(step));
   activate(0);
 })();
+
+(() => {
+  if (!('IntersectionObserver' in window) || !Element.prototype.animate) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const observer = new IntersectionObserver((entries) => {
+    for (const { target, isIntersecting } of entries) {
+      if (!isIntersecting) continue;
+      observer.unobserve(target);
+      if (reduced.matches || target.contains(document.activeElement)) continue;
+      const animation = target.animate(
+        [{ opacity: 0.78, translate: '0 8px' }, { opacity: 1, translate: '0 0' }],
+        { duration: 380, easing: 'cubic-bezier(.22,1,.36,1)' }
+      );
+      const stop = () => { if (reduced.matches) animation.cancel(); };
+      reduced.addEventListener('change', stop);
+      animation.finished.catch(() => {}).finally(() => reduced.removeEventListener('change', stop));
+    }
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.evidence-chain main :is(h1, .reveal-story > h2, .evidence-summary, .case-head, .case .step, .matrix > h2, .matrix > table)').forEach(element => observer.observe(element));
+})();
