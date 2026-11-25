@@ -37,3 +37,27 @@ html body.impact-ledger .method-reading h1+p{
  html body.impact-ledger>.oa-world{opacity:.52}
 }
 html body.impact-ledger>.oa-world .oa-landscape{display:none}
+
+.impact-chart { margin-bottom: 30px; }
+.impact-chart > p { color: var(--sr-muted); margin: 6px 0; }
+.impact-chart > [role=group] { display: flex; flex-wrap: wrap; gap: 0 18px; position: relative; padding-top: 12px; }
+.impact-choice { display: contents; }
+.impact-choice input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.impact-choice label { min-height: 44px; display: inline-flex; align-items: center; border-bottom: 2px solid transparent; cursor: pointer; }
+.impact-choice input:checked + label { color: var(--sr-accent); border-color: currentColor; }
+.impact-choice input:focus-visible + label { outline: 2px solid currentColor; outline-offset: 3px; }
+.impact-figures { display: none; order: 1; width: 100%; }
+.impact-choice input:checked ~ .impact-figures { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 clamp(18px,4vw,64px); }
+.impact-figures figure { margin: 0; padding: 15px 0; border-bottom: 1px solid var(--sr-line); min-width: 0; }
+.impact-figures figcaption { display: grid; grid-template-columns: 1fr auto; gap: 4px 8px; }
+.impact-figures figcaption b { color: var(--sr-accent); }
+.impact-figures figcaption span { grid-column: 1 / -1; font-variant-numeric: tabular-nums; }
+.impact-figures svg { display: block; width: 100%; height: auto; }
+.impact-axis { stroke: var(--sr-line); }
+.impact-span { stroke: var(--sr-accent); stroke-width: 2; }
+.impact-before { fill: var(--ledger-paper); stroke: var(--sr-ink); stroke-width: 2; }
+.impact-after { fill: var(--sr-accent); }
+.impact-scale { display: flex; justify-content: space-between; padding-inline: 3.75%; color: var(--sr-muted); font-size: .78rem; }
+@media (max-width: 650px) {
+  .impact-choice input:checked ~ .impact-figures { grid-template-columns: minmax(0,1fr); }
+}
