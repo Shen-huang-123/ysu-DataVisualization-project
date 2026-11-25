@@ -36,14 +36,37 @@ for r in rows:
 <p><b>核验口径</b> {escape(r['替代口径或核验'])}</p>
 <p><b>推断边界</b> {escape(r['推断边界'])}</p>{gap}
 <a href="../{entry}">查看专题反例与依据 ↗</a></div></details>""")
-parts.append('</div><p class="stability-download"><a href="十专题结论稳定性矩阵.csv" download>下载核验矩阵 CSV ↓</a> · <a href="结论稳定性地图.png" download>下载原始地图 PNG ↓</a></p></section>')
+parts.append('</div><p class="stability-download"><a href="十专题结论稳定性矩阵.csv" download>下载核验矩阵 CSV ↓</a> · <a href="结论稳定性地图.png" id="matrix-preview-open">预览原始地图 ↗</a> · <a href="结论稳定性地图.png" download>下载 PNG ↓</a></p>')
+parts.append("""
+<dialog id="matrix-preview" aria-label="原始结论稳定性地图预览">
+<form method="dialog"><button autofocus>关闭预览</button></form>
+<img alt="十个专题的原判断及证据状态" data-src="结论稳定性地图.png"/>
+</dialog>
+<script>
+(() => {
+  const dialog = document.getElementById('matrix-preview');
+  const link = document.getElementById('matrix-preview-open');
+  link.addEventListener('click', (event) => {
+    if (!dialog.showModal || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const image = dialog.querySelector('img');
+    if (!image.hasAttribute('src')) image.src = image.dataset.src;
+    dialog.showModal();
+  });
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+})();
+</script>
+</section>
+""")
 target.replace_with(BeautifulSoup(''.join(parts),'html.parser'))
 s.body['class']=list(dict.fromkeys(s.body.get('class',[])+['stability-map-motion']))
 link=s.select_one('#stability-map-motion-style')
 if link is None:
  link=s.new_tag('link',id='stability-map-motion-style',rel='stylesheet')
  s.head.append(link)
-link['href']='../../共享组件/stability-map-motion.css?v=5'
+link['href']='../../共享组件/stability-map-motion.css?v=6'
 p.write_text(str(s),'utf-8')
 
 from publish_stability_case_map import publish as publish_case_map
