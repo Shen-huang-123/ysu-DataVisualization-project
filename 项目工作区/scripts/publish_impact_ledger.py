@@ -53,38 +53,38 @@ def impact_chart():
             before, after, change = rows[key]
             if not lo <= min(before, after) <= max(before, after) <= hi:
                 raise ValueError(f'{label} 的数据超出图轴范围')
-            x1, x2 = (12 + (value - lo) / (hi - lo) * 296 for value in (before, after))
+            x1, x2 = ((value - lo) / (hi - lo) * 100 for value in (before, after))
             values = f'{before:.2f}% → {after:.2f}%' if share else f'{before:,.0f} → {after:,.0f}'
             delta = f'{change:+.3f} 个百分点' if share else f'{change:+,.0f} 行'
             axis = [f'{value:.1f}%' if share else f'{value:,.0f}' for value in (lo, hi)]
             figures.append(f"""<figure><figcaption><strong>{label}</strong><b>{delta}</b>
 <span>{values}</span></figcaption>
-<svg viewBox="0 0 320 30" aria-hidden="true">
-<path class="impact-axis" d="M12 15H308"/>
-<path class="impact-span" d="M{x1:.2f} 15H{x2:.2f}"/>
-<circle class="impact-before" cx="{x1:.2f}" cy="15" r="5"/>
-<path class="impact-after" d="M{x2:.2f} 9l6 6-6 6-6-6Z"/>
-</svg><div class="impact-scale" aria-hidden="true"><span>{axis[0]}</span><span>{axis[1]}</span></div></figure>""")
+<div class="impact-plot" aria-hidden="true" style="--before:{x1:.3f}%;--after:{x2:.3f}%">
+<i class="impact-span"></i><i class="impact-before"></i><i class="impact-after"></i>
+</div><div class="impact-scale" aria-hidden="true"><span>{axis[0]}</span><span>{axis[1]}</span></div></figure>""")
         selected = ' checked' if index == 0 else ''
         sections.append(f"""<section class="impact-choice">
 <input type="radio" name="impact-scenario" id="impact-scenario-{index}"{selected}/>
-<label for="impact-scenario-{index}">{escape(scenario)}</label>
+<label for="impact-scenario-{index}">{escape({'排除1906': '排除 1906 年', '疑似重复超额行剔除敏感性': '剔除疑似重复超额行'}.get(scenario, scenario))}</label>
 <div class="impact-figures">{''.join(figures)}</div></section>""")
     return f"""<section class="impact-chart" aria-labelledby="impact-chart-title">
 <h2 id="impact-chart-title">清洗前后的指标变化</h2>
-<p>空心圆表示处理前，实心菱形表示处理后。每项指标使用独立横轴，切换情景时同一指标的刻度保持一致。</p>
-<p>疑似重复剔除以前一步排除 1906 后的数据为起点。</p>
-<div role="group" aria-label="清洗情景">{''.join(sections)}</div></section>"""
+<p class="impact-key"><span>○ 处理前</span><span>◆ 处理后</span></p>
+
+<div role="group" aria-label="清洗情景">{''.join(sections)}</div><p class="impact-note">每项指标使用独立刻度，切换情景时刻度固定。剔除疑似重复超额行以排除 1906 年后的数据为起点。</p></section>"""
 
 
 table_index = next(index for index, block in enumerate(blocks) if '<table>' in block)
-blocks.insert(table_index, impact_chart())
+blocks[table_index] = impact_chart() + (
+    '<details class="impact-data"><summary>查看完整数据表</summary>'
+    + blocks[table_index] + '</details>'
+)
 content='<article class="method-reading"><nav class="method-actions"><a href="../index.html#research-closure">← 返回数据体检</a><a href="数据问题影响账本.md" download>下载 Markdown 原文</a><a href="问题影响实测.csv" download>下载影响实测 CSV</a></nav>'+''.join(blocks)+'</article>'
 s.main.append(BeautifulSoup(content,'html.parser'))
 s.body['class']=s.body.get('class',[])+['impact-ledger']
 h=s.main.h1;h.string='清洗决定，究竟改变了什么？'
 eyebrow=s.new_tag('p',attrs={'class':'ledger-eyebrow'});eyebrow.string='数据体检 / 数据问题影响账本';h.insert_before(eyebrow)
-s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/impact-ledger.css?v=dumbbell'))
+s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/impact-ledger.css?v=compact-dumbbell'))
 s.head.append(s.new_tag('link',rel='stylesheet',href='../../共享组件/olympic-atmosphere.css?v=3'))
 s.head.append(s.new_tag('script',src='../../共享组件/olympic-atmosphere.js?v=1',defer=''))
 
