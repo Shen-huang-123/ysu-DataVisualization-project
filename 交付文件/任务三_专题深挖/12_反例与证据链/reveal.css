@@ -82,3 +82,24 @@ body.evidence-chain .reveal-dots i.on { background: var(--sr-accent); opacity: 1
   .evidence-flow ol { grid-template-columns: minmax(0,1fr); }
   .evidence-flow li { border-top: 0; border-inline-start: 2px solid var(--sr-line); padding: 4px 0 4px 12px; }
 }
+
+body.evidence-chain main .case {
+  margin-top: clamp(26px,4vw,54px);
+  border-top: 1px solid var(--sr-line);
+  scroll-margin-top: 90px;
+}
+body.evidence-chain main .case-head { flex-wrap: wrap; gap: 0 16px; }
+body.evidence-chain main .case-head small { color: var(--sr-muted); margin-bottom: 14px; }
+body.evidence-chain main .case .step {
+  min-height: 0;
+  padding: 14px clamp(8px,1.4vw,22px) 16px 0;
+  background: transparent;
+  border: 0;
+  border-top: 2px solid var(--sr-line);
+  border-radius: 0;
+  color: var(--sr-ink);
+}
+body.evidence-chain main .case .step.ok { border-color: var(--sr-accent); }
+body.evidence-chain main .case .step strong { color: var(--sr-ink); margin: 8px 0; font-size: clamp(18px,1.7vw,24px); }
+body.evidence-chain main .case .step.ok strong { color: var(--sr-accent); }
+body.evidence-chain main .case .step :is(p, small) { color: var(--sr-muted); }
