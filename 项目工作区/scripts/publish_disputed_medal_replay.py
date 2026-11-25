@@ -113,6 +113,34 @@ body=f"""# 优先分歧复核与奖牌榜影响
 """
 (OUT/'优先分歧复核与复算.md').write_text(body,encoding='utf-8')
 html=markdown.markdown(body,extensions=['tables'])
+def add_replay_navigation(page, delivery, destination):
+    from os.path import relpath
+    from bs4 import BeautifulSoup
+
+    template = delivery / '任务三_专题深挖/12_反例与证据链/index.html'
+    shell = BeautifulSoup(template.read_text(encoding='utf-8'), 'html.parser')
+    result = BeautifulSoup(page, 'html.parser')
+    assets = (
+        'link[href*="supplement-reading.css"]', 'link[href*="integrated-nav.css"]',
+        '#supplement-theme-preload',
+        'script[src*="supplement-reading.js"]', 'script[src*="integrated-nav.js"]',
+    )
+    for selector in (*assets, '#xz-nav', '#xz-menu'):
+        element = shell.select_one(selector)
+        for node in (element, *element.select('[href],[src]')):
+            for attr in ('href', 'src'):
+                if node.has_attr(attr):
+                    path, sep, query = node[attr].partition('?')
+                    relative = Path(relpath(template.parent / path, destination)).as_posix()
+                    node[attr] = relative + sep + query
+        if selector in assets:
+            result.head.append(element)
+        else:
+            result.main.insert_before(element)
+    result.body['class'] = ['supplement-reading', 'replay-reading']
+    return '<!doctype html>' + str(result.html)
+
+
 def render_replay(html, reviewed, beijing, london):
     table = '<div class="table" role="region" aria-label="逐项分歧" tabindex="0"><table>'
     content = html.replace('<table>', table).replace('</table>', '</table></div>')
@@ -126,9 +154,9 @@ def render_replay(html, reviewed, beijing, london):
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>优先分歧复核与奖牌榜影响</title>
 <style>
 :root{color-scheme:light dark;--paper:#f5f3ed;--ink:#19363c;--muted:#52686b;--accent:#785525;--line:#758b8b55}
-@media(prefers-color-scheme:dark){:root{--paper:#15222b;--ink:#eef2ee;--muted:#b0c0bf;--accent:#ddc393;--line:#b6c9c540}}
+html[data-supp-theme="dark"]{--paper:#15222b;--ink:#eef2ee;--muted:#b0c0bf;--accent:#ddc393;--line:#b6c9c540}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif}
-main{padding:clamp(24px,5vw,80px) clamp(20px,6vw,100px)}
+html body.replay-reading.supplement-reading:not(.supp-existing-nav)>main{padding-top:clamp(80px,8vw,110px)!important}
 h1{font-size:clamp(30px,4vw,58px);line-height:1.2;margin:24px 0 16px}h2{font-size:clamp(22px,2.6vw,34px);line-height:1.3}
 p{max-width:78ch;color:var(--muted)}a{color:var(--accent);text-underline-offset:4px}
 a:focus-visible,.table:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -144,7 +172,10 @@ tbody tr:last-child td{border-bottom:0}
 
 
 (OUT/'优先分歧复核与复算.html').write_text(
-    render_replay(html, len(ledger), changes.get(2008, 0), changes.get(2012, 0)),
+    add_replay_navigation(
+        render_replay(html, len(ledger), changes.get(2008, 0), changes.get(2012, 0)),
+        OUT.parents[3], OUT,
+    ),
     encoding='utf-8',
 )
 index=OUT/'index.html'
