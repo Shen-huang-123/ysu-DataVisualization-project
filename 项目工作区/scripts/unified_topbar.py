@@ -50,7 +50,7 @@ def nav_markup(page: Path) -> str:
     current = 2 if rel.startswith('任务三_') else -1
     links = ''.join(f'<a href="{hrefs[i+1]}"' + (' aria-current="page"' if i == current else '') + f'>{labels[i]}</a>' for i in range(4))
     menu = menu_markup(page)
-    return f'''<nav id="xz-nav" aria-label="作品导航"><a class="xz-brand" href="{hrefs[0]}"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links">{links}<button type="button" id="xz-theme" aria-label="切换深色模式" title="切换深色模式">◐</button><button type="button" id="xz-menu-button" aria-expanded="false" aria-controls="xz-menu">目录 ☰</button></div></nav><div id="xz-progress"></div><aside id="xz-menu" hidden><h2>探索全部作品</h2>{menu}</aside><button type="button" id="xz-top" aria-label="返回顶部" title="返回顶部">↑</button>'''
+    return f'''<nav id="xz-nav" aria-label="作品导航"><a class="xz-brand" href="{Path(os.path.relpath(ROOT / 'index.html', page.parent)).as_posix()}"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links">{links}<button type="button" id="xz-theme" aria-label="切换深色模式" title="切换深色模式">◐</button><button type="button" id="xz-menu-button" aria-expanded="false" aria-controls="xz-menu">目录 ☰</button></div></nav><div id="xz-progress"></div><aside id="xz-menu" hidden><h2>探索全部作品</h2>{menu}</aside><button type="button" id="xz-top" aria-label="返回顶部" title="返回顶部">↑</button>'''
 
 def menu_markup(page: Path) -> str:
     targets = ['作品总入口/index.html','任务一_数据体检/index.html','任务二_百年全景/05_交互总览/index.html','任务三_专题深挖/统一中文入口/index.html','任务四_开放创作/index.html']

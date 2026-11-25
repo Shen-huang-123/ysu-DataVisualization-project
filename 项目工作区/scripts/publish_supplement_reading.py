@@ -21,7 +21,7 @@ for p in presentation_html(delivery):
  if preload:preload.string="try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}"
  if not s.select_one('.supp-nav'):
   nav=s.new_tag('nav',attrs={'class':'supp-nav','aria-label':'作品导航'})
-  a=s.new_tag('a',href=Path(os.path.relpath(delivery/'作品总入口/index.html',p.parent)).as_posix());a.string='晓 · 奥运数据观察';nav.append(a)
+  a=s.new_tag('a',href=Path(os.path.relpath(delivery.parent/'index.html',p.parent)).as_posix());a.string='晓 · 奥运数据观察';nav.append(a)
   links=s.new_tag('div')
   for file,label in [('任务一_数据体检/index.html','数据体检'),('任务二_百年全景/05_交互总览/index.html','百年全景'),('任务三_专题深挖/统一中文入口/index.html','专题深挖'),('任务四_开放创作/index.html','洛杉矶2028')]:
    a=s.new_tag('a',href=Path(os.path.relpath(delivery/file,p.parent)).as_posix());a.string=label;links.append(a)
@@ -37,7 +37,7 @@ for p in presentation_html(delivery):
  if old:old.decompose()
  if not s.select_one('#xz-nav'):
   nav=s.new_tag('nav',id='xz-nav',attrs={'aria-label':'作品导航'})
-  brand=s.new_tag('a',attrs={'class':'xz-brand'},href=Path(os.path.relpath(delivery/'作品总入口/index.html',p.parent)).as_posix())
+  brand=s.new_tag('a',attrs={'class':'xz-brand'},href=Path(os.path.relpath(delivery.parent/'index.html',p.parent)).as_posix())
   brand.append(BeautifulSoup('<span class="xz-mark">晓</span><span>奥运数据观察</span>','html.parser'));nav.append(brand)
   links=s.new_tag('div',attrs={'class':'xz-links'})
   targets=[('任务一_数据体检/index.html','01 数据体检'),('任务二_百年全景/05_交互总览/index.html','02 百年全景'),('任务三_专题深挖/统一中文入口/index.html','03 专题深挖'),('任务四_开放创作/index.html','04 洛杉矶2028')]
