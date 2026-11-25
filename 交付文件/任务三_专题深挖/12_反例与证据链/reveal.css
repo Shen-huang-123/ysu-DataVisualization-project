@@ -17,7 +17,14 @@ body.supplement-reading .reveal-story .reveal-kicker { color: var(--sr-accent); 
 .reveal-row:not(.active) .reveal-fill { opacity: .55; }
 
 /* Keep the shared ambient light behind the evidence. */
-body.evidence-chain > .oa-world { opacity: .68; }
+html body.evidence-chain.oa-host {
+  background-color: var(--sr-paper);
+  background-image:
+    radial-gradient(ellipse 78% 35rem at 12% 0%, #608f9d26, transparent 100%),
+    radial-gradient(ellipse 52% 30rem at 100% 0%, #b4966420, transparent 100%) !important;
+  background-repeat: no-repeat;
+}
+body.evidence-chain > .oa-world { opacity: .26; }
 body.evidence-chain > .oa-world .oa-landscape { display: none; }
 body.evidence-chain .reveal-story { border-top: 1px solid var(--sr-line); }
 
@@ -69,17 +76,21 @@ body.evidence-chain .reveal-dots i.on { background: var(--sr-accent); opacity: 1
 .evidence-chain .evidence-flow { margin-block: clamp(30px,5vw,64px); }
 .evidence-summary {
   display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1px;
-  background: var(--sr-line); border-block: 1px solid var(--sr-line);
+  border-block: 1px solid var(--sr-line);
 }
 body.evidence-chain .evidence-summary a {
   display: grid; gap: 8px; padding: clamp(14px,2vw,28px);
-  background: var(--sr-paper); color: var(--sr-ink); text-decoration: none;
+  background: transparent; color: var(--sr-ink); text-decoration: none;
 }
+.evidence-summary a + a { border-inline-start: 1px solid var(--sr-line); }
 body.evidence-chain .evidence-summary a:hover { background: color-mix(in srgb,var(--sr-paper) 92%,var(--sr-accent)); }
 .evidence-summary span { color: var(--sr-muted); font-size: .9rem; }
 .evidence-summary strong { font-size: clamp(1.05rem,1.65vw,1.45rem); }
 .evidence-summary span:last-child { color: var(--sr-accent); text-decoration: underline; text-underline-offset: 3px; }
-@media(max-width:720px) { .evidence-summary { grid-template-columns: minmax(0,1fr); } }
+@media(max-width:720px) {
+  .evidence-summary { grid-template-columns: minmax(0,1fr); }
+  .evidence-summary a + a { border-inline-start: 0; border-top: 1px solid var(--sr-line); }
+}
 
 body.evidence-chain main .case {
   margin-top: clamp(26px,4vw,54px);
