@@ -129,6 +129,36 @@ body = body.replace('<table>', '<div class="scroll" role="region" aria-label="�
 body = body.replace('<p>2024 留出', '<p class="coverage-lead">2024 留出', 1)
 body = body.replace('<h2>区间用过去', '<h2 id="coverage">区间用过去', 1)
 body = body.replace('<h2>完整集成公式', '<h2 id="formula">完整集成公式', 1)
+def coverage_tradeoff(rows):
+    methods = ('统一半宽', '按预测量分组')
+    selected = {
+        row['区间方法']: (index, row) for index, row in enumerate(rows)
+        if int(row['评估届次']) == 2024 and row['模型'] == '历史加权基线'
+        and row['评估分组'] == '预测至少5槽' and row['校准届次'] == '2012+2016'
+    }
+    points, labels = [], []
+    for number, method in enumerate(methods, 1):
+        index, row = selected[method]
+        width = float(row['平均宽度'])
+        rate = float(row['覆盖率'])
+        point_label = f'{method}，{width:.2f} 槽，覆盖 {rate:.1%}'
+        points.append(f'<a href="#coverage-row-{index}" style="--x:{width / 16:.6%};--y:{rate:.6%}" '
+                      f'aria-label="{point_label}，查看核验记录">{number}</a>')
+        labels.append(f'<li>{method} · <strong>{width:.2f} 槽 · {rate:.1%}</strong></li>')
+    return f"""<figure class="coverage-tradeoff" aria-labelledby="tradeoff-title">
+<figcaption id="tradeoff-title">覆盖率与区间宽度</figcaption>
+<p>巴黎 2024 留出评估 · 历史加权基线 · 预测至少 5 槽组 · 校准届次 2012、2016。点击圆点查看核验记录。</p>
+<div class="tradeoff-grid">
+<div class="tradeoff-y" aria-hidden="true"><span>100%</span><span>80%</span><span>0%</span></div>
+<div class="tradeoff-plot"><span class="tradeoff-target">80% 目标</span>{''.join(points)}</div>
+<div class="tradeoff-x" aria-hidden="true"><span>0</span><span>4</span><span>8</span><span>12</span><span>16</span></div>
+</div>
+<p class="tradeoff-axis-title">平均区间宽度（槽）</p>
+<ol>{''.join(labels)}</ol>
+<p>纵轴为实测覆盖率。分组提高了这一组的历史覆盖率，区间也随之变宽。2028 主榜仅发布点估计。</p>
+</figure>"""
+
+
 def add_coverage_plot(body, rows):
     selected = []
     for index, row in enumerate(rows):
@@ -165,7 +195,7 @@ def add_coverage_plot(body, rows):
     head, records = first.split('<tbody>', 1)
     records = re.sub(r'<tr>', lambda _: next(ids), records)
     result = head + '<tbody>' + records + '</tbody>' + tail
-    return re.sub(r'<div\b[^>]*class="scroll"[^>]*>', lambda match: chart + match[0], result, count=1)
+    return re.sub(r'<div\b[^>]*class="scroll"[^>]*>', lambda match: chart + coverage_tradeoff(rows) + match[0], result, count=1)
 
 
 body = add_coverage_plot(body, summary)
@@ -266,6 +296,21 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .interval-reading tr[id]{scroll-margin-top:90px}
 .interval-reading tr:target{background:color-mix(in srgb,var(--accent) 16%,var(--paper))}
 @media(max-width:850px){.coverage-panels{grid-template-columns:minmax(0,1fr)}}
+
+.coverage-tradeoff{margin:24px 0;border-bottom:1px solid var(--line);padding-bottom:16px}
+.coverage-tradeoff figcaption{font-size:1.35rem;font-weight:650}
+.tradeoff-grid{display:grid;grid-template-columns:3.5rem minmax(0,1fr);column-gap:8px;max-width:48rem;margin:16px 0 0}
+.tradeoff-y{position:relative;color:var(--muted);font-size:.8rem;text-align:right}
+.tradeoff-y span{position:absolute;right:0;top:0;transform:translateY(-50%)}
+.tradeoff-y span:nth-child(2){top:20%}
+.tradeoff-y span:last-child{top:100%}
+.tradeoff-plot{position:relative;height:clamp(170px,25vw,250px);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tradeoff-target{position:absolute;top:20%;width:100%;border-top:1px dashed var(--accent);color:var(--accent);font-size:.78rem}
+.tradeoff-plot a{position:absolute;left:var(--x);bottom:var(--y);translate:-50% 50%;width:44px;height:44px;display:grid;place-items:center;text-decoration:none;font-weight:700;isolation:isolate;color:var(--paper)}
+.tradeoff-plot a::before{content:"";position:absolute;z-index:-1;width:23px;height:23px;border-radius:50%;background:var(--accent)}
+.tradeoff-x{grid-column:2;display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem}
+.tradeoff-axis-title{width:min(100%,48rem);text-align:center;font-size:.85rem;margin:3px 0}
+.coverage-tradeoff li{padding-inline-start:.25em}
 </style></head><body><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
 motion = """<script>

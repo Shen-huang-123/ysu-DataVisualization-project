@@ -53,6 +53,21 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .interval-reading tr[id]{scroll-margin-top:90px}
 .interval-reading tr:target{background:color-mix(in srgb,var(--accent) 16%,var(--paper))}
 @media(max-width:850px){.coverage-panels{grid-template-columns:minmax(0,1fr)}}
+
+.coverage-tradeoff{margin:24px 0;border-bottom:1px solid var(--line);padding-bottom:16px}
+.coverage-tradeoff figcaption{font-size:1.35rem;font-weight:650}
+.tradeoff-grid{display:grid;grid-template-columns:3.5rem minmax(0,1fr);column-gap:8px;max-width:48rem;margin:16px 0 0}
+.tradeoff-y{position:relative;color:var(--muted);font-size:.8rem;text-align:right}
+.tradeoff-y span{position:absolute;right:0;top:0;transform:translateY(-50%)}
+.tradeoff-y span:nth-child(2){top:20%}
+.tradeoff-y span:last-child{top:100%}
+.tradeoff-plot{position:relative;height:clamp(170px,25vw,250px);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tradeoff-target{position:absolute;top:20%;width:100%;border-top:1px dashed var(--accent);color:var(--accent);font-size:.78rem}
+.tradeoff-plot a{position:absolute;left:var(--x);bottom:var(--y);translate:-50% 50%;width:44px;height:44px;display:grid;place-items:center;text-decoration:none;font-weight:700;isolation:isolate;color:var(--paper)}
+.tradeoff-plot a::before{content:"";position:absolute;z-index:-1;width:23px;height:23px;border-radius:50%;background:var(--accent)}
+.tradeoff-x{grid-column:2;display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem}
+.tradeoff-axis-title{width:min(100%,48rem);text-align:center;font-size:.85rem;margin:3px 0}
+.coverage-tradeoff li{padding-inline-start:.25em}
 </style><link href="../../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><link href="../../../共享组件/integrated-nav.css?v=9" id="supp-task-nav-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../../共享组件/supplement-reading.js?v=1"></script><script defer="" src="../../../共享组件/integrated-nav.js?v=5"></script></head><body class="supplement-reading interval-reading"><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../../../index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../../任务一_数据体检/index.html">01 数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">02 百年全景</a><a href="../../../任务三_专题深挖/统一中文入口/index.html">03 专题深挖</a><a href="../../index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../../任务一_数据体检/index.html">数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../../任务三_专题深挖/统一中文入口/index.html">专题深挖</a><a href="../../index.html">洛杉矶2028</a></aside><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a download="" href="预测区间核验说明.md">下载核验说明</a></nav><h1>预测验证与区间覆盖</h1>
 <p class="coverage-lead">2024 留出评估中，中性基准的统一半宽区间覆盖 75.9% 的评分代表团。预测至少 5 槽组的覆盖从 32.6% 提升到 72.1%，平均宽度从 3.72 增至 13.64 槽。分组改善了高预测量覆盖，仍未达到 80%。加入东京留出误差后，保持巴黎点预测固定，统一半宽和分组区间全体覆盖分别为 77.4% 和 75.5%。</p>
@@ -84,7 +99,18 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 <span>2024</span><div class="coverage-track"><a href="#coverage-row-9"
  style="--rate:32.55814%" aria-label="2024 年，覆盖率 32.6%，评分 43 队，查看核验表"></a></div>
 <span><strong>32.6%</strong> · 43 队</span></div><p>偏离最大：2020 年，距目标 52.1 个百分点。</p></section></div>
-<p>2012 只用于校准。80% 是历史核验的设定目标，2028 主榜只发布点估计。</p></figure>
+<p>2012 只用于校准。80% 是历史核验的设定目标，2028 主榜只发布点估计。</p></figure><figure class="coverage-tradeoff" aria-labelledby="tradeoff-title">
+<figcaption id="tradeoff-title">覆盖率与区间宽度</figcaption>
+<p>巴黎 2024 留出评估 · 历史加权基线 · 预测至少 5 槽组 · 校准届次 2012、2016。点击圆点查看核验记录。</p>
+<div class="tradeoff-grid">
+<div class="tradeoff-y" aria-hidden="true"><span>100%</span><span>80%</span><span>0%</span></div>
+<div class="tradeoff-plot"><span class="tradeoff-target">80% 目标</span><a href="#coverage-row-9" style="--x:23.275817%;--y:32.558140%" aria-label="统一半宽，3.72 槽，覆盖 32.6%，查看核验记录">1</a><a href="#coverage-row-11" style="--x:85.235651%;--y:72.093023%" aria-label="按预测量分组，13.64 槽，覆盖 72.1%，查看核验记录">2</a></div>
+<div class="tradeoff-x" aria-hidden="true"><span>0</span><span>4</span><span>8</span><span>12</span><span>16</span></div>
+</div>
+<p class="tradeoff-axis-title">平均区间宽度（槽）</p>
+<ol><li>统一半宽 · <strong>3.72 槽 · 32.6%</strong></li><li>按预测量分组 · <strong>13.64 槽 · 72.1%</strong></li></ol>
+<p>纵轴为实测覆盖率。分组提高了这一组的历史覆盖率，区间也随之变宽。2028 主榜仅发布点估计。</p>
+</figure>
 <div aria-label="核验数据表" class="scroll" role="region" tabindex="0"><table>
 <thead>
 <tr>
