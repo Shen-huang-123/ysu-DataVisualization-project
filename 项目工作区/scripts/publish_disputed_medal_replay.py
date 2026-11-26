@@ -156,6 +156,10 @@ def rank_slope(rows):
         return '<p>北京同届合并复算没有名次变化。</p>'
     ranks = [int(row[key]) for row in beijing for key in ('原排名', '更新排名')]
     lo, hi = min(ranks), max(ranks)
+    guides = []
+    for rank in range((lo + 9) // 10 * 10, hi + 1, 10):
+        y = 18 + 228 * (rank - lo) / (hi - lo)
+        guides.append(f'<path d="M76 {y:.2f}H484"/><text x="65" y="{y:.2f}">{rank}</text>')
     lines, cards, links = [], [], []
     for row in beijing:
         code = escape(row['NOC'])
@@ -174,12 +178,13 @@ def rank_slope(rows):
     return f"""<section class="rank-slope" aria-labelledby="rank-slope-title">
 <h2 id="rank-slope-title">北京 2008 · 合并复算后的名次变化</h2>
 <p>北京 {len(beijing)} 队、伦敦 {london} 队名次变化。图中显示北京名次有变化的代表团，并列名次位于同一高度。点击连线或队名可核对逐队结果。</p>
-<div class="rank-labels"><span>旧存档名次</span><span>同届合并复算名次</span></div>
+<div class="rank-layout"><div class="rank-chart"><div class="rank-labels"><span>旧存档名次</span><span>同届合并复算名次</span></div>
 <svg viewBox="0 0 560 264" aria-label="北京名次坡度图">
-<path class="rank-guides" d="M76 18V246 M484 18V246"/>{''.join(lines)}
+<g class="rank-guides" aria-hidden="true"><path d="M76 18V246 M484 18V246"/>{''.join(guides)}</g>
+{''.join(sorted(lines, key=lambda line: 'class="up"' in line))}
 </svg>
-<div class="rank-labels"><span>图示范围：第 {lo}–{hi} 名</span><span>金色上升 · 青色下降</span></div>
-<div class="rank-links">{''.join(links)}</div>
+<div class="rank-labels"><span>图示范围：第 {lo}–{hi} 名</span><span>金色上升 · 青色下降</span></div></div>
+<div class="rank-roster"><h3>名次变化的代表团</h3><div class="rank-links">{''.join(links)}</div></div></div>
 <div class="rank-details">{''.join(cards)}</div>
 <p><a href="优先分歧名次复算.csv" download>下载完整逐队复算 CSV ↓</a></p>
 </section>"""
@@ -236,17 +241,25 @@ td:nth-child(3),td:nth-child(5){color:var(--accent);font-weight:600}
 tbody tr:last-child td{border-bottom:0}
 
 .rank-slope{margin-block:28px;border-bottom:1px solid var(--line);padding-bottom:14px}
-.rank-slope svg,.rank-labels{display:flex;width:100%;max-width:48rem}
-.rank-labels{justify-content:space-between;gap:8px;color:var(--muted);font-size:.88rem}
-.rank-slope svg path{fill:none;stroke:currentColor;stroke-width:2}
-.rank-slope svg a{color:#397c86}
-html[data-supp-theme="dark"] .rank-slope svg a{color:#83c6ce}
-.rank-slope svg .up{color:var(--accent)}
-.rank-slope svg a:hover path,.rank-slope svg a:focus-visible path{stroke-width:5}
+.rank-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(20px,4vw,60px);align-items:start}
+.rank-slope svg{display:block;width:100%;height:auto}
+.rank-labels{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:.88rem}
+.rank-slope svg path{fill:none;stroke:currentColor;stroke-width:1.5}
+body.replay-reading .rank-slope svg a.down{color:#397c86;opacity:.55}
+html[data-supp-theme="dark"] body.replay-reading .rank-slope svg a.down{color:#83c6ce}
+body.replay-reading .rank-slope svg a.up{color:var(--accent)}
+.rank-slope svg a.up path{stroke-width:3}
+body.replay-reading .rank-slope svg a:is(:hover,:focus-visible){opacity:1}
+.rank-slope svg a:is(:hover,:focus-visible) path{stroke-width:5}
 .rank-slope svg circle{fill:currentColor}
 .rank-guides{color:var(--line)}
-.rank-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:12px}
-.rank-links a{display:inline-flex;gap:6px;align-items:center;min-height:44px}
+.rank-guides text{fill:var(--muted);font:12px system-ui;text-anchor:end;dominant-baseline:middle}
+.rank-roster h3{margin:0 0 8px;font-size:1rem}
+.rank-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+.rank-links a{display:flex;align-items:center;justify-content:space-between;gap:6px;min-height:44px;border-bottom:1px solid var(--line);font-size:.88rem;text-decoration:none}
+.rank-links a:hover{text-decoration:underline}
+.rank-links small{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}
+@media(max-width:850px){.rank-layout{grid-template-columns:minmax(0,1fr)}}
 .rank-details article{display:none;scroll-margin-top:95px}
 .rank-details article:target{display:block;border-inline-start:2px solid var(--accent);padding-inline-start:12px}
 </style></head><body><main><nav aria-label="补证记录"><a href="index.html">← 返回补证记录</a></nav>""" + content + '</main></body></html>'
