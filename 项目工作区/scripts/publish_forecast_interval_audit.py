@@ -126,10 +126,31 @@ md = f"""# 预测验证与区间覆盖
 (OUT / '预测区间核验说明.md').write_text(md, encoding='utf-8')
 body = markdown.markdown(md, extensions=['tables'])
 body = body.replace('<table>', '<div class="scroll" role="region" aria-label="核验数据表" tabindex="0"><table>').replace('</table>', '</table></div>')
+body = body.replace('<p>2024 留出', '<p class="coverage-lead">2024 留出', 1)
+body = body.replace('<h2>区间用过去', '<h2 id="coverage">区间用过去', 1)
+body = body.replace('<h2>完整集成公式', '<h2 id="formula">完整集成公式', 1)
 page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>预测验证与区间覆盖</title>
-<style>:root{color-scheme:light dark}body{margin:0;font:16px/1.7 system-ui}main{max-width:76rem;margin:auto;padding:clamp(16px,5vw,64px)}h1{font-size:clamp(2rem,4vw,3.8rem);line-height:1.2}.scroll{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:.65rem;text-align:left;border-bottom:1px solid #829d9c88;font-variant-numeric:tabular-nums}thead{background:color-mix(in srgb,currentColor 9%,transparent)}a{text-underline-offset:4px}</style></head><body><main>
-<nav><a href="../../02_2028洛杉矶预测/index.html">返回预测页</a> · <a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
+<style>
+:root{color-scheme:light dark;--paper:#f5f3ed;--ink:#19363c;--muted:#52686b;--accent:#785525;--line:#758b8b55}
+@media(prefers-color-scheme:dark){:root{--paper:#15222b;--ink:#eef2ee;--muted:#b0c0bf;--accent:#ddc393;--line:#b6c9c540}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top left,#648a962b,transparent 72%) top/100% 29rem no-repeat,var(--paper);color:var(--ink);font:16px/1.75 system-ui,"Microsoft YaHei",sans-serif}
+main{padding:clamp(24px,4vw,64px) clamp(20px,6vw,100px)}
+nav{display:flex;flex-wrap:wrap;gap:8px 22px}nav a{display:inline-flex;align-items:center;min-height:44px}
+h1{font-size:clamp(2rem,4vw,3.8rem);line-height:1.2;margin:20px 0}
+h2{font-size:clamp(1.35rem,2.4vw,2rem);margin:36px 0 14px;border-top:1px solid var(--line);padding-top:20px}
+p{max-width:86ch;color:var(--muted);overflow-wrap:anywhere}
+.coverage-lead{border-inline-start:2px solid var(--accent);padding-inline-start:16px;color:var(--ink)}
+.scroll{overflow:auto;border:1px solid var(--line)}
+table{width:100%;min-width:44rem;border-collapse:collapse}
+th,td{padding:.55rem .75rem;text-align:left;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+thead{background:color-mix(in srgb,var(--ink) 8%,var(--paper))}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--ink) 3%,var(--paper))}
+a{color:var(--accent);text-underline-offset:4px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.scroll:focus-visible{outline-offset:-2px}
+</style></head><body><main>
+<nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
 (OUT / 'index.html').write_text(page + body + '</main></body></html>', encoding='utf-8')
 for section in ['02_2028洛杉矶预测', '03_数据新闻']:
     file = TASK / section / 'index.html'
