@@ -174,9 +174,16 @@ def rank_slope(rows):
         lines.append(f"""<a href="#{target}" aria-label="{label}" class="{'up' if before > after else 'down'}">
 <title>{label}</title><path d="M76 {y1:.2f}L484 {y2:.2f}"/><circle cx="76" cy="{y1:.2f}" r="3"/><circle cx="484" cy="{y2:.2f}" r="3"/>{annotation}</a>""")
         links.append(f'<a href="#{target}">{name} <small>{before} → {after}</small></a>')
+        medal_cells = []
+        for medal, old, new in zip(('金牌', '银牌', '铜牌'),
+                                  row['原金银铜'].split('/'), row['更新金银铜'].split('/')):
+            delta = int(new) - int(old)
+            state = f'{delta:+d} 枚' if delta else '无变化'
+            style = ' class="medal-changed"' if delta else ''
+            medal_cells.append(f'<div{style}><dt>{medal}</dt><dd>{old} → {new}<small>{state}</small></dd></div>')
         cards.append(f"""<article id="{target}" tabindex="-1"><h3>{name} <small>{code}</small></h3>
 <p>第 {before} 名 → 第 {after} 名 · {change}</p>
-<p>金／银／铜：{escape(row['原金银铜'])} → {escape(row['更新金银铜'])}</p></article>""")
+<dl class="rank-medals" aria-label="金银铜复算前后对照">{''.join(medal_cells)}</dl></article>""")
     return f"""<section class="rank-slope" aria-labelledby="rank-slope-title">
 <h2 id="rank-slope-title">北京 2008 · 合并复算后的名次变化</h2>
 <p>北京 {len(beijing)} 队、伦敦 {london} 队名次变化。图中显示北京名次有变化的代表团，并列名次位于同一高度。点击连线或队名可核对逐队结果。</p>
@@ -270,6 +277,14 @@ body.replay-reading .rank-slope svg a:is(:hover,:focus-visible){opacity:1}
 .rank-details article:target{margin-bottom:16px;padding-block:8px}
 .rank-details article h3,.rank-details article p{margin:0 0 4px}
 .rank-links a:focus-visible{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+
+.rank-medals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 0}
+.rank-medals>div{border-top:1px solid var(--line);padding-top:6px}
+.rank-medals dt,.rank-medals small{color:var(--muted);font-size:.8rem}
+.rank-medals dd{margin:0;font-variant-numeric:tabular-nums;font-weight:650}
+.rank-medals small{display:block;font-weight:400}
+.rank-medals .medal-changed{border-color:var(--accent)}
+.rank-medals .medal-changed :is(dt,dd,small){color:var(--accent)}
 </style></head><body><main><nav aria-label="补证记录"><a href="index.html">← 返回补证记录</a></nav>""" + content + '</main></body></html>'
 
 
