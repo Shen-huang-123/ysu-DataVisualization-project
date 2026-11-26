@@ -37,7 +37,7 @@ page = f'''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="v
 entry = ROOT / '最终提交材料/00_先看这里.html'
 text = entry.read_text(encoding='utf-8')
 link = '<p><a href="../任务三_专题深挖/S2_口径的魔力/西班牙双口径案例.html">看西班牙第15到第5的运动拆解与复算 ↗</a></p>'
-if link not in text:
-    marker = '<!-- PROJECT_FINAL_START -->'
-    assert marker in text
-    entry.write_text(text.replace(marker, link + marker, 1), encoding='utf-8')
+text = text.replace(link, '')
+marker = '</main>'
+assert marker in text
+entry.write_text(text.replace(marker, link + marker, 1), encoding='utf-8')
