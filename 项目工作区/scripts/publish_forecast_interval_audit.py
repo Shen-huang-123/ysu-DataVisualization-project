@@ -129,6 +129,38 @@ body = body.replace('<table>', '<div class="scroll" role="region" aria-label="�
 body = body.replace('<p>2024 留出', '<p class="coverage-lead">2024 留出', 1)
 body = body.replace('<h2>区间用过去', '<h2 id="coverage">区间用过去', 1)
 body = body.replace('<h2>完整集成公式', '<h2 id="formula">完整集成公式', 1)
+def add_audit_navigation(page, delivery, destination):
+    from os.path import relpath
+    from bs4 import BeautifulSoup
+
+    template = delivery / '任务三_专题深挖/12_反例与证据链/index.html'
+    shell = BeautifulSoup(template.read_text(encoding='utf-8'), 'html.parser')
+    result = BeautifulSoup(page, 'html.parser')
+    assets = (
+        'link[href*="supplement-reading.css"]', 'link[href*="integrated-nav.css"]',
+        '#supplement-theme-preload',
+        'script[src*="supplement-reading.js"]', 'script[src*="integrated-nav.js"]',
+    )
+    for selector in (*assets, '#xz-nav', '#xz-menu'):
+        element = shell.select_one(selector)
+        for node in (element, *element.select('[href],[src]')):
+            for attr in ('href', 'src'):
+                if node.has_attr(attr):
+                    path, sep, query = node[attr].partition('?')
+                    relative = Path(relpath(template.parent / path, destination)).as_posix()
+                    node[attr] = relative + sep + query
+        if selector in assets:
+            result.head.append(element)
+        else:
+            result.main.insert_before(element)
+    for link in result.select('#xz-nav .xz-links a'):
+        link.attrs.pop('aria-current', None)
+        if '任务四_开放创作' in link['href']:
+            link['aria-current'] = 'page'
+    result.body['class'] = ['supplement-reading', 'interval-reading']
+    return '<!doctype html>' + str(result.html)
+
+
 page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>预测验证与区间覆盖</title>
 <style>
@@ -149,9 +181,13 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--ink) 3%,var(--paper)
 a{color:var(--accent);text-underline-offset:4px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .scroll:focus-visible{outline-offset:-2px}
+
+html body.interval-reading {background-image:radial-gradient(ellipse at top left,#648a962b,transparent 72%) !important;background-size:100% 29rem !important;background-repeat:no-repeat !important}
+html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{padding-top:clamp(12px,1.5vw,24px)!important}
+.interval-reading main h2[id]{scroll-margin-top:90px}
 </style></head><body><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
-(OUT / 'index.html').write_text(page + body + '</main></body></html>', encoding='utf-8')
+(OUT / 'index.html').write_text(add_audit_navigation(page + body + '</main></body></html>', TASK.parent, OUT), encoding='utf-8')
 for section in ['02_2028洛杉矶预测', '03_数据新闻']:
     file = TASK / section / 'index.html'
     html = file.read_text(encoding='utf-8')
