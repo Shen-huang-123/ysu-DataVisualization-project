@@ -77,9 +77,9 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .delegation-intervals:has(#delegation-uniform:checked) .method-1,
 .delegation-intervals:has(#delegation-grouped:checked) .method-0,
 .delegation-intervals:has(#delegation-misses:checked) .covered{display:none}
-.delegation-method{max-width:64rem}
-.delegation-axis{display:flex;justify-content:space-between;margin-inline:calc(4ch + 12px) calc(5em + 12px);font-size:.85rem}
-.delegation-row summary{display:grid;grid-template-columns:4ch minmax(0,1fr) 5em;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line);font-size:.85rem}
+.delegation-method{max-width:64rem;--name-width:clamp(5em,10vw,8em);font-size:.85rem}
+.delegation-axis{display:flex;justify-content:space-between;margin-inline:calc(var(--name-width) + 12px) calc(5em + 12px);font-size:.85rem}
+.delegation-row summary{display:grid;grid-template-columns:var(--name-width) minmax(0,1fr) 5em;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line)}
 .delegation-row summary:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
 .delegation-row.miss summary>span:last-child{color:var(--accent);font-weight:600}
 .delegation-track{position:relative;height:23px}
@@ -138,262 +138,262 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 </fieldset>
 <label><input type="checkbox" id="delegation-misses"> 仅看未覆盖</label>
 <section class="delegation-method method-0" aria-label="统一半宽"><p>43 队中有 29 队未覆盖。</p><div class="delegation-axis" aria-hidden="true"><span>0</span><span>65</span><span>130 槽</span></div><details class="delegation-row miss">
-<summary><strong>USA</strong><span class="delegation-track" style="--low:89.916527%;--high:92.781243%;--prediction:91.348885%;--actual:96.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>美国</strong><span class="delegation-track" style="--low:89.916527%;--high:92.781243%;--prediction:91.348885%;--actual:96.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 118.75 槽 · 实际 126.00 槽 · 区间 116.89–120.62 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>CHN</strong><span class="delegation-track" style="--low:60.095536%;--high:62.960252%;--prediction:61.527894%;--actual:70.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>中国</strong><span class="delegation-track" style="--low:60.095536%;--high:62.960252%;--prediction:61.527894%;--actual:70.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 79.99 槽 · 实际 91.00 槽 · 区间 78.12–81.85 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>GBR</strong><span class="delegation-track" style="--low:47.994265%;--high:50.858980%;--prediction:49.426623%;--actual:50.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>英国</strong><span class="delegation-track" style="--low:47.994265%;--high:50.858980%;--prediction:49.426623%;--actual:50.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 64.25 槽 · 实际 65.00 槽 · 区间 62.39–66.12 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>RUS</strong><span class="delegation-track" style="--low:46.894149%;--high:49.758865%;--prediction:48.326507%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>俄罗斯</strong><span class="delegation-track" style="--low:46.894149%;--high:49.758865%;--prediction:48.326507%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 62.82 槽 · 实际 0.00 槽 · 区间 60.96–64.69 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>GER</strong><span class="delegation-track" style="--low:31.649690%;--high:34.514406%;--prediction:33.082048%;--actual:25.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>德国</strong><span class="delegation-track" style="--low:31.649690%;--high:34.514406%;--prediction:33.082048%;--actual:25.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 43.01 槽 · 实际 33.00 槽 · 区间 41.14–44.87 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>FRA</strong><span class="delegation-track" style="--low:30.746024%;--high:33.610739%;--prediction:32.178381%;--actual:49.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>法国</strong><span class="delegation-track" style="--low:30.746024%;--high:33.610739%;--prediction:32.178381%;--actual:49.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 41.83 槽 · 实际 64.00 槽 · 区间 39.97–43.69 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>JPN</strong><span class="delegation-track" style="--low:27.917155%;--high:30.781871%;--prediction:29.349513%;--actual:34.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>日本</strong><span class="delegation-track" style="--low:27.917155%;--high:30.781871%;--prediction:29.349513%;--actual:34.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 38.15 槽 · 实际 45.00 槽 · 区间 36.29–40.02 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>AUS</strong><span class="delegation-track" style="--low:24.734678%;--high:27.599393%;--prediction:26.167035%;--actual:40.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>澳大利亚</strong><span class="delegation-track" style="--low:24.734678%;--high:27.599393%;--prediction:26.167035%;--actual:40.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 34.02 槽 · 实际 53.00 槽 · 区间 32.16–35.88 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>ITA</strong><span class="delegation-track" style="--low:20.412795%;--high:23.277511%;--prediction:21.845153%;--actual:30.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>意大利</strong><span class="delegation-track" style="--low:20.412795%;--high:23.277511%;--prediction:21.845153%;--actual:30.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 28.40 槽 · 实际 40.00 槽 · 区间 26.54–30.26 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>KOR</strong><span class="delegation-track" style="--low:17.858955%;--high:20.723671%;--prediction:19.291313%;--actual:24.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>韩国</strong><span class="delegation-track" style="--low:17.858955%;--high:20.723671%;--prediction:19.291313%;--actual:24.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 25.08 槽 · 实际 32.00 槽 · 区间 23.22–26.94 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>CAN</strong><span class="delegation-track" style="--low:15.069376%;--high:17.934092%;--prediction:16.501734%;--actual:20.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>加拿大</strong><span class="delegation-track" style="--low:15.069376%;--high:17.934092%;--prediction:16.501734%;--actual:20.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 21.45 槽 · 实际 27.00 槽 · 区间 19.59–23.31 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>NED</strong><span class="delegation-track" style="--low:13.144174%;--high:16.008890%;--prediction:14.576532%;--actual:26.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>荷兰</strong><span class="delegation-track" style="--low:13.144174%;--high:16.008890%;--prediction:14.576532%;--actual:26.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 18.95 槽 · 实际 34.00 槽 · 区间 17.09–20.81 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>BRA</strong><span class="delegation-track" style="--low:12.790565%;--high:15.655281%;--prediction:14.222923%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>巴西</strong><span class="delegation-track" style="--low:12.790565%;--high:15.655281%;--prediction:14.222923%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 18.49 槽 · 实际 20.00 槽 · 区间 16.63–20.35 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>ESP</strong><span class="delegation-track" style="--low:12.476246%;--high:15.340962%;--prediction:13.908604%;--actual:13.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>西班牙</strong><span class="delegation-track" style="--low:12.476246%;--high:15.340962%;--prediction:13.908604%;--actual:13.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 18.08 槽 · 实际 18.00 槽 · 区间 16.22–19.94 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>NZL</strong><span class="delegation-track" style="--low:10.708204%;--high:13.572919%;--prediction:12.140561%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>新西兰</strong><span class="delegation-track" style="--low:10.708204%;--high:13.572919%;--prediction:12.140561%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 15.78 槽 · 实际 20.00 槽 · 区间 13.92–17.64 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>CUB</strong><span class="delegation-track" style="--low:10.393885%;--high:13.258601%;--prediction:11.826243%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>古巴</strong><span class="delegation-track" style="--low:10.393885%;--high:13.258601%;--prediction:11.826243%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 15.37 槽 · 实际 9.00 槽 · 区间 13.51–17.24 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>KAZ</strong><span class="delegation-track" style="--low:10.315305%;--high:13.180021%;--prediction:11.747663%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>哈萨克斯坦</strong><span class="delegation-track" style="--low:10.315305%;--high:13.180021%;--prediction:11.747663%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 15.27 槽 · 实际 7.00 槽 · 区间 13.41–17.13 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>UKR</strong><span class="delegation-track" style="--low:10.158146%;--high:13.022862%;--prediction:11.590504%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>乌克兰</strong><span class="delegation-track" style="--low:10.158146%;--high:13.022862%;--prediction:11.590504%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 15.07 槽 · 实际 12.00 槽 · 区间 13.21–16.93 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>HUN</strong><span class="delegation-track" style="--low:9.922407%;--high:12.787123%;--prediction:11.354765%;--actual:14.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>匈牙利</strong><span class="delegation-track" style="--low:9.922407%;--high:12.787123%;--prediction:11.354765%;--actual:14.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 14.76 槽 · 实际 19.00 槽 · 区间 12.90–16.62 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>AZE</strong><span class="delegation-track" style="--low:9.883117%;--high:12.747833%;--prediction:11.315475%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>阿塞拜疆</strong><span class="delegation-track" style="--low:9.883117%;--high:12.747833%;--prediction:11.315475%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 14.71 槽 · 实际 7.00 槽 · 区间 12.85–16.57 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>KEN</strong><span class="delegation-track" style="--low:8.861581%;--high:11.726297%;--prediction:10.293939%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>肯尼亚</strong><span class="delegation-track" style="--low:8.861581%;--high:11.726297%;--prediction:10.293939%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 13.38 槽 · 实际 11.00 槽 · 区间 11.52–15.24 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>DEN</strong><span class="delegation-track" style="--low:8.390103%;--high:11.254819%;--prediction:9.822461%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>丹麦</strong><span class="delegation-track" style="--low:8.390103%;--high:11.254819%;--prediction:9.822461%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 12.77 槽 · 实际 9.00 槽 · 区间 10.91–14.63 槽。实际值低于下限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>POL</strong><span class="delegation-track" style="--low:7.211408%;--high:10.076123%;--prediction:8.643765%;--actual:7.692308%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>波兰</strong><span class="delegation-track" style="--low:7.211408%;--high:10.076123%;--prediction:8.643765%;--actual:7.692308%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 11.24 槽 · 实际 10.00 槽 · 区间 9.37–13.10 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>BLR</strong><span class="delegation-track" style="--low:7.014958%;--high:9.879674%;--prediction:8.447316%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>白俄罗斯</strong><span class="delegation-track" style="--low:7.014958%;--high:9.879674%;--prediction:8.447316%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 10.98 槽 · 实际 0.00 槽 · 区间 9.12–12.84 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>JAM</strong><span class="delegation-track" style="--low:7.014958%;--high:9.879674%;--prediction:8.447316%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>牙买加</strong><span class="delegation-track" style="--low:7.014958%;--high:9.879674%;--prediction:8.447316%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 10.98 槽 · 实际 6.00 槽 · 区间 9.12–12.84 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>UZB</strong><span class="delegation-track" style="--low:6.072002%;--high:8.936718%;--prediction:7.504360%;--actual:10.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>乌兹别克斯坦</strong><span class="delegation-track" style="--low:6.072002%;--high:8.936718%;--prediction:7.504360%;--actual:10.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 9.76 槽 · 实际 13.00 槽 · 区间 7.89–11.62 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>CZE</strong><span class="delegation-track" style="--low:5.954133%;--high:8.818848%;--prediction:7.386490%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>捷克</strong><span class="delegation-track" style="--low:5.954133%;--high:8.818848%;--prediction:7.386490%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 9.60 槽 · 实际 5.00 槽 · 区间 7.74–11.46 槽。实际值低于下限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>SWE</strong><span class="delegation-track" style="--low:5.914843%;--high:8.779559%;--prediction:7.347201%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>瑞典</strong><span class="delegation-track" style="--low:5.914843%;--high:8.779559%;--prediction:7.347201%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 9.55 槽 · 实际 11.00 槽 · 区间 7.69–11.41 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>CRO</strong><span class="delegation-track" style="--low:5.168336%;--high:8.033052%;--prediction:6.600694%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>克罗地亚</strong><span class="delegation-track" style="--low:5.168336%;--high:8.033052%;--prediction:6.600694%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 8.58 槽 · 实际 7.00 槽 · 区间 6.72–10.44 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>ETH</strong><span class="delegation-track" style="--low:4.578988%;--high:7.443704%;--prediction:6.011346%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>埃塞俄比亚</strong><span class="delegation-track" style="--low:4.578988%;--high:7.443704%;--prediction:6.011346%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 7.81 槽 · 实际 4.00 槽 · 区间 5.95–9.68 槽。实际值低于下限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>RSA</strong><span class="delegation-track" style="--low:4.539698%;--high:7.404414%;--prediction:5.972056%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>南非</strong><span class="delegation-track" style="--low:4.539698%;--high:7.404414%;--prediction:5.972056%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.76 槽 · 实际 6.00 槽 · 区间 5.90–9.63 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>IRI</strong><span class="delegation-track" style="--low:4.500408%;--high:7.365124%;--prediction:5.932766%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>伊朗</strong><span class="delegation-track" style="--low:4.500408%;--high:7.365124%;--prediction:5.932766%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 7.71 槽 · 实际 12.00 槽 · 区间 5.85–9.57 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>TUR</strong><span class="delegation-track" style="--low:4.186090%;--high:7.050805%;--prediction:5.618448%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>土耳其</strong><span class="delegation-track" style="--low:4.186090%;--high:7.050805%;--prediction:5.618448%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.30 槽 · 实际 8.00 槽 · 区间 5.44–9.17 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>COL</strong><span class="delegation-track" style="--low:4.186090%;--high:7.050805%;--prediction:5.618448%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>哥伦比亚</strong><span class="delegation-track" style="--low:4.186090%;--high:7.050805%;--prediction:5.618448%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 7.30 槽 · 实际 4.00 槽 · 区间 5.44–9.17 槽。实际值低于下限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>GEO</strong><span class="delegation-track" style="--low:3.950351%;--high:6.815066%;--prediction:5.382708%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>格鲁吉亚</strong><span class="delegation-track" style="--low:3.950351%;--high:6.815066%;--prediction:5.382708%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.00 槽 · 实际 7.00 槽 · 区间 5.14–8.86 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>PRK</strong><span class="delegation-track" style="--low:3.911061%;--high:6.775777%;--prediction:5.343419%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>朝鲜</strong><span class="delegation-track" style="--low:3.911061%;--high:6.775777%;--prediction:5.343419%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 6.95 槽 · 实际 6.00 槽 · 区间 5.08–8.81 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>SUI</strong><span class="delegation-track" style="--low:3.714611%;--high:6.579327%;--prediction:5.146969%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>瑞士</strong><span class="delegation-track" style="--low:3.714611%;--high:6.579327%;--prediction:5.146969%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 6.69 槽 · 实际 8.00 槽 · 区间 4.83–8.55 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>SRB</strong><span class="delegation-track" style="--low:3.596742%;--high:6.461458%;--prediction:5.029100%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>塞尔维亚</strong><span class="delegation-track" style="--low:3.596742%;--high:6.461458%;--prediction:5.029100%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 6.54 槽 · 实际 5.00 槽 · 区间 4.68–8.40 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>THA</strong><span class="delegation-track" style="--low:3.046684%;--high:5.911400%;--prediction:4.479042%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>泰国</strong><span class="delegation-track" style="--low:3.046684%;--high:5.911400%;--prediction:4.479042%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 5.82 槽 · 实际 6.00 槽 · 区间 3.96–7.68 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>ROU</strong><span class="delegation-track" style="--low:2.850235%;--high:5.714951%;--prediction:4.282593%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>罗马尼亚</strong><span class="delegation-track" style="--low:2.850235%;--high:5.714951%;--prediction:4.282593%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 5.57 槽 · 实际 9.00 槽 · 区间 3.71–7.43 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>MEX</strong><span class="delegation-track" style="--low:2.693076%;--high:5.557791%;--prediction:4.125434%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>墨西哥</strong><span class="delegation-track" style="--low:2.693076%;--high:5.557791%;--prediction:4.125434%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 5.36 槽 · 实际 5.00 槽 · 区间 3.50–7.23 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>GRE</strong><span class="delegation-track" style="--low:2.496626%;--high:5.361342%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>希腊</strong><span class="delegation-track" style="--low:2.496626%;--high:5.361342%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 5.11 槽 · 实际 8.00 槽 · 区间 3.25–6.97 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>NOR</strong><span class="delegation-track" style="--low:2.496626%;--high:5.361342%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>挪威</strong><span class="delegation-track" style="--low:2.496626%;--high:5.361342%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 5.11 槽 · 实际 8.00 槽 · 区间 3.25–6.97 槽。实际值高于上限。</p>
 </details></section><section class="delegation-method method-1" aria-label="按预测量分组"><p>43 队中有 12 队未覆盖。</p><div class="delegation-axis" aria-hidden="true"><span>0</span><span>65</span><span>130 槽</span></div><details class="delegation-row miss">
-<summary><strong>USA</strong><span class="delegation-track" style="--low:86.030250%;--high:96.667520%;--prediction:91.348885%;--actual:96.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>美国</strong><span class="delegation-track" style="--low:86.030250%;--high:96.667520%;--prediction:91.348885%;--actual:96.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 118.75 槽 · 实际 126.00 槽 · 区间 111.84–125.67 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>CHN</strong><span class="delegation-track" style="--low:56.209259%;--high:66.846529%;--prediction:61.527894%;--actual:70.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>中国</strong><span class="delegation-track" style="--low:56.209259%;--high:66.846529%;--prediction:61.527894%;--actual:70.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 79.99 槽 · 实际 91.00 槽 · 区间 73.07–86.90 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>GBR</strong><span class="delegation-track" style="--low:44.107987%;--high:54.745258%;--prediction:49.426623%;--actual:50.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>英国</strong><span class="delegation-track" style="--low:44.107987%;--high:54.745258%;--prediction:49.426623%;--actual:50.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 64.25 槽 · 实际 65.00 槽 · 区间 57.34–71.17 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>RUS</strong><span class="delegation-track" style="--low:43.007872%;--high:53.645142%;--prediction:48.326507%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>俄罗斯</strong><span class="delegation-track" style="--low:43.007872%;--high:53.645142%;--prediction:48.326507%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 62.82 槽 · 实际 0.00 槽 · 区间 55.91–69.74 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>GER</strong><span class="delegation-track" style="--low:27.763413%;--high:38.400683%;--prediction:33.082048%;--actual:25.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>德国</strong><span class="delegation-track" style="--low:27.763413%;--high:38.400683%;--prediction:33.082048%;--actual:25.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 43.01 槽 · 实际 33.00 槽 · 区间 36.09–49.92 槽。实际值低于下限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>FRA</strong><span class="delegation-track" style="--low:26.859746%;--high:37.497017%;--prediction:32.178381%;--actual:49.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>法国</strong><span class="delegation-track" style="--low:26.859746%;--high:37.497017%;--prediction:32.178381%;--actual:49.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 41.83 槽 · 实际 64.00 槽 · 区间 34.92–48.75 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>JPN</strong><span class="delegation-track" style="--low:24.030877%;--high:34.668148%;--prediction:29.349513%;--actual:34.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>日本</strong><span class="delegation-track" style="--low:24.030877%;--high:34.668148%;--prediction:29.349513%;--actual:34.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 38.15 槽 · 实际 45.00 槽 · 区间 31.24–45.07 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>AUS</strong><span class="delegation-track" style="--low:20.848400%;--high:31.485671%;--prediction:26.167035%;--actual:40.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>澳大利亚</strong><span class="delegation-track" style="--low:20.848400%;--high:31.485671%;--prediction:26.167035%;--actual:40.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 34.02 槽 · 实际 53.00 槽 · 区间 27.10–40.93 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>ITA</strong><span class="delegation-track" style="--low:16.526517%;--high:27.163788%;--prediction:21.845153%;--actual:30.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>意大利</strong><span class="delegation-track" style="--low:16.526517%;--high:27.163788%;--prediction:21.845153%;--actual:30.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 28.40 槽 · 实际 40.00 槽 · 区间 21.48–35.31 槽。实际值高于上限。</p>
 </details><details class="delegation-row miss">
-<summary><strong>KOR</strong><span class="delegation-track" style="--low:13.972678%;--high:24.609948%;--prediction:19.291313%;--actual:24.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>韩国</strong><span class="delegation-track" style="--low:13.972678%;--high:24.609948%;--prediction:19.291313%;--actual:24.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 25.08 槽 · 实际 32.00 槽 · 区间 18.16–31.99 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>CAN</strong><span class="delegation-track" style="--low:11.183099%;--high:21.820369%;--prediction:16.501734%;--actual:20.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>加拿大</strong><span class="delegation-track" style="--low:11.183099%;--high:21.820369%;--prediction:16.501734%;--actual:20.769231%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 21.45 槽 · 实际 27.00 槽 · 区间 14.54–28.37 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>NED</strong><span class="delegation-track" style="--low:9.257897%;--high:19.895167%;--prediction:14.576532%;--actual:26.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
+<summary><strong>荷兰</strong><span class="delegation-track" style="--low:9.257897%;--high:19.895167%;--prediction:14.576532%;--actual:26.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 18.95 槽 · 实际 34.00 槽 · 区间 12.04–25.86 槽。实际值高于上限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>BRA</strong><span class="delegation-track" style="--low:8.904288%;--high:19.541558%;--prediction:14.222923%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>巴西</strong><span class="delegation-track" style="--low:8.904288%;--high:19.541558%;--prediction:14.222923%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 18.49 槽 · 实际 20.00 槽 · 区间 11.58–25.40 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>ESP</strong><span class="delegation-track" style="--low:8.589969%;--high:19.227240%;--prediction:13.908604%;--actual:13.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>西班牙</strong><span class="delegation-track" style="--low:8.589969%;--high:19.227240%;--prediction:13.908604%;--actual:13.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 18.08 槽 · 实际 18.00 槽 · 区间 11.17–25.00 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>NZL</strong><span class="delegation-track" style="--low:6.821926%;--high:17.459197%;--prediction:12.140561%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>新西兰</strong><span class="delegation-track" style="--low:6.821926%;--high:17.459197%;--prediction:12.140561%;--actual:15.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 15.78 槽 · 实际 20.00 槽 · 区间 8.87–22.70 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>CUB</strong><span class="delegation-track" style="--low:6.507607%;--high:17.144878%;--prediction:11.826243%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>古巴</strong><span class="delegation-track" style="--low:6.507607%;--high:17.144878%;--prediction:11.826243%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 15.37 槽 · 实际 9.00 槽 · 区间 8.46–22.29 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>KAZ</strong><span class="delegation-track" style="--low:6.429028%;--high:17.066298%;--prediction:11.747663%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>哈萨克斯坦</strong><span class="delegation-track" style="--low:6.429028%;--high:17.066298%;--prediction:11.747663%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 15.27 槽 · 实际 7.00 槽 · 区间 8.36–22.19 槽。实际值低于下限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>UKR</strong><span class="delegation-track" style="--low:6.271868%;--high:16.909139%;--prediction:11.590504%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>乌克兰</strong><span class="delegation-track" style="--low:6.271868%;--high:16.909139%;--prediction:11.590504%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 15.07 槽 · 实际 12.00 槽 · 区间 8.15–21.98 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>HUN</strong><span class="delegation-track" style="--low:6.036129%;--high:16.673400%;--prediction:11.354765%;--actual:14.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>匈牙利</strong><span class="delegation-track" style="--low:6.036129%;--high:16.673400%;--prediction:11.354765%;--actual:14.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 14.76 槽 · 实际 19.00 槽 · 区间 7.85–21.68 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>AZE</strong><span class="delegation-track" style="--low:5.996840%;--high:16.634110%;--prediction:11.315475%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>阿塞拜疆</strong><span class="delegation-track" style="--low:5.996840%;--high:16.634110%;--prediction:11.315475%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 14.71 槽 · 实际 7.00 槽 · 区间 7.80–21.62 槽。实际值低于下限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>KEN</strong><span class="delegation-track" style="--low:4.975304%;--high:15.612574%;--prediction:10.293939%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>肯尼亚</strong><span class="delegation-track" style="--low:4.975304%;--high:15.612574%;--prediction:10.293939%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 13.38 槽 · 实际 11.00 槽 · 区间 6.47–20.30 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>DEN</strong><span class="delegation-track" style="--low:4.503826%;--high:15.141096%;--prediction:9.822461%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>丹麦</strong><span class="delegation-track" style="--low:4.503826%;--high:15.141096%;--prediction:9.822461%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 12.77 槽 · 实际 9.00 槽 · 区间 5.85–19.68 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>POL</strong><span class="delegation-track" style="--low:3.325130%;--high:13.962401%;--prediction:8.643765%;--actual:7.692308%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>波兰</strong><span class="delegation-track" style="--low:3.325130%;--high:13.962401%;--prediction:8.643765%;--actual:7.692308%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 11.24 槽 · 实际 10.00 槽 · 区间 4.32–18.15 槽。实际值落在区间内。</p>
 </details><details class="delegation-row miss">
-<summary><strong>BLR</strong><span class="delegation-track" style="--low:3.128681%;--high:13.765952%;--prediction:8.447316%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
+<summary><strong>白俄罗斯</strong><span class="delegation-track" style="--low:3.128681%;--high:13.765952%;--prediction:8.447316%;--actual:0.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>低于下限</span></summary>
 <p>点预测 10.98 槽 · 实际 0.00 槽 · 区间 4.07–17.90 槽。实际值低于下限。</p>
 </details><details class="delegation-row covered">
-<summary><strong>JAM</strong><span class="delegation-track" style="--low:3.128681%;--high:13.765952%;--prediction:8.447316%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>牙买加</strong><span class="delegation-track" style="--low:3.128681%;--high:13.765952%;--prediction:8.447316%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 10.98 槽 · 实际 6.00 槽 · 区间 4.07–17.90 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>UZB</strong><span class="delegation-track" style="--low:2.185725%;--high:12.822995%;--prediction:7.504360%;--actual:10.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>乌兹别克斯坦</strong><span class="delegation-track" style="--low:2.185725%;--high:12.822995%;--prediction:7.504360%;--actual:10.000000%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 9.76 槽 · 实际 13.00 槽 · 区间 2.84–16.67 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>CZE</strong><span class="delegation-track" style="--low:2.067855%;--high:12.705126%;--prediction:7.386490%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>捷克</strong><span class="delegation-track" style="--low:2.067855%;--high:12.705126%;--prediction:7.386490%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 9.60 槽 · 实际 5.00 槽 · 区间 2.69–16.52 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>SWE</strong><span class="delegation-track" style="--low:2.028565%;--high:12.665836%;--prediction:7.347201%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>瑞典</strong><span class="delegation-track" style="--low:2.028565%;--high:12.665836%;--prediction:7.347201%;--actual:8.461538%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 9.55 槽 · 实际 11.00 槽 · 区间 2.64–16.47 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>CRO</strong><span class="delegation-track" style="--low:1.282058%;--high:11.919329%;--prediction:6.600694%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>克罗地亚</strong><span class="delegation-track" style="--low:1.282058%;--high:11.919329%;--prediction:6.600694%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 8.58 槽 · 实际 7.00 槽 · 区间 1.67–15.50 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>ETH</strong><span class="delegation-track" style="--low:0.692711%;--high:11.329981%;--prediction:6.011346%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>埃塞俄比亚</strong><span class="delegation-track" style="--low:0.692711%;--high:11.329981%;--prediction:6.011346%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.81 槽 · 实际 4.00 槽 · 区间 0.90–14.73 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>RSA</strong><span class="delegation-track" style="--low:0.653421%;--high:11.290691%;--prediction:5.972056%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>南非</strong><span class="delegation-track" style="--low:0.653421%;--high:11.290691%;--prediction:5.972056%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.76 槽 · 实际 6.00 槽 · 区间 0.85–14.68 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>IRI</strong><span class="delegation-track" style="--low:0.614131%;--high:11.251402%;--prediction:5.932766%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>伊朗</strong><span class="delegation-track" style="--low:0.614131%;--high:11.251402%;--prediction:5.932766%;--actual:9.230769%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.71 槽 · 实际 12.00 槽 · 区间 0.80–14.63 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>TUR</strong><span class="delegation-track" style="--low:0.299812%;--high:10.937083%;--prediction:5.618448%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>土耳其</strong><span class="delegation-track" style="--low:0.299812%;--high:10.937083%;--prediction:5.618448%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.30 槽 · 实际 8.00 槽 · 区间 0.39–14.22 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>COL</strong><span class="delegation-track" style="--low:0.299812%;--high:10.937083%;--prediction:5.618448%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>哥伦比亚</strong><span class="delegation-track" style="--low:0.299812%;--high:10.937083%;--prediction:5.618448%;--actual:3.076923%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.30 槽 · 实际 4.00 槽 · 区间 0.39–14.22 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>GEO</strong><span class="delegation-track" style="--low:0.064073%;--high:10.701344%;--prediction:5.382708%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>格鲁吉亚</strong><span class="delegation-track" style="--low:0.064073%;--high:10.701344%;--prediction:5.382708%;--actual:5.384615%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 7.00 槽 · 实际 7.00 槽 · 区间 0.08–13.91 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>PRK</strong><span class="delegation-track" style="--low:0.024783%;--high:10.662054%;--prediction:5.343419%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>朝鲜</strong><span class="delegation-track" style="--low:0.024783%;--high:10.662054%;--prediction:5.343419%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 6.95 槽 · 实际 6.00 槽 · 区间 0.03–13.86 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>SUI</strong><span class="delegation-track" style="--low:0.000000%;--high:10.465605%;--prediction:5.146969%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>瑞士</strong><span class="delegation-track" style="--low:0.000000%;--high:10.465605%;--prediction:5.146969%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 6.69 槽 · 实际 8.00 槽 · 区间 0.00–13.61 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>SRB</strong><span class="delegation-track" style="--low:0.000000%;--high:10.347735%;--prediction:5.029100%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>塞尔维亚</strong><span class="delegation-track" style="--low:0.000000%;--high:10.347735%;--prediction:5.029100%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 6.54 槽 · 实际 5.00 槽 · 区间 0.00–13.45 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>THA</strong><span class="delegation-track" style="--low:0.000000%;--high:9.797677%;--prediction:4.479042%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>泰国</strong><span class="delegation-track" style="--low:0.000000%;--high:9.797677%;--prediction:4.479042%;--actual:4.615385%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 5.82 槽 · 实际 6.00 槽 · 区间 0.00–12.74 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>ROU</strong><span class="delegation-track" style="--low:0.000000%;--high:9.601228%;--prediction:4.282593%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>罗马尼亚</strong><span class="delegation-track" style="--low:0.000000%;--high:9.601228%;--prediction:4.282593%;--actual:6.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 5.57 槽 · 实际 9.00 槽 · 区间 0.00–12.48 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>MEX</strong><span class="delegation-track" style="--low:0.000000%;--high:9.444069%;--prediction:4.125434%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>墨西哥</strong><span class="delegation-track" style="--low:0.000000%;--high:9.444069%;--prediction:4.125434%;--actual:3.846154%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 5.36 槽 · 实际 5.00 槽 · 区间 0.00–12.28 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>GRE</strong><span class="delegation-track" style="--low:0.000000%;--high:9.247620%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>希腊</strong><span class="delegation-track" style="--low:0.000000%;--high:9.247620%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 5.11 槽 · 实际 8.00 槽 · 区间 0.00–12.02 槽。实际值落在区间内。</p>
 </details><details class="delegation-row covered">
-<summary><strong>NOR</strong><span class="delegation-track" style="--low:0.000000%;--high:9.247620%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
+<summary><strong>挪威</strong><span class="delegation-track" style="--low:0.000000%;--high:9.247620%;--prediction:3.928984%;--actual:6.153846%" aria-hidden="true"><i></i><b></b><em></em></span><span>区间内</span></summary>
 <p>点预测 5.11 槽 · 实际 8.00 槽 · 区间 0.00–12.02 槽。实际值落在区间内。</p>
 </details></section>
 </details>

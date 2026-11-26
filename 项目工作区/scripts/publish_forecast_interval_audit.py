@@ -160,6 +160,53 @@ def coverage_tradeoff(rows):
 </figure>"""
 
 
+DELEGATION_NAMES = {
+    'AUS': '澳大利亚',
+    'AZE': '阿塞拜疆',
+    'BLR': '白俄罗斯',
+    'BRA': '巴西',
+    'CAN': '加拿大',
+    'CHN': '中国',
+    'COL': '哥伦比亚',
+    'CRO': '克罗地亚',
+    'CUB': '古巴',
+    'CZE': '捷克',
+    'DEN': '丹麦',
+    'ESP': '西班牙',
+    'ETH': '埃塞俄比亚',
+    'FRA': '法国',
+    'GBR': '英国',
+    'GEO': '格鲁吉亚',
+    'GER': '德国',
+    'GRE': '希腊',
+    'HUN': '匈牙利',
+    'IRI': '伊朗',
+    'ITA': '意大利',
+    'JAM': '牙买加',
+    'JPN': '日本',
+    'KAZ': '哈萨克斯坦',
+    'KEN': '肯尼亚',
+    'KOR': '韩国',
+    'MEX': '墨西哥',
+    'NED': '荷兰',
+    'NOR': '挪威',
+    'NZL': '新西兰',
+    'POL': '波兰',
+    'PRK': '朝鲜',
+    'ROU': '罗马尼亚',
+    'RSA': '南非',
+    'RUS': '俄罗斯',
+    'SRB': '塞尔维亚',
+    'SUI': '瑞士',
+    'SWE': '瑞典',
+    'THA': '泰国',
+    'TUR': '土耳其',
+    'UKR': '乌克兰',
+    'USA': '美国',
+    'UZB': '乌兹别克斯坦',
+}
+
+
 def delegation_intervals(rows):
     selected = [row for row in rows if int(row['Year']) == 2024
                 and row['模型'] == '历史加权基线' and row['校准届次'] == '2012+2016'
@@ -177,11 +224,12 @@ def delegation_intervals(rows):
             side = '低于下限' if actual < low else '高于上限' if actual > high else '区间内'
             state = 'covered' if side == '区间内' else 'miss'
             misses += state == 'miss'
-            noc = escape(str(row['NOC']))
+            code = str(row['NOC'])
+            name = escape(DELEGATION_NAMES.get(code, code))
             coords = ';'.join(f'--{key}:{value / ceiling:.6%}' for key, value in
                               zip(('low', 'high', 'prediction', 'actual'), (low, high, prediction, actual)))
             marks.append(f"""<details class="delegation-row {state}">
-<summary><strong>{noc}</strong><span class="delegation-track" style="{coords}" aria-hidden="true"><i></i><b></b><em></em></span><span>{side}</span></summary>
+<summary><strong>{name}</strong><span class="delegation-track" style="{coords}" aria-hidden="true"><i></i><b></b><em></em></span><span>{side}</span></summary>
 <p>点预测 {prediction:.2f} 槽 · 实际 {actual:.2f} 槽 · 区间 {low:.2f}–{high:.2f} 槽。实际值{side if state == 'miss' else '落在区间内'}。</p>
 </details>""")
         panels.append(f'<section class="delegation-method method-{index}" aria-label="{method}">'
@@ -361,9 +409,9 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .delegation-intervals:has(#delegation-uniform:checked) .method-1,
 .delegation-intervals:has(#delegation-grouped:checked) .method-0,
 .delegation-intervals:has(#delegation-misses:checked) .covered{display:none}
-.delegation-method{max-width:64rem}
-.delegation-axis{display:flex;justify-content:space-between;margin-inline:calc(4ch + 12px) calc(5em + 12px);font-size:.85rem}
-.delegation-row summary{display:grid;grid-template-columns:4ch minmax(0,1fr) 5em;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line);font-size:.85rem}
+.delegation-method{max-width:64rem;--name-width:clamp(5em,10vw,8em);font-size:.85rem}
+.delegation-axis{display:flex;justify-content:space-between;margin-inline:calc(var(--name-width) + 12px) calc(5em + 12px);font-size:.85rem}
+.delegation-row summary{display:grid;grid-template-columns:var(--name-width) minmax(0,1fr) 5em;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line)}
 .delegation-row summary:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
 .delegation-row.miss summary>span:last-child{color:var(--accent);font-weight:600}
 .delegation-track{position:relative;height:23px}
