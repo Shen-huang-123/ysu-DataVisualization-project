@@ -266,8 +266,8 @@ body.replay-reading .rank-slope svg a:is(:hover,:focus-visible){opacity:1}
 .rank-details article:target{display:block;border-inline-start:2px solid var(--accent);padding-inline-start:12px}
 
 .rank-annotation{fill:currentColor;font:600 15px system-ui;dominant-baseline:middle}
-.rank-chart{min-width:0;padding:clamp(10px,1.6vw,22px);border-block:1px solid var(--line);background:color-mix(in srgb,var(--ink) 3%,transparent)}
-.rank-details article:target{margin-bottom:16px;padding-block:8px;background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.rank-chart{min-width:0;padding-block:8px}
+.rank-details article:target{margin-bottom:16px;padding-block:8px}
 .rank-details article h3,.rank-details article p{margin:0 0 4px}
 .rank-links a:focus-visible{background:color-mix(in srgb,var(--accent) 12%,transparent)}
 </style></head><body><main><nav aria-label="补证记录"><a href="index.html">← 返回补证记录</a></nav>""" + content + '</main></body></html>'
