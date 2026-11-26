@@ -1,5 +1,6 @@
 """Validate nominal 80% residual intervals on later Olympic editions."""
 import math
+from html import escape
 import re
 from pathlib import Path
 
@@ -159,6 +160,46 @@ def coverage_tradeoff(rows):
 </figure>"""
 
 
+def delegation_intervals(rows):
+    selected = [row for row in rows if int(row['Year']) == 2024
+                and row['模型'] == '历史加权基线' and row['校准届次'] == '2012+2016'
+                and float(row['预测']) >= 5]
+    maximum = max(max(float(row[key]) for key in ('上限', '实际')) for row in selected)
+    ceiling = math.ceil(maximum / 10) * 10
+    panels = []
+    for index, method in enumerate(('统一半宽', '按预测量分组')):
+        series = sorted((row for row in selected if row['区间方法'] == method),
+                        key=lambda row: -float(row['预测']))
+        marks = []
+        misses = 0
+        for row in series:
+            low, high, prediction, actual = (float(row[key]) for key in ('下限', '上限', '预测', '实际'))
+            side = '低于下限' if actual < low else '高于上限' if actual > high else '区间内'
+            state = 'covered' if side == '区间内' else 'miss'
+            misses += state == 'miss'
+            noc = escape(str(row['NOC']))
+            coords = ';'.join(f'--{key}:{value / ceiling:.6%}' for key, value in
+                              zip(('low', 'high', 'prediction', 'actual'), (low, high, prediction, actual)))
+            marks.append(f"""<details class="delegation-row {state}">
+<summary><strong>{noc}</strong><span class="delegation-track" style="{coords}" aria-hidden="true"><i></i><b></b><em></em></span><span>{side}</span></summary>
+<p>点预测 {prediction:.2f} 槽 · 实际 {actual:.2f} 槽 · 区间 {low:.2f}–{high:.2f} 槽。实际值{side if state == 'miss' else '落在区间内'}。</p>
+</details>""")
+        panels.append(f'<section class="delegation-method method-{index}" aria-label="{method}">'
+                      f'<p>{len(series)} 队中有 {misses} 队未覆盖。</p>'
+                      f'<div class="delegation-axis" aria-hidden="true"><span>0</span><span>{ceiling / 2:g}</span><span>{ceiling} 槽</span></div>'
+                      + ''.join(marks) + '</section>')
+    return f"""<details class="delegation-intervals"><summary>查看逐队预测区间</summary>
+<p>巴黎 2024 留出评估 · 历史加权基线 · 预测至少 5 槽 · 用 2012、2016 校准。点击代表团查看数值和偏离方向。</p>
+<p>— 预测区间　● 点预测　◆ 实际结果</p>
+<fieldset><legend>区间方法</legend>
+<label><input type="radio" name="delegation-method" id="delegation-uniform" checked> 统一半宽</label>
+<label><input type="radio" name="delegation-method" id="delegation-grouped"> 按预测量分组</label>
+</fieldset>
+<label><input type="checkbox" id="delegation-misses"> 仅看未覆盖</label>
+{''.join(panels)}
+</details>"""
+
+
 def add_coverage_plot(body, rows):
     selected = []
     for index, row in enumerate(rows):
@@ -195,7 +236,7 @@ def add_coverage_plot(body, rows):
     head, records = first.split('<tbody>', 1)
     records = re.sub(r'<tr>', lambda _: next(ids), records)
     result = head + '<tbody>' + records + '</tbody>' + tail
-    return re.sub(r'<div\b[^>]*class="scroll"[^>]*>', lambda match: chart + coverage_tradeoff(rows) + match[0], result, count=1)
+    return re.sub(r'<div\b[^>]*class="scroll"[^>]*>', lambda match: chart + coverage_tradeoff(rows) + delegation_intervals(detail.to_dict('records')) + match[0], result, count=1)
 
 
 body = add_coverage_plot(body, summary)
@@ -311,6 +352,25 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .tradeoff-x{grid-column:2;display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem}
 .tradeoff-axis-title{width:min(100%,48rem);text-align:center;font-size:.85rem;margin:3px 0}
 .coverage-tradeoff li{padding-inline-start:.25em}
+
+.delegation-intervals{margin:20px 0 28px;border-block:1px solid var(--line);padding-block:12px}
+.delegation-intervals summary{cursor:pointer}
+.delegation-intervals>summary{font-weight:650;color:var(--accent);min-height:44px}
+.delegation-intervals fieldset{border:0;margin:0 0 8px;padding:0}
+.delegation-intervals fieldset label{display:inline-block;margin-inline-end:12px}
+.delegation-intervals:has(#delegation-uniform:checked) .method-1,
+.delegation-intervals:has(#delegation-grouped:checked) .method-0,
+.delegation-intervals:has(#delegation-misses:checked) .covered{display:none}
+.delegation-method{max-width:64rem}
+.delegation-axis{display:flex;justify-content:space-between;margin-inline:calc(4ch + 12px) calc(5em + 12px);font-size:.85rem}
+.delegation-row summary{display:grid;grid-template-columns:4ch minmax(0,1fr) 5em;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line);font-size:.85rem}
+.delegation-row summary:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.delegation-row.miss summary>span:last-child{color:var(--accent);font-weight:600}
+.delegation-track{position:relative;height:23px}
+.delegation-track i{position:absolute;left:var(--low);right:calc(100% - var(--high));top:50%;border-top:2px solid var(--muted)}
+.delegation-track :is(b,em){position:absolute;top:50%;width:9px;height:9px;translate:-50% -50%}
+.delegation-track b{left:var(--prediction);border-radius:50%;background:var(--ink)}
+.delegation-track em{left:var(--actual);rotate:45deg;background:var(--accent);outline:1px solid var(--paper)}
 </style></head><body><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
 motion = """<script>
