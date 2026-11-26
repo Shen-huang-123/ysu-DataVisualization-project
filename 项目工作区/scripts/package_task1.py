@@ -1,7 +1,7 @@
 from pathlib import Path
 import shutil,json
 R=Path(__file__).resolve().parents[1];T=R.parent/'交付文件'/'任务一_数据体检';T.mkdir(parents=True,exist_ok=True)
-for folder in ['01_报告与说明','02_交付数据','03_复现代码','04_质量检查结果','05_附图','99_运行生成']: (T/folder).mkdir(exist_ok=True)
+for folder in ['01_报告与说明','02_交付数据','03_复现代码','04_质量检查结果','06_附图','99_运行生成']: (T/folder).mkdir(exist_ok=True)
 for src,dst in [('olympics_flagged.csv.gz','归一数据_保留原始字段.csv.gz'),('sport_mapping.csv','体育大类归一映射表.csv')]:shutil.copy2(R/'outputs'/src,T/'02_交付数据'/dst)
 for name in ['audit.json','preparation_summary.json','duplicate_by_year.csv','event_quality_by_year.csv','edition_main.csv','edition_exclude_duplicate_excess.csv','edition_include_1906.csv']:
  shutil.copy2(R/'outputs'/name,T/'04_质量检查结果'/name)

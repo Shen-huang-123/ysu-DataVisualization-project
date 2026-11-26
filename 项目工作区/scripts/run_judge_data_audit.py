@@ -106,7 +106,7 @@ def compact(text):
 # Verify public HTML by text, and record named PDF pages without exporting student data.
 def html_text(path):
     return compact(BeautifulSoup(path.read_text(encoding='utf-8'),'html.parser').get_text())
-views=TASK2/'07_四视角独立交付/四视角核心图复核.html'
+views=TASK2/'11_四视角独立交付/四视角核心图复核.html'
 spain=TASK3/'西班牙双口径案例.html'
 assert all(t in html_text(views) for t in ['7,312/14,892','1,147/2,281','151/329','49.1%','50.3%','45.9%','2020','2024'])
 assert '从第15升到第5' in html_text(spain)

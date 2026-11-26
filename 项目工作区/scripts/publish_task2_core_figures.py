@@ -189,7 +189,7 @@ save(fig,'D_项目新增退出重返流向')
 
 
 # Keep direct access to native resolution on narrow screens and in offline review.
-review=TASK/'07_四视角独立交付/四视角核心图复核.html'
+review=TASK/'11_四视角独立交付/四视角核心图复核.html'
 html=review.read_text(encoding='utf-8')
 html=re.sub(r'<a class="core-chart-zoom"[^>]*>(<img [^>]+/>)</a>',r'\1',html)
 def enlarge(match):
