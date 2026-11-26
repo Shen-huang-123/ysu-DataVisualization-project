@@ -182,7 +182,21 @@ a{color:var(--accent);text-underline-offset:4px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .scroll:focus-visible{outline-offset:-2px}
 
-html body.interval-reading {background-image:radial-gradient(ellipse at top left,#648a962b,transparent 72%) !important;background-size:100% 29rem !important;background-repeat:no-repeat !important}
+@media screen {
+  body.interval-reading {isolation:isolate}
+  body.interval-reading::after {
+    content:"";position:absolute;inset:0 0 auto;height:29rem;z-index:-1;pointer-events:none;
+    background:radial-gradient(ellipse at top left,#648a9638,transparent 72%);
+    transform-origin:top left;
+  }
+}
+@media screen and (prefers-reduced-motion:no-preference) {
+  body.interval-reading::after {animation:interval-light 20s ease-in-out infinite alternate}
+}
+@keyframes interval-light {
+  from {transform:scale(.82,.93);opacity:.65}
+  to {transform:scale(1);opacity:1}
+}
 html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{padding-top:clamp(12px,1.5vw,24px)!important}
 .interval-reading main h2[id]{scroll-margin-top:90px}
 </style></head><body><main>

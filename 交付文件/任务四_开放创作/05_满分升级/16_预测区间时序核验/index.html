@@ -19,7 +19,21 @@ a{color:var(--accent);text-underline-offset:4px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .scroll:focus-visible{outline-offset:-2px}
 
-html body.interval-reading {background-image:radial-gradient(ellipse at top left,#648a962b,transparent 72%) !important;background-size:100% 29rem !important;background-repeat:no-repeat !important}
+@media screen {
+  body.interval-reading {isolation:isolate}
+  body.interval-reading::after {
+    content:"";position:absolute;inset:0 0 auto;height:29rem;z-index:-1;pointer-events:none;
+    background:radial-gradient(ellipse at top left,#648a9638,transparent 72%);
+    transform-origin:top left;
+  }
+}
+@media screen and (prefers-reduced-motion:no-preference) {
+  body.interval-reading::after {animation:interval-light 20s ease-in-out infinite alternate}
+}
+@keyframes interval-light {
+  from {transform:scale(.82,.93);opacity:.65}
+  to {transform:scale(1);opacity:1}
+}
 html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{padding-top:clamp(12px,1.5vw,24px)!important}
 .interval-reading main h2[id]{scroll-margin-top:90px}
 </style><link href="../../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><link href="../../../共享组件/integrated-nav.css?v=9" id="supp-task-nav-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../../共享组件/supplement-reading.js?v=1"></script><script defer="" src="../../../共享组件/integrated-nav.js?v=5"></script></head><body class="supplement-reading interval-reading"><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../../../index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../../任务一_数据体检/index.html">01 数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">02 百年全景</a><a href="../../../任务三_专题深挖/统一中文入口/index.html">03 专题深挖</a><a href="../../index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../../任务一_数据体检/index.html">数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../../任务三_专题深挖/统一中文入口/index.html">专题深挖</a><a href="../../index.html">洛杉矶2028</a></aside><main>
