@@ -38,13 +38,105 @@ td,th{padding:.75rem;text-align:left;border-bottom:1px solid var(--line)}
 th{background:color-mix(in srgb,var(--paper) 90%,var(--ink));font-size:.9rem}
 td:nth-child(3),td:nth-child(5){color:var(--accent);font-weight:600}
 tbody tr:last-child td{border-bottom:0}
+
+.rank-slope{margin-block:28px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.rank-slope svg,.rank-labels{display:flex;width:100%;max-width:48rem}
+.rank-labels{justify-content:space-between;gap:8px;color:var(--muted);font-size:.88rem}
+.rank-slope svg path{fill:none;stroke:currentColor;stroke-width:2}
+.rank-slope svg a{color:#397c86}
+html[data-supp-theme="dark"] .rank-slope svg a{color:#83c6ce}
+.rank-slope svg .up{color:var(--accent)}
+.rank-slope svg a:hover path,.rank-slope svg a:focus-visible path{stroke-width:5}
+.rank-slope svg circle{fill:currentColor}
+.rank-guides{color:var(--line)}
+.rank-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:12px}
+.rank-links a{display:inline-flex;gap:6px;align-items:center;min-height:44px}
+.rank-details article{display:none;scroll-margin-top:95px}
+.rank-details article:target{display:block;border-inline-start:2px solid var(--accent);padding-inline-start:12px}
 </style><link href="../../../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><link href="../../../../共享组件/integrated-nav.css?v=9" id="supp-task-nav-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../../../共享组件/supplement-reading.js?v=1"></script><script defer="" src="../../../../共享组件/integrated-nav.js?v=5"></script></head><body class="supplement-reading replay-reading"><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../../../../index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../../../任务一_数据体检/index.html">01 数据体检</a><a href="../../../../任务二_百年全景/05_交互总览/index.html">02 百年全景</a><a aria-current="page" href="../../../统一中文入口/index.html">03 专题深挖</a><a href="../../../../任务四_开放创作/index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../../../任务一_数据体检/index.html">数据体检</a><a href="../../../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../../统一中文入口/index.html">专题深挖</a><a href="../../../../任务四_开放创作/index.html">洛杉矶2028</a></aside><main><nav aria-label="补证记录"><a href="index.html">← 返回补证记录</a></nav><h1>优先分歧复核与奖牌榜影响</h1>
 <p>555 项中，旧存档与 Olympedia 有 7 项三色不一致。两个金牌空缺分别补为中国和芬兰，另外 5 项涉及银牌空缺、旧铜牌空缺或后续递补。逐项读到的证据范围见下载表。现代五项的白俄罗斯铜牌采用晚于 UIPM 手册的 IOC 颁牌记录。</p>
 <dl class="summary">
 <div><dt>优先复核分歧</dt><dd>7 项</dd></div>
 <div><dt>北京 · 名次变化</dt><dd>22 队</dd></div>
 <div><dt>伦敦 · 名次变化</dt><dd>0 队</dd></div>
-</dl><h2>逐项证据与名次复算</h2><div aria-label="逐项分歧" class="table" role="region" tabindex="0"><table>
+</dl><section class="rank-slope" aria-labelledby="rank-slope-title">
+<h2 id="rank-slope-title">北京 2008 · 合并复算后的名次变化</h2>
+<p>北京 22 队、伦敦 0 队名次变化。图中显示北京名次有变化的代表团，并列名次位于同一高度。点击连线或队名可核对逐队结果。</p>
+<div class="rank-labels"><span>旧存档名次</span><span>同届合并复算名次</span></div>
+<svg viewBox="0 0 560 264" aria-label="北京名次坡度图">
+<path class="rank-guides" d="M76 18V246 M484 18V246"/><a href="#rank-BRA" aria-label="巴西，第 22 → 23 名，下降 1 位" class="down">
+<title>巴西，第 22 → 23 名，下降 1 位</title><path d="M76 18.00L484 23.85"/><circle cx="76" cy="18.00" r="3"/><circle cx="484" cy="23.85" r="3"/></a><a href="#rank-NOR" aria-label="挪威，第 23 → 22 名，上升 1 位" class="up">
+<title>挪威，第 23 → 22 名，上升 1 位</title><path d="M76 23.85L484 18.00"/><circle cx="76" cy="23.85" r="3"/><circle cx="484" cy="18.00" r="3"/></a><a href="#rank-LAT" aria-label="拉脱维亚，第 44 → 45 名，下降 1 位" class="down">
+<title>拉脱维亚，第 44 → 45 名，下降 1 位</title><path d="M76 146.62L484 152.46"/><circle cx="76" cy="146.62" r="3"/><circle cx="484" cy="152.46" r="3"/></a><a href="#rank-BEL" aria-label="比利时，第 45 → 46 名，下降 1 位" class="down">
+<title>比利时，第 45 → 46 名，下降 1 位</title><path d="M76 152.46L484 158.31"/><circle cx="76" cy="152.46" r="3"/><circle cx="484" cy="158.31" r="3"/></a><a href="#rank-DOM" aria-label="多米尼加共和国，第 45 → 46 名，下降 1 位" class="down">
+<title>多米尼加共和国，第 45 → 46 名，下降 1 位</title><path d="M76 152.46L484 158.31"/><circle cx="76" cy="152.46" r="3"/><circle cx="484" cy="158.31" r="3"/></a><a href="#rank-EST" aria-label="爱沙尼亚，第 45 → 46 名，下降 1 位" class="down">
+<title>爱沙尼亚，第 45 → 46 名，下降 1 位</title><path d="M76 152.46L484 158.31"/><circle cx="76" cy="152.46" r="3"/><circle cx="484" cy="158.31" r="3"/></a><a href="#rank-POR" aria-label="葡萄牙，第 45 → 46 名，下降 1 位" class="down">
+<title>葡萄牙，第 45 → 46 名，下降 1 位</title><path d="M76 152.46L484 158.31"/><circle cx="76" cy="152.46" r="3"/><circle cx="484" cy="158.31" r="3"/></a><a href="#rank-TTO" aria-label="特立尼达和多巴哥，第 45 → 46 名，下降 1 位" class="down">
+<title>特立尼达和多巴哥，第 45 → 46 名，下降 1 位</title><path d="M76 152.46L484 158.31"/><circle cx="76" cy="152.46" r="3"/><circle cx="484" cy="158.31" r="3"/></a><a href="#rank-IND" aria-label="印度，第 50 → 51 名，下降 1 位" class="down">
+<title>印度，第 50 → 51 名，下降 1 位</title><path d="M76 181.69L484 187.54"/><circle cx="76" cy="181.69" r="3"/><circle cx="484" cy="187.54" r="3"/></a><a href="#rank-IRI" aria-label="伊朗，第 51 → 52 名，下降 1 位" class="down">
+<title>伊朗，第 51 → 52 名，下降 1 位</title><path d="M76 187.54L484 193.38"/><circle cx="76" cy="187.54" r="3"/><circle cx="484" cy="193.38" r="3"/></a><a href="#rank-CMR" aria-label="喀麦隆，第 52 → 53 名，下降 1 位" class="down">
+<title>喀麦隆，第 52 → 53 名，下降 1 位</title><path d="M76 193.38L484 199.23"/><circle cx="76" cy="193.38" r="3"/><circle cx="484" cy="199.23" r="3"/></a><a href="#rank-PAN" aria-label="巴拿马，第 52 → 53 名，下降 1 位" class="down">
+<title>巴拿马，第 52 → 53 名，下降 1 位</title><path d="M76 193.38L484 199.23"/><circle cx="76" cy="193.38" r="3"/><circle cx="484" cy="199.23" r="3"/></a><a href="#rank-TUN" aria-label="突尼斯，第 52 → 53 名，下降 1 位" class="down">
+<title>突尼斯，第 52 → 53 名，下降 1 位</title><path d="M76 193.38L484 199.23"/><circle cx="76" cy="193.38" r="3"/><circle cx="484" cy="199.23" r="3"/></a><a href="#rank-SWE" aria-label="瑞典，第 55 → 56 名，下降 1 位" class="down">
+<title>瑞典，第 55 → 56 名，下降 1 位</title><path d="M76 210.92L484 216.77"/><circle cx="76" cy="210.92" r="3"/><circle cx="484" cy="216.77" r="3"/></a><a href="#rank-CRO" aria-label="克罗地亚，第 56 → 57 名，下降 1 位" class="down">
+<title>克罗地亚，第 56 → 57 名，下降 1 位</title><path d="M76 216.77L484 222.62"/><circle cx="76" cy="216.77" r="3"/><circle cx="484" cy="222.62" r="3"/></a><a href="#rank-LTU" aria-label="立陶宛，第 56 → 57 名，下降 1 位" class="down">
+<title>立陶宛，第 56 → 57 名，下降 1 位</title><path d="M76 216.77L484 222.62"/><circle cx="76" cy="216.77" r="3"/><circle cx="484" cy="222.62" r="3"/></a><a href="#rank-GRE" aria-label="希腊，第 58 → 59 名，下降 1 位" class="down">
+<title>希腊，第 58 → 59 名，下降 1 位</title><path d="M76 228.46L484 234.31"/><circle cx="76" cy="228.46" r="3"/><circle cx="484" cy="234.31" r="3"/></a><a href="#rank-NGR" aria-label="尼日利亚，第 59 → 60 名，下降 1 位" class="down">
+<title>尼日利亚，第 59 → 60 名，下降 1 位</title><path d="M76 234.31L484 240.15"/><circle cx="76" cy="234.31" r="3"/><circle cx="484" cy="240.15" r="3"/></a><a href="#rank-AUT" aria-label="奥地利，第 60 → 61 名，下降 1 位" class="down">
+<title>奥地利，第 60 → 61 名，下降 1 位</title><path d="M76 240.15L484 246.00"/><circle cx="76" cy="240.15" r="3"/><circle cx="484" cy="246.00" r="3"/></a><a href="#rank-FIN" aria-label="芬兰，第 60 → 44 名，上升 16 位" class="up">
+<title>芬兰，第 60 → 44 名，上升 16 位</title><path d="M76 240.15L484 146.62"/><circle cx="76" cy="240.15" r="3"/><circle cx="484" cy="146.62" r="3"/></a><a href="#rank-IRL" aria-label="爱尔兰，第 60 → 61 名，下降 1 位" class="down">
+<title>爱尔兰，第 60 → 61 名，下降 1 位</title><path d="M76 240.15L484 246.00"/><circle cx="76" cy="240.15" r="3"/><circle cx="484" cy="246.00" r="3"/></a><a href="#rank-SRB" aria-label="塞尔维亚，第 60 → 61 名，下降 1 位" class="down">
+<title>塞尔维亚，第 60 → 61 名，下降 1 位</title><path d="M76 240.15L484 246.00"/><circle cx="76" cy="240.15" r="3"/><circle cx="484" cy="246.00" r="3"/></a>
+</svg>
+<div class="rank-labels"><span>图示范围：第 22–61 名</span><span>金色上升 · 青色下降</span></div>
+<div class="rank-links"><a href="#rank-BRA">巴西 <small>22 → 23</small></a><a href="#rank-NOR">挪威 <small>23 → 22</small></a><a href="#rank-LAT">拉脱维亚 <small>44 → 45</small></a><a href="#rank-BEL">比利时 <small>45 → 46</small></a><a href="#rank-DOM">多米尼加共和国 <small>45 → 46</small></a><a href="#rank-EST">爱沙尼亚 <small>45 → 46</small></a><a href="#rank-POR">葡萄牙 <small>45 → 46</small></a><a href="#rank-TTO">特立尼达和多巴哥 <small>45 → 46</small></a><a href="#rank-IND">印度 <small>50 → 51</small></a><a href="#rank-IRI">伊朗 <small>51 → 52</small></a><a href="#rank-CMR">喀麦隆 <small>52 → 53</small></a><a href="#rank-PAN">巴拿马 <small>52 → 53</small></a><a href="#rank-TUN">突尼斯 <small>52 → 53</small></a><a href="#rank-SWE">瑞典 <small>55 → 56</small></a><a href="#rank-CRO">克罗地亚 <small>56 → 57</small></a><a href="#rank-LTU">立陶宛 <small>56 → 57</small></a><a href="#rank-GRE">希腊 <small>58 → 59</small></a><a href="#rank-NGR">尼日利亚 <small>59 → 60</small></a><a href="#rank-AUT">奥地利 <small>60 → 61</small></a><a href="#rank-FIN">芬兰 <small>60 → 44</small></a><a href="#rank-IRL">爱尔兰 <small>60 → 61</small></a><a href="#rank-SRB">塞尔维亚 <small>60 → 61</small></a></div>
+<div class="rank-details"><article id="rank-BRA" tabindex="-1"><h3>巴西 <small>BRA</small></h3>
+<p>第 22 名 → 第 23 名 · 下降 1 位</p>
+<p>金／银／铜：3/4/9 → 3/4/9</p></article><article id="rank-NOR" tabindex="-1"><h3>挪威 <small>NOR</small></h3>
+<p>第 23 名 → 第 22 名 · 上升 1 位</p>
+<p>金／银／铜：3/4/1 → 3/5/1</p></article><article id="rank-LAT" tabindex="-1"><h3>拉脱维亚 <small>LAT</small></h3>
+<p>第 44 名 → 第 45 名 · 下降 1 位</p>
+<p>金／银／铜：1/1/1 → 1/1/1</p></article><article id="rank-BEL" tabindex="-1"><h3>比利时 <small>BEL</small></h3>
+<p>第 45 名 → 第 46 名 · 下降 1 位</p>
+<p>金／银／铜：1/1/0 → 1/1/0</p></article><article id="rank-DOM" tabindex="-1"><h3>多米尼加共和国 <small>DOM</small></h3>
+<p>第 45 名 → 第 46 名 · 下降 1 位</p>
+<p>金／银／铜：1/1/0 → 1/1/0</p></article><article id="rank-EST" tabindex="-1"><h3>爱沙尼亚 <small>EST</small></h3>
+<p>第 45 名 → 第 46 名 · 下降 1 位</p>
+<p>金／银／铜：1/1/0 → 1/1/0</p></article><article id="rank-POR" tabindex="-1"><h3>葡萄牙 <small>POR</small></h3>
+<p>第 45 名 → 第 46 名 · 下降 1 位</p>
+<p>金／银／铜：1/1/0 → 1/1/0</p></article><article id="rank-TTO" tabindex="-1"><h3>特立尼达和多巴哥 <small>TTO</small></h3>
+<p>第 45 名 → 第 46 名 · 下降 1 位</p>
+<p>金／银／铜：1/1/0 → 1/1/0</p></article><article id="rank-IND" tabindex="-1"><h3>印度 <small>IND</small></h3>
+<p>第 50 名 → 第 51 名 · 下降 1 位</p>
+<p>金／银／铜：1/0/2 → 1/0/2</p></article><article id="rank-IRI" tabindex="-1"><h3>伊朗 <small>IRI</small></h3>
+<p>第 51 名 → 第 52 名 · 下降 1 位</p>
+<p>金／银／铜：1/0/1 → 1/0/1</p></article><article id="rank-CMR" tabindex="-1"><h3>喀麦隆 <small>CMR</small></h3>
+<p>第 52 名 → 第 53 名 · 下降 1 位</p>
+<p>金／银／铜：1/0/0 → 1/0/0</p></article><article id="rank-PAN" tabindex="-1"><h3>巴拿马 <small>PAN</small></h3>
+<p>第 52 名 → 第 53 名 · 下降 1 位</p>
+<p>金／银／铜：1/0/0 → 1/0/0</p></article><article id="rank-TUN" tabindex="-1"><h3>突尼斯 <small>TUN</small></h3>
+<p>第 52 名 → 第 53 名 · 下降 1 位</p>
+<p>金／银／铜：1/0/0 → 1/0/0</p></article><article id="rank-SWE" tabindex="-1"><h3>瑞典 <small>SWE</small></h3>
+<p>第 55 名 → 第 56 名 · 下降 1 位</p>
+<p>金／银／铜：0/4/1 → 0/4/1</p></article><article id="rank-CRO" tabindex="-1"><h3>克罗地亚 <small>CRO</small></h3>
+<p>第 56 名 → 第 57 名 · 下降 1 位</p>
+<p>金／银／铜：0/2/3 → 0/2/3</p></article><article id="rank-LTU" tabindex="-1"><h3>立陶宛 <small>LTU</small></h3>
+<p>第 56 名 → 第 57 名 · 下降 1 位</p>
+<p>金／银／铜：0/2/3 → 0/2/3</p></article><article id="rank-GRE" tabindex="-1"><h3>希腊 <small>GRE</small></h3>
+<p>第 58 名 → 第 59 名 · 下降 1 位</p>
+<p>金／银／铜：0/2/2 → 0/2/2</p></article><article id="rank-NGR" tabindex="-1"><h3>尼日利亚 <small>NGR</small></h3>
+<p>第 59 名 → 第 60 名 · 下降 1 位</p>
+<p>金／银／铜：0/1/3 → 0/1/3</p></article><article id="rank-AUT" tabindex="-1"><h3>奥地利 <small>AUT</small></h3>
+<p>第 60 名 → 第 61 名 · 下降 1 位</p>
+<p>金／银／铜：0/1/2 → 0/1/2</p></article><article id="rank-FIN" tabindex="-1"><h3>芬兰 <small>FIN</small></h3>
+<p>第 60 名 → 第 44 名 · 上升 16 位</p>
+<p>金／银／铜：0/1/2 → 1/1/2</p></article><article id="rank-IRL" tabindex="-1"><h3>爱尔兰 <small>IRL</small></h3>
+<p>第 60 名 → 第 61 名 · 下降 1 位</p>
+<p>金／银／铜：0/1/2 → 0/1/2</p></article><article id="rank-SRB" tabindex="-1"><h3>塞尔维亚 <small>SRB</small></h3>
+<p>第 60 名 → 第 61 名 · 下降 1 位</p>
+<p>金／银／铜：0/1/2 → 0/1/2</p></article></div>
+<p><a href="优先分歧名次复算.csv" download>下载完整逐队复算 CSV ↓</a></p>
+</section><h2>逐项证据与名次复算</h2><div aria-label="逐项分歧" class="table" role="region" tabindex="0"><table>
 <thead>
 <tr>
 <th>届次和小项</th>

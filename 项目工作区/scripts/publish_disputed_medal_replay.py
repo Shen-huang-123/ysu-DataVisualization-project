@@ -141,15 +141,59 @@ def add_replay_navigation(page, delivery, destination):
     return '<!doctype html>' + str(result.html)
 
 
-def render_replay(html, reviewed, beijing, london):
+RANK_NAMES = {'AUT': '奥地利', 'BEL': '比利时', 'BRA': '巴西', 'CMR': '喀麦隆', 'CRO': '克罗地亚', 'DOM': '多米尼加共和国', 'EST': '爱沙尼亚', 'FIN': '芬兰', 'GRE': '希腊', 'IND': '印度', 'IRI': '伊朗', 'IRL': '爱尔兰', 'LAT': '拉脱维亚', 'LTU': '立陶宛', 'NGR': '尼日利亚', 'NOR': '挪威', 'PAN': '巴拿马', 'POR': '葡萄牙', 'SRB': '塞尔维亚', 'SWE': '瑞典', 'TTO': '特立尼达和多巴哥', 'TUN': '突尼斯'}
+
+
+def rank_slope(rows):
+    from html import escape
+
+    combined = [row for row in rows if row['案例'] == '同届全部分歧同时更正']
+    changed = [row for row in combined if int(row['原排名']) != int(row['更新排名'])]
+    beijing = sorted((row for row in changed if int(row['Year']) == 2008),
+                     key=lambda row: (int(row['原排名']), row['NOC']))
+    london = sum(int(row['Year']) == 2012 for row in changed)
+    if not beijing:
+        return '<p>北京同届合并复算没有名次变化。</p>'
+    ranks = [int(row[key]) for row in beijing for key in ('原排名', '更新排名')]
+    lo, hi = min(ranks), max(ranks)
+    lines, cards, links = [], [], []
+    for row in beijing:
+        code = escape(row['NOC'])
+        name = escape(RANK_NAMES.get(row['NOC'], row['NOC']))
+        before, after = (int(row[key]) for key in ('原排名', '更新排名'))
+        y1, y2 = (18 + 228 * (rank - lo) / (hi - lo) for rank in (before, after))
+        change = f'上升 {before-after} 位' if before > after else f'下降 {after-before} 位'
+        target = f'rank-{code}'
+        label = f'{name}，第 {before} → {after} 名，{change}'
+        lines.append(f"""<a href="#{target}" aria-label="{label}" class="{'up' if before > after else 'down'}">
+<title>{label}</title><path d="M76 {y1:.2f}L484 {y2:.2f}"/><circle cx="76" cy="{y1:.2f}" r="3"/><circle cx="484" cy="{y2:.2f}" r="3"/></a>""")
+        links.append(f'<a href="#{target}">{name} <small>{before} → {after}</small></a>')
+        cards.append(f"""<article id="{target}" tabindex="-1"><h3>{name} <small>{code}</small></h3>
+<p>第 {before} 名 → 第 {after} 名 · {change}</p>
+<p>金／银／铜：{escape(row['原金银铜'])} → {escape(row['更新金银铜'])}</p></article>""")
+    return f"""<section class="rank-slope" aria-labelledby="rank-slope-title">
+<h2 id="rank-slope-title">北京 2008 · 合并复算后的名次变化</h2>
+<p>北京 {len(beijing)} 队、伦敦 {london} 队名次变化。图中显示北京名次有变化的代表团，并列名次位于同一高度。点击连线或队名可核对逐队结果。</p>
+<div class="rank-labels"><span>旧存档名次</span><span>同届合并复算名次</span></div>
+<svg viewBox="0 0 560 264" aria-label="北京名次坡度图">
+<path class="rank-guides" d="M76 18V246 M484 18V246"/>{''.join(lines)}
+</svg>
+<div class="rank-labels"><span>图示范围：第 {lo}–{hi} 名</span><span>金色上升 · 青色下降</span></div>
+<div class="rank-links">{''.join(links)}</div>
+<div class="rank-details">{''.join(cards)}</div>
+<p><a href="优先分歧名次复算.csv" download>下载完整逐队复算 CSV ↓</a></p>
+</section>"""
+
+
+def render_replay(html, reviewed, beijing, london, rows):
     table = '<div class="table" role="region" aria-label="逐项分歧" tabindex="0"><table>'
     content = html.replace('<table>', table).replace('</table>', '</table></div>')
     summary = f"""<dl class="summary">
 <div><dt>优先复核分歧</dt><dd>{reviewed} 项</dd></div>
 <div><dt>北京 · 名次变化</dt><dd>{beijing} 队</dd></div>
 <div><dt>伦敦 · 名次变化</dt><dd>{london} 队</dd></div>
-</dl><h2>逐项证据与名次复算</h2>"""
-    content = content.replace('<div class="table"', summary + '<div class="table"', 1)
+</dl>"""
+    content = content.replace('<div class="table"', summary + rank_slope(rows) + '<h2>逐项证据与名次复算</h2><div class="table"', 1)
     return """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>优先分歧复核与奖牌榜影响</title>
 <style>
@@ -190,12 +234,27 @@ td,th{padding:.75rem;text-align:left;border-bottom:1px solid var(--line)}
 th{background:color-mix(in srgb,var(--paper) 90%,var(--ink));font-size:.9rem}
 td:nth-child(3),td:nth-child(5){color:var(--accent);font-weight:600}
 tbody tr:last-child td{border-bottom:0}
+
+.rank-slope{margin-block:28px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.rank-slope svg,.rank-labels{display:flex;width:100%;max-width:48rem}
+.rank-labels{justify-content:space-between;gap:8px;color:var(--muted);font-size:.88rem}
+.rank-slope svg path{fill:none;stroke:currentColor;stroke-width:2}
+.rank-slope svg a{color:#397c86}
+html[data-supp-theme="dark"] .rank-slope svg a{color:#83c6ce}
+.rank-slope svg .up{color:var(--accent)}
+.rank-slope svg a:hover path,.rank-slope svg a:focus-visible path{stroke-width:5}
+.rank-slope svg circle{fill:currentColor}
+.rank-guides{color:var(--line)}
+.rank-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:12px}
+.rank-links a{display:inline-flex;gap:6px;align-items:center;min-height:44px}
+.rank-details article{display:none;scroll-margin-top:95px}
+.rank-details article:target{display:block;border-inline-start:2px solid var(--accent);padding-inline-start:12px}
 </style></head><body><main><nav aria-label="补证记录"><a href="index.html">← 返回补证记录</a></nav>""" + content + '</main></body></html>'
 
 
 (OUT/'优先分歧复核与复算.html').write_text(
     add_replay_navigation(
-        render_replay(html, len(ledger), changes.get(2008, 0), changes.get(2012, 0)),
+        render_replay(html, len(ledger), changes.get(2008, 0), changes.get(2012, 0), totals.to_dict('records')),
         OUT.parents[3], OUT,
     ),
     encoding='utf-8',
