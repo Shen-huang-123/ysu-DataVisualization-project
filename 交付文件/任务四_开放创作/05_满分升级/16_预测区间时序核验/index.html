@@ -56,7 +56,7 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 
 .coverage-tradeoff{margin:24px 0;border-bottom:1px solid var(--line);padding-bottom:16px}
 .coverage-tradeoff figcaption{font-size:1.35rem;font-weight:650}
-.tradeoff-grid{display:grid;grid-template-columns:3.5rem minmax(0,1fr);column-gap:8px;max-width:48rem;margin:16px 0 0}
+.tradeoff-grid{display:grid;grid-template-columns:3.5rem minmax(0,1fr);column-gap:8px;margin:16px 0 0}
 .tradeoff-y{position:relative;color:var(--muted);font-size:.8rem;text-align:right}
 .tradeoff-y span{position:absolute;right:0;top:0;transform:translateY(-50%)}
 .tradeoff-y span:nth-child(2){top:20%}
@@ -66,18 +66,18 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .tradeoff-plot a{position:absolute;left:var(--x);bottom:var(--y);translate:-50% 50%;width:44px;height:44px;display:grid;place-items:center;text-decoration:none;font-weight:700;isolation:isolate;color:var(--paper)}
 .tradeoff-plot a::before{content:"";position:absolute;z-index:-1;width:23px;height:23px;border-radius:50%;background:var(--accent)}
 .tradeoff-x{grid-column:2;display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem}
-.tradeoff-axis-title{width:min(100%,48rem);text-align:center;font-size:.85rem;margin:3px 0}
+.coverage-tradeoff .tradeoff-axis-title{max-width:none;padding-inline-start:calc(3.5rem + 8px);text-align:center;font-size:.85rem;margin:3px 0}
 .coverage-tradeoff li{padding-inline-start:.25em}
 
 .delegation-intervals{margin:20px 0 28px;border-block:1px solid var(--line);padding-block:12px}
 .delegation-intervals summary{cursor:pointer}
-.delegation-intervals>summary{font-weight:650;color:var(--accent);min-height:44px}
+.delegation-intervals>summary{font-weight:650;color:var(--sr-accent,var(--accent));min-height:44px;width:100%}
 .delegation-intervals fieldset{border:0;margin:0 0 8px;padding:0}
 .delegation-intervals fieldset label{display:inline-block;margin-inline-end:12px}
 .delegation-intervals:has(#delegation-uniform:checked) .method-1,
 .delegation-intervals:has(#delegation-grouped:checked) .method-0,
 .delegation-intervals:has(#delegation-misses:checked) .covered{display:none}
-.delegation-method{max-width:64rem;--name-width:clamp(5em,10vw,8em);font-size:.85rem}
+.delegation-method{--name-width:clamp(5em,10vw,8em);font-size:.85rem}
 .delegation-axis{display:flex;justify-content:space-between;margin-inline:calc(var(--name-width) + 12px) calc(5em + 12px);font-size:.85rem}
 .delegation-row summary{display:grid;grid-template-columns:var(--name-width) minmax(0,1fr) 5em;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line)}
 .delegation-row summary:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
