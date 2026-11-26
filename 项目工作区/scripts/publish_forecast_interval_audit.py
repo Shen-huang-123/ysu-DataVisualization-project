@@ -129,6 +129,48 @@ body = body.replace('<table>', '<div class="scroll" role="region" aria-label="�
 body = body.replace('<p>2024 留出', '<p class="coverage-lead">2024 留出', 1)
 body = body.replace('<h2>区间用过去', '<h2 id="coverage">区间用过去', 1)
 body = body.replace('<h2>完整集成公式', '<h2 id="formula">完整集成公式', 1)
+def add_coverage_plot(body, rows):
+    selected = []
+    for index, row in enumerate(rows):
+        year = int(row['评估届次'])
+        if (row['模型'] == '历史加权基线' and row['区间方法'] == '统一半宽'
+                and (year != 2024 or row['校准届次'] == '2012+2016')):
+            selected.append((index, year, row))
+    panels = []
+    for group in ('全体', '预测至少5槽'):
+        points = [item for item in selected if item[2]['评估分组'] == group]
+        points.sort(key=lambda item: item[1])
+        _, furthest_year, furthest = max(points, key=lambda item: abs(float(item[2]['覆盖率']) - .8))
+        gap = abs(float(furthest['覆盖率']) * 100 - 80)
+        marks = []
+        for index, year, row in points:
+            rate = float(row['覆盖率']) * 100
+            count = int(row['评分队数'])
+            marks.append(f"""<div class="coverage-point-row">
+<span>{year}</span><div class="coverage-track"><a href="#coverage-row-{index}"
+ style="--rate:{rate:.5f}%" aria-label="{year} 年，覆盖率 {rate:.1f}%，评分 {count} 队，查看核验表"></a></div>
+<span><strong>{rate:.1f}%</strong> · {count} 队</span></div>""")
+        panels.append(f"""<section><h3>{group}</h3>
+<div class="coverage-axis" aria-hidden="true"><span>0%</span><span>80% 目标</span><span>100%</span></div>
+{''.join(marks)}<p>偏离最大：{furthest_year} 年，距目标 {gap:.1f} 个百分点。</p></section>""")
+    chart = f"""<figure class="coverage-plot" aria-labelledby="coverage-plot-title">
+<figcaption id="coverage-plot-title">历史验证覆盖率</figcaption>
+<p>历史加权基线 · 统一半宽。巴黎 2024 使用 2012 和 2016 的误差校准。点击圆点查看覆盖队数及区间宽度。</p>
+<div class="coverage-panels">{''.join(panels)}</div>
+<p>2012 只用于校准。80% 是历史核验的设定目标，2028 主榜只发布点估计。</p></figure>
+"""
+    first, tail = body.split('</tbody>', 1)
+    assert first.count('<tr>') == len(rows) + 1
+    ids = iter(f'<tr id="coverage-row-{index}" tabindex="-1">' for index in range(len(rows)))
+    head, records = first.split('<tbody>', 1)
+    records = re.sub(r'<tr>', lambda _: next(ids), records)
+    result = head + '<tbody>' + records + '</tbody>' + tail
+    return re.sub(r'<div\b[^>]*class="scroll"[^>]*>', lambda match: chart + match[0], result, count=1)
+
+
+body = add_coverage_plot(body, summary)
+
+
 def add_audit_navigation(page, delivery, destination):
     from os.path import relpath
     from bs4 import BeautifulSoup
@@ -207,6 +249,23 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 @media (prefers-reduced-motion:no-preference) {
   .interval-reading main tbody tr {transition:background-color 160ms ease}
 }
+
+.coverage-plot{margin:24px 0;border-block:1px solid var(--line);padding-block:18px}
+.coverage-plot figcaption{font-size:1.35rem;font-weight:650}
+.coverage-plot p{font-size:.9rem;margin:10px 0}
+.coverage-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.coverage-panels h3{margin:8px 0}
+.coverage-axis,.coverage-point-row{display:grid;grid-template-columns:4ch minmax(0,1fr) 8.5em;gap:10px;align-items:center;font-variant-numeric:tabular-nums}
+.coverage-axis{position:relative;display:flex;justify-content:space-between;margin-inline:calc(4ch + 10px) calc(8.5em + 10px);color:var(--muted);white-space:nowrap}
+.coverage-axis span:nth-child(2){position:absolute;left:80%;transform:translateX(-77%);color:var(--accent)}
+.coverage-track{position:relative;height:44px;background:linear-gradient(var(--line),var(--line)) center/100% 1px no-repeat}
+.coverage-track::before{content:"";position:absolute;inset:0 auto 0 80%;border-left:1px dashed var(--accent)}
+.coverage-track a{position:absolute;left:var(--rate);top:50%;transform:translate(-50%,-50%);width:44px;height:44px;display:grid;place-items:center}
+.coverage-track a::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.coverage-track a:hover::after,.coverage-track a:focus-visible::after{outline:2px solid var(--accent);outline-offset:3px}
+.interval-reading tr[id]{scroll-margin-top:90px}
+.interval-reading tr:target{background:color-mix(in srgb,var(--accent) 16%,var(--paper))}
+@media(max-width:850px){.coverage-panels{grid-template-columns:minmax(0,1fr)}}
 </style></head><body><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
 motion = """<script>
