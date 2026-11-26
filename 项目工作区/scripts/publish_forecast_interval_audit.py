@@ -448,12 +448,12 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .delegation-axis{display:flex;justify-content:space-between;margin-inline:calc(var(--name-width) + 12px) calc(5em + 12px);font-size:.85rem}
 .delegation-row summary{display:grid;grid-template-columns:var(--name-width) minmax(0,1fr) 5em;gap:12px;align-items:center;min-height:44px;border-bottom:1px solid var(--line)}
 .delegation-row summary:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
-.delegation-row.miss summary>span:last-child{color:var(--accent);font-weight:600}
+.delegation-row.miss summary>span:last-child{color:var(--sr-accent,var(--accent));font-weight:600}
 .delegation-track{position:relative;height:23px}
 .delegation-track i{position:absolute;left:var(--low);right:calc(100% - var(--high));top:50%;border-top:2px solid var(--muted)}
 .delegation-track :is(b,em){position:absolute;top:50%;width:9px;height:9px;translate:-50% -50%}
 .delegation-track b{left:var(--prediction);border-radius:50%;background:var(--ink)}
-.delegation-track em{left:var(--actual);rotate:45deg;background:var(--accent);outline:1px solid var(--paper)}
+.delegation-track em{left:var(--actual);rotate:45deg;background:var(--sr-accent,var(--accent));outline:1px solid var(--sr-paper,var(--paper))}
 
 .calibration-track{display:block;margin:22px 0;scroll-margin-top:90px}
 .calibration-track h3{margin-bottom:4px}
