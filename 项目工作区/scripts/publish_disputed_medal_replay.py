@@ -169,8 +169,10 @@ def rank_slope(rows):
         change = f'上升 {before-after} 位' if before > after else f'下降 {after-before} 位'
         target = f'rank-{code}'
         label = f'{name}，第 {before} → {after} 名，{change}'
+        annotation = (f'<text class="rank-annotation" x="494" y="{y2:.2f}">{name} +{before-after}</text>'
+                      if before > after else '')
         lines.append(f"""<a href="#{target}" aria-label="{label}" class="{'up' if before > after else 'down'}">
-<title>{label}</title><path d="M76 {y1:.2f}L484 {y2:.2f}"/><circle cx="76" cy="{y1:.2f}" r="3"/><circle cx="484" cy="{y2:.2f}" r="3"/></a>""")
+<title>{label}</title><path d="M76 {y1:.2f}L484 {y2:.2f}"/><circle cx="76" cy="{y1:.2f}" r="3"/><circle cx="484" cy="{y2:.2f}" r="3"/>{annotation}</a>""")
         links.append(f'<a href="#{target}">{name} <small>{before} → {after}</small></a>')
         cards.append(f"""<article id="{target}" tabindex="-1"><h3>{name} <small>{code}</small></h3>
 <p>第 {before} 名 → 第 {after} 名 · {change}</p>
@@ -179,13 +181,13 @@ def rank_slope(rows):
 <h2 id="rank-slope-title">北京 2008 · 合并复算后的名次变化</h2>
 <p>北京 {len(beijing)} 队、伦敦 {london} 队名次变化。图中显示北京名次有变化的代表团，并列名次位于同一高度。点击连线或队名可核对逐队结果。</p>
 <div class="rank-layout"><div class="rank-chart"><div class="rank-labels"><span>旧存档名次</span><span>同届合并复算名次</span></div>
-<svg viewBox="0 0 560 264" aria-label="北京名次坡度图">
+<svg viewBox="0 0 590 264" aria-label="北京名次坡度图">
 <g class="rank-guides" aria-hidden="true"><path d="M76 18V246 M484 18V246"/>{''.join(guides)}</g>
 {''.join(sorted(lines, key=lambda line: 'class="up"' in line))}
 </svg>
 <div class="rank-labels"><span>图示范围：第 {lo}–{hi} 名</span><span>金色上升 · 青色下降</span></div></div>
-<div class="rank-roster"><h3>名次变化的代表团</h3><div class="rank-links">{''.join(links)}</div></div></div>
-<div class="rank-details">{''.join(cards)}</div>
+<div class="rank-roster"><div class="rank-details">{''.join(cards)}</div>
+<h3>名次变化的代表团</h3><div class="rank-links">{''.join(links)}</div></div></div>
 <p><a href="优先分歧名次复算.csv" download>下载完整逐队复算 CSV ↓</a></p>
 </section>"""
 
@@ -262,6 +264,12 @@ body.replay-reading .rank-slope svg a:is(:hover,:focus-visible){opacity:1}
 @media(max-width:850px){.rank-layout{grid-template-columns:minmax(0,1fr)}}
 .rank-details article{display:none;scroll-margin-top:95px}
 .rank-details article:target{display:block;border-inline-start:2px solid var(--accent);padding-inline-start:12px}
+
+.rank-annotation{fill:currentColor;font:600 15px system-ui;dominant-baseline:middle}
+.rank-chart{min-width:0;padding:clamp(10px,1.6vw,22px);border-block:1px solid var(--line);background:color-mix(in srgb,var(--ink) 3%,transparent)}
+.rank-details article:target{margin-bottom:16px;padding-block:8px;background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.rank-details article h3,.rank-details article p{margin:0 0 4px}
+.rank-links a:focus-visible{background:color-mix(in srgb,var(--accent) 12%,transparent)}
 </style></head><body><main><nav aria-label="补证记录"><a href="index.html">← 返回补证记录</a></nav>""" + content + '</main></body></html>'
 
 
