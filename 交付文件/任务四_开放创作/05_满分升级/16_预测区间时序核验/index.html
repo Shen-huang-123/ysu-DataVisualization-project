@@ -415,4 +415,21 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 <p>东京回放使用第三方抓取存档中的 339 个小项、1080 个奖牌槽评分。赛前池按 2008、2012、2016 历史估得 981 槽。主场使用既有 18% 上限情景并收缩，棒球信号取 2019 WBSC Premier12 四支已取得东京参赛资格的前四队，以名次倒数分配 1 个情景单位。参赛资格仅约束棒球分量，其他运动资格维持候选池。关闭与加入信号的全体 MAE 为 2.06985 与 2.06978，前十均重合 8 队。东京只覆盖棒球，软球和其他新增运动没有加入这一排名分量。</p>
 <p><a href="../17_东京补充回放/东京完整配方评分.csv">东京完整配方评分</a> · <a href="../17_东京补充回放/东京完整配方逐队对照.csv">东京逐队对照</a> · <a href="../17_东京补充回放/东京核心模型评分.csv">东京核心评分</a> · <a href="../17_东京补充回放/东京输入清单.json">东京历史输入及来源</a> · <a href="https://www.olympics.com/ioc/tokyo-2020-facts-and-figures">IOC 东京项目规模</a> · <a href="https://static.wbsc.org/uploads/federations/278/cms/documents/8d9568c2-596e-53fe-f532-d1c35832aaaa.pdf">WBSC 2019 排名</a></p>
 <p><a href="逐届覆盖与宽度.csv">逐届覆盖与宽度 CSV</a> · <a href="逐队区间与覆盖.csv">逐队区间与覆盖 CSV</a> · <a href="../15_原项目模型时序核验/原模型逐队误差.csv">核心模型逐队误差</a> · <a href="../09_赛前条件回放/index.html">赛前条件回放</a> · <a href="../12_新增运动端到端类比回放/index.html">2016 完整公式类比</a></p>
-<p>先运行 <code>项目工作区/scripts/tokyo_forecast_replay.py</code>，再运行 <code>项目工作区/scripts/publish_forecast_interval_audit.py</code>。</p></main></body></html>
+<p>先运行 <code>项目工作区/scripts/tokyo_forecast_replay.py</code>，再运行 <code>项目工作区/scripts/publish_forecast_interval_audit.py</code>。</p></main><script>
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!('IntersectionObserver' in window) || !Element.prototype.animate || reduced.matches) return;
+  const observer = new IntersectionObserver(entries => {
+    for (const {target, isIntersecting} of entries) {
+      if (!isIntersecting) continue;
+      observer.unobserve(target);
+      if (reduced.matches || target.contains(document.activeElement)) continue;
+      target.animate(
+        [{opacity:.8, translate:'0 6px'}, {opacity:1, translate:'0 0'}],
+        {duration:360, easing:'cubic-bezier(.22,1,.36,1)'}
+      );
+    }
+  });
+  document.querySelectorAll('main :is(.coverage-lead, h2[id], .scroll)').forEach(element => observer.observe(element));
+})();
+</script></body></html>

@@ -199,9 +199,35 @@ a{color:var(--accent);text-underline-offset:4px}
 }
 html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{padding-top:clamp(12px,1.5vw,24px)!important}
 .interval-reading main h2[id]{scroll-margin-top:90px}
+
+.interval-reading main tbody tr:hover,
+.interval-reading main tbody tr:focus-within {
+  background:color-mix(in srgb,var(--accent) 10%,var(--paper));
+}
+@media (prefers-reduced-motion:no-preference) {
+  .interval-reading main tbody tr {transition:background-color 160ms ease}
+}
 </style></head><body><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
-(OUT / 'index.html').write_text(add_audit_navigation(page + body + '</main></body></html>', TASK.parent, OUT), encoding='utf-8')
+motion = """<script>
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!('IntersectionObserver' in window) || !Element.prototype.animate || reduced.matches) return;
+  const observer = new IntersectionObserver(entries => {
+    for (const {target, isIntersecting} of entries) {
+      if (!isIntersecting) continue;
+      observer.unobserve(target);
+      if (reduced.matches || target.contains(document.activeElement)) continue;
+      target.animate(
+        [{opacity:.8, translate:'0 6px'}, {opacity:1, translate:'0 0'}],
+        {duration:360, easing:'cubic-bezier(.22,1,.36,1)'}
+      );
+    }
+  });
+  document.querySelectorAll('main :is(.coverage-lead, h2[id], .scroll)').forEach(element => observer.observe(element));
+})();
+</script>"""
+(OUT / 'index.html').write_text(add_audit_navigation(page + body + '</main>' + motion + '</body></html>', TASK.parent, OUT), encoding='utf-8')
 for section in ['02_2028洛杉矶预测', '03_数据新闻']:
     file = TASK / section / 'index.html'
     html = file.read_text(encoding='utf-8')
