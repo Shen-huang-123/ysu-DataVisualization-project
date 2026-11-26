@@ -72,8 +72,15 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .delegation-intervals{margin:20px 0 28px;border-block:1px solid var(--line);padding-block:12px}
 .delegation-intervals summary{cursor:pointer}
 .delegation-intervals>summary{font-weight:650;color:var(--sr-accent,var(--accent));min-height:44px;width:100%}
-.delegation-intervals fieldset{border:0;margin:0 0 8px;padding:0}
-.delegation-intervals fieldset label{display:inline-block;margin-inline-end:12px}
+.delegation-controls{display:flex;align-items:flex-end;flex-wrap:wrap;gap:8px 24px;padding-block:12px;border-block:1px solid var(--sr-line,var(--line))}
+.delegation-controls fieldset{display:flex;flex-wrap:wrap;gap:4px;border:0;margin:0;padding:0;min-width:0}
+.delegation-controls legend{padding:0;margin-bottom:6px;color:var(--sr-muted,var(--muted));font-size:.85rem}
+.delegation-controls label{display:inline-flex;position:relative;align-items:center;gap:8px;min-height:44px;padding:4px 10px;margin:0;cursor:pointer}
+.delegation-controls fieldset input[type="radio"]{position:absolute;width:1px;height:1px;opacity:0;margin:0}
+.delegation-controls fieldset label{border-bottom:2px solid transparent}
+.delegation-controls fieldset label:has(:checked){border-color:var(--sr-accent,var(--accent));color:var(--sr-accent,var(--accent));background:color-mix(in srgb,currentColor 7%,transparent)}
+.delegation-controls label:has(:focus-visible){outline:2px solid var(--sr-accent,var(--accent));outline-offset:2px}
+.delegation-controls input[type="checkbox"]{width:1em;height:1em;margin:0;accent-color:var(--sr-accent,var(--accent))}
 .delegation-intervals:has(#delegation-uniform:checked) .method-1,
 .delegation-intervals:has(#delegation-grouped:checked) .method-0,
 .delegation-intervals:has(#delegation-misses:checked) .covered{display:none}
@@ -148,11 +155,11 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 </figure><details class="delegation-intervals"><summary>查看逐队预测区间</summary>
 <p>巴黎 2024 留出评估 · 历史加权基线 · 预测至少 5 槽 · 用 2012、2016 校准。点击代表团查看数值和偏离方向。</p>
 <p>— 预测区间　● 点预测　◆ 实际结果</p>
-<fieldset><legend>区间方法</legend>
+<div class="delegation-controls"><fieldset><legend>区间方法</legend>
 <label><input type="radio" name="delegation-method" id="delegation-uniform" checked> 统一半宽</label>
 <label><input type="radio" name="delegation-method" id="delegation-grouped"> 按预测量分组</label>
 </fieldset>
-<label><input type="checkbox" id="delegation-misses"> 仅看未覆盖</label>
+<label><input type="checkbox" id="delegation-misses"> 仅看未覆盖</label></div>
 <section class="delegation-method method-0" aria-label="统一半宽"><p>43 队中有 29 队未覆盖。</p><div class="delegation-axis" aria-hidden="true"><span>0</span><span>65</span><span>130 槽</span></div><details class="delegation-row miss">
 <summary><strong>美国</strong><span class="delegation-track" style="--low:89.916527%;--high:92.781243%;--prediction:91.348885%;--actual:96.923077%" aria-hidden="true"><i></i><b></b><em></em></span><span>高于上限</span></summary>
 <p>点预测 118.75 槽 · 实际 126.00 槽 · 区间 116.89–120.62 槽。实际值高于上限。</p>
