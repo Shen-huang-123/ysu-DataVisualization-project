@@ -87,12 +87,28 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .delegation-track :is(b,em){position:absolute;top:50%;width:9px;height:9px;translate:-50% -50%}
 .delegation-track b{left:var(--prediction);border-radius:50%;background:var(--ink)}
 .delegation-track em{left:var(--actual);rotate:45deg;background:var(--accent);outline:1px solid var(--paper)}
+
+.calibration-track{display:block;margin:22px 0;scroll-margin-top:90px}
+.calibration-track h3{margin-bottom:4px}
+.calibration-track p{margin:4px 0 12px;font-size:.9rem}
+.calibration-track ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;list-style:none;margin:0;padding:0}
+.calibration-track li{min-width:0;border-top:3px solid var(--line);padding:8px}
+.calibration-track li strong,.calibration-track li span{display:block}
+.calibration-track li strong{font-size:1.25rem;font-variant-numeric:tabular-nums}
+.calibration-track li span{color:var(--muted);font-size:.84rem}
+.calibration-track li a{display:flex;font-size:.85rem;min-height:44px}
+@media(max-width:700px){.calibration-track ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style><link href="../../../共享组件/supplement-reading.css?v=1" id="supplement-assets" rel="stylesheet"/><link href="../../../共享组件/integrated-nav.css?v=9" id="supp-task-nav-assets" rel="stylesheet"/><script id="supplement-theme-preload">try{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}catch(e){}</script><script defer="" src="../../../共享组件/supplement-reading.js?v=1"></script><script defer="" src="../../../共享组件/integrated-nav.js?v=5"></script></head><body class="supplement-reading interval-reading"><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../../../index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../../任务一_数据体检/index.html">01 数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">02 百年全景</a><a href="../../../任务三_专题深挖/统一中文入口/index.html">03 专题深挖</a><a href="../../index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../../任务一_数据体检/index.html">数据体检</a><a href="../../../任务二_百年全景/05_交互总览/index.html">百年全景</a><a href="../../../任务三_专题深挖/统一中文入口/index.html">专题深挖</a><a href="../../index.html">洛杉矶2028</a></aside><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a download="" href="预测区间核验说明.md">下载核验说明</a></nav><h1>预测验证与区间覆盖</h1>
 <p class="coverage-lead">2024 留出评估中，中性基准的统一半宽区间覆盖 75.9% 的评分代表团。预测至少 5 槽组的覆盖从 32.6% 提升到 72.1%，平均宽度从 3.72 增至 13.64 槽。分组改善了高预测量覆盖，仍未达到 80%。加入东京留出误差后，保持巴黎点预测固定，统一半宽和分组区间全体覆盖分别为 77.4% 和 75.5%。</p>
 <h2 id="coverage">区间用过去的误差校准，再由未来届次评分</h2>
 <p>使用小项二次来源下的严格滚动留出逐队结果，分别检验历史加权基线和 55/45 核心情景。2016 只用 2012 误差，东京 2020 只用 2012、2016 误差。巴黎 2024 分别比较校准池有无东京留出误差，两种方案均保留。区间半宽为校准集绝对残差从小到大第 ⌈0.8(n+1)⌉ 个值，下限截在零。目标届实际结果只用来测覆盖及误差。评估含评分池内全部代表团，另按赛前预测至少 5 槽切片，以免全体读数掩盖高预测量代表团表现。</p>
-<figure class="coverage-plot" aria-labelledby="coverage-plot-title">
+<nav class="calibration-track" aria-labelledby="calibration-title">
+<style>body:has(#coverage-row-0:target) .calibration-track [data-year="2012"]{border-top-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}body:has(#coverage-row-0:target) .calibration-track a[href="#coverage-row-0"]{font-weight:700;text-decoration-thickness:2px}body:has(#coverage-row-4:target) .calibration-track [data-year="2012"],body:has(#coverage-row-4:target) .calibration-track [data-year="2016"]{border-top-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}body:has(#coverage-row-4:target) .calibration-track a[href="#coverage-row-4"]{font-weight:700;text-decoration-thickness:2px}body:has(#coverage-row-8:target) .calibration-track [data-year="2012"],body:has(#coverage-row-8:target) .calibration-track [data-year="2016"]{border-top-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}body:has(#coverage-row-8:target) .calibration-track a[href="#coverage-row-8"]{font-weight:700;text-decoration-thickness:2px}body:has(#coverage-row-12:target) .calibration-track [data-year="2012"],body:has(#coverage-row-12:target) .calibration-track [data-year="2016"],body:has(#coverage-row-12:target) .calibration-track [data-year="2020"]{border-top-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}body:has(#coverage-row-12:target) .calibration-track a[href="#coverage-row-12"]{font-weight:700;text-decoration-thickness:2px}</style>
+<h3 id="calibration-title">校准与评估赛道</h3>
+<p>选择校准方案，金色站点标出纳入的校准届次。入口定位至历史加权基线、统一半宽、全体代表团的核验表行。</p>
+<ol><li data-year="2012"><strong>2012</strong><span>校准起点</span></li><li data-year="2016"><strong>2016</strong><span>留出评估</span><a href="#coverage-row-0">用 2012 校准</a></li><li data-year="2020"><strong>2020</strong><span>留出评估</span><a href="#coverage-row-4">用 2012、2016 校准</a></li><li data-year="2024"><strong>2024</strong><span>留出评估</span><a href="#coverage-row-8">用 2012、2016 校准</a><a href="#coverage-row-12">用 2012、2016、2020 校准</a></li></ol>
+</nav><figure class="coverage-plot" aria-labelledby="coverage-plot-title">
 <figcaption id="coverage-plot-title">历史验证覆盖率</figcaption>
 <p>历史加权基线 · 统一半宽。巴黎 2024 使用 2012 和 2016 的误差校准。点击圆点查看覆盖队数及区间宽度。</p>
 <div class="coverage-panels"><section><h3>全体</h3>

@@ -248,6 +248,34 @@ def delegation_intervals(rows):
 </details>"""
 
 
+def calibration_track(rows):
+    reference = {
+        (int(row['评估届次']), row['校准届次']): index
+        for index, row in enumerate(rows)
+        if row['模型'] == '历史加权基线' and row['区间方法'] == '统一半宽'
+        and row['评估分组'] == '全体'
+    }
+    stages = ['<li data-year="2012"><strong>2012</strong><span>校准起点</span></li>']
+    styles = []
+    for year, pools in ((2016, ('2012',)), (2020, ('2012+2016',)),
+                        (2024, ('2012+2016', '2012+2016+2020'))):
+        links = []
+        for pool in pools:
+            row_id = f'coverage-row-{reference[year, pool]}'
+            links.append(f'<a href="#{row_id}">用 {pool.replace("+", "、")} 校准</a>')
+            scope = f'body:has(#{row_id}:target) .calibration-track'
+            years = ','.join(f'{scope} [data-year="{item}"]' for item in pool.split('+'))
+            styles.append(f'{years}{{border-top-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}}')
+            styles.append(f'{scope} a[href="#{row_id}"]{{font-weight:700;text-decoration-thickness:2px}}')
+        stages.append(f'<li data-year="{year}"><strong>{year}</strong><span>留出评估</span>{"".join(links)}</li>')
+    return f"""<nav class="calibration-track" aria-labelledby="calibration-title">
+<style>{''.join(styles)}</style>
+<h3 id="calibration-title">校准与评估赛道</h3>
+<p>选择校准方案，金色站点标出纳入的校准届次。入口定位至历史加权基线、统一半宽、全体代表团的核验表行。</p>
+<ol>{''.join(stages)}</ol>
+</nav>"""
+
+
 def add_coverage_plot(body, rows):
     selected = []
     for index, row in enumerate(rows):
@@ -284,7 +312,7 @@ def add_coverage_plot(body, rows):
     head, records = first.split('<tbody>', 1)
     records = re.sub(r'<tr>', lambda _: next(ids), records)
     result = head + '<tbody>' + records + '</tbody>' + tail
-    return re.sub(r'<div\b[^>]*class="scroll"[^>]*>', lambda match: chart + coverage_tradeoff(rows) + delegation_intervals(detail.to_dict('records')) + match[0], result, count=1)
+    return re.sub(r'<div\b[^>]*class="scroll"[^>]*>', lambda match: calibration_track(rows) + chart + coverage_tradeoff(rows) + delegation_intervals(detail.to_dict('records')) + match[0], result, count=1)
 
 
 body = add_coverage_plot(body, summary)
@@ -419,6 +447,17 @@ html body.interval-reading.supplement-reading:not(.supp-existing-nav)>main{paddi
 .delegation-track :is(b,em){position:absolute;top:50%;width:9px;height:9px;translate:-50% -50%}
 .delegation-track b{left:var(--prediction);border-radius:50%;background:var(--ink)}
 .delegation-track em{left:var(--actual);rotate:45deg;background:var(--accent);outline:1px solid var(--paper)}
+
+.calibration-track{display:block;margin:22px 0;scroll-margin-top:90px}
+.calibration-track h3{margin-bottom:4px}
+.calibration-track p{margin:4px 0 12px;font-size:.9rem}
+.calibration-track ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;list-style:none;margin:0;padding:0}
+.calibration-track li{min-width:0;border-top:3px solid var(--line);padding:8px}
+.calibration-track li strong,.calibration-track li span{display:block}
+.calibration-track li strong{font-size:1.25rem;font-variant-numeric:tabular-nums}
+.calibration-track li span{color:var(--muted);font-size:.84rem}
+.calibration-track li a{display:flex;font-size:.85rem;min-height:44px}
+@media(max-width:700px){.calibration-track ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head><body><main>
 <nav aria-label="本页导航"><a href="../../02_2028洛杉矶预测/index.html">← 返回预测页</a><a href="#coverage">历史覆盖率 ↓</a><a href="#formula">完整公式验证 ↓</a><a href="预测区间核验说明.md" download>下载核验说明</a></nav>"""
 motion = """<script>
