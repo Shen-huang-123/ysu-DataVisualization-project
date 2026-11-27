@@ -166,3 +166,20 @@ main > header h1 { text-wrap: balance; }
 .sport > span:nth-child(2) { color: var(--muted); }
 .sport i { border-radius: 2px; }
 main > section[aria-labelledby="evidence-title"] { margin-top: 28px; border-top: 1px solid var(--line); }
+
+.comparison { border-block: 1px solid var(--line); padding: 16px 0; margin-bottom: 18px; }
+.comparison h2 { margin: 0; font-size: 1.25rem; }
+.comparison p { margin-block: 10px; }
+.comparison-method { margin-top: 10px; font-size: .88rem; }
+.comparison-trials:not([hidden]) { display: inline-flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+#compare-peer { color: var(--gold); border-color: var(--gold); }
+#rank-title, #ranks { scroll-margin-top: 88px; }
+#crossings { border-top: 1px solid var(--line); padding-block: 12px; margin-block: 12px; }
+#crossings p { margin-block: 6px; }
+#crossings h3, #crossings h4 { margin-block: 12px 4px; }
+.comparison-method summary, #crossings summary { cursor: pointer; }
+.sport-evidence { border-inline-start: 2px solid var(--gold); padding: 6px 12px; font-size: .85rem; }
+.sport-evidence h4 { margin: 6px 0; }
+.sport-evidence ul { margin-block: 4px 10px; padding-inline-start: 16px; overflow-wrap: anywhere; }
+.sport-evidence li + li { margin-top: 4px; }
+.sport-evidence li span { color: var(--muted); white-space: nowrap; }

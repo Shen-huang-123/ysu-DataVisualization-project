@@ -83,18 +83,61 @@
     get('team-count').textContent = '已选 ' + selected.size + ' 队';
   }
 
-  function drawSports(active) {
-    const groups = new Map([...selected].map(code => [code, new Map()]));
+  function sportGroups(active, groupCodes) {
+    const groups = new Map([...groupCodes].map(code => [code, new Map()]));
     for (const [lens,code,family,color,,count] of active) {
       if (color !== 0 || !groups.has(code)) continue;
       const group = groups.get(code);
       if (!group.has(family)) group.set(family, [0,0]);
       group.get(family)[lens] += count;
     }
+    return groups;
+  }
+
+  const baselineSports = sportGroups(records, codes);
+  function profile(code) {
+    const gaps = [...baselineSports.get(code)].map(([family, [off, raw]]) => [family, Math.abs(raw - off)]);
+    gaps.sort((a, b) => b[1] - a[1]);
+    const total = gaps.reduce((sum, [, gap]) => sum + gap, 0);
+    return {family: total ? gaps[0][0] : null, share: total ? gaps[0][1] / total : 0};
+  }
+  const shift = code => baseline[0].get(code) - baseline[1].get(code);
+  const spain = profile('ESP');
+  const peer = codes.filter(code => code !== 'ESP' && baseline.every(map => map.has(code)))
+    .map(code => ({code, ...profile(code)}))
+    .sort((a, b) => Math.abs(shift(a.code) - shift('ESP')) - Math.abs(shift(b.code) - shift('ESP')) ||
+      Math.abs(b.share - spain.share) - Math.abs(a.share - spain.share) || a.code.localeCompare(b.code))[0];
+  const percent = value => new Intl.NumberFormat('zh-CN', {style:'percent', maximumFractionDigits:1}).format(value);
+  const concentration = team => team.family
+    ? sportName(team.family) + '占金牌绝对差额的 ' + percent(team.share)
+    : '各运动的金牌计数均无差额';
+  get('comparison-summary').textContent = '西班牙 ' + signed(shift('ESP')) + ' 位，' + label(peer.code) + ' ' +
+    signed(shift(peer.code)) + ' 位。西班牙' + concentration(spain) + '。' + label(peer.code) + concentration(peer) + '。';
+  const trials = get('comparison-trials');
+  trials.innerHTML = [...new Set([spain.family, peer.family])].filter(Boolean).map(family =>
+    '<button type="button" data-exclude="' + escape(family) + '">同时检验：排除' + escape(sportName(family)) + '</button>').join('');
+
+  function eventLink(event, url) {
+    return /^https:\/\//.test(url) ? '<a href="' + escape(url) + '">' + escape(event) + '</a>' : escape(event);
+  }
+
+  function inlineEvidence(rows, id) {
+    return '<div class="sport-evidence" id="' + id + '">' + method.map((title, lens) => {
+      const items = rows.filter(row => row[0] === lens).map(([, , , color, event, count, url]) =>
+        '<li>' + eventLink(event, url) + ' <span>' + colors[color] + ' · ' + count + '</span></li>').join('');
+      return '<h4>' + title + '</h4>' + (items ? '<ul>' + items + '</ul>' : '<p>无记录</p>');
+    }).join('') + '</div>';
+  }
+
+  function drawSports(active) {
+    const groups = sportGroups(active, selected);
     const max = Math.max(1,...[...groups.values()].flatMap(group=>[...group.values()].flat()));
     get('sports').innerHTML = [...groups].map(([code, group]) => '<section><h3>'+escape(label(code))+'</h3>'+
-      ([...group].sort((a,b)=>Math.abs(b[1][1]-b[1][0])-Math.abs(a[1][1]-a[1][0])).map(([family, [off,raw]]) =>
-        '<button class="sport" data-sport="'+escape(family)+'" aria-pressed="'+(sport===family)+'" type="button"><span class="sport-title"><strong>'+escape(sportName(family))+'</strong><span class="sport-delta">差额 '+signed(raw-off)+'</span></span><span>'+off+' 枚小项金牌 / '+raw+' 条金牌记录</span><i style="width:'+off/max*100+'%"></i><i style="width:'+raw/max*100+'%"></i></button>').join('') || '<p>当前情景无金牌记录。</p>')+'</section>').join('');
+      ([...group].sort((a,b)=>Math.abs(b[1][1]-b[1][0])-Math.abs(a[1][1]-a[1][0])).map(([family, [off,raw]], index) => {
+        const expanded = sport === family;
+        const id = 'sport-evidence-' + code + '-' + index;
+        return '<button class="sport" data-sport="'+escape(family)+'" data-team="'+code+'" aria-expanded="'+expanded+'"'+(expanded?' aria-controls="'+id+'"':'')+' aria-pressed="'+expanded+'" type="button"><span class="sport-title"><strong>'+escape(sportName(family))+'</strong><span class="sport-delta">差额 '+signed(raw-off)+'</span></span><span>'+off+' 枚小项金牌 / '+raw+' 条金牌记录</span><i style="width:'+off/max*100+'%"></i><i style="width:'+raw/max*100+'%"></i></button>' + (expanded ? inlineEvidence(active.filter(row => row[1] === code && row[2] === family), id) : '');
+      }).join('') || '<p>当前情景无金牌记录。</p>')+'</section>').join('');
   }
 
   function drawEvidence(active) {
@@ -102,9 +145,45 @@
     const filtered = active.filter(([,code,family])=>selected.has(code) && (!sport || family===sport));
     get('evidence').innerHTML = method.map((title,lens) => '<section><h3>'+title+'</h3><div class="scroll"><table><thead><tr><th>代表团 · 运动</th><th>小项或原始标签</th><th>奖牌 · 计数</th></tr></thead><tbody>'+
       filtered.filter(row=>row[0]===lens).map(([,code,family,color,event,count,url])=>{
-        const link = /^https:\/\//.test(url) ? '<a href="'+escape(url)+'">'+escape(event)+'</a>' : escape(event);
+        const link = eventLink(event, url);
         return '<tr><td>'+escape(label(code)+' · '+sportName(family))+'</td><td>'+link+'</td><td>'+colors[color]+' · '+count+'</td></tr>';
       }).join('')+'</tbody></table></div></section>').join('');
+  }
+
+  function drawCrossings(current, excluded) {
+    const panel = get('crossings');
+    panel.hidden = !excluded;
+    if (!excluded) {
+      panel.open = false;
+      return;
+    }
+    get('crossing-results').innerHTML = [...selected].map(code => '<section><h3>' + escape(label(code)) + '</h3>' +
+      current.map((ranks, lens) => {
+        const before = baseline[lens];
+        const from = before.get(code);
+        const to = ranks.get(code);
+        if (!from || !to) return '<p><strong>' + method[lens] + '</strong> · ' +
+          (from ? '本队剔除后退榜' : '本队基准未上榜') + '</p>';
+        const changes = new Map();
+        for (const [other, oldRank] of before) {
+          if (other === code) continue;
+          const newRank = ranks.get(other);
+          const oldOrder = Math.sign(oldRank - from);
+          const newOrder = Math.sign(newRank - to);
+          let change = '';
+          if (!newRank) change = '剔除后退榜';
+          else if (oldOrder !== newOrder) {
+            if (!newOrder) change = '转为并列';
+            else if (!oldOrder) change = newOrder < 0 ? '解除并列，排在本队前' : '解除并列，排在本队后';
+            else change = newOrder < 0 ? '超过本队' : '被本队超过';
+          }
+          if (!change) continue;
+          if (!changes.has(change)) changes.set(change, []);
+          changes.get(change).push(escape(label(other)) + '（' + oldRank + ' → ' + (newRank ?? '未上榜') + '）');
+        }
+        return '<h4>' + method[lens] + '</h4>' + ([...changes].map(([change, teams]) =>
+          '<p><strong>' + change + '</strong> · ' + teams.join('、') + '</p>').join('') || '<p>相对位置无变化。</p>');
+      }).join('') + '</section>').join('');
   }
 
   function render() {
@@ -112,7 +191,9 @@
     const active = records.filter(row=>row[2]!==excluded);
     const current = excluded ? calculate(excluded) : baseline;
     get('scenario').textContent = (excluded ? '排除'+sportName(excluded) : '全部运动')+' · 全榜重算范围：官方 '+current[0].size+' 队，获奖行 '+current[1].size+' 队。当前选看 '+selected.size+' 队。';
+    trials.hidden = !(selected.has('ESP') && selected.has(peer.code));
     drawRanks(current);
+    drawCrossings(current, excluded);
     drawSports(active);
     drawEvidence(active);
   }
@@ -153,14 +234,31 @@
     else selected.delete(target.value);
     render();
   });
+  get('compare-peer').addEventListener('click', () => {
+    selected = new Set(['ESP', peer.code]);
+    get('exclude').value = '';
+    get('team-search').value = '';
+    filterTeams();
+    sport = '';
+    render();
+  });
+  trials.addEventListener('click', ({target}) => {
+    if (!target.dataset.exclude) return;
+    get('exclude').value = target.dataset.exclude;
+    sport = '';
+    render();
+    get('crossings').open = true;
+    get('ranks').scrollIntoView({block:'start'});
+  });
   get('exclude').addEventListener('change',()=>{sport='';render();});
   get('lens').addEventListener('change',render);
   get('sports').addEventListener('click',event=>{
     const button=event.target.closest('[data-sport]');
     if (button) {
-      sport=button.dataset.sport;
+      sport = sport === button.dataset.sport ? '' : button.dataset.sport;
       drawSports(records.filter(row=>row[2]!==get('exclude').value));
-      get('sports').querySelector('[aria-pressed="true"]')?.focus();
+      [...get('sports').querySelectorAll('[data-sport]')].find(item =>
+        item.dataset.sport === button.dataset.sport && item.dataset.team === button.dataset.team)?.focus({preventScroll:true});
       drawEvidence(records.filter(row=>row[2]!==get('exclude').value));
     }
   });
