@@ -6,7 +6,7 @@ import os
 import re
 
 import pandas as pd
-from task2_localization import NOC_ZH
+from task2_localization import NOC_ZH, SPORT_ZH
 
 ROOT = Path(__file__).resolve().parents[2] / "交付文件"
 HISTORY = ROOT / "任务二_百年全景/05_交互总览"
@@ -32,7 +32,10 @@ def publish(page, kind, data, anchor):
 <script defer src="{kind}-analysis-data.js"></script>
 <script defer src="{shared}/linked-analysis.js"></script><!-- linked-analysis:end -->"""
     page.write_bytes(source[:target.start()] + markup.encode() + source[target.start():])
-    payload = json.dumps({"names": NOC_ZH, "rows": data}, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+    display = {"names": NOC_ZH, "rows": data}
+    if kind == "history":
+        display["sports"] = SPORT_ZH
+    payload = json.dumps(display, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
     page.with_name(f"{kind}-analysis-data.js").write_text(f"window.linkedAnalysisData = {payload};\n", encoding="utf-8")
 
 

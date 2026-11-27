@@ -1,6 +1,6 @@
 (() => {
   const panel = document.querySelector('[data-analysis]');
-  const {names, rows} = window.linkedAnalysisData;
+  const {names, rows, sports: sportNames} = window.linkedAnalysisData;
   const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const name = code => names[code] || code;
   const get = id => panel.querySelector('#la-' + id);
@@ -83,6 +83,7 @@
   }
 
   function history() {
+    const sportName = family => sportNames[family] || family;
     const codes = [...new Set(rows.map(row => row[1]))].sort();
     const years = [...new Set(rows.map(row => row[2]))].sort((a,b) => a-b);
     panel.innerHTML = `<h2>代表团两届之间的获奖变化来自哪里？</h2>
@@ -119,11 +120,11 @@
         (pending === null ? '' : ' 已选 '+pending+' 年，请选择另一届。');
       const ranked = [...sports].sort((a,b) => Math.abs(b[1][1]-b[1][0])-Math.abs(a[1][1]-a[1][0]));
       get('sports').innerHTML = ranked.length ? table(['运动',String(from),String(to),'变化'], ranked.map(([family,[a,b]]) =>
-        [`<button type="button" data-sport="${esc(family)}" aria-pressed="${sport === family}">${esc(family)}</button>`,a,b,b-a])) : '<p>两届均无获奖行。</p>';
+        [`<button type="button" data-sport="${esc(family)}" aria-pressed="${sport === family}">${esc(sportName(family))}</button>`,a,b,b-a])) : '<p>两届均无获奖行。</p>';
       const records = selected.filter(row => (row[2] === from || row[2] === to) && (!sport || row[3] === sport));
-      get('detail-label').textContent = (sport || '全部运动') + ' · ' + records.length + ' 行。';
+      get('detail-label').textContent = (sport ? sportName(sport) : '全部运动') + ' · ' + records.length + ' 行。';
       get('output').innerHTML = records.length ? table(['源行','届次','运动','原始小项','奖牌','运动员'],
-        records.map(([id,,year,family,event,medal,athlete]) => [id,year,family,event,({Gold:'金',Silver:'银',Bronze:'铜'})[medal] || medal,athlete].map(esc))) : '<p>当前范围没有明细。</p>';
+        records.map(([id,,year,family,event,medal,athlete]) => [id,year,sportName(family),event,({Gold:'金',Silver:'银',Bronze:'铜'})[medal] || medal,athlete].map(esc))) : '<p>当前范围没有明细。</p>';
     }
     panel.addEventListener('change', () => {sport='';pending=null;draw();});
     panel.addEventListener('click', ({target}) => {
