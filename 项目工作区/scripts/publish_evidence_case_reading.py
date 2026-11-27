@@ -29,23 +29,52 @@ def publish_full_report():
         wrapper = document.new_tag('div', attrs={'class': 'table-scroll', 'tabindex': '0',
                                                   'role': 'region', 'aria-label': '七处差异及裁定表'})
         table.wrap(wrapper)
-    return_url = '../../../../../index.html'
+    delivery = '../../../../'
+    shared = delivery + '共享组件/'
+    tasks = (
+        ('数据体检', '任务一_数据体检/index.html'),
+        ('百年全景', '任务二_百年全景/05_交互总览/index.html'),
+        ('专题深挖', '任务三_专题深挖/统一中文入口/index.html'),
+        ('洛杉矶2028', '任务四_开放创作/index.html'),
+    )
+    task_links = []
+    menu_links = []
+    for number, (label, path) in enumerate(tasks, 1):
+        current = ' aria-current="page"' if number == 3 else ''
+        href = delivery + path
+        task_links.append(f'<a href="{href}"{current}>{number:02} {label}</a>')
+        menu_links.append(f'<a href="{href}">{label}</a>')
     html = f"""<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
+<link rel="stylesheet" href="{shared}supplement-reading.css?v=1">
+<link rel="stylesheet" href="{shared}integrated-nav.css?v=9">
+<script>try{{document.documentElement.dataset.suppTheme=localStorage.getItem('xz-theme')==='dark'?'dark':'light'}}catch(e){{}}</script>
+<script defer src="{shared}supplement-reading.js"></script>
+<script defer src="{shared}integrated-nav.js"></script>
 <style>{READING_STYLE}
+body.supplement-reading{{margin-inline:auto}}
+#xz-nav{{flex-wrap:nowrap}}
 .table-scroll{{overflow:auto}}
 table{{border-collapse:collapse;min-width:42rem}}
 th,td{{padding:.7rem;text-align:left;vertical-align:top;border-bottom:1px solid #758b8b55}}
 code{{overflow-wrap:anywhere}}
 </style>
 </head>
-<body>
-<nav aria-label="报告导航">
-<a href="{return_url}">← 作品首页</a>
+<body class="supplement-reading supp-existing-nav">
+<nav id="xz-nav" aria-label="作品导航">
+<a class="xz-brand" href="{delivery}../index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a>
+<div class="xz-links">
+{''.join(task_links)}
+<button id="xz-theme" type="button" data-supp-theme aria-pressed="false" aria-label="切换深浅主题">◐</button>
+<button id="xz-menu-button" type="button" aria-controls="xz-menu" aria-expanded="false">目录 ☰</button>
+</div>
+</nav>
+<aside id="xz-menu" aria-label="作品目录" hidden><h2>探索全部作品</h2>{''.join(menu_links)}</aside>
+<nav aria-label="报告下载">
 <a href="双来源核验报告.md" download>下载 Markdown 原件</a>
 <a href="历史555项独立交叉对照.csv" download>下载 555 项对照表</a>
 </nav>
