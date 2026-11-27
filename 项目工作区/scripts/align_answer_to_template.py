@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 
 from docx import Document
+from docx.shared import Pt
 
 ROOT = Path(__file__).resolve().parents[2]
 ANSWER = ROOT / '交付文件/最终提交材料/数说奥运_晓组织_正式答卷.docx'
@@ -36,6 +37,30 @@ def replace_text(paragraph, text):
         paragraph.add_run(text)
 
 
+def compact_final_section(doc):
+    paragraphs = doc.paragraphs
+    start = next(i for i, p in enumerate(paragraphs) if p.text.startswith('图 S10｜'))
+    for paragraph in paragraphs[start:]:
+        formatting = paragraph.paragraph_format
+        formatting.space_before = Pt(0)
+        formatting.space_after = Pt(2)
+        formatting.line_spacing = 1.0
+        if paragraph.text == '附：提交材料核对清单':
+            formatting.page_break_before = False
+            formatting.space_before = Pt(6)
+    heading = next(i for i, p in enumerate(paragraphs) if p.text == '附：提交材料核对清单')
+    entries = paragraphs[heading + 1:]
+    if len(entries) == 6:
+        lines = (
+            '☑ 正式答卷（Word／PDF）　☑ 可复现代码与 README　☑ A2 海报及作品总入口',
+            '☑ 外部补充数据说明　☑ 参考资料与数据来源　□ B站演示视频链接待填写',
+        )
+        for paragraph, text in zip(entries, lines):
+            replace_text(paragraph, text)
+        for paragraph in entries[len(lines):]:
+            paragraph._p.getparent().remove(paragraph._p)
+
+
 def align(path):
     doc = Document(path)
     assert len(ABSTRACT) <= 300
@@ -53,6 +78,7 @@ def align(path):
     replace_text(video, '作品视频链接（B站）：待填写')
     forecast = next(p for p in doc.paragraphs if p.text.startswith('不确定性：新基准'))
     forecast.insert_paragraph_before(DIAGNOSTIC, style=forecast.style)
+    compact_final_section(doc)
     doc.save(path)
 
 
