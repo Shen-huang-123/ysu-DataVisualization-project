@@ -1,0 +1,27 @@
+html body.replay-reading #xz-menu#xz-menu.replay-directory {
+  width: min(316px, calc(100vw - 32px)) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  max-height: calc(100dvh - 96px);
+  overflow: auto;
+}
+html body.replay-reading #xz-menu#xz-menu.replay-directory h2 {
+  font: 600 17px/1.5 "Microsoft YaHei", system-ui, sans-serif !important;
+  opacity: 1;
+}
+html body.replay-reading #xz-menu#xz-menu.replay-directory a {
+  grid-template-columns: 20px minmax(0,1fr) auto !important;
+  gap: 4px 12px !important;
+  min-height: 58px !important;
+}
+#xz-menu#xz-menu.replay-directory .replay-menu-arrow { grid-column: 3; grid-row: 1; }
+html body.replay-reading #xz-menu#xz-menu.replay-directory small {
+  color: var(--sr-muted) !important;
+}
+html body.replay-reading #xz-menu#xz-menu.replay-directory a[aria-current=true] .menu-task-title {
+  color: var(--sr-accent) !important;
+}
+@media (max-height: 530px) {
+  html body.replay-reading #xz-menu#xz-menu.replay-directory { grid-template-columns: 1fr; }
+}

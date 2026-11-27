@@ -123,6 +123,33 @@ body=f"""# 优先分歧复核与奖牌榜影响
 """
 (OUT/'优先分歧复核与复算.md').write_text(body,encoding='utf-8')
 html=markdown.markdown(body,extensions=['tables'])
+def align_replay_menu(document, delivery, destination):
+    from os.path import relpath
+    from bs4 import BeautifulSoup
+
+    home = BeautifulSoup((delivery.parent / 'index.html').read_text(encoding='utf-8'), 'html.parser')
+    menu = document.select_one('#xz-menu')
+    menu.clear()
+    menu['class'] = ['replay-directory']
+    menu.append(document.new_tag('h2'))
+    menu.h2.string = '探索作品'
+    for index, link in enumerate(home.select('.ox-links a'), 1):
+        entry = document.new_tag('a', href=Path(relpath(delivery.parent / link['href'], destination)).as_posix())
+        if index == 3:
+            entry['aria-current'] = 'true'
+        number, title = link.b.get_text().split(' · ', 1)
+        for cls, value in [('menu-task-number', number), ('menu-task-title', title), ('replay-menu-arrow', '↗')]:
+            span = document.new_tag('span', attrs={'class': cls})
+            if cls == 'replay-menu-arrow':
+                span['aria-hidden'] = 'true'
+            span.string = value
+            entry.append(span)
+        entry.append(link.small)
+        menu.append(entry)
+    css = Path(relpath(delivery / '共享组件/replay-directory.css', destination)).as_posix()
+    document.head.append(document.new_tag('link', rel='stylesheet', href=css))
+
+
 def add_replay_navigation(page, delivery, destination):
     from os.path import relpath
     from bs4 import BeautifulSoup
@@ -148,6 +175,7 @@ def add_replay_navigation(page, delivery, destination):
         else:
             result.main.insert_before(element)
     result.body['class'] = ['supplement-reading', 'replay-reading']
+    align_replay_menu(result, delivery, destination)
     return '<!doctype html>' + str(result.html)
 
 
