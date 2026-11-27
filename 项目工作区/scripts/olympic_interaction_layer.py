@@ -9,7 +9,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / '交付文件'
-PAGES = sorted(BASE.rglob('index.html')) + ([ROOT/'index.html'] if (ROOT/'index.html').exists() else [])
+PAGES = sorted(path for path in BASE.rglob('*.html') if not path.name.endswith('.template.html') and '原始页面' not in path.parts) + ([ROOT/'index.html'] if (ROOT/'index.html').exists() else [])
 DESTINATIONS = [
     ('数据体检', BASE/'任务一_数据体检/index.html'),
     ('百年全景', BASE/'任务二_百年全景/05_交互总览/index.html'),
@@ -67,26 +67,38 @@ if(images.length){
 
 
 def enhance(path: Path) -> bool:
-    html = path.read_text(encoding='utf-8')
+    html = path.read_bytes().decode('utf-8')
+    if re.search(r'''<div\b[^>]*class=["'][^"']*\box-control\b''', html):
+        return False
+    if re.search(r'''<meta\b[^>]*http-equiv=["']?refresh''', html, re.I):
+        return False
     html = re.sub(r'<style id="ox-interaction-style">.*?</style>', '', html, flags=re.S)
     html = re.sub(r'<style id="ox-news-table-fix">.*?</style>', '', html, flags=re.S)
     if START in html:
         html = re.sub(re.escape(START)+r'.*?'+re.escape(END), '', html, flags=re.S)
-    if '</body>' not in html.lower():
-        return False
     links = []
     for i, (label, target) in enumerate(DESTINATIONS, 1):
         href = Path(os.path.relpath(target, path.parent)).as_posix()
         current = ' aria-current="page"' if path == target else ''
         links.append(f'<a href="{escape(href,quote=True)}"{current} style="--ox-i:{i}"><span class="ox-link-copy"><b>{i:02d} · {label}</b><small>{DESCRIPTIONS[i-1]}</small></span><span class="ox-arrow" aria-hidden="true">↗</span></a>')
     widget = '''<div class="ox-control" aria-label="奥运作品导览"><button class="ox-trigger" type="button" aria-label="打开奥运作品导览" aria-haspopup="true" aria-expanded="false" aria-controls="ox-panel"><span class="ox-face"><span class="ox-rings" aria-hidden="true"><i style="--ox-i:1"></i><i style="--ox-i:2"></i><i style="--ox-i:3"></i><i style="--ox-i:4"></i><i style="--ox-i:5"></i></span></span></button><div class="ox-panel" id="ox-panel" role="navigation" aria-label="四项任务" hidden><div class="ox-panel-head"><strong>沿赛道探索作品</strong><button class="ox-close" type="button" aria-label="关闭导览">×</button></div><p>四个任务，一条从数据口径到未来预测的阅读路线。</p><div class="ox-links">'''+''.join(links)+'''</div><div class="ox-foot"><span>奥运数据观察</span><span class="ox-progress-text">阅读进度 0%</span></div></div></div>'''
-    extra = '<style id="ox-news-table-fix">#主场图{display:block;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}#主场图 table{min-width:620px}</style>' if path == BASE/'任务四_开放创作/03_数据新闻/index.html' else ''
-    html = html.replace('</head>', CSS+extra+'</head>', 1)
-    html = html.replace('</body>', START+widget+JS+END+'</body>', 1)
-    path.write_text(html, encoding='utf-8')
+    shared = Path(os.path.relpath(BASE / '共享组件', path.parent)).as_posix()
+    assets = (f'<link rel="stylesheet" href="{shared}/olympic-widget.css">'
+              f'<link rel="stylesheet" href="{shared}/olympic-guide.css">')
+    scripts = (f'<script defer src="{shared}/olympic-widget.js"></script>'
+               f'<script defer src="{shared}/olympic-guide.js"></script>')
+    block = START + assets + widget + scripts + END
+    closing = re.search(r'</(?:body|html)\s*>', html, re.I)
+    index = closing.start() if closing else len(html)
+    updated = html[:index] + block + html[index:]
+    path.write_bytes(updated.encode('utf-8'))
     return True
 
 
 if __name__ == '__main__':
+    shared = BASE / '共享组件'
+    (shared / 'olympic-widget.css').write_text(CSS.split('>', 1)[1].rsplit('</style>', 1)[0], encoding='utf-8')
+    controls = JS.split('>', 1)[1].split('function pulse()', 1)[0]
+    (shared / 'olympic-widget.js').write_text(controls + '})();\n', encoding='utf-8')
     changed = [str(path.relative_to(ROOT)) for path in PAGES if enhance(path)]
     print(f'Enhanced {len(changed)} delivered pages')
