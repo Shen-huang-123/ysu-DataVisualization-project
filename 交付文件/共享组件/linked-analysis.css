@@ -1,0 +1,24 @@
+
+.linked-analysis { margin-block: 30px; padding-block: 18px; border-block: 1px solid var(--line,#758b8b70); scroll-margin-top: 90px; }
+.linked-analysis h2 { margin-top: 0; }
+.la-controls { display: flex; gap: 10px 18px; flex-wrap: wrap; margin-block: 12px; }
+.la-controls label { display: grid; gap: 4px; }
+.linked-analysis select, .linked-analysis button { font: inherit; color: inherit; background: transparent; border: 1px solid var(--line,#758b8b90); padding: 5px 9px; border-radius: 5px; }
+.linked-analysis button { cursor: pointer; }
+.linked-analysis option { color: var(--ink,#17333a); background: var(--paper,#f7f5ef); }
+.linked-analysis button[aria-pressed=true] { text-decoration: underline; }
+.la-scroll, .la-rows { max-height: 34rem; overflow: auto; }
+.la-scroll table { width: 100%; }
+.la-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.la-rows section, #la-cases section { border-bottom: 1px solid var(--line,#758b8b70); padding: 10px 0; }
+.la-interval { position: relative; height: 18px; margin: 6px 6px 6px 0; border-bottom: 1px solid var(--line,#758b8b70); }
+.la-interval i,.la-interval b,.la-interval em { position: absolute; top: 50%; display: block; }
+.la-interval i { left: var(--low); width: var(--span); height: 3px; background: currentColor; }
+.la-interval b,.la-interval em { width: 8px; height: 8px; background: currentColor; }
+.la-interval b { left: var(--prediction); border-radius: 50%; transform: translate(-50%,-3px); }
+.la-interval em { left: var(--actual); background: var(--accent,#ae742a); transform: translate(-50%,-3px) rotate(45deg); }
+.la-trend { display: flex; gap: 6px; overflow-x: auto; padding: 4px; }
+.la-trend button { display: grid; min-width: 54px; }
+.la-trend button span { height: 64px; display: flex; align-items: end; justify-content: center; }
+.la-trend button i { width: 12px; height: var(--height); background: currentColor; opacity: .55; }
+@media(max-width:620px) { .la-pair { grid-template-columns: 1fr; } }
