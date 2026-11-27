@@ -1466,3 +1466,5 @@ A–D八张核心图已重绘并同步四视角复核页。先生成任务二数
 2026-11-27：所有交付可阅读 HTML 页面统一保有左下角奥运五环导览。重生成网页后运行 `py 项目工作区/scripts/olympic_interaction_layer.py` 补齐缺失入口。已有入口不重复注入，跳转页及模板跳过。
 
 2026-11-27：正式答卷两份 Word 合并为一份，22 张图统一白底，A1 由数据重绘。PDF 保留 20 页正文，Word 保留末页核对清单。重生成后执行 polish_formal_answer.py 并重新导出 PDF。
+
+2026-11-27：按原始赛题与模板优化正式答卷，摘要 219 字符，补三项 Kaggle 来源署名，时间边界诊断移入任务四。正文 PDF 20 页，Word 保留末页核对清单。重生成时先执行 polish_formal_answer.py，再执行 align_answer_to_template.py 后导出。
