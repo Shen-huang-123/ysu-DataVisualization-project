@@ -16,7 +16,22 @@
   let points = [];
 
   get('exclude').innerHTML = '<option value="">全部运动</option>' + options.map(s => '<option value="' + escape(s) + '">排除' + escape(sportName(s)) + '</option>').join('');
-  teams.innerHTML = codes.map(code => '<option value="' + code + '">' + escape(label(code)) + ' · ' + code + '</option>').join('');
+  teams.innerHTML = ['ESP', ...codes.filter(code => code !== 'ESP')].map(code => '<label class="team-option"><input type="checkbox" value="' +
+    code + '"><span>' + escape(label(code)) + '</span><small>' + code + '</small></label>').join('');
+  const teamInputs = [...teams.querySelectorAll('input')];
+
+  function filterTeams() {
+    const query = get('team-search').value.trim().toLowerCase();
+    let found = false;
+    for (const input of teamInputs) {
+      const matches = (label(input.value) + ' ' + input.value).toLowerCase().includes(query);
+      input.parentElement.hidden = !matches;
+      found ||= matches;
+    }
+    get('team-no-results').hidden = found;
+    teams.hidden = !found;
+    teams.scrollTop = 0;
+  }
 
   function calculate(excluded) {
     const totals = [new Map(), new Map()];
@@ -61,7 +76,11 @@
       '<rect id="brush" y="9" height="188" fill="currentColor" opacity=".13" pointer-events="none" hidden/>';
     get('ranks').innerHTML = '<div class="scroll"><table><thead><tr><th>代表团</th><th>官方 原 → 当前</th><th>获奖行 原 → 当前</th><th>当前升幅</th></tr></thead><tbody>' +
       [...selected].map(code => '<tr><th scope="row">'+escape(label(code))+'</th>'+current.map((map,i)=>'<td>'+readRank(baseline[i],code)+' → '+readRank(map,code)+'</td>').join('')+'<td>'+(current.every(map=>map.has(code))?signed(current[0].get(code)-current[1].get(code)):'—')+'</td></tr>').join('')+'</tbody></table></div>';
-    for (const option of teams.options) option.selected = selected.has(option.value);
+    for (const input of teamInputs) {
+      input.checked = selected.has(input.value);
+      input.disabled = input.checked && selected.size === 1;
+    }
+    get('team-count').textContent = '已选 ' + selected.size + ' 队';
   }
 
   function drawSports(active) {
@@ -128,9 +147,10 @@
     render();
   });
   chart.addEventListener('pointercancel',()=>{start=null;get('brush').setAttribute('hidden','');});
-  teams.addEventListener('change', () => {
-    const next = [...teams.selectedOptions].map(option=>option.value);
-    if (next.length) selected = new Set(next);
+  get('team-search').addEventListener('input', filterTeams);
+  teams.addEventListener('change', ({target}) => {
+    if (target.checked) selected.add(target.value);
+    else selected.delete(target.value);
     render();
   });
   get('exclude').addEventListener('change',()=>{sport='';render();});
@@ -146,7 +166,7 @@
   });
   get('clear-sport').addEventListener('click',()=>{sport='';render();});
   get('reset').addEventListener('click',()=>{
-    selected=new Set(['ESP']);sport='';get('exclude').value='';get('lens').value='shift';render();
+    get('team-search').value='';filterTeams();selected=new Set(['ESP']);sport='';get('exclude').value='';get('lens').value='shift';render();
   });
   render();
 })();

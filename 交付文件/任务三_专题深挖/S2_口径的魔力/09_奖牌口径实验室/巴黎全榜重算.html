@@ -30,10 +30,19 @@
 <div class="views">
 <section aria-labelledby="rank-title">
 <h2 id="rank-title">全榜名次差</h2>
-<p>左为下降，右为上升。点击选队，或横向拖动框选一段升幅。下方可用键盘多选。</p>
+<p>左为下降，右为上升。点击选队，或横向拖动框选一段升幅。也可以在下方搜索并勾选代表团。</p>
 <svg id="rank-chart" viewBox="0 0 480 220" aria-label="横轴为名次升幅，纵向排列服从当前排序"></svg>
 <p>升幅＝官方小项名次 − 运动员行名次。仅单边上榜的代表团可从名单选取。</p>
-<label for="teams">代表团（可多选）</label><select id="teams" multiple size="7"></select>
+<fieldset class="team-picker">
+<legend>选择代表团</legend>
+<div class="team-picker-tools">
+<label for="team-search">搜索代表团</label>
+<input id="team-search" type="search" placeholder="输入中文名称或代码" autocomplete="off">
+<span id="team-count" role="status"></span>
+</div>
+<div class="team-options" id="teams"></div>
+<p id="team-no-results" role="status" hidden>未找到匹配的代表团。</p>
+</fieldset>
 <div id="ranks" aria-live="polite"></div>
 </section>
 <section aria-labelledby="sport-title">
