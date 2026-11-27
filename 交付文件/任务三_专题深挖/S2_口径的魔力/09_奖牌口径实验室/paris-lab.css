@@ -183,3 +183,37 @@ main > section[aria-labelledby="evidence-title"] { margin-top: 28px; border-top:
 .sport-evidence ul { margin-block: 4px 10px; padding-inline-start: 16px; overflow-wrap: anywhere; }
 .sport-evidence li + li { margin-top: 4px; }
 .sport-evidence li span { color: var(--muted); white-space: nowrap; }
+
+/* Show the comparison before introducing the controls. */
+.lab-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  align-items: end;
+  gap: clamp(24px, 5vw, 88px);
+  margin: 18px 0 0;
+  padding: clamp(24px, 3.5vw, 58px) 0 clamp(28px, 4vw, 58px);
+  background: radial-gradient(ellipse at 88% 68%, color-mix(in srgb, var(--teal) 10%, transparent), transparent 55%);
+}
+.lab-opening h1 { font-size: clamp(36px, 5.2vw, 94px); line-height: 1.08; text-wrap: initial; }
+.opening-label { font-size: .86rem; font-weight: 650; letter-spacing: .12em; }
+.opening-copy > p:not(.opening-label) { max-width: 36em; margin: 20px 0 16px; }
+.opening-link { display: inline-flex; align-items: center; gap: 12px; font-weight: 650; }
+.opening-score { border-block: 1px solid var(--line); padding: 14px 0 20px; min-width: 0; }
+.opening-score > p { color: var(--muted); margin: 0 0 8px; font-size: .88rem; }
+.opening-score dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+.opening-score dl > div { display: flex; flex-direction: column-reverse; gap: 8px; }
+.opening-score dl > div + div { border-inline-start: 1px solid var(--line); padding-inline-start: 16px; }
+.opening-score dt { color: var(--muted); font-size: .88rem; }
+.opening-score dd { margin: 0; font-size: clamp(56px, 8vw, 128px); line-height: .98; font-weight: 690; letter-spacing: -.07em; }
+.opening-score dl > div:first-child dd { color: var(--teal); }
+.opening-score dl > div:last-child dd { color: var(--gold); }
+.comparison { padding: clamp(16px, 2.5vw, 30px) clamp(14px, 2.5vw, 32px); background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.controls { scroll-margin-top: 84px; }
+.controls label { font-size: .9rem; }
+#rank-chart { background: linear-gradient(90deg, transparent 50%, color-mix(in srgb, var(--teal) 7%, transparent) 50%); }
+#ranks { border-top: 1px solid var(--line); }
+#evidence { margin-top: 14px; }
+@media (max-width: 760px) {
+  .lab-opening { grid-template-columns: 1fr; align-items: start; padding-top: 20px; }
+  .opening-score { max-width: 30rem; }
+}

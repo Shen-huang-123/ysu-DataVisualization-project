@@ -19,8 +19,21 @@
 </div>
 <main>
 <nav class="paris-context" aria-label="返回实验室"><a href="index.html">← 三口径实验室</a></nav>
-<header><p>巴黎 2024 · 奖牌口径实验室</p><h1>同一届奥运，为什么有两个名次？</h1>
-<p>西班牙在官方小项口径排名第 15，在运动员获奖行口径排名第 5。试着选择另一支代表团，或排除一项运动，看看差异从哪里来。</p></header>
+<header class="lab-opening">
+<div class="opening-copy">
+<p class="opening-label">巴黎 2024 · 奖牌口径实验室</p>
+<h1>同一届奥运，<br>为什么有两个名次？</h1>
+<p>小项金牌按竞赛单元计，运动员获奖行按获奖记录计。选一支队伍，追查这两种计数如何改变全榜排名。</p>
+<a class="opening-link" href="#analysis">查看名次与运动构成 <span aria-hidden="true">↓</span></a>
+</div>
+<div class="opening-score">
+<p>西班牙 · 巴黎 2024 基准名次</p>
+<dl>
+<div><dt>官方小项</dt><dd>15</dd></div>
+<div><dt>运动员获奖行</dt><dd>5</dd></div>
+</dl>
+</div>
+</header>
 <section class="comparison" aria-labelledby="comparison-title">
 <h2 id="comparison-title">谁和西班牙升得相近，原因却不同？</h2>
 <p id="comparison-summary"></p>
@@ -29,7 +42,7 @@
 <details class="comparison-method"><summary>对照队怎么选？</summary>
 <p>比较巴黎 2024 基准榜，先选升幅与西班牙相差最少的队，再选最大运动差额占比与西班牙相差最大的队。占比以各运动金牌记录与小项金牌的绝对差额之和为分母，各运动均无差额时，选队计算按 0 处理。完全并列时按代表团代码选取。</p></details>
 </section>
-<div class="controls">
+<div class="controls" id="analysis">
 <label>全榜重算情景 <select id="exclude"></select></label>
 <label>名次图排序 <select id="lens"><option value="shift">按升幅</option><option value="0">按官方小项名次</option><option value="1">按运动员行名次</option></select></label>
 <button id="reset" type="button">恢复西班牙案例</button>
