@@ -39,3 +39,25 @@
   outline: 2px solid currentColor;
   outline-offset: 3px;
 }
+
+#linked-replay { scroll-margin-top: 105px; }
+#linked-replay .la-controls { align-items: end; margin-block: 18px; }
+#linked-replay .la-controls :is(select,button) { min-height: 44px; }
+#linked-replay #la-all { color: var(--accent,#8b601e); border-color: currentColor; }
+.replay-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(18px,3vw,42px); align-items: start; }
+.replay-layout fieldset { min-inline-size: 0; padding: 0; border: 0; margin: 0; }
+.replay-layout legend, .replay-result h3 { font-weight: 700; font-size: 1rem; margin: 0 0 8px; padding: 0; }
+#linked-replay #la-cases section { padding: 0 0 10px; border-bottom: 1px solid var(--line,#758b8b70); }
+#la-cases label { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 10px; align-items: start; padding: 10px 8px; cursor: pointer; }
+#la-cases label:has(:checked) { background: color-mix(in srgb, var(--accent,#ad792d) 12%, transparent); }
+#la-cases input { margin-top: .4em; accent-color: var(--accent,#ad792d); }
+#la-cases label:has(:focus-visible) { outline: 2px solid currentColor; outline-offset: -2px; }
+.replay-medals { display: block; color: var(--muted,inherit); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.replay-medals b { color: var(--ink,inherit); }
+#linked-replay #la-cases p { margin: 0 8px 0 32px; font-size: .9rem; }
+.replay-result { min-width: 0; padding: 14px; background: color-mix(in srgb,currentColor 4%,transparent); border-top: 2px solid var(--accent,#ad792d); }
+.replay-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin: 0 0 12px; gap: 10px; }
+.replay-metrics div { display: flex; flex-direction: column-reverse; justify-content: start; gap: 5px; }
+.replay-metrics dt { font-size: .8rem; color: var(--muted,inherit); }
+.replay-metrics dd { margin: 0; font-size: clamp(25px,4vw,48px); font-weight: 650; line-height: 1.05; font-variant-numeric: tabular-nums; }
+@media (max-width: 850px) { .replay-layout { grid-template-columns: minmax(0,1fr); } }

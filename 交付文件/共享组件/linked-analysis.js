@@ -155,12 +155,18 @@
       <p>同一届的勾选项合并复算。基于 302 项历史小项代理表，按金、银、铜排序，相同奖牌组合并列。证据仅覆盖各条记录标明的范围。</p>
       <div class="la-controls"><label>届次 <select id="la-year">${options(Object.keys(rows))}</select></label>
       <button type="button" id="la-all">应用该届全部更正</button><button type="button" id="la-none">恢复旧存档</button></div>
-      <fieldset><legend>选择有证据支持的更正</legend><div id="la-cases"></div></fieldset>
-      <p id="la-summary" role="status"></p><div id="la-output"></div>
+      <div class="replay-layout">
+        <fieldset><legend>选择有证据支持的更正</legend><div id="la-cases"></div></fieldset>
+        <section class="replay-result" aria-labelledby="replay-result-title">
+          <h3 id="replay-result-title">复算结果</h3>
+          <dl class="replay-metrics" id="la-metrics" aria-live="polite"></dl>
+          <div id="la-output"></div>
+        </section>
+      </div>
       <p><a href="优先分歧逐项复核.csv">下载逐项证据</a> · <a href="优先分歧名次复算.csv">下载原复算表</a></p>`;
     function cases() {
       const [items] = rows[get('year').value];
-      get('cases').innerHTML = items.map((item,i) => `<section><label><input type="checkbox" value="${i}"> <strong>${esc(item.案例)}</strong> · ${esc(item.原金银铜)} → ${esc(item.核对金银铜)}</label>
+      get('cases').innerHTML = items.map((item,i) => `<section><label><input type="checkbox" value="${i}"> <span><strong>${esc(item.案例)}</strong><span class="replay-medals">${esc(item.原金银铜)} <span aria-hidden="true">→</span> <b>${esc(item.核对金银铜)}</b></span></span></label>
         <p>${esc(item.证据范围)}。 ${source(item.来源,'来源')} ${source(item.补充来源,'补充来源')}</p></section>`).join('');
       draw();
     }
@@ -170,7 +176,8 @@
       const mask = checked.reduce((sum,input) => sum | (1 << +input.value),0);
       const changed = masks[mask];
       const moved = changed.filter(([,old,,next]) => old !== next).length;
-      get('summary').textContent = `已应用 ${checked.length} 条更正 · ${moved} 队名次变化 · ${changed.length-moved} 队奖牌数变化但名次不变。`;
+      const metrics = [['已应用更正', checked.length], ['名次变化队数', moved], ['仅奖牌数变化队数', changed.length - moved]];
+      get('metrics').innerHTML = metrics.map(([label,value]) => '<div><dt>' + label + '</dt><dd>' + value + '</dd></div>').join('');
       get('output').innerHTML = changed.length ? table(['代表团','原金／银／铜','复算金／银／铜','旧名次 → 复算'],
         changed.map(([code,old,before,next,after]) => [esc(name(code)),before.join('/'),after.join('/'),(old ?? '未上榜')+' → '+(next ?? '未上榜')])) : '<p>与旧存档基准一致。</p>';
     }
