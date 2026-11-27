@@ -151,12 +151,21 @@
   }
 
   function replay() {
+    const medalTeams = value => value.split('/').map(slot => slot === '空' ? '空缺' :
+      slot.split('|').map(name).join('、')).join('／');
+    const organizations = {
+      FIE: '国际击剑联合会', ISSF: '国际射击运动联合会', ICF: '国际皮划艇联合会',
+      UIPM: '国际现代五项联盟', IOC: '国际奥委会', IWF: '国际举重联合会',
+      'World Triathlon': '世界铁人三项联盟'
+    };
+    const evidenceText = value => value.replace(/World Triathlon|\b(?:FIE|ISSF|ICF|UIPM|IOC|IWF)\b/g,
+      organization => organizations[organization]);
     panel.innerHTML = `<h2>选几条更正，看看奖牌榜怎样重排</h2>
       <p>同一届的勾选项合并复算。基于 302 项历史小项代理表，按金、银、铜排序，相同奖牌组合并列。证据仅覆盖各条记录标明的范围。</p>
       <div class="la-controls"><label>届次 <select id="la-year">${options(Object.keys(rows))}</select></label>
       <button type="button" id="la-all">应用该届全部更正</button><button type="button" id="la-none">恢复旧存档</button></div>
       <div class="replay-layout">
-        <fieldset><legend>选择有证据支持的更正</legend><div id="la-cases"></div></fieldset>
+        <fieldset><legend>选择有证据支持的更正</legend><p>代表团依次对应金、银、铜牌。</p><div id="la-cases"></div></fieldset>
         <section class="replay-result" aria-labelledby="replay-result-title">
           <h3 id="replay-result-title">复算结果</h3>
           <dl class="replay-metrics" id="la-metrics" aria-live="polite"></dl>
@@ -166,8 +175,8 @@
       <p><a href="优先分歧逐项复核.csv">下载逐项证据</a> · <a href="优先分歧名次复算.csv">下载原复算表</a></p>`;
     function cases() {
       const [items] = rows[get('year').value];
-      get('cases').innerHTML = items.map((item,i) => `<section><label><input type="checkbox" value="${i}"> <span><strong>${esc(item.案例)}</strong><span class="replay-medals">${esc(item.原金银铜)} <span aria-hidden="true">→</span> <b>${esc(item.核对金银铜)}</b></span></span></label>
-        <p>${esc(item.证据范围)}。 ${source(item.来源,'来源')} ${source(item.补充来源,'补充来源')}</p></section>`).join('');
+      get('cases').innerHTML = items.map((item,i) => `<section><label><input type="checkbox" value="${i}"> <span><strong>${esc(item.案例)}</strong><span class="replay-medals">${esc(medalTeams(item.原金银铜))} <span>→</span> <b>${esc(medalTeams(item.核对金银铜))}</b></span></span></label>
+        <p>${esc(evidenceText(item.证据范围))}。 ${source(item.来源,'来源')} ${source(item.补充来源,'补充来源')}</p></section>`).join('');
       draw();
     }
     function draw() {
