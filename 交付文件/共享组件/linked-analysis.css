@@ -22,3 +22,20 @@
 .la-trend button span { height: 64px; display: flex; align-items: end; justify-content: center; }
 .la-trend button i { width: 12px; height: var(--height); background: currentColor; opacity: .55; }
 @media(max-width:620px) { .la-pair { grid-template-columns: 1fr; } }
+
+#linked-history #la-sports button[data-sport] {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding-inline: 0;
+  min-height: 36px;
+}
+#linked-history #la-sports button[data-sport]:is(:hover, [aria-pressed=true]) {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+#linked-history #la-sports button[data-sport]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
