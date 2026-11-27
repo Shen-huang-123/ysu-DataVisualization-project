@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>巴黎 2024 · 重算奖牌榜</title>
+<link rel="stylesheet" href="paris-lab.css">
+<script defer src="paris-evidence.js"></script>
+<script defer src="paris-lab.js"></script>
+</head>
+<body>
+<main>
+<nav aria-label="返回"><a href="../../../../index.html">晓 · 作品首页</a><a href="index.html">三口径实验室</a></nav>
+<header><p>巴黎 2024 · 奖牌口径实验室</p><h1>同一届奥运，为什么有两个名次？</h1>
+<p>西班牙在官方小项口径排名第 15，在运动员获奖行口径排名第 5。试着选择另一支代表团，或排除一项运动，看看差异从哪里来。</p></header>
+<div class="controls">
+<label>全榜重算情景 <select id="exclude"></select></label>
+<label>名次图排序 <select id="lens"><option value="shift">按升幅</option><option value="0">按官方小项名次</option><option value="1">按运动员行名次</option></select></label>
+<button id="reset" type="button">恢复西班牙案例</button>
+</div>
+<p id="scenario"></p>
+<div class="views">
+<section aria-labelledby="rank-title">
+<h2 id="rank-title">全榜名次差</h2>
+<p>左为下降，右为上升。点击选队，或横向拖动框选一段升幅。下方可用键盘多选。</p>
+<svg id="rank-chart" viewBox="0 0 480 220" aria-label="横轴为名次升幅，纵向排列服从当前排序"></svg>
+<p>升幅＝官方小项名次 − 运动员行名次。仅单边上榜的代表团可从名单选取。</p>
+<label for="teams">代表团（可多选）</label><select id="teams" multiple size="7"></select>
+<div id="ranks" aria-live="polite"></div>
+</section>
+<section aria-labelledby="sport-title">
+<h2 id="sport-title">金牌差额来自哪些运动？</h2>
+<p>每队按运动列出小项金牌与获奖行。点击运动筛选下方证据。</p>
+<button id="clear-sport" type="button">查看所选队伍全部运动</button>
+<div id="sports"></div>
+</section>
+</div>
+<section aria-labelledby="evidence-title">
+<h2 id="evidence-title">逐项证据</h2>
+<p id="evidence-scope" aria-live="polite"></p>
+<p>官方表按小项奖牌归属计数，原表按获奖运动员行计数。原表小项标签可能泛化，两侧记录按运动大类对照，各自保留原标签。</p>
+<div id="evidence"></div>
+<p>数据来源 · <a href="../../../任务一_数据体检/02_交付数据/2024官方329小项奖牌表.csv">2024 官方小项表</a> · <a href="../../../任务一_数据体检/02_交付数据/归一数据_保留原始字段.csv.gz">归一运动员记录</a></p>
+<p>按金、银、铜依次排序，同奖牌组合并列。两套榜单各自按有奖牌的代表团排名；沿用逐运动剔除检验的范围，AIN 单列而不参与本页排名。运动员获奖行的差额可描述计数结构，单项剔除后的名次差来自全榜重排。</p>
+</section>
+<noscript>请启用 JavaScript 使用离线联动分析。</noscript>
+</main>
+</body>
+</html>

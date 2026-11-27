@@ -1,0 +1,15 @@
+:root{color-scheme:light dark;--paper:#f4f1e9;--ink:#1c353c;--muted:#536b70;--line:#496c733d;--gold:#805522;--teal:#247484}
+@media(prefers-color-scheme:dark){:root{--paper:#14212a;--ink:#eff3ef;--muted:#bbccce;--line:#acc8ca45;--gold:#efca8d;--teal:#8ac3cd}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+main{padding:20px clamp(16px,5vw,85px) 60px}nav,.controls{display:flex;gap:12px 24px;flex-wrap:wrap;align-items:center}a{color:var(--gold);text-underline-offset:4px}
+header{margin:28px 0}header p:first-child{color:var(--gold)}h1{font-size:clamp(30px,4vw,62px);line-height:1.15;margin:0}
+p{color:var(--muted);max-width:82ch}h2{line-height:1.25}
+.controls{border-block:1px solid var(--line);padding:12px 0}button,select{font:inherit;color:inherit;background:var(--paper);border:1px solid var(--line);border-radius:5px;padding:6px 9px;max-width:100%;min-height:40px}button{cursor:pointer}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.views,#evidence{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 36px}.views>section,#evidence>section{min-width:0;border-top:1px solid var(--line)}
+#rank-chart{display:block;width:100%;height:auto;touch-action:pan-y;border-block:1px solid var(--line);color:var(--teal)}
+#rank-chart circle{cursor:pointer;fill:currentColor;opacity:.65}#rank-chart circle.selected{fill:var(--gold);opacity:1}#rank-chart text{fill:var(--muted);font-size:13px}
+#teams{display:block;width:100%;margin-bottom:12px}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}td,th{padding:7px;text-align:left;border-bottom:1px solid var(--line)}
+#sports{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
+.sport{width:100%;display:grid;text-align:left;margin-bottom:6px;gap:3px}.sport[aria-pressed=true]{border-color:var(--gold)}.sport i{display:block;height:4px;background:var(--teal)}.sport i:last-child{background:var(--gold)}
+@media(max-width:800px){.views,#evidence{grid-template-columns:minmax(0,1fr)}}
