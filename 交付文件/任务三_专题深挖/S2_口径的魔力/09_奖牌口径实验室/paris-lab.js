@@ -70,7 +70,7 @@
     const extent = Math.max(1, ...plotted.map(row => Math.abs(row.shift)));
     plotted.sort((a,b) => order === 'shift' ? b.shift-a.shift : current[order].get(a.code)-current[order].get(b.code));
     points = plotted.map((row, index) => ({...row, x:240 + row.shift/extent*208, y:16 + index/Math.max(1,plotted.length-1)*173}));
-    chart.innerHTML = '<path d="M240 10V195" stroke="currentColor" opacity=".35"/><text x="32" y="213">−'+extent+'</text><text x="240" y="213" text-anchor="middle">0</text><text x="448" y="213" text-anchor="end">+'+extent+'</text>' +
+    chart.innerHTML = '<path class="rank-guides" d="M32 10V195 M136 10V195 M344 10V195 M448 10V195"/><path class="rank-zero" d="M240 10V195"/><text x="32" y="213">−'+extent+'</text><text x="240" y="213" text-anchor="middle">0</text><text x="448" y="213" text-anchor="end">+'+extent+'</text>' +
       points.slice().sort((a,b) => Number(selected.has(a.code))-Number(selected.has(b.code))).map(({code,x,y,shift}) =>
         '<circle class="'+(selected.has(code)?'selected':'')+'" data-code="'+code+'" cx="'+x+'" cy="'+y+'" r="'+(selected.has(code)?6:3.8)+'"><title>'+escape(label(code))+' '+signed(shift)+'</title></circle>').join('') +
       '<rect id="brush" y="9" height="188" fill="currentColor" opacity=".13" pointer-events="none" hidden/>';
@@ -94,7 +94,7 @@
     const max = Math.max(1,...[...groups.values()].flatMap(group=>[...group.values()].flat()));
     get('sports').innerHTML = [...groups].map(([code, group]) => '<section><h3>'+escape(label(code))+'</h3>'+
       ([...group].sort((a,b)=>Math.abs(b[1][1]-b[1][0])-Math.abs(a[1][1]-a[1][0])).map(([family, [off,raw]]) =>
-        '<button class="sport" data-sport="'+escape(family)+'" aria-pressed="'+(sport===family)+'" type="button"><strong>'+escape(sportName(family))+' · 差额 '+signed(raw-off)+'</strong><span>'+off+' 枚小项金牌 / '+raw+' 条金牌记录</span><i style="width:'+off/max*100+'%"></i><i style="width:'+raw/max*100+'%"></i></button>').join('') || '<p>当前情景无金牌记录。</p>')+'</section>').join('');
+        '<button class="sport" data-sport="'+escape(family)+'" aria-pressed="'+(sport===family)+'" type="button"><span class="sport-title"><strong>'+escape(sportName(family))+'</strong><span class="sport-delta">差额 '+signed(raw-off)+'</span></span><span>'+off+' 枚小项金牌 / '+raw+' 条金牌记录</span><i style="width:'+off/max*100+'%"></i><i style="width:'+raw/max*100+'%"></i></button>').join('') || '<p>当前情景无金牌记录。</p>')+'</section>').join('');
   }
 
   function drawEvidence(active) {

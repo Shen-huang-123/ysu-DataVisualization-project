@@ -106,3 +106,63 @@ html body .paris-site-bar #xz-menu#xz-menu {
   font-weight: 650;
 }
 .team-option:has(:disabled) { cursor: default; }
+
+/* The analysis panels share the page palette, with gold reserved for selection. */
+main > header h1 { text-wrap: balance; }
+.controls { gap: 12px 24px; }
+.controls label { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+#scenario { font-variant-numeric: tabular-nums; font-size: .9rem; }
+.views { gap: 22px clamp(24px, 3vw, 56px); }
+.views > section { padding-top: 18px; }
+.views h2 { margin: 0; }
+.views h2 + p { margin: 10px 0 18px; font-size: .925rem; }
+.rank-legend, .sport-legend, .sport-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+.rank-legend, .sport-legend { font-size: .82rem; color: var(--muted); }
+.rank-legend { margin-bottom: 8px; }
+.rank-legend span, .sport-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.rank-legend span::before, .sport-legend span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+.rank-legend span:last-child::before, .sport-legend span:last-child::before { background: var(--gold); }
+.sport-legend span::before { width: 14px; height: 4px; border-radius: 2px; }
+#rank-chart {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--teal) 4%, transparent);
+}
+.rank-guides { stroke: var(--line); stroke-width: .6; stroke-dasharray: 2 3; }
+.rank-zero { stroke: var(--muted); stroke-width: .8; opacity: .6; }
+#rank-chart circle.selected { stroke: var(--paper); stroke-width: 1.5; }
+#rank-chart + p { font-size: .85rem; }
+.team-picker { background: color-mix(in srgb, var(--ink) 2%, transparent); }
+.sport-toolbar { justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+#clear-sport { color: var(--gold); border-color: transparent; background: transparent; font-size: .85rem; }
+#clear-sport:hover { text-decoration: underline; }
+#sports { gap: 16px 20px; }
+#sports > section { min-width: 0; }
+#sports h3 { margin: 14px 0 4px; font-size: 1rem; }
+.sport {
+  gap: 4px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  padding: 9px 6px 10px;
+  margin: 0;
+  font-size: .86rem;
+}
+.sport:hover, .sport[aria-pressed=true] { background: color-mix(in srgb, var(--gold) 8%, transparent); }
+.sport-title { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 8px; }
+.sport-delta { color: var(--gold); font-variant-numeric: tabular-nums; }
+.sport > span:nth-child(2) { color: var(--muted); }
+.sport i { border-radius: 2px; }
+main > section[aria-labelledby="evidence-title"] { margin-top: 28px; border-top: 1px solid var(--line); }
