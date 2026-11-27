@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>历史三届 555 项：现行公开记录独立交叉核验</title>
+<style>
+:root{color-scheme:light dark}body{background:#f7f5ef;color:#17333a;font:16px/1.8 system-ui,sans-serif;margin:auto;max-width:56rem;padding:24px}a{color:#17656f;text-underline-offset:4px}section{border-top:1px solid #758b8b55;padding:1rem 0;scroll-margin-top:1rem}h2{font-size:1.25rem}section:target h2{color:#866124}nav{display:flex;flex-wrap:wrap;gap:8px 20px}@media(prefers-color-scheme:dark){body{background:#152129;color:#e8efec}a{color:#b8dedb}section:target h2{color:#ddc393}}
+
+.table-scroll{overflow:auto}
+table{border-collapse:collapse;min-width:42rem}
+th,td{padding:.7rem;text-align:left;vertical-align:top;border-bottom:1px solid #758b8b55}
+code{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<nav aria-label="报告导航">
+<a href="../../../../../index.html">← 作品首页</a>
+<a href="双来源核验报告.md" download>下载 Markdown 原件</a>
+<a href="历史555项独立交叉对照.csv" download>下载 555 项对照表</a>
+</nav>
+<main><h1>历史三届 555 项：现行公开记录独立交叉核验</h1>
+<p>核验时间：2026-11-14。范围：2008、2012、2016 年尚无现行一手逐项结果的 555 项。<strong>本轮完成的是独立二次来源交叉检查，不是现行 IOC 逐项核验。</strong></p>
+<h2>方法与结果</h2>
+<p>脚本 <code>项目工作区/scripts/olympedia_secondary_audit.py</code> 保存 Olympedia 97 份逐运动奖牌表原始 HTML、SHA256 和逐项链接；按届次、运动、项目名、性别及奖牌代表团一对一配对。555 项均配对，548 项与 2023 年 Olympics.com 第三方抓取存档的金银铜三色一致，7 项有差异。完整结果见 <code>历史555项独立交叉对照.csv</code>；<code>历史910项双层证据总表.csv</code>保留原一手来源层级，并附本轮对照，不把 Olympedia 伪装成 IOC。</p>
+<p>555 项中，2008 年 181 项、2012 年 184 项、2016 年 190 项。二次来源独立性增加了旧存档的可信度，但同源转载、奖牌重分配遗漏和页面错误仍可能存在；548 项一致不等于 548 项已获 IOC 现行认证。</p>
+<h2>七处差异及裁定</h2>
+<div aria-label="七处差异及裁定表" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>届次与小项</th>
+<th>差异</th>
+<th>复核决定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2008 皮划艇男子 K1 1000 米</td>
+<td>旧存档银牌空白；Olympedia 为挪威</td>
+<td>旧存档字段缺失；<a href="https://digital.la84.org/digital/api/collection/p17103coll8/id/64057/download">赛时官方成绩册 PDF 第 23、92 页</a>记载挪威 Larsen 第 2 名及银牌。</td>
+</tr>
+<tr>
+<td>2008 击剑男子个人佩剑</td>
+<td>旧存档金牌空白；Olympedia 为中国</td>
+<td>旧存档字段缺失；赛时官方成绩册本地 PDF 第 27、271 页记载钟满金牌；<a href="https://fie.org/news/1084-zhong-challenge-international-school-fencing-tournament-in-beijing">国际击剑联合会</a>亦确认。</td>
+</tr>
+<tr>
+<td>2008 现代五项女子个人</td>
+<td>官方赛时册铜牌乌克兰，旧存档及 Olympedia 铜牌白俄罗斯</td>
+<td><strong>合法的事后变化</strong>：UIPM 记载乌克兰选手 Tereshchuk 被 IOC 取消资格，并于 2018 年代表 IOC 向白俄罗斯 Prokopenko 颁发铜牌。不得把赛时册的乌克兰铜牌当成现行授牌。见<a href="https://www.uipmworld.org/node/106292">取消资格公告</a>与<a href="https://www.uipmworld.org/news/anastasiya-prokopenko-blr-receives-beijing-2008-olympic-bronze-medal">重新颁牌公告</a>。</td>
+</tr>
+<tr>
+<td>2008 射击女子飞碟多向</td>
+<td>旧存档金牌空白；Olympedia 为芬兰</td>
+<td>旧存档字段缺失；赛时官方成绩册本地 PDF 第 11 页及<a href="https://www.issf-sports.org/news/901">国际射联赛时报道</a>记载芬兰 Mäkelä-Nummela 金牌。</td>
+</tr>
+<tr>
+<td>2008 铁人三项男子奥运距离</td>
+<td>旧存档铜牌空白；Olympedia 为新西兰</td>
+<td>旧存档字段缺失；赛时官方成绩册本地 PDF 第 37 页及<a href="https://triathlon.org/news/olympic-games-highlights">世界铁人三项联盟赛时总结</a>记载新西兰 Docherty 铜牌。</td>
+</tr>
+<tr>
+<td>2012 皮划艇男子 C1 200 米</td>
+<td>赛时官方册为乌克兰／立陶宛／俄罗斯；Olympedia 为乌克兰／俄罗斯／西班牙；旧存档银牌空白</td>
+<td><strong>IOC 明确批准的事后变化</strong>：<a href="https://www.olympics.com/cio/news/reattribution-de-medailles-et-de-diplomes-dans-cinq-epreuves-des-jeux-olympiques-de-londres-2012">IOC 重分配公告</a>列俄罗斯升银、西班牙升铜；<a href="https://www.canoeicf.com/sites/default/files/london_2012_canoe_sprint_results_all.pdf">ICF 托管赛时成绩册</a>展示原赛时顺序。正式展示应标“重分配后”，不得混用两版。</td>
+</tr>
+<tr>
+<td>2012 举重男子 69 公斤级</td>
+<td>赛时铜牌罗马尼亚；Olympedia 铜牌朝鲜；旧存档铜牌空白</td>
+<td><a href="https://www.olympics.com/ioc/news/ioc-sanctions-three-athletes-for-failing-anti-doping-tests-at-london-2012-1">IOC 制裁公告</a>确认原铜牌被撤销；<strong>2026-11-17 补证：已读取<a href="https://www.olympics.com/ioc/news/ioc-executive-board-approves-medal-reallocations-from-olympic-games-london-2012-and-pyeongchang-2018">IOC执委会公告</a>，明确铜牌递补给朝鲜 Myong Hyok Kim</strong>。仅确认该铜牌动作，不扩张为整项现行结果全量核验。</td>
+</tr>
+</tbody>
+</table></div>
+<h2>证据边界</h2>
+<p>当前 IOC 小项结果入口在本环境返回 502 或 Access Denied。组委会赛时册证明当时成绩，国际协会现行页面证明其公布的后续结果，IOC 制裁或重分配公告仅证明明确写出的奖牌动作。三者不能互相冒名。<strong>555 项现行 IOC 逐项核验的未完成数仍为 555</strong>；本轮解决的是“单一旧抓取存档”依赖，找出 7 个需特殊解释的项目。取得 IOC 授权逐项导出后，用 <code>current_ioc_import_audit.py</code> 对现行授牌完成最终闭环。</p>
+<h2>复算</h2>
+<p>在项目根目录安装 <code>项目工作区/requirements.txt</code> 后运行 <code>python 项目工作区/scripts/olympedia_secondary_audit.py</code>。脚本优先读取已保存的原始页面，核对哈希后生成结果。检查点：原始页 97、旧存档独占项 555、独立配对 555、三色一致 548、差异 7、合并总表 910 且键不重复。</p></main>
+</body>
+</html>
