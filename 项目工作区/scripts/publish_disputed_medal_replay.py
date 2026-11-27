@@ -5,6 +5,7 @@ import re
 
 import markdown
 import pandas as pd
+from task2_localization import NOC_ZH
 
 ROOT = Path(__file__).resolve().parents[2]
 TASK = ROOT / '交付文件/任务三_专题深挖/S2_口径的魔力'
@@ -89,12 +90,21 @@ ledger=pd.DataFrame(ledger)
 result=pd.DataFrame(ranks)
 ledger.to_csv(OUT/'优先分歧逐项复核.csv',index=False,encoding='utf-8-sig')
 result.to_csv(OUT/'优先分歧名次复算.csv',index=False,encoding='utf-8-sig')
+def medal_labels(value):
+    return "／".join("空缺" if slot == "空" else "、".join(NOC_ZH[code] for code in slot.split("|"))
+                    for slot in value.split("/"))
+
+
+def rank_labels(value):
+    return re.sub(r"\b[A-Z]{3}\b", lambda match: NOC_ZH[match[0]], value)
+
+
 table=[]
 for _,r in ledger.sort_values(['Year','Event']).iterrows():
     links=f"[来源]({r['来源']})"
     if r['补充来源']:
         links+=f" · [补充]({r['补充来源']})"
-    table.append(f"| {r.Year} {r['案例']} | {r['原金银铜']} | {r['核对金银铜']} | {r['直接名次变化']} | {r['名次变化数']} | {links} |")
+    table.append(f"| {r.Year} {r['案例']} | {medal_labels(r['原金银铜'])} | {medal_labels(r['核对金银铜'])} | {rank_labels(r['直接名次变化'])} | {r['名次变化数']} | {links} |")
 totals=result[result['案例'].eq('同届全部分歧同时更正')]
 changes=totals[totals['原排名'].ne(totals['更新排名'])].groupby('Year').size()
 body=f"""# 优先分歧复核与奖牌榜影响
