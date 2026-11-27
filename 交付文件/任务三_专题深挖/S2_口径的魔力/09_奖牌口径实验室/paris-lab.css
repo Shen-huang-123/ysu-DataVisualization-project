@@ -217,3 +217,17 @@ main > section[aria-labelledby="evidence-title"] { margin-top: 28px; border-top:
   .lab-opening { grid-template-columns: 1fr; align-items: start; padding-top: 20px; }
   .opening-score { max-width: 30rem; }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .opening-copy, .opening-score {
+    animation: paris-enter 480ms cubic-bezier(.2,.65,.3,1) both;
+  }
+  .opening-score { animation-delay: 85ms; }
+  .opening-link span { transition: transform 180ms ease-out; }
+  .opening-link:is(:hover, :focus-visible) span { transform: translateY(4px); }
+  .sport, .team-option { transition: background-color 160ms ease-out, border-color 160ms ease-out; }
+  @keyframes paris-enter {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+}

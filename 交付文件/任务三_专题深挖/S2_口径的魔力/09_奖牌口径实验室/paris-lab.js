@@ -14,6 +14,7 @@
   let selected = new Set(['ESP']);
   let sport = '';
   let points = [];
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
   get('exclude').innerHTML = '<option value="">全部运动</option>' + options.map(s => '<option value="' + escape(s) + '">排除' + escape(sportName(s)) + '</option>').join('');
   teams.innerHTML = ['ESP', ...codes.filter(code => code !== 'ESP')].map(code => '<label class="team-option"><input type="checkbox" value="' +
@@ -69,11 +70,24 @@
     }));
     const extent = Math.max(1, ...plotted.map(row => Math.abs(row.shift)));
     plotted.sort((a,b) => order === 'shift' ? b.shift-a.shift : current[order].get(a.code)-current[order].get(b.code));
+    const previous = new Map(points.map(point => [point.code, point]));
     points = plotted.map((row, index) => ({...row, x:240 + row.shift/extent*208, y:16 + index/Math.max(1,plotted.length-1)*173}));
     chart.innerHTML = '<path class="rank-guides" d="M32 10V195 M136 10V195 M344 10V195 M448 10V195"/><path class="rank-zero" d="M240 10V195"/><text x="32" y="213">−'+extent+'</text><text x="240" y="213" text-anchor="middle">0</text><text x="448" y="213" text-anchor="end">+'+extent+'</text>' +
       points.slice().sort((a,b) => Number(selected.has(a.code))-Number(selected.has(b.code))).map(({code,x,y,shift}) =>
         '<circle class="'+(selected.has(code)?'selected':'')+'" data-code="'+code+'" cx="'+x+'" cy="'+y+'" r="'+(selected.has(code)?6:3.8)+'"><title>'+escape(label(code))+' '+signed(shift)+'</title></circle>').join('') +
       '<rect id="brush" y="9" height="188" fill="currentColor" opacity=".13" pointer-events="none" hidden/>';
+    if (!reducedMotion.matches) {
+      for (const marker of chart.querySelectorAll('circle')) {
+        const old = previous.get(marker.dataset.code);
+        if (!old) continue;
+        const dx = old.x - marker.cx.baseVal.value;
+        const dy = old.y - marker.cy.baseVal.value;
+        if (dx || dy) marker.animate(
+          [{transform: 'translate(' + dx + 'px,' + dy + 'px)'}, {transform: 'none'}],
+          {duration: 280, easing: 'cubic-bezier(.2,.65,.3,1)'}
+        );
+      }
+    }
     get('ranks').innerHTML = '<div class="scroll"><table><thead><tr><th>代表团</th><th>官方 原 → 当前</th><th>获奖行 原 → 当前</th><th>当前升幅</th></tr></thead><tbody>' +
       [...selected].map(code => '<tr><th scope="row">'+escape(label(code))+'</th>'+current.map((map,i)=>'<td>'+readRank(baseline[i],code)+' → '+readRank(map,code)+'</td>').join('')+'<td>'+(current.every(map=>map.has(code))?signed(current[0].get(code)-current[1].get(code)):'—')+'</td></tr>').join('')+'</tbody></table></div>';
     for (const input of teamInputs) {
@@ -257,8 +271,15 @@
     if (button) {
       sport = sport === button.dataset.sport ? '' : button.dataset.sport;
       drawSports(records.filter(row=>row[2]!==get('exclude').value));
-      [...get('sports').querySelectorAll('[data-sport]')].find(item =>
-        item.dataset.sport === button.dataset.sport && item.dataset.team === button.dataset.team)?.focus({preventScroll:true});
+      const updatedButton = [...get('sports').querySelectorAll('[data-sport]')].find(item =>
+        item.dataset.sport === button.dataset.sport && item.dataset.team === button.dataset.team);
+      updatedButton?.focus({preventScroll:true});
+      if (sport && !reducedMotion.matches) {
+        updatedButton?.nextElementSibling?.animate(
+          [{opacity: .55, transform: 'translateY(-4px)'}, {opacity: 1, transform: 'none'}],
+          {duration: 200, easing: 'ease-out'}
+        );
+      }
       drawEvidence(records.filter(row=>row[2]!==get('exclude').value));
     }
   });
