@@ -45,17 +45,26 @@ def display_events(values):
     return result
 
 
-def publish():
-    data = pd.read_csv(DATA / '归一数据_保留原始字段.csv.gz', keep_default_na=False)
+def build_payload(data_path, results):
+    data = pd.read_csv(data_path, keep_default_na=False)
     keys = [column for column in data.columns[1:12] if column != 'player_id']
     candidates = data.loc[data.duplicate_candidate].copy()
     candidates['kept'] = candidates.groupby(keys, dropna=False).source_row.transform('min')
     removed = candidates[candidates.include_main & candidates.duplicate_excess & candidates.is_medal]
     output = {}
     for key, file in [('main', 'main'), ('dedup', 'exclude_duplicate_excess'), ('inclusive', 'include_1906')]:
-        output[key] = pd.read_csv(RESULTS / f'edition_{file}.csv')[['Year','medal_rows']].values.tolist()
+        output[key] = pd.read_csv(results / f'edition_{file}.csv')[['Year','medal_rows']].values.tolist()
     output['excess'] = {str(year): group[['source_row','kept','NOC','Event','Medal']].values.tolist()
                         for year, group in removed.groupby('Year')}
+    raw = data.set_index('source_row')
+    pairs = {}
+    for row in removed[removed.Year.eq(1900)].itertuples():
+        kept = raw.loc[row.kept]
+        dropped = raw.loc[row.source_row]
+        assert kept[keys].equals(dropped[keys])
+        pairs[str(row.source_row)] = [str(kept.player_id), str(dropped.player_id),
+                                      *[[key, str(kept[key])] for key in keys]]
+    output['pairs1900'] = pairs
     dedup = dict(output['dedup'])
     assert all(count-dedup[year] == len(output['excess'].get(str(year), []))
                for year,count in output['main'])
@@ -74,11 +83,16 @@ def publish():
         | {row[2] for row in output['medals1906']}
         | {row[2] for result in output['events'].values() for row in result['examples']}
     )
+    return output
+
+
+def publish():
+    output = build_payload(DATA / '归一数据_保留原始字段.csv.gz', RESULTS)
     (TASK / '规则实验台数据.js').write_text('window.auditLabData = '+json.dumps(output,ensure_ascii=False)+';\n',encoding='utf8')
     page = TASK / 'index.html'
     html = page.read_bytes()
     html = re.sub(rb'<!-- AUDIT_LAB_(?:ENTRY|VIEW) -->.*?<!-- /AUDIT_LAB -->',b'',html,flags=re.S)
-    entry = '<!-- AUDIT_LAB_ENTRY --><p><a href="#audit-lab">打开数据规则实验台 ↓</a></p><!-- /AUDIT_LAB -->'
+    entry = '<!-- AUDIT_LAB_ENTRY --><p><a href="#audit-lab">打开数据规则实验台 ↓</a> · <a href="?review=1900#audit-rows">一键复核 1900 年 ↓</a></p><!-- /AUDIT_LAB -->'
     view = ('<!-- AUDIT_LAB_VIEW --><section id="audit-lab" aria-label="数据规则实验台"></section>'
             '<link rel="stylesheet" href="规则实验台.css"><script defer src="规则实验台数据.js"></script>'
             '<script defer src="规则实验台.js"></script><!-- /AUDIT_LAB -->')

@@ -1,6 +1,6 @@
 (() => {
   const root = document.querySelector('#audit-lab');
-  const {main, dedup, inclusive, excess, medals1906, events, official, names, sports, eventLabels} = window.auditLabData;
+  const {main, dedup, inclusive, excess, medals1906, events, official, names, sports, eventLabels, pairs1900} = window.auditLabData;
   const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const select = (id, values) => '<select id="'+id+'">'+values.map(v=>'<option>'+esc(v)+'</option>').join('')+'</select>';
   const original = (label, raw) => label && label !== raw
@@ -10,11 +10,11 @@
     '</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map(v=>'<td>'+(Array.isArray(v)?original(...v):esc(v))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
   const get = id => document.getElementById(id);
   root.innerHTML = `<h2>数据规则实验台</h2>
-  <p>切换一条规则，对照任务二的逐届图表，并追查源记录。</p>
+  <p>切换一条规则，对照任务二的逐届图表，并追查源记录。<a href="?review=1900#audit-rows">一键复核 1900 年 ↓</a></p>
   <div class="audit-controls"><label>规则 ${select('audit-mode',['重复候选','1906 届','小项标签泛化'])}</label>
   <label id="audit-setting">方案 <select id="audit-choice"></select></label>
   <label id="audit-year-label">查看届次 <select id="audit-year"></select></label></div>
-  <p id="audit-summary" role="status"></p><div id="audit-chart"></div><div id="audit-rows"></div>
+  <p id="audit-summary" role="status"></p><div id="audit-chart"></div><div id="audit-rows" tabindex="-1"></div>
   <p><a href="04_质量检查结果/edition_main.csv">主方案 CSV</a> · <a href="04_质量检查结果/edition_exclude_duplicate_excess.csv">扣除重复余量 CSV</a> ·
   <a href="04_质量检查结果/edition_include_1906.csv">纳入 1906 CSV</a> · <a href="04_质量检查结果/event_quality_by_year.csv">小项标签检查 CSV</a></p>`;
   function fill(id, values) {
@@ -54,8 +54,14 @@
       plot(alternate?dedup:main,yr,mode);
       const diff=baseline.get(yr)-reduced.get(yr);
       summary.textContent=`${yr} 年当前 ${alternate?reduced.get(yr):baseline.get(yr)} 条获奖行；扣除候选余量后 ${baseline.get(yr)} → ${reduced.get(yr)}，减少 ${diff} 条。1900 至 2024 两端仍呈增长。`;
-      rows.innerHTML='<h3>被标记的获奖行</h3><p>每组保留首行，其余行作为敏感性情景扣除；这些记录仍是候选。</p>'+
-        (diff?table(['扣除源行','保留源行','代表团','小项（可展开原文）','奖牌'],(excess[yr]||[]).map(([id,keep,noc,event,medal])=>[id,keep,[names[noc],noc],[eventLabels[event],event],award(medal)])):'<p>该届没有被扣除的获奖行。</p>');
+      const compare = (id, keep) => {
+        const [keptId, droppedId, ...fields] = pairs1900[id];
+        return ['对照源行 '+keep+' 与 '+id,
+          'player_id：保留行 '+keptId+'；候选扣除行 '+droppedId+'。\n其余原字段一致：\n'+
+          fields.map(([field,value])=>field+'：'+value).join('\n')];
+      };
+      rows.innerHTML='<h3>被标记的获奖行 · '+diff+' 条</h3><p>除 player_id 外其余原字段一致的记录编为同组。每组保留首行，其余行仅在敏感性情景扣除。</p>'+
+        (diff?table(['扣除源行','保留源行','代表团','小项（可展开原文）','奖牌',...(yr===1900?['逐行核对']:[])],(excess[yr]||[]).map(([id,keep,noc,event,medal])=>[id,keep,[names[noc],noc],[eventLabels[event],event],award(medal),...(yr===1900?[compare(id,keep)]:[])])):'<p>该届没有被扣除的获奖行。</p>');
     } else if(mode===1){
       plot(alternate?inclusive:main,1906,mode);
       summary.textContent=`当前${alternate?'纳入':'排除'} 1906 届。纳入后多一个观测点，增加 ${extended.get(1906)} 条获奖行；1896 和 2024 的数值不变。`;
@@ -89,6 +95,15 @@
     root.querySelector('[data-year="'+year+'"]')?.focus();
   });
   reset();
+  if (new URLSearchParams(location.search).get('review') === '1900') {
+    get('audit-year').value = '1900';
+    get('audit-choice').selectedIndex = 1;
+    render();
+    requestAnimationFrame(() => {
+      get('audit-rows').scrollIntoView();
+      get('audit-rows').focus({preventScroll:true});
+    });
+  }
   let chartWidth = get('audit-chart').clientWidth;
   new ResizeObserver(([entry]) => {
     const width = Math.round(entry.contentRect.width);

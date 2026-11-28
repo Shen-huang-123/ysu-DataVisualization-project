@@ -41,3 +41,6 @@ body.xz-dark #audit-lab .audit-scroll thead th { background:#1b2b34 !important; 
 #audit-lab .audit-scroll :is(th,td) { padding:10px 14px; }
 #audit-rows td:first-child, #audit-rows td:nth-child(2) { font-variant-numeric:tabular-nums; }
 #audit-rows tbody tr:nth-child(even) td { background:color-mix(in srgb,currentColor 3%,transparent); }
+
+#audit-rows { scroll-margin-top: 90px; }
+#audit-rows details small { white-space: pre-line; overflow-wrap: anywhere; }
