@@ -97,8 +97,8 @@ def publish_reading(report, payload):
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}｜百年全景</title>
 {assets}
-<link rel="stylesheet" href="sport-mix-interactive.css">
-<script defer src="sport-mix-interactive.js"></script>
+<link rel="stylesheet" href="sport-mix-interactive.css?v=2">
+<script defer src="sport-mix-interactive.js?v=2"></script>
 </head>
 <body class="supplement-reading">
 {nav}
@@ -114,7 +114,8 @@ def publish_reading(report, payload):
 <div id="mix-result" aria-live="polite">
 <dl class="mix-results"><div><dt>前五份额</dt><dd id="mix-share"></dd></div><div><dt>相较 2016</dt><dd id="mix-delta"></dd></div><div><dt>有效获奖代表团数</dt><dd id="mix-effective"></dd></div></dl>
 <h3>当届重新排名的前五</h3>
-<ol id="mix-ranks"></ol>
+<p id="mix-rank-scale"></p>
+<ol id="mix-ranks" role="list" aria-describedby="mix-rank-scale"></ol>
 <p id="mix-cohort"></p>
 </div>
 <h3>追查固定五队的逐运动贡献</h3>

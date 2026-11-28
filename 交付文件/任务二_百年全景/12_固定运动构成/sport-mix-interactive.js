@@ -5,6 +5,8 @@
   const teamName = code => team_names[code] || code;
   const percent = n => (n * 100).toFixed(2) + '%';
   const signed = n => (n > 0 ? '+' : '') + n.toFixed(2);
+  const ceiling = Math.ceil(Math.max(...teams.map(row => row[3]))*20)/20;
+  get('mix-rank-scale').textContent = `份额刻度 0–${Math.round(ceiling * 100)}%，各届与各口径共用。`;
   let animation;
   function render() {
     const selectedYear = Number(year.value);
@@ -17,12 +19,23 @@
     get('mix-delta').textContent = signed(100 * (summary[6] - prior[6])) + ' 个百分点';
     const cohort = roster.reduce((sum,row) => sum + (baseline.includes(row[2]) ? row[3] : 0),0);
     get('mix-cohort').textContent = `固定 2016 年标准化榜五队（${baseline.map(teamName).join('、')}）的合计份额为 ${percent(cohort)}。`;
-    get('mix-ranks').replaceChildren(...roster.slice(0,5).map(([, ,code,share]) => {
+    get('mix-ranks').replaceChildren(...roster.slice(0,5).map(([, ,code,share],index) => {
       const row = document.createElement('li');
-      row.style.setProperty('--mix-width', share * 100 + '%');
-      for (const label of [teamName(code), percent(share)]) {
+      for (const [className,label] of [
+        ['mix-rank-number',String(index+1)],
+        ['mix-team-name',teamName(code)],
+        ['mix-rank-bar',''],
+        ['mix-rank-value',percent(share)],
+      ]) {
         const text = document.createElement('span');
+        text.className = className;
         text.textContent = label;
+        if (className === 'mix-rank-bar') {
+          text.setAttribute('aria-hidden','true');
+          text.style.setProperty('--mix-width', share / ceiling * 100 + '%');
+        } else if (className === 'mix-rank-number') {
+          text.setAttribute('aria-hidden','true');
+        }
         row.append(text);
       }
       return row;
