@@ -372,25 +372,48 @@ def make_report():
 
 
 def make_poster():
-    w,h=portrait(A2); c=canvas.Canvas(str(POSTER),pagesize=(w,h),pageCompression=1); bg(c,w,h)
-    c.setFillColor(P['gold']); c.setFont('CNB',20); c.drawString(56,h-54,'晓组织 · 燕山大学 · 数据可视化挑战赛')
-    c.setFillColor(P['ink']); c.setFont('CNB',48); c.drawString(56,h-118,'百年圣火')
-    c.setFont('CNB',23); c.setFillColor(P['teal']); c.drawString(56,h-156,'扩张、权力转移与结构性平权')
-    image_fit(c,FIG/'00_封面总览英雄图.png',48,h-650,w-96,450)
-    c.setFillColor(P['ink']); c.setFont('CNB',22); c.drawString(56,h-690,'三个结论，把“更多”变成“更懂”')
-    col=(w-128)/2
-    image_fit(c,FIG/'B_主场效应与项目贡献.png',48,h-1095,col,350)
-    image_fit(c,FIG/'C_女性三层平权曲线.png',72+col,h-1095,col,350)
-    image_fit(c,FIG/'D_项目新增退出重返流向.png',48,h-1475,w-96,320)
-    y=170
-    c.setFillColor(P['red']); c.setFont('CNB',19); c.drawString(56,y,'扩张 ≠ 垄断')
-    wrap(c,'参赛记录扩大39.2倍，前五强份额却从83.9%降至41.8%。',56,y-28,230,11,17)
-    c.setFillColor(P['teal']); c.setFont('CNB',19); c.drawString(330,y,'参与平权 ≠ 机会完全平权')
-    wrap(c,'2024女性参赛占49.1%，女子专属小项占45.9%。',330,y-28,250,11,17)
-    c.setFillColor(P['gold']); c.setFont('CNB',19); c.drawString(630,y,'主场身份 ≠ 必然增长')
-    wrap(c,'九个现代案例八升一降，增益来自不同优势项目组合。',630,y-28,250,11,17)
-    c.setStrokeColor(P['line']); c.line(56,75,w-56,75); c.setFillColor(P['grey']); c.setFont('CN',9)
-    c.drawString(56,50,'1896—2024｜运动员记录口径｜排除1906｜2024小项采用官方329项表｜张子涵60% · 陈旭40%')
+    w,h = portrait(A2)
+    c = canvas.Canvas(str(POSTER), pagesize=(w,h), pageCompression=1)
+    c.setTitle('百年圣火｜百年奥运全景 A2 海报')
+    c.setAuthor('晓组织｜燕山大学')
+    bg(c,w,h)
+    left, gutter = 55, 36
+    column = (w-2*left-gutter)/2
+    for i,color in enumerate(CHAPTER_COLORS.values()):
+        c.setFillColor(color)
+        c.rect(left+i*(w-2*left)/4,h-45,(w-2*left)/4,3,fill=1,stroke=0)
+    wrap(c,'任务二 · 百年奥运全景',left,h-87,column,19,25,P['teal'],'CNB')
+    c.setFont('CN',16)
+    c.setFillColor(P['grey'])
+    c.drawRightString(w-left,h-87,'1896—2024  /  夏季奥运会')
+    wrap(c,'百年圣火',left,h-177,w-2*left,81,88,P['ink'],'CNB')
+    wrap(c,'规模扩张之后，荣誉与机会如何分布？',left,h-228,w-2*left,29,38,P['teal'])
+    cards = (
+        ('A','奖牌格局','前五份额 83.9% → 41.8%','A_规模扩张与奖牌集中度.png',
+         '奖牌记录总量大增，前五份额长期下降。2016 至 2024 年，获奖队伍变多，前五份额却由 39.3% 回升至 41.8%。'),
+        ('B','代表团兴衰','美国 264 → 298 条','B_强国时代热力图.png',
+         '里约至东京，美国同届份额从 13.05% 降至 12.17%。全场记录增长更快，拉低了美国份额。'),
+        ('C','女性参与','巴黎 2024：49.1%','C_女性三层平权曲线.png',
+         '女性参赛记录占 49.1%，获奖记录占 50.3%，女子专属小项占 45.9%。三个分母对应参与、获奖和赛程。'),
+        ('D','项目演化','净减 2 类，更替 14 类','D_项目新增退出重返流向.png',
+         '1900 到 1904 年，归一运动大类从 20 降至 18。4 类首次出现、2 类重返、8 类在后一届没有记录。'),
+    )
+    for i,(code,title,number,name,description) in enumerate(cards):
+        x = left+(i%2)*(column+gutter)
+        y = h-292-(i//2)*605
+        color = CHAPTER_COLORS[code]
+        c.setStrokeColor(color)
+        c.setLineWidth(1.7)
+        c.line(x,y,x+column,y)
+        wrap(c,f'{code}  {title}',x,y-32,column,17,23,color,'CNB')
+        wrap(c,number,x,y-81,column,31,38,P['ink'],'CNB')
+        y = report_figure(c,name,x,y-465,column,355,align_top=True)
+        y = wrap(c,description,x,y-15,column,16,24)
+        assert y >= (h-292-605-570 if i >= 2 else h-292-570)
+    c.setStrokeColor(P['line'])
+    c.line(left,118,w-left,118)
+    wrap(c,'数据来源｜任务一归一数据、任务二逐届复核表及巴黎 2024 官方小项补充表',left,87,w-2*left,13,18,P['grey'])
+    wrap(c,'晓组织 · 燕山大学｜张子涵 60% · 陈旭 40%',left,56,w-2*left,15,21,P['ink'],'CNB')
     c.save()
 
 if __name__ == "__main__":
