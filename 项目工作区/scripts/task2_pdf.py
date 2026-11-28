@@ -1,3 +1,4 @@
+import csv
 from pathlib import Path
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4, A2, portrait
@@ -41,10 +42,65 @@ def wrap(c,text,x,y,maxw,size=10,leading=16,color=None,font='CN'):
 
 def image_fit(c,path,x,y,w,h):
     im=ImageReader(str(path)); iw,ih=im.getSize(); scale=min(w/iw,h/ih); nw,nh=iw*scale,ih*scale
-    c.drawImage(im,x+(w-nw)/2,y+(h-nh)/2,nw,nh,mask='auto')
+    bottom = y + (h - nh) / 2
+    c.drawImage(im, x+(w-nw)/2, bottom, nw, nh, mask='auto')
+    return bottom
 
 def footer_note(c,w,text):
     c.setStrokeColor(P['line']); c.line(40,47,w-40,47); wrap(c,text,40,36,w-80,7.5,10,P['grey'])
+
+FIGURE_SCOPE = {
+    '00_封面总览英雄图.png': '1896—2024，排除 1906。参赛与获奖为运动员记录行，前五份额以各届全部获奖行为分母。',
+    'A_规模扩张与奖牌集中度.png': '1896—2024，排除 1906。参赛与获奖为运动员记录行；前五份额以当届全部获奖行为分母。',
+    'A_历史累计奖牌记录榜.png': '1896—2024，排除 1906。按历史代表团累计获奖运动员记录行。',
+    'B_十二代表团兴衰曲线.png': '1896—2024，排除 1906。份额为代表团获奖运动员行除以当届全部获奖运动员行。',
+    'B_强国时代热力图.png': '1896—2024，排除 1906。色阶为代表团占当届获奖运动员记录的份额。',
+    'B_主场效应准实验检验.png': '主办届 1964—2024，共 9 案例，排除 1906。匹配差异按获奖运动员行份额计算，单位为百分点。',
+    'B_20届合成对照与稳健性.png': '候选主办届 1948—2024，排除 1906。按获奖运动员行份额对照，差值单位为百分点。',
+    'C_女性三层平权曲线.png': '1896—2024，排除 1906。参赛与获奖按运动员行；小项按历史 Event 代理，2020 留空，2024 用官方结构表。',
+    'C_2024代表团女性结构差.png': '仅巴黎 2024，1906 不在图示范围。参赛与获奖按运动员行，份额差以百分点计。',
+    'D_项目新增退出重返流向.png': '1896—2024，排除 1906。按有参赛记录的归一运动大类计数，并与相邻已收录届次比较。',
+    'D_小项增长与项目更替.png': '排除 1906。1896—2016 按 Event 去重估计小项，2020 留空，2024 用官方 329 项；矩阵按归一运动大类。',
+}
+
+
+def report_figure(c, name, x, y, width, height):
+    bottom = image_fit(c, FIG/name, x, y, width, height)
+    wrap(c, '图注｜' + FIGURE_SCOPE[name], x, bottom-12, width, 8.6, 12, P['grey'])
+
+
+def team_share_case(c, width, y):
+    years = ('2016', '2020')
+    tables = TASK/'02_数据表'
+    with (tables/'B_十二代表团逐届份额.csv').open(encoding='utf-8-sig', newline='') as file:
+        team = {r['Year']: int(float(r['medal_records'])) for r in csv.DictReader(file) if r['NOC'] == 'USA' and r['Year'] in years}
+    with (tables/'A_逐届规模与集中度.csv').open(encoding='utf-8-sig', newline='') as file:
+        total = {r['Year']: int(r['medal_records']) for r in csv.DictReader(file)}
+    counts = [team[year] for year in years]
+    denominators = [total[year] for year in years]
+    shares = [100*n/d for n,d in zip(counts, denominators)]
+    wrap(c, '里约到东京｜美国获奖记录增加，同届份额却下降', 40, y, width-80, 12, 16, P['teal'], 'CNB')
+    column = (width-100)/2
+    headings = ('美国获奖记录（条）', '美国占当届获奖记录份额')
+    for i, (heading, values, limit, color) in enumerate(zip(headings, (counts, shares), (320, 15), ('teal', 'gold'))):
+        x = 40+i*(column+20)
+        wrap(c, heading, x, y-21, column, 9, 12)
+        for j, (year, value) in enumerate(zip(years, values)):
+            row = y-37-j*15
+            wrap(c, year, x, row, 30, 8.5, 11)
+            length = column-83
+            c.setFillColor(P['line'])
+            c.rect(x+35, row, length, 5, fill=1, stroke=0)
+            c.setFillColor(P[color])
+            c.rect(x+35, row, length*value/limit, 5, fill=1, stroke=0)
+            c.setFont('CNB', 9)
+            c.setFillColor(P['ink'])
+            c.drawRightString(x+column, row, f'{value:.2f}%' if i else str(value))
+    wrap(c, f'全场获奖记录由 {denominators[0]:,} 条增至 {denominators[1]:,} 条，增长快于美国，份额下降 {shares[0]-shares[1]:.2f} 个百分点。',
+         40, y-71, width-80, 8.6, 12)
+    wrap(c, '图注｜仅 2016 与 2020 两届，排除 1906；以获奖运动员记录行为单位，东京按届次记为 2020。',
+         40, y-87, width-80, 8.6, 12, P['grey'])
+
 
 def report_cover(c,w,h):
     bg(c,w,h)
@@ -55,7 +111,7 @@ def report_cover(c,w,h):
     wrap(c,'任务二 · 1896—2024 夏季奥运',40,h-75,w-80,10,16,P['teal'],'CNB')
     wrap(c,'百年圣火',40,h-141,w-80,54,60,P['ink'],'CNB')
     wrap(c,'扩张、权力转移与结构性平权',40,h-181,w-80,17,22,P['teal'],'CNB')
-    image_fit(c,FIG/'00_封面总览英雄图.png',40,178,w-80,454)
+    report_figure(c,'00_封面总览英雄图.png',40,178,w-80,454)
     c.setStrokeColor(P['line'])
     c.line(40,151,w-40,151)
     wrap(c,'奖牌格局     代表团兴衰     女性参与     项目演化',40,121,w-80,12,18,P['ink'],'CNB')
@@ -103,11 +159,14 @@ def make_report():
       ('D 小项数量','从43到329：扩容主线中的口径控制','D_小项增长与项目更替.png','可比口径下，小项数从1896年的约43个增至1920年的158个、1984年的221个、2000年的300个，2024年达到官方329个。2020年留空是主动控制：原始Event已泛化，直接计数会制造虚假断崖。宁可披露不可比，也不把错误精确包装成趋势。','1896至2016按清洗后Event唯一值；2020不计；2024采用官方329项表。')]
     p=3
     for kicker,title,img,body,note in pages:
-        bg(c,w,h); header(c,w,h,kicker,title,p); image_fit(c,FIG/img,40,260,w-80,450)
-        wrap(c,body,40,225,w-80,10,16); footer_note(c,w,note); c.showPage(); p+=1
+        bg(c,w,h); header(c,w,h,kicker,title,p); report_figure(c,img,40,260,w-80,450)
+        next_y = wrap(c,body,40,225,w-80,10,16)
+        if img == 'B_十二代表团兴衰曲线.png':
+            team_share_case(c,w,next_y-14)
+        footer_note(c,w,note); c.showPage(); p+=1
     # final
     bg(c,w,h); header(c,w,h,'结论','结论：扩张中的去集中化',p)
-    image_fit(c,FIG/'00_封面总览英雄图.png',40,345,w-80,345)
+    report_figure(c,'00_封面总览英雄图.png',40,345,w-80,345)
     y=315
     y=wrap(c,'奥运百年发展的核心，不只是“更多”，而是覆盖更广、权力更分散、平权更接近，同时仍保留结构差异。规模扩张带来绝对奖牌记录通胀，却没有制造同等程度的强国垄断；强国格局在历史断点中重组；女性人数平权接近实现，但项目机会仍未完全对称；项目表则通过持续增删回应时代。',40,y,w-80,11,18)
     y=wrap(c,'交互版本：任务二_百年全景/05_交互总览/index.html（离线打开）',40,y-15,w-80,9.5,15,P['teal'],'CNB')
