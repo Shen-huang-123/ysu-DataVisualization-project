@@ -79,28 +79,35 @@ def team_share_case(c, width, y):
     counts = [team[year] for year in years]
     denominators = [total[year] for year in years]
     shares = [100*n/d for n,d in zip(counts, denominators)]
-    wrap(c, '里约到东京｜美国获奖记录增加，同届份额却下降', 40, y, width-80, 12, 16, P['teal'], 'CNB')
-    column = (width-100)/2
-    headings = ('美国获奖记录（条）', '美国占当届获奖记录份额')
-    for i, (heading, values, limit, color) in enumerate(zip(headings, (counts, shares), (320, 15), ('teal', 'gold'))):
-        x = 40+i*(column+20)
-        wrap(c, heading, x, y-21, column, 9, 12)
-        for j, (year, value) in enumerate(zip(years, values)):
-            row = y-37-j*15
-            wrap(c, year, x, row, 30, 8.5, 11)
-            length = column-83
-            c.setFillColor(P['line'])
-            c.rect(x+35, row, length, 5, fill=1, stroke=0)
-            c.setFillColor(P[color])
-            c.rect(x+35, row, length*value/limit, 5, fill=1, stroke=0)
-            c.setFont('CNB', 9)
-            c.setFillColor(P['ink'])
-            c.drawRightString(x+column, row, f'{value:.2f}%' if i else str(value))
-    wrap(c, f'全场获奖记录由 {denominators[0]:,} 条增至 {denominators[1]:,} 条，增长快于美国，份额下降 {shares[0]-shares[1]:.2f} 个百分点。',
-         40, y-71, width-80, 8.6, 12)
+    c.setFillColor(HexColor('#FAF9F5'))
+    c.rect(40, y-92, width-80, 106, fill=1, stroke=0)
+    wrap(c, '局部对照｜里约 2016 → 东京 2020', 56, y, width-112, 10, 14, P['teal'], 'CNB')
+    column = (width-136)/2
+    headings = ('美国获奖运动员记录（条）', '美国占当届获奖记录的份额')
+    for i, (heading, values, color) in enumerate(zip(headings, (counts, shares), ('teal', 'gold'))):
+        x = 56+i*(column+24)
+        wrap(c, heading, x, y-17, column, 8.8, 12, P['grey'])
+        left, right = x+32, x+column-32
+        low, high = y-51, y-40
+        first, last = (low, high) if values[1] > values[0] else (high, low)
+        c.setStrokeColor(P[color])
+        c.setFillColor(P[color])
+        c.setLineWidth(1.15)
+        c.line(left, first, right, last)
+        c.circle(left, first, 2, stroke=0, fill=1)
+        c.circle(right, last, 2, stroke=0, fill=1)
+        c.setFont('CNB', 10)
+        for px, py, value in ((left, first, values[0]), (right, last, values[1])):
+            c.drawCentredString(px, py+5, f'{value:.2f}%' if i else str(value))
+        c.setFont('CN', 8)
+        c.setFillColor(P['grey'])
+        for px, year in ((left, years[0]), (right, years[1])):
+            c.drawCentredString(px, y-65, year)
+    c.setLineWidth(1)
     wrap(c, '图注｜仅 2016 与 2020 两届，排除 1906；以获奖运动员记录行为单位，东京按届次记为 2020。',
-         40, y-87, width-80, 8.6, 12, P['grey'])
-
+         56, y-82, width-112, 8.6, 12, P['grey'])
+    return (f'美国获奖记录增加，但全场由 {denominators[0]:,} 条增至 {denominators[1]:,} 条，增长更快。'
+            f'因此，美国所占份额反而下降 {shares[0]-shares[1]:.2f} 个百分点。')
 
 def report_cover(c,w,h):
     bg(c,w,h)
@@ -159,10 +166,15 @@ def make_report():
       ('D 小项数量','从43到329：扩容主线中的口径控制','D_小项增长与项目更替.png','可比口径下，小项数从1896年的约43个增至1920年的158个、1984年的221个、2000年的300个，2024年达到官方329个。2020年留空是主动控制：原始Event已泛化，直接计数会制造虚假断崖。宁可披露不可比，也不把错误精确包装成趋势。','1896至2016按清洗后Event唯一值；2020不计；2024采用官方329项表。')]
     p=3
     for kicker,title,img,body,note in pages:
-        bg(c,w,h); header(c,w,h,kicker,title,p); report_figure(c,img,40,260,w-80,450)
-        next_y = wrap(c,body,40,225,w-80,10,16)
+        bg(c,w,h); header(c,w,h,kicker,title,p)
         if img == 'B_十二代表团兴衰曲线.png':
-            team_share_case(c,w,next_y-14)
+            report_figure(c,img,40,295,w-80,468)
+            interpretation = team_share_case(c,w,280)
+            y = wrap(c,interpretation,40,164,w-80,10,16)
+            wrap(c,body,40,y-7,w-80,9.2,15)
+        else:
+            report_figure(c,img,40,260,w-80,450)
+            wrap(c,body,40,225,w-80,10,16)
         footer_note(c,w,note); c.showPage(); p+=1
     # final
     bg(c,w,h); header(c,w,h,'结论','结论：扩张中的去集中化',p)
