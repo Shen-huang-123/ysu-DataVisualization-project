@@ -65,7 +65,7 @@ def footer_note(c,w,text):
     c.setStrokeColor(P['line']); c.line(40,47,w-40,47); wrap(c,text,40,36,w-80,7.5,10,P['grey'])
 
 FIGURE_SCOPE = {
-    '00_封面总览英雄图.png': '1896—2024，排除 1906。参赛与获奖为运动员记录行，前五份额以各届全部获奖行为分母。',
+    '00_封面总览英雄图.png': '1896—2024，排除 1906。参赛与获奖按运动员记录行；前五份额以当届全部获奖行为分母；2024 小项据官方补充表。',
     'A_规模扩张与奖牌集中度.png': '1896—2024，排除 1906。参赛与获奖为运动员记录行；前五份额以当届全部获奖行为分母。',
     'A_历史累计奖牌记录榜.png': '1896—2024，排除 1906。按历史代表团累计获奖运动员记录行。',
     'B_十二代表团兴衰曲线.png': '1896—2024，排除 1906。份额为代表团获奖运动员行除以当届全部获奖运动员行。',
@@ -134,6 +134,72 @@ def team_share_case(c, width, y):
     )
 
 
+def panorama_overview(c, w, top):
+    tables = TASK/'02_数据表'
+    with (tables/'A_逐届规模与集中度.csv').open(encoding='utf-8-sig', newline='') as file:
+        editions = [row for row in csv.DictReader(file) if row['Year'] != '1906']
+    with (tables/'C_女性参与获奖与小项.csv').open(encoding='utf-8-sig', newline='') as file:
+        women = next(row for row in csv.DictReader(file) if row[''] == '2024')
+    start, latest = editions[0], editions[-1]
+    left, right = 78, w-48
+    bottom, plot_top = top-203, top-43
+
+    def point(row):
+        year = int(row['Year'])
+        x = left + (right-left)*(year-1896)/(2024-1896)
+        y = bottom + (plot_top-bottom)*int(row['participation_records'])/16000
+        return x,y
+
+    wrap(c,'参赛规模与获奖分布',40,top,w-80,17,22,P['ink'],'CNB')
+    wrap(c,'夏奥参赛记录（行）',40,top-20,w-80,9,12,P['grey'])
+    c.setFont('CN',8)
+    c.setLineWidth(.5)
+    for amount in (0,4000,8000,12000,16000):
+        y = bottom+(plot_top-bottom)*amount/16000
+        c.setStrokeColor(P['line'])
+        c.line(left,y,right,y)
+        c.setFillColor(P['grey'])
+        c.drawRightString(left-8,y-3,f'{amount:,}')
+    points = [point(row) for row in editions]
+    path = c.beginPath()
+    path.moveTo(*points[0])
+    for x,y in points[1:]:
+        path.lineTo(x,y)
+    c.setLineWidth(1.8)
+    c.setStrokeColor(P['teal'])
+    c.drawPath(path)
+    c.setLineWidth(1)
+    for label in (1896,1920,1948,1972,2000,2024):
+        x = left+(right-left)*(label-1896)/128
+        c.setFillColor(P['grey'])
+        c.drawCentredString(x,bottom-15,str(label))
+    for row, alignment in ((start,'left'),(latest,'right')):
+        x,y = point(row)
+        c.setFillColor(P['teal'])
+        c.circle(x,y,2.5,stroke=0,fill=1)
+        c.setFont('CNB',9)
+        text = f"{int(row['participation_records']):,}"
+        if alignment == 'left':
+            c.drawString(x+5,y+7,text)
+        else:
+            c.drawRightString(x-5,y+7,text)
+    metrics = (
+        ('A','前五份额',f"{float(start['top5_share']):.1%} → {float(latest['top5_share']):.1%}"),
+        ('B','参赛代表团',f"{start['delegations']} → {latest['delegations']}"),
+        ('C','2024 女性参赛记录',f"{float(women['participation_share']):.1%}"),
+        ('D','2024 官方小项',f"{int(float(women['event_units']))} 项"),
+    )
+    width = (w-80)/4
+    for i,(chapter,label,value) in enumerate(metrics):
+        x = 40+i*width
+        color = CHAPTER_COLORS[chapter]
+        c.setStrokeColor(color)
+        c.line(x,bottom-37,x+width-15,bottom-37)
+        wrap(c,value,x,bottom-60,width-12,15,20,color,'CNB')
+        wrap(c,label,x,bottom-78,width-12,8.5,12,P['grey'])
+    return wrap(c,'图注｜'+FIGURE_SCOPE['00_封面总览英雄图.png'],40,bottom-104,w-80,8.6,12,P['grey'])
+
+
 def report_cover(c,w,h):
     bg(c,w,h)
     colors = ['#427D9D','#26383F','#AE5260','#B6883D','#548873']
@@ -144,7 +210,7 @@ def report_cover(c,w,h):
     wrap(c,'百年圣火',40,h-141,w-80,54,60,P['ink'],'CNB')
     wrap(c,'扩张、权力转移与结构性平权',40,h-181,w-80,17,22,P['teal'],'CNB')
     wrap(c,'参赛规模扩大之后，奖牌、参与机会和运动项目如何重新分布？',40,h-225,w-80,12,18,P['grey'])
-    report_figure(c,'00_封面总览英雄图.png',40,178,w-80,454)
+    panorama_overview(c,w,h-269)
     c.setStrokeColor(P['line'])
     c.line(40,151,w-40,151)
     wrap(c,'奖牌格局     代表团兴衰     女性参与     项目演化',40,121,w-80,12,18,P['ink'],'CNB')
@@ -256,7 +322,7 @@ def make_report():
         footer_note(c,w,note); c.showPage(); p+=1
     # final
     bg(c,w,h); header(c,w,h,'结论','结论：扩张中的去集中化',p)
-    y = report_figure(c,'00_封面总览英雄图.png',40,345,w-80,h-457,align_top=True)
+    y = panorama_overview(c,w,h-121)
     y = wrap(c,'综合解读',40,y-12,w-80,12,20,P['teal'],'CNB')
     y=wrap(c,'奥运百年发展的核心，不只是“更多”，而是覆盖更广、权力更分散、平权更接近，同时仍保留结构差异。规模扩张带来绝对奖牌记录通胀，却没有制造同等程度的强国垄断；强国格局在历史断点中重组；女性人数平权接近实现，但项目机会仍未完全对称；项目表则通过持续增删回应时代。',40,y,w-80,11,18)
     y=wrap(c,'这些结果可以互相核对。先用 A 的获奖覆盖与集中度区分规模和分布，再用 B 的美国案例核对绝对数与相对份额。'
