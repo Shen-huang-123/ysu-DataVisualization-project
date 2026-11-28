@@ -72,6 +72,43 @@ def calculate():
     russian_end = float(combine(fixed_weights,probabilities[end]).get('RUS',0))
     return summaries,teams,counts,fixed_weights,contribution,baseline_top,old,new,split,sensitivity,russian_start,russian_end
 
+def publish_reading(report):
+    import re
+    from markdown import markdown
+
+    reference = (TASK/'08_女性结构分解/女性结构分解.html').read_text(encoding='utf-8')
+    nav = re.search(r'<nav aria-label="作品导航" id="xz-nav".*?</aside>', reference)[0]
+    assets = '\n'.join(re.search(pattern,reference)[0] for pattern in (
+        r'<link[^>]+id="supplement-assets"[^>]*>',
+        r'<script id="supplement-theme-preload">.*?</script>',
+        r'<script[^>]*src="[^"]*supplement-reading.js[^"]*"[^>]*></script>',
+        r'<link[^>]+id="supp-task-nav-assets"[^>]*>',
+        r'<script[^>]*src="[^"]*integrated-nav.js[^"]*"[^>]*></script>',
+        r'<link[^>]+id="chart-surface-theme"[^>]*>',
+    ))
+    title,body = report.split('\n',1)
+    content = markdown(body)
+    content = re.sub(r'<p>(<img [^>]+?)/></p>',r'<figure>\1 class="chart-surface" /></figure>',content,count=1)
+    title = title.removeprefix('# ')
+    html = f'''<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}｜百年全景</title>
+{assets}
+</head>
+<body class="supplement-reading">
+{nav}
+<main class="supp-content">
+<p><a href="../11_四视角独立交付/四视角核心图复核.html#view-A">← 返回奖牌格局图表</a></p>
+<h1>{title}</h1>
+{content}
+<p><a href="固定运动构成复核.md" download>下载 Markdown 原件</a></p>
+</main>
+</body></html>
+'''
+    (OUT/'固定运动构成复核.html').write_text(html,encoding='utf-8')
+
+
 def publish():
     import matplotlib
     matplotlib.use('Agg')
@@ -131,6 +168,7 @@ def publish():
 [三口径集中度](三口径集中度.csv) · [逐队份额](逐队份额.csv) · [运动权重与贡献](逐运动权重与固定五队贡献.csv) · [变化分解](共同运动变化分解.csv) · [固定权重敏感性](固定权重敏感性.csv)
 """
     (OUT/'固定运动构成复核.md').write_text(report,encoding='utf-8')
+    publish_reading(report)
     review=TASK/'11_四视角独立交付/四视角核心图复核.html'
     import re
     from html import escape
@@ -143,7 +181,7 @@ def publish():
         f'<figure class="additional-core-chart"><a href="{prefix}固定运动构成与奖牌集中度.png">'
         f'<img src="{prefix}固定运动构成与奖牌集中度.png" alt="固定运动构成前后的集中度和运动贡献" loading="lazy"></a>'
         f'<figcaption>{escape(note)}</figcaption></figure><p>{escape(lead)}</p><p>{escape(group)}</p>'
-        f'<p><a href="{prefix}固定运动构成复核.md">查看方法和复算入口</a> · '
+        f'<p><a href="{prefix}固定运动构成复核.html">查看方法和复算入口</a> · '
         f'<a href="{prefix}三口径集中度.csv">下载三口径结果</a> · '
         f'<a href="{prefix}逐运动权重与固定五队贡献.csv">下载运动权重与贡献</a></p>\n<!-- sport-mix:end -->\n'
     )
@@ -152,7 +190,7 @@ def publish():
     content=a.read_text(encoding='utf-8')
     content=re.sub(r'<!-- sport-mix:start -->.*?<!-- sport-mix:end -->\n?','',content,flags=re.S)
     a.write_text(content.rstrip()+f'\n\n<!-- sport-mix:start -->\n{lead} {group} '
-                 f'[查看图表和复算表]({prefix}固定运动构成复核.md)。\n<!-- sport-mix:end -->\n',
+                 f'[查看图表和复算表]({prefix}固定运动构成复核.html)。\n<!-- sport-mix:end -->\n',
                  encoding='utf-8',newline='\n')
     plt.rcParams.update({'font.family':'Microsoft YaHei','font.size':12,'axes.spines.top':False,
                          'axes.spines.right':False,'axes.unicode_minus':False,'figure.facecolor':'#fbfaf6','axes.facecolor':'#fbfaf6'})
