@@ -247,6 +247,7 @@ def impact_matrix(c):
         text(c,chart,M+16,top+34,10,TEAL,BOLD)
         para(c,result,M+16,top+55,CW-32,10.5,16,INK)
         para(c,'复核：'+source,M+16,top+94,CW-32,8.6,12,MUTED)
+    para(c,'离线复查：打开任务一首页的「数据规则实验台」，可切换方案和届次，并追查原始记录行。',M,739,CW,9,14,MUTED)
     c.showPage()
 
 
