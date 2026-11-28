@@ -112,7 +112,7 @@ def report_figure(c, name, x, y, width, height, *, align_top=False):
     return wrap(c, '图注｜' + FIGURE_SCOPE[name], x, bottom-12, width, 8.6, 12, P['grey'])
 
 
-def team_share_case(c, width, y):
+def us_medal_series():
     years = ('2016', '2020')
     tables = TASK/'02_数据表'
     with (tables/'B_十二代表团逐届份额.csv').open(encoding='utf-8-sig', newline='') as file:
@@ -122,6 +122,11 @@ def team_share_case(c, width, y):
     counts = [team[year] for year in years]
     denominators = [total[year] for year in years]
     shares = [100*n/d for n,d in zip(counts, denominators)]
+    return years, counts, denominators, shares
+
+
+def team_share_case(c, width, y):
+    years, counts, denominators, shares = us_medal_series()
     c.setStrokeColor(P['line'])
     c.line(40,y+14,width-40,y+14)
     wrap(c, '局部对照｜里约 2016 → 东京 2020', 56, y, width-112, 10, 14, P['teal'], 'CNB')
@@ -371,6 +376,35 @@ def make_report():
         document.saveIncr()
 
 
+def poster_us_comparison(c, x, y, width):
+    years, counts, totals, shares = us_medal_series()
+    left, right = x+47, x+width-48
+    for index,(label,values,color) in enumerate((
+        ('获奖运动员记录（条）',counts,P['teal']),
+        ('占当届全部获奖记录的份额',shares,P['red']),
+    )):
+        top = y-index*143
+        wrap(c,label,x,top,width,17,22,P['grey'],'CNB')
+        high, low = top-52, top-94
+        first,last = (low,high) if values[1]>values[0] else (high,low)
+        c.setStrokeColor(color)
+        c.setFillColor(color)
+        c.setLineWidth(2.5)
+        c.line(left,first,right,last)
+        c.setFont('CNB',24)
+        for px,py,value in ((left,first,values[0]),(right,last,values[1])):
+            c.circle(px,py,4,stroke=0,fill=1)
+            c.drawCentredString(px,py+13,f'{value:.2f}%' if index else str(value))
+    c.setFont('CN',15)
+    c.setFillColor(P['grey'])
+    c.drawCentredString(left,y-263,f'里约 {years[0]}')
+    c.drawCentredString(right,y-263,f'东京 {years[1]}')
+    caption = '图注｜仅 2016 与 2020 两届，排除 1906。按获奖运动员记录行统计。'
+    below = wrap(c,caption,x,y-295,width,8.6,12,P['grey'])
+    explanation = f'美国获奖记录增加，但全场记录从 {totals[0]:,} 增至 {totals[1]:,} 条，增长更快。'
+    return wrap(c,explanation,x,below-15,width,16,24)
+
+
 def make_poster():
     w,h = portrait(A2)
     c = canvas.Canvas(str(POSTER), pagesize=(w,h), pageCompression=1)
@@ -391,8 +425,7 @@ def make_poster():
     cards = (
         ('A','奖牌格局','前五份额 83.9% → 41.8%','A_规模扩张与奖牌集中度.png',
          '奖牌记录总量大增，前五份额长期下降。2016 至 2024 年，获奖队伍变多，前五份额却由 39.3% 回升至 41.8%。'),
-        ('B','代表团兴衰','美国 264 → 298 条','B_强国时代热力图.png',
-         '里约至东京，美国同届份额从 13.05% 降至 12.17%。全场记录增长更快，拉低了美国份额。'),
+        ('B','代表团兴衰','美国记录数上升，份额下降',None,None),
         ('C','女性参与','巴黎 2024：49.1%','C_女性三层平权曲线.png',
          '女性参赛记录占 49.1%，获奖记录占 50.3%，女子专属小项占 45.9%。三个分母对应参与、获奖和赛程。'),
         ('D','项目演化','净减 2 类，更替 14 类','D_项目新增退出重返流向.png',
@@ -407,8 +440,11 @@ def make_poster():
         c.line(x,y,x+column,y)
         wrap(c,f'{code}  {title}',x,y-32,column,17,23,color,'CNB')
         wrap(c,number,x,y-81,column,31,38,P['ink'],'CNB')
-        y = report_figure(c,name,x,y-465,column,355,align_top=True)
-        y = wrap(c,description,x,y-15,column,16,24)
+        if code == 'B':
+            y = poster_us_comparison(c,x,y-139,column)
+        else:
+            y = report_figure(c,name,x,y-465,column,355,align_top=True)
+            y = wrap(c,description,x,y-15,column,16,24)
         assert y >= (h-292-605-570 if i >= 2 else h-292-570)
     c.setStrokeColor(P['line'])
     c.line(left,118,w-left,118)
