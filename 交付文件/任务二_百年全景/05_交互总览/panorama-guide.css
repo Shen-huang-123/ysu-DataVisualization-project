@@ -1,0 +1,19 @@
+#panorama-review-guide, #panorama-lead, #panorama-gender, #team-share-case {
+  scroll-margin-top: 9rem;
+}
+#panorama-review-guide { margin: 1.5rem auto; padding: 1rem 0; border-block: 1px solid color-mix(in srgb,currentColor 20%,transparent); }
+#panorama-review-guide h2 { font-size: clamp(1.3rem,2vw,1.8rem); margin: 0 0 .65rem; }
+#panorama-review-guide ul { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; list-style:none; padding:0; margin:0; }
+.panorama-plots { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(17rem,100%),1fr)); gap:.8rem 1.2rem; margin-block:1rem; }
+.panorama-plots section { min-width:0; border-block-start:1px solid color-mix(in srgb,currentColor 20%,transparent); }
+.panorama-plots h4 { margin:.5rem 0 0; font-size:1rem; }
+.panorama-plot { height: 11rem; }
+#history-count-plot,#history-share-plot { height:15rem; }
+#history-opposite { max-height:10rem; overflow:auto; }
+#women-team { max-width:100%; }
+#women-examples { display:flex; flex-wrap:wrap; gap:.5rem; }
+#women-examples button { font:inherit; color:inherit; background:transparent; border:1px solid color-mix(in srgb,currentColor 32%,transparent); padding:.4rem .7rem; border-radius:.3rem; cursor:pointer; }
+#women-examples button[aria-pressed="true"] { border-color:currentColor; background:color-mix(in srgb,#b18948 20%,transparent); }
+.women-sport-table { overflow:auto; max-height:19rem; }
+.women-sport-table table { width:100%; }
+.women-sport-table :is(td,th):not(:first-child) { text-align:right; font-variant-numeric:tabular-nums; }

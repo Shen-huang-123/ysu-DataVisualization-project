@@ -94,9 +94,15 @@ html[data-supp-theme="light"] :is(.space,.detail) { --ink: #e8f2ef; --muted: #a9
 html[data-supp-theme="light"] .detail { background: #142d35; }
 html[data-supp-theme="light"] .controls :is(button,select),html[data-supp-theme="light"] .turnover button { background: #f9f7f1; border-color: #667f82; }
 @media(max-width: 850px) { #xz-nav { width: calc(100% - 28px); } #xz-nav .xz-links>a { display: none; } }
+</style><style>
+.turnover-quick { display:flex; flex-wrap:wrap; gap:.45rem; grid-column:1/-1; grid-row:3; }
+#turnover-sports button { font-size:.85em; padding:.25em .55em; margin:.18em .25em .18em 0; }
+#turnover-sports button[aria-pressed="true"] { background:#31525c; }
+#turnover-preset { scroll-margin-top:6rem; }
+@media(max-width:720px){ .turnover-quick {grid-row:auto;} }
 </style></head><body><nav aria-label="作品导航" id="xz-nav"><a class="xz-brand" href="../../../index.html"><span class="xz-mark">晓</span><span>奥运数据观察</span></a><div class="xz-links"><a href="../../任务一_数据体检/index.html">01 数据体检</a><a aria-current="page" href="../05_交互总览/index.html">02 百年全景</a><a href="../../任务三_专题深挖/统一中文入口/index.html">03 专题深挖</a><a href="../../任务四_开放创作/index.html">04 洛杉矶2028</a><button aria-label="切换深浅主题" aria-pressed="false" data-supp-theme="" id="xz-theme" type="button">◐</button><button aria-controls="xz-menu" aria-expanded="false" id="xz-menu-button" type="button">目录 ☰</button></div></nav><aside aria-label="作品目录" hidden="" id="xz-menu"><h2>探索全部作品</h2><a href="../../任务一_数据体检/index.html">数据体检</a><a href="../05_交互总览/index.html">百年全景</a><a href="../../任务三_专题深挖/统一中文入口/index.html">专题深挖</a><a href="../../任务四_开放创作/index.html">洛杉矶2028</a></aside><div class="wrap"><section class="hero"><div><div class="eyebrow">1896—2024 / 项目演化星系</div><h1>项目会来，<br><em>也会离开。</em></h1><p>拖动届次，观察运动何时出现、退出与重返。点击一颗星，再从准确的 30 届时间线和记录数量图读出它的轨迹。</p></div><aside>星系显示赛题数据中的项目出现，不代表官方完整赛程。右侧图表以运动员记录行为单位，不把行数称作小项数。</aside></section><section class="controls"><div class="time-controls"><span class="control-label">当前届次</span><strong id="year" class="year">2024</strong><input id="year-range" type="range" min="0" max="29" value="29" aria-label="选择奥运届次"><button id="play" type="button">▶ 播放百年</button></div><label class="sport-control"><span class="control-label">聚焦项目</span><select id="sport-select" aria-label="选择运动项目"></select></label><div class="stats"><span><b id="active-count">—</b>本届出现</span><span><b id="new-count">—</b>本届新增</span><span><b id="return-count">—</b>本届重返</span></div></section><section class="turnover" aria-label="相邻届次的运动更替">
 <button type="button" id="turnover-preset">对照 1900 与 1904</button>
-<p id="turnover-summary" aria-live="polite"></p>
+<div class="turnover-quick" aria-label="历史运动"><button type="button" data-sport-key="Figure Skating" data-edition="1908">1908 花样滑冰</button><button type="button" data-sport-key="Ice Hockey" data-edition="1920">1920 冰球</button></div><p id="turnover-summary" aria-live="polite"></p>
 <details><summary>查看运动名单</summary><div id="turnover-sports"></div></details>
 <p class="turnover-note">按赛题数据中的运动大类比较，排除 1906。未再出现指本次比较的后一届没有记录。</p>
 </section><main class="layout"><div class="space" id="space"><canvas id="sky" aria-label="可点击的奥运运动星系"></canvas><div class="key"><span>本届连续</span><span>新增／重返</span><span>未出现</span><span>所选项目</span></div><div class="space-caption">拖动时间或点击星点探索 · 鼠标停留可查看运动名称</div></div><aside class="detail"><div class="eyebrow">所选运动 / 逐届轨迹</div><h2 id="sport-name">—</h2><div id="sport-status" class="status"></div><p id="sport-summary" class="summary"></p><div id="timeline" class="timeline" aria-label="30届出现时间线"></div><div id="edition-list" class="edition-list"></div><div id="chart" class="chart" role="img" aria-label="逐届运动员记录行数量图"></div><p class="note">图中“有记录”只说明赛题归一数据包含该运动的参赛行。新增与重返相对已收录的上一届／此前届次判定；停办年份不构成退出。数量为运动员记录行，尤其不宜与官方小项数量直接比较。</p></aside></main><footer class="foot">数据：任务一归一数据；届次：任务二逐届规模表。可离线运行 · 百年圣火 / 晓组织</footer></div><script src="../../任务四_开放创作/07_ECharts大屏/vendor/echarts.min.js"></script><script id="payload" type="application/json">__DATA__</script><script>
@@ -120,10 +126,35 @@ html[data-supp-theme="light"] .controls :is(button,select),html[data-supp-theme=
   output.textContent = `${years[prior]} → ${years[yi]}：${before} → ${after} 类，净变化 ${delta > 0 ? '+' : ''}${delta} 类，更替 ${added.length + returned.length + absent.length} 类。`;
   list.replaceChildren(...[['首次出现', added], ['重返', returned], ['未再出现', absent]].map(([label, group]) => {
     const row = document.createElement('p');
-    row.textContent = `${label}（${group.length} 类）：${group.map(s => s.name).join('、') || '无'}`;
+    row.textContent = `${label}（${group.length} 类）：`;
+    if (!group.length) row.append('无');
+    for (const sport of group) {
+      const link = document.createElement('button');
+      link.type = 'button';
+      link.dataset.sportKey = sport.key;
+      link.textContent = sport.name;
+      link.setAttribute('aria-pressed', String(sport === sports[focus]));
+      row.append(link);
+    }
     return row;
   }));
 }
+document.querySelector('.turnover').addEventListener('click', event => {
+  const button = event.target.closest('[data-sport-key]');
+  if (!button) return;
+  const next = sports.findIndex(s => s.key === button.dataset.sportKey);
+  if (next < 0) return;
+  clearInterval(running);
+  running = null;
+  $('play').textContent = '▶ 播放百年';
+  if (button.dataset.edition) yi = years.indexOf(Number(button.dataset.edition));
+  focus = next;
+  select.value = focus;
+  update();
+  if (!button.dataset.edition) {
+    [...$('turnover-sports').querySelectorAll('button')].find(item => item.dataset.sportKey === button.dataset.sportKey)?.focus();
+  }
+});
 $('turnover-preset').addEventListener('click', () => {
   clearInterval(running);
   running = null;
