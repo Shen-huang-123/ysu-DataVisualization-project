@@ -48,7 +48,7 @@ def header(c,w,h,kicker,title,page=None):
     if page is not None:
         c.setFont('CN',8); c.setFillColor(P['grey'])
         c.drawString(40,24,'任务二  /  百年奥运全景')
-        c.drawRightString(w-40,24,f'{page:02d}  /  17')
+        c.drawRightString(w-40,24,f'{page:02d}  /  18')
 
 
 def wrap(c,text,x,y,maxw,size=10,leading=16,color=None,font='CN', *, indent=False):
@@ -257,14 +257,14 @@ def report_cover(c,w,h):
 
 def add_report_navigation(document):
     chapters = [
-        ('摘要与研究设计',2), ('A 奖牌格局',3), ('B 代表团兴衰',6),
-        ('C 女性参与',11), ('D 项目演化',14), ('结论',17),
+        ('摘要与研究设计',2), ('A 奖牌格局',3), ('B 代表团兴衰',7),
+        ('C 女性参与',12), ('D 项目演化',15), ('结论',18),
     ]
-    if len(document) != 17:
+    if len(document) != 18:
         raise ValueError('任务二报告章节页码与生成结构不符')
     document.set_toc([[1,'封面',1], *[[1,title,page] for title,page in chapters]])
     from pymupdf import LINK_GOTO, Rect
-    for index, page in enumerate((3,6,11,14)):
+    for index, page in enumerate((3,7,12,15)):
         x = 40 + index*70
         document[0].insert_link({'kind': LINK_GOTO, 'from': Rect(x,702,x+70,728), 'page': page-1})
 
@@ -348,6 +348,17 @@ def make_report():
         pages.insert(last+1,(code+' 补充核心图',title,img,observation,scope))
         FIGURE_SCOPE[img] = scope
         FIGURE_INTERPRETATION[img] = (reading,limit)
+    mix_figure = '../12_固定运动构成/固定运动构成与奖牌集中度.png'
+    mix_scope = '2016、2020、2024；排除 1906。以获奖运动员行计，历史代表团代码分别保留。'
+    FIGURE_SCOPE[mix_figure] = mix_scope
+    FIGURE_INTERPRETATION[mix_figure] = (
+        '在共同运动实际口径下，前五份额回升 2.30 个百分点。对调两届的运动权重和运动内份额并平均两种替换顺序，运动内份额项贡献 +2.33，运动权重项贡献 -0.03 个百分点。改用各年权重或运动等权，回升方向一致。',
+        '若追踪 2016 年标准化榜同一组五队，其合计份额由 39.20% 降至 33.11%。原历史代码 RUS 从 5.63% 降为无获奖行，去掉 RUS 后，其余四队合计仍小降约 0.46 个百分点。标准化用于描述可比情境。',
+    )
+    pages.insert(next(i for i,item in enumerate(pages) if item[0].startswith('B ')),
+                 ('A 固定运动构成','固定运动构成后，前五份额仍回升',mix_figure,
+                  '全场前五份额从 39.35% 升至 41.78%。将三届共有的 31 类运动固定在同一组运动权重后，2016 到 2024 年仍由 39.20% 升至 41.64%，有效获奖代表团数从 21.03 降至 19.14。',
+                  '方法与复算：任务二／12_固定运动构成，含三口径、逐队份额、逐运动贡献及敏感性表。'))
     p=3
     for kicker,title,img,body,note in pages:
         bg(c,w,h); header(c,w,h,kicker,title,p)
