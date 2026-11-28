@@ -69,7 +69,7 @@ insert('review-c', '</section>', '''
 <p class="lead-note">各运动贡献＝该运动女性获奖行 ÷ 本队全部获奖行 − 该运动女性参赛行 ÷ 本队全部参赛行。各项贡献可相加为本队占比差，运动按两队绝对贡献的最大值排序。两队使用同一比例尺，小分母会放大比例波动。</p>
 ''', text.index('id="panorama-gender"'))
 insert('review-assets', '</head>', '''
-<link rel="stylesheet" href="panorama-guide.css?v=3">
+<link rel="stylesheet" href="panorama-guide.css?v=4">
 <style id="panorama-stable-entry">
 @view-transition { navigation: none; }
 </style>
