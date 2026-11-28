@@ -4,11 +4,14 @@
  const main=document.querySelector('main')||document.body;
  // Keep existing Olympic photography; separate it from layered legacy backgrounds.
  document.querySelectorAll('header.photo-editorial-hero').forEach(hero=>{
-  const bg=getComputedStyle(hero).backgroundImage,match=[...bg.matchAll(/url\(["']?(.*?)["']?\)/g)].pop();
-  if(!match)return;
-  const photo=document.createElement('img');photo.className='image-stage-photo';photo.src=match[1];photo.alt='';photo.setAttribute('aria-hidden','true');photo.setAttribute('data-no-zoom','');photo.decoding='async';
-  hero.style.setProperty('--image-stage-position',getComputedStyle(hero).backgroundPosition.split(',').pop().trim());
-  hero.prepend(photo);hero.classList.add('image-stage');
+  if(!hero.querySelector(':scope > .image-stage-photo')){
+   const bg=getComputedStyle(hero).backgroundImage,match=[...bg.matchAll(/url\(["']?(.*?)["']?\)/g)].pop();
+   if(!match)return;
+   const photo=document.createElement('img');photo.className='image-stage-photo';photo.src=match[1];photo.alt='';photo.setAttribute('aria-hidden','true');photo.setAttribute('data-no-zoom','');photo.decoding='async';
+   hero.style.setProperty('--image-stage-position',getComputedStyle(hero).backgroundPosition.split(',').pop().trim());
+   hero.prepend(photo);
+  }
+  hero.classList.add('image-stage');
   const cinema=element('button','沉浸影像','image-stage-cinema');cinema.type='button';cinema.setAttribute('aria-pressed','false');
   const setCinema=on=>{hero.classList.toggle('image-stage-immersed',on);cinema.setAttribute('aria-pressed',String(on));cinema.textContent=on?'返回专题':'沉浸影像'};
   cinema.onclick=()=>setCinema(cinema.getAttribute('aria-pressed')!=='true');hero.append(cinema);

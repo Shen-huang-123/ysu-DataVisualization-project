@@ -11,6 +11,19 @@ def insert(tag, marker, block, start=0):
     i = text.index(marker, start)
     text = text[:i]+f'<!-- {tag}:start -->\n{block}\n<!-- {tag}:end -->\n'+text[i:]
 
+# Set the final cover layout before deferred controls are installed.
+legacy_cover = '<header class="photo-editorial-hero">'
+photo = '../../任务三_专题深挖/媒体/sports.jpg'
+stable_cover = (
+    '<header class="photo-editorial-hero image-stage" style="--image-stage-position:center 48%">'
+    f'<img class="image-stage-photo" src="{photo}" alt="" aria-hidden="true" data-no-zoom="" fetchpriority="high">'
+)
+text = text.replace(legacy_cover, stable_cover, 1)
+assert text.count(stable_cover) == 1
+text = text.replace('href="../../任务三_专题深挖/媒体/la.jpg" rel="preload"', f'href="{photo}" rel="preload"')
+for version in ('20261115-narrative', '20261115-atmosphere'):
+    text = text.replace(f'exploration-design.js?v={version}', 'exploration-design.js?v=20261128-cover')
+
 insert('review-guide', '<div aria-label="探索历史的观察角度"', '''
 <nav id="panorama-review-guide" aria-labelledby="review-guide-title">
 <h3 id="review-guide-title">四个分析场景</h3>
@@ -49,6 +62,9 @@ insert('review-c', '</section>', '''
 ''', text.index('id="panorama-gender"'))
 insert('review-assets', '</head>', '''
 <link rel="stylesheet" href="panorama-guide.css?v=2">
+<style id="panorama-stable-entry">
+@view-transition { navigation: none; }
+</style>
 <script defer src="../../任务四_开放创作/07_ECharts大屏/vendor/echarts.min.js"></script>
 ''')
 insert('review-script', '</body>', '<script defer src="panorama-guide.js"></script>')
