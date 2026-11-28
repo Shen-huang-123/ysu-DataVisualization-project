@@ -46,7 +46,7 @@ def rule(c,top):
 def page(c,n,section,title,subtitle=''):
     c.setFillColor(PAPER);c.rect(0,0,W,H,fill=1,stroke=0)
     box(c,M,42,66,25,NAVY,r=12)
-    text(c,f'{n:02d} / 08',M+11,46,10,WHITE,BOLD)
+    text(c,f'{n:02d} / 09',M+11,46,10,WHITE,BOLD)
     text(c,section,M+82,47,9.5,TEAL,BOLD)
     text(c,title,M,88,30,NAVY,BOLD)
     if subtitle:para(c,subtitle,M,135,CW,10.5,17,MUTED)
@@ -56,7 +56,7 @@ def page(c,n,section,title,subtitle=''):
 def footer(c,n):
     rule(c,796)
     text(c,'燕山大学 · 晓组织  /  数据体检与口径定义',M,806,8,MUTED)
-    c.setFillColor(MUTED);c.setFont(BOLD,8);c.drawRightString(W-M,H-814,f'{n:02d} / 08')
+    c.setFillColor(MUTED);c.setFont(BOLD,8);c.drawRightString(W-M,H-814,f'{n:02d} / 09')
 
 def pill(c,s,x,top,w,fill=PALE,color=TEAL):
     box(c,x,top,w,23,fill,r=11)
@@ -93,8 +93,34 @@ def cover(c):
     text(c,'张子涵 60%  ·  陈旭 40%  ·  2026 年 11 月',M,777,9,MINT)
     c.showPage()
 
+def quick_index(c):
+    page(c,2,'评审抽查 / Q1–Q6','六类问题，从规则查到结果','代码及结果位于任务一目录。复算范围与边界见各条处理说明。')
+    entries = [
+        ('Q1 · 双口径', '巴黎美国：40 枚官方小项金牌对应 131 条金牌记录。百年趋势用获奖行，官方榜用小项。',
+         '代码：同步2024官方小项.py、运行任务一.py｜结果：2024双口径敏感性.csv'),
+        ('Q2 · 运动名称', '89 条逗号拼接 Sport 按运动家族与 Event 规则消解；按运动比较统一使用 sport_family。',
+         '代码：prepare.py｜结果：体育大类归一映射表.csv'),
+        ('Q3 · 小项泛化', '如 Men Team 无法单凭标签还原小项。历史相关届次降到大类或大类×性别；巴黎另接官方表。',
+         '代码：prepare.py｜结果：event_quality_by_year.csv'),
+        ('Q4 · 身份风险', '12,883 个 ID 对应多个姓名；670 个姓名跨逾 40 年。个体榜只展示待核候选。',
+         '代码：audit.py｜结果：audit.json（id_multiple_names 等）'),
+        ('Q5 · 历史特殊记录', '1906 届 458 条获奖行排除于主分析；1956 双城合并为一届。政体代码、ROC、AIN、EOR 分列。',
+         '代码：audit.py、prepare.py｜结果：audit.json、preparation_summary.json'),
+        ('Q6 · 多行、并列与缺色', '复跑得多行组 5,080、仅一色组 34；1908 男子 400 米仅有金。多行不能直接判为并列或团体；不补缺色。',
+         '代码：抽查Q6.py｜结果：Q6抽查结果.json；巴黎小项口径按官方归属计数。'),
+    ]
+    for i,(title,decision,source) in enumerate(entries):
+        top=176+i*96
+        box(c,M,top,CW,88,WHITE,LINE)
+        text(c,title,M+14,top+9,12,NAVY,BOLD)
+        para(c,decision,M+14,top+29,CW-28,10,14,INK)
+        para(c,source,M+14,top+62,CW-28,8.4,12,MUTED)
+    footer(c,2)
+    c.showPage()
+
+
 def risks(c):
-    page(c,2,'质量风险 / 一页总览','五个风险，五项处理决定','先看哪些字段会改变结论，再看我们如何限制推断。')
+    page(c,3,'质量风险 / 一页总览','五个风险，五项处理决定','先看哪些字段会改变结论，再看我们如何限制推断。')
     rows=[
         ('01','小项粒度丢失','8,515 条需结合上下文；2024 官方共 329 项','外接官方小项结果层；禁止用泛化标签去重','高'),
         ('02','身份标识不可当人数','12,883 个 ID 对应多个姓名','只称参赛记录；独立运动员人数结论降级','高'),
@@ -114,7 +140,7 @@ def risks(c):
     c.showPage()
 
 def medal(c):
-    page(c,3,'统计口径 / 奖牌是什么','同一届奥运，两种排名','先定义统计单位，才谈榜单。运动员行与官方小项回答的是不同问题。')
+    page(c,4,'统计口径 / 奖牌是什么','同一届奥运，两种排名','先定义统计单位，才谈榜单。运动员行与官方小项回答的是不同问题。')
     box(c,M,202,246,153,WHITE,LINE);box(c,M+260,202,246,153,WHITE,LINE)
     text(c,'运动员行口径',M+20,220,17,NAVY,BOLD)
     para(c,'一行是一名运动员在一届某小项的记录。获奖行代表获奖成员记录的广度；一支18人的冠军队可能产生18条金牌行。',M+20,256,206,10.5,17,INK)
@@ -138,7 +164,7 @@ def medal(c):
     c.showPage()
 
 def normalization(c):
-    page(c,4,'字段归一 / 信息边界','能映射的统一，丢失的标记','Sport 名称漂移和 2020 年起小项标签泛化，是两种不同的数据质量问题。')
+    page(c,5,'字段归一 / 信息边界','能映射的统一，丢失的标记','Sport 名称漂移和 2020 年起小项标签泛化，是两种不同的数据质量问题。')
     text(c,'运动大类：76 / 76 已映射',M,205,18,NAVY,BOLD)
     examples=[('Artistic Gymnastics','体操'),('Cycling Road / Track / BMX','自行车'),('Canoe Sprint / Slalom','皮划艇'),('Cycling Road, Triathlon','按具体小项判定')]
     y=246
@@ -156,7 +182,7 @@ def normalization(c):
     c.showPage()
 
 def special(c):
-    page(c,5,'特殊记录 / 历史不被抹平','边界规则写在数据里','历史变化不是清洗错误。每个例外都保留原始值，并提供明确的分析规则。')
+    page(c,6,'特殊记录 / 历史不被抹平','边界规则写在数据里','历史变化不是清洗错误。每个例外都保留原始值，并提供明确的分析规则。')
     rows=[
         ('1906 届间奥运会','原始记录保留；主分析排除；另提供纳入版本检验敏感性。'),
         ('1956 双城','墨尔本与斯德哥尔摩保留城市差异，按同一届次年份汇总。'),
@@ -192,7 +218,7 @@ def quality(c,items,n):
     c.showPage()
 
 def reproduce(c):
-    page(c,8,'复现路径 / 从原始行到结论','交付能独立重跑','评委可从原始 CSV 一键生成质量检查、归一数据和后续分析基础。')
+    page(c,9,'复现路径 / 从原始行到结论','交付能独立重跑','评委可从原始 CSV 一键生成质量检查、归一数据和后续分析基础。')
     stages=[('01','输入','赛题原始 CSV；保留文件校验值'),('02','审计','规模、缺失、重复、身份和历史边界'),('03','归一','运动大类、小项状态、主分析标记'),('04','对照','双口径、1906 与重复候选敏感性'),('05','输出','说明书、数据表、代码与检查日志')]
     top=206
     for num,title,desc in stages:
@@ -210,7 +236,7 @@ def reproduce(c):
 def main():
     OUT.parent.mkdir(parents=True,exist_ok=True)
     c=canvas.Canvas(str(OUT),pagesize=A4,pageCompression=1)
-    labels = ['封面', '质量风险总览', '统计口径', '字段归一', '特殊记录', '质量检查（一）', '质量检查（二）', '复现路径']
+    labels = ['封面', 'Q1–Q6 抽查索引', '质量风险总览', '统计口径', '字段归一', '特殊记录', '质量检查（一）', '质量检查（二）', '复现路径']
     c.setAuthor("晓组织 · 燕山大学")
     c.setSubject("数据质量审计与统计口径")
     show_page = c.showPage
@@ -222,10 +248,10 @@ def main():
         show_page()
     c.showPage = bookmarked_page
     c.setTitle('任务一｜奥运数据质量与口径说明书')
-    cover(c);risks(c);medal(c);normalization(c);special(c)
+    cover(c);quick_index(c);risks(c);medal(c);normalization(c);special(c)
     checks=get_rows(TASK/'01_报告与说明'/'03_质量检查登记表.csv')
     assert len(checks)==12
-    quality(c,checks[:6],6);quality(c,checks[6:],7);reproduce(c)
+    quality(c,checks[:6],7);quality(c,checks[6:],8);reproduce(c)
     c.save();print(OUT)
 
 if __name__=='__main__':main()
