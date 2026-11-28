@@ -1,14 +1,28 @@
 
 #audit-lab { scroll-margin-top: 85px; margin-block: 36px; padding-block: 18px; border-block: 1px solid var(--line,#82999c); }
-.audit-controls { display:flex; flex-wrap:wrap; align-items:end; gap:12px 20px; }
+.audit-controls { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr)); align-items:end; gap:12px 20px; padding-block:14px; border-block:1px solid var(--line,#82999c55); }
 .audit-controls label { display:grid; gap:4px; }
 .audit-controls label[hidden] { display:none; }
 .audit-scroll { max-height:24rem; overflow:auto; }
-#audit-chart svg { display:block; width:min(100%,860px); height:auto; }
+#audit-chart svg { display:block; width:100%; height:auto; }
 #audit-chart svg text { fill:currentColor; font-size:12px; }
-.audit-grid line { stroke:currentColor; opacity:.22; }
+.audit-grid line { stroke:currentColor; opacity:.17; }
 #audit-chart polyline { fill:none; stroke-width:2; }
 .audit-base { stroke:#899d9f; }
 .audit-current { stroke:#29919d; }
 #audit-chart circle { fill:#be8a36; }
-#audit-markers button { margin:3px; }
+#audit-summary { max-width:none; font-variant-numeric:tabular-nums; }
+#audit-chart svg { background:color-mix(in srgb,currentColor 3%,transparent); border-radius:8px; }
+.audit-chart-footer { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 18px; padding-block:8px; border-bottom:1px solid var(--line,#82999c55); }
+.audit-chart-footer p { margin:0; font-size:.9rem; }
+#audit-markers { display:flex; flex-wrap:wrap; gap:8px; }
+#audit-lab #audit-markers button {
+  background:transparent !important; color:inherit !important; box-shadow:none !important;
+  border:1px solid transparent !important; font:inherit; padding:6px 10px; cursor:pointer;
+}
+#audit-lab #audit-markers button:is(:hover,[aria-pressed=true]) {
+  border-bottom-color:currentColor !important; text-decoration:none;
+}
+#audit-markers button:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
+.audit-controls select { min-width:0; width:100%; }
+@media(max-width:540px){ .audit-controls { grid-template-columns:minmax(0,1fr); } }
