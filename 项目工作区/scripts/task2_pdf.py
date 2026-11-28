@@ -1,3 +1,4 @@
+from publish_task2_additional_figures import CASES
 import csv
 import subprocess
 import sys
@@ -47,7 +48,7 @@ def header(c,w,h,kicker,title,page=None):
     if page is not None:
         c.setFont('CN',8); c.setFillColor(P['grey'])
         c.drawString(40,24,'任务二  /  百年奥运全景')
-        c.drawRightString(w-40,24,f'{page:02d}  /  13')
+        c.drawRightString(w-40,24,f'{page:02d}  /  17')
 
 
 def wrap(c,text,x,y,maxw,size=10,leading=16,color=None,font='CN', *, indent=False):
@@ -256,14 +257,14 @@ def report_cover(c,w,h):
 
 def add_report_navigation(document):
     chapters = [
-        ('摘要与研究设计',2), ('A 奖牌格局',3), ('B 代表团兴衰',5),
-        ('C 女性参与',9), ('D 项目演化',11), ('结论',13),
+        ('摘要与研究设计',2), ('A 奖牌格局',3), ('B 代表团兴衰',6),
+        ('C 女性参与',11), ('D 项目演化',14), ('结论',17),
     ]
-    if len(document) != 13:
+    if len(document) != 17:
         raise ValueError('任务二报告章节页码与生成结构不符')
     document.set_toc([[1,'封面',1], *[[1,title,page] for title,page in chapters]])
     from pymupdf import LINK_GOTO, Rect
-    for index, page in enumerate((3,5,9,11)):
+    for index, page in enumerate((3,6,11,14)):
         x = 40 + index*70
         document[0].insert_link({'kind': LINK_GOTO, 'from': Rect(x,702,x+70,728), 'page': page-1})
 
@@ -342,6 +343,11 @@ def make_report():
       ('C 代表团结构','同队女性参赛和获奖占比的差','C_2024代表团女性结构差.png','选择参赛记录最多的十五队，分别计算各队女性参赛占比与获奖占比。右侧标出差值绝对值最大的三队。','差值单位为百分点，基于记录行。'),
       ('D 项目演化','奥运项目表在扩容，也在持续退出与重返','D_项目新增退出重返流向.png','项目体系并非机械累加。早期更替频繁，随着制度成熟，连续保留成为主流；但近年仍可观察到新增、退出与重返。艺术比赛等历史项目消失，城市文化与青年项目进入。项目表是传统、全球普及度、性别平衡和青年吸引力之间的动态配置。','按归一体育大类识别首次出现、上届缺席后的重返及下届缺席。'),
       ('D 小项数量','从43到329：扩容主线中的口径控制','D_小项增长与项目更替.png','可比口径下，小项数从1896年的约43个增至1920年的158个、1984年的221个、2000年的300个，2024年达到官方329个。2020年留空是主动控制：原始Event已泛化，直接计数会制造虚假断崖。宁可披露不可比，也不把错误精确包装成趋势。','1896至2016按清洗后Event唯一值；2020不计；2024采用官方329项表。')]
+    for code,title,img,scope,observation,reading,limit in CASES:
+        last = max(i for i,item in enumerate(pages) if item[0].startswith(code+' '))
+        pages.insert(last+1,(code+' 补充核心图',title,img,observation,scope))
+        FIGURE_SCOPE[img] = scope
+        FIGURE_INTERPRETATION[img] = (reading,limit)
     p=3
     for kicker,title,img,body,note in pages:
         bg(c,w,h); header(c,w,h,kicker,title,p)
