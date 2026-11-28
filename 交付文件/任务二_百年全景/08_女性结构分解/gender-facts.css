@@ -1,0 +1,37 @@
+main > .facts {
+  --facts-positive: #236873;
+  --facts-negative: #925335;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 1.25rem 0 2rem;
+  border-block: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+}
+html[data-supp-theme=dark] main > .facts,
+body.xz-dark main > .facts {
+  --facts-positive: #91c9d1;
+  --facts-negative: #e2ab91;
+}
+main > .facts > div {
+  padding: clamp(.85rem, 2vw, 1.5rem);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+main > .facts > div:first-child { background: color-mix(in srgb, currentColor 5%, transparent); }
+main > .facts > div + div { border-inline-start: 1px solid color-mix(in srgb, currentColor 16%, transparent); }
+main > .facts b {
+  margin: 0 0 .45rem;
+  font: 650 clamp(1.4rem, 3vw, 2.65rem)/1.1 system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  color: inherit;
+}
+main > .facts > div:nth-child(2) b { color: var(--facts-positive); }
+main > .facts > div:nth-child(3) b { color: var(--facts-negative); }
+main > .facts span { color: inherit; font-size: .86rem; }
+main:has(> .facts) > figure { margin-bottom: 1.25rem; }
+@media (max-width: 440px) {
+  main > .facts { grid-template-columns: 1fr; }
+  main > .facts > div { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  main > .facts > div + div { border-inline-start: 0; border-block-start: 1px solid color-mix(in srgb, currentColor 16%, transparent); }
+  main > .facts b { margin: 0; }
+}
