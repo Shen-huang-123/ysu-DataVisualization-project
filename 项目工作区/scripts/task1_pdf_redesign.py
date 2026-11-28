@@ -46,7 +46,7 @@ def rule(c,top):
 def page(c,n,section,title,subtitle=''):
     c.setFillColor(PAPER);c.rect(0,0,W,H,fill=1,stroke=0)
     box(c,M,42,66,25,NAVY,r=12)
-    text(c,f'{n:02d} / 09',M+11,46,10,WHITE,BOLD)
+    text(c,f'{n:02d} / 10',M+11,46,10,WHITE,BOLD)
     text(c,section,M+82,47,9.5,TEAL,BOLD)
     text(c,title,M,88,30,NAVY,BOLD)
     if subtitle:para(c,subtitle,M,135,CW,10.5,17,MUTED)
@@ -56,7 +56,7 @@ def page(c,n,section,title,subtitle=''):
 def footer(c,n):
     rule(c,796)
     text(c,'燕山大学 · 晓组织  /  数据体检与口径定义',M,806,8,MUTED)
-    c.setFillColor(MUTED);c.setFont(BOLD,8);c.drawRightString(W-M,H-814,f'{n:02d} / 09')
+    c.setFillColor(MUTED);c.setFont(BOLD,8);c.drawRightString(W-M,H-814,f'{n:02d} / 10')
 
 def pill(c,s,x,top,w,fill=PALE,color=TEAL):
     box(c,x,top,w,23,fill,r=11)
@@ -201,7 +201,7 @@ def special(c):
     c.showPage()
 
 def quality(c,items,n):
-    page(c,n,'可复现检查 / 审计证据',f'12 项质量检查 · {"上" if n==6 else "下"}半场','每项都保留检查代码位置、实测结果和处理决定。')
+    page(c,n,'可复现检查 / 审计证据',f'12 项质量检查 · {"上" if n==7 else "下"}半场','每项都保留检查代码位置、实测结果和处理决定。')
     top=199
     for row in items:
         title=row['检查内容'].replace('Sport','运动').replace('Event','小项').replace('ID','标识符')
@@ -217,8 +217,41 @@ def quality(c,items,n):
         top+=98
     c.showPage()
 
+def impact_matrix(c):
+    page(c,9,'口径敏感性 / 图表对照','换一条规则，图表会怎样变？',
+         '每行只比较所列规则；没有可比小项数的届次明确留空。')
+    folder = TASK / '04_质量检查结果'
+    main = {int(row['Year']): row for row in get_rows(folder/'edition_main.csv')}
+    inclusive = {int(row['Year']): row for row in get_rows(folder/'edition_include_1906.csv')}
+    dedup = {int(row['Year']): row for row in get_rows(folder/'edition_exclude_duplicate_excess.csv')}
+    spain = next(row for row in get_rows(folder/'2024双口径敏感性.csv') if row['NOC']=='ESP')
+    historical = inclusive[1906]
+    rows = [
+        ('奖牌计数单位', '任务一 · 双口径金牌排名对照',
+         f"两榜均只按金牌计数排名，并列取最小名次。西班牙从小项金牌第 {spain['gold_only_rank']} 到运动员金牌记录第 {spain['gold_row_rank']}。",
+         '2024双口径敏感性.csv'),
+        ('是否纳入 1906', '任务二 A1 · 参赛与获奖规模',
+         f"纳入后，时间轴多一届，增加 {historical['medal_rows']} 条获奖行；1896 与 2024 两端数值仍为 {main[1896]['medal_rows']} 和 {main[2024]['medal_rows']}。",
+         'edition_main.csv / edition_include_1906.csv'),
+        ('是否扣除重复候选余量', '任务二 A1 · 逐届获奖记录',
+         f"1900 年 {main[1900]['medal_rows']} → {dedup[1900]['medal_rows']} 条；2024 年 {main[2024]['medal_rows']} → {dedup[2024]['medal_rows']} 条。两届间增长方向保留。",
+         'edition_main.csv / edition_exclude_duplicate_excess.csv'),
+        ('是否能还原原始小项', '任务二 D1 · 逐届小项数量',
+         '东京 2020 因 Event 泛化留空；巴黎 2024 使用 329 个官方小项。运动大类分析仍可进行。',
+         'event_quality_by_year.csv / 2024官方329小项奖牌表.csv'),
+    ]
+    for i, (rule_name, chart, result, source) in enumerate(rows):
+        top = 180 + i*136
+        box(c,M,top,CW,124,WHITE,LINE)
+        text(c,rule_name,M+16,top+10,13,NAVY,BOLD)
+        text(c,chart,M+16,top+34,10,TEAL,BOLD)
+        para(c,result,M+16,top+55,CW-32,10.5,16,INK)
+        para(c,'复核：'+source,M+16,top+94,CW-32,8.6,12,MUTED)
+    c.showPage()
+
+
 def reproduce(c):
-    page(c,9,'复现路径 / 从原始行到结论','交付能独立重跑','评委可从原始 CSV 一键生成质量检查、归一数据和后续分析基础。')
+    page(c,10,'复现路径 / 从原始行到结论','交付能独立重跑','评委可从原始 CSV 一键生成质量检查、归一数据和后续分析基础。')
     stages=[('01','输入','赛题原始 CSV；保留文件校验值'),('02','审计','规模、缺失、重复、身份和历史边界'),('03','归一','运动大类、小项状态、主分析标记'),('04','对照','双口径、1906 与重复候选敏感性'),('05','输出','说明书、数据表、代码与检查日志')]
     top=206
     for num,title,desc in stages:
@@ -236,7 +269,7 @@ def reproduce(c):
 def main():
     OUT.parent.mkdir(parents=True,exist_ok=True)
     c=canvas.Canvas(str(OUT),pagesize=A4,pageCompression=1)
-    labels = ['封面', 'Q1–Q6 抽查索引', '质量风险总览', '统计口径', '字段归一', '特殊记录', '质量检查（一）', '质量检查（二）', '复现路径']
+    labels = ['封面', 'Q1–Q6 抽查索引', '质量风险总览', '统计口径', '字段归一', '特殊记录', '质量检查（一）', '质量检查（二）', '口径规则与图表影响', '复现路径']
     c.setAuthor("晓组织 · 燕山大学")
     c.setSubject("数据质量审计与统计口径")
     show_page = c.showPage
@@ -251,7 +284,7 @@ def main():
     cover(c);quick_index(c);risks(c);medal(c);normalization(c);special(c)
     checks=get_rows(TASK/'01_报告与说明'/'03_质量检查登记表.csv')
     assert len(checks)==12
-    quality(c,checks[:6],7);quality(c,checks[6:],8);reproduce(c)
+    quality(c,checks[:6],7);quality(c,checks[6:],8);impact_matrix(c);reproduce(c)
     c.save();print(OUT)
 
 if __name__=='__main__':main()
