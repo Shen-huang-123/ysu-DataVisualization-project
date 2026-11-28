@@ -72,7 +72,8 @@ def calculate():
     russian_end = float(combine(fixed_weights,probabilities[end]).get('RUS',0))
     return summaries,teams,counts,fixed_weights,contribution,baseline_top,old,new,split,sensitivity,russian_start,russian_end
 
-def publish_reading(report):
+def publish_reading(report, payload):
+    import json
     import re
     from markdown import markdown
 
@@ -90,20 +91,42 @@ def publish_reading(report):
     content = markdown(body)
     content = re.sub(r'<p>(<img [^>]+?)/></p>',r'<figure>\1 class="chart-surface" /></figure>',content,count=1)
     title = title.removeprefix('# ')
+    data = json.dumps(payload,ensure_ascii=False).replace('<','\\u003c')
     html = f'''<!doctype html>
 <html lang="zh-CN">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}｜百年全景</title>
 {assets}
+<link rel="stylesheet" href="sport-mix-interactive.css">
+<script defer src="sport-mix-interactive.js"></script>
 </head>
 <body class="supplement-reading">
 {nav}
 <main class="supp-content">
 <p><a href="../11_四视角独立交付/四视角核心图复核.html#view-A">← 返回奖牌格局图表</a></p>
 <h1>{title}</h1>
+<section id="mix-explorer" aria-labelledby="mix-title">
+<h2 id="mix-title">换一届，看看前五怎样变</h2>
+<div class="mix-controls">
+<label>届次 <select id="mix-year"><option>2016</option><option>2020</option><option selected>2024</option></select></label>
+<label>统计口径 <select id="mix-mode"><option>全场实际</option><option>共同运动实际</option><option selected>共同运动固定权重</option></select></label>
+</div>
+<div id="mix-result" aria-live="polite">
+<dl class="mix-results"><div><dt>前五份额</dt><dd id="mix-share"></dd></div><div><dt>相较 2016</dt><dd id="mix-delta"></dd></div><div><dt>有效获奖代表团数</dt><dd id="mix-effective"></dd></div></dl>
+<h3>当届重新排名的前五</h3>
+<ol id="mix-ranks"></ol>
+<p id="mix-cohort"></p>
+</div>
+<h3>追查固定五队的逐运动贡献</h3>
+<p>这里比较 2016 与 2024，沿用同一组运动权重。</p>
+<div class="mix-controls"><label>运动 <select id="mix-sport"></select></label><div id="mix-sport-examples" class="mix-sport-examples"></div></div>
+<p id="mix-sport-result" aria-live="polite"></p>
+<noscript><p>下方静态图和数据下载可直接阅读。</p></noscript>
+</section>
 {content}
 <p><a href="固定运动构成复核.md" download>下载 Markdown 原件</a></p>
 </main>
+<script id="mix-data" type="application/json">{data}</script>
 </body></html>
 '''
     (OUT/'固定运动构成复核.html').write_text(html,encoding='utf-8')
@@ -113,7 +136,7 @@ def publish():
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    from task2_localization import SPORT_ZH
+    from task2_localization import NOC_ZH, SPORT_ZH
 
     OUT.mkdir(exist_ok=True)
     summaries,teams,counts,weights,contributions,baseline,old,new,split,sensitivity,rus_old,rus_new = calculate()
@@ -170,7 +193,12 @@ def publish():
     browser_link = '\n\n[打开网页版](固定运动构成复核.html)\n'
     title,body = report.split('\n',1)
     (OUT/'固定运动构成复核.md').write_text(title+browser_link+body,encoding='utf-8')
-    publish_reading(report)
+    publish_reading(report, {
+        'summaries': summaries, 'teams': teams, 'baseline': list(baseline), 'team_names': NOC_ZH,
+        'sports': [(key,SPORT_ZH.get(key,key),float(weights[key]),float(contributions[key]),
+                    [int(counts[year][key]) for year in YEARS])
+                   for key in contributions.abs().sort_values(ascending=False).index],
+    })
     review=TASK/'11_四视角独立交付/四视角核心图复核.html'
     import re
     from html import escape
