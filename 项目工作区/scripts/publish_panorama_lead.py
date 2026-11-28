@@ -22,11 +22,11 @@ contributions = [
 ]
 data = json.dumps([metrics, contributions], ensure_ascii=False)
 block = f'''<!-- panorama-lead:start -->
-<link rel="stylesheet" href="panorama-lead.css">
+<link rel="stylesheet" href="panorama-lead.css?v=2">
 <section id="panorama-lead" aria-labelledby="panorama-lead-title">
   <h2 id="panorama-lead-title">2016 至 2024：获奖队伍更多，分布却更集中</h2>
   <p>2016 → 2024 年，获奖代表团从 <strong>86 增至 92</strong>，前五代表团的获奖记录份额从 <strong>39.3% 升至 41.8%</strong>。</p>
-  <label>查看届次 <select id="lead-year"></select></label><div class="lead-shortcuts"><button type="button" data-lead-year="2016">2016 年</button><button type="button" data-lead-year="2024">2024 年</button></div>
+  <div class="lead-year-controls"><label>查看届次 <select id="lead-year"></select></label><div class="lead-shortcuts"><button type="button" data-lead-year="2016">2016 年</button><button type="button" data-lead-year="2024">2024 年</button></div></div>
   <div class="lead-metrics" aria-live="polite">
     <div>获奖代表团数<strong id="lead-count"></strong></div>
     <div>前五代表团份额<strong id="lead-share"></strong></div>
