@@ -3,7 +3,7 @@
   const {main, dedup, inclusive, excess, medals1906, events, official} = window.auditLabData;
   const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const select = (id, values) => '<select id="'+id+'">'+values.map(v=>'<option>'+esc(v)+'</option>').join('')+'</select>';
-  const table = (heads, rows) => '<div class="audit-scroll"><table><thead><tr>'+heads.map(h=>'<th scope="col">'+esc(h)+'</th>').join('')+
+  const table = (heads, rows) => '<div class="audit-scroll" role="region" aria-label="核验明细表" tabindex="0"><table><thead><tr>'+heads.map(h=>'<th scope="col">'+esc(h)+'</th>').join('')+
     '</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
   const get = id => document.getElementById(id);
   root.innerHTML = `<h2>数据规则实验台</h2>
@@ -35,7 +35,9 @@
     get('audit-chart').innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="逐届运动员获奖记录数，灰线为主方案，青线为当前方案">
     <g class="audit-grid">${guides}</g>
     <polyline class="audit-base" points="${points(main)}"/><polyline class="audit-current" points="${points(rows)}"/>
-    ${selected?`<circle cx="${x(year)}" cy="${y(selected[1])}" r="5"/>`:''}
+    ${selected?`<line class="audit-selection" x1="${x(year)}" x2="${x(year)}" y1="24" y2="${bottom}"/>
+    <circle cx="${x(year)}" cy="${y(selected[1])}" r="5"/>
+    <text class="audit-value" x="${x(year)+(year>1990?-9:9)}" y="${Math.max(17,y(selected[1])-11)}" text-anchor="${year>1990?'end':'start'}">${year} · ${selected[1].toLocaleString('zh-CN')} 条</text>`:''}
     <text x="48" y="${height-10}">1896</text><text x="${right}" y="${height-10}" text-anchor="end">2024</text></svg>
     <div class="audit-chart-footer"><p>任务二 A1 · 灰线为主方案，青线为当前方案，金点为所选届次。</p><div id="audit-markers" aria-label="届次快捷选择"></div></div>`;
     const shortcuts=mode===0?[peakYear,1900,2024]:[1906];

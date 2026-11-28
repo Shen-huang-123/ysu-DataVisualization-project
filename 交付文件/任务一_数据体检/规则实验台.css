@@ -26,3 +26,17 @@
 #audit-markers button:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
 .audit-controls select { min-width:0; width:100%; }
 @media(max-width:540px){ .audit-controls { grid-template-columns:minmax(0,1fr); } }
+
+#audit-chart .audit-grid line { opacity:.22; stroke-dasharray:2 5; }
+#audit-chart .audit-selection { stroke:currentColor; opacity:.22; stroke-dasharray:4 5; }
+#audit-chart .audit-value { font-weight:700; }
+#audit-lab .audit-scroll table { width:100%; border-collapse:separate; border-spacing:0; }
+#audit-lab .audit-scroll { border:1px solid var(--line,#82999c55); border-radius:8px; }
+#audit-lab .audit-scroll thead th {
+  position:sticky; top:0; z-index:1; text-align:left; font-weight:650;
+  background:#edf1ef !important; color:#243940 !important;
+}
+body.xz-dark #audit-lab .audit-scroll thead th { background:#1b2b34 !important; color:#eef3ef !important; }
+#audit-lab .audit-scroll :is(th,td) { padding:10px 14px; }
+#audit-rows td:first-child, #audit-rows td:nth-child(2) { font-variant-numeric:tabular-nums; }
+#audit-rows tbody tr:nth-child(even) td { background:color-mix(in srgb,currentColor 3%,transparent); }
