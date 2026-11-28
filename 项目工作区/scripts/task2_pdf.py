@@ -47,14 +47,17 @@ def header(c,w,h,kicker,title,page=None):
         c.drawRightString(w-40,24,f'{page:02d}  /  13')
 
 
-def wrap(c,text,x,y,maxw,size=10,leading=16,color=None,font='CN'):
+def wrap(c,text,x,y,maxw,size=10,leading=16,color=None,font='CN', *, indent=False):
     c.setFont(font,size); c.setFillColor(color or P['ink']); line=''; lines=[]
+    first_indent = 2*size if indent else 0
     for ch in text:
         test=line+ch
-        if stringWidth(test,font,size)>maxw and line: lines.append(line); line=ch
+        if stringWidth(test,font,size)>maxw-(first_indent if not lines else 0) and line: lines.append(line); line=ch
         else: line=test
     if line: lines.append(line)
-    for ln in lines: c.drawString(x,y,ln); y-=leading
+    for index, ln in enumerate(lines):
+        c.drawString(x+(first_indent if index == 0 else 0),y,ln)
+        y-=leading
     return y
 
 def image_fit(c,source,x,y,w,h, *, align_top=False):
@@ -305,7 +308,7 @@ def make_report():
     bg(c,w,h); header(c,w,h,'研究导览','摘要与研究设计',2)
     y=h-124
     y=wrap(c,'摘要',40,y,w-80,16,24,P['teal'],'CNB')
-    y=wrap(c,'1896至2024年，夏季奥运会由少数国家参与的精英赛事发展为覆盖206个代表团、329个小项的全球制度。参赛记录扩大39.2倍，但前五代表团的同届奖牌记录份额由83.9%降至41.8%，显示规模扩张伴随去集中化。2024年女性参赛记录占49.1%、女性奖牌记录占50.3%，而女子专属小项占45.9%，说明人数平权尚未完全转化为项目机会平权。九个现代主办案例中八个主办届份额上升，但项目贡献分解显示增益路径因国而异，不能把主办身份直接解释为因果。',40,y-8,w-80,12,22)
+    y=wrap(c,'1896至2024年，夏季奥运会由少数国家参与的精英赛事发展为覆盖206个代表团、329个小项的全球制度。参赛记录扩大39.2倍，但前五代表团的同届奖牌记录份额由83.9%降至41.8%，显示规模扩张伴随去集中化。2024年女性参赛记录占49.1%、女性奖牌记录占50.3%，而女子专属小项占45.9%，说明人数平权尚未完全转化为项目机会平权。九个现代主办案例中八个主办届份额上升，但项目贡献分解显示增益路径因国而异，不能把主办身份直接解释为因果。',40,y-8,w-80,12,22,indent=True)
     y-=22; y=wrap(c,'统一口径',40,y,w-80,16,24,P['teal'],'CNB')
     bullets=['主分析使用运动员记录口径；团体项目每名获奖成员均形成记录。','排除1906；URS、GDR、FRG、GER等历史政体分别统计。','2020年Event字段泛化，不计算小项数；2024年采用官方329小项补充表。','无参赛记录留空，不自动视为零；描述性比较不冒充因果估计。']
     for b in bullets: y=wrap(c,'· '+b,48,y-7,w-96,11.5,21)
@@ -337,28 +340,28 @@ def make_report():
         if img == 'B_十二代表团兴衰曲线.png':
             report_figure(c,img,40,295,w-80,468)
             result, interpretation = team_share_case(c,w,280)
-            y = wrap(c,result,40,169,w-80,9.4,14)
-            y = wrap(c,interpretation,40,y-4,w-80,9.4,14)
-            end = wrap(c,body,40,y-4,w-80,9.2,14)
+            y = wrap(c,result,40,169,w-80,9.4,14,indent=True)
+            y = wrap(c,interpretation,40,y-4,w-80,9.4,14,indent=True)
+            end = wrap(c,body,40,y-4,w-80,9.2,14,indent=True)
             assert end >= 47, 'B 视角正文与页脚重叠'
         else:
             below_figure = report_figure(c,img,40,282,w-80,h-394,align_top=True)
             accent = CHAPTER_COLORS[kicker[0]]
             y = wrap(c,'图表解读',40,below_figure-14,w-80,13,23,accent,'CNB')
-            y = wrap(c,body,40,y,w-80,11.5,19)
+            y = wrap(c,body,40,y,w-80,11.5,19,indent=True)
             for heading, paragraph in zip(('如何读图','比较与边界'), FIGURE_INTERPRETATION[img]):
                 y = wrap(c,heading,40,y-6,w-80,11,20,accent,'CNB')
-                y = wrap(c,paragraph,40,y,w-80,11.5,19)
+                y = wrap(c,paragraph,40,y,w-80,11.5,19,indent=True)
             assert y >= 47, f'图表解读与页脚重叠：{img}'
         footer_note(c,w,note); c.showPage(); p+=1
     # final
     bg(c,w,h); header(c,w,h,'结论','结论：扩张中的去集中化',p)
     y = panorama_overview(c,w,h-121)
     y = wrap(c,'综合解读',40,y-12,w-80,12,20,P['teal'],'CNB')
-    y=wrap(c,'奥运百年发展的核心，不只是“更多”，而是覆盖更广、权力更分散、平权更接近，同时仍保留结构差异。规模扩张带来绝对奖牌记录通胀，却没有制造同等程度的强国垄断；强国格局在历史断点中重组；女性人数平权接近实现，但项目机会仍未完全对称；项目表则通过持续增删回应时代。',40,y,w-80,12,22)
+    y=wrap(c,'奥运百年发展的核心，不只是“更多”，而是覆盖更广、权力更分散、平权更接近，同时仍保留结构差异。规模扩张带来绝对奖牌记录通胀，却没有制造同等程度的强国垄断；强国格局在历史断点中重组；女性人数平权接近实现，但项目机会仍未完全对称；项目表则通过持续增删回应时代。',40,y,w-80,12,22,indent=True)
     y=wrap(c,'这些结果可以互相核对。先用 A 的获奖覆盖与集中度区分规模和分布，再用 B 的美国案例核对绝对数与相对份额。'
            '在 C 中，核对三个分母和运动贡献的抵消；在 D 中，把净变化拆成新增、重返和未再出现。'
-           '跨届推断仍受团队记录、历史政体、早期覆盖和小项标签可比性的约束。',40,y-10,w-80,12,22)
+           '跨届推断仍受团队记录、历史政体、早期覆盖和小项标签可比性的约束。',40,y-10,w-80,12,22,indent=True)
     y=wrap(c,'交互版本：任务二_百年全景/05_交互总览/index.html（离线打开）',40,y-15,w-80,9.5,15,P['teal'],'CNB')
     footer_note(c,w,'数据与代码：任务一归一数据、2024官方329小项补充表、任务二复现脚本。全部结论均受所声明统计口径约束。')
     c.save()
