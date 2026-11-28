@@ -22,11 +22,11 @@ pdfmetrics.registerFont(TTFont(BOLD,r'C:\Windows\Fonts\msyhbd.ttf'))
 
 NAVY=HexColor('#102F38'); INK=HexColor('#19343D'); TEAL=HexColor('#187E88')
 MINT=HexColor('#A3D8CC'); GOLD=HexColor('#CA9251'); RED=HexColor('#B85D64')
-PAPER=HexColor('#FAFAF7'); WHITE=HexColor('#FFFFFF'); LINE=HexColor('#D9E2DF')
+PAPER=HexColor('#F5F3EC'); WHITE=HexColor('#FFFFFF'); LINE=HexColor('#D9E2DF')
 MUTED=HexColor('#5A7277'); PALE=HexColor('#E7F0EB')
 M=42; CW=W-2*M
 
-def box(c,x,top,w,h,fill,stroke=None,r=4):
+def box(c,x,top,w,h,fill,stroke=None,r=14):
     c.setFillColor(fill);c.setStrokeColor(stroke or fill)
     c.roundRect(x,H-top-h,w,h,r,fill=1,stroke=bool(stroke))
 
@@ -45,13 +45,9 @@ def rule(c,top):
 
 def page(c,n,section,title,subtitle=''):
     c.setFillColor(PAPER);c.rect(0,0,W,H,fill=1,stroke=0)
-    text(c,section,M,48,10,TEAL,BOLD)
-    c.setFillColor(MUTED)
-    c.setFont(FONT,9)
-    c.drawRightString(W-M,H-58,f'{n:02d} / 10')
-    rule(c,70)
-    c.setFillColor(TEAL)
-    c.rect(M,H-71,42,2,fill=1,stroke=0)
+    box(c,M,42,66,25,NAVY,r=12)
+    text(c,f'{n:02d} / 10',M+11,46,10,WHITE,BOLD)
+    text(c,section,M+82,47,9.5,TEAL,BOLD)
     text(c,title,M,88,30,NAVY,BOLD)
     if subtitle:para(c,subtitle,M,135,CW,10.5,17,MUTED)
     rule(c,176)
@@ -76,17 +72,8 @@ def get_rows(path):
 
 def cover(c):
     c.setFillColor(NAVY);c.rect(0,0,W,H,fill=1,stroke=0)
-    c.setStrokeColor(Color(.65,.88,.85,alpha=.12))
-    c.setLineWidth(.65)
-    for offset in range(0,85,14):
-        outline = c.beginPath()
-        outline.moveTo(W-226,H-165-offset)
-        outline.curveTo(W-226,H-64-offset,W-80,H-64-offset,W-80,H-165-offset)
-        outline.lineTo(W-80,H-292-offset)
-        c.drawPath(outline)
-    for i,color in enumerate((HexColor('#68ABD2'),MINT,GOLD,RED,HexColor('#8DBC95'))):
-        c.setFillColor(color)
-        c.rect(M+i*CW/5,H-29,CW/5,2,fill=1,stroke=0)
+    c.setStrokeColor(Color(.6,.87,.82,alpha=.20))
+    for radius in (90,140,190):c.circle(W-66,H-170,radius,stroke=1,fill=0)
     text(c,'YANSHAN UNIVERSITY  /  晓组织',M,59,10,MINT,BOLD)
     box(c,M,102,127,28,Color(.35,.77,.72,alpha=.17),r=13)
     text(c,'任务一 · 数据基础',M+13,108,10,MINT,BOLD)
@@ -98,14 +85,11 @@ def cover(c):
     cover_metrics=[('252,565','原始记录'),('38,360','主分析奖牌行'),('329','2024官方小项')]
     col=(CW-20)/3
     for i,(v,l) in enumerate(cover_metrics):
-        x=M+i*(col+10);box(c,x,482,col,94,HexColor('#1E4952'));c.setFillColor(MINT);c.rect(x,H-484,col,2,fill=1,stroke=0)
+        x=M+i*(col+10);box(c,x,482,col,94,HexColor('#1E4952'))
         text(c,v,x+15,497,26,WHITE,BOLD);text(c,l,x+15,538,9,MINT)
     box(c,M,618,CW,105,HexColor('#1A4550'),r=18)
     text(c,'核心判断',M+20,638,12,GOLD,BOLD)
     para(c,'原始数据适合记录层面的历史分析。运动员获奖行不等于官方奖牌枚数；信息缺失的小项名称须标记风险，不能靠字符串去重补出官方结果。',M+20,664,CW-40,12,20,WHITE)
-    for x, label, target in ((M,'抽查索引 ↗',2),(M+145,'图表影响 ↗',9),(M+290,'复现路径 ↗',10)):
-        text(c,label,x,744,9,MINT,BOLD)
-        c.linkRect('',f'audit-{target}',(x,H-758,x+78,H-741),relative=0,thickness=0)
     text(c,'张子涵 60%  ·  陈旭 40%  ·  2026 年 11 月',M,777,9,MINT)
     c.showPage()
 
