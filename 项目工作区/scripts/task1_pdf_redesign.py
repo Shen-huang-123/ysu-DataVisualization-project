@@ -22,8 +22,8 @@ pdfmetrics.registerFont(TTFont(BOLD,r'C:\Windows\Fonts\msyhbd.ttf'))
 
 NAVY=HexColor('#102F38'); INK=HexColor('#19343D'); TEAL=HexColor('#187E88')
 MINT=HexColor('#A3D8CC'); GOLD=HexColor('#CA9251'); RED=HexColor('#B85D64')
-PAPER=HexColor('#FAFAF7'); WHITE=HexColor('#FFFFFF'); LINE=HexColor('#D9E2DF')
-MUTED=HexColor('#5A7277'); PALE=HexColor('#E7F0EB')
+PAPER=HexColor('#FFFFFF'); WHITE=HexColor('#FFFFFF'); LINE=HexColor('#E0E3E5')
+MUTED=HexColor('#5A7277'); PALE=HexColor('#F2F5F5')
 M=42; CW=W-2*M
 
 def box(c,x,top,w,h,fill,stroke=None,r=4):
@@ -75,39 +75,37 @@ def get_rows(path):
     with path.open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
 
 def cover(c):
-    c.setFillColor(NAVY);c.rect(0,0,W,H,fill=1,stroke=0)
-    c.setStrokeColor(Color(.65,.88,.85,alpha=.12))
-    c.setLineWidth(.65)
-    for offset in range(0,85,14):
-        outline = c.beginPath()
-        outline.moveTo(W-226,H-165-offset)
-        outline.curveTo(W-226,H-64-offset,W-80,H-64-offset,W-80,H-165-offset)
-        outline.lineTo(W-80,H-292-offset)
-        c.drawPath(outline)
-    for i,color in enumerate((HexColor('#68ABD2'),MINT,GOLD,RED,HexColor('#8DBC95'))):
+    ink = HexColor('#1D1D1F')
+    secondary = HexColor('#54585D')
+    olympic = tuple(map(HexColor, ('#0079BF','#34383D','#C82A3D','#D99700','#258448')))
+    text(c,'燕山大学 · 晓组织',M,48,10,secondary,BOLD)
+    text(c,'任务一 · 数据基础',M,110,11,TEAL,BOLD)
+    text(c,'先把数据说清楚',M,158,54,ink,BOLD)
+    para(c,'奥运数据质量与统计口径说明书',M,242,CW,21,30,ink,BOLD)
+    para(c,'1896—2024 夏季奥运 · 记录行、官方小项与特殊历史边界',M,280,CW,11,18,secondary)
+
+    for index, color in enumerate(olympic):
+        x = M + index * 34
         c.setFillColor(color)
-        c.rect(M+i*CW/5,H-29,CW/5,2,fill=1,stroke=0)
-    text(c,'YANSHAN UNIVERSITY  /  晓组织',M,59,10,MINT,BOLD)
-    box(c,M,102,127,28,Color(.35,.77,.72,alpha=.17),r=13)
-    text(c,'任务一 · 数据基础',M+13,108,10,MINT,BOLD)
-    text(c,'先把数据',M,174,57,WHITE,BOLD)
-    text(c,'说清楚',M,245,57,MINT,BOLD)
-    para(c,'奥运数据质量与统计口径说明书',M,345,CW,20,29,WHITE,BOLD)
-    para(c,'1896—2024 夏季奥运 · 记录行、官方小项与特殊历史边界',M,383,CW,11.5,19,HexColor('#C8DDDA'))
-    c.setStrokeColor(Color(.65,.85,.8,alpha=.4));c.line(M,H-451,W-M,H-451)
-    cover_metrics=[('252,565','原始记录'),('38,360','主分析奖牌行'),('329','2024官方小项')]
-    col=(CW-20)/3
-    for i,(v,l) in enumerate(cover_metrics):
-        x=M+i*(col+10);box(c,x,482,col,94,HexColor('#1E4952'));c.setFillColor(MINT);c.rect(x,H-484,col,2,fill=1,stroke=0)
-        text(c,v,x+15,497,26,WHITE,BOLD);text(c,l,x+15,538,9,MINT)
-    box(c,M,618,CW,105,HexColor('#1A4550'),r=18)
-    text(c,'核心判断',M+20,638,12,GOLD,BOLD)
-    para(c,'原始数据适合记录层面的历史分析。运动员获奖行不等于官方奖牌枚数；信息缺失的小项名称须标记风险，不能靠字符串去重补出官方结果。',M+20,664,CW-40,12,20,WHITE)
+        c.roundRect(x,H-342,28,3,1.5,fill=1,stroke=0)
+
+    rule(c,404)
+    cover_metrics = [('252,565','原始记录'),('38,360','主分析奖牌行'),('329','2024 官方小项')]
+    for index, (value, label) in enumerate(cover_metrics):
+        x = M + index*CW/3
+        text(c,value,x,432,32,ink,BOLD)
+        text(c,label,x,480,10,secondary)
+    rule(c,520)
+
+    text(c,'核心判断',M,568,12,ink,BOLD)
+    para(c,'原始数据适合记录层面的历史分析。运动员获奖行不等于官方奖牌枚数；信息缺失的小项名称须标记风险，不能靠字符串去重补出官方结果。',M,594,CW-48,12,20,secondary)
     for x, label, target in ((M,'抽查索引 ↗',2),(M+145,'图表影响 ↗',9),(M+290,'复现路径 ↗',10)):
-        text(c,label,x,744,9,MINT,BOLD)
-        c.linkRect('',f'audit-{target}',(x,H-758,x+78,H-741),relative=0,thickness=0)
-    text(c,'张子涵 60%  ·  陈旭 40%  ·  2026 年 11 月',M,777,9,MINT)
+        text(c,label,x,713,10,olympic[0],BOLD)
+        c.linkRect('',f'audit-{target}',(x,H-730,x+82,H-710),relative=0,thickness=0)
+    rule(c,765)
+    text(c,'张子涵 60%  ·  陈旭 40%  ·  2026 年 11 月',M,782,9,secondary)
     c.showPage()
+
 
 def quick_index(c):
     page(c,2,'评审抽查 / Q1–Q6','六类问题，从规则查到结果','代码及结果位于任务一目录。复算范围与边界见各条处理说明。')
