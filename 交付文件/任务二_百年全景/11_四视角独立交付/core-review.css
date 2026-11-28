@@ -1,0 +1,27 @@
+html body.supplement-reading > main.core-review {
+  width:min(100%,80rem) !important;
+  margin-inline:auto !important;
+  padding:clamp(1.4rem,4vw,3.2rem) clamp(1rem,5vw,4rem) 4rem !important;
+}
+.core-review-head p { margin:0 0 .6rem; }
+.core-review-head h1 { margin:0 0 .8rem; }
+.core-view-nav { display:flex; flex-wrap:wrap; gap:.55rem 1.35rem; padding:.8rem 0; border-block:1px solid var(--sr-line); margin:0 0 1.5rem; }
+.core-view-nav a { padding:.24rem 0; }
+.core-review > section { --chapter: #397f87; scroll-margin-top:6rem; padding:1.25rem 0 1.8rem; border-top:1px solid var(--sr-line); }
+.core-review > section#view-B { --chapter:#a78043; }
+.core-review > section#view-C { --chapter:#a56a86; }
+.core-review > section#view-D { --chapter:#548873; }
+.core-review > section:target > h2 { border-inline-start:3px solid var(--chapter); padding-inline-start:.7rem; }
+.core-review > section h2 { margin:.1rem 0 .7rem; }
+.core-review > section :is(p,figcaption) { max-width:74ch; }
+.core-review .core-baseline { margin:1.15rem 0; border-block:1px solid var(--sr-line); padding:.55rem 0; }
+.core-review .core-baseline summary { cursor:pointer; padding:.4rem 0; }
+.core-review figure { margin:.9rem 0 1.15rem; }
+.core-review figure a { display:block; }
+.core-review figure img { display:block; width:100%; height:auto; }
+.core-review figure figcaption { margin-top:.55rem; color:var(--sr-muted); line-height:1.6; }
+.core-review .additional-core-chart { border-block-end:1px solid var(--sr-line); padding-block-end:.7rem; }
+.core-review .denominators ul { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr)); gap:.8rem; list-style:none; padding:0; }
+.core-review .denominators li { padding:.55rem .75rem; border-top:2px solid #479a94; }
+.core-review .denominators b { font-size:1.4rem; font-variant-numeric:tabular-nums; }
+@media(max-width:640px) { .core-view-nav { gap:.4rem .85rem; } }
