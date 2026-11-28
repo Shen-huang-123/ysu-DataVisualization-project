@@ -46,14 +46,41 @@ def image_fit(c,path,x,y,w,h):
 def footer_note(c,w,text):
     c.setStrokeColor(P['line']); c.line(40,47,w-40,47); wrap(c,text,40,36,w-80,7.5,10,P['grey'])
 
+def report_cover(c,w,h):
+    bg(c,w,h)
+    colors = ['#427D9D','#26383F','#AE5260','#B6883D','#548873']
+    for i, color in enumerate(colors):
+        c.setFillColor(HexColor(color))
+        c.rect(40+i*(w-80)/5,h-36,(w-80)/5,2,fill=1,stroke=0)
+    wrap(c,'任务二 · 1896—2024 夏季奥运',40,h-75,w-80,10,16,P['teal'],'CNB')
+    wrap(c,'百年圣火',40,h-141,w-80,54,60,P['ink'],'CNB')
+    wrap(c,'扩张、权力转移与结构性平权',40,h-181,w-80,17,22,P['teal'],'CNB')
+    image_fit(c,FIG/'00_封面总览英雄图.png',40,178,w-80,454)
+    c.setStrokeColor(P['line'])
+    c.line(40,151,w-40,151)
+    wrap(c,'奖牌格局     代表团兴衰     女性参与     项目演化',40,121,w-80,12,18,P['ink'],'CNB')
+    wrap(c,'晓组织｜燕山大学｜张子涵 60%｜陈旭 40%',40,72,w-80,10,15,P['grey'])
+    c.showPage()
+
+
+def add_report_navigation(document):
+    chapters = [
+        ('摘要与研究设计',2), ('A 奖牌格局',3), ('B 代表团兴衰',5),
+        ('C 女性参与',9), ('D 项目演化',11), ('结论',13),
+    ]
+    if len(document) != 13:
+        raise ValueError('任务二报告章节页码与生成结构不符')
+    document.set_toc([[1,'封面',1], *[[1,title,page] for title,page in chapters]])
+    from pymupdf import LINK_GOTO, Rect
+    for index, page in enumerate((3,5,9,11)):
+        x = 40 + index*70
+        document[0].insert_link({'kind': LINK_GOTO, 'from': Rect(x,702,x+70,728), 'page': page-1})
+
+
 def make_report():
     w,h=portrait(A4); c=canvas.Canvas(str(REPORT),pagesize=(w,h),pageCompression=1)
     c.setTitle('任务二 百年奥运全景'); c.setAuthor('晓组织｜燕山大学')
-    # 1 cover
-    bg(c,w,h); image_fit(c,FIG/'00_封面总览英雄图.png',28,210,w-56,510)
-    c.setFillColor(P['ink']); c.setFont('CNB',30); c.drawString(40,155,'百年圣火')
-    c.setFont('CNB',15); c.setFillColor(P['teal']); c.drawString(40,125,'扩张、权力转移与结构性平权')
-    wrap(c,'晓组织｜燕山大学｜张子涵 60%｜陈旭 40%',40,85,w-80,10,15,P['grey']); c.showPage()
+    report_cover(c,w,h)
     # 2 abstract
     bg(c,w,h); header(c,w,h,'EXECUTIVE SUMMARY','摘要与研究设计',2)
     y=h-120
@@ -86,6 +113,11 @@ def make_report():
     y=wrap(c,'交互版本：任务二_百年全景/05_交互总览/index.html（离线打开）',40,y-15,w-80,9.5,15,P['teal'],'CNB')
     footer_note(c,w,'数据与代码：任务一归一数据、2024官方329小项补充表、任务二复现脚本。全部结论均受所声明统计口径约束。')
     c.save()
+    import pymupdf
+    with pymupdf.open(REPORT) as document:
+        add_report_navigation(document)
+        document.saveIncr()
+
 
 def make_poster():
     w,h=portrait(A2); c=canvas.Canvas(str(POSTER),pagesize=(w,h),pageCompression=1); bg(c,w,h)
