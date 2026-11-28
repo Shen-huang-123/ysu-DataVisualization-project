@@ -64,6 +64,20 @@
   .turnover button { justify-self: start; }
   #turnover-sports { grid-template-columns: 1fr; }
 }
+</style><style id="galaxy-panorama-surface">
+:root { --galaxy-paper: #0b1d24; --galaxy-panel: #142d35; --line: #a9c2c038; }
+body { background: var(--galaxy-paper); }
+body::before { background: none; }
+.space {
+  border-color: var(--line);
+  background: radial-gradient(ellipse at 48% 48%, #274c575e, transparent 72%),
+    color-mix(in srgb, var(--galaxy-panel) 68%, var(--galaxy-paper));
+}
+.detail {
+  background: color-mix(in srgb, var(--galaxy-panel) 68%, transparent);
+  border-color: var(--line);
+}
+.key, .space-caption { background: color-mix(in srgb, var(--galaxy-paper) 88%, transparent); }
 </style></head><body><div class="wrap"><header class="top"><a class="brand" href="../../../index.html">百年<i>圣火</i> · 项目星系</a><nav><a href="../05_交互总览/index.html">百年全景</a><a href="../../../index.html">作品首页 ↗</a></nav></header><section class="hero"><div><div class="eyebrow">1896—2024 / 项目演化星系</div><h1>项目会来，<br><em>也会离开。</em></h1><p>拖动届次，观察运动何时出现、退出与重返。点击一颗星，再从准确的 30 届时间线和记录数量图读出它的轨迹。</p></div><aside>星系显示赛题数据中的项目出现，不代表官方完整赛程。右侧图表以运动员记录行为单位，不把行数称作小项数。</aside></section><section class="controls"><div class="time-controls"><span class="control-label">当前届次</span><strong id="year" class="year">2024</strong><input id="year-range" type="range" min="0" max="29" value="29" aria-label="选择奥运届次"><button id="play" type="button">▶ 播放百年</button></div><label class="sport-control"><span class="control-label">聚焦项目</span><select id="sport-select" aria-label="选择运动项目"></select></label><div class="stats"><span><b id="active-count">—</b>本届出现</span><span><b id="new-count">—</b>本届新增</span><span><b id="return-count">—</b>本届重返</span></div></section><section class="turnover" aria-label="相邻届次的运动更替">
 <button type="button" id="turnover-preset">对照 1900 与 1904</button>
 <p id="turnover-summary" aria-live="polite"></p>

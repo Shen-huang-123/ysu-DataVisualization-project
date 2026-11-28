@@ -62,6 +62,20 @@
   .turnover button { justify-self: start; }
   #turnover-sports { grid-template-columns: 1fr; }
 }
+</style><link rel="stylesheet" href="../../共享组件/olympic-atmosphere.css?v=3"><style id="galaxy-panorama-surface">
+:root { --galaxy-paper: #0b1d24; --galaxy-panel: #142d35; --line: #a9c2c038; }
+body { background: var(--galaxy-paper); }
+body::before { background: none; }
+.space {
+  border-color: var(--line);
+  background: radial-gradient(ellipse at 48% 48%, #274c575e, transparent 72%),
+    color-mix(in srgb, var(--galaxy-panel) 68%, var(--galaxy-paper));
+}
+.detail {
+  background: color-mix(in srgb, var(--galaxy-panel) 68%, transparent);
+  border-color: var(--line);
+}
+.key, .space-caption { background: color-mix(in srgb, var(--galaxy-paper) 88%, transparent); }
 </style></head><body><div class="wrap"><header class="top"><a class="brand" href="../../../index.html">百年<i>圣火</i> · 项目星系</a><nav><a href="../05_交互总览/index.html">百年全景</a><a href="../../../index.html">作品首页 ↗</a></nav></header><section class="hero"><div><div class="eyebrow">1896—2024 / 项目演化星系</div><h1>项目会来，<br><em>也会离开。</em></h1><p>拖动届次，观察运动何时出现、退出与重返。点击一颗星，再从准确的 30 届时间线和记录数量图读出它的轨迹。</p></div><aside>星系显示赛题数据中的项目出现，不代表官方完整赛程。右侧图表以运动员记录行为单位，不把行数称作小项数。</aside></section><section class="controls"><div class="time-controls"><span class="control-label">当前届次</span><strong id="year" class="year">2024</strong><input id="year-range" type="range" min="0" max="29" value="29" aria-label="选择奥运届次"><button id="play" type="button">▶ 播放百年</button></div><label class="sport-control"><span class="control-label">聚焦项目</span><select id="sport-select" aria-label="选择运动项目"></select></label><div class="stats"><span><b id="active-count">—</b>本届出现</span><span><b id="new-count">—</b>本届新增</span><span><b id="return-count">—</b>本届重返</span></div></section><section class="turnover" aria-label="相邻届次的运动更替">
 <button type="button" id="turnover-preset">对照 1900 与 1904</button>
 <p id="turnover-summary" aria-live="polite"></p>
@@ -101,4 +115,4 @@ $('turnover-preset').addEventListener('click', () => {
   update();
 });
 function update(){renderTurnover();const yr=years[yi],s=sports[focus],st=state(s,yi);$('year').textContent=yr;$('year-range').value=yi;$('active-count').textContent=sports.filter(x=>x.presence[yi]).length;$('new-count').textContent=sports.filter(x=>state(x,yi)==='新增').length;$('return-count').textContent=sports.filter(x=>state(x,yi)==='重返').length;$('sport-name').textContent=s.name;$('sport-status').textContent=`${yr} 年 · ${st}`;const active=years.filter((_,i)=>s.presence[i]);$('sport-summary').textContent=`已收录 ${active.length} 届；首次有记录于 ${active[0]} 年，最近一次于 ${active.at(-1)} 年。当前届次有 ${s.counts[yi].toLocaleString('zh-CN')} 条运动员记录。`;$('edition-list').textContent=`有记录的届次：${active.join('、')}`;$('timeline').replaceChildren(...years.map((y,i)=>{const dot=document.createElement('span');dot.className='dot'+(s.presence[i]?' on':'')+(i===yi?' current':'');dot.title=`${y}：${s.presence[i]?s.counts[i]+' 行':'未出现'}`;return dot}));chart.setOption({animationDuration:350,grid:{left:54,right:18,top:18,bottom:42},tooltip:{trigger:'axis',formatter:p=>`${p[0].axisValue} 年<br>运动员记录 ${p[0].value.toLocaleString()} 行`},xAxis:{type:'category',data:years,axisLabel:{color:'#b7cacb',interval:4,rotate:0},axisLine:{lineStyle:{color:'#5a7982'}}},yAxis:{type:'value',name:'记录行',nameTextStyle:{color:'#b7cacb'},axisLabel:{color:'#b7cacb'},splitLine:{lineStyle:{color:'#ffffff14'}}},series:[{type:'bar',data:s.counts.map((v,i)=>({value:v,itemStyle:{color:i===yi?'#efd29a':'#79d9dd'}})),barMaxWidth:12}]},true);if(matchMedia('(prefers-reduced-motion: reduce)').matches)draw()}canvas.addEventListener('pointermove',e=>{const b=canvas.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top,p=points.find(p=>Math.hypot(p.x-x,p.y-y)<17);hover=p?p.i:-1;canvas.style.cursor=p?'pointer':'default'});canvas.addEventListener('click',e=>{const b=canvas.getBoundingClientRect();const hit=points.find(p=>Math.hypot(p.x-(e.clientX-b.left),p.y-(e.clientY-b.top))<17);if(hit){focus=hit.i;select.value=focus;update()}});$('year-range').addEventListener('input',e=>{yi=+e.target.value;update()});select.addEventListener('change',e=>{focus=+e.target.value;update()});$('play').addEventListener('click',()=>{if(running){clearInterval(running);running=null;$('play').textContent='▶ 播放百年';return}if(yi===years.length-1)yi=0;$('play').textContent='Ⅱ 暂停';running=setInterval(()=>{yi++;if(yi>=years.length){clearInterval(running);running=null;yi=years.length-1;$('play').textContent='▶ 播放百年'}update()},470);update()});addEventListener('resize',()=>chart.resize());update();requestAnimationFrame(draw)})();
-</script></body></html>
+</script><script defer src="../../共享组件/olympic-atmosphere.js?v=1"></script></body></html>
