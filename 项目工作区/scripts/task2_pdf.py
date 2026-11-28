@@ -1,5 +1,6 @@
 import csv
 from pathlib import Path
+from PIL import Image, ImageChops
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4, A2, portrait
 from reportlab.pdfbase import pdfmetrics
@@ -18,7 +19,8 @@ POSTER=OUT/'任务二_百年奥运全景_A2海报.pdf'
 
 pdfmetrics.registerFont(TTFont('CN',r'C:\Windows\Fonts\simhei.ttf'))
 pdfmetrics.registerFont(TTFont('CNB',r'C:\Windows\Fonts\simhei.ttf'))
-P={'paper':HexColor('#F7F3EB'),'ink':HexColor('#172A30'),'teal':HexColor('#247487'),'red':HexColor('#A64155'),'gold':HexColor('#C4903D'),'grey':HexColor('#68777D'),'line':HexColor('#D9DEDC')}
+PAPER_RGB = (251, 250, 246)
+P={'paper':HexColor('#FBFAF6'),'ink':HexColor('#172A30'),'teal':HexColor('#247487'),'red':HexColor('#A64155'),'gold':HexColor('#C4903D'),'grey':HexColor('#68777D'),'line':HexColor('#D9DEDC')}
 
 def bg(c,w,h): c.setFillColor(P['paper']); c.rect(0,0,w,h,fill=1,stroke=0)
 CHAPTER_COLORS = {
@@ -55,8 +57,8 @@ def wrap(c,text,x,y,maxw,size=10,leading=16,color=None,font='CN'):
     for ln in lines: c.drawString(x,y,ln); y-=leading
     return y
 
-def image_fit(c,path,x,y,w,h, *, align_top=False):
-    im=ImageReader(str(path)); iw,ih=im.getSize(); scale=min(w/iw,h/ih); nw,nh=iw*scale,ih*scale
+def image_fit(c,source,x,y,w,h, *, align_top=False):
+    im=ImageReader(str(source) if isinstance(source, Path) else source); iw,ih=im.getSize(); scale=min(w/iw,h/ih); nw,nh=iw*scale,ih*scale
     bottom = y + (h - nh) * (1 if align_top else .5)
     c.drawImage(im, x+(w-nw)/2, bottom, nw, nh, mask='auto')
     return bottom
@@ -79,8 +81,31 @@ FIGURE_SCOPE = {
 }
 
 
+def figure_on_report_paper(path):
+    with Image.open(path) as source:
+        image = source.convert('RGB')
+    original_paper = image.getpixel((0, 0))
+    difference = ImageChops.difference(image, Image.new('RGB', image.size, original_paper))
+    bounds = difference.getbbox()
+    if bounds:
+        left, top, right, bottom = bounds
+        margin = round(image.width * .012)
+        image = image.crop((max(0,left-margin), max(0,top-margin),
+                            min(image.width,right+margin), min(image.height,bottom+margin)))
+        difference = difference.crop((max(0,left-margin), max(0,top-margin),
+                                      min(difference.width,right+margin), min(difference.height,bottom+margin)))
+    if original_paper != PAPER_RGB:
+        red, green, blue = difference.split()
+        delta = ImageChops.lighter(ImageChops.lighter(red, green), blue)
+        # Blend only paper and its antialiased edge pixels. Keep data marks and text colors.
+        paper_mask = delta.point(lambda value: max(0, 255-32*value))
+        image.paste(PAPER_RGB, (0, 0, image.width, image.height), paper_mask)
+    return image
+
+
 def report_figure(c, name, x, y, width, height, *, align_top=False):
-    bottom = image_fit(c, FIG/name, x, y, width, height, align_top=align_top)
+    image = figure_on_report_paper(FIG/name)
+    bottom = image_fit(c, image, x, y, width, height, align_top=align_top)
     return wrap(c, '图注｜' + FIGURE_SCOPE[name], x, bottom-12, width, 8.6, 12, P['grey'])
 
 
@@ -94,8 +119,8 @@ def team_share_case(c, width, y):
     counts = [team[year] for year in years]
     denominators = [total[year] for year in years]
     shares = [100*n/d for n,d in zip(counts, denominators)]
-    c.setFillColor(HexColor('#FAF9F5'))
-    c.rect(40, y-92, width-80, 106, fill=1, stroke=0)
+    c.setStrokeColor(P['line'])
+    c.line(40,y+14,width-40,y+14)
     wrap(c, '局部对照｜里约 2016 → 东京 2020', 56, y, width-112, 10, 14, P['teal'], 'CNB')
     column = (width-136)/2
     headings = ('美国获奖运动员记录（条）', '美国占当届获奖记录的份额')
