@@ -106,8 +106,18 @@ def team_share_case(c, width, y):
     c.setLineWidth(1)
     wrap(c, '图注｜仅 2016 与 2020 两届，排除 1906；以获奖运动员记录行为单位，东京按届次记为 2020。',
          56, y-82, width-112, 8.6, 12, P['grey'])
-    return (f'美国获奖记录增加，但全场由 {denominators[0]:,} 条增至 {denominators[1]:,} 条，增长更快。'
-            f'因此，美国所占份额反而下降 {shares[0]-shares[1]:.2f} 个百分点。')
+    team_growth = 100*(counts[1]/counts[0]-1)
+    total_growth = 100*(denominators[1]/denominators[0]-1)
+    return (
+        f'美国的获奖运动员记录从 {counts[0]} 条增至 {counts[1]} 条，多了 {counts[1]-counts[0]} 条，增幅为 {team_growth:.1f}%。'
+        f'同期全场记录从 {denominators[0]:,} 条增至 {denominators[1]:,} 条，增幅为 {total_growth:.1f}%。'
+        f'美国的份额以当届全场为分母，分母增长更快，所以份额从 {shares[0]:.2f}% 降至 {shares[1]:.2f}%，'
+        f'下降 {shares[0]-shares[1]:.2f} 个百分点。',
+        '记录数回答一队有多少获奖运动员记录，份额回答这些记录在当届占多大比重。'
+        '团队项目的一枚小项奖牌可对应多条记录，因此本例说明美国在记录分布中的相对份额下降；'
+        '判断官方奖牌数或长期竞争力，还需使用小项口径并查看更多届次。',
+    )
+
 
 def report_cover(c,w,h):
     bg(c,w,h)
@@ -169,9 +179,11 @@ def make_report():
         bg(c,w,h); header(c,w,h,kicker,title,p)
         if img == 'B_十二代表团兴衰曲线.png':
             report_figure(c,img,40,295,w-80,468)
-            interpretation = team_share_case(c,w,280)
-            y = wrap(c,interpretation,40,164,w-80,10,16)
-            wrap(c,body,40,y-7,w-80,9.2,15)
+            result, interpretation = team_share_case(c,w,280)
+            y = wrap(c,result,40,169,w-80,9.4,14)
+            y = wrap(c,interpretation,40,y-4,w-80,9.4,14)
+            end = wrap(c,body,40,y-4,w-80,9.2,14)
+            assert end >= 47, 'B 视角正文与页脚重叠'
         else:
             report_figure(c,img,40,260,w-80,450)
             wrap(c,body,40,225,w-80,10,16)
