@@ -20,3 +20,10 @@
 .women-sport-table { overflow:auto; max-height:19rem; }
 .women-sport-table table { width:100%; }
 .women-sport-table :is(td,th):not(:first-child) { text-align:right; font-variant-numeric:tabular-nums; }
+.analysis-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; margin-block:.75rem; }
+.analysis-actions button { font:inherit; color:inherit; background:transparent; border:1px solid color-mix(in srgb,currentColor 28%,transparent); border-radius:.35rem; padding:.4rem .65rem; cursor:pointer; }
+#lead-comparison dl,.women-comparison { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(15rem,100%),1fr)); gap:.6rem 1rem; }
+#lead-comparison dl > div,.women-comparison > div { border-top:1px solid color-mix(in srgb,currentColor 20%,transparent); padding-top:.55rem; }
+#lead-comparison dd { margin:.2rem 0 0; font-variant-numeric:tabular-nums; }
+.women-comparison > div { margin-bottom:.6rem; }
+.women-sport-table td[data-contribution] { background-image:linear-gradient(to left,var(--contribution-color) var(--contribution-width),transparent var(--contribution-width)); }

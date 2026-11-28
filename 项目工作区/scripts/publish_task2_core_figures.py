@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape
 import re
+import sys
 
 import matplotlib
 matplotlib.use('Agg')
@@ -18,6 +19,8 @@ ROOT = Path(__file__).resolve().parents[2] / '交付文件'
 TASK = ROOT / '任务二_百年全景'
 TABLE = TASK / '02_数据表'
 FIG = TASK / '04_核心图表'
+PRINT_DIR = Path(sys.argv[2]) if len(sys.argv) == 3 and sys.argv[1] == '--poster-assets' else None
+PRINT_FIGURES = {'A_规模扩张与奖牌集中度', 'C_女性三层平权曲线', 'D_项目新增退出重返流向'}
 PAPER, INK, GRID = '#fbfaf6', '#193039', '#d8dfdf'
 BLUE, RED, GOLD = '#196478', '#9f3953', '#8a5c18'
 YEARS = [1896,1920,1948,1972,2000,2024]
@@ -37,7 +40,20 @@ def figure(title,note,height=5.4,left=.14,right=.94,bottom=.16,top=.82,grid=(1,1
     return fig,ax
 
 def save(fig,name):
-    fig.savefig(FIG/f'{name}.png',dpi=220,facecolor=PAPER)
+    if PRINT_DIR is None:
+        fig.savefig(FIG/f'{name}.png',dpi=220,facecolor=PAPER)
+    elif name in PRINT_FIGURES:
+        fig.texts[1].set_visible(False)  # The A2 layout prints the scope as PDF text below each chart.
+        fig.subplots_adjust(left=max(fig.subplotpars.left,.16), bottom=max(fig.subplotpars.bottom,.18))
+        for ax in fig.axes:
+            ax.tick_params(labelsize=16)
+            ax.xaxis.label.set_size(15)
+            ax.yaxis.label.set_size(15)
+            legend = ax.get_legend()
+            if legend:
+                for label in legend.get_texts():
+                    label.set_fontsize(14)
+        fig.savefig(PRINT_DIR/f'{name}.png',dpi=260,facecolor=PAPER)
     plt.close(fig)
 
 def grid(ax,axis='y'):
@@ -46,7 +62,7 @@ def grid(ax,axis='y'):
 
 def timeline(ax):
     ax.set_xlim(1894,2028)
-    ax.set_xticks(YEARS)
+    ax.set_xticks([1896,1948,1984,2024] if PRINT_DIR is not None else YEARS)
     ax.set_xlabel('奥运届次年份')
 
 a=csv('A_逐届规模与集中度.csv',True)
@@ -127,9 +143,9 @@ for i,(column,label,color,ls,marker,total) in enumerate(metrics):
     count=round(value*total)
     assert np.isclose(count/total,value)
     y=.71-i*.18
-    fig.text(.72,y,label,fontsize=11,color=color,weight='bold')
+    fig.text(.72,y,label,fontsize=14 if PRINT_DIR else 11,color=color,weight='bold')
     fig.text(.72,y-.060,f'{value:.1%}',fontsize=20,color=color,weight='bold')
-    fig.text(.72,y-.102,f'{count:,} / {int(total):,}',fontsize=11)
+    fig.text(.72,y-.102,f'{count:,} / {int(total):,}',fontsize=14 if PRINT_DIR else 11)
 ax.legend(handles=[Line2D([0],[0],color=c,ls=ls,marker=m,label=l) for _,l,c,ls,m,_ in metrics],
           frameon=False,ncol=2,loc='upper left')
 ax.set_ylabel('占比（%）'); ax.set_ylim(0,65)
@@ -187,6 +203,9 @@ for ax in (mix,exit_ax): grid(ax)
 timeline(exit_ax)
 save(fig,'D_项目新增退出重返流向')
 
+
+if PRINT_DIR is not None:
+    raise SystemExit(0)
 
 # Keep direct access to native resolution on narrow screens and in offline review.
 review=TASK/'11_四视角独立交付/四视角核心图复核.html'

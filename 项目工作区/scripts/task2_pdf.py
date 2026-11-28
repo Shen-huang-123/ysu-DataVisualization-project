@@ -1,4 +1,7 @@
 import csv
+import subprocess
+import sys
+from tempfile import TemporaryDirectory
 from pathlib import Path
 from PIL import Image, ImageChops
 from reportlab.pdfgen import canvas
@@ -106,10 +109,10 @@ def figure_on_report_paper(path):
     return image
 
 
-def report_figure(c, name, x, y, width, height, *, align_top=False):
-    image = figure_on_report_paper(FIG/name)
+def report_figure(c, name, x, y, width, height, *, align_top=False, source=FIG, caption_size=8.6):
+    image = figure_on_report_paper(source/name)
     bottom = image_fit(c, image, x, y, width, height, align_top=align_top)
-    return wrap(c, '图注｜' + FIGURE_SCOPE[name], x, bottom-12, width, 8.6, 12, P['grey'])
+    return wrap(c, '图注｜' + FIGURE_SCOPE[name], x, bottom-12, width, caption_size, max(12, caption_size+3), P['grey'])
 
 
 def us_medal_series():
@@ -400,12 +403,19 @@ def poster_us_comparison(c, x, y, width):
     c.drawCentredString(left,y-263,f'里约 {years[0]}')
     c.drawCentredString(right,y-263,f'东京 {years[1]}')
     caption = '图注｜仅 2016 与 2020 两届，排除 1906。按获奖运动员记录行统计。'
-    below = wrap(c,caption,x,y-295,width,8.6,12,P['grey'])
+    below = wrap(c,caption,x,y-295,width,11.5,15,P['grey'])
     explanation = f'美国获奖记录增加，但全场记录从 {totals[0]:,} 增至 {totals[1]:,} 条，增长更快。'
     return wrap(c,explanation,x,below-15,width,16,24)
 
 
 def make_poster():
+    with TemporaryDirectory() as directory:
+        subprocess.run([sys.executable, str(Path(__file__).with_name('publish_task2_core_figures.py')),
+                        '--poster-assets', directory], check=True)
+        draw_poster(Path(directory))
+
+
+def draw_poster(print_figures):
     w,h = portrait(A2)
     c = canvas.Canvas(str(POSTER), pagesize=(w,h), pageCompression=1)
     c.setTitle('百年圣火｜百年奥运全景 A2 海报')
@@ -443,7 +453,7 @@ def make_poster():
         if code == 'B':
             y = poster_us_comparison(c,x,y-139,column)
         else:
-            y = report_figure(c,name,x,y-465,column,355,align_top=True)
+            y = report_figure(c,name,x,y-465,column,333,align_top=True,source=print_figures,caption_size=11.5)
             y = wrap(c,description,x,y-15,column,16,24)
         assert y >= (h-292-605-570 if i >= 2 else h-292-570)
     c.setStrokeColor(P['line'])
