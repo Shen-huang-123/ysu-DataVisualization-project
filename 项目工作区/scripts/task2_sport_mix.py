@@ -167,7 +167,9 @@ def publish():
 
 [三口径集中度](三口径集中度.csv) · [逐队份额](逐队份额.csv) · [运动权重与贡献](逐运动权重与固定五队贡献.csv) · [变化分解](共同运动变化分解.csv) · [固定权重敏感性](固定权重敏感性.csv)
 """
-    (OUT/'固定运动构成复核.md').write_text(report,encoding='utf-8')
+    browser_link = '\n\n[打开网页版](固定运动构成复核.html)\n'
+    title,body = report.split('\n',1)
+    (OUT/'固定运动构成复核.md').write_text(title+browser_link+body,encoding='utf-8')
     publish_reading(report)
     review=TASK/'11_四视角独立交付/四视角核心图复核.html'
     import re
