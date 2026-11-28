@@ -3,7 +3,7 @@ import fitz
 from PIL import Image, ImageDraw
 
 root = Path(__file__).resolve().parents[2]
-pdf_path = root / "交付文件" / "任务一_数据体检" / "01_报告与说明" / "任务一_数据质量与口径说明书_高分版.pdf"
+pdf_path = root / "交付文件" / "任务一_数据体检" / "01_报告与说明" / "任务一_数据质量与口径说明书.pdf"
 out_dir = root / "项目工作区" / "outputs" / "qa" / "任务一PDF"
 out_dir.mkdir(parents=True, exist_ok=True)
 

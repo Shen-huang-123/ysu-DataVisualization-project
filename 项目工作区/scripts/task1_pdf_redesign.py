@@ -13,7 +13,7 @@ from reportlab.lib.styles import ParagraphStyle
 
 ROOT=Path(__file__).resolve().parents[2]
 TASK=ROOT/'交付文件'/'任务一_数据体检'
-OUT=TASK/'01_报告与说明'/'任务一_数据质量与口径说明书_高分版.pdf'
+OUT=TASK/'01_报告与说明'/'任务一_数据质量与口径说明书.pdf'
 W,H=A4
 FONT='SourceHan'
 BOLD='YaHeiBold'
@@ -210,6 +210,17 @@ def reproduce(c):
 def main():
     OUT.parent.mkdir(parents=True,exist_ok=True)
     c=canvas.Canvas(str(OUT),pagesize=A4,pageCompression=1)
+    labels = ['封面', '质量风险总览', '统计口径', '字段归一', '特殊记录', '质量检查（一）', '质量检查（二）', '复现路径']
+    c.setAuthor("晓组织 · 燕山大学")
+    c.setSubject("数据质量审计与统计口径")
+    show_page = c.showPage
+    def bookmarked_page():
+        number = c.getPageNumber()
+        key = f"audit-{number}"
+        c.bookmarkPage(key)
+        c.addOutlineEntry(labels[number-1], key)
+        show_page()
+    c.showPage = bookmarked_page
     c.setTitle('任务一｜奥运数据质量与口径说明书')
     cover(c);risks(c);medal(c);normalization(c);special(c)
     checks=get_rows(TASK/'01_报告与说明'/'03_质量检查登记表.csv')
