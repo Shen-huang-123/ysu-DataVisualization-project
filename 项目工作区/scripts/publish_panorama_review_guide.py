@@ -11,20 +11,15 @@ def insert(tag, marker, block, start=0):
     i = text.index(marker, start)
     text = text[:i]+f'<!-- {tag}:start -->\n{block}\n<!-- {tag}:end -->\n'+text[i:]
 
-# Keep the guide outside the existing hero.
-text = re.sub(r'<!-- review-guide:start -->.*?<!-- review-guide:end -->\n?', '', text, flags=re.S)
-hero_end = text.index('</header>', text.index('<header class="photo-editorial-hero">')) + len('</header>')
-guide = '''<!-- review-guide:start -->
-<nav class="wrap" id="panorama-review-guide" aria-labelledby="review-guide-title">
-<h2 id="review-guide-title">沿四个问题探索百年全景</h2>
-<ul><li><a href="#panorama-lead">A　选届次，看奖牌分布</a></li>
-<li><a href="#team-share-case">B　选代表团，比记录与份额</a></li>
-<li><a href="#panorama-gender">C　追查女性占比的运动来源</a></li>
-<li><a href="../10_百年项目星系/index.html#turnover-preset">D　看相邻届次更替</a></li></ul>
+insert('review-guide', '<div aria-label="探索历史的观察角度"', '''
+<nav id="panorama-review-guide" aria-labelledby="review-guide-title">
+<h3 id="review-guide-title">四个分析场景</h3>
+<ul><li><a href="#panorama-lead"><b aria-hidden="true">A</b>选届次，看奖牌分布</a></li>
+<li><a href="#team-share-case"><b aria-hidden="true">B</b>选代表团，比记录与份额</a></li>
+<li><a href="#panorama-gender"><b aria-hidden="true">C</b>追查女性占比的运动来源</a></li>
+<li><a href="../10_百年项目星系/index.html#turnover-preset"><b aria-hidden="true">D</b>看相邻届次更替</a></li></ul>
 </nav>
-<!-- review-guide:end -->
-'''
-text = text[:hero_end] + '\n' + guide + text[hero_end:]
+''')
 insert('review-a', '<div class="lead-drilldown">', '''
 <div class="panorama-plots">
 <section><h4>获奖代表团数</h4><div class="panorama-plot" id="lead-trend-0" role="img" aria-label="逐届获奖代表团数"></div></section>
@@ -53,7 +48,7 @@ insert('review-c', '</section>', '''
 <p class="lead-note">各运动贡献＝该运动女性获奖行 ÷ 本队全部获奖行 − 该运动女性参赛行 ÷ 本队全部参赛行。各项贡献可相加为本队占比差，名次按差值绝对值排序。小分母会放大比例波动。</p>
 ''', text.index('id="panorama-gender"'))
 insert('review-assets', '</head>', '''
-<link rel="stylesheet" href="panorama-guide.css">
+<link rel="stylesheet" href="panorama-guide.css?v=2">
 <script defer src="../../任务四_开放创作/07_ECharts大屏/vendor/echarts.min.js"></script>
 ''')
 insert('review-script', '</body>', '<script defer src="panorama-guide.js"></script>')
